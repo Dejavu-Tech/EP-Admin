@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="绍兴" code="330600">
+<county name="越城" code="330602">
+    <street name="塔山街道" code="330602001" />
+    <street name="府山街道" code="330602002" />
+    <street name="蕺山街道" code="330602003" />
+    <street name="北海街道" code="330602004" />
+    <street name="城南街道" code="330602005" />
+    <street name="稽山街道" code="330602006" />
+    <street name="迪荡街道" code="330602007" />
+    <street name="东湖镇" code="330602100" />
+    <street name="灵芝镇" code="330602101" />
+    <street name="东浦镇" code="330602102" />
+    <street name="鉴湖镇" code="330602103" />
+    <street name="皋埠镇" code="330602104" />
+    <street name="马山镇" code="330602105" />
+    <street name="斗门镇" code="330602106" />
+</county>
+<county name="柯桥" code="330621">
+    <street name="柯桥街道" code="330621001" />
+    <street name="柯岩街道" code="330621002" />
+    <street name="华舍街道" code="330621003" />
+    <street name="湖塘街道" code="330621004" />
+    <street name="齐贤镇" code="330621100" />
+    <street name="钱清镇" code="330621101" />
+    <street name="孙端镇" code="330621102" />
+    <street name="福全镇" code="330621103" />
+    <street name="马鞍镇" code="330621104" />
+    <street name="平水镇" code="330621105" />
+    <street name="安昌镇" code="330621106" />
+    <street name="王坛镇" code="330621107" />
+    <street name="兰亭镇" code="330621108" />
+    <street name="稽东镇" code="330621109" />
+    <street name="杨汛桥镇" code="330621110" />
+    <street name="漓渚镇" code="330621111" />
+    <street name="富盛镇" code="330621112" />
+    <street name="陶堰镇" code="330621113" />
+    <street name="夏履镇" code="330621114" />
+</county>
+<county name="新昌" code="330624">
+    <street name="羽林街道" code="330624001" />
+    <street name="南明街道" code="330624002" />
+    <street name="七星街道" code="330624003" />
+    <street name="澄潭镇" code="330624101" />
+    <street name="梅渚镇" code="330624102" />
+    <street name="回山镇" code="330624104" />
+    <street name="大市聚镇" code="330624106" />
+    <street name="小将镇" code="330624107" />
+    <street name="沙溪镇" code="330624108" />
+    <street name="镜岭镇" code="330624109" />
+    <street name="儒岙镇" code="330624110" />
+    <street name="城南乡" code="330624200" />
+    <street name="东茗乡" code="330624201" />
+    <street name="双彩乡" code="330624203" />
+    <street name="新林乡" code="330624205" />
+    <street name="巧英乡" code="330624206" />
+</county>
+<county name="诸暨" code="330681">
+    <street name="暨阳街道" code="330681001" />
+    <street name="浣东街道" code="330681002" />
+    <street name="陶朱街道" code="330681003" />
+    <street name="大唐镇" code="330681101" />
+    <street name="应店街镇" code="330681102" />
+    <street name="次坞镇" code="330681103" />
+    <street name="店口镇" code="330681104" />
+    <street name="阮市镇" code="330681105" />
+    <street name="直埠镇" code="330681106" />
+    <street name="江藻镇" code="330681107" />
+    <street name="山下湖镇" code="330681108" />
+    <street name="枫桥镇" code="330681109" />
+    <street name="赵家镇" code="330681110" />
+    <street name="马剑镇" code="330681111" />
+    <street name="五泄镇" code="330681112" />
+    <street name="草塔镇" code="330681113" />
+    <street name="王家井镇" code="330681114" />
+    <street name="牌头镇" code="330681115" />
+    <street name="同山镇" code="330681116" />
+    <street name="安华镇" code="330681117" />
+    <street name="街亭镇" code="330681118" />
+    <street name="璜山镇" code="330681119" />
+    <street name="陈宅镇" code="330681120" />
+    <street name="岭北镇" code="330681121" />
+    <street name="浬浦镇" code="330681122" />
+    <street name="东白湖镇" code="330681124" />
+    <street name="东和乡" code="330681201" />
+</county>
+<county name="上虞" code="330682">
+    <street name="百官街道" code="330682001" />
+    <street name="曹娥街道" code="330682002" />
+    <street name="东关街道" code="330682003" />
+    <street name="道墟镇" code="330682100" />
+    <street name="长塘镇" code="330682101" />
+    <street name="上浦镇" code="330682102" />
+    <street name="汤浦镇" code="330682103" />
+    <street name="章镇镇" code="330682104" />
+    <street name="下管镇" code="330682105" />
+    <street name="丰惠镇" code="330682106" />
+    <street name="永和镇" code="330682107" />
+    <street name="梁湖镇" code="330682108" />
+    <street name="驿亭镇" code="330682109" />
+    <street name="小越镇" code="330682110" />
+    <street name="谢塘镇" code="330682111" />
+    <street name="盖北镇" code="330682112" />
+    <street name="崧厦镇" code="330682113" />
+    <street name="沥海镇" code="330682114" />
+    <street name="岭南乡" code="330682200" />
+    <street name="陈溪乡" code="330682201" />
+    <street name="丁宅乡" code="330682202" />
+</county>
+<county name="嵊州" code="330683">
+    <street name="剡湖街道" code="330683001" />
+    <street name="三江街道" code="330683002" />
+    <street name="鹿山街道" code="330683003" />
+    <street name="浦口街道" code="330683004" />
+    <street name="甘霖镇" code="330683100" />
+    <street name="长乐镇" code="330683101" />
+    <street name="崇仁镇" code="330683102" />
+    <street name="黄泽镇" code="330683103" />
+    <street name="三界镇" code="330683104" />
+    <street name="石璜镇" code="330683105" />
+    <street name="谷来镇" code="330683106" />
+    <street name="仙岩镇" code="330683107" />
+    <street name="金庭镇" code="330683108" />
+    <street name="北漳镇" code="330683109" />
+    <street name="下王镇" code="330683110" />
+    <street name="贵门乡" code="330683200" />
+    <street name="里南乡" code="330683201" />
+    <street name="竹溪乡" code="330683202" />
+    <street name="雅璜乡" code="330683203" />
+    <street name="王院乡" code="330683204" />
+    <street name="通源乡" code="330683205" />
+    <street name="嵊州经济开发区" code="330683400" />
+</county>
+</city>
+</address>

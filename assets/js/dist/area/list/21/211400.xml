@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="葫芦岛" code="211400">
+<county name="连山" code="211402">
+    <street name="连山街道" code="211402001" />
+    <street name="站前街道" code="211402002" />
+    <street name="渤海街道" code="211402003" />
+    <street name="兴工街道" code="211402004" />
+    <street name="石油街道" code="211402005" />
+    <street name="化工街道" code="211402006" />
+    <street name="化机街道" code="211402007" />
+    <street name="水泥街道" code="211402008" />
+    <street name="锦郊街道" code="211402011" />
+    <street name="钢屯镇" code="211402104" />
+    <street name="寺儿堡镇" code="211402105" />
+    <street name="新台门蒙古族镇" code="211402106" />
+    <street name="沙河营乡" code="211402201" />
+    <street name="孤竹营子乡" code="211402202" />
+    <street name="白马石乡" code="211402203" />
+    <street name="山神庙子乡" code="211402205" />
+    <street name="塔山乡" code="211402206" />
+    <street name="杨郊乡" code="211402210" />
+    <street name="杨家杖子经济开发区" code="211402400" />
+</county>
+<county name="龙港" code="211403">
+    <street name="葫芦岛街道" code="211403001" />
+    <street name="东街道" code="211403002" />
+    <street name="西街道" code="211403003" />
+    <street name="望海寺街道" code="211403004" />
+    <street name="龙湾街道" code="211403005" />
+    <street name="滨海街道" code="211403006" />
+    <street name="双龙街道" code="211403007" />
+    <street name="玉皇街道" code="211403008" />
+    <street name="连湾街道" code="211403009" />
+    <street name="北港街道" code="211403010" />
+    <street name="双树乡" code="211403201" />
+    <street name="葫芦岛经济开发区" code="211403400" />
+    <street name="葫芦岛市专利技术园区" code="211403401" />
+</county>
+<county name="南票" code="211404">
+    <street name="赵家屯街道" code="211404001" />
+    <street name="沙锅屯街道" code="211404002" />
+    <street name="邱皮沟街道" code="211404003" />
+    <street name="苇子沟街道" code="211404005" />
+    <street name="三家子街道" code="211404006" />
+    <street name="小凌河街道" code="211404007" />
+    <street name="九龙街道" code="211404008" />
+    <street name="缸窑岭镇" code="211404101" />
+    <street name="暖池塘镇" code="211404102" />
+    <street name="高桥镇" code="211404103" />
+    <street name="虹螺岘镇" code="211404104" />
+    <street name="金星镇" code="211404105" />
+    <street name="台集屯镇" code="211404106" />
+    <street name="沙锅屯乡" code="211404201" />
+    <street name="黄土坎乡" code="211404203" />
+    <street name="大兴乡" code="211404204" />
+    <street name="张相公屯乡" code="211404205" />
+    <street name="乌金塘水库" code="211404400" />
+</county>
+<county name="绥中" code="211421">
+    <street name="绥中镇" code="211421100" />
+    <street name="西甸子镇" code="211421101" />
+    <street name="宽帮满族镇" code="211421102" />
+    <street name="大王庙满族镇" code="211421103" />
+    <street name="万家镇" code="211421104" />
+    <street name="前所镇" code="211421105" />
+    <street name="高岭镇" code="211421106" />
+    <street name="前卫镇" code="211421107" />
+    <street name="荒地满族镇" code="211421108" />
+    <street name="塔山屯镇" code="211421109" />
+    <street name="高台镇" code="211421113" />
+    <street name="王宝镇" code="211421114" />
+    <street name="沙河镇" code="211421115" />
+    <street name="小庄子镇" code="211421116" />
+    <street name="西平坡满族乡" code="211421201" />
+    <street name="葛家满族乡" code="211421202" />
+    <street name="高甸子满族乡" code="211421204" />
+    <street name="范家满族乡" code="211421206" />
+    <street name="明水满族乡" code="211421207" />
+    <street name="秋子沟乡" code="211421208" />
+    <street name="加碑岩乡" code="211421210" />
+    <street name="永安堡乡" code="211421211" />
+    <street name="李家堡乡" code="211421212" />
+    <street name="网户满族乡" code="211421214" />
+    <street name="城郊乡" code="211421217" />
+    <street name="大台山果树农场" code="211421400" />
+    <street name="前所果树农场" code="211421401" />
+</county>
+<county name="建昌" code="211422">
+    <street name="建昌镇" code="211422100" />
+    <street name="八家子镇" code="211422101" />
+    <street name="喇嘛洞镇" code="211422102" />
+    <street name="药王庙镇" code="211422103" />
+    <street name="汤神庙镇" code="211422104" />
+    <street name="玲珑塔镇" code="211422105" />
+    <street name="大屯镇" code="211422106" />
+    <street name="牤牛营子乡" code="211422201" />
+    <street name="素珠营子乡" code="211422203" />
+    <street name="石佛乡" code="211422204" />
+    <street name="王宝营子乡" code="211422206" />
+    <street name="老达杖子乡" code="211422207" />
+    <street name="要路沟乡" code="211422208" />
+    <street name="魏家岭乡" code="211422209" />
+    <street name="西碱厂乡" code="211422210" />
+    <street name="头道营子乡" code="211422211" />
+    <street name="新开岭乡" code="211422212" />
+    <street name="贺杖子乡" code="211422213" />
+    <street name="养马甸子乡" code="211422214" />
+    <street name="和尚房子乡" code="211422215" />
+    <street name="杨树湾子乡" code="211422218" />
+    <street name="黑山科乡" code="211422219" />
+    <street name="雷家店乡" code="211422220" />
+    <street name="小德营子乡" code="211422222" />
+    <street name="二道湾子蒙古族乡" code="211422223" />
+    <street name="巴什罕乡" code="211422224" />
+    <street name="娘娘庙乡" code="211422225" />
+    <street name="谷杖子乡" code="211422226" />
+</county>
+<county name="兴城" code="211481">
+    <street name="古城街道" code="211481001" />
+    <street name="宁远街道" code="211481002" />
+    <street name="城东街道" code="211481003" />
+    <street name="温泉街道" code="211481004" />
+    <street name="钓鱼台街道" code="211481005" />
+    <street name="华山街道" code="211481006" />
+    <street name="四家屯街道" code="211481007" />
+    <street name="菊花街道" code="211481008" />
+    <street name="曹庄镇" code="211481101" />
+    <street name="沙后所满族镇" code="211481103" />
+    <street name="东辛庄满族镇" code="211481104" />
+    <street name="郭家满族镇" code="211481105" />
+    <street name="红崖子镇" code="211481106" />
+    <street name="徐大堡镇" code="211481107" />
+    <street name="羊安满族乡" code="211481201" />
+    <street name="元台子满族乡" code="211481203" />
+    <street name="白塔满族乡" code="211481204" />
+    <street name="望海满族乡" code="211481206" />
+    <street name="刘台子满族乡" code="211481207" />
+    <street name="大寨满族乡" code="211481208" />
+    <street name="南大山满族乡" code="211481209" />
+    <street name="围屏满族乡" code="211481210" />
+    <street name="高家岭满族乡" code="211481211" />
+    <street name="碱厂满族乡" code="211481212" />
+    <street name="三道沟满族乡" code="211481213" />
+    <street name="旧门满族乡" code="211481215" />
+    <street name="药王满族乡" code="211481216" />
+</county>
+</city>
+</address>

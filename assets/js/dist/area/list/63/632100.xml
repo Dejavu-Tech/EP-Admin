@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="海东" code="632100">
+<county name="平安" code="632121">
+    <street name="平安镇" code="630221100" />
+    <street name="小峡镇" code="630221101" />
+    <street name="三合镇" code="630221102" />
+    <street name="洪水泉乡" code="630221200" />
+    <street name="石灰窑乡" code="630221201" />
+    <street name="古城乡" code="630221202" />
+    <street name="沙沟乡" code="630221203" />
+    <street name="巴藏沟乡" code="630221204" />
+</county>
+<county name="民和" code="632122">
+    <street name="川口镇" code="630222100" />
+    <street name="古鄯镇" code="630222101" />
+    <street name="马营镇" code="630222102" />
+    <street name="官亭镇" code="630222103" />
+    <street name="巴州镇" code="630222104" />
+    <street name="满坪镇" code="630222105" />
+    <street name="李二堡镇" code="630222106" />
+    <street name="峡门镇" code="630222107" />
+    <street name="马场垣乡" code="630222200" />
+    <street name="北山乡" code="630222201" />
+    <street name="松树乡" code="630222202" />
+    <street name="西沟乡" code="630222203" />
+    <street name="总堡乡" code="630222204" />
+    <street name="隆治乡" code="630222205" />
+    <street name="大庄乡" code="630222206" />
+    <street name="转导乡" code="630222207" />
+    <street name="前河乡" code="630222208" />
+    <street name="甘沟乡" code="630222209" />
+    <street name="中川乡" code="630222210" />
+    <street name="杏儿乡" code="630222211" />
+    <street name="核桃庄乡" code="630222212" />
+    <street name="新民乡" code="630222213" />
+</county>
+<county name="乐都" code="632123">
+    <street name="碾伯镇" code="630202100" />
+    <street name="雨润镇" code="630202101" />
+    <street name="寿乐镇" code="630202102" />
+    <street name="高庙镇" code="630202103" />
+    <street name="洪水镇" code="630202104" />
+    <street name="高店镇" code="630202105" />
+    <street name="瞿昙镇" code="630202106" />
+    <street name="共和乡" code="630202200" />
+    <street name="中岭乡" code="630202201" />
+    <street name="李家乡" code="630202202" />
+    <street name="下营乡" code="630202203" />
+    <street name="芦化乡" code="630202204" />
+    <street name="马营乡" code="630202205" />
+    <street name="马厂乡" code="630202206" />
+    <street name="蒲台乡" code="630202207" />
+    <street name="中坝乡" code="630202208" />
+    <street name="峰堆乡" code="630202209" />
+    <street name="城台乡" code="630202210" />
+    <street name="达拉乡" code="630202211" />
+</county>
+<county name="互助" code="632126">
+    <street name="威远镇" code="630223100" />
+    <street name="丹麻镇" code="630223101" />
+    <street name="高寨镇" code="630223102" />
+    <street name="南门峡镇" code="630223103" />
+    <street name="加定镇" code="630223104" />
+    <street name="塘川镇" code="630223105" />
+    <street name="五十镇" code="630223106" />
+    <street name="五峰镇" code="630223107" />
+    <street name="台子乡" code="630223200" />
+    <street name="西山乡" code="630223201" />
+    <street name="红崖子沟乡" code="630223202" />
+    <street name="巴扎藏族乡" code="630223203" />
+    <street name="哈拉直沟乡" code="630223204" />
+    <street name="松多藏族乡" code="630223205" />
+    <street name="东山乡" code="630223206" />
+    <street name="东和乡" code="630223207" />
+    <street name="东沟乡" code="630223208" />
+    <street name="林川乡" code="630223209" />
+    <street name="蔡家堡乡" code="630223210" />
+</county>
+<county name="化隆" code="632127">
+    <street name="巴燕镇" code="630224100" />
+    <street name="群科镇" code="630224101" />
+    <street name="牙什尕镇" code="630224102" />
+    <street name="甘都镇" code="630224103" />
+    <street name="扎巴镇" code="630224104" />
+    <street name="昂思多镇" code="630224105" />
+    <street name="雄先藏族乡" code="630224200" />
+    <street name="初麻乡" code="630224201" />
+    <street name="查甫藏族乡" code="630224202" />
+    <street name="塔加藏族乡" code="630224203" />
+    <street name="金源藏族乡" code="630224204" />
+    <street name="二塘乡" code="630224205" />
+    <street name="谢家滩乡" code="630224206" />
+    <street name="德恒隆乡" code="630224207" />
+    <street name="沙连堡乡" code="630224208" />
+    <street name="阿什奴乡" code="630224209" />
+    <street name="石大仓乡" code="630224210" />
+    <street name="李家峡管理委员会" code="630224400" />
+    <street name="公伯峡管理委员会" code="630224401" />
+</county>
+<county name="循化" code="632128">
+    <street name="积石镇" code="630225100" />
+    <street name="白庄镇" code="630225101" />
+    <street name="街子镇" code="630225102" />
+    <street name="道帏藏族乡" code="630225200" />
+    <street name="清水乡" code="630225201" />
+    <street name="岗察藏族乡" code="630225202" />
+    <street name="查汗都斯乡" code="630225203" />
+    <street name="文都藏族乡" code="630225204" />
+    <street name="尕楞藏族乡" code="630225205" />
+</county>
+</city>
+</address>

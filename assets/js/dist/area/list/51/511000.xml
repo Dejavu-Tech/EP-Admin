@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="内江" code="511000">
+<county name="市中" code="511002">
+    <street name="城东街道" code="511002001" />
+    <street name="城南街道" code="511002002" />
+    <street name="城西街道" code="511002003" />
+    <street name="玉溪街道" code="511002004" />
+    <street name="牌楼街道" code="511002005" />
+    <street name="壕子口街道" code="511002006" />
+    <street name="白马镇" code="511002100" />
+    <street name="史家镇" code="511002101" />
+    <street name="凌家镇" code="511002102" />
+    <street name="朝阳镇" code="511002103" />
+    <street name="永安镇" code="511002104" />
+    <street name="全安镇" code="511002105" />
+    <street name="靖民镇" code="511002106" />
+    <street name="乐贤镇" code="511002107" />
+    <street name="沱江乡" code="511002200" />
+    <street name="交通乡" code="511002201" />
+    <street name="四合乡" code="511002202" />
+    <street name="凤鸣乡" code="511002203" />
+    <street name="伏龙乡" code="511002204" />
+    <street name="龚家乡" code="511002205" />
+    <street name="经济开发区" code="511002400" />
+</county>
+<county name="东兴" code="511011">
+    <street name="东兴街道" code="511011001" />
+    <street name="西林街道" code="511011002" />
+    <street name="新江街道" code="511011003" />
+    <street name="田家镇" code="511011100" />
+    <street name="郭北镇" code="511011101" />
+    <street name="高梁镇" code="511011102" />
+    <street name="白合镇" code="511011103" />
+    <street name="顺河镇" code="511011104" />
+    <street name="胜利镇" code="511011105" />
+    <street name="高桥镇" code="511011106" />
+    <street name="双才镇" code="511011107" />
+    <street name="小河口镇" code="511011108" />
+    <street name="杨家镇" code="511011109" />
+    <street name="椑木镇" code="511011110" />
+    <street name="石子镇" code="511011111" />
+    <street name="太安乡" code="511011200" />
+    <street name="苏家乡" code="511011201" />
+    <street name="富溪乡" code="511011202" />
+    <street name="同福乡" code="511011203" />
+    <street name="椑南乡" code="511011204" />
+    <street name="永东乡" code="511011205" />
+    <street name="永福乡" code="511011206" />
+    <street name="新店乡" code="511011207" />
+    <street name="双桥乡" code="511011208" />
+    <street name="平坦乡" code="511011209" />
+    <street name="中山乡" code="511011210" />
+    <street name="大治乡" code="511011211" />
+    <street name="柳桥乡" code="511011212" />
+    <street name="三烈乡" code="511011213" />
+</county>
+<county name="威远" code="511024">
+    <street name="严陵镇" code="511024100" />
+    <street name="铺子湾镇" code="511024101" />
+    <street name="新店镇" code="511024102" />
+    <street name="向义镇" code="511024103" />
+    <street name="界牌镇" code="511024104" />
+    <street name="龙会镇" code="511024105" />
+    <street name="高石镇" code="511024106" />
+    <street name="东联镇" code="511024107" />
+    <street name="靖和镇" code="511024108" />
+    <street name="镇西镇" code="511024109" />
+    <street name="庆卫镇" code="511024110" />
+    <street name="山王镇" code="511024111" />
+    <street name="黄荆沟镇" code="511024112" />
+    <street name="观英滩镇" code="511024113" />
+    <street name="新场镇" code="511024114" />
+    <street name="连界镇" code="511024115" />
+    <street name="越溪镇" code="511024116" />
+    <street name="两河镇" code="511024117" />
+    <street name="碗厂镇" code="511024118" />
+    <street name="小河镇" code="511024119" />
+</county>
+<county name="资中" code="511025">
+    <street name="重龙镇" code="511025100" />
+    <street name="甘露镇" code="511025101" />
+    <street name="归德镇" code="511025102" />
+    <street name="鱼溪镇" code="511025103" />
+    <street name="金李井镇" code="511025104" />
+    <street name="铁佛镇" code="511025105" />
+    <street name="球溪镇" code="511025106" />
+    <street name="顺河场镇" code="511025107" />
+    <street name="龙结镇" code="511025108" />
+    <street name="罗泉镇" code="511025109" />
+    <street name="发轮镇" code="511025110" />
+    <street name="兴隆街镇" code="511025111" />
+    <street name="银山镇" code="511025112" />
+    <street name="宋家镇" code="511025113" />
+    <street name="太平镇" code="511025114" />
+    <street name="骝马镇" code="511025115" />
+    <street name="水南镇" code="511025116" />
+    <street name="苏家湾镇" code="511025117" />
+    <street name="新桥镇" code="511025118" />
+    <street name="明心寺镇" code="511025119" />
+    <street name="双河镇" code="511025120" />
+    <street name="公民镇" code="511025121" />
+    <street name="龙江镇" code="511025122" />
+    <street name="双龙镇" code="511025123" />
+    <street name="高楼镇" code="511025124" />
+    <street name="陈家镇" code="511025125" />
+    <street name="配龙镇" code="511025126" />
+    <street name="走马镇" code="511025127" />
+    <street name="孟塘镇" code="511025128" />
+    <street name="马鞍镇" code="511025129" />
+    <street name="狮子镇" code="511025130" />
+    <street name="板栗桠乡" code="511025200" />
+    <street name="龙山乡" code="511025201" />
+</county>
+<county name="隆昌" code="511028">
+    <street name="古湖街道" code="511028001" />
+    <street name="金鹅镇" code="511028100" />
+    <street name="山川镇" code="511028101" />
+    <street name="响石镇" code="511028102" />
+    <street name="圣灯镇" code="511028103" />
+    <street name="黄家镇" code="511028104" />
+    <street name="双凤镇" code="511028105" />
+    <street name="龙市镇" code="511028106" />
+    <street name="迎祥镇" code="511028107" />
+    <street name="界市镇" code="511028108" />
+    <street name="石碾镇" code="511028109" />
+    <street name="周兴镇" code="511028110" />
+    <street name="渔箭镇" code="511028111" />
+    <street name="石燕桥镇" code="511028112" />
+    <street name="李市镇" code="511028113" />
+    <street name="胡家镇" code="511028114" />
+    <street name="云顶镇" code="511028115" />
+    <street name="桂花井乡" code="511028200" />
+    <street name="普润乡" code="511028201" />
+</county>
+</city>
+</address>

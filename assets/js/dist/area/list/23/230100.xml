@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="哈尔滨" code="230100">
+<county name="道里" code="230102">
+    <street name="兆麟街道" code="230102001" />
+    <street name="新阳路街道" code="230102002" />
+    <street name="抚顺街道" code="230102003" />
+    <street name="共乐街道" code="230102004" />
+    <street name="新华街道" code="230102005" />
+    <street name="城乡路街道" code="230102006" />
+    <street name="工农街道" code="230102007" />
+    <street name="尚志街道" code="230102008" />
+    <street name="斯大林街道" code="230102009" />
+    <street name="通江街道" code="230102010" />
+    <street name="经纬街道" code="230102011" />
+    <street name="工程街道" code="230102012" />
+    <street name="安静街道" code="230102013" />
+    <street name="安和街道" code="230102014" />
+    <street name="正阳河街道" code="230102015" />
+    <street name="建国街道" code="230102016" />
+    <street name="康安街道" code="230102017" />
+    <street name="爱建街道" code="230102018" />
+    <street name="群力街道" code="230102019" />
+    <street name="太平镇" code="230102101" />
+    <street name="新发镇" code="230102102" />
+    <street name="新农镇" code="230102103" />
+    <street name="榆树镇" code="230102104" />
+    <street name="闫家岗农场" code="230102500" />
+    <street name="道里区农垦" code="230102579" />
+</county>
+<county name="南岗" code="230103">
+    <street name="花园街道" code="230103001" />
+    <street name="奋斗路街道" code="230103002" />
+    <street name="革新街道" code="230103003" />
+    <street name="文化街道" code="230103004" />
+    <street name="大成街道" code="230103005" />
+    <street name="芦家街道" code="230103006" />
+    <street name="荣市街道" code="230103007" />
+    <street name="燎原街道" code="230103009" />
+    <street name="松花江街道" code="230103010" />
+    <street name="曲线街道" code="230103011" />
+    <street name="通达街道" code="230103012" />
+    <street name="七政街道" code="230103013" />
+    <street name="和兴路街道" code="230103015" />
+    <street name="哈西街道" code="230103016" />
+    <street name="保健路街道" code="230103017" />
+    <street name="先锋路街道" code="230103018" />
+    <street name="新春街道" code="230103019" />
+    <street name="跃进街道" code="230103020" />
+    <street name="王岗镇" code="230103101" />
+    <street name="红旗满族乡" code="230103201" />
+    <street name="红旗农场" code="230103500" />
+    <street name="南岗区农垦" code="230103579" />
+</county>
+<county name="道外" code="230104">
+    <street name="靖宇街道" code="230104001" />
+    <street name="太古街道" code="230104002" />
+    <street name="东莱街道" code="230104003" />
+    <street name="滨江街道" code="230104004" />
+    <street name="仁里街道" code="230104005" />
+    <street name="南市街道" code="230104006" />
+    <street name="崇俭街道" code="230104007" />
+    <street name="振江街道" code="230104008" />
+    <street name="东原街道" code="230104009" />
+    <street name="大兴街道" code="230104010" />
+    <street name="胜利街道" code="230104011" />
+    <street name="南马街道" code="230104012" />
+    <street name="民强街道" code="230104021" />
+    <street name="大有坊街道" code="230104022" />
+    <street name="南直路街道" code="230104023" />
+    <street name="化工街道" code="230104024" />
+    <street name="火车头街道" code="230104025" />
+    <street name="新一街道" code="230104026" />
+    <street name="三棵树大街街道" code="230104027" />
+    <street name="水泥路街道" code="230104028" />
+    <street name="太平大街街道" code="230104029" />
+    <street name="黎华街道" code="230104030" />
+    <street name="新乐街道" code="230104031" />
+    <street name="永源镇" code="230104102" />
+    <street name="巨源镇" code="230104109" />
+    <street name="团结镇" code="230104111" />
+    <street name="民主乡" code="230104200" />
+    <street name="青年农场" code="230104500" />
+    <street name="道外农垦" code="230104579" />
+</county>
+<county name="香坊" code="230106">
+    <street name="香坊大街街道" code="230110001" />
+    <street name="安埠街道" code="230110002" />
+    <street name="通天街道" code="230110003" />
+    <street name="新香坊街道" code="230110004" />
+    <street name="铁东街道" code="230110005" />
+    <street name="新成街道" code="230110006" />
+    <street name="红旗街道" code="230110007" />
+    <street name="六顺街道" code="230110008" />
+    <street name="建筑街道" code="230110009" />
+    <street name="哈平路街道" code="230110010" />
+    <street name="安乐街道" code="230110011" />
+    <street name="健康路街道" code="230110012" />
+    <street name="大庆路街道" code="230110013" />
+    <street name="进乡街道" code="230110014" />
+    <street name="通乡街道" code="230110015" />
+    <street name="和平路街道" code="230110016" />
+    <street name="民生路街道" code="230110017" />
+    <street name="文政街道" code="230110018" />
+    <street name="王兆街道" code="230110019" />
+    <street name="黎明街道" code="230110020" />
+    <street name="成高子镇" code="230110101" />
+    <street name="幸福镇" code="230110102" />
+    <street name="朝阳镇" code="230110103" />
+    <street name="向阳乡" code="230110201" />
+    <street name="香坊实验农场" code="230110500" />
+    <street name="香坊区农垦" code="230110579" />
+</county>
+<county name="平房" code="230108">
+    <street name="兴建街道" code="230108001" />
+    <street name="保国街道" code="230108002" />
+    <street name="联盟街道" code="230108003" />
+    <street name="友协街道" code="230108004" />
+    <street name="新疆街道" code="230108005" />
+    <street name="新伟街道" code="230108006" />
+    <street name="平新街道" code="230108007" />
+    <street name="平房镇" code="230108101" />
+    <street name="平房农垦" code="230108579" />
+</county>
+<county name="松北" code="230109">
+    <street name="三电街道" code="230109001" />
+    <street name="太阳岛街道" code="230109002" />
+    <street name="松浦街道" code="230109003" />
+    <street name="万宝街道" code="230109004" />
+    <street name="松北街道" code="230109005" />
+    <street name="对青山镇" code="230109101" />
+    <street name="乐业镇" code="230109102" />
+</county>
+<county name="呼兰" code="230111">
+    <street name="兰河街道" code="230111001" />
+    <street name="呼兰街道" code="230111002" />
+    <street name="建设路街道" code="230111003" />
+    <street name="利民街道" code="230111004" />
+    <street name="学院路街道" code="230111005" />
+    <street name="腰卜街道" code="230111006" />
+    <street name="康金街道" code="230111007" />
+    <street name="双井街道" code="230111008" />
+    <street name="沈家镇" code="230111104" />
+    <street name="二八镇" code="230111105" />
+    <street name="石人镇" code="230111106" />
+    <street name="白奎镇" code="230111107" />
+    <street name="方台镇" code="230111109" />
+    <street name="莲花镇" code="230111110" />
+    <street name="大用镇" code="230111111" />
+    <street name="长岭镇" code="230111113" />
+    <street name="杨林乡" code="230111201" />
+    <street name="许卜乡" code="230111203" />
+    <street name="孟家乡" code="230111205" />
+    <street name="呼兰农垦" code="230111579" />
+</county>
+<county name="依兰" code="230123">
+    <street name="依兰镇" code="230123100" />
+    <street name="达连河镇" code="230123101" />
+    <street name="江湾镇" code="230123102" />
+    <street name="三道岗镇" code="230123103" />
+    <street name="道台桥镇" code="230123104" />
+    <street name="宏克利镇" code="230123105" />
+    <street name="团山子乡" code="230123200" />
+    <street name="愚公乡" code="230123201" />
+    <street name="迎兰朝鲜族乡" code="230123202" />
+    <street name="依兰县林业局" code="230123400" />
+    <street name="依兰农场" code="230123500" />
+    <street name="松花江农场" code="230123501" />
+</county>
+<county name="方正" code="230124">
+    <street name="方正镇" code="230124100" />
+    <street name="会发镇" code="230124101" />
+    <street name="大罗密镇" code="230124102" />
+    <street name="天门乡" code="230124200" />
+    <street name="松南乡" code="230124201" />
+    <street name="德善乡" code="230124202" />
+    <street name="宝兴乡" code="230124204" />
+    <street name="伊汉通乡" code="230124205" />
+    <street name="方正林业局" code="230124400" />
+    <street name="沙河农场" code="230124500" />
+</county>
+<county name="宾县" code="230125">
+    <street name="宾州镇" code="230125100" />
+    <street name="居仁镇" code="230125101" />
+    <street name="宾西镇" code="230125102" />
+    <street name="糖坊镇" code="230125103" />
+    <street name="宾安镇" code="230125104" />
+    <street name="新甸镇" code="230125105" />
+    <street name="胜利镇" code="230125106" />
+    <street name="宁远镇" code="230125107" />
+    <street name="摆渡镇" code="230125109" />
+    <street name="平坊镇" code="230125110" />
+    <street name="满井镇" code="230125111" />
+    <street name="常安镇" code="230125112" />
+    <street name="永和乡" code="230125201" />
+    <street name="鸟河乡" code="230125203" />
+    <street name="民和乡" code="230125204" />
+    <street name="经建乡" code="230125205" />
+    <street name="三宝乡" code="230125210" />
+    <street name="九龙山柞蚕育种场" code="230125500" />
+    <street name="农垦农业职业学院" code="230125579" />
+</county>
+<county name="巴彦" code="230126">
+    <street name="巴彦镇" code="230126100" />
+    <street name="兴隆镇" code="230126101" />
+    <street name="西集镇" code="230126102" />
+    <street name="洼兴镇" code="230126103" />
+    <street name="龙泉镇" code="230126104" />
+    <street name="巴彦港镇" code="230126105" />
+    <street name="龙庙镇" code="230126106" />
+    <street name="万发镇" code="230126107" />
+    <street name="天增镇" code="230126108" />
+    <street name="黑山镇" code="230126110" />
+    <street name="松花江乡" code="230126200" />
+    <street name="富江乡" code="230126202" />
+    <street name="华山乡" code="230126204" />
+    <street name="丰乐乡" code="230126205" />
+    <street name="德祥乡" code="230126209" />
+    <street name="红光乡" code="230126210" />
+    <street name="山后乡" code="230126212" />
+    <street name="镇东乡" code="230126214" />
+    <street name="兴隆林业局" code="230126400" />
+    <street name="工业园区" code="230126401" />
+</county>
+<county name="木兰" code="230127">
+    <street name="木兰镇" code="230127100" />
+    <street name="东兴镇" code="230127101" />
+    <street name="大贵镇" code="230127102" />
+    <street name="利东镇" code="230127103" />
+    <street name="柳河镇" code="230127104" />
+    <street name="新民镇" code="230127105" />
+    <street name="建国乡" code="230127200" />
+    <street name="吉兴乡" code="230127203" />
+    <street name="兴隆林业局办事处" code="230127400" />
+</county>
+<county name="通河" code="230128">
+    <street name="通河镇" code="230128100" />
+    <street name="乌鸦泡镇" code="230128101" />
+    <street name="清河镇" code="230128102" />
+    <street name="浓河镇" code="230128103" />
+    <street name="凤山镇" code="230128104" />
+    <street name="祥顺镇" code="230128105" />
+    <street name="三站乡" code="230128201" />
+    <street name="富林乡" code="230128202" />
+    <street name="清河林业局" code="230128400" />
+    <street name="兴隆林业局办事处" code="230128401" />
+    <street name="岔林河农场" code="230128500" />
+</county>
+<county name="延寿" code="230129">
+    <street name="延寿镇" code="230129100" />
+    <street name="六团镇" code="230129101" />
+    <street name="中和镇" code="230129102" />
+    <street name="加信镇" code="230129103" />
+    <street name="延河镇" code="230129104" />
+    <street name="安山乡" code="230129204" />
+    <street name="寿山乡" code="230129205" />
+    <street name="玉河乡" code="230129206" />
+    <street name="青川乡" code="230129209" />
+    <street name="太平川" code="230129400" />
+    <street name="庆阳农场" code="230129500" />
+</county>
+<county name="阿城" code="230181">
+    <street name="金城街道" code="230112001" />
+    <street name="金都街道" code="230112002" />
+    <street name="通城街道" code="230112003" />
+    <street name="河东街道" code="230112004" />
+    <street name="阿什河街道" code="230112005" />
+    <street name="玉泉街道" code="230112006" />
+    <street name="新利街道" code="230112007" />
+    <street name="双丰街道" code="230112008" />
+    <street name="舍利街道" code="230112009" />
+    <street name="小岭街道" code="230112010" />
+    <street name="亚沟街道" code="230112011" />
+    <street name="交界街道" code="230112012" />
+    <street name="蜚克图镇" code="230112103" />
+    <street name="平山镇" code="230112107" />
+    <street name="松峰山镇" code="230112108" />
+    <street name="红星镇" code="230112109" />
+    <street name="金龙山镇" code="230112112" />
+    <street name="杨树镇" code="230112113" />
+    <street name="料甸镇" code="230112114" />
+    <street name="阿城原种场" code="230112503" />
+</county>
+<county name="双城" code="230182">
+    <street name="双城市街道管委会" code="230182001" />
+    <street name="双城镇" code="230182100" />
+    <street name="兰棱镇" code="230182101" />
+    <street name="周家镇" code="230182102" />
+    <street name="五家镇" code="230182103" />
+    <street name="韩甸镇" code="230182104" />
+    <street name="单城镇" code="230182105" />
+    <street name="东官镇" code="230182106" />
+    <street name="农丰满族锡伯族镇" code="230182107" />
+    <street name="杏山镇" code="230182108" />
+    <street name="新兴镇" code="230182109" />
+    <street name="朝阳乡" code="230182200" />
+    <street name="金城乡" code="230182201" />
+    <street name="青岭满族乡" code="230182203" />
+    <street name="联兴满族乡" code="230182204" />
+    <street name="幸福满族乡" code="230182205" />
+    <street name="公正满族乡" code="230182207" />
+    <street name="永胜乡" code="230182208" />
+    <street name="临江乡" code="230182209" />
+    <street name="水泉乡" code="230182210" />
+    <street name="乐群满族乡" code="230182211" />
+    <street name="团结满族乡" code="230182213" />
+    <street name="万隆乡" code="230182214" />
+    <street name="希勤满族乡" code="230182216" />
+    <street name="同心满族乡" code="230182217" />
+</county>
+<county name="尚志" code="230183">
+    <street name="尚志镇" code="230183100" />
+    <street name="一面坡镇" code="230183101" />
+    <street name="苇河镇" code="230183102" />
+    <street name="亚布力镇" code="230183103" />
+    <street name="帽儿山镇" code="230183104" />
+    <street name="亮河镇" code="230183105" />
+    <street name="庆阳镇" code="230183106" />
+    <street name="石头河子镇" code="230183107" />
+    <street name="元宝镇" code="230183108" />
+    <street name="黑龙宫镇" code="230183109" />
+    <street name="长寿乡" code="230183202" />
+    <street name="乌吉密乡" code="230183204" />
+    <street name="鱼池乡" code="230183206" />
+    <street name="珍珠山乡" code="230183207" />
+    <street name="老街基乡" code="230183208" />
+    <street name="马延乡" code="230183209" />
+    <street name="河东乡" code="230183211" />
+    <street name="苇河林业局" code="230183400" />
+    <street name="亚布力林业局" code="230183401" />
+</county>
+<county name="五常" code="230184">
+    <street name="五常镇" code="230184100" />
+    <street name="拉林满族镇" code="230184101" />
+    <street name="山河镇" code="230184102" />
+    <street name="小山子镇" code="230184103" />
+    <street name="安家镇" code="230184104" />
+    <street name="牛家满族镇" code="230184105" />
+    <street name="杜家镇" code="230184106" />
+    <street name="背荫河镇" code="230184107" />
+    <street name="冲河镇" code="230184108" />
+    <street name="沙河子镇" code="230184109" />
+    <street name="向阳镇" code="230184110" />
+    <street name="兴盛乡" code="230184200" />
+    <street name="志广乡" code="230184201" />
+    <street name="卫国乡" code="230184202" />
+    <street name="常堡乡" code="230184203" />
+    <street name="民意乡" code="230184206" />
+    <street name="龙凤山乡" code="230184207" />
+    <street name="红旗满族乡" code="230184209" />
+    <street name="八家子乡" code="230184210" />
+    <street name="民乐朝鲜族乡" code="230184211" />
+    <street name="营城子满族乡" code="230184212" />
+    <street name="长山乡" code="230184214" />
+    <street name="兴隆乡" code="230184215" />
+    <street name="二河乡" code="230184216" />
+    <street name="山河屯林业局" code="230184400" />
+</county>
+</city>
+</address>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="普洱" code="530800">
+<county name="思茅" code="530802">
+    <street name="思茅镇" code="530802101" />
+    <street name="南屏镇" code="530802102" />
+    <street name="倚象镇" code="530802103" />
+    <street name="思茅港镇" code="530802104" />
+    <street name="六顺镇" code="530802105" />
+    <street name="龙潭彝族傣族乡" code="530802201" />
+    <street name="云仙彝族乡" code="530802202" />
+</county>
+<county name="宁洱" code="530821">
+    <street name="宁洱镇" code="530821101" />
+    <street name="磨黑镇" code="530821102" />
+    <street name="德化镇" code="530821103" />
+    <street name="同心镇" code="530821104" />
+    <street name="勐先镇" code="530821105" />
+    <street name="梅子镇" code="530821106" />
+    <street name="德安乡" code="530821201" />
+    <street name="普义乡" code="530821205" />
+    <street name="黎明乡" code="530821206" />
+</county>
+<county name="墨江" code="530822">
+    <street name="联珠镇" code="530822101" />
+    <street name="通关镇" code="530822102" />
+    <street name="龙坝镇" code="530822103" />
+    <street name="新安镇" code="530822104" />
+    <street name="团田镇" code="530822105" />
+    <street name="新抚镇" code="530822106" />
+    <street name="景星镇" code="530822107" />
+    <street name="鱼塘镇" code="530822108" />
+    <street name="文武镇" code="530822109" />
+    <street name="坝溜镇" code="530822110" />
+    <street name="泗南江镇" code="530822111" />
+    <street name="雅邑镇" code="530822112" />
+    <street name="孟弄彝族乡" code="530822203" />
+    <street name="龙潭乡" code="530822208" />
+    <street name="那哈乡" code="530822212" />
+</county>
+<county name="景东" code="530823">
+    <street name="锦屏镇" code="530823101" />
+    <street name="文井镇" code="530823102" />
+    <street name="漫湾镇" code="530823103" />
+    <street name="大朝山东镇" code="530823104" />
+    <street name="花山镇" code="530823105" />
+    <street name="大街镇" code="530823106" />
+    <street name="太忠镇" code="530823107" />
+    <street name="文龙镇" code="530823108" />
+    <street name="安定镇" code="530823109" />
+    <street name="景福镇" code="530823110" />
+    <street name="曼等乡" code="530823201" />
+    <street name="龙街乡" code="530823205" />
+    <street name="林街乡" code="530823208" />
+</county>
+<county name="景谷" code="530824">
+    <street name="威远镇" code="530824101" />
+    <street name="永平镇" code="530824102" />
+    <street name="正兴镇" code="530824103" />
+    <street name="民乐镇" code="530824104" />
+    <street name="凤山镇" code="530824105" />
+    <street name="景谷镇" code="530824106" />
+    <street name="碧安乡" code="530824201" />
+    <street name="益智乡" code="530824204" />
+    <street name="半坡乡" code="530824205" />
+    <street name="勐班乡" code="530824206" />
+</county>
+<county name="镇沅" code="530825">
+    <street name="恩乐镇" code="530825101" />
+    <street name="按板镇" code="530825102" />
+    <street name="勐大镇" code="530825103" />
+    <street name="者东镇" code="530825104" />
+    <street name="九甲镇" code="530825105" />
+    <street name="古城镇" code="530825106" />
+    <street name="振太镇" code="530825107" />
+    <street name="和平镇" code="530825108" />
+    <street name="田坝乡" code="530825201" />
+</county>
+<county name="江城" code="530826">
+    <street name="勐烈镇" code="530826101" />
+    <street name="整董镇" code="530826102" />
+    <street name="曲水乡" code="530826201" />
+    <street name="国庆乡" code="530826202" />
+    <street name="嘉禾乡" code="530826203" />
+    <street name="宝藏乡" code="530826204" />
+    <street name="康平乡" code="530826205" />
+</county>
+<county name="孟连" code="530827">
+    <street name="娜允镇" code="530827101" />
+    <street name="勐马镇" code="530827102" />
+    <street name="芒信镇" code="530827103" />
+    <street name="富岩镇" code="530827104" />
+    <street name="景信乡" code="530827201" />
+    <street name="公信乡" code="530827202" />
+</county>
+<county name="澜沧" code="530828">
+    <street name="勐朗镇" code="530828101" />
+    <street name="上允镇" code="530828102" />
+    <street name="糯扎渡镇" code="530828103" />
+    <street name="惠民镇" code="530828104" />
+    <street name="东回镇" code="530828105" />
+    <street name="发展河哈尼族乡" code="530828201" />
+    <street name="谦六彝族乡" code="530828202" />
+    <street name="糯福乡" code="530828203" />
+    <street name="东河乡" code="530828204" />
+    <street name="大山乡" code="530828205" />
+    <street name="南岭乡" code="530828206" />
+    <street name="雪林佤族乡" code="530828207" />
+    <street name="木戛乡" code="530828208" />
+    <street name="酒井哈尼族乡" code="530828209" />
+    <street name="拉巴乡" code="530828212" />
+    <street name="竹塘乡" code="530828213" />
+    <street name="富邦乡" code="530828214" />
+    <street name="安康佤族乡" code="530828215" />
+    <street name="文东佤族乡" code="530828216" />
+    <street name="富东乡" code="530828217" />
+</county>
+<county name="西盟" code="530829">
+    <street name="勐梭镇" code="530829101" />
+    <street name="勐卡镇" code="530829102" />
+    <street name="翁嘎科镇" code="530829103" />
+    <street name="中课镇" code="530829104" />
+    <street name="新厂镇" code="530829105" />
+    <street name="力所拉祜族乡" code="530829202" />
+    <street name="岳宋乡" code="530829203" />
+</county>
+</city>
+</address>

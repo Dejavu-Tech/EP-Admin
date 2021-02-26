@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="西宁" code="630100">
+<county name="城东" code="630102">
+    <street name="东关大街街道" code="630102001" />
+    <street name="清真巷街道" code="630102002" />
+    <street name="大众街街道" code="630102003" />
+    <street name="周家泉街道" code="630102004" />
+    <street name="火车站街道" code="630102005" />
+    <street name="八一路街道" code="630102006" />
+    <street name="林家崖街道" code="630102007" />
+    <street name="乐家湾镇" code="630102100" />
+    <street name="韵家口镇" code="630102101" />
+</county>
+<county name="城中" code="630103">
+    <street name="人民街街道" code="630103001" />
+    <street name="南滩街道" code="630103002" />
+    <street name="仓门街街道" code="630103003" />
+    <street name="礼让街街道" code="630103004" />
+    <street name="饮马街街道" code="630103005" />
+    <street name="南川东路街道" code="630103006" />
+    <street name="南川西路街道" code="630103007" />
+    <street name="总寨镇" code="630103100" />
+    <street name="南川工业园" code="630103400" />
+</county>
+<county name="城西" code="630104">
+    <street name="西关大街街道" code="630104001" />
+    <street name="古城台街道" code="630104002" />
+    <street name="虎台街道" code="630104003" />
+    <street name="胜利路街道" code="630104004" />
+    <street name="兴海路街道" code="630104005" />
+    <street name="彭家寨镇" code="630104100" />
+</county>
+<county name="城北" code="630105">
+    <street name="朝阳街道" code="630105001" />
+    <street name="小桥大街街道" code="630105002" />
+    <street name="马坊街道" code="630105003" />
+    <street name="大堡子镇" code="630105100" />
+    <street name="廿里铺镇" code="630105101" />
+    <street name="生物科技产业园" code="630105400" />
+</county>
+<county name="大通" code="630121">
+    <street name="桥头镇" code="630121100" />
+    <street name="城关镇" code="630121101" />
+    <street name="塔尔镇" code="630121102" />
+    <street name="东峡镇" code="630121103" />
+    <street name="黄家寨镇" code="630121104" />
+    <street name="长宁镇" code="630121105" />
+    <street name="景阳镇" code="630121106" />
+    <street name="多林镇" code="630121107" />
+    <street name="新庄镇" code="630121108" />
+    <street name="青林乡" code="630121200" />
+    <street name="青山乡" code="630121201" />
+    <street name="逊让乡" code="630121202" />
+    <street name="极乐乡" code="630121203" />
+    <street name="石山乡" code="630121204" />
+    <street name="宝库乡" code="630121205" />
+    <street name="斜沟乡" code="630121206" />
+    <street name="良教乡" code="630121207" />
+    <street name="向化藏族乡" code="630121208" />
+    <street name="桦林乡" code="630121209" />
+    <street name="朔北藏族乡" code="630121210" />
+</county>
+<county name="湟中" code="630122">
+    <street name="康川街道" code="630122001" />
+    <street name="鲁沙尔镇" code="630122100" />
+    <street name="西堡镇" code="630122101" />
+    <street name="上新庄镇" code="630122102" />
+    <street name="田家寨镇" code="630122103" />
+    <street name="甘河滩镇" code="630122104" />
+    <street name="共和镇" code="630122105" />
+    <street name="多巴镇" code="630122106" />
+    <street name="拦隆口镇" code="630122107" />
+    <street name="上五庄镇" code="630122108" />
+    <street name="李家山镇" code="630122109" />
+    <street name="群加乡" code="630122200" />
+    <street name="土门关乡" code="630122201" />
+    <street name="汉东乡" code="630122202" />
+    <street name="大才乡" code="630122203" />
+    <street name="海子沟乡" code="630122204" />
+    <street name="甘河工业园" code="630122400" />
+</county>
+<county name="湟源" code="630123">
+    <street name="城关镇" code="630123100" />
+    <street name="大华镇" code="630123101" />
+    <street name="东峡乡" code="630123200" />
+    <street name="日月乡" code="630123201" />
+    <street name="和平乡" code="630123202" />
+    <street name="波航乡" code="630123203" />
+    <street name="申中乡" code="630123204" />
+    <street name="巴燕乡" code="630123205" />
+    <street name="寺寨乡" code="630123206" />
+</county>
+</city>
+</address>

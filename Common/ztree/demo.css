@@ -1,0 +1,22 @@
+
+#userMenu code {color: #2f332a;}
+#userMenu .highlight_red {color:#A60000;}
+#userMenu .highlight_green {color:#A7F43D;}
+#userMenu li {list-style-type: none;font-size: 12px;}
+#userMenu li.title {list-style: none;}
+#userMenu ul.list {margin-left: 17px;}
+
+#userMenu div.content_wrap {width: 600px;height:380px;}
+#userMenu div.content_wrap div.left{float: left;width: 250px;}
+#userMenu div.content_wrap div.right{float: right;width: 340px;}
+#userMenu div.zTreeDemoBackground {width:250px;height:362px;text-align:left;}
+
+#userMenu ul.ztree {margin-top: 10px;border: 1px solid #617775;background: #f0f6e4;width:220px;height:360px;overflow-y:scroll;overflow-x:auto;}
+#userMenu ul.log {border: 1px solid #617775;background: #f0f6e4;width:300px;height:170px;overflow: hidden;}
+#userMenu ul.log.small {height:45px;}
+#userMenu ul.log li {color: #666666;list-style: none;padding-left: 10px;}
+#userMenu ul.log li.dark {background-color: #E3E3E3;}
+
+/* ruler */
+#userMenu div.ruler {height:20px; width:220px; background-color:#f0f6e4;border: 1px solid #333; margin-bottom: 5px; cursor: pointer}
+#userMenu div.ruler div.cursor {height:20px; width:30px; background-color:#3C6E31; color:white; text-align: right; padding-right: 5px; cursor: pointer}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="黄南" code="632300">
+<county name="同仁" code="632321">
+    <street name="隆务镇" code="632321100" />
+    <street name="保安镇" code="632321101" />
+    <street name="兰采乡" code="632321200" />
+    <street name="双朋西乡" code="632321201" />
+    <street name="扎毛乡" code="632321202" />
+    <street name="黄乃亥乡" code="632321203" />
+    <street name="曲库乎乡" code="632321204" />
+    <street name="年都乎乡" code="632321205" />
+    <street name="多哇乡" code="632321206" />
+    <street name="瓜什则乡" code="632321207" />
+    <street name="加吾乡" code="632321208" />
+</county>
+<county name="尖扎" code="632322">
+    <street name="马克堂镇" code="632322100" />
+    <street name="康扬镇" code="632322101" />
+    <street name="坎布拉镇" code="632322102" />
+    <street name="贾加乡" code="632322200" />
+    <street name="措周乡" code="632322201" />
+    <street name="昂拉乡" code="632322202" />
+    <street name="能科乡" code="632322203" />
+    <street name="当顺乡" code="632322204" />
+    <street name="尖扎滩乡" code="632322205" />
+</county>
+<county name="泽库" code="632323">
+    <street name="泽曲镇" code="632323100" />
+    <street name="麦秀镇" code="632323101" />
+    <street name="宁秀乡" code="632323200" />
+    <street name="和日乡" code="632323201" />
+    <street name="王加乡" code="632323202" />
+    <street name="西卜沙乡" code="632323203" />
+    <street name="多禾茂乡" code="632323204" />
+</county>
+<county name="河南" code="632324">
+    <street name="优干宁镇" code="632324100" />
+    <street name="宁木特乡" code="632324200" />
+    <street name="多松乡" code="632324201" />
+    <street name="赛尔龙乡" code="632324202" />
+    <street name="柯生乡" code="632324203" />
+</county>
+</city>
+</address>

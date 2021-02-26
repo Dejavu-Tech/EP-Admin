@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="七台河" code="230900">
+<county name="新兴" code="230902">
+    <street name="兴华街道" code="230902001" />
+    <street name="新城街道" code="230902002" />
+    <street name="新立街道" code="230902003" />
+    <street name="新建街道" code="230902004" />
+    <street name="北山街道" code="230902005" />
+    <street name="河南街道" code="230902006" />
+    <street name="新合街道" code="230902007" />
+    <street name="缸窑沟街道" code="230902008" />
+    <street name="新安街道" code="230902009" />
+    <street name="越秀街道" code="230902010" />
+    <street name="兴安社区服务站" code="230902011" />
+    <street name="兴乐社区服务站" code="230902012" />
+    <street name="兴富社区服务站" code="230902013" />
+    <street name="兴秀社区服务站" code="230902014" />
+    <street name="兴平社区服务站" code="230902015" />
+    <street name="兴和社区服务站" code="230902016" />
+    <street name="兴城社区服务站" code="230902017" />
+    <street name="红旗镇" code="230902100" />
+    <street name="长兴乡" code="230902200" />
+    <street name="种畜场" code="230902480" />
+    <street name="北兴农场" code="230902500" />
+    <street name="黑龙江红兴隆农垦宝利采金" code="230902579" />
+</county>
+<county name="桃山" code="230903">
+    <street name="桃南街道" code="230903001" />
+    <street name="桃北街道" code="230903002" />
+    <street name="兴岗街道" code="230903004" />
+    <street name="桃山街道" code="230903006" />
+    <street name="学府社区服务站" code="230903007" />
+    <street name="同仁社区服务站" code="230903008" />
+    <street name="运销社区服务站" code="230903009" />
+    <street name="东方社区服务站" code="230903010" />
+    <street name="广平社区服务站" code="230903011" />
+    <street name="夏日社区服务站" code="230903012" />
+    <street name="万宝河镇" code="230903100" />
+</county>
+<county name="茄子河" code="230904">
+    <street name="东风街道" code="230904001" />
+    <street name="向阳街道" code="230904002" />
+    <street name="富强街道" code="230904003" />
+    <street name="新富街道" code="230904004" />
+    <street name="龙湖街道" code="230904005" />
+    <street name="茄子河镇" code="230904100" />
+    <street name="宏伟镇" code="230904101" />
+    <street name="铁山乡" code="230904200" />
+    <street name="中心河乡" code="230904201" />
+</county>
+<county name="勃利" code="230921">
+    <street name="新起街道" code="230921001" />
+    <street name="新华街道" code="230921002" />
+    <street name="元明街道" code="230921003" />
+    <street name="铁西街道" code="230921004" />
+    <street name="城西街道" code="230921005" />
+    <street name="勃利镇" code="230921100" />
+    <street name="小五站镇" code="230921101" />
+    <street name="大四站镇" code="230921102" />
+    <street name="双河镇" code="230921103" />
+    <street name="倭肯镇" code="230921104" />
+    <street name="青山乡" code="230921200" />
+    <street name="永恒乡" code="230921202" />
+    <street name="抢垦乡" code="230921203" />
+    <street name="杏树朝鲜族乡" code="230921204" />
+    <street name="吉兴朝鲜族满族乡" code="230921205" />
+</county>
+</city>
+</address>

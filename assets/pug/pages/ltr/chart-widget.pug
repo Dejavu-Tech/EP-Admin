@@ -1,0 +1,170 @@
+- var prism                 = true;
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var chartist              = true;
+- var counter               = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var apex                  = true;
+- var chart_widget          = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Chart 
+                                      span
+                                        | Widget  
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Charts
+                                      li.breadcrumb-item.active Chart Widget
+                    // Container-fluid starts
+                    .container-fluid
+                      // Chart widget top Start
+                      .row
+                        .col-xl-4.col-md-12.box-col-12
+                          .card.gradient-primary.text-white
+                            .chart-widget-top
+                              .row.card-body.p-b-0
+                                .col-5
+                                  h6.f-w-600 SALE
+                                  span
+                                    span 90
+                                    | %
+                                    i.icon-angle-up.f-12.ml-1
+                                .col-7.text-right
+                                  h4.total-value
+                                    | $ 
+                                    span 3654
+                                    | .00
+                              div
+                                #chart-widget1
+                        .col-xl-4.col-md-12.box-col-12
+                          .card.gradient-secondary.text-white
+                            .chart-widget-top
+                              .row.card-body.p-b-0
+                                .col-7
+                                  h6.f-w-600 PROJECTS
+                                  span
+                                    span 30
+                                    | %
+                                    i.icon-angle-up.f-12.ml-1
+                                .col-5.text-right.text-white
+                                  h4.total-value 12569
+                              div#chart-widget2
+                                #chart-widget-top-second.flot-chart-placeholder
+                        .col-xl-4.col-md-12.box-col-12
+                          .card.gradient-info.text-white
+                            .chart-widget-top
+                              .row.card-body.p-b-0
+                                .col-8
+                                  h6.f-w-600 PRODUCTS
+                                  span
+                                    span 68
+                                    | %
+                                    i.icon-angle-up.f-12.ml-1
+                                .col-4.text-right
+                                  h4.total-value
+                                    span 93
+                                    | M
+                              div#chart-widget3
+                                #chart-widget-top-third.flot-chart-placeholder
+                      // Chart widget top Ends
+                      // market widget start
+                      .row
+                        .col-xl-12.col-lg-12.box-col-12
+                            .card
+                              .card-header
+                                .row
+                                  .col-9
+                                    h5 Market Trending Status
+                                  .col-3.text-right
+                                    i.text-muted(data-feather='trending-up')
+                              .card-body.p-0
+                                  #chart
+                      // market widget Ends            
+                      // market-value widget start              
+                      .row
+                        .col-xl-4.col-lg-12.box-col-12
+                            .card
+                              .card-header
+                                .row
+                                  .col-9
+                                    h5 Serious Trends
+                                  .col-3.text-right
+                                    i.text-muted(data-feather='shopping-bag')
+                              .card-body.r-dount
+                                #chart1  
+                        .col-xl-5.col-lg-12.box-col-12
+                            .card
+                              .card-header
+                                .row
+                                  .col-9
+                                    h5 Results
+                                  .col-3.text-right
+                                    i.text-muted(data-feather='shopping-bag')
+                              .card-body.p-0
+                                #chart-year 
+                        .col-xl-3.col-lg-12.box-col-12
+                                .row
+                                  .col-sm-12
+                                    .card.o-hidden.small-chart
+                                      #small-chart1
+                                      .card-body.px-0.p-t-0
+                                        div.p-l-25
+                                          h4 $23,567
+                                          span.p-b-10 Amount Processed
+                                  .col-sm-12
+                                    .card.o-hidden.small-chart
+                                      #small-chart2
+                                      .card-body.px-0.p-t-0
+                                        div.p-l-25
+                                          h4 $23,530
+                                          span.p-b-10 Amount Spent
+                                 
+                      // market-value widget start
+                      // status widget Start
+                      .row
+                        .col-xl-7.col-md-12.box-col-12
+                            .card
+                              .card-header
+                                .row
+                                  .col-9
+                                    h5 Order Status
+                                  .col-3.text-right
+                                    i.text-muted(data-feather='navigation')
+                              .card-body.pt-0.px-0
+                                  #line-adwords
+                        .col-xl-5.col-lg-12.box-col-12
+                            .card
+                              .card-header
+                                .row
+                                  .col-9
+                                    h5 Finance
+                                  .col-3.text-right
+                                    i.text-muted(data-feather='shopping-bag')
+                              .card-body.pt-0.r-radial
+                                  #radialBarBottom
+                      // status widget Ends
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

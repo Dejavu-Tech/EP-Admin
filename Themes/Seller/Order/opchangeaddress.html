@@ -1,0 +1,124 @@
+<script type="text/javascript" src="/assets/js/dist/area/cascade.js"></script>
+<div class="modal-dialog modal-lg modal-dialog-centered btn-showcase">
+    <div class="modal-content">
+        <form class="form-horizontal form-validate" action="{:U('order/opchangeaddress')}" method="post" enctype="multipart/form-data">
+            <input type='hidden' name='id' value='{$id}' />
+            <div class="modal-header">
+                <h5 class="modal-title">编辑订单收货信息</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">收货人</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="realname" class="form-control" value="{$item['shipping_name']}" data-rule-required='true' />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">手机</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="mobile" class="form-control" value="{$item['shipping_tel']}" data-rule-required='true' />
+                    </div>
+                </div>
+
+                <div class="form-group row dispatch_info">
+                    <label class="col-sm-2 col-form-label">修改地址</label>
+                    <div class="col-sm-10">
+                        <input type="radio" name="changead" value="0" checked="true"/> <label class="col-form-label m-r-10">否</label>
+                        <input type="radio" name="changead" value="1" /> <label class="col-form-label">是</label>
+                    </div>
+                </div>
+
+                <div class="form-group row ad-group"  style="display: none;">
+                    <label class="col-sm-2 col-form-label">地址 :</label>
+                    <div class="col-sm-10">
+                        <label class="col-form-label">{$item['shipping_address']}</label>
+                    </div>
+                </div>
+
+                <div class="form-group row ad-group" style="display: none;">
+                    <label class="col-sm-2 col-form-label">新地址 :</label>
+                    <div class="col-sm-10">
+                        <div class="col-sm-12 row m-b-10">
+                            <select id="sel-provance" name="province" onChange="selectCity();" class="col-sm-3 select form-control select-group m-r-5" >
+                                <option value="" selected="true">省/直辖市</option>
+                            </select>
+                            <select id="sel-city" name="city" onChange="selectcounty(0)" class="col-sm-3 select form-control select-group m-r-5" >
+                                <option value="" selected="true">请选择</option>
+                            </select>
+                            <select id="sel-area" name="area" onChange="selectstreet(0)" class="col-sm-3 select form-control select-group m-r-5" >
+                                <option value="" selected="true">请选择</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <input type="text" name="address" class="form-control" id="address_detail" value="{$item['shipping_address']}" data-rule-required='true' />
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-order" id="sub_form" type="submit">保存</button>
+                <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<script language="javascript">
+    $(function () {
+        $(':radio[name=changead]').click(function () {
+            var type = $("input[name='changead']:checked").val();
+            if (type == '1') {
+                $('.ad-group').show();
+            } else {
+                $('.ad-group').hide();
+            }
+        });
+        $('#sub_form').click(function(){
+            var type = $("input[name='changead']:checked").val();
+
+            if(type == 1)
+            {
+                var provance = $('#sel-provance').val();
+                var city = $('#sel-city').val();
+                var area = $('#sel-area').val();
+
+                if( provance == '请选择省份' )
+                {
+                    alert('请选择省份');
+                    return false;
+                }
+
+                if( area == '市辖区' )
+                {
+                    alert('请选择市辖区');
+                    return false;
+                }
+
+            }
+            var address_detail =  $('#address_detail').val();
+
+            if( address_detail == '' )
+            {
+                alert('请填写详细地址');
+                return false;
+            }
+
+
+        })
+
+    })
+    //opchangeaddress
+    cascdeInit("0","{php echo $item['shipping_address']}","{php echo isset($province_info['name'])?$province_info['name']:''}","{php echo isset($city_info['name'])?$city_info['name']:''}","{php echo isset($area_info['name'])?$area_info['name']:''}","{php echo '';");
+
+    // cascdeInit("1","1","{$item['province_name']}","{$item['city_name']}","{$item['area_name']}","{$item['country_name']}");
+</script>
+
+
+

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="苏州" code="320500">
+<county name="虎丘" code="320505">
+    <street name="横塘街道" code="320505001" />
+    <street name="狮山街道" code="320505002" />
+    <street name="枫桥街道" code="320505003" />
+    <street name="镇湖街道" code="320505004" />
+    <street name="浒墅关镇" code="320505100" />
+    <street name="通安镇" code="320505101" />
+    <street name="东渚镇" code="320505102" />
+    <street name="高新区浒墅关开发分区" code="320505400" />
+    <street name="苏州高新技术创业服务中心" code="320505405" />
+    <street name="苏州科技城" code="320505407" />
+    <street name="苏州高新区综合保税区" code="320505408" />
+</county>
+<county name="吴中" code="320506">
+    <street name="长桥街道" code="320506001" />
+    <street name="越溪街道" code="320506003" />
+    <street name="郭巷街道" code="320506004" />
+    <street name="横泾街道" code="320506005" />
+    <street name="香山街道" code="320506006" />
+    <street name="苏苑街道" code="320506007" />
+    <street name="龙西街道" code="320506008" />
+    <street name="城南街道" code="320506009" />
+    <street name="甪直镇" code="320506100" />
+    <street name="木渎镇" code="320506103" />
+    <street name="胥口镇" code="320506104" />
+    <street name="东山镇" code="320506107" />
+    <street name="光福镇" code="320506108" />
+    <street name="金庭镇" code="320506109" />
+    <street name="临湖镇" code="320506110" />
+    <street name="江苏省太湖采石公司" code="320506400" />
+    <street name="吴中区林场" code="320506401" />
+    <street name="西山农业园区" code="320506402" />
+    <street name="穹窿山风景区" code="320506403" />
+    <street name="开发区" code="320506404" />
+    <street name="国家苏州太湖旅游度假区" code="320506405" />
+</county>
+<county name="相城" code="320507">
+    <street name="元和街道" code="320507001" />
+    <street name="太平街道" code="320507002" />
+    <street name="黄桥街道" code="320507003" />
+    <street name="北桥街道" code="320507004" />
+    <street name="望亭镇" code="320507100" />
+    <street name="黄埭镇" code="320507102" />
+    <street name="渭塘镇" code="320507105" />
+    <street name="阳澄湖镇" code="320507109" />
+    <street name="开发区" code="320507400" />
+    <street name="阳澄湖生态休闲旅游度假区" code="320507401" />
+    <street name="苏州高铁新城" code="320507402" />
+</county>
+<county name="姑苏" code="320508">
+    <street name="双塔街道" code="320508001" />
+    <street name="沧浪街道" code="320508002" />
+    <street name="胥江街道" code="320508003" />
+    <street name="吴门桥街道" code="320508004" />
+    <street name="葑门街道" code="320508005" />
+    <street name="友新街道" code="320508006" />
+    <street name="观前街道" code="320508007" />
+    <street name="平江街道" code="320508008" />
+    <street name="苏锦街道" code="320508009" />
+    <street name="娄门街道" code="320508010" />
+    <street name="城北街道" code="320508011" />
+    <street name="桃花坞街道" code="320508012" />
+    <street name="石路街道" code="320508013" />
+    <street name="金阊街道" code="320508014" />
+    <street name="留园街道" code="320508015" />
+    <street name="虎丘街道" code="320508016" />
+    <street name="白洋湾街道" code="320508017" />
+    <street name="娄葑街道" code="320508050" />
+    <street name="斜塘街道" code="320508051" />
+    <street name="唯亭街道" code="320508052" />
+    <street name="胜浦街道" code="320508053" />
+    <street name="苏州工业园区直属镇" code="320508199" />
+</county>
+<county name="常熟" code="320581">
+    <street name="虞山镇" code="320581100" />
+    <street name="梅李镇" code="320581101" />
+    <street name="海虞镇" code="320581102" />
+    <street name="古里镇" code="320581104" />
+    <street name="沙家浜镇" code="320581105" />
+    <street name="支塘镇" code="320581106" />
+    <street name="董浜镇" code="320581107" />
+    <street name="辛庄镇" code="320581110" />
+    <street name="尚湖镇" code="320581111" />
+    <street name="虞山林场" code="320581400" />
+    <street name="常熟经济技术开发区" code="320581401" />
+    <street name="江苏省常熟高新技术产业开发区" code="320581402" />
+    <street name="常熟虞山尚湖旅游度假区" code="320581403" />
+    <street name="江苏常熟服装城管理委员会" code="320581404" />
+    <street name="碧溪街道" code="320581405" />
+    <street name="常熟昆承湖管理委员会" code="320581406" />
+    <street name="常熟国家大学科技园" code="320581407" />
+    <street name="东南街道" code="320581408" />
+</county>
+<county name="张家港" code="320582">
+    <street name="杨舍镇" code="320582100" />
+    <street name="塘桥镇" code="320582101" />
+    <street name="金港镇" code="320582102" />
+    <street name="锦丰镇" code="320582103" />
+    <street name="乐余镇" code="320582104" />
+    <street name="凤凰镇" code="320582105" />
+    <street name="南丰镇" code="320582106" />
+    <street name="大新镇" code="320582107" />
+    <street name="张家港市现代农业示范园区" code="320582400" />
+    <street name="张家港经济技术开发区" code="320582401" />
+    <street name="张家港保税区" code="320582403" />
+    <street name="张家港市市稻麦良种场" code="320582404" />
+    <street name="张家港市畜禽良种场" code="320582405" />
+    <street name="张家港市冶金工业园" code="320582406" />
+    <street name="双山岛旅游度假区" code="320582407" />
+</county>
+<county name="昆山" code="320583">
+    <street name="玉山镇" code="320583100" />
+    <street name="巴城镇" code="320583101" />
+    <street name="周市镇" code="320583102" />
+    <street name="陆家镇" code="320583103" />
+    <street name="花桥镇" code="320583104" />
+    <street name="淀山湖镇" code="320583105" />
+    <street name="张浦镇" code="320583106" />
+    <street name="周庄镇" code="320583107" />
+    <street name="千灯镇" code="320583108" />
+    <street name="锦溪镇" code="320583109" />
+    <street name="开发区" code="320583400" />
+</county>
+<county name="吴江" code="320584">
+    <street name="太湖新城镇" code="320509100" />
+    <street name="同里镇" code="320509101" />
+    <street name="平望镇" code="320509104" />
+    <street name="盛泽镇" code="320509105" />
+    <street name="七都镇" code="320509107" />
+    <street name="震泽镇" code="320509108" />
+    <street name="桃源镇" code="320509109" />
+    <street name="黎里镇" code="320509110" />
+    <street name="吴江经济技术开发区" code="320509400" />
+    <street name="东方丝绸市场" code="320509401" />
+</county>
+<county name="太仓" code="320585">
+    <street name="城厢镇" code="320585100" />
+    <street name="沙溪镇" code="320585101" />
+    <street name="浏河镇" code="320585102" />
+    <street name="浮桥镇" code="320585103" />
+    <street name="璜泾镇" code="320585104" />
+    <street name="双凤镇" code="320585105" />
+    <street name="经济开发区" code="320585400" />
+    <street name="科教新城" code="320585403" />
+</county>
+<county name="工业园" code="320586">
+	<street name="娄葑街道" code="320586100" />
+    <street name="斜塘街道" code="320586101" />
+    <street name="唯亭街道" code="320586102" />
+    <street name="胜浦街道" code="320586103" />
+    <street name="苏州工业园区直属镇" code="320586104" />
+</county>
+</city>
+</address>

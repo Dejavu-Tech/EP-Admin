@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="张家界" code="430800">
+<county name="永定" code="430802">
+    <street name="永定街道" code="430802001" />
+    <street name="大庸桥街道" code="430802002" />
+    <street name="西溪坪街道" code="430802003" />
+    <street name="官黎坪街道" code="430802004" />
+    <street name="崇文街道" code="430802005" />
+    <street name="南庄坪街道" code="430802006" />
+    <street name="新桥镇" code="430802100" />
+    <street name="温塘镇" code="430802101" />
+    <street name="教字垭镇" code="430802102" />
+    <street name="大坪镇" code="430802103" />
+    <street name="沅古坪镇" code="430802104" />
+    <street name="尹家溪镇" code="430802105" />
+    <street name="后坪镇" code="430802106" />
+    <street name="阳湖坪镇" code="430802107" />
+    <street name="王家坪镇" code="430802108" />
+    <street name="三家馆乡" code="430802201" />
+    <street name="沙堤乡" code="430802202" />
+    <street name="枫香岗乡" code="430802203" />
+    <street name="合作桥乡" code="430802204" />
+    <street name="双溪桥乡" code="430802205" />
+    <street name="谢家垭乡" code="430802206" />
+    <street name="青安坪乡" code="430802207" />
+    <street name="罗塔坪乡" code="430802208" />
+    <street name="罗水乡" code="430802209" />
+    <street name="桥头乡" code="430802210" />
+    <street name="三岔乡" code="430802211" />
+    <street name="四都坪乡" code="430802212" />
+    <street name="茅溪水库管理所" code="430802400" />
+    <street name="猪石头林场" code="430802401" />
+    <street name="原种场" code="430802404" />
+    <street name="旱科所" code="430802405" />
+</county>
+<county name="武陵源" code="430811">
+    <street name="军地坪街道" code="430811001" />
+    <street name="天子山镇" code="430811100" />
+    <street name="索溪峪土家族乡" code="430811200" />
+    <street name="协合乡" code="430811201" />
+    <street name="中湖乡" code="430811202" />
+    <street name="张家界国家森林公园管理处" code="430811450" />
+</county>
+<county name="慈利" code="430821">
+    <street name="零阳镇" code="430821100" />
+    <street name="岩泊渡镇" code="430821101" />
+    <street name="溪口镇" code="430821102" />
+    <street name="东岳观镇" code="430821103" />
+    <street name="通津铺镇" code="430821104" />
+    <street name="杉木桥镇" code="430821105" />
+    <street name="象市镇" code="430821106" />
+    <street name="江垭镇" code="430821107" />
+    <street name="苗市镇" code="430821108" />
+    <street name="零溪镇" code="430821109" />
+    <street name="高桥镇" code="430821110" />
+    <street name="龙潭河镇" code="430821111" />
+    <street name="广福桥镇" code="430821112" />
+    <street name="南山坪乡" code="430821200" />
+    <street name="宜冲桥乡" code="430821201" />
+    <street name="洞溪乡" code="430821202" />
+    <street name="金坪乡" code="430821203" />
+    <street name="景龙桥乡" code="430821204" />
+    <street name="二坊坪乡" code="430821205" />
+    <street name="三合口乡" code="430821206" />
+    <street name="国太桥乡" code="430821207" />
+    <street name="庄塌乡" code="430821208" />
+    <street name="杨柳铺乡" code="430821209" />
+    <street name="朝阳乡" code="430821210" />
+    <street name="三官寺土家族乡" code="430821211" />
+    <street name="高峰土家族乡" code="430821212" />
+    <street name="许家坊土家族乡" code="430821213" />
+    <street name="金岩土家族乡" code="430821214" />
+    <street name="赵家岗土家族乡" code="430821215" />
+    <street name="甘堰土家族乡" code="430821216" />
+    <street name="阳和土家族乡" code="430821217" />
+</county>
+<county name="桑植" code="430822">
+    <street name="澧源镇" code="430822100" />
+    <street name="瑞塔铺镇" code="430822101" />
+    <street name="官地坪镇" code="430822102" />
+    <street name="凉水口镇" code="430822103" />
+    <street name="龙潭坪镇" code="430822104" />
+    <street name="五道水镇" code="430822105" />
+    <street name="陈家河镇" code="430822106" />
+    <street name="廖家村镇" code="430822107" />
+    <street name="利福塔镇" code="430822108" />
+    <street name="空壳树乡" code="430822200" />
+    <street name="汨湖乡" code="430822201" />
+    <street name="竹叶坪乡" code="430822202" />
+    <street name="走马坪白族乡" code="430822203" />
+    <street name="人潮溪乡" code="430822204" />
+    <street name="西莲乡" code="430822205" />
+    <street name="白石乡" code="430822206" />
+    <street name="刘家坪白族乡" code="430822207" />
+    <street name="芙蓉桥白族乡" code="430822208" />
+    <street name="麦地坪白族乡" code="430822209" />
+    <street name="马合口白族乡" code="430822210" />
+    <street name="长潭坪乡" code="430822211" />
+    <street name="淋溪河乡" code="430822212" />
+    <street name="洪家关乡" code="430822213" />
+    <street name="桥自湾乡" code="430822214" />
+    <street name="谷罗山乡" code="430822215" />
+    <street name="沙塔坪乡" code="430822216" />
+    <street name="苦竹坪乡" code="430822217" />
+    <street name="四方溪乡" code="430822218" />
+    <street name="芭茅溪乡" code="430822219" />
+    <street name="细沙坪乡" code="430822220" />
+    <street name="八大公山乡" code="430822221" />
+    <street name="蹇家坡乡" code="430822222" />
+    <street name="岩屋口乡" code="430822223" />
+    <street name="河口乡" code="430822224" />
+    <street name="上河溪乡" code="430822225" />
+    <street name="两河口乡" code="430822226" />
+    <street name="打鼓泉乡" code="430822227" />
+    <street name="上洞街乡" code="430822228" />
+    <street name="天星山林场" code="430822500" />
+</county>
+</city>
+</address>

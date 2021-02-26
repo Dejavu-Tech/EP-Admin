@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="太原" code="140100">
+<county name="小店" code="140105">
+    <street name="坞城街道" code="140105001" />
+    <street name="营盘街道" code="140105002" />
+    <street name="北营街道" code="140105003" />
+    <street name="平阳路街道" code="140105004" />
+    <street name="黄陵街道" code="140105005" />
+    <street name="小店街道" code="140105006" />
+    <street name="北格镇" code="140105100" />
+    <street name="西温庄乡" code="140105200" />
+    <street name="刘家堡乡" code="140105201" />
+    <street name="太原高新技术产业开发区" code="140105401" />
+    <street name="太原经济技术开发区" code="140105501" />
+</county>
+<county name="迎泽" code="140106">
+    <street name="柳巷街道" code="140106001" />
+    <street name="文庙街道" code="140106002" />
+    <street name="庙前街道" code="140106003" />
+    <street name="迎泽街道" code="140106004" />
+    <street name="桥东街道" code="140106005" />
+    <street name="老军营街道" code="140106006" />
+    <street name="郝庄镇" code="140106100" />
+    <street name="民营区" code="140106401" />
+</county>
+<county name="杏花岭" code="140107">
+    <street name="巨轮街道" code="140107001" />
+    <street name="三桥街道" code="140107002" />
+    <street name="鼓楼街道" code="140107003" />
+    <street name="杏花岭街道" code="140107004" />
+    <street name="坝陵桥街道" code="140107005" />
+    <street name="大东关街道" code="140107006" />
+    <street name="职工新街街道" code="140107007" />
+    <street name="敦化坊街道" code="140107008" />
+    <street name="涧河街道" code="140107009" />
+    <street name="杨家峪街道" code="140107010" />
+    <street name="中涧河乡" code="140107200" />
+    <street name="小返乡" code="140107201" />
+    <street name="民营区" code="140107401" />
+</county>
+<county name="尖草坪" code="140108">
+    <street name="尖草坪街道" code="140108001" />
+    <street name="光社街道" code="140108002" />
+    <street name="上兰街道" code="140108003" />
+    <street name="南寨街道" code="140108004" />
+    <street name="迎新街道" code="140108005" />
+    <street name="古城街道" code="140108006" />
+    <street name="汇丰街道" code="140108007" />
+    <street name="柴村街道" code="140108008" />
+    <street name="新城街道" code="140108009" />
+    <street name="向阳镇" code="140108100" />
+    <street name="阳曲镇" code="140108101" />
+    <street name="马头水乡" code="140108200" />
+    <street name="柏板乡" code="140108201" />
+    <street name="西焉乡" code="140108202" />
+</county>
+<county name="万柏林" code="140109">
+    <street name="千峰街道" code="140109001" />
+    <street name="下元街道" code="140109002" />
+    <street name="和平街道" code="140109003" />
+    <street name="兴华街道" code="140109004" />
+    <street name="万柏林街道" code="140109005" />
+    <street name="杜儿坪街道" code="140109006" />
+    <street name="白家庄街道" code="140109007" />
+    <street name="南寒街道" code="140109008" />
+    <street name="东社街道" code="140109009" />
+    <street name="化客头街道" code="140109010" />
+    <street name="小井峪街道" code="140109011" />
+    <street name="西铭街道" code="140109012" />
+    <street name="长风西街街道" code="140109013" />
+    <street name="神堂沟街道" code="140109014" />
+    <street name="王封乡" code="140109200" />
+</county>
+<county name="晋源" code="140110">
+    <street name="义井街道" code="140110001" />
+    <street name="罗城街道" code="140110002" />
+    <street name="晋源街道" code="140110003" />
+    <street name="金胜镇" code="140110100" />
+    <street name="晋祠镇" code="140110101" />
+    <street name="姚村镇" code="140110102" />
+</county>
+<county name="清徐" code="140121">
+    <street name="清源镇" code="140121100" />
+    <street name="徐沟镇" code="140121101" />
+    <street name="东于镇" code="140121102" />
+    <street name="孟封镇" code="140121103" />
+    <street name="马峪乡" code="140121200" />
+    <street name="柳杜乡" code="140121201" />
+    <street name="西谷乡" code="140121202" />
+    <street name="王答乡" code="140121203" />
+    <street name="集义乡" code="140121204" />
+</county>
+<county name="阳曲" code="140122">
+    <street name="黄寨镇" code="140122100" />
+    <street name="大盂镇" code="140122101" />
+    <street name="东黄水镇" code="140122102" />
+    <street name="泥屯镇" code="140122103" />
+    <street name="中心镇建设管理办公室" code="140122104" />
+    <street name="高村乡" code="140122200" />
+    <street name="侯村乡" code="140122201" />
+    <street name="凌井店乡" code="140122202" />
+    <street name="西凌井乡" code="140122203" />
+    <street name="北小店乡" code="140122204" />
+    <street name="杨兴乡" code="140122205" />
+    <street name="民营阳曲一区" code="140122401" />
+    <street name="民营阳曲二区" code="140122402" />
+    <street name="民营阳曲三区" code="140122403" />
+</county>
+<county name="娄烦" code="140123">
+    <street name="娄烦镇" code="140123100" />
+    <street name="静游镇" code="140123101" />
+    <street name="杜交曲镇" code="140123102" />
+    <street name="庙湾乡" code="140123200" />
+    <street name="马家庄乡" code="140123201" />
+    <street name="盖家庄乡" code="140123202" />
+    <street name="米峪镇乡" code="140123203" />
+    <street name="天池店乡" code="140123204" />
+</county>
+<county name="古交" code="140181">
+    <street name="东曲街道" code="140181001" />
+    <street name="西曲街道" code="140181002" />
+    <street name="桃园街道" code="140181003" />
+    <street name="屯兰街道" code="140181004" />
+    <street name="河口镇" code="140181100" />
+    <street name="镇城底镇" code="140181101" />
+    <street name="马兰镇" code="140181102" />
+    <street name="阁上乡" code="140181200" />
+    <street name="加乐泉乡" code="140181201" />
+    <street name="梭峪乡" code="140181202" />
+    <street name="岔口乡" code="140181203" />
+    <street name="常安乡" code="140181204" />
+    <street name="原相乡" code="140181205" />
+    <street name="邢家社乡" code="140181206" />
+</county>
+</city>
+</address>

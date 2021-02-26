@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="孝感" code="420900">
+<county name="孝南" code="420902">
+    <street name="孝南区书院街办事处" code="420902001" />
+    <street name="孝南区新华街办事处" code="420902002" />
+    <street name="孝南区广场街办事处" code="420902003" />
+    <street name="孝南区车站街道" code="420902004" />
+    <street name="孝南区新铺镇" code="420902100" />
+    <street name="孝南区西河镇" code="420902101" />
+    <street name="孝南区杨店镇" code="420902102" />
+    <street name="孝南区陡岗镇" code="420902103" />
+    <street name="孝南区肖港镇" code="420902104" />
+    <street name="孝南区毛陈镇" code="420902105" />
+    <street name="孝南区三汊镇" code="420902106" />
+    <street name="孝南区祝站镇" code="420902107" />
+    <street name="孝南区朋兴乡" code="420902200" />
+    <street name="孝南区卧龙乡" code="420902201" />
+    <street name="孝南区闵集乡" code="420902202" />
+    <street name="孝南区经济开发区" code="420902400" />
+    <street name="孝南区朱湖办事处" code="420902450" />
+    <street name="孝南区东山头办事处" code="420902500" />
+    <street name="孝感开发区丹阳办事处" code="420902570" />
+    <street name="孝感开发区孝天办事处" code="420902571" />
+    <street name="孝感开发区槐荫办事处" code="420902572" />
+</county>
+<county name="孝昌" code="420921">
+    <street name="花园镇" code="420921100" />
+    <street name="丰山镇" code="420921101" />
+    <street name="周巷镇" code="420921102" />
+    <street name="小河镇" code="420921103" />
+    <street name="王店镇" code="420921104" />
+    <street name="卫店镇" code="420921105" />
+    <street name="白沙镇" code="420921106" />
+    <street name="邹岗镇" code="420921107" />
+    <street name="小悟乡" code="420921200" />
+    <street name="季店乡" code="420921201" />
+    <street name="花西乡" code="420921202" />
+    <street name="陡山乡" code="420921203" />
+    <street name="开发区" code="420921400" />
+    <street name="观音湖生态文化旅游渡假区" code="420921450" />
+    <street name="双峰山旅游渡假区" code="420921500" />
+</county>
+<county name="大悟" code="420922">
+    <street name="城关镇" code="420922100" />
+    <street name="阳平镇" code="420922101" />
+    <street name="芳畈镇" code="420922102" />
+    <street name="新城镇" code="420922103" />
+    <street name="夏店镇" code="420922104" />
+    <street name="刘集镇" code="420922105" />
+    <street name="河口镇" code="420922106" />
+    <street name="四姑镇" code="420922107" />
+    <street name="吕王镇" code="420922108" />
+    <street name="黄站镇" code="420922109" />
+    <street name="宣化店镇" code="420922110" />
+    <street name="丰店镇" code="420922111" />
+    <street name="大新镇" code="420922112" />
+    <street name="三里镇" code="420922113" />
+    <street name="高店乡" code="420922200" />
+    <street name="彭店乡" code="420922201" />
+    <street name="东新乡" code="420922202" />
+</county>
+<county name="云梦" code="420923">
+    <street name="城关镇" code="420923100" />
+    <street name="义堂镇" code="420923101" />
+    <street name="曾店镇" code="420923102" />
+    <street name="吴铺镇" code="420923103" />
+    <street name="伍洛镇" code="420923104" />
+    <street name="下辛店镇" code="420923105" />
+    <street name="道桥镇" code="420923106" />
+    <street name="隔蒲潭镇" code="420923107" />
+    <street name="胡金店镇" code="420923108" />
+    <street name="倒店乡" code="420923200" />
+    <street name="沙河乡" code="420923201" />
+    <street name="清明河乡" code="420923202" />
+    <street name="县经济开发区" code="420923450" />
+</county>
+<county name="应城" code="420981">
+    <street name="城中街道" code="420981001" />
+    <street name="城北街道" code="420981002" />
+    <street name="四里棚街道" code="420981003" />
+    <street name="东马坊街道" code="420981004" />
+    <street name="长江埠街道" code="420981005" />
+    <street name="田店镇" code="420981100" />
+    <street name="杨河镇" code="420981101" />
+    <street name="三合镇" code="420981102" />
+    <street name="郎君镇" code="420981103" />
+    <street name="黄滩镇" code="420981104" />
+    <street name="天鹅镇" code="420981105" />
+    <street name="义和镇" code="420981106" />
+    <street name="陈河镇" code="420981107" />
+    <street name="杨岭镇" code="420981108" />
+    <street name="汤池镇" code="420981109" />
+    <street name="经济技术开发区" code="420981400" />
+    <street name="南垸良种场" code="420981500" />
+</county>
+<county name="安陆" code="420982">
+    <street name="府城街道" code="420982001" />
+    <street name="南城街道" code="420982002" />
+    <street name="赵棚镇" code="420982100" />
+    <street name="李店镇" code="420982101" />
+    <street name="巡店镇" code="420982102" />
+    <street name="棠棣镇" code="420982103" />
+    <street name="雷公镇" code="420982104" />
+    <street name="王义贞镇" code="420982105" />
+    <street name="烟店镇" code="420982106" />
+    <street name="孛畈镇" code="420982107" />
+    <street name="伏水镇" code="420982108" />
+    <street name="陈店乡" code="420982200" />
+    <street name="辛榨乡" code="420982201" />
+    <street name="木梓乡" code="420982202" />
+    <street name="接官乡" code="420982203" />
+    <street name="开发区" code="420982400" />
+</county>
+<county name="汉川" code="420984">
+    <street name="仙女山街道" code="420984001" />
+    <street name="汈东街道" code="420984002" />
+    <street name="马口镇" code="420984100" />
+    <street name="脉旺镇" code="420984101" />
+    <street name="城隍镇" code="420984102" />
+    <street name="分水镇" code="420984103" />
+    <street name="沉湖镇" code="420984104" />
+    <street name="田二河镇" code="420984105" />
+    <street name="回龙镇" code="420984106" />
+    <street name="新堰镇" code="420984107" />
+    <street name="垌塚镇" code="420984108" />
+    <street name="麻河镇" code="420984109" />
+    <street name="刘家隔镇" code="420984110" />
+    <street name="新河镇" code="420984111" />
+    <street name="庙头镇" code="420984112" />
+    <street name="杨林沟镇" code="420984113" />
+    <street name="西江乡" code="420984200" />
+    <street name="湾潭乡" code="420984201" />
+    <street name="南河乡" code="420984202" />
+    <street name="马鞍乡" code="420984203" />
+    <street name="里潭乡" code="420984204" />
+    <street name="韩集乡" code="420984205" />
+    <street name="国营中洲农场" code="420984450" />
+    <street name="华严农场" code="420984500" />
+    <street name="三星垸原种场" code="420984502" />
+    <street name="汈汊湖养殖场" code="420984503" />
+    <street name="汉川市经济技术开发区" code="420984504" />
+</county>
+</city>
+</address>

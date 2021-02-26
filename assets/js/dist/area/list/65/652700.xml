@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="博尔塔拉" code="652700">
+<county name="博乐" code="652701">
+    <street name="青得里街道" code="652701001" />
+    <street name="顾里木图街道" code="652701002" />
+    <street name="南城区街道" code="652701004" />
+    <street name="小营盘镇" code="652701100" />
+    <street name="达勒特镇" code="652701101" />
+    <street name="乌图布拉格镇" code="652701102" />
+    <street name="青得里乡" code="652701200" />
+    <street name="贝林哈日莫墩乡" code="652701201" />
+    <street name="阿热勒托海牧场" code="652701400" />
+    <street name="香班哈日根牧场" code="652701407" />
+    <street name="五台工业园区" code="652701408" />
+    <street name="兵团八十一团" code="652701501" />
+    <street name="兵团八十四团" code="652701502" />
+    <street name="兵团八十六团" code="652701504" />
+    <street name="兵团八十九团" code="652701505" />
+    <street name="兵团九十团" code="652701506" />
+</county>
+<county name="阿拉山口" code="652702">
+    <street name="阿拉套街道" code="652702001" />
+    <street name="艾比湖镇" code="652702002" />
+</county>
+<county name="精河" code="652722">
+    <street name="精河镇" code="652722100" />
+    <street name="大河沿子镇" code="652722101" />
+    <street name="茫丁乡" code="652722200" />
+    <street name="托里镇" code="652722201" />
+    <street name="托托乡" code="652722202" />
+    <street name="阿合其农场" code="652722400" />
+    <street name="八家户农场" code="652722401" />
+    <street name="兵团八十三团" code="652722503" />
+    <street name="兵团九十一团" code="652722504" />
+</county>
+<county name="温泉" code="652723">
+    <street name="博格达尔镇" code="652723100" />
+    <street name="哈日布呼镇" code="652723101" />
+    <street name="安格里格镇" code="652723200" />
+    <street name="查干屯格乡" code="652723201" />
+    <street name="扎勒木特乡" code="652723202" />
+    <street name="塔秀乡" code="652723203" />
+    <street name="呼和托哈种畜场" code="652723400" />
+    <street name="昆得仑牧场" code="652723401" />
+    <street name="孟克牧场" code="652723402" />
+    <street name="兵团八十七团" code="652723502" />
+    <street name="兵团八十八团" code="652723503" />
+</county>
+</city>
+</address>

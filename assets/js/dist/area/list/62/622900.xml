@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="临夏" code="622900">
+<county name="临夏市" code="622901">
+    <street name="城南街道" code="622901001" />
+    <street name="城北街道" code="622901002" />
+    <street name="东关街道" code="622901003" />
+    <street name="西关街道" code="622901004" />
+    <street name="八坊街道" code="622901005" />
+    <street name="红园街道" code="622901006" />
+    <street name="城郊镇" code="622901100" />
+    <street name="枹罕镇" code="622901101" />
+    <street name="南龙镇" code="622901102" />
+    <street name="折桥镇" code="622901103" />
+</county>
+<county name="临夏县" code="622921">
+    <street name="韩集镇" code="622921100" />
+    <street name="土桥镇" code="622921101" />
+    <street name="马集镇" code="622921102" />
+    <street name="莲花镇" code="622921103" />
+    <street name="新集镇" code="622921104" />
+    <street name="尹集镇" code="622921105" />
+    <street name="营滩乡" code="622921200" />
+    <street name="掌子沟乡" code="622921201" />
+    <street name="麻尼寺沟乡" code="622921202" />
+    <street name="漠泥沟乡" code="622921204" />
+    <street name="刁祁乡" code="622921205" />
+    <street name="漫路乡" code="622921208" />
+    <street name="榆林乡" code="622921209" />
+    <street name="井沟乡" code="622921210" />
+    <street name="北塬乡" code="622921211" />
+    <street name="坡头乡" code="622921213" />
+    <street name="桥寺乡" code="622921214" />
+    <street name="先锋乡" code="622921215" />
+    <street name="河西乡" code="622921216" />
+    <street name="安家坡乡" code="622921217" />
+    <street name="南塬乡" code="622921218" />
+    <street name="红台乡" code="622921220" />
+    <street name="黄泥湾乡" code="622921222" />
+    <street name="路盘乡" code="622921223" />
+    <street name="民主乡" code="622921224" />
+</county>
+<county name="康乐" code="622922">
+    <street name="附城镇" code="622922100" />
+    <street name="苏集镇" code="622922101" />
+    <street name="胭脂镇" code="622922102" />
+    <street name="景古镇" code="622922103" />
+    <street name="莲麓镇" code="622922104" />
+    <street name="康丰乡" code="622922200" />
+    <street name="虎关乡" code="622922201" />
+    <street name="流川乡" code="622922202" />
+    <street name="白王乡" code="622922203" />
+    <street name="八松乡" code="622922205" />
+    <street name="鸣鹿乡" code="622922206" />
+    <street name="八丹乡" code="622922207" />
+    <street name="上湾乡" code="622922208" />
+    <street name="草滩乡" code="622922211" />
+    <street name="五户乡" code="622922212" />
+</county>
+<county name="永靖" code="622923">
+    <street name="刘家峡镇" code="622923100" />
+    <street name="盐锅峡镇" code="622923101" />
+    <street name="太极镇" code="622923102" />
+    <street name="西河镇" code="622923103" />
+    <street name="三塬镇" code="622923104" />
+    <street name="岘塬镇" code="622923105" />
+    <street name="陈井镇" code="622923106" />
+    <street name="川城镇" code="622923107" />
+    <street name="王台镇" code="622923108" />
+    <street name="红泉镇" code="622923109" />
+    <street name="关山乡" code="622923200" />
+    <street name="徐顶乡" code="622923201" />
+    <street name="三条岘乡" code="622923202" />
+    <street name="坪沟乡" code="622923203" />
+    <street name="新寺乡" code="622923206" />
+    <street name="小岭乡" code="622923207" />
+    <street name="杨塔乡" code="622923208" />
+</county>
+<county name="广河" code="622924">
+    <street name="城关镇" code="622924100" />
+    <street name="三甲集镇" code="622924101" />
+    <street name="祁家集镇" code="622924102" />
+    <street name="庄禾集镇" code="622924103" />
+    <street name="买家巷镇" code="622924104" />
+    <street name="齐家镇" code="622924105" />
+    <street name="水泉乡" code="622924202" />
+    <street name="官坊乡" code="622924203" />
+    <street name="阿力麻土东乡族乡" code="622924204" />
+</county>
+<county name="和政" code="622925">
+    <street name="城关镇" code="622925100" />
+    <street name="三合镇" code="622925101" />
+    <street name="三十里铺镇" code="622925102" />
+    <street name="马家堡镇" code="622925103" />
+    <street name="买家集镇" code="622925104" />
+    <street name="松鸣镇" code="622925105" />
+    <street name="梁家寺乡" code="622925200" />
+    <street name="陈家集乡" code="622925201" />
+    <street name="罗家集乡" code="622925202" />
+    <street name="卜家庄乡" code="622925203" />
+    <street name="新营乡" code="622925204" />
+    <street name="新庄乡" code="622925205" />
+    <street name="达浪乡" code="622925207" />
+</county>
+<county name="东乡" code="622926">
+    <street name="锁南镇" code="622926100" />
+    <street name="达板镇" code="622926101" />
+    <street name="河滩镇" code="622926102" />
+    <street name="那勒寺镇" code="622926103" />
+    <street name="唐汪镇" code="622926104" />
+    <street name="春台乡" code="622926200" />
+    <street name="柳树乡" code="622926201" />
+    <street name="东塬乡" code="622926202" />
+    <street name="坪庄乡" code="622926204" />
+    <street name="百和乡" code="622926205" />
+    <street name="关卜乡" code="622926206" />
+    <street name="赵家乡" code="622926208" />
+    <street name="五家乡" code="622926209" />
+    <street name="果园乡" code="622926210" />
+    <street name="沿岭乡" code="622926212" />
+    <street name="汪集乡" code="622926213" />
+    <street name="风山乡" code="622926214" />
+    <street name="车家湾乡" code="622926215" />
+    <street name="高山乡" code="622926216" />
+    <street name="大树乡" code="622926219" />
+    <street name="北岭乡" code="622926220" />
+    <street name="龙泉乡" code="622926221" />
+    <street name="考勒乡" code="622926222" />
+    <street name="董岭乡" code="622926223" />
+</county>
+<county name="积石山" code="622927">
+    <street name="吹麻滩镇" code="622927100" />
+    <street name="大河家镇" code="622927101" />
+    <street name="居集镇" code="622927102" />
+    <street name="癿藏镇" code="622927103" />
+    <street name="刘集乡" code="622927200" />
+    <street name="石塬乡" code="622927201" />
+    <street name="柳沟乡" code="622927202" />
+    <street name="关家川乡" code="622927203" />
+    <street name="胡林家乡" code="622927204" />
+    <street name="安集乡" code="622927205" />
+    <street name="寨子沟乡" code="622927206" />
+    <street name="郭干乡" code="622927207" />
+    <street name="徐扈家乡" code="622927208" />
+    <street name="中咀岭乡" code="622927209" />
+    <street name="小关乡" code="622927210" />
+    <street name="铺川乡" code="622927211" />
+    <street name="银川乡" code="622927212" />
+</county>
+</city>
+</address>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阿勒泰" code="654300">
+<county name="阿勒泰" code="654301">
+    <street name="金山路办事处" code="654301001" />
+    <street name="解放路办事处" code="654301002" />
+    <street name="团结路办事处" code="654301003" />
+    <street name="北屯镇" code="654301100" />
+    <street name="阿苇滩镇" code="654301101" />
+    <street name="红墩镇" code="654301102" />
+    <street name="切木尔切克镇" code="654301103" />
+    <street name="阿拉哈克镇" code="654301201" />
+    <street name="汗德尕特蒙古族乡" code="654301202" />
+    <street name="拉斯特乡" code="654301203" />
+    <street name="喀拉希力克乡" code="654301204" />
+    <street name="萨尔胡松乡" code="654301205" />
+    <street name="巴里巴盖乡" code="654301206" />
+    <street name="切尔克齐乡" code="654301207" />
+    <street name="喀拉尕什牧场" code="654301400" />
+    <street name="阿克吐木斯克牧场" code="654301401" />
+    <street name="兵团一八一团" code="654301500" />
+</county>
+<county name="布尔津" code="654321">
+    <street name="布尔津镇" code="654321100" />
+    <street name="冲乎尔镇" code="654321101" />
+    <street name="窝依莫克乡" code="654321200" />
+    <street name="杜来提乡" code="654321201" />
+    <street name="阔斯特克乡" code="654321202" />
+    <street name="也格孜托别乡" code="654321204" />
+    <street name="禾木哈纳斯蒙古民族乡" code="654321205" />
+</county>
+<county name="富蕴" code="654322">
+    <street name="库额尔齐斯镇" code="654322100" />
+    <street name="可可托海镇" code="654322101" />
+    <street name="恰库尔图镇" code="654322102" />
+    <street name="喀拉通克镇" code="654322103" />
+    <street name="吐尔洪乡" code="654322200" />
+    <street name="杜热镇" code="654322201" />
+    <street name="库尔特乡" code="654322202" />
+    <street name="克孜勒希力克乡" code="654322203" />
+    <street name="铁买克乡" code="654322204" />
+    <street name="喀拉布勒根乡" code="654322205" />
+</county>
+<county name="福海" code="654323">
+    <street name="福海镇" code="654323100" />
+    <street name="解特阿热勒镇" code="654323200" />
+    <street name="阔克阿尕什乡" code="654323201" />
+    <street name="齐干吉迭乡" code="654323202" />
+    <street name="喀拉玛盖乡" code="654323203" />
+    <street name="阿尔达乡" code="654323204" />
+    <street name="地区一农场" code="654323400" />
+    <street name="福海监狱" code="654323401" />
+    <street name="兵团一八二团" code="654323500" />
+    <street name="兵团一八三团" code="654323501" />
+    <street name="兵团一八七团" code="654323502" />
+    <street name="兵团一八八团" code="654323503" />
+</county>
+<county name="哈巴河" code="654324">
+    <street name="阿克齐镇" code="654324100" />
+    <street name="萨尔塔木乡" code="654324200" />
+    <street name="加依勒玛乡" code="654324201" />
+    <street name="库勒拜乡" code="654324202" />
+    <street name="萨尔布拉克镇" code="654324203" />
+    <street name="铁热克提乡" code="654324204" />
+    <street name="齐巴尔乡" code="654324205" />
+    <street name="兵团一八五团" code="654324500" />
+</county>
+<county name="青河" code="654325">
+    <street name="青河镇" code="654325100" />
+    <street name="塔克什肯镇" code="654325101" />
+    <street name="阿热勒托别镇" code="654325102" />
+    <street name="阿热勒乡" code="654325200" />
+    <street name="萨尔托海乡" code="654325202" />
+    <street name="查干郭勒乡" code="654325203" />
+    <street name="阿尕什敖包乡" code="654325204" />
+</county>
+<county name="吉木乃" code="654326">
+    <street name="托普铁热克镇" code="654326100" />
+    <street name="吉木乃镇" code="654326101" />
+    <street name="托普铁热克乡" code="654326200" />
+    <street name="托斯特乡" code="654326201" />
+    <street name="恰勒什海乡" code="654326202" />
+    <street name="喀尔交镇" code="654326203" />
+    <street name="别斯铁热克乡" code="654326204" />
+    <street name="兵团一八六团" code="654326500" />
+</county>
+</city>
+</address>

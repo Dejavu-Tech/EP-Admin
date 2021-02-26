@@ -1,0 +1,398 @@
+/**=====================
+   59. Customizer  CSS Start
+==========================**/
+.customizer-links{
+  position: fixed;
+  right: 00px;
+  top: 50%;
+  background-color: $white;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 15px 3px rgba(176, 185, 189, 0.3);
+  transition: all 0.3s ease;
+  &.open{
+    right: 330px;
+    border-radius: 8px 0 0 8px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link{
+    padding: 0;
+    border-radius: 0;
+    .settings{
+      img{
+        padding: 15px 17px;
+        display: inline-block;
+        cursor: pointer;
+        margin: 0;
+      }
+    }
+    &.active{
+      .settings {
+        img{
+          background-color: rgba($primary-color, 0.2);
+        }
+      }
+    }
+    &+.nav-link{
+      border-top: 1px solid rgba($primary-color, 0.1);
+    }
+  }
+}
+.icon-close{
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  color: $dark-color;
+}
+.customizer-contain{
+  direction: ltr;
+  position: fixed;
+  top: 200px;
+  margin-top: -20px;
+  width: 333px;
+  right: -334px;
+  background-color: $white;
+  z-index: 99;
+  font-family: $font-nunito, "PingFang SC";
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  overflow: hidden;
+  &.open{
+    right: 0px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 25px 0px rgba(126, 55, 216, 0.1);
+  }
+  li{
+    position: relative;
+    &.active{
+      &:before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $dark-color;
+        box-shadow: 0 0 11px 5px rgb(226, 226, 226);
+      }
+    }
+  }
+  h6{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #212529;
+  }
+  .customizer-header{
+    padding:15px 25px;
+    border-bottom: 1px solid $light-color;
+    .icon-close{
+      position: absolute;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: 900;
+      right: 30px;
+      color: $primary-color;
+    }
+    h5{
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #313131;
+    }
+    p{
+      color: #313131;
+    }
+  }
+  .customizer-body{
+    padding : 30px;
+    max-height: calc(100vh - 170px);
+    overflow-y: scroll;
+    .layout-grid{
+      &.customizer-mix{
+        .color-layout{
+          height: 70px;
+          width: 86px;
+          border: 1px solid #f6f7fb;
+          border-radius: 5px;
+          display: inline-block;
+          margin-bottom: 7px;
+          margin-right: 3px;
+        }
+      }
+    }
+    .tab-pane{
+      > h6{
+        position: relative;
+        margin-top: 25px;
+        padding-top: 25px;
+        margin-bottom: 25px;
+        border-top: 1px solid #f3f3f3;
+        font-size: 18px;
+        &:before{
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 14px;
+          border-bottom: 2px dotted $dark-color;
+          bottom: -4px;
+        }
+        &:first-child{
+          border-top: 0;
+          padding-top: 0;
+          margin-top: 0;
+        }
+      }
+    }
+    .nac-pills{
+      border: 1px solid #f1f1f1;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .nav-item{
+        width: 33.33%;
+        text-align: center;
+        .nav-link{
+          border-radious: 5px;
+          &.active{
+            background-color: $primary-color;
+            color: $white;
+          }
+        }
+      }
+      .nav-link{
+        padding: 0.2rem 1rem;
+      }
+    }
+    li{
+      cursor: pointer;
+      opacity: 0.9;
+      &.active{
+        opacity: 1;
+      }
+    }
+    .fade{
+      &:not(.show) {
+        display: none;
+      }
+    }
+
+    .color-layout{
+      height: 40px;
+      width: 40px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 7px;
+      margin-right: 3px;
+      border: 1px solid #b8b8b8;
+      padding: 3px;
+
+      > div{
+        background-color: #7e37d8;
+        height: 100%;
+        width: 100%;
+        border-radius: 3px;
+      }
+      .body{
+        .contain{
+          position: absolute;
+          height: auto;
+          width: 100%;
+          li{
+            height: 1px;
+            width: 65%;
+            background-color: #7e37d8;
+            border-radius: 5px;
+            padding: 0;
+            margin-left: 10px;
+            margin-bottom: 4px;
+            &:before{
+              content: "";
+              position: absolute;
+              height: 1px;
+              width: 3px;
+              background-color: #7e37d8;
+              left: -6px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+      &[data-attr="color-2"]{
+        div{
+          background-color: #0288d1;
+        }
+      }
+      &[data-attr="color-3"] {
+        div {
+          background-color: #8e24aa;
+        }
+      }
+      &[data-attr="color-4"] {
+        div {
+          background-color: #4c2fbf;
+        }
+      }
+      &[data-attr="color-5"] {
+        div {
+          background-color: #7c4dff;
+        }
+      }
+      &[data-attr="color-6"] {
+        div {
+          background-color: #3949ab;
+        }
+      }
+    }
+    .customizer-color {
+      &.dark{
+        .color-layout {
+          background-color: #2f3c4e;
+          .body{
+            ul{
+              background-color: #2f3c4e;
+            }
+          }
+        }
+      }
+    }
+    .main-layout{
+      > li{
+        height: 120px;
+        width: 100%;
+        border: 1px solid $light-color;
+        border-radius: 5px;
+        display: inline-block;
+        &+li{
+          margin-top: 17px;
+        }
+      }
+    }
+    .sidebar-type,.sidebar-setting{
+      > li{
+        height: 70px;
+        width: 87px;
+        border: 1px solid $light-color;
+        border-radius: 5px;
+        display: inline-block;
+        &+li{
+          margin-left: 7px;
+        }
+      }
+    }
+    .sidebar-bg-settings{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li{
+        height: 100px;
+        width: 100%;
+        border: 1px solid $light-color;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 9px;
+        box-shadow: 0 0 11px -2px rgba(128, 128, 128, 0.40);
+      }
+    }
+  }
+  .customizer-footer{
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    width: 100%;
+    border-top: 1px solid $light-color;
+    background-color: $white;
+  }
+}
+.layout-grid:not(.customizer-color){
+
+  li{
+    padding: 5px;
+    > .header{
+      height: 9px;
+      border-radius: 3px;
+      position: relative;
+      ul{
+        position: absolute;
+        top: -8px;
+        left: 5px;
+        >li{
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          border-radius: 5px;
+          top: calc(50% - 3px);
+          background-color: $danger-color;
+          margin-right: 1px;
+          padding: 0;
+          &:nth-child(2){
+            background-color: $warning-color;
+          }
+          &:nth-child(3){
+            background-color: $success-color;
+          }
+        }
+      }
+    }
+    > .body{
+      background-color: $light-color;
+      height: calc(100% - 16px);
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      text-align: center;
+      line-height: 3.1;
+      ul{
+        height: 100%;
+        background-color: $white;
+        .sidebar{
+          width: 18px;
+          height: 100%;
+          border-radius: 3px;
+          display: inline-block;
+          margin-right: 3px;
+          padding: 0;
+          &.compact{
+            width: 12px;
+            &~.body {
+              width: calc(100% - 19px);
+            }
+          }
+          &.compact-icon{
+            width: 7px;
+            &~.body {
+              width: calc(100% - 14px);
+            }
+          }
+        }
+        .body{
+          width: calc(100% - 25px);
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3px;
+          .badge{
+            position: absolute;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=====================
+     59.Customizer CSS Ends
+==========================**/

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="湖州" code="330500">
+<county name="吴兴" code="330502">
+    <street name="月河街道" code="330502001" />
+    <street name="朝阳街道" code="330502002" />
+    <street name="爱山街道" code="330502003" />
+    <street name="飞英街道" code="330502004" />
+    <street name="龙泉街道" code="330502005" />
+    <street name="凤凰街道" code="330502006" />
+    <street name="康山街道" code="330502007" />
+    <street name="仁皇山街道" code="330502008" />
+    <street name="滨湖街道" code="330502009" />
+    <street name="龙溪街道" code="330502010" />
+    <street name="杨家埠街道" code="330502011" />
+    <street name="环渚街道" code="330502012" />
+    <street name="织里镇" code="330502100" />
+    <street name="八里店镇" code="330502101" />
+    <street name="妙西镇" code="330502102" />
+    <street name="埭溪镇" code="330502104" />
+    <street name="东林镇" code="330502105" />
+    <street name="道场乡" code="330502200" />
+</county>
+<county name="南浔" code="330503">
+    <street name="南浔镇" code="330503100" />
+    <street name="双林镇" code="330503101" />
+    <street name="练市镇" code="330503102" />
+    <street name="善琏镇" code="330503103" />
+    <street name="旧馆镇" code="330503104" />
+    <street name="菱湖镇" code="330503105" />
+    <street name="和孚镇" code="330503106" />
+    <street name="千金镇" code="330503107" />
+    <street name="石淙镇" code="330503108" />
+</county>
+<county name="德清" code="330521">
+    <street name="武康镇" code="330521100" />
+    <street name="乾元镇" code="330521101" />
+    <street name="新市镇" code="330521102" />
+    <street name="洛舍镇" code="330521103" />
+    <street name="钟管镇" code="330521104" />
+    <street name="莫干山镇" code="330521105" />
+    <street name="雷甸镇" code="330521110" />
+    <street name="禹越镇" code="330521113" />
+    <street name="新安镇" code="330521114" />
+    <street name="筏头乡" code="330521201" />
+    <street name="三合乡" code="330521202" />
+</county>
+<county name="长兴" code="330522">
+    <street name="雉城街道" code="330522001" />
+    <street name="画溪街道" code="330522002" />
+    <street name="太湖街道" code="330522003" />
+    <street name="洪桥镇" code="330522101" />
+    <street name="李家巷镇" code="330522102" />
+    <street name="夹浦镇" code="330522103" />
+    <street name="林城镇" code="330522104" />
+    <street name="虹星桥镇" code="330522106" />
+    <street name="小浦镇" code="330522108" />
+    <street name="煤山镇" code="330522109" />
+    <street name="和平镇" code="330522110" />
+    <street name="泗安镇" code="330522111" />
+    <street name="水口乡" code="330522200" />
+    <street name="吕山乡" code="330522202" />
+    <street name="白岘乡" code="330522204" />
+    <street name="槐坎乡" code="330522205" />
+</county>
+<county name="安吉" code="330523">
+    <street name="递铺镇" code="330523100" />
+    <street name="鄣吴镇" code="330523103" />
+    <street name="杭垓镇" code="330523104" />
+    <street name="孝丰镇" code="330523105" />
+    <street name="报福镇" code="330523106" />
+    <street name="章村镇" code="330523107" />
+    <street name="天荒坪镇" code="330523108" />
+    <street name="梅溪镇" code="330523110" />
+    <street name="天子湖镇" code="330523111" />
+    <street name="溪龙乡" code="330523201" />
+    <street name="皈山乡" code="330523204" />
+    <street name="上墅乡" code="330523205" />
+    <street name="山川乡" code="330523206" />
+</county>
+</city>
+</address>

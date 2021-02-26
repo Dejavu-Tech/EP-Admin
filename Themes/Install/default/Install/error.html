@@ -1,0 +1,42 @@
+<extend name="Public/base"/>
+
+<block name="header">
+</block>
+
+<block name="body">
+    <div class="col-xl-12 xl-100 box-col-12">
+        <div class="card crypto-revenue">
+            <div class="card-header p-t-40 p-b-0">
+                <h3>错误提示</h3>
+                <ul class="creative-dots">
+                    <li class="bg-primary big-dot"></li>
+                    <li class="bg-secondary semi-big-dot"></li>
+                    <li class="bg-warning medium-dot"></li>
+                    <li class="bg-info semi-medium-dot"></li>
+                    <li class="bg-secondary semi-small-dot"></li>
+                    <li class="bg-primary small-dot"></li>
+                </ul>
+                <section class="abstract">{$title}</section>
+            </div>
+            <form class="form theme-form" action="__SELF__" method="post" target="_self">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-form-label text-danger text-center"><h4>{$info}</h4></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="pull-right p-b-30">
+                        <a class="btn btn-pill btn-light"  onclick="history.go(-1)">上一步</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</block>
+
+<block name="footer">
+</block>

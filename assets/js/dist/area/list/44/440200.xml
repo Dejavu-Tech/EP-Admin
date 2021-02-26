@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="韶关" code="440200">
+<county name="武江" code="440203">
+    <street name="新华街道" code="440203001" />
+    <street name="惠民街道" code="440203002" />
+    <street name="西联镇" code="440203100" />
+    <street name="西河镇" code="440203101" />
+    <street name="龙归镇" code="440203102" />
+    <street name="江湾镇" code="440203103" />
+    <street name="重阳镇" code="440203104" />
+</county>
+<county name="浈江" code="440204">
+    <street name="东河街道" code="440204001" />
+    <street name="车站街道" code="440204002" />
+    <street name="风采街道" code="440204008" />
+    <street name="新韶镇" code="440204100" />
+    <street name="乐园镇" code="440204101" />
+    <street name="十里亭镇" code="440204102" />
+    <street name="犁市镇" code="440204103" />
+    <street name="花坪镇" code="440204104" />
+    <street name="田螺冲办事处" code="440204401" />
+    <street name="曲仁办事处" code="440204402" />
+    <street name="韶关冶炼厂" code="440204453" />
+</county>
+<county name="曲江" code="440205">
+    <street name="松山街道" code="440205001" />
+    <street name="马坝镇" code="440205100" />
+    <street name="大塘镇" code="440205101" />
+    <street name="枫湾镇" code="440205102" />
+    <street name="小坑镇" code="440205103" />
+    <street name="沙溪镇" code="440205104" />
+    <street name="乌石镇" code="440205106" />
+    <street name="樟市镇" code="440205107" />
+    <street name="白土镇" code="440205108" />
+    <street name="罗坑镇" code="440205109" />
+    <street name="韶关发电厂" code="440205451" />
+    <street name="曲江区大宝山矿" code="440205452" />
+    <street name="韶关十六冶金建设公司" code="440205453" />
+</county>
+<county name="始兴" code="440222">
+    <street name="太平镇" code="440222100" />
+    <street name="马市镇" code="440222101" />
+    <street name="澄江镇" code="440222102" />
+    <street name="顿岗镇" code="440222103" />
+    <street name="罗坝镇" code="440222104" />
+    <street name="司前镇" code="440222105" />
+    <street name="隘子镇" code="440222106" />
+    <street name="城南镇" code="440222107" />
+    <street name="沈所镇" code="440222108" />
+    <street name="深渡水乡" code="440222204" />
+</county>
+<county name="仁化" code="440224">
+    <street name="丹霞街道" code="440224001" />
+    <street name="闻韶镇" code="440224102" />
+    <street name="扶溪镇" code="440224103" />
+    <street name="长江镇" code="440224104" />
+    <street name="城口镇" code="440224105" />
+    <street name="红山镇" code="440224106" />
+    <street name="石塘镇" code="440224107" />
+    <street name="董塘镇" code="440224108" />
+    <street name="大桥镇" code="440224109" />
+    <street name="周田镇" code="440224110" />
+    <street name="黄坑镇" code="440224111" />
+</county>
+<county name="翁源" code="440229">
+    <street name="龙仙镇" code="440229100" />
+    <street name="坝仔镇" code="440229104" />
+    <street name="江尾镇" code="440229106" />
+    <street name="官渡镇" code="440229109" />
+    <street name="周陂镇" code="440229111" />
+    <street name="翁城镇" code="440229113" />
+    <street name="新江镇" code="440229114" />
+    <street name="铁龙林场" code="440229450" />
+</county>
+<county name="乳源" code="440232">
+    <street name="乳城镇" code="440232100" />
+    <street name="一六镇" code="440232103" />
+    <street name="桂头镇" code="440232104" />
+    <street name="洛阳镇" code="440232106" />
+    <street name="大布镇" code="440232108" />
+    <street name="大桥镇" code="440232109" />
+    <street name="东坪镇" code="440232111" />
+    <street name="游溪镇" code="440232112" />
+    <street name="必背镇" code="440232113" />
+    <street name="天井山林场" code="440232450" />
+    <street name="乳阳林业局" code="440232451" />
+</county>
+<county name="新丰" code="440233">
+    <street name="丰城街道" code="440233001" />
+    <street name="黄礤镇" code="440233100" />
+    <street name="马头镇" code="440233101" />
+    <street name="梅坑镇" code="440233102" />
+    <street name="沙田镇" code="440233103" />
+    <street name="遥田镇" code="440233104" />
+    <street name="回龙镇" code="440233105" />
+</county>
+<county name="乐昌" code="440281">
+    <street name="乐城街道" code="440281001" />
+    <street name="北乡镇" code="440281102" />
+    <street name="九峰镇" code="440281103" />
+    <street name="廊田镇" code="440281104" />
+    <street name="长来镇" code="440281105" />
+    <street name="梅花镇" code="440281106" />
+    <street name="三溪镇" code="440281107" />
+    <street name="坪石镇" code="440281108" />
+    <street name="黄圃镇" code="440281110" />
+    <street name="五山镇" code="440281111" />
+    <street name="两江镇" code="440281112" />
+    <street name="沙坪镇" code="440281113" />
+    <street name="云岩镇" code="440281114" />
+    <street name="秀水镇" code="440281115" />
+    <street name="大源镇" code="440281117" />
+    <street name="庆云镇" code="440281118" />
+    <street name="白石镇" code="440281119" />
+    <street name="坪石办事处" code="440281451" />
+    <street name="梅田办事处" code="440281452" />
+</county>
+<county name="南雄" code="440282">
+    <street name="雄州街道" code="440282001" />
+    <street name="乌迳镇" code="440282100" />
+    <street name="界址镇" code="440282103" />
+    <street name="坪田镇" code="440282104" />
+    <street name="黄坑镇" code="440282105" />
+    <street name="邓坊镇" code="440282106" />
+    <street name="油山镇" code="440282107" />
+    <street name="南亩镇" code="440282109" />
+    <street name="水口镇" code="440282110" />
+    <street name="江头镇" code="440282111" />
+    <street name="湖口镇" code="440282112" />
+    <street name="珠玑镇" code="440282113" />
+    <street name="主田镇" code="440282115" />
+    <street name="古市镇" code="440282116" />
+    <street name="全安镇" code="440282118" />
+    <street name="百顺镇" code="440282120" />
+    <street name="澜河镇" code="440282121" />
+    <street name="帽子峰镇" code="440282122" />
+    <street name="东莞大岭山（南雄）产业转移工业园" code="440282400" />
+</county>
+</city>
+</address>

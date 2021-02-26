@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="昌江" code="469031">
+<county name="昌江" code="469031001">
+    <street name="石碌镇" code="469026100" />
+    <street name="叉河镇" code="469026101" />
+    <street name="十月田镇" code="469026102" />
+    <street name="乌烈镇" code="469026103" />
+    <street name="昌化镇" code="469026104" />
+    <street name="海尾镇" code="469026105" />
+    <street name="七叉镇" code="469026106" />
+    <street name="王下乡" code="469026200" />
+    <street name="国营红林农场" code="469026401" />
+    <street name="国营霸王岭林场" code="469026500" />
+    <street name="海南矿业联合有限公司" code="469026501" />
+</county>
+</city>
+</address>

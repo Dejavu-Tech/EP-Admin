@@ -1,0 +1,686 @@
+- var landing_sticky        = true;
+- var jarallax_libs         = true;
+- var scrollpy_landing      = true;
+- var animate               = true;
+- var landingpage           = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.landing-page
+        // page-wrapper Start
+        .page-wrapper
+          // Page Body Start
+          .page-body-wrapper.landing-main
+            #home.bg-sky-blue.highlight-on-scroll
+              .sticky-header
+                header
+                  .container-fluid
+                    .row
+                      .col-12
+                        nav.navbar.navbar-expand-lg.navbar-light
+                          a.navbar-brand(href='#')
+                            img(src='../assets/images/logo/logo.png', alt='')
+                          button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                            span
+                            span
+                            span
+                          #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
+                            ul#scroll-spy.navbar-nav.ml-auto
+                              li.nav-item.active
+                                a.nav-link.f-14.js-scroll.active(href='#HOME') HOME
+                              li.nav-item
+                                a.nav-link.js-scroll.f-14(href='#layouts') LAYOUTS
+                              li.nav-item
+                                a.nav-link.js-scroll.f-14(href='#PAGES') PAGES
+                              li.nav-item
+                                a.nav-link.js-scroll.f-14(href='../document/index.html' target="_blank") DOCUMENTS
+                              li.nav-item
+                                a.nav-link.js-scroll.f-14(href='#COMPONENTS') COMPONENTS
+                              li.nav-item
+                                a.nav-link.js-scroll.f-14(href='#SUPPORT') SUPPORT
+                              li.nav-item
+                                form.form-inline.my-2.my-lg-0.purchasebtn-res(target='_blank', action='https://themeforest.net/user/pixelstrap/portfolio')
+                                  span
+                                    button.btn-block
+                                      i.fa.fa-cart-plus
+                                  button.btn.btn-light.txt-primary Purchase
+              .container
+                .row.landing-center.landing-center-responsive.title-padding
+                  .col-lg-8.home-images.h-100
+                      a(href="index.html")                    
+                        img.img-fluid.main-image(src='../assets/images/landing/home_3.png', alt='', target='_blank')
+                      .home-decor
+                        img.img-fluid(src='../assets/images/landing/home_1.png', alt='')
+                        img.img-fluid(src='../assets/images/landing/home_2.png', alt='')
+                  .col-lg-4.title-content
+                    h1 
+                      span.txt-primary.d-block &quot; Projects are complex,
+                      | design shouldn&apos;t be &quot;
+                    p
+                      | Poco is Perfect Admin template for any business. it has all features and modules to create your amazing C-panel. this template for selling Default, Crypto, Project, Ecommerce etc......
+                    div
+                      a.btn.btn-pill.btn-primary(href="index.html" target='_blank') Poco Demo
+                      a.btn.btn-pill.btn-danger.m-l-20(href="https://themeforest.net/user/pixelstrap/portfolio" target=_blank) Buy Now
+                  
+                  .round-tringle-square-animation
+                    .triangle_set1
+                      .triangle1
+                        .empty1
+                    .triangle_set
+                      .triangle
+                        .empty
+                    .bg_circle1
+                    .bg_circle2
+                    .bg_circle3
+                    .square1
+                    .square2
+                    .bg_circle4
+                    .square
+                    .cross 
+                    img.vector-rect(src='../assets/images/landing/vector_decore.png' alt="")
+                a.tap-down(href='#layouts')
+                  i.icofont.icofont-scroll-down
+          section#layouts.section-space.poco-demo-section.app_bg.highlight-on-scroll
+            .container
+              .row
+                .col-sm-12
+                 .title
+                      h3.txt-bg Creative
+                      h2
+                        span.txt-primary Poco 
+                        | Layouts
+                      p
+                        | Poco is beautifully crafted, clean &amp; modern designed admin theme with 9 different
+                        | Layouts &amp; light - dark & box versions.
+            .container
+              .row
+                .col-md-4
+                  
+                  .img-effect.p-10
+                    a(href='index.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/default.png', alt='')
+                      .cretive_img_content
+                        .btn-air Light Layout
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='index.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/rtl.png', alt='')
+                      .cretive_img_content
+                        .btn-air RTL Demo
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='index.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/box.png', alt='')
+                      .cretive_img_content
+                        .btn-air Box Layout
+                .col-md-4
+                  
+                  .img-effect.p-10
+                    a(href='index.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/dark.png', alt='')
+                      .cretive_img_content
+                        .btn-air Dark Layout
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='index.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/dark_rtl.png', alt='')
+                      .cretive_img_content
+                        .btn-air Dark with RTL
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='index.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/dark_box.png', alt='')
+                      .cretive_img_content
+                        .btn-air Dark with Box
+                .col-md-4
+                  
+                  .img-effect.p-10
+                    a(href='../starter-kit/vertical.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/v_1.png', alt='')
+                      .cretive_img_content
+                        .btn-air Vertical Layout
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='../starter-kit/vertical.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/v_2.png', alt='')
+                      .cretive_img_content
+                        .btn-air Vertical With RTL
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='../starter-kit/vertical.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/v_3.png', alt='')
+                      .cretive_img_content
+                        .btn-air Vertical With Box
+     
+
+          section#dashboard.section-space.poco-demo-section.app_bg.pt-0
+            .container
+              .row
+                .col-sm-12
+                 .title
+                      h3.txt-bg Creative
+                      h2
+                        span.txt-primary Creative 
+                        | Dashboard
+                      p
+                        | Poco is beautifully crafted, clean &amp; modern designed admin theme with 3 different
+                        | demos &amp; light - dark versions.
+            .container
+              .row
+                .col-md-4
+                  .new-logo
+                    h5 New
+                  .img-effect.p-10
+                    a(href='index.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/default.png', alt='')
+                      .cretive_img_content
+                        .btn-air Default Demo
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='dashboard-ecommerce.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/ecommerce.png', alt='')
+                      .cretive_img_content
+                        .btn-air Ecommerce Demo
+
+                .col-md-4
+                  .img-effect.p-10
+                    a(href='dashboard-crypto.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/crypto.png', alt='')
+                      .cretive_img_content
+                        .btn-air Crypto Demo
+
+                .col-md-12
+                  .view-more-root
+                    .and-view-more View More
+                    a.and-view(href="../ltr/index.html" target="_blank")
+                      | View 
+                      span.txt-primary More...
+
+
+
+          section.section-space.poco-demo-section.uniquefeaturesbg#FEATURE
+            .container
+              .row
+                .col-sm-12
+                    .title
+                      h2
+                        span.txt-primary Unique 
+                        | Features
+                      p
+                        | Poco is beautifully crafted, clean &amp; modern designed admin theme 
+                        | with Many Unique Features.
+            .container.uniqueiconlist
+              .row
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/1_1.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary 10 +
+                      |  Apps
+                    p
+                      | Attractive & workable apps like 
+                      br
+                      | ecommerce , todo chat and many more poco 
+                      br
+                      | get your project done faster
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/2_2.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary Starter
+                      |  kit
+                    p
+                      | Poco provides  you starter kit so 
+                      br
+                      | you can kick start your project right
+                      br
+                      | away in minutes 
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/3_3.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary Eye-catching
+                      |  design
+                    p
+                      | Poco Admin is modern 
+                      br
+                      | pixelperfact & eye cathing design.
+                      br
+                      | it's give extralmly look to any project
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/4_4.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary Dark &amp;
+                      |  light layouts
+                    p
+                      | Poco has both variations build-in
+                      br
+                      | light and dark versions choose as per
+                      br
+                      | your requirement 
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/5_5.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary Colors
+                      |  options
+                    p
+                      | Poco has many color options ,
+                      br
+                      | you can get your color variations
+                      br
+                      | as per your branding
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/6_6.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary Continuous
+                      |  Updates
+                    p
+                      | poco will be updated regularly
+                      br
+                      | and life time with many more features
+                      br
+                      | in future.
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/7_7.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary Quality
+                      |  Code
+                    p
+                      | Poco is developed by elite author ,
+                      br
+                      | we have taken care of all standards and 
+                      br 
+                      | tested quality code.
+                .col-lg-4.unique-content
+                  .uniqueicon
+                    img.img-fluid(src='../assets/images/landing/8_8.png' alt="")
+                  .unique_feature_content
+                    h4.f-24.f-w-700
+                      span.txt-primary Sup
+                      | port
+                    p
+                      | Whenever you need us ,
+                      br
+                      | we will always be there to help you
+                      br
+                      | in your project.
+          section#applications.section-space.poco-demo-section.app_bg.highlight-on-scroll
+            .container
+              .row
+                .col-sm-12
+                    .title
+                      h3.txt-bg Usefull Apps
+                      h2
+                        span.txt-primary Usefull
+                        |  Application
+                      p
+                        | Poco is beautifully crafted, clean &amp; modern designed admin theme 
+                        | with 
+                        b 10+ 
+                        | different Usefull Application.
+            .container
+              .row
+                .col-md-4
+                  .new-logo
+                    h5 New
+                  .img-effect
+                    a(href='product.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/Ecommerce.png', alt='')
+                      .cretive_img_content
+                        .btn-air Ecommerce App
+
+                .col-md-4
+                  .img-effect
+                    a(href='learning-list-view.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/Learning.png', alt='')
+                      .cretive_img_content
+                        .btn-air Learning App
+
+                .col-md-4
+                  .img-effect
+                    a(href='social-app.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/social.png', alt='')
+                      .cretive_img_content
+                        .btn-air Social App
+
+                .col-md-4
+                  .img-effect
+                    a(href='calendar-advanced', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/cal.png', alt='')
+                      .cretive_img_content
+                        .btn-air Calander App
+
+                .col-md-4
+                  .img-effect
+                    a(href='chat.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/chatapp.png', alt='')
+                      .cretive_img_content
+                        .btn-air Chat App
+
+                .col-md-4
+                  .img-effect
+                    a(href='job-cards-view.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/job.png', alt='')
+                      .cretive_img_content
+                        .btn-air Job App
+
+                .col-md-12
+                  .view-more-root
+                    .and-view-more View More
+                    a.and-view(href="../ltr/index.html")
+                      | View 
+                      span.txt-primary More...
+          section.counter.section-space.counter
+            .container
+              .row
+                .col-lg-3.counter-container
+                  .counters
+                    .counter-text
+                      .count-number
+                        span.counts 10
+                      h3.count-desc
+                        span.txt-primary Workable
+                        |  App
+                      p
+                        | Poco theme is comes with 10+ different clean modern & Usefull Application.
+                .col-lg-3.counter-container
+                  .counters
+                    .counter-text
+                      .count-number
+                        span.counts 09
+                      h3.count-desc
+                        span.txt-primary Layo
+                        | uts
+                      p
+                        | Poco theme has include light , dark , box & vertical layouts.
+                .col-lg-3.counter-container
+                  .counters
+                    .counter-text
+                      .count-number
+                        span.counts 42
+                      h3.count-desc
+                        span.txt-primary Compo
+                        | nents
+                      p
+                        | Poco admin theme includes 42+ new and usefull Components.
+                .col-lg-3.counter-container
+                  .counters
+                    .counter-text
+                      .count-number
+                        span.counts 178
+                      h3.count-desc
+                        span.txt-primary Pa
+                        | ges
+                      p
+                        | Poco theme is comes with 178+ diffrant inner pages
+          section.section-space.poco-demo-section
+            .container
+              .row
+                .col-sm-12
+                  .title
+                      h3.txt-bg Advance Cards                
+                      h2
+                        span.txt-primary Advance 
+                        | Cards
+                      p
+                        | Poco is beautifully crafted, clean &amp; modern designed admin theme with
+                        | Many diffrent cards
+            .container
+              .row
+                .col-sm-12
+                  .advace-card-sec.m-b-100
+                    img.img-fluid(src='../assets/images/landing/card.jpg', alt='')
+                .col-sm-12
+                  .view-more-root
+                    .and-view-more View More
+                    a(href="index.html", target="_blank").and-view
+                      | View 
+                      span.txt-primary More...
+          section#COMPONENTS.section-space.poco-demo-section.components-section.highlight-on-scroll
+            .container
+              .row
+                .col-sm-12
+                  .title
+                      h2
+                        span.txt-primary Our 
+                        | Components
+                      p
+                        | Poco is beautifully crafted, clean &amp; modern designed admin theme 
+                        | with Many new Components.
+            .container
+              .row.component_responsive
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-exclamation-triangle
+                    h6.m-0.f-18.f-w-700.text-center SweetAlert2
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-user-o
+                    h6.m-0.f-18.f-w-700.text-center Avatar
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-search(aria-hidden='true')
+                    h6.m-0.f-18.f-w-700.text-center Scrollable
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-tree
+                    h6.m-0.f-18.f-w-700.text-center Tree view
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-bold
+                    h6.m-0.f-18.f-w-700.text-center Bootstrap notify
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-star-o(aria-hidden='true')
+                    h6.m-0.f-18.f-w-700.text-center Rating 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-tint
+                    h6.m-0.f-18.f-w-700.text-center Dropzone
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-map-marker
+                    h6.m-0.f-18.f-w-700.text-center Tour
+                .animat-rate
+                  img.vector-rect(src='../assets/images/landing/vector_decore.png' alt="")
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-codepen
+                    h6.m-0.f-18.f-w-700.text-center Animated modal
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-microchip
+                    h6.m-0.f-18.f-w-700.text-center Owl Carousel
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-globe
+                    h6.m-0.f-18.f-w-700.text-center Ribbons 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-ellipsis-h
+                    h6.m-0.f-18.f-w-700.text-center Pagination 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-step-forward(aria-hidden='true')
+                    h6.m-0.f-18.f-w-700.text-center Steps 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-paw
+                    h6.m-0.f-18.f-w-700.text-center Breadcrumb  
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-sliders(aria-hidden='true')
+                    h6.m-0.f-18.f-w-700.text-center Range Slider 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-crop
+                    h6.m-0.f-18.f-w-700.text-center image cropper 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-file-o
+                    h6.m-0.f-18.f-w-700.text-center Sticky 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-spinner
+                    h6.m-0.f-18.f-w-700.text-center Progress 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-envelope-o
+                    h6.m-0.f-18.f-w-700.text-center Tooltip 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-recycle
+                    h6.m-0.f-18.f-w-700.text-center Spinners 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-download
+                    h6.m-0.f-18.f-w-700.text-center Dropdown 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-copy
+                    h6.m-0.f-18.f-w-700.text-center Tabs 
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-map-o
+                    h6.m-0.f-18.f-w-700.text-center Accordion  
+                .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                  .component-hover-effect
+                    i.fa.fa-chevron-down
+                    h6.m-0.f-18.f-w-700.text-center Navs
+                .col-md-2.col-sm-4.col-6.component-col-set
+                  .component-hover-effect
+                    i.fa.fa-bolt
+                    h6.m-0.f-18.f-w-700.text-center Shadow
+                .col-md-2.col-sm-4.col-6.component-col-set
+                  .component-hover-effect
+                    i.fa.fa-gitlab
+                    h6.m-0.f-18.f-w-700.text-center state color
+                .col-md-2.col-sm-4.col-6.component-col-set
+                  .component-hover-effect
+                    i.fa.fa-qrcode
+                    h6.m-0.f-18.f-w-700.text-center List  
+                .col-md-2.col-sm-4.col-6.component-col-set
+                  .component-hover-effect
+                    i.fa.fa-question
+                    h6.m-0.f-18.f-w-700.text-center Grid 
+                .col-md-2.col-sm-4.col-6.component-col-set
+                  .component-hover-effect
+                    i.fa.fa-text-width
+                    h6.m-0.f-18.f-w-700.text-center Helper classes 
+                .col-md-2.col-sm-4.col-6.component-col-set
+                  .component-hover-effect
+                    i.fa.fa-list-ul
+                    h6.m-0.f-18.f-w-700.text-center Typography
+                .animat-rate
+                  img.rat-sib(src='../assets/images/landing/sib-1.png' alt="")
+                  img.rat-squar(src='../assets/images/landing/squar.png' alt="")
+                  img.rat-rect(src='../assets/images/landing/ract.png' alt="")
+                  img.rat-rect1(src='../assets/images/landing/ract.png' alt="")
+                  img.rat-round(src='../assets/images/landing/round-3.png' alt="")
+                  img.vector-rect(src='../assets/images/landing/vector_decore.png' alt="")
+                  .cross
+          section#PAGES.section-space.poco-demo-section.app_bg.highlight-on-scroll.pb-0
+            .container
+              .row
+                .col-sm-12
+                  .title
+                      h2
+                        span.txt-primary Inner
+                        |  Pages
+                      p
+                        | Poco is beautifully crafted, clean &amp; modern designed admin theme with 
+                        | many diffrant inner pages
+            .container
+              .row
+                .col-md-4
+                  .img-effect
+                    a(href='chat.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/chat1.png', alt='')
+                      .new-logo
+                        h5 New
+                    .cretive_img_content
+                        .btn-air Chat
+                        p.f-w-600.text-center.p-t-15
+                          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                .col-md-4
+                  .img-effect
+                    a(href='social-app.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/social.png', alt='')
+                    .cretive_img_content
+                        .btn-air Social
+                        p.f-w-600.text-center.p-t-15
+                          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                .col-md-4
+                  .img-effect
+                    a(href='learning-detailed.html', target='_blank')
+                      img.img-fluid.Poco-img(src='../assets/images/landing/detailed-course.png', alt='')
+                    .cretive_img_content
+                        .btn-air Detailed Course
+                        p.f-w-600.text-center.p-t-15
+                          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                .col-md-12
+                  .view-more-root
+                    .and-view-more View More
+                    .and-view
+                      | View 
+                      span.txt-primary More...
+          section.section-space.support(id="SUPPORT")
+            .container
+              .row
+                .col-12
+                  .footerprofile
+                    .vector1
+                      img(src='../assets/images/landing/vector_decore.png', alt='Vector image poco')
+                    .profile
+                      img(src='../assets/images/landing/profile.png', alt='profile image poco')
+                    .vector2
+                      img(src='../assets/images/landing/vector_decore.png', alt='vector image poco')
+                  h2.f-w-700.text-center
+                    span.txt-primary Have Any
+                    |  Problem ?
+                  h4.f-w-400.text-center.m-b-20 No Worries-Support Service is Always To Support To You
+                  a.btn.btn-primary.m-b-10(href='https://pixelstrap.freshdesk.com', role='button' target="_blank") Get Support
+                  .rating
+                    i.fa.fa-star.f-20(aria-hidden='true')
+                    i.fa.fa-star.f-20(aria-hidden='true')
+                    i.fa.fa-star.f-20(aria-hidden='true')
+                    i.fa.fa-star.f-20(aria-hidden='true')
+                    i.fa.fa-star.f-20(aria-hidden='true')
+               
+                .animat-rate
+                  img.rat-sib(src='../assets/images/landing/sib-1.png' alt="")
+                  img.rat-squar(src='../assets/images/landing/squar.png' alt="")
+                  img.rat-rect(src='../assets/images/landing/ract.png' alt="")
+                  img.rat-rect1(src='../assets/images/landing/ract.png' alt="")
+                  img.rat-round(src='../assets/images/landing/round-3.png' alt="")
+                  .cross
+        footer
+          .container.copyright
+            .row
+              .col-md-6
+                img.img-fluid(src='../assets/images/logo/logo.png', alt='')
+              .col-md-6
+                h6.copy-right-text.text-right @2020 All right reserved
+
+            .tap-top
+              i.fa.fa-angle-double-up
+        include ../../components/footer-files

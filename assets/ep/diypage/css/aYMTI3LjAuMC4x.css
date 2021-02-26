@@ -1,0 +1,452 @@
+.diy-page {
+    position: relative;
+}
+
+.diy-phone {
+    float: left;
+    width: 328px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+
+.diy-phone .phone-head {
+    height: 44px;
+    background: #fff;
+    position: relative;
+}
+
+.diy-phone .phone-head:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 112px;
+    height: 8px;
+    width: 8px;
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.diy-phone .phone-head:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 128px;
+    height: 8px;
+    width: 50px;
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.diy-phone .phone-title {
+    height: 54px;
+    background: url("../images/wx-top.png") 0 0 no-repeat;
+    background-size: 100% auto;
+    padding: 0 50px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 68px;
+    cursor: default;
+    overflow: hidden;
+    display:block;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.diy-phone .phone-main {
+    min-height: 400px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.diy-phone .phone-main p {
+    margin: 0;
+    padding: 0;
+}
+
+.diy-phone .phone-main .highlight {
+    height: 50px;
+    border: 2px dashed #999;
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.diy-phone .phone-main .drag {
+    position: relative;
+    min-height: 20px;
+    display: block;
+    overflow: hidden;
+}
+
+.diy-phone .phone-main .drag.selected:before,
+.diy-phone .phone-main .drag:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px dashed #00a0e9;
+    cursor: move;
+    z-index: 10;
+}
+
+.diy-phone .phone-main .drag.fixed:before {
+    cursor: default;
+}
+
+.diy-phone .phone-main .drag .btn-edit-del {
+    height: 16px;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    display: none;
+}
+
+.diy-phone .phone-main .drag .btn-edit-del > div {
+    width: 32px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    margin-left: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+}
+
+
+.diy-phone .phone-main .drag.selected .btn-edit-del ,
+.diy-phone .phone-main .drag:hover .btn-edit-del {
+    display: block;
+}
+
+.diy-phone .phone-main .drag.nodelete .btn-edit-del .btn-del {
+    display: none;
+}
+
+.diy-phone .phone-main a {
+    color: #337ab7;
+}
+
+.diy-phone .phone-foot {
+    height: 24px;
+    width: 60px;
+    margin: 15px auto 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.diy-editor {
+    float: left;
+    width: 494px;
+    height: auto;
+    background: #fdfdfd;
+    padding: 15px 10px;
+    margin-left: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 55px;
+    display: none;
+    margin-bottom: 150px;
+}
+.diy-editor .editor-arrow {
+    height: 0;
+    position: relative;
+}
+
+.diy-editor .editor-arrow:after,
+.diy-editor .editor-arrow:before {
+    position: absolute;
+    font-family: simsun;
+    content: "◆";
+    top: 8px;
+    left: -21px;
+    display: block;
+    width: 9px;
+    height: 18px;
+    font-size: 24px;
+    color: #fdfdfd;
+    z-index: 111;
+}
+
+.diy-editor .editor-arrow:after {
+    left: -22px;
+    color: #ddd;
+    z-index: 11;
+}
+
+.diy-editor .form-group {
+    margin: 5px 0;
+}
+.diy-editor .form-group .control-label {
+    padding: 5px 0;
+    text-align: right;
+}
+.diy-editor .form-group .form-control {
+    padding: 0 5px;
+}
+.diy-editor .form-group .noblr {
+    border-left: 0;
+    border-right: 0;
+}
+.diy-editor .color {
+    padding: 0;
+    cursor: pointer;
+}
+.diy-editor .form-group .ui-slider {
+    margin-top: 4px;
+}
+
+.diy-editor .form-items {
+    height: auto;
+}
+
+.diy-editor .form-items.indent {
+    margin: 0 14px;
+}
+
+.diy-editor .form-items .inner {
+    height: auto;
+}
+
+.diy-editor .form-items .inner .item {
+    height: auto;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e7eaec;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.diy-editor .form-items .inner .highlight {
+    border: 2px dashed #e7eaec;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.diy-editor .form-items .inner .item .btn-del {
+    height: 0;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.diy-editor .form-items .inner .item .btn-del:before {
+    content: "×";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    line-height: 14px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+    border-radius: 16px;
+    top: -6px;
+    right: -6px;
+    z-index: 10;
+}
+
+.diy-editor .form-items .inner .item .item-image {
+    height: 70px;
+    width: auto;
+    min-width: 40px;
+    max-width: 220px;
+    background: #eee;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #e7eaec;
+    position: relative;
+}
+
+.diy-editor .form-items .inner .item .item-image img {
+    height: 68px;
+    width: auto;
+    max-width: 220px;
+    display: block;
+}
+
+.diy-editor .form-items .inner .item .item-image.square {
+    width: 70px;
+    height: 70px;
+}
+.diy-editor .form-items .inner .item .item-image.square img {
+    width: 68px;
+    height: 68px;
+}
+
+.diy-editor .form-items .inner .item .item-image .text {
+    height: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.diy-editor .form-items .inner .item .item-image.drag-btn {
+    font-size: 14px;
+    line-height: 68px;
+    text-align: center;
+    cursor: move;
+}
+
+.diy-editor .form-items .inner .item .item-image .icon-main {
+    height: 50px;
+    width: 68px;
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.diy-editor .form-items .inner .item .item-image .icon-main .icon {
+    font-size: 30px;
+}
+
+.diy-editor .form-items .inner .item .item-form {
+    height: auto;
+    display: block;
+    overflow: hidden;
+}
+
+.diy-editor .form-items .inner .item .title {
+    padding-bottom: 10px;
+}
+
+.diy-editor .form-items .inner .item .title-child {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.diy-editor .form-items .inner .item .item-body.child {
+    margin-bottom: 10px;
+    background: #fff;
+}
+.diy-editor .line {
+    height: 10px;
+    width: 100%;
+    position: relative;
+}
+.diy-editor .line:before {
+    height: 0;
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 14px;
+    right: 14px;
+    border: 1px dashed #eee;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background: #f7f7f7;
+}
+
+
+.diy-menu {
+    width: 840px;
+    height: auto;
+    background: #fdfdfd;
+    margin-right: -500px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+.diy-menu .navs,
+.diy-menu .action {
+    height: auto;
+}
+
+.diy-menu .navs {
+    padding: 10px 10px 5px;
+    border-bottom: 1px dotted #ddd;
+    display: none;
+}
+
+.diy-menu .navs nav {
+    width: 92px;
+    padding: 5px 0;
+    margin: 0 5px 5px 0;
+    text-align: center;
+}
+
+.diy-menu .navs nav.special {
+    background: #f4f4f4;
+}
+
+.diy-menu .navs nav:hover {
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.diy-menu .navs nav:active {
+    -webkit-box-shadow: inset 1px 3px 5px rgba(0,0,0,0.2);
+    box-shadow: inset 1px 3px 5px rgba(0,0,0,0.2);
+}
+
+.diy-menu .action {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+ }
+
+.diy-menu .action:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+
+.diy-menu .action nav {
+    margin-right: 5px;
+}
+
+.form-horizontal .checkbox, .form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline {
+    padding-top: 6px;
+}
+
+.has-error .form-control:focus, .has-error .single-line:focus {
+    border-color: #ed5565 !important;
+}
+
+
+
+
+

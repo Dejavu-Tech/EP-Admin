@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="清远" code="441800">
+<county name="清城" code="441802">
+    <street name="凤城街道" code="441802006" />
+    <street name="东城街道" code="441802007" />
+    <street name="洲心街道" code="441802008" />
+    <street name="横荷街道" code="441802009" />
+    <street name="源潭镇" code="441802103" />
+    <street name="龙塘镇" code="441802105" />
+    <street name="石角镇" code="441802106" />
+    <street name="飞来峡镇" code="441802107" />
+    <street name="清远市高新技术产业开发区" code="441802400" />
+    <street name="清远市国营银盏林场" code="441802450" />
+</county>
+<county name="佛冈" code="441821">
+    <street name="石角镇" code="441821100" />
+    <street name="水头镇" code="441821101" />
+    <street name="汤塘镇" code="441821102" />
+    <street name="龙山镇" code="441821103" />
+    <street name="高岗镇" code="441821104" />
+    <street name="迳头镇" code="441821107" />
+</county>
+<county name="阳山" code="441823">
+    <street name="青莲镇" code="441823100" />
+    <street name="江英镇" code="441823101" />
+    <street name="杜步镇" code="441823104" />
+    <street name="七拱镇" code="441823105" />
+    <street name="太平镇" code="441823107" />
+    <street name="杨梅镇" code="441823108" />
+    <street name="大崀镇" code="441823110" />
+    <street name="小江镇" code="441823111" />
+    <street name="岭背镇" code="441823113" />
+    <street name="黄坌镇" code="441823115" />
+    <street name="黎埠镇" code="441823116" />
+    <street name="阳城镇" code="441823119" />
+    <street name="秤架瑶族乡" code="441823201" />
+</county>
+<county name="连山" code="441825">
+    <street name="永和镇" code="441825100" />
+    <street name="吉田镇" code="441825104" />
+    <street name="太保镇" code="441825105" />
+    <street name="禾洞镇" code="441825106" />
+    <street name="福堂镇" code="441825108" />
+    <street name="小三江镇" code="441825109" />
+    <street name="上帅镇" code="441825111" />
+    <street name="连山林场" code="441825450" />
+    <street name="禾洞农林场" code="441825451" />
+</county>
+<county name="连南" code="441826">
+    <street name="三江镇" code="441826100" />
+    <street name="大麦山镇" code="441826101" />
+    <street name="寨岗镇" code="441826102" />
+    <street name="三排镇" code="441826105" />
+    <street name="涡水镇" code="441826106" />
+    <street name="大坪镇" code="441826108" />
+    <street name="香坪镇" code="441826109" />
+</county>
+<county name="清新" code="441827">
+    <street name="太和镇" code="441803102" />
+    <street name="太平镇" code="441803104" />
+    <street name="山塘镇" code="441803105" />
+    <street name="三坑镇" code="441803106" />
+    <street name="龙颈镇" code="441803112" />
+    <street name="禾云镇" code="441803113" />
+    <street name="浸潭镇" code="441803117" />
+    <street name="石潭镇" code="441803118" />
+    <street name="笔架林场" code="441803450" />
+</county>
+<county name="英德" code="441881">
+    <street name="英城街道" code="441881001" />
+    <street name="沙口镇" code="441881101" />
+    <street name="望埠镇" code="441881102" />
+    <street name="横石水镇" code="441881103" />
+    <street name="桥头镇" code="441881105" />
+    <street name="青塘镇" code="441881106" />
+    <street name="白沙镇" code="441881108" />
+    <street name="大站镇" code="441881109" />
+    <street name="西牛镇" code="441881110" />
+    <street name="九龙镇" code="441881111" />
+    <street name="含光镇" code="441881112" />
+    <street name="大湾镇" code="441881114" />
+    <street name="石灰铺镇" code="441881115" />
+    <street name="石牯塘镇" code="441881116" />
+    <street name="下太镇" code="441881120" />
+    <street name="波罗镇" code="441881124" />
+    <street name="横石塘镇" code="441881125" />
+    <street name="大洞镇" code="441881126" />
+    <street name="连江口镇" code="441881129" />
+    <street name="黎溪镇" code="441881130" />
+    <street name="水边镇" code="441881131" />
+    <street name="英红镇" code="441881136" />
+    <street name="东华镇" code="441881137" />
+    <street name="黄花镇" code="441881138" />
+</county>
+<county name="连州" code="441882">
+    <street name="连州镇" code="441882100" />
+    <street name="星子镇" code="441882101" />
+    <street name="大路边镇" code="441882102" />
+    <street name="龙坪镇" code="441882103" />
+    <street name="西岸镇" code="441882104" />
+    <street name="保安镇" code="441882105" />
+    <street name="丰阳镇" code="441882106" />
+    <street name="东陂镇" code="441882107" />
+    <street name="九陂镇" code="441882109" />
+    <street name="西江镇" code="441882118" />
+    <street name="瑶安瑶族乡" code="441882200" />
+    <street name="三水瑶族乡" code="441882201" />
+</county>
+</city>
+</address>

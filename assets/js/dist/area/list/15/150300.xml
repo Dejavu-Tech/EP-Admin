@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="乌海" code="150300">
+<county name="海勃湾" code="150302">
+    <street name="凤凰岭街道" code="150302001" />
+    <street name="海北街道" code="150302002" />
+    <street name="新华街道" code="150302003" />
+    <street name="新华西街道" code="150302004" />
+    <street name="卡布其街道" code="150302005" />
+    <street name="滨河街道" code="150302007" />
+    <street name="千里山镇" code="150302101" />
+    <street name="乌海市海勃湾千里山工业园区" code="150302400" />
+</county>
+<county name="海南" code="150303">
+    <street name="拉僧仲街道" code="150303001" />
+    <street name="西卓子山街道" code="150303002" />
+    <street name="公乌素镇" code="150303102" />
+    <street name="拉僧庙镇" code="150303103" />
+    <street name="巴音陶亥镇" code="150303104" />
+</county>
+<county name="乌达" code="150304">
+    <street name="三道坎街道" code="150304002" />
+    <street name="五虎山街道" code="150304003" />
+    <street name="新达街道" code="150304008" />
+    <street name="巴音赛街道" code="150304009" />
+    <street name="梁家沟街道" code="150304010" />
+    <street name="苏海图街道" code="150304011" />
+    <street name="滨海街道" code="150304012" />
+    <street name="乌兰淖尔镇" code="150304101" />
+    <street name="乌达经济开发区" code="150304400" />
+</county>
+</city>
+</address>

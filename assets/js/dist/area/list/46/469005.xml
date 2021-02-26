@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="文昌" code="469005">
+<county name="文昌" code="469005001">
+    <street name="文城镇" code="469005100" />
+    <street name="重兴镇" code="469005101" />
+    <street name="蓬莱镇" code="469005102" />
+    <street name="会文镇" code="469005103" />
+    <street name="东路镇" code="469005104" />
+    <street name="潭牛镇" code="469005105" />
+    <street name="东阁镇" code="469005106" />
+    <street name="文教镇" code="469005107" />
+    <street name="东郊镇" code="469005108" />
+    <street name="龙楼镇" code="469005109" />
+    <street name="昌洒镇" code="469005110" />
+    <street name="翁田镇" code="469005111" />
+    <street name="抱罗镇" code="469005112" />
+    <street name="冯坡镇" code="469005113" />
+    <street name="锦山镇" code="469005114" />
+    <street name="铺前镇" code="469005115" />
+    <street name="公坡镇" code="469005116" />
+    <street name="国营东路农场" code="469005400" />
+    <street name="国营南阳农场" code="469005401" />
+    <street name="国营罗豆农场" code="469005402" />
+</county>
+</city>
+</address>

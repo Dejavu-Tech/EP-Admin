@@ -1,0 +1,190 @@
+/**=====================
+    42. Tabs CSS Start
+==========================**/
+.nav-pills {
+  .nav-link.active> .nav-link {
+    background-color: $primary-color;
+        border-radius: 15px;
+  }
+  .nav-link.active, .show > .nav-link {
+    background-color: $primary-color;
+    border-radius: 15px;
+  }
+}
+
+.nav{
+  i{
+    margin-right: 10px;
+  }
+}
+
+$nav-name:theme,
+primary,
+secondary,
+success,
+danger,
+info,
+light,
+dark,
+warning;
+$nav-color:$primary-color,
+$primary-color,
+$secondary-color,
+$success-color,
+$danger-color,
+$info-color,
+$light-color,
+$dark-color,
+$warning-color;
+@each $var in $nav-name {
+  $i: index($label-name, $var);
+  .nav-#{$var} , .nav-pills.nav-#{$var} {
+    .nav-link{
+      color: nth($nav-color, $i);
+    }
+    .nav-link.active, .show > .nav-link {
+      background-color: nth($nav-color, $i);
+      color: $white;
+    }
+  }
+}
+.nav-right{
+  justify-content: flex-end;
+}
+.nav-tabs.nav-bottom {
+  .nav-item {
+    .nav-link.active,.nav-link.focus,.nav-link.hover{
+      border-color: $white #dee2e6 #dee2e6;
+    }
+  }
+}
+.tab-content{
+  ~ .nav-tabs{
+    &.nav-material {
+      margin-bottom: 0;
+      margin-top: 30px;
+    }
+  }
+}
+// Material style css
+.nav-material.nav-tabs{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 30px;
+  .nav-item{
+    .nav-link{
+      font-size: 16px;
+      color: $dark-color;
+      text-align: center;
+      padding:10px 25px;
+      border: 0;
+    }
+  }
+  .nav-link.active,.nav-item.show,.nav-link:focus,.nav-link:hover {
+    color: $primary-color;
+  }
+  .material-border{
+    border-bottom: 2px solid $primary-color;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  .nav-link.active ~ .material-border{
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+}
+.nav-material.nav-left{
+  .nav-link{
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+    color: $dark-color;
+  }
+  .nav-link.active,.show > .nav-link{
+    background-color: transparent;
+    border-left-color: $primary-color;
+    color: $primary-color;
+    border-radius: 0;
+    transition: all 0.3s ease;
+  }
+}
+.nav-material.nav-right{
+  .nav-link{
+    border-right: 2px solid transparent;
+    transition: all 0.3s ease;
+    color: $dark-color;
+    text-align: right;
+  }
+  .nav-link.active,.show > .nav-link{
+    background-color: transparent;
+    border-right-color: $primary-color;
+    color: $primary-color;
+    border-radius: 0;
+    transition: all 0.3s ease;
+  }
+}
+$m-nav-name:theme,
+primary,
+secondary,
+success,
+danger,
+info,
+light,
+dark,
+warning;
+$nav-color:$primary-color,
+$primary-color,
+$secondary-color,
+$success-color,
+$danger-color,
+$info-color,
+$light-color,
+$dark-color,
+$warning-color;
+@each $var in $m-nav-name {
+  $i: index($label-name, $var);
+  .nav-material.nav-#{$var} {
+    .nav-link.active,.nav-item.show,.nav-link:focus,.nav-link:hover {
+      color: nth($nav-color, $i);
+      background-color: transparent;
+    }
+    .material-border{
+      border-bottom: 2px solid nth($nav-color, $i);
+    }
+  }
+  .nav-material.nav-left.nav-#{$var}{
+    .nav-link.active,.show > .nav-link{
+      border-left-color: nth($nav-color, $i);
+      color: nth($nav-color, $i);
+    }
+  }
+  .nav-material.nav-right.nav-#{$var}{
+    .nav-link.active,.show > .nav-link{
+      border-right-color: nth($nav-color, $i);
+      color: nth($nav-color, $i);
+    }
+  }
+}
+.tabbed-card{
+  ul{
+    position: absolute;
+    right: 15px;
+    top: 41px;
+    &.nav-material{
+      &.nav-tabs{
+        top: 8px;
+        border-bottom: none;
+        .nav-item{
+          float: right;
+          .nav-link{
+            padding: 44px 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=====================
+     42. Tabs CSS Ends
+==========================**/

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="和田" code="653200">
+<county name="和田市" code="653201">
+    <street name="奴尔巴格街道" code="653201001" />
+    <street name="古江巴格街道" code="653201002" />
+    <street name="古勒巴格街道" code="653201003" />
+    <street name="纳尔巴格街道" code="653201004" />
+    <street name="拉斯奎镇" code="653201100" />
+    <street name="玉龙喀什镇" code="653201101" />
+    <street name="肖尔巴格乡" code="653201200" />
+    <street name="伊里其乡" code="653201201" />
+    <street name="古江巴格乡" code="653201202" />
+    <street name="吐沙拉乡" code="653201203" />
+    <street name="吉亚乡" code="653201204" />
+    <street name="阿克恰勒乡" code="653201205" />
+    <street name="北京工业园区" code="653201401" />
+</county>
+<county name="和田县" code="653221">
+    <street name="巴格其镇" code="653221100" />
+    <street name="罕艾日克镇" code="653221102" />
+    <street name="英阿瓦提乡" code="653221202" />
+    <street name="英艾日克乡" code="653221203" />
+    <street name="布扎克乡" code="653221204" />
+    <street name="拉依喀乡" code="653221205" />
+    <street name="朗如乡" code="653221206" />
+    <street name="塔瓦库勒乡" code="653221207" />
+    <street name="伊斯拉木阿瓦提乡" code="653221208" />
+    <street name="色格孜库勒乡" code="653221209" />
+    <street name="喀什塔什乡" code="653221210" />
+    <street name="吾宗肖乡" code="653221211" />
+    <street name="和田县经济新区" code="653221401" />
+</county>
+<county name="墨玉" code="653222">
+    <street name="喀拉喀什镇" code="653222100" />
+    <street name="扎瓦镇" code="653222101" />
+    <street name="奎牙镇" code="653222102" />
+    <street name="喀尔赛乡" code="653222200" />
+    <street name="阿克萨拉依乡" code="653222203" />
+    <street name="乌尔其乡" code="653222204" />
+    <street name="托胡拉乡" code="653222205" />
+    <street name="萨依巴格乡" code="653222206" />
+    <street name="加汗巴格乡" code="653222207" />
+    <street name="普恰克其乡" code="653222208" />
+    <street name="芒来乡" code="653222209" />
+    <street name="阔依其乡" code="653222210" />
+    <street name="雅瓦乡" code="653222211" />
+    <street name="吐外特乡" code="653222212" />
+    <street name="英也尔乡" code="653222213" />
+    <street name="喀瓦克乡" code="653222214" />
+    <street name="兵团四十七团" code="653222500" />
+    <street name="兵团二二四团" code="653222501" />
+</county>
+<county name="皮山" code="653223">
+    <street name="街道" code="653223001" />
+    <street name="固玛镇" code="653223100" />
+    <street name="杜瓦镇" code="653223101" />
+    <street name="赛图拉镇" code="653223102" />
+    <street name="木吉镇" code="653223103" />
+    <street name="阔什塔格乡" code="653223200" />
+    <street name="克里阳乡" code="653223201" />
+    <street name="科克铁热克乡" code="653223202" />
+    <street name="桑株乡" code="653223203" />
+    <street name="乔达乡" code="653223205" />
+    <street name="木奎拉乡" code="653223206" />
+    <street name="藏桂乡" code="653223207" />
+    <street name="皮亚勒玛乡" code="653223208" />
+    <street name="皮西那乡" code="653223209" />
+    <street name="巴什兰干乡" code="653223210" />
+    <street name="垴阿巴提塔吉克民族乡" code="653223211" />
+    <street name="康克尔柯尔克孜民族乡" code="653223212" />
+    <street name="国营牧场" code="653223400" />
+    <street name="皮山三峡工业园区" code="653223401" />
+    <street name="皮山县良种场" code="653223402" />
+    <street name="皮亚勒玛农业综合开发区" code="653223403" />
+    <street name="兵团皮山农场" code="653223500" />
+</county>
+<county name="洛浦" code="653224">
+    <street name="城区街道" code="653224001" />
+    <street name="洛浦镇" code="653224100" />
+    <street name="布亚乡" code="653224201" />
+    <street name="山普鲁镇" code="653224202" />
+    <street name="恰尔巴格乡" code="653224203" />
+    <street name="杭桂乡" code="653224204" />
+    <street name="多鲁乡" code="653224205" />
+    <street name="纳瓦乡" code="653224206" />
+    <street name="拜什托格拉克乡" code="653224207" />
+    <street name="阿其克乡" code="653224208" />
+    <street name="良种场" code="653224401" />
+</county>
+<county name="策勒" code="653225">
+    <street name="策勒镇" code="653225100" />
+    <street name="策勒乡" code="653225200" />
+    <street name="固拉合玛镇" code="653225201" />
+    <street name="达玛沟乡" code="653225202" />
+    <street name="恰哈乡" code="653225203" />
+    <street name="乌鲁克萨依乡" code="653225204" />
+    <street name="奴尔乡" code="653225205" />
+    <street name="博斯坦乡" code="653225206" />
+    <street name="兵团一牧场" code="653225500" />
+</county>
+<county name="于田" code="653226">
+    <street name="木尕拉镇" code="653226100" />
+    <street name="先拜巴扎镇" code="653226101" />
+    <street name="加依乡" code="653226200" />
+    <street name="科克亚乡" code="653226201" />
+    <street name="阿热勒乡" code="653226202" />
+    <street name="阿日希乡" code="653226203" />
+    <street name="兰干乡" code="653226204" />
+    <street name="斯也克乡" code="653226205" />
+    <street name="托格日尕孜乡" code="653226206" />
+    <street name="喀拉克尔乡" code="653226207" />
+    <street name="奥依托格拉克乡" code="653226208" />
+    <street name="阿羌乡" code="653226209" />
+    <street name="英巴格乡" code="653226210" />
+    <street name="希吾勒乡" code="653226211" />
+    <street name="达里雅布依乡" code="653226212" />
+    <street name="拉依苏良种场" code="653226400" />
+    <street name="国营（昆仑）种羊场" code="653226401" />
+    <street name="于田监狱" code="653226402" />
+</county>
+<county name="民丰" code="653227">
+    <street name="尼雅镇" code="653227100" />
+    <street name="尼雅乡" code="653227200" />
+    <street name="若克雅乡" code="653227201" />
+    <street name="萨勒吾则克乡" code="653227202" />
+    <street name="叶亦克乡" code="653227203" />
+    <street name="安迪尔乡" code="653227204" />
+    <street name="亚瓦通古孜乡" code="653227205" />
+</county>
+</city>
+</address>

@@ -1,0 +1,276 @@
+// General variables
+$theme-font-color: #242934;
+$theme-body-font-color: #1b3155;
+$theme-body-sub-title-color: #6e7e96;
+
+// Theme colors variables
+$theme-default-color: #158df7;
+$primary-color: #7e37d8 ;
+$secondary-color: #fe80b2 ;
+$success-color: #80cf00 ;
+$info-color   : #06b5dd  ;
+$warning-color: #ffc717;
+$danger-color: #fd517d ;
+$light-color   : #f8f5fd ;
+$semi-dark  :#aaaaaa;
+$light-semi-gray   :#efefef;
+$light-gray   :#e8ebf2;
+$dark-gray 	:#898989;
+$dark-color   : #2c323f;
+$gray-60   :#cccccc ;
+$card-body-color : #f9f9fa;
+$transparent-color: transparent;
+$auth-bg-color:#fafafa;
+$light : #fdfeff;
+$light-text: #999;
+$light-background: #f8f4fe;
+$light-font: rgba(27, 49, 85, 0.6);
+$light-semi-font: rgba(27, 49, 85, 0.4);
+$light-chartist-grid-color: #f6f9fd;
+$off-white: #ffebce;
+$dark-primary: #448aff;
+$pitch-color: #fe8a7d;
+$light-pitch: #fecf8b;
+$flower-pink: #fb6d9d;
+$dark-sky: #536dfe;
+$color-scarpa: #4c5667;
+$color-fiord: #455a64;
+$dark-blue: #00008B;
+$black : #000;
+$white:#fff;
+$btn-bhome-bg-c:#ff6060;
+$btn-search-bg-c:#ffd042;
+// error page color end
+
+// gradient colors
+$gradient-primary: linear-gradient(to bottom right, #863ee2, #571f9e);
+$gradient-secondary: linear-gradient(to bottom right, #ff9cc3, #fd3484);
+$gradient-success: linear-gradient(to bottom right, #b9ec68, #80cf00);
+$gradient-warning: linear-gradient(to bottom right, #ffd85d, #ffc200);
+$gradient-info: linear-gradient(to bottom right, #00d2d7, #07b2dd);
+$gradient-primary-direction: linear-gradient(to right, #863ee2, #571f9e);
+$gradient-secondary-direction: linear-gradient(to right, #ff9bc3, #fe68a3);
+$gradient-danger-direction: linear-gradient(to right, #ff3f70, #f73769);
+$gradient-success-direction: linear-gradient(to right, #b9ec68, #80cf00);
+$gradient-info-direction: linear-gradient(to right, #00d2d7, #07b2dd);
+$gradient-warning-direction: linear-gradient(to right, #ffd85d, #ffc200);
+
+//social colors
+$fb: #50598e;
+$twitter: #6fa2d8;
+$google-plus: #c64e40;
+$linkedin: #0077B5;
+
+//error input color start
+$light-body-bg-color:#fafdff;
+
+//fonts
+$font-work-sans: work-Sans;
+$font-nunito: Nunito;
+$font-poppins: Poppins;
+$font-raleway: Raleway;
+$font-serif: sans-serif;
+$font-themify: themify;
+$font-awesome: FontAwesome;
+$font-ICO: IcoFont;
+$font-pe7-icon: Pe-icon-7-stroke;
+
+// dark layout variables
+$dark-body-background: #333a62;
+$dark-card-background: #2c3054;
+$dark-small-font-color: #98a6ad;
+$dark-all-font-color: rgba(255,255,255,0.7);
+$light-all-font-color: rgba(255,255,255,0.2);
+$sidebar-submenu-font-color:rgba(255,255,255,0.7);
+$dark-border-color: #374558;
+$dark-editor-document: #2b2b2b;
+
+//General tag settings
+$body-bg-color: rgba(246, 246, 246, 0.6);
+$body-font-size: 14px;
+$body-font-color: $theme-body-font-color;
+$ul-padding-left: 0px;
+$ul-padding-right: 0px;
+$ancher-color: $primary-color;
+$btn-focus-box-shadow: none;
+$all-focus-outline-color: $primary-color;
+
+$paragraph-font-size : 13px;
+$paragraph-line-height : 1.7;
+$paragraph-letter-spacing : 0.7px;
+
+$code-tag-color: $primary-color;
+$code-tag-bg-color: $light-color;
+$code-tag-padding: 3px;
+$code-tag-margin: 0 3px;
+$code-tag-border-radious: 2px;
+
+$blockquote-padding : 15px;
+$blockquote-border : 4px solid $light-gray;
+
+$small-tag-padding: 10px;
+$small-tag-color: $dark-color;
+
+$pre-tag-bg-color: rgba($primary-color, 0.03);
+$pre-tag-padding: 20px 0;
+
+$list-group-active-bg-color: $primary-color;
+$list-group-active-border-color: $primary-color;
+$list-group-img-size: 40px;
+$list-group-margin: 10px;
+
+
+// Tables settings
+$table-b-margin:             0px;
+$table-heading-color:        $theme-body-font-color;
+$table-row-color:            $theme-body-font-color;
+$table-footer-font-weight:   bold;
+$table-inverse-color:        $white;
+$table-hover-color:          $light;
+$table-padding:              0.75rem;
+$table-xl-padding:           1.25rem 2rem;
+$table-xl-font:              120%;
+$table-lg-padding:           .9rem 2rem;
+$table-lg-font:              110%;
+$table-de-padding:           .75rem 2rem;
+$table-de-font:              100%;
+$table-sm-padding:           .5rem 2rem;
+$table-sm-font:              90%;
+$table-xs-padding:           0.5rem 1rem;
+$table-xs-font:              90%;
+$horizontal-border-color:    #f2f4ff;
+$horizontal-padding:         .75rem 2rem;
+$table-inverse-bg-color:     #292b2c;
+
+
+//According setting
+$according-card-top-margin           : 10px;
+$according-btn-weight                : 600;
+$according-btn-color                 : $theme-body-font-color;
+$according-card-header-padding       : 0.75rem 1.25rem;
+$according-card-header-icon          : $font-ICO;
+$according-open-icon                 : "\eb73";
+$according-close-icon                : "\eb7a";
+
+//Alert settings
+$alert-hover-color        :$dark-color;
+$alert-border-radious     :0.15rem;
+$alert-padding            :15px;
+$alert-msg-icon-size      :16px;
+
+//badge settings
+$badge-padding        :0.44em 0.7em;
+$badge-svg-size       :10px;
+
+//form input settings
+$form-group-margin-bottom        : 1.25em;
+$col-form-label-font-size        : 14px;
+$form-control-font-size          : 14px;
+$form-control-border-radious     : 2px;
+$form-control-border-color     : $light-gray;
+
+//breadcrumb setting
+$breadcrumb-ancher-color    : $white;
+$breadcrumb-ancher-dark-color    : $black;
+
+//buttons setting
+$btn-font-size : 14px;
+$btn-padding : 0.475rem 1.75rem;
+$btn-lg-font-size: 18px;
+$btn-sm-font-size: 12px;
+$btn-xs-font-size: 11px;
+$btn-xs-padding:  0.05rem 0.4rem;
+
+
+//Card settings
+$card-padding        :50px;
+$card-margin-bottom  :40px;
+$card-border-width   :0px;
+$card-border-color   : #f2f4ff;
+$card-border-radious : 40px;
+$common-shadow-color :$primary-color;
+$card-box-shadow     :0px 0px 25px 0px rgba($common-shadow-color, 0.05);
+$card-header-font-weight : 800;
+$card-header-bg-color : $white;
+$card-header-font-transform : capitalize;
+$card-header-span-size : 12px;
+$card-header-span-color : $theme-body-sub-title-color;
+$card-body-bg-color : $transparent-color;
+$card-footer-bg-color : $white;
+
+//footer settings
+$footer_bg_color : $white;
+$footer_top_bgr_color : $light-color;
+$footer_link_align : right;
+$footer_dark_color : $dark-color;
+$footer_dark__txt_color : $white;
+
+//form settings
+$form-group-margin-bottom  :20px;
+$sm-form-margin-bottom : 14px;
+$form-placeholder-color : $dark-gray;
+$form-placeholder-font-size : 14px;
+$form-placeholder-letter-spacing : 1px;
+$form-placeholder-font-weight : 100;
+$form-input-border-color : $light-semi-gray;
+$form-input-bg-color : $white;
+
+//Tour settings
+$tour-color: $primary-color;
+
+//sidabr main settings
+$sidebar-position: fixed;
+$sidebar-background-color: $white;
+$sidebar-shadow: 0 16px 15px 15px rgba($primary-color, 0.03);
+$sidebar-transition: 0.3s;
+
+//Sidebar main menu setting
+$sidebar-menu-position-top: 75px;
+$sidebar-menu-z-index: 10;
+$sidebar-margin-left-close: -320px;
+$sidebar-main-submenu-margin-close: -225px;
+$sidebar-hover-txt-color: $primary-color;
+$sidebar-iconsmenu-width: 80px;
+$sidebar-icons-mainmenu-width: 180px;
+$sidebar-height: calc(100vh - 75px);
+$sidebar-bar-icon-padding: 15px 12px;
+$sidebar-bar-icon-z-index: 999;
+$sidebar-bar-icon-font-size: 22px;
+$sidebar-iconbar-mainmenu-top-space: 75px;
+$sidebar-iconbar-mainmenu-font-weight: 600;
+$sidebar-iconbar-mainmenu-header-font-size: 18px;
+$sidebar-iconbar-main-menu-header-padding: 20px 0 20px 20px;
+$sidebar-iconbar-main-menu-font-weight: 700;
+$sidebar-iconbar-main-menu-subheader-margin: 25px;
+
+//Header settings
+$main-header-bg-color: $white;
+$main-header-position: fixed;
+$main-header-top: 0;
+$main-header-z-index: 999;
+$main-header-shadow:  0 0 41px 18px rgba(246, 250, 253, 1);
+
+//page settings
+$page-body-width: 260px;
+$page-body-padding : 0 30px;
+$page-body-bg-color: $light-color;
+$page-body-margin-bottom: 0px;
+$page-header-padding : 50px;
+$common-box-shadow: 2px 3.464px 8px 0px rgba( $primary-color, 0.18 );
+$page-title-font-weight: 600;
+$page-small-title-display: block;
+$page-small-title-text-transform: uppercase;
+$page-small-title-letter-spacing: 4px;
+$page-small-title-font-weight: 700;
+$breadcrumb-content: "/";
+
+
+//main header left settings
+$main-header-left-bg-color : $theme-font-color;
+$main-header-padding : 30px 35px;
+$main-header-right-padding: 30px 20px 21px 20px;
+$main-header-right-nav-right :  0px;
+$main-header-right-nav-icon-size :  18px;
+$main-header-right-nav-icon-color :  $primary-color;
+$main-header-right-nav-icon-margin-top :  10px;
+

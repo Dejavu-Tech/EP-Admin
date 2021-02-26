@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="防城港" code="450600">
+<county name="港口" code="450602">
+    <street name="渔州坪街道" code="450602001" />
+    <street name="白沙万街道" code="450602002" />
+    <street name="企沙镇" code="450602100" />
+    <street name="光坡镇" code="450602101" />
+    <street name="公车镇" code="450602102" />
+</county>
+<county name="防城" code="450603">
+    <street name="防城镇" code="450603100" />
+    <street name="大菉镇" code="450603101" />
+    <street name="华石镇" code="450603102" />
+    <street name="那梭镇" code="450603103" />
+    <street name="那良镇" code="450603104" />
+    <street name="峒中镇" code="450603105" />
+    <street name="茅岭乡" code="450603201" />
+    <street name="扶隆乡" code="450603202" />
+    <street name="防城区滩营乡" code="450603203" />
+    <street name="江山乡" code="450603204" />
+    <street name="小峰经济作物场" code="450603450" />
+    <street name="荣光农场" code="450603451" />
+    <street name="十万山华侨林场" code="450603452" />
+    <street name="垌美农场" code="450603453" />
+    <street name="那梭农场" code="450603454" />
+</county>
+<county name="上思" code="450621">
+    <street name="思阳镇" code="450621100" />
+    <street name="在妙镇" code="450621101" />
+    <street name="叫安乡" code="450621201" />
+    <street name="华兰乡" code="450621202" />
+    <street name="南屏瑶族乡" code="450621203" />
+    <street name="平福乡" code="450621204" />
+    <street name="那琴乡" code="450621205" />
+    <street name="公正乡" code="450621206" />
+    <street name="国有昌菱农场" code="450621450" />
+</county>
+<county name="东兴" code="450681">
+    <street name="东兴镇" code="450681100" />
+    <street name="江平镇" code="450681101" />
+    <street name="马路镇" code="450681102" />
+</county>
+</city>
+</address>

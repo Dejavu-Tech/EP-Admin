@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="迪庆" code="533400">
+<county name="香格里拉" code="533421">
+    <street name="建塘镇" code="533421101" />
+    <street name="小中甸镇" code="533421102" />
+    <street name="虎跳峡镇" code="533421103" />
+    <street name="金江镇" code="533421104" />
+    <street name="上江乡" code="533421201" />
+    <street name="三坝乡" code="533421202" />
+    <street name="洛吉乡" code="533421203" />
+    <street name="尼西乡" code="533421204" />
+    <street name="格咱乡" code="533421205" />
+    <street name="东旺乡" code="533421206" />
+    <street name="五境乡" code="533421207" />
+</county>
+<county name="德钦" code="533422">
+    <street name="升平镇" code="533422101" />
+    <street name="奔子栏镇" code="533422102" />
+    <street name="佛山乡" code="533422201" />
+    <street name="云岭乡" code="533422202" />
+    <street name="燕门乡" code="533422203" />
+    <street name="拖顶乡" code="533422204" />
+    <street name="霞若乡" code="533422205" />
+    <street name="羊拉乡" code="533422206" />
+</county>
+<county name="维西" code="533423">
+    <street name="保和镇" code="533423101" />
+    <street name="叶枝镇" code="533423102" />
+    <street name="塔城镇" code="533423103" />
+    <street name="永春乡" code="533423201" />
+    <street name="攀天阁乡" code="533423202" />
+    <street name="白济汛乡" code="533423203" />
+    <street name="康普乡" code="533423204" />
+    <street name="巴迪乡" code="533423205" />
+    <street name="中路乡" code="533423206" />
+    <street name="维登乡" code="533423207" />
+</county>
+</city>
+</address>

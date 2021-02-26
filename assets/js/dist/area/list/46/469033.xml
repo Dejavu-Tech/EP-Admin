@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="乐东" code="469033">
+<county name="乐东" code="469033001">
+    <street name="抱由镇" code="469027100" />
+    <street name="万冲镇" code="469027101" />
+    <street name="大安镇" code="469027102" />
+    <street name="志仲镇" code="469027103" />
+    <street name="千家镇" code="469027104" />
+    <street name="九所镇" code="469027105" />
+    <street name="利国镇" code="469027106" />
+    <street name="黄流镇" code="469027107" />
+    <street name="佛罗镇" code="469027108" />
+    <street name="尖峰镇" code="469027109" />
+    <street name="莺歌海镇" code="469027110" />
+    <street name="国营山荣农场" code="469027401" />
+    <street name="国营乐光农场" code="469027402" />
+    <street name="国营保国农场" code="469027405" />
+    <street name="国营尖峰岭林业公司" code="469027500" />
+    <street name="国营莺歌海盐场" code="469027501" />
+</county>
+</city>
+</address>

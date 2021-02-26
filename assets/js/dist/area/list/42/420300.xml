@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="十堰" code="420300">
+<county name="茅箭" code="420302">
+    <street name="武当路街道" code="420302001" />
+    <street name="二堰街道" code="420302002" />
+    <street name="五堰街道" code="420302003" />
+    <street name="白浪开发区白浪街道" code="420302004" />
+    <street name="大川镇人民政府" code="420302100" />
+    <street name="小川乡" code="420302200" />
+    <street name="茅塔乡" code="420302201" />
+    <street name="鸳鸯乡" code="420302202" />
+</county>
+<county name="张湾" code="420303">
+    <street name="花果街道" code="420303001" />
+    <street name="红卫街道" code="420303002" />
+    <street name="车城路街道" code="420303003" />
+    <street name="汉江路街道" code="420303004" />
+    <street name="黄龙镇" code="420303100" />
+    <street name="柏林镇" code="420303101" />
+    <street name="方滩乡" code="420303200" />
+    <street name="西沟乡" code="420303201" />
+    <street name="西城开发区" code="420303400" />
+    <street name="十堰工业新区" code="420303401" />
+    <street name="秦家坪林场" code="420303500" />
+    <street name="凤凰山茶场" code="420303501" />
+</county>
+<county name="郧阳" code="420321">
+    <street name="城关镇" code="420321100" />
+    <street name="安阳镇" code="420321101" />
+    <street name="杨溪铺镇" code="420321102" />
+    <street name="青曲镇" code="420321103" />
+    <street name="白桑关镇" code="420321104" />
+    <street name="南化塘镇" code="420321105" />
+    <street name="白浪镇" code="420321106" />
+    <street name="刘洞镇" code="420321107" />
+    <street name="谭山镇" code="420321108" />
+    <street name="梅铺镇" code="420321109" />
+    <street name="青山镇" code="420321110" />
+    <street name="郧县经济开发区（茶店镇）" code="420321111" />
+    <street name="柳陂镇" code="420321112" />
+    <street name="鲍峡镇" code="420321113" />
+    <street name="胡家营镇" code="420321114" />
+    <street name="谭家湾镇" code="420321115" />
+    <street name="大柳乡" code="420321200" />
+    <street name="五峰乡" code="420321201" />
+    <street name="叶大乡" code="420321202" />
+    <street name="红岩背林场" code="420321400" />
+</county>
+<county name="郧西" code="420322">
+    <street name="城关镇" code="420322100" />
+    <street name="土门镇" code="420322101" />
+    <street name="上津镇" code="420322102" />
+    <street name="店子镇" code="420322103" />
+    <street name="夹河镇" code="420322104" />
+    <street name="羊尾镇" code="420322105" />
+    <street name="观音镇" code="420322106" />
+    <street name="马鞍镇" code="420322107" />
+    <street name="河夹镇" code="420322108" />
+    <street name="香口乡" code="420322200" />
+    <street name="关防乡" code="420322201" />
+    <street name="湖北口回族乡" code="420322202" />
+    <street name="景阳乡" code="420322203" />
+    <street name="六郎乡" code="420322204" />
+    <street name="涧池乡" code="420322205" />
+    <street name="安家乡" code="420322206" />
+    <street name="槐树林特场管委会" code="420322400" />
+    <street name="三官洞林区" code="420322401" />
+    <street name="工业园区" code="420322402" />
+</county>
+<county name="竹山" code="420323">
+    <street name="城关镇" code="420323100" />
+    <street name="溢水镇" code="420323101" />
+    <street name="麻家渡镇" code="420323102" />
+    <street name="宝丰镇" code="420323103" />
+    <street name="擂鼓镇" code="420323104" />
+    <street name="秦古镇" code="420323105" />
+    <street name="得胜镇" code="420323106" />
+    <street name="上庸镇" code="420323107" />
+    <street name="官渡镇" code="420323108" />
+    <street name="潘口乡" code="420323200" />
+    <street name="竹坪乡" code="420323201" />
+    <street name="大庙乡" code="420323202" />
+    <street name="双台乡" code="420323203" />
+    <street name="楼台乡" code="420323204" />
+    <street name="文峰乡" code="420323205" />
+    <street name="深河乡" code="420323206" />
+    <street name="柳林乡" code="420323207" />
+</county>
+<county name="竹溪" code="420324">
+    <street name="城关镇" code="420324100" />
+    <street name="蒋家堰镇" code="420324101" />
+    <street name="中峰镇" code="420324102" />
+    <street name="水坪镇" code="420324103" />
+    <street name="县河镇" code="420324104" />
+    <street name="泉溪镇" code="420324105" />
+    <street name="丰溪镇" code="420324106" />
+    <street name="龙坝镇" code="420324107" />
+    <street name="新洲乡" code="420324201" />
+    <street name="兵营乡" code="420324202" />
+    <street name="鄂坪乡" code="420324203" />
+    <street name="汇湾乡" code="420324204" />
+    <street name="天宝乡" code="420324205" />
+    <street name="桃源乡" code="420324206" />
+    <street name="向坝乡" code="420324207" />
+    <street name="龙王垭茶场" code="420324500" />
+    <street name="国营竹溪综合农场" code="420324501" />
+    <street name="原种场" code="420324502" />
+    <street name="渔种场" code="420324503" />
+    <street name="种畜场" code="420324504" />
+    <street name="王家山茶场" code="420324505" />
+    <street name="标湖林场" code="420324506" />
+    <street name="双竹林场" code="420324507" />
+    <street name="八卦山林场" code="420324508" />
+    <street name="源茂林场" code="420324509" />
+    <street name="岱王沟林场" code="420324510" />
+    <street name="望府座林场" code="420324511" />
+    <street name="天池垭林场" code="420324512" />
+    <street name="九里岗林场" code="420324513" />
+    <street name="竹溪县十八里长峡管理局" code="420324514" />
+</county>
+<county name="房县" code="420325">
+    <street name="城关镇" code="420325100" />
+    <street name="军店镇" code="420325101" />
+    <street name="化龙堰镇" code="420325102" />
+    <street name="土城镇" code="420325103" />
+    <street name="大木厂镇" code="420325104" />
+    <street name="青峰镇" code="420325105" />
+    <street name="门古寺镇" code="420325106" />
+    <street name="白鹤镇" code="420325107" />
+    <street name="野人谷镇" code="420325108" />
+    <street name="红塔镇" code="420325109" />
+    <street name="窑淮镇" code="420325110" />
+    <street name="尹吉甫镇" code="420325111" />
+    <street name="姚坪乡" code="420325203" />
+    <street name="沙河乡" code="420325205" />
+    <street name="万峪河乡" code="420325206" />
+    <street name="上龛乡" code="420325208" />
+    <street name="中坝乡" code="420325209" />
+    <street name="九道乡" code="420325210" />
+    <street name="回龙乡" code="420325211" />
+    <street name="五台乡" code="420325212" />
+    <street name="国营杨岔山林场" code="420325501" />
+    <street name="国营九口山林场" code="420325502" />
+    <street name="国营毛家山林场" code="420325503" />
+    <street name="国营代东河林场" code="420325504" />
+    <street name="房县西蒿漆场" code="420325505" />
+    <street name="房县园艺场" code="420325506" />
+    <street name="谭家湾水库管养所" code="420325507" />
+    <street name="温泉风景区" code="420325508" />
+    <street name="房县旱粮粮种场" code="420325509" />
+</county>
+<county name="丹江口" code="420381">
+    <street name="均州路街道" code="420381001" />
+    <street name="大坝路街道" code="420381002" />
+    <street name="丹赵路街道" code="420381003" />
+    <street name="三官殿街道" code="420381005" />
+    <street name="土关垭镇" code="420381100" />
+    <street name="浪河镇" code="420381101" />
+    <street name="丁家营镇" code="420381102" />
+    <street name="六里坪镇" code="420381103" />
+    <street name="盐池河镇" code="420381104" />
+    <street name="均县镇" code="420381105" />
+    <street name="习家店镇" code="420381106" />
+    <street name="蒿坪镇" code="420381107" />
+    <street name="石鼓镇" code="420381108" />
+    <street name="凉水河镇" code="420381109" />
+    <street name="官山镇" code="420381110" />
+    <street name="龙山镇" code="420381111" />
+    <street name="新港经济开发管理处" code="420381400" />
+    <street name="牛河林业开发管理区" code="420381401" />
+    <street name="白杨坪林业开发管理区" code="420381402" />
+    <street name="大沟林业开发管理区" code="420381403" />
+    <street name="武当山特区" code="420381450" />
+</county>
+</city>
+</address>

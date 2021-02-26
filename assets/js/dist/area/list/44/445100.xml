@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="潮州" code="445100">
+<county name="湘桥" code="445102">
+    <street name="湘桥街道" code="445102001" />
+    <street name="西湖街道" code="445102002" />
+    <street name="金山街道" code="445102003" />
+    <street name="太平街道" code="445102004" />
+    <street name="南春街道" code="445102005" />
+    <street name="西新街道" code="445102006" />
+    <street name="桥东街道" code="445102007" />
+    <street name="城西街道" code="445102008" />
+    <street name="凤新街道" code="445102009" />
+    <street name="意溪镇" code="445102100" />
+    <street name="磷溪镇" code="445102111" />
+    <street name="铁铺镇" code="445102112" />
+    <street name="官塘镇" code="445102113" />
+    <street name="红山林场" code="445102400" />
+    <street name="开发区" code="445102401" />
+</county>
+<county name="潮安" code="445121">
+    <street name="古巷镇" code="445103100" />
+    <street name="登塘镇" code="445103101" />
+    <street name="凤塘镇" code="445103103" />
+    <street name="浮洋镇" code="445103104" />
+    <street name="龙湖镇" code="445103105" />
+    <street name="金石镇" code="445103106" />
+    <street name="沙溪镇" code="445103107" />
+    <street name="彩塘镇" code="445103108" />
+    <street name="东凤镇" code="445103109" />
+    <street name="庵埠镇" code="445103110" />
+    <street name="江东镇" code="445103114" />
+    <street name="归湖镇" code="445103115" />
+    <street name="文祠镇" code="445103116" />
+    <street name="凤凰镇" code="445103117" />
+    <street name="赤凤镇" code="445103120" />
+    <street name="枫溪镇" code="445103121" />
+    <street name="万峰林场" code="445103400" />
+    <street name="大坑苗圃场" code="445103404" />
+    <street name="东山湖农场" code="445103405" />
+    <street name="庵埠经济开发试验区" code="445103450" />
+</county>
+<county name="饶平" code="445122">
+    <street name="黄冈镇" code="445122100" />
+    <street name="上饶镇" code="445122102" />
+    <street name="饶洋镇" code="445122103" />
+    <street name="新丰镇" code="445122104" />
+    <street name="建饶镇" code="445122106" />
+    <street name="三饶镇" code="445122107" />
+    <street name="新塘镇" code="445122108" />
+    <street name="汤溪镇" code="445122109" />
+    <street name="浮滨镇" code="445122110" />
+    <street name="浮山镇" code="445122112" />
+    <street name="东山镇" code="445122113" />
+    <street name="新圩镇" code="445122114" />
+    <street name="樟溪镇" code="445122116" />
+    <street name="钱东镇" code="445122117" />
+    <street name="高堂镇" code="445122118" />
+    <street name="联饶镇" code="445122119" />
+    <street name="所城镇" code="445122120" />
+    <street name="大埕镇" code="445122121" />
+    <street name="柘林镇" code="445122122" />
+    <street name="汫洲镇" code="445122123" />
+    <street name="海山镇" code="445122124" />
+    <street name="韩江林场" code="445122400" />
+</county>
+</city>
+</address>

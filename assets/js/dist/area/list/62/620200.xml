@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="嘉峪关" code="620200">
+<county name="嘉峪关" code="620200001">
+    <street name="新城镇" code="620201100" />
+    <street name="峪泉镇" code="620201101" />
+    <street name="文殊镇" code="620201102" />
+    <street name="雄关区" code="620201401" />
+    <street name="镜铁区" code="620201402" />
+    <street name="长城区" code="620201403" />
+</county>
+</city>
+</address>

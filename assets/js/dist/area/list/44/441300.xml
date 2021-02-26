@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="惠州" code="441300">
+<county name="惠城" code="441302">
+    <street name="桥东街道" code="441302001" />
+    <street name="桥西街道" code="441302002" />
+    <street name="江南街道" code="441302003" />
+    <street name="江北街道" code="441302004" />
+    <street name="龙丰街道" code="441302005" />
+    <street name="河南岸街道" code="441302006" />
+    <street name="惠环街道" code="441302007" />
+    <street name="陈江街道" code="441302008" />
+    <street name="水口街道" code="441302009" />
+    <street name="小金口街道" code="441302010" />
+    <street name="汝湖镇" code="441302100" />
+    <street name="三栋镇" code="441302103" />
+    <street name="潼湖镇" code="441302106" />
+    <street name="沥林镇" code="441302107" />
+    <street name="马安镇" code="441302109" />
+    <street name="横沥镇" code="441302110" />
+    <street name="芦洲镇" code="441302112" />
+    <street name="潼侨镇" code="441302114" />
+    <street name="惠州市林场" code="441302450" />
+</county>
+<county name="惠阳" code="441303">
+    <street name="淡水街道" code="441303001" />
+    <street name="秋长街道" code="441303002" />
+    <street name="大亚湾澳头办事处" code="441303006" />
+    <street name="大亚湾霞涌办事处" code="441303007" />
+    <street name="沙田镇" code="441303101" />
+    <street name="新圩镇" code="441303103" />
+    <street name="镇隆镇" code="441303104" />
+    <street name="永湖镇" code="441303108" />
+    <street name="良井镇" code="441303109" />
+    <street name="平潭镇" code="441303110" />
+    <street name="惠阳经济开发区" code="441303570" />
+    <street name="大亚湾西区办事处" code="441303580" />
+</county>
+<county name="博罗" code="441322">
+    <street name="石坝镇" code="441322100" />
+    <street name="麻陂镇" code="441322102" />
+    <street name="观音阁镇" code="441322103" />
+    <street name="公庄镇" code="441322104" />
+    <street name="杨村镇" code="441322105" />
+    <street name="柏塘镇" code="441322106" />
+    <street name="泰美镇" code="441322108" />
+    <street name="罗阳镇" code="441322110" />
+    <street name="湖镇镇" code="441322113" />
+    <street name="长宁镇" code="441322115" />
+    <street name="福田镇" code="441322116" />
+    <street name="龙华镇" code="441322117" />
+    <street name="龙溪镇" code="441322118" />
+    <street name="园洲镇" code="441322119" />
+    <street name="石湾镇" code="441322121" />
+    <street name="杨侨镇" code="441322122" />
+    <street name="横河镇" code="441322123" />
+    <street name="罗浮山管委会" code="441322570" />
+</county>
+<county name="惠东" code="441323">
+    <street name="平山街道" code="441323001" />
+    <street name="大岭镇" code="441323101" />
+    <street name="白花镇" code="441323102" />
+    <street name="梁化镇" code="441323103" />
+    <street name="稔山镇" code="441323104" />
+    <street name="铁涌镇" code="441323105" />
+    <street name="平海镇" code="441323106" />
+    <street name="吉隆镇" code="441323109" />
+    <street name="黄埠镇" code="441323110" />
+    <street name="多祝镇" code="441323113" />
+    <street name="安墩镇" code="441323115" />
+    <street name="高潭镇" code="441323118" />
+    <street name="宝口镇" code="441323120" />
+    <street name="白盆珠镇" code="441323121" />
+    <street name="广东省惠州市国营惠东梁化林场" code="441323450" />
+    <street name="广东省惠州市国营惠东九龙峰林场" code="441323451" />
+    <street name="惠东县港口海龟湾自然保护区" code="441323452" />
+    <street name="莲花山白盆珠省级自然保护区" code="441323453" />
+    <street name="广东惠东古田省级自然保护区" code="441323454" />
+    <street name="惠东县珠三角产业转移园" code="441323455" />
+    <street name="巺寮滨海旅游渡假区管理委员会" code="441323570" />
+</county>
+<county name="龙门" code="441324">
+    <street name="龙城街道" code="441324001" />
+    <street name="麻榨镇" code="441324100" />
+    <street name="永汉镇" code="441324101" />
+    <street name="平陵镇" code="441324106" />
+    <street name="龙田镇" code="441324115" />
+    <street name="龙潭镇" code="441324116" />
+    <street name="地派镇" code="441324117" />
+    <street name="龙华镇" code="441324118" />
+    <street name="龙江镇" code="441324119" />
+    <street name="蓝田瑶族乡" code="441324200" />
+    <street name="龙门县密溪林场" code="441324453" />
+    <street name="南昆山生态旅游区管理委员会" code="441324570" />
+</county>
+</city>
+</address>

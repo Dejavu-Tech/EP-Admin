@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="抚顺" code="210400">
+<county name="新抚" code="210402">
+    <street name="站前街道" code="210402001" />
+    <street name="东公园街道" code="210402003" />
+    <street name="福民街道" code="210402005" />
+    <street name="新抚街道" code="210402007" />
+    <street name="榆林街道" code="210402009" />
+    <street name="永安台街道" code="210402011" />
+    <street name="千金街道" code="210402013" />
+    <street name="南阳街道" code="210402015" />
+    <street name="南花园街道" code="210402017" />
+    <street name="刘山街道" code="210402019" />
+    <street name="千金乡" code="210402201" />
+</county>
+<county name="东洲" code="210403">
+    <street name="东洲街道" code="210403002" />
+    <street name="张甸街道" code="210403003" />
+    <street name="搭连街道" code="210403004" />
+    <street name="龙凤街道" code="210403005" />
+    <street name="新屯街道" code="210403006" />
+    <street name="万新街道" code="210403007" />
+    <street name="老虎台街道" code="210403008" />
+    <street name="平山街道" code="210403009" />
+    <street name="章党街道" code="210403012" />
+    <street name="抚东街道" code="210403013" />
+    <street name="章党镇" code="210403103" />
+    <street name="哈达镇" code="210403104" />
+    <street name="碾盘乡" code="210403202" />
+    <street name="兰山乡" code="210403215" />
+</county>
+<county name="望花" code="210404">
+    <street name="田屯街道" code="210404001" />
+    <street name="工农街道" code="210404002" />
+    <street name="建设街道" code="210404003" />
+    <street name="和平街道" code="210404004" />
+    <street name="光明街道" code="210404005" />
+    <street name="朴屯街道" code="210404006" />
+    <street name="演武街道" code="210404007" />
+    <street name="五老屯街道" code="210404008" />
+    <street name="古城子街道" code="210404009" />
+    <street name="新民街道" code="210404010" />
+    <street name="李石街道" code="210404011" />
+    <street name="塔峪镇" code="210404101" />
+    <street name="拉古满族乡" code="210404201" />
+</county>
+<county name="顺城" code="210411">
+    <street name="河东街道" code="210411001" />
+    <street name="长春街道" code="210411002" />
+    <street name="葛布街道" code="210411003" />
+    <street name="将军堡街道" code="210411004" />
+    <street name="新华街道" code="210411005" />
+    <street name="抚顺城街道" code="210411007" />
+    <street name="前甸镇" code="210411102" />
+    <street name="河北乡" code="210411201" />
+    <street name="会元乡" code="210411205" />
+</county>
+<county name="抚顺" code="210421">
+    <street name="石文镇" code="210421101" />
+    <street name="后安镇" code="210421102" />
+    <street name="上马镇" code="210421105" />
+    <street name="救兵镇" code="210421106" />
+    <street name="马圈子乡" code="210421204" />
+    <street name="峡河乡" code="210421209" />
+    <street name="海浪乡" code="210421211" />
+    <street name="汤图满族乡" code="210421216" />
+</county>
+<county name="新宾" code="210422">
+    <street name="新宾镇" code="210422100" />
+    <street name="旺清门镇" code="210422101" />
+    <street name="永陵镇" code="210422102" />
+    <street name="平顶山镇" code="210422103" />
+    <street name="大四平镇" code="210422104" />
+    <street name="苇子峪镇" code="210422105" />
+    <street name="木奇镇" code="210422106" />
+    <street name="上夹河镇" code="210422108" />
+    <street name="南杂木镇" code="210422109" />
+    <street name="红升乡" code="210422202" />
+    <street name="响水河子乡" code="210422203" />
+    <street name="红庙子乡" code="210422204" />
+    <street name="北四平乡" code="210422205" />
+    <street name="榆树乡" code="210422207" />
+    <street name="下夹河乡" code="210422208" />
+</county>
+<county name="清原" code="210423">
+    <street name="清原镇" code="210423100" />
+    <street name="红透山镇" code="210423101" />
+    <street name="草市镇" code="210423103" />
+    <street name="英额门镇" code="210423104" />
+    <street name="南口前镇" code="210423105" />
+    <street name="南山城镇" code="210423106" />
+    <street name="湾甸子镇" code="210423107" />
+    <street name="大孤家镇" code="210423108" />
+    <street name="夏家堡镇" code="210423109" />
+    <street name="土口子乡" code="210423203" />
+    <street name="北三家乡" code="210423204" />
+    <street name="敖家堡乡" code="210423206" />
+    <street name="大苏河乡" code="210423207" />
+    <street name="枸乃甸乡" code="210423208" />
+</county>
+</city>
+</address>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阿里" code="542500">
+<county name="普兰" code="542521">
+    <street name="普兰镇" code="542521100" />
+    <street name="巴嘎乡" code="542521200" />
+    <street name="霍尔乡" code="542521201" />
+</county>
+<county name="札达" code="542522">
+    <street name="托林镇" code="542522100" />
+    <street name="萨让乡" code="542522200" />
+    <street name="达巴乡" code="542522201" />
+    <street name="底雅乡" code="542522202" />
+    <street name="香孜乡" code="542522203" />
+    <street name="曲松乡" code="542522204" />
+    <street name="楚鲁松杰乡" code="542522205" />
+</county>
+<county name="噶尔" code="542523">
+    <street name="狮泉河镇" code="542523100" />
+    <street name="昆莎乡" code="542523200" />
+    <street name="左左乡" code="542523201" />
+    <street name="门士乡" code="542523202" />
+    <street name="扎西岗乡" code="542523203" />
+</county>
+<county name="日土" code="542524">
+    <street name="日土镇" code="542524100" />
+    <street name="热帮乡" code="542524200" />
+    <street name="日松乡" code="542524201" />
+    <street name="东汝乡" code="542524202" />
+    <street name="多玛乡" code="542524203" />
+</county>
+<county name="革吉" code="542525">
+    <street name="革吉镇" code="542525100" />
+    <street name="雄巴乡" code="542525200" />
+    <street name="亚热乡" code="542525201" />
+    <street name="盐湖乡" code="542525202" />
+    <street name="文布当桑乡" code="542525203" />
+</county>
+<county name="改则" code="542526">
+    <street name="改则镇" code="542526100" />
+    <street name="物玛乡" code="542526200" />
+    <street name="先遣乡" code="542526201" />
+    <street name="麻米乡" code="542526202" />
+    <street name="洞措乡" code="542526203" />
+    <street name="古姆乡" code="542526204" />
+    <street name="察布乡" code="542526205" />
+</county>
+<county name="措勤" code="542527">
+    <street name="措勤镇" code="542527100" />
+    <street name="磁石乡" code="542527200" />
+    <street name="曲洛乡" code="542527201" />
+    <street name="江让乡" code="542527202" />
+    <street name="达雄乡" code="542527203" />
+</county>
+</city>
+</address>

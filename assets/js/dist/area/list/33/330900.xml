@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="舟山" code="330900">
+<county name="定海" code="330902">
+    <street name="昌国街道" code="330902002" />
+    <street name="环南街道" code="330902003" />
+    <street name="城东街道" code="330902004" />
+    <street name="盐仓街道" code="330902005" />
+    <street name="临城街道" code="330902006" />
+    <street name="岑港街道" code="330902007" />
+    <street name="马岙街道" code="330902008" />
+    <street name="双桥街道" code="330902009" />
+    <street name="小沙街道" code="330902010" />
+    <street name="金塘镇" code="330902100" />
+    <street name="白泉镇" code="330902104" />
+    <street name="干览镇" code="330902105" />
+</county>
+<county name="普陀" code="330903">
+    <street name="沈家门街道" code="330903001" />
+    <street name="东港街道" code="330903003" />
+    <street name="朱家尖街道" code="330903004" />
+    <street name="展茅街道" code="330903005" />
+    <street name="六横镇" code="330903100" />
+    <street name="虾峙镇" code="330903102" />
+    <street name="桃花镇" code="330903104" />
+    <street name="东极镇" code="330903105" />
+    <street name="普陀山镇" code="330903106" />
+</county>
+<county name="岱山" code="330921">
+    <street name="高亭镇" code="330921100" />
+    <street name="东沙镇" code="330921101" />
+    <street name="岱东镇" code="330921102" />
+    <street name="岱西镇" code="330921103" />
+    <street name="长涂镇" code="330921105" />
+    <street name="衢山镇" code="330921106" />
+    <street name="秀山乡" code="330921200" />
+</county>
+<county name="嵊泗" code="330922">
+    <street name="菜园镇" code="330922100" />
+    <street name="嵊山镇" code="330922101" />
+    <street name="洋山镇" code="330922102" />
+    <street name="五龙乡" code="330922200" />
+    <street name="黄龙乡" code="330922201" />
+    <street name="枸杞乡" code="330922202" />
+    <street name="花鸟乡" code="330922203" />
+</county>
+</city>
+</address>

@@ -1,0 +1,100 @@
+
+
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var form_wizard           = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Form
+                                      span
+                                        | Wizard
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Forms   
+                                      li.breadcrumb-item Form Layout
+                                      li.breadcrumb-item.active Form Wizard 1
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-md-12
+                          .card
+                            .card-header
+                              h5 Simple Form Wizard
+                              span Please Make sure fill all the filed before click on next button
+                            .card-body
+                              form#regForm.form-wizard(action='#', method='POST')
+                                .tab
+                                  .form-group
+                                    label(for='name') First Name
+                                    input#name.form-control(type='text', placeholder='Johan', required='required')
+                                  .form-group
+                                    label(for='lname') Last Name
+                                    input#lname.form-control(type='text', placeholder='Deo')
+                                  .form-group
+                                    label(for='contact') Contact No.
+                                    input#contact.form-control.digits(type='number', placeholder='123456789')
+                                .tab
+                                  .form-group.m-t-15
+                                    label(for='exampleFormControlInput1') Email address
+                                    input#exampleFormControlInput1.form-control(type='email', placeholder='name@example.com')
+                                  .form-group
+                                    label(for='exampleInputPassword1') Password
+                                    input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                                  .form-group
+                                    label(for='exampleInputPassword1') Confirm Password
+                                    input#exampleInputcPassword1.form-control(type='password', placeholder='Enter again')
+                                .tab
+                                  .form-group
+                                    label(for='exampleFormControlInput1') Birthday:
+                                    input.form-control.digits(type='date')
+                                  .form-group
+                                    label.control-label Age
+                                    input.form-control.digits(placeholder='Age', type='text')
+                                  .form-group
+                                    label.control-label Have Passport
+                                    input.form-control.digits(placeholder='Yes/No', type='text')
+                                .tab
+                                  .form-group
+                                    label.control-label Country
+                                    input.form-control.mt-1(type='text', placeholder='Country', required='required')
+                                  .form-group
+                                    label.control-label State
+                                    input.form-control.mt-1(type='text', placeholder='State', required='required')
+                                  .form-group
+                                    label.control-label City
+                                    input.form-control.mt-1(type='text', placeholder='City', required='required')
+                                div
+                                  .text-right.btn-mb
+                                    button#prevBtn.btn.btn-secondary(type='button', onclick='nextPrev(-1)') Previous
+                                    button#nextBtn.btn.btn-primary(type='button', onclick='nextPrev(1)') Next
+                                // Circles which indicates the steps of the form:
+                                .text-center
+                                  span.step
+                                  span.step
+                                  span.step
+                                  span.step
+                                // Circles which indicates the steps of the form:
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

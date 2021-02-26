@@ -1,0 +1,62 @@
+
+
+.pin_tips_container:after {
+	clear: both;
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0
+}
+
+
+.pin_tips_container {
+	opacity: 0;
+	position: fixed;
+	top: 1.2rem;
+	left: .2rem;
+	min-width: 3rem;
+	height: .6rem;
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	color: #fff;
+	background: rgba(0,0,0,.5);
+	z-index: 150;
+	*zoom: 1;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s
+}
+
+.pin_tips_fadeOut {
+	opacity: 0
+}
+
+.pin_tips_fadeIn {
+	opacity: 1
+}
+
+.pin_tips_user_pic {
+	float: left;
+	height: .56rem;
+	width: .56rem;
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	margin-left: .02rem;
+	margin-top: .02rem
+}
+
+.pin_tips_info {
+	float: right;
+	max-width: 6rem;
+	line-height: .6rem;
+	font-size: .24rem;
+	margin: 0 .2rem
+}
+
+.pin_tips_info_name {
+	max-width: 3.1rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden
+}

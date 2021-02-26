@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="汕头" code="440500">
+<county name="龙湖" code="440507">
+    <street name="金霞街道" code="440507001" />
+    <street name="珠池街道" code="440507003" />
+    <street name="新津街道" code="440507004" />
+    <street name="鸥汀街道" code="440507005" />
+    <street name="龙祥街道" code="440507008" />
+    <street name="外砂镇" code="440507100" />
+    <street name="新溪镇" code="440507101" />
+</county>
+<county name="金平" code="440511">
+    <street name="石炮台街道" code="440511001" />
+    <street name="金砂街道" code="440511002" />
+    <street name="金厦街道" code="440511003" />
+    <street name="东方街道" code="440511004" />
+    <street name="大华街道" code="440511005" />
+    <street name="同益街道" code="440511006" />
+    <street name="光华街道" code="440511007" />
+    <street name="东墩街道" code="440511008" />
+    <street name="广厦街道" code="440511009" />
+    <street name="海安街道" code="440511010" />
+    <street name="新福街道" code="440511011" />
+    <street name="乌桥街道" code="440511012" />
+    <street name="岐山街道" code="440511013" />
+    <street name="永祥街道" code="440511014" />
+    <street name="鮀莲街道" code="440511015" />
+    <street name="鮀江街道" code="440511016" />
+    <street name="月浦街道" code="440511017" />
+</county>
+<county name="濠江" code="440512">
+    <street name="达濠街道" code="440512001" />
+    <street name="马窖街道" code="440512002" />
+    <street name="礐石街道" code="440512003" />
+    <street name="广澳街道" code="440512004" />
+    <street name="滨海街道" code="440512005" />
+    <street name="河浦街道" code="440512006" />
+    <street name="玉新街道" code="440512007" />
+</county>
+<county name="潮阳" code="440513">
+    <street name="文光街道" code="440513001" />
+    <street name="棉北街道" code="440513002" />
+    <street name="城南街道" code="440513003" />
+    <street name="金浦街道" code="440513004" />
+    <street name="海门镇" code="440513100" />
+    <street name="河溪镇" code="440513101" />
+    <street name="和平镇" code="440513102" />
+    <street name="西胪镇" code="440513103" />
+    <street name="关埠镇" code="440513104" />
+    <street name="谷饶镇" code="440513106" />
+    <street name="贵屿镇" code="440513107" />
+    <street name="铜盂镇" code="440513108" />
+    <street name="金灶镇" code="440513110" />
+</county>
+<county name="潮南" code="440514">
+    <street name="峡山街道" code="440514001" />
+    <street name="井都镇" code="440514101" />
+    <street name="成田镇" code="440514103" />
+    <street name="司马浦镇" code="440514104" />
+    <street name="陈店镇" code="440514105" />
+    <street name="两英镇" code="440514106" />
+    <street name="仙城镇" code="440514107" />
+    <street name="胪岗镇" code="440514108" />
+    <street name="红场镇" code="440514109" />
+    <street name="雷岭镇" code="440514110" />
+    <street name="陇田镇" code="440514112" />
+</county>
+<county name="澄海" code="440515">
+    <street name="凤翔街道" code="440515001" />
+    <street name="广益街道" code="440515002" />
+    <street name="澄华街道" code="440515003" />
+    <street name="上华镇" code="440515100" />
+    <street name="隆都镇" code="440515101" />
+    <street name="莲下镇" code="440515102" />
+    <street name="莲上镇" code="440515103" />
+    <street name="溪南镇" code="440515104" />
+    <street name="东里镇" code="440515105" />
+    <street name="盐鸿镇" code="440515106" />
+    <street name="莲华镇" code="440515107" />
+</county>
+<county name="南澳" code="440523">
+    <street name="后宅镇" code="440523100" />
+    <street name="云澳镇" code="440523101" />
+    <street name="深澳镇" code="440523102" />
+</county>
+</city>
+</address>

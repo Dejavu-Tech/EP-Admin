@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="莆田" code="350300">
+<county name="城厢" code="350302">
+    <street name="龙桥街道" code="350302001" />
+    <street name="凤凰山街道" code="350302002" />
+    <street name="霞林街道" code="350302003" />
+    <street name="常太镇" code="350302100" />
+    <street name="华亭镇" code="350302101" />
+    <street name="灵川镇" code="350302102" />
+    <street name="东海镇" code="350302103" />
+</county>
+<county name="涵江" code="350303">
+    <street name="涵东街道" code="350303001" />
+    <street name="涵西街道" code="350303002" />
+    <street name="三江口镇" code="350303100" />
+    <street name="白塘镇" code="350303101" />
+    <street name="国欢镇" code="350303102" />
+    <street name="梧塘镇" code="350303103" />
+    <street name="江口镇" code="350303104" />
+    <street name="萩芦镇" code="350303105" />
+    <street name="白沙镇" code="350303106" />
+    <street name="庄边镇" code="350303107" />
+    <street name="新县镇" code="350303108" />
+    <street name="大洋乡" code="350303200" />
+    <street name="赤港开发区" code="350303500" />
+</county>
+<county name="荔城" code="350304">
+    <street name="镇海街道" code="350304001" />
+    <street name="拱辰街道" code="350304002" />
+    <street name="西天尾镇" code="350304100" />
+    <street name="黄石镇" code="350304101" />
+    <street name="新度镇" code="350304102" />
+    <street name="北高镇" code="350304103" />
+</county>
+<county name="秀屿" code="350305">
+    <street name="笏石镇" code="350305100" />
+    <street name="东庄镇" code="350305101" />
+    <street name="忠门镇" code="350305102" />
+    <street name="东埔镇" code="350305103" />
+    <street name="东峤镇" code="350305104" />
+    <street name="埭头镇" code="350305105" />
+    <street name="平海镇" code="350305106" />
+    <street name="南日镇" code="350305107" />
+    <street name="湄洲镇" code="350305108" />
+    <street name="山亭镇" code="350305109" />
+    <street name="月塘乡" code="350305200" />
+    <street name="前沁农场" code="350305400" />
+    <street name="后海管理局" code="350305401" />
+</county>
+<county name="仙游" code="350322">
+    <street name="鲤城街道" code="350322001" />
+    <street name="枫亭镇" code="350322100" />
+    <street name="榜头镇" code="350322101" />
+    <street name="郊尾镇" code="350322102" />
+    <street name="度尾镇" code="350322103" />
+    <street name="鲤南镇" code="350322104" />
+    <street name="赖店镇" code="350322105" />
+    <street name="盖尾镇" code="350322106" />
+    <street name="园庄镇" code="350322107" />
+    <street name="大济镇" code="350322108" />
+    <street name="龙华镇" code="350322109" />
+    <street name="钟山镇" code="350322110" />
+    <street name="游洋镇" code="350322111" />
+    <street name="西苑乡" code="350322200" />
+    <street name="石苍乡" code="350322201" />
+    <street name="社硎乡" code="350322202" />
+    <street name="书峰乡" code="350322203" />
+    <street name="菜溪乡" code="350322204" />
+</county>
+</city>
+</address>

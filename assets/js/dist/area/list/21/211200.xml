@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="铁岭" code="211200">
+<county name="银州" code="211202">
+    <street name="红旗街道" code="211202001" />
+    <street name="工人街道" code="211202002" />
+    <street name="铁西街道" code="211202003" />
+    <street name="铜钟街道" code="211202004" />
+    <street name="柴河街道" code="211202005" />
+    <street name="岭东街道" code="211202006" />
+    <street name="辽海街道" code="211202007" />
+    <street name="龙山乡" code="211202201" />
+    <street name="铁岭经济开发区" code="211202401" />
+</county>
+<county name="清河" code="211204">
+    <street name="红旗街道" code="211204001" />
+    <street name="向阳街道" code="211204002" />
+    <street name="张相镇" code="211204101" />
+    <street name="杨木林子镇" code="211204102" />
+    <street name="聂家满族乡" code="211204203" />
+</county>
+<county name="铁岭" code="211221">
+    <street name="新台子镇" code="211221101" />
+    <street name="阿吉镇" code="211221102" />
+    <street name="平顶堡镇" code="211221103" />
+    <street name="大甸子镇" code="211221104" />
+    <street name="凡河镇" code="211221105" />
+    <street name="腰堡镇" code="211221106" />
+    <street name="镇西堡镇" code="211221107" />
+    <street name="蔡牛镇" code="211221108" />
+    <street name="李千户镇" code="211221109" />
+    <street name="熊官屯镇" code="211221110" />
+    <street name="横道河子镇" code="211221111" />
+    <street name="双井子镇" code="211221112" />
+    <street name="鸡冠山乡" code="211221208" />
+    <street name="白旗寨满族乡" code="211221209" />
+    <street name="种畜场" code="211221401" />
+</county>
+<county name="西丰" code="211223">
+    <street name="西丰镇" code="211223100" />
+    <street name="平岗镇" code="211223101" />
+    <street name="郜家店镇" code="211223102" />
+    <street name="凉泉镇" code="211223103" />
+    <street name="振兴镇" code="211223104" />
+    <street name="安民镇" code="211223105" />
+    <street name="天德镇" code="211223106" />
+    <street name="房木镇" code="211223107" />
+    <street name="柏榆镇" code="211223108" />
+    <street name="陶然镇" code="211223109" />
+    <street name="钓鱼镇" code="211223110" />
+    <street name="更刻镇" code="211223111" />
+    <street name="德兴满族乡" code="211223204" />
+    <street name="明德满族乡" code="211223206" />
+    <street name="成平满族乡" code="211223209" />
+    <street name="和隆满族乡" code="211223211" />
+    <street name="营厂满族乡" code="211223212" />
+    <street name="金星满族乡" code="211223213" />
+</county>
+<county name="昌图" code="211224">
+    <street name="昌图镇" code="211224100" />
+    <street name="老城镇" code="211224101" />
+    <street name="八面城镇" code="211224102" />
+    <street name="三江口镇" code="211224103" />
+    <street name="金家镇" code="211224104" />
+    <street name="宝力镇" code="211224105" />
+    <street name="泉头镇" code="211224106" />
+    <street name="双庙子镇" code="211224107" />
+    <street name="亮中桥镇" code="211224108" />
+    <street name="马仲河镇" code="211224109" />
+    <street name="毛家店镇" code="211224110" />
+    <street name="老四平镇" code="211224111" />
+    <street name="大洼镇" code="211224112" />
+    <street name="头道镇" code="211224113" />
+    <street name="鴜鷺树镇" code="211224114" />
+    <street name="傅家镇" code="211224115" />
+    <street name="四合镇" code="211224117" />
+    <street name="朝阳镇" code="211224118" />
+    <street name="古榆树镇" code="211224119" />
+    <street name="七家子镇" code="211224120" />
+    <street name="东嘎镇" code="211224121" />
+    <street name="四面城镇" code="211224122" />
+    <street name="前双井镇" code="211224123" />
+    <street name="通江口镇" code="211224124" />
+    <street name="大四家子镇" code="211224125" />
+    <street name="曲家店镇" code="211224126" />
+    <street name="十八家子镇" code="211224127" />
+    <street name="太平镇" code="211224128" />
+    <street name="下二台镇" code="211224129" />
+    <street name="平安堡镇" code="211224130" />
+    <street name="大兴镇" code="211224131" />
+    <street name="后窑镇" code="211224132" />
+    <street name="长发镇" code="211224133" />
+    <street name="三江口农场" code="211224401" />
+    <street name="宝力农场" code="211224402" />
+    <street name="新乡农场" code="211224403" />
+    <street name="付家林场" code="211224404" />
+    <street name="牤牛马场" code="211224405" />
+    <street name="两家子农场" code="211224406" />
+</county>
+<county name="调兵山" code="211281">
+    <street name="兀术街街道" code="211281001" />
+    <street name="调兵山街道" code="211281002" />
+    <street name="晓明镇" code="211281102" />
+    <street name="大明镇" code="211281103" />
+    <street name="晓南镇" code="211281105" />
+</county>
+<county name="开原" code="211282">
+    <street name="新城街道" code="211282001" />
+    <street name="老城街道" code="211282002" />
+    <street name="兴开街道" code="211282003" />
+    <street name="威远堡镇" code="211282102" />
+    <street name="庆云堡镇" code="211282103" />
+    <street name="中固镇" code="211282104" />
+    <street name="八棵树镇" code="211282105" />
+    <street name="金沟子镇" code="211282106" />
+    <street name="八宝镇" code="211282107" />
+    <street name="业民镇" code="211282108" />
+    <street name="莲花镇" code="211282109" />
+    <street name="靠山镇" code="211282110" />
+    <street name="马家寨镇" code="211282111" />
+    <street name="下肥镇" code="211282112" />
+    <street name="松山镇" code="211282113" />
+    <street name="城东镇" code="211282114" />
+    <street name="李家台镇" code="211282115" />
+    <street name="上肥地满族镇" code="211282116" />
+    <street name="黄旗寨满族镇" code="211282117" />
+    <street name="林丰满族乡" code="211282217" />
+    <street name="三家子乡" code="211282406" />
+</county>
+</city>
+</address>

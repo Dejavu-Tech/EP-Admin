@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="泸州" code="510500">
+<county name="江阳" code="510502">
+    <street name="南城街道" code="510502001" />
+    <street name="北城街道" code="510502002" />
+    <street name="大山坪街道" code="510502003" />
+    <street name="邻玉街道" code="510502004" />
+    <street name="蓝田街道" code="510502005" />
+    <street name="茜草街道" code="510502006" />
+    <street name="华阳街道" code="510502007" />
+    <street name="张坝景区办事处" code="510502008" />
+    <street name="泰安镇" code="510502102" />
+    <street name="黄舣镇" code="510502103" />
+    <street name="弥陀镇" code="510502104" />
+    <street name="况场镇" code="510502105" />
+    <street name="通滩镇" code="510502106" />
+    <street name="江北镇" code="510502107" />
+    <street name="方山镇" code="510502108" />
+    <street name="丹林镇" code="510502109" />
+    <street name="分水岭镇" code="510502110" />
+    <street name="石寨镇" code="510502111" />
+    <street name="高新技术开发区" code="510502400" />
+    <street name="酒业集中发展区" code="510502401" />
+    <street name="轻工业园区" code="510502402" />
+</county>
+<county name="纳溪" code="510503">
+    <street name="安富街道" code="510503001" />
+    <street name="永宁街道" code="510503002" />
+    <street name="大渡口镇" code="510503100" />
+    <street name="护国镇" code="510503101" />
+    <street name="打古镇" code="510503102" />
+    <street name="上马镇" code="510503103" />
+    <street name="合面镇" code="510503104" />
+    <street name="棉花坡镇" code="510503105" />
+    <street name="丰乐镇" code="510503106" />
+    <street name="白节镇" code="510503107" />
+    <street name="天仙镇" code="510503108" />
+    <street name="新乐镇" code="510503109" />
+    <street name="渠坝镇" code="510503110" />
+    <street name="龙车镇" code="510503111" />
+    <street name="泸州化工园区" code="510503400" />
+</county>
+<county name="龙马潭" code="510504">
+    <street name="小市街道" code="510504001" />
+    <street name="高坝街道" code="510504002" />
+    <street name="红星街道" code="510504003" />
+    <street name="莲花池街道" code="510504004" />
+    <street name="罗汉镇" code="510504100" />
+    <street name="鱼塘镇" code="510504101" />
+    <street name="石洞镇" code="510504102" />
+    <street name="胡市镇" code="510504103" />
+    <street name="特兴镇" code="510504104" />
+    <street name="安宁镇" code="510504105" />
+    <street name="双加镇" code="510504106" />
+    <street name="金龙乡" code="510504200" />
+    <street name="长安乡" code="510504201" />
+</county>
+<county name="泸县" code="510521">
+    <street name="玉蟾街道" code="510521001" />
+    <street name="福集镇" code="510521100" />
+    <street name="嘉明镇" code="510521101" />
+    <street name="喻寺镇" code="510521102" />
+    <street name="得胜镇" code="510521103" />
+    <street name="牛滩镇" code="510521105" />
+    <street name="兆雅镇" code="510521106" />
+    <street name="玄滩镇" code="510521107" />
+    <street name="太伏镇" code="510521108" />
+    <street name="云龙镇" code="510521109" />
+    <street name="石桥镇" code="510521110" />
+    <street name="毗卢镇" code="510521111" />
+    <street name="奇峰镇" code="510521112" />
+    <street name="潮河镇" code="510521113" />
+    <street name="云锦镇" code="510521114" />
+    <street name="立石镇" code="510521115" />
+    <street name="百和镇" code="510521116" />
+    <street name="天兴镇" code="510521117" />
+    <street name="方洞镇" code="510521118" />
+    <street name="海潮镇" code="510521123" />
+    <street name="泸县城西工业园区" code="510521400" />
+    <street name="泸县城北工业园区" code="510521401" />
+</county>
+<county name="合江" code="510522">
+    <street name="合江镇" code="510522100" />
+    <street name="望龙镇" code="510522101" />
+    <street name="白沙镇" code="510522102" />
+    <street name="佛荫镇" code="510522103" />
+    <street name="先市镇" code="510522104" />
+    <street name="尧坝镇" code="510522105" />
+    <street name="九支镇" code="510522106" />
+    <street name="五通镇" code="510522107" />
+    <street name="凤鸣镇" code="510522108" />
+    <street name="榕山镇" code="510522109" />
+    <street name="白鹿镇" code="510522110" />
+    <street name="甘雨镇" code="510522111" />
+    <street name="福宝镇" code="510522112" />
+    <street name="先滩镇" code="510522113" />
+    <street name="自怀镇" code="510522114" />
+    <street name="大桥镇" code="510522115" />
+    <street name="车辋镇" code="510522116" />
+    <street name="密溪乡" code="510522200" />
+    <street name="白米乡" code="510522201" />
+    <street name="焦滩乡" code="510522202" />
+    <street name="参宝乡" code="510522203" />
+    <street name="二里乡" code="510522206" />
+    <street name="实录乡" code="510522208" />
+    <street name="虎头乡" code="510522209" />
+    <street name="榕右乡" code="510522210" />
+    <street name="南滩乡" code="510522212" />
+    <street name="石龙乡" code="510522213" />
+    <street name="合江县临港工业园区" code="510522400" />
+</county>
+<county name="叙永" code="510524">
+    <street name="叙永镇" code="510524100" />
+    <street name="江门镇" code="510524101" />
+    <street name="马岭镇" code="510524102" />
+    <street name="天池镇" code="510524103" />
+    <street name="水尾镇" code="510524104" />
+    <street name="两河镇" code="510524105" />
+    <street name="落卜镇" code="510524106" />
+    <street name="后山镇" code="510524107" />
+    <street name="分水镇" code="510524108" />
+    <street name="摩尼镇" code="510524109" />
+    <street name="赤水镇" code="510524110" />
+    <street name="向林乡" code="510524200" />
+    <street name="大石乡" code="510524201" />
+    <street name="兴隆乡" code="510524202" />
+    <street name="龙凤乡" code="510524203" />
+    <street name="震东乡" code="510524204" />
+    <street name="黄坭乡" code="510524206" />
+    <street name="营山乡" code="510524207" />
+    <street name="麻城乡" code="510524208" />
+    <street name="观兴乡" code="510524209" />
+    <street name="合乐苗族乡" code="510524210" />
+    <street name="白腊苗族乡" code="510524211" />
+    <street name="枧槽苗族乡" code="510524212" />
+    <street name="水潦彝族乡" code="510524213" />
+    <street name="石坝彝族乡" code="510524214" />
+</county>
+<county name="古蔺" code="510525">
+    <street name="古蔺镇" code="510525100" />
+    <street name="龙山镇" code="510525101" />
+    <street name="永乐镇" code="510525102" />
+    <street name="太平镇" code="510525103" />
+    <street name="二郎镇" code="510525104" />
+    <street name="大村镇" code="510525105" />
+    <street name="石宝镇" code="510525106" />
+    <street name="丹桂镇" code="510525107" />
+    <street name="水口镇" code="510525108" />
+    <street name="观文镇" code="510525109" />
+    <street name="双沙镇" code="510525110" />
+    <street name="德耀镇" code="510525111" />
+    <street name="护家乡" code="510525201" />
+    <street name="鱼化乡" code="510525202" />
+    <street name="石屏乡" code="510525203" />
+    <street name="东新乡" code="510525204" />
+    <street name="土城乡" code="510525205" />
+    <street name="金星乡" code="510525206" />
+    <street name="白泥乡" code="510525207" />
+    <street name="椒园乡" code="510525208" />
+    <street name="马嘶苗族乡" code="510525209" />
+    <street name="马蹄乡" code="510525211" />
+    <street name="箭竹苗族乡" code="510525212" />
+    <street name="大寨苗族乡" code="510525214" />
+    <street name="桂花乡" code="510525215" />
+    <street name="黄荆乡" code="510525216" />
+</county>
+</city>
+</address>

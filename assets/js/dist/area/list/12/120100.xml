@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="天津" code="120100">
+<county name="和平" code="120101">
+    <street name="劝业场街道" code="120101001" />
+    <street name="小白楼街道" code="120101002" />
+    <street name="体育馆街道" code="120101003" />
+    <street name="新兴街道" code="120101004" />
+    <street name="南营门街道" code="120101005" />
+    <street name="南市街道" code="120101006" />
+</county>
+<county name="河东" code="120102">
+    <street name="大王庄街道" code="120102001" />
+    <street name="大直沽街道" code="120102002" />
+    <street name="中山门街道" code="120102003" />
+    <street name="富民路街道" code="120102004" />
+    <street name="二号桥街道" code="120102005" />
+    <street name="春华街道" code="120102006" />
+    <street name="唐家口街道" code="120102007" />
+    <street name="向阳楼街道" code="120102008" />
+    <street name="常州道街道" code="120102009" />
+    <street name="上杭路街道" code="120102010" />
+    <street name="东新街道" code="120102011" />
+    <street name="鲁山道街道" code="120102012" />
+    <street name="天津铁厂街道" code="120102013" />
+</county>
+<county name="河西" code="120103">
+    <street name="大营门街道" code="120103001" />
+    <street name="下瓦房街道" code="120103002" />
+    <street name="桃园街道" code="120103003" />
+    <street name="挂甲寺街道" code="120103004" />
+    <street name="马场街道" code="120103005" />
+    <street name="越秀路街道" code="120103006" />
+    <street name="友谊路街道" code="120103007" />
+    <street name="天塔街道" code="120103008" />
+    <street name="尖山街道" code="120103009" />
+    <street name="陈塘庄街道" code="120103010" />
+    <street name="柳林街道" code="120103011" />
+    <street name="东海街道" code="120103012" />
+    <street name="梅江街道" code="120103013" />
+</county>
+<county name="南开" code="120104">
+    <street name="长虹街道" code="120104001" />
+    <street name="鼓楼街道" code="120104002" />
+    <street name="兴南街道" code="120104003" />
+    <street name="广开街道" code="120104004" />
+    <street name="万兴街道" code="120104005" />
+    <street name="学府街道" code="120104006" />
+    <street name="向阳路街道" code="120104007" />
+    <street name="嘉陵道街道" code="120104008" />
+    <street name="王顶堤街道" code="120104009" />
+    <street name="水上公园街道" code="120104010" />
+    <street name="体育中心街道" code="120104011" />
+    <street name="华苑街道" code="120104012" />
+</county>
+<county name="河北" code="120105">
+    <street name="光复道街道" code="120105001" />
+    <street name="望海楼街道" code="120105002" />
+    <street name="鸿顺里街道" code="120105003" />
+    <street name="新开河街道" code="120105004" />
+    <street name="铁东路街道" code="120105005" />
+    <street name="建昌道街道" code="120105006" />
+    <street name="宁园街道" code="120105007" />
+    <street name="王串场街道" code="120105008" />
+    <street name="江都路街道" code="120105009" />
+    <street name="月牙河街道" code="120105010" />
+</county>
+<county name="红桥" code="120106">
+    <street name="西于庄街道" code="120106001" />
+    <street name="双环村街道" code="120106002" />
+    <street name="咸阳北路街道" code="120106003" />
+    <street name="丁字沽街道" code="120106004" />
+    <street name="西沽街道" code="120106005" />
+    <street name="三条石街道" code="120106006" />
+    <street name="邵公庄街道" code="120106008" />
+    <street name="芥园街道" code="120106009" />
+    <street name="铃铛阁街道" code="120106010" />
+    <street name="大胡同街道" code="120106011" />
+</county>
+<county name="东丽" code="120110">
+    <street name="张贵庄街道" code="120110001" />
+    <street name="丰年村街道" code="120110002" />
+    <street name="万新街道" code="120110003" />
+    <street name="无瑕街道" code="120110004" />
+    <street name="新立街道" code="120110005" />
+    <street name="华明街道" code="120110006" />
+    <street name="金钟街道" code="120110007" />
+    <street name="军粮城街道" code="120110008" />
+    <street name="金桥街道" code="120110009" />
+    <street name="开发区西区" code="120110400" />
+    <street name="保税区空港国际物流区" code="120110401" />
+    <street name="保税区空港国际物流经济区" code="120110402" />
+    <street name="东丽区开发区" code="120110403" />
+    <street name="东丽湖" code="120110404" />
+    <street name="综合保税区" code="120110405" />
+    <street name="航空新城" code="120110406" />
+    <street name="服务滨海新区建设管理委员会" code="120110407" />
+</county>
+<county name="西青" code="120111">
+    <street name="西营门街道" code="120111001" />
+    <street name="李七庄街道" code="120111002" />
+    <street name="中北镇" code="120111100" />
+    <street name="杨柳青镇" code="120111101" />
+    <street name="辛口镇" code="120111102" />
+    <street name="张家窝镇" code="120111103" />
+    <street name="精武镇" code="120111104" />
+    <street name="大寺镇" code="120111105" />
+    <street name="王稳庄镇" code="120111106" />
+    <street name="开发区西青微电子小区" code="120111400" />
+    <street name="新技术产业园区" code="120111401" />
+    <street name="西青高校区" code="120111402" />
+    <street name="西青区开发区" code="120111450" />
+</county>
+<county name="津南" code="120112">
+    <street name="咸水沽镇" code="120112100" />
+    <street name="葛沽镇" code="120112101" />
+    <street name="小站镇" code="120112102" />
+    <street name="双港镇" code="120112103" />
+    <street name="辛庄镇" code="120112104" />
+    <street name="双桥河镇" code="120112106" />
+    <street name="八里台镇" code="120112107" />
+    <street name="北闸口镇" code="120112108" />
+    <street name="铁路十八局" code="120112401" />
+    <street name="长青办事处" code="120112403" />
+    <street name="津南开发区东区" code="120112404" />
+    <street name="津南开发区西区" code="120112405" />
+    <street name="海河教育园区" code="120112407" />
+    <street name="双林农场" code="120112500" />
+    <street name="津南国家农业园区" code="120112501" />
+</county>
+<county name="北辰" code="120113">
+    <street name="果园新村街道" code="120113001" />
+    <street name="集贤里街道" code="120113002" />
+    <street name="普东街道" code="120113003" />
+    <street name="瑞景街道" code="120113004" />
+    <street name="佳荣里街道" code="120113005" />
+    <street name="天穆镇" code="120113100" />
+    <street name="北仓镇" code="120113101" />
+    <street name="双街镇" code="120113102" />
+    <street name="双口镇" code="120113103" />
+    <street name="青光镇" code="120113104" />
+    <street name="宜兴埠镇" code="120113106" />
+    <street name="小淀镇" code="120113107" />
+    <street name="大张庄镇" code="120113108" />
+    <street name="西堤头镇" code="120113111" />
+    <street name="科技园区北区" code="120113400" />
+    <street name="科技园区南区" code="120113401" />
+    <street name="天津医药医疗器械工业园" code="120113402" />
+    <street name="天津陆路港物流装备产业园" code="120113403" />
+    <street name="天津风电产业园" code="120113404" />
+    <street name="红旗农场" code="120113500" />
+    <street name="曙光农场" code="120113501" />
+</county>
+<county name="武清" code="120114">
+    <street name="杨村街道" code="120114001" />
+    <street name="下朱庄街道" code="120114002" />
+    <street name="东蒲洼街道" code="120114003" />
+    <street name="黄庄街道" code="120114004" />
+    <street name="徐官屯街道" code="120114005" />
+    <street name="运河西街道" code="120114006" />
+    <street name="梅厂镇" code="120114101" />
+    <street name="大碱厂镇" code="120114102" />
+    <street name="崔黄口镇" code="120114103" />
+    <street name="大良镇" code="120114104" />
+    <street name="下伍旗镇" code="120114105" />
+    <street name="南蔡村镇" code="120114106" />
+    <street name="大孟庄镇" code="120114107" />
+    <street name="泗村店镇" code="120114108" />
+    <street name="河西务镇" code="120114109" />
+    <street name="城关镇" code="120114110" />
+    <street name="东马圈镇" code="120114111" />
+    <street name="黄花店镇" code="120114112" />
+    <street name="石各庄镇" code="120114113" />
+    <street name="王庆坨镇" code="120114114" />
+    <street name="汊沽港镇" code="120114115" />
+    <street name="河北屯镇" code="120114116" />
+    <street name="上马台镇" code="120114117" />
+    <street name="大王古庄镇" code="120114118" />
+    <street name="陈咀镇" code="120114119" />
+    <street name="豆张庄镇" code="120114120" />
+    <street name="曹子里镇" code="120114121" />
+    <street name="大黄堡镇" code="120114122" />
+    <street name="高村镇" code="120114123" />
+    <street name="白古屯镇" code="120114124" />
+    <street name="开发区武清逸仙园小区" code="120114400" />
+    <street name="武清区开发区" code="120114401" />
+    <street name="武清商务区" code="120114402" />
+    <street name="武清京滨园" code="120114403" />
+    <street name="武清地毯园" code="120114404" />
+    <street name="武清汽车园" code="120114405" />
+    <street name="武清科技谷" code="120114406" />
+    <street name="武清农场" code="120114500" />
+</county>
+<county name="宝坻" code="120115">
+    <street name="海滨街道" code="120115001" />
+    <street name="宝平街道" code="120115002" />
+    <street name="钰华街道" code="120115003" />
+    <street name="大口屯镇" code="120115101" />
+    <street name="大白庄镇" code="120115102" />
+    <street name="王卜庄镇" code="120115103" />
+    <street name="方家庄镇" code="120115104" />
+    <street name="林亭口镇" code="120115105" />
+    <street name="八门城镇" code="120115106" />
+    <street name="大钟庄镇" code="120115107" />
+    <street name="新安镇" code="120115108" />
+    <street name="马家店镇" code="120115110" />
+    <street name="霍各庄镇" code="120115111" />
+    <street name="新开口镇" code="120115113" />
+    <street name="大唐庄镇" code="120115115" />
+    <street name="高家庄镇" code="120115117" />
+    <street name="口东镇" code="120115118" />
+    <street name="牛道口镇" code="120115119" />
+    <street name="史各庄镇" code="120115120" />
+    <street name="郝各庄镇" code="120115121" />
+    <street name="周良庄镇" code="120115122" />
+    <street name="牛家牌镇" code="120115123" />
+    <street name="尔王庄镇" code="120115124" />
+    <street name="黄庄镇" code="120115125" />
+    <street name="天宝工业园区" code="120115453" />
+    <street name="九园工业园区" code="120115454" />
+    <street name="京津新城" code="120115455" />
+    <street name="里自沽农场" code="120115500" />
+    <street name="黄庄农场" code="120115501" />
+    <street name="大钟农场" code="120115502" />
+</county>
+<county name="滨海" code="120116">
+    <street name="新村街道" code="120116001" />
+    <street name="于家堡街道" code="120116002" />
+    <street name="新港街道" code="120116003" />
+    <street name="向阳街道" code="120116004" />
+    <street name="杭州道街道" code="120116005" />
+    <street name="新河街道" code="120116006" />
+    <street name="大沽街道" code="120116007" />
+    <street name="新北街道" code="120116008" />
+    <street name="北塘街道" code="120116009" />
+    <street name="渤海石油街道" code="120116010" />
+    <street name="胡家园街道" code="120116011" />
+    <street name="汉沽街道" code="120116031" />
+    <street name="寨上街道" code="120116032" />
+    <street name="河西街道" code="120116033" />
+    <street name="迎宾街道" code="120116051" />
+    <street name="胜利街道" code="120116052" />
+    <street name="古林街道" code="120116053" />
+    <street name="海滨街道" code="120116054" />
+    <street name="港西街道" code="120116055" />
+    <street name="新城镇" code="120116100" />
+    <street name="大田镇" code="120116134" />
+    <street name="杨家泊镇" code="120116135" />
+    <street name="茶淀镇" code="120116136" />
+    <street name="太平镇" code="120116156" />
+    <street name="小王庄镇" code="120116157" />
+    <street name="中塘镇" code="120116158" />
+    <street name="开发区" code="120116400" />
+    <street name="保税区" code="120116401" />
+    <street name="天津滨海新区高新技术产业开发区" code="120116402" />
+    <street name="东疆保税港区" code="120116403" />
+    <street name="中心商务区" code="120116404" />
+    <street name="临港工业区" code="120116405" />
+    <street name="中新天津生态城" code="120116406" />
+    <street name="滨海旅游区" code="120116407" />
+    <street name="南港工业区" code="120116408" />
+    <street name="临港产业园区一" code="120116409" />
+    <street name="临港产业园区二" code="120116410" />
+    <street name="北塘经济区" code="120116411" />
+    <street name="轻纺经济区" code="120116412" />
+    <street name="中心渔港经济区" code="120116413" />
+    <street name="海洋高新技术产业园区" code="120116414" />
+</county>
+<county name="宁河" code="120221">
+    <street name="芦台镇" code="120221100" />
+    <street name="宁河镇" code="120221102" />
+    <street name="苗庄镇" code="120221103" />
+    <street name="丰台镇" code="120221104" />
+    <street name="岳龙镇" code="120221105" />
+    <street name="板桥镇" code="120221106" />
+    <street name="潘庄镇" code="120221107" />
+    <street name="造甲城镇" code="120221109" />
+    <street name="七里海镇" code="120221110" />
+    <street name="大北涧沽镇" code="120221111" />
+    <street name="东棘坨镇" code="120221112" />
+    <street name="北淮淀乡" code="120221204" />
+    <street name="俵口乡" code="120221205" />
+    <street name="廉庄子乡" code="120221206" />
+    <street name="宁河县贸易开发区" code="120221400" />
+    <street name="宁河县经济开发区" code="120221401" />
+    <street name="宁河县现代产业园区" code="120221451" />
+    <street name="天津潘庄工业区" code="120221452" />
+    <street name="潘庄农场" code="120221500" />
+</county>
+<county name="静海" code="120223">
+    <street name="静海镇" code="120223100" />
+    <street name="唐官屯镇" code="120223101" />
+    <street name="独流镇" code="120223102" />
+    <street name="王口镇" code="120223103" />
+    <street name="台头镇" code="120223104" />
+    <street name="子牙镇" code="120223105" />
+    <street name="陈官屯镇" code="120223106" />
+    <street name="中旺镇" code="120223107" />
+    <street name="大邱庄镇" code="120223108" />
+    <street name="蔡公庄镇" code="120223109" />
+    <street name="梁头镇" code="120223110" />
+    <street name="团泊镇" code="120223111" />
+    <street name="双塘镇" code="120223112" />
+    <street name="大丰堆镇" code="120223113" />
+    <street name="沿庄镇" code="120223114" />
+    <street name="西翟庄镇" code="120223115" />
+    <street name="良王庄乡" code="120223200" />
+    <street name="杨成庄乡" code="120223201" />
+    <street name="天津静海经济开发区" code="120223400" />
+    <street name="天津子牙工业园区" code="120223402" />
+    <street name="团泊新城" code="120223403" />
+</county>
+<county name="蓟县" code="120225">
+    <street name="文昌街道" code="120225001" />
+    <street name="渔阳镇" code="120225100" />
+    <street name="洇溜镇" code="120225101" />
+    <street name="官庄镇" code="120225102" />
+    <street name="马伸桥镇" code="120225103" />
+    <street name="下营镇" code="120225104" />
+    <street name="邦均镇" code="120225105" />
+    <street name="别山镇" code="120225106" />
+    <street name="尤古庄镇" code="120225108" />
+    <street name="上仓镇" code="120225109" />
+    <street name="下仓镇" code="120225111" />
+    <street name="罗庄子镇" code="120225112" />
+    <street name="白涧镇" code="120225113" />
+    <street name="五百户镇" code="120225114" />
+    <street name="侯家营镇" code="120225115" />
+    <street name="桑梓镇" code="120225116" />
+    <street name="东施古镇" code="120225117" />
+    <street name="下窝头镇" code="120225118" />
+    <street name="杨津庄镇" code="120225119" />
+    <street name="出头岭镇" code="120225120" />
+    <street name="西龙虎峪镇" code="120225121" />
+    <street name="穿芳峪镇" code="120225122" />
+    <street name="东二营镇" code="120225123" />
+    <street name="许家台镇" code="120225124" />
+    <street name="礼明庄镇" code="120225125" />
+    <street name="东赵各庄镇" code="120225126" />
+    <street name="孙各庄乡" code="120225203" />
+</county>
+</city>
+</address>

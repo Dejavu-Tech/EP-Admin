@@ -1,0 +1,17 @@
+<div class="table-responsive custom-scrollbar" style="max-height: calc(100vh - 110px);overflow:auto;overflow-x:hidden;max-width:850px;">
+    <table class="display supplyquery" style="width:100%;">
+        <tbody>
+            <?php foreach( $ds as $row ){ ?>
+            <tr>
+              <td><img src='{: tomedia($row['thumb'])}' class="img-responsive img-thumbnail m-r-20" style="width:40px;height:40px;" /> {$row['goodsname']}</td>
+              <td style="width: 80px"><a class="text-primary" href="javascript:;" onclick='biz.selector.set(this, {:json_encode($row);})'>选择6</a></td>
+            </tr>
+            <?php } ?>
+            <?php if(count($ds)<=0){ ?>
+            <tr>
+                <td colspan='4' align='center'>未找到商品</td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>

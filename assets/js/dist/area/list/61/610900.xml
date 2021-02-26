@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="安康" code="610900">
+<county name="汉滨" code="610902">
+    <street name="老城街道" code="610902001" />
+    <street name="新城街道" code="610902002" />
+    <street name="江北街道" code="610902003" />
+    <street name="建民办事处" code="610902004" />
+    <street name="关庙镇" code="610902100" />
+    <street name="张滩镇" code="610902101" />
+    <street name="瀛湖镇" code="610902102" />
+    <street name="五里镇" code="610902104" />
+    <street name="大同镇" code="610902106" />
+    <street name="恒口镇" code="610902107" />
+    <street name="吉河镇" code="610902109" />
+    <street name="流水镇" code="610902110" />
+    <street name="大竹园镇" code="610902111" />
+    <street name="洪山镇" code="610902112" />
+    <street name="石转镇" code="610902113" />
+    <street name="茨沟镇" code="610902114" />
+    <street name="大河镇" code="610902115" />
+    <street name="沈坝镇" code="610902116" />
+    <street name="双龙镇" code="610902117" />
+    <street name="叶坪镇" code="610902118" />
+    <street name="中原镇" code="610902119" />
+    <street name="县河镇" code="610902120" />
+    <street name="紫荆镇" code="610902121" />
+    <street name="早阳镇" code="610902122" />
+    <street name="关家镇" code="610902123" />
+    <street name="石梯镇" code="610902124" />
+    <street name="坝河镇" code="610902125" />
+    <street name="共进镇" code="610902126" />
+    <street name="新坝镇" code="610902127" />
+    <street name="牛蹄镇" code="610902128" />
+    <street name="田坝镇" code="610902129" />
+    <street name="晏坝镇" code="610902130" />
+    <street name="双溪镇" code="610902131" />
+    <street name="谭坝镇" code="610902132" />
+</county>
+<county name="汉阴" code="610921">
+    <street name="城关镇" code="610921100" />
+    <street name="涧池镇" code="610921101" />
+    <street name="蒲溪镇" code="610921102" />
+    <street name="平梁镇" code="610921103" />
+    <street name="双乳镇" code="610921104" />
+    <street name="铁佛寺镇" code="610921105" />
+    <street name="龙垭镇" code="610921106" />
+    <street name="漩涡镇" code="610921107" />
+    <street name="汉阳镇" code="610921108" />
+    <street name="酒店镇" code="610921109" />
+    <street name="双河口镇" code="610921110" />
+    <street name="上七镇" code="610921111" />
+    <street name="观音河镇" code="610921112" />
+    <street name="双坪镇" code="610921113" />
+</county>
+<county name="石泉" code="610922">
+    <street name="城关镇" code="610922100" />
+    <street name="饶峰镇" code="610922101" />
+    <street name="两河镇" code="610922102" />
+    <street name="迎丰镇" code="610922103" />
+    <street name="池河镇" code="610922104" />
+    <street name="后柳镇" code="610922105" />
+    <street name="喜河镇" code="610922106" />
+    <street name="熨斗镇" code="610922107" />
+    <street name="云雾山镇" code="610922108" />
+    <street name="中池镇" code="610922109" />
+    <street name="曾溪镇" code="610922110" />
+</county>
+<county name="宁陕" code="610923">
+    <street name="城关镇" code="610923100" />
+    <street name="四亩地镇" code="610923101" />
+    <street name="江口镇" code="610923102" />
+    <street name="广货街镇" code="610923104" />
+    <street name="龙王镇" code="610923105" />
+    <street name="筒车湾镇" code="610923106" />
+    <street name="金川镇" code="610923108" />
+    <street name="皇冠镇" code="610923109" />
+    <street name="太山庙镇" code="610923110" />
+    <street name="梅子镇" code="610923111" />
+    <street name="丰富镇" code="610923112" />
+    <street name="新场镇" code="610923113" />
+</county>
+<county name="紫阳" code="610924">
+    <street name="城关镇" code="610924100" />
+    <street name="蒿坪镇" code="610924101" />
+    <street name="汉王镇" code="610924102" />
+    <street name="焕古镇" code="610924103" />
+    <street name="向阳镇" code="610924104" />
+    <street name="洞河镇" code="610924105" />
+    <street name="洄水镇" code="610924106" />
+    <street name="斑桃镇" code="610924107" />
+    <street name="双桥镇" code="610924108" />
+    <street name="高桥镇" code="610924109" />
+    <street name="红椿镇" code="610924110" />
+    <street name="高滩镇" code="610924111" />
+    <street name="毛坝镇" code="610924112" />
+    <street name="瓦庙镇" code="610924113" />
+    <street name="麻柳镇" code="610924114" />
+    <street name="双安镇" code="610924115" />
+    <street name="东木镇" code="610924116" />
+    <street name="界岭镇" code="610924117" />
+    <street name="广城镇" code="610924118" />
+    <street name="绕溪镇" code="610924119" />
+    <street name="联合镇" code="610924120" />
+</county>
+<county name="岚皋" code="610925">
+    <street name="城关镇" code="610925100" />
+    <street name="佐龙镇" code="610925101" />
+    <street name="花里镇" code="610925102" />
+    <street name="滔河镇" code="610925103" />
+    <street name="官元镇" code="610925104" />
+    <street name="石门镇" code="610925105" />
+    <street name="民主镇" code="610925106" />
+    <street name="大道河镇" code="610925107" />
+    <street name="铁炉镇" code="610925108" />
+    <street name="堰门镇" code="610925109" />
+    <street name="溢河镇" code="610925110" />
+    <street name="蔺河镇" code="610925111" />
+    <street name="四季镇" code="610925112" />
+    <street name="横溪镇" code="610925113" />
+    <street name="孟石岭镇" code="610925114" />
+</county>
+<county name="平利" code="610926">
+    <street name="城关镇" code="610926100" />
+    <street name="兴隆镇" code="610926101" />
+    <street name="老县镇" code="610926102" />
+    <street name="大贵镇" code="610926103" />
+    <street name="三阳镇" code="610926104" />
+    <street name="洛河镇" code="610926105" />
+    <street name="广佛镇" code="610926106" />
+    <street name="八仙镇" code="610926107" />
+    <street name="长安镇" code="610926108" />
+    <street name="正阳镇" code="610926109" />
+    <street name="西河镇" code="610926110" />
+</county>
+<county name="镇坪" code="610927">
+    <street name="城关镇" code="610927100" />
+    <street name="曾家镇" code="610927101" />
+    <street name="牛头店镇" code="610927102" />
+    <street name="钟宝镇" code="610927103" />
+    <street name="洪石镇" code="610927104" />
+    <street name="上竹镇" code="610927105" />
+    <street name="华坪镇" code="610927106" />
+    <street name="小曙河镇" code="610927107" />
+    <street name="曙坪镇" code="610927108" />
+</county>
+<county name="旬阳" code="610928">
+    <street name="城关镇" code="610928100" />
+    <street name="棕溪镇" code="610928101" />
+    <street name="关口镇" code="610928102" />
+    <street name="蜀河镇" code="610928103" />
+    <street name="双河镇" code="610928104" />
+    <street name="小河镇" code="610928105" />
+    <street name="赵湾镇" code="610928106" />
+    <street name="麻坪镇" code="610928107" />
+    <street name="甘溪镇" code="610928108" />
+    <street name="白柳镇" code="610928109" />
+    <street name="吕河镇" code="610928110" />
+    <street name="神河镇" code="610928111" />
+    <street name="赤岩镇" code="610928112" />
+    <street name="段家河镇" code="610928113" />
+    <street name="仙河镇" code="610928114" />
+    <street name="金寨镇" code="610928115" />
+    <street name="桐木镇" code="610928116" />
+    <street name="构元镇" code="610928117" />
+    <street name="石门镇" code="610928118" />
+    <street name="红军镇" code="610928119" />
+    <street name="仁河口镇" code="610928120" />
+    <street name="铜钱关镇" code="610928121" />
+</county>
+<county name="白河" code="610929">
+    <street name="城关镇" code="610929100" />
+    <street name="中厂镇" code="610929101" />
+    <street name="构扒镇" code="610929102" />
+    <street name="卡子镇" code="610929103" />
+    <street name="茅坪镇" code="610929104" />
+    <street name="宋家镇" code="610929105" />
+    <street name="西营镇" code="610929106" />
+    <street name="仓上镇" code="610929107" />
+    <street name="冷水镇" code="610929108" />
+    <street name="双丰镇" code="610929109" />
+    <street name="麻虎镇" code="610929110" />
+    <street name="小双镇" code="610929111" />
+</county>
+</city>
+</address>

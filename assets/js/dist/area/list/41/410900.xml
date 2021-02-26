@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="濮阳" code="410900">
+<county name="华龙" code="410902">
+    <street name="中原路街道" code="410902001" />
+    <street name="胜利路街道" code="410902002" />
+    <street name="建设路街道" code="410902003" />
+    <street name="人民路街道" code="410902004" />
+    <street name="大庆路街道" code="410902005" />
+    <street name="黄河路街道" code="410902006" />
+    <street name="任丘路街道" code="410902007" />
+    <street name="长庆路街道" code="410902008" />
+    <street name="濮东街道" code="410902009" />
+    <street name="昆吾路街道" code="410902060" />
+    <street name="皇甫路街道" code="410902061" />
+    <street name="开州街道" code="410902062" />
+    <street name="王助镇" code="410902100" />
+    <street name="岳村乡" code="410902202" />
+    <street name="孟轲乡" code="410902203" />
+    <street name="胡村乡" code="410902360" />
+    <street name="新习乡" code="410902362" />
+    <street name="中原油田街道" code="410902400" />
+    <street name="开发区街道" code="410902560" />
+</county>
+<county name="清丰" code="410922">
+    <street name="城关镇" code="410922100" />
+    <street name="马庄桥镇" code="410922101" />
+    <street name="瓦屋头镇" code="410922102" />
+    <street name="仙庄镇" code="410922103" />
+    <street name="柳格镇" code="410922104" />
+    <street name="六塔乡" code="410922200" />
+    <street name="巩营乡" code="410922202" />
+    <street name="马村乡" code="410922203" />
+    <street name="高堡乡" code="410922204" />
+    <street name="古城乡" code="410922205" />
+    <street name="大流乡" code="410922206" />
+    <street name="韩村乡" code="410922207" />
+    <street name="大屯乡" code="410922208" />
+    <street name="固城乡" code="410922209" />
+    <street name="双庙乡" code="410922212" />
+    <street name="纸房乡" code="410922213" />
+    <street name="阳邵乡" code="410922214" />
+</county>
+<county name="南乐" code="410923">
+    <street name="城关镇" code="410923100" />
+    <street name="韩张镇" code="410923101" />
+    <street name="元村镇" code="410923102" />
+    <street name="福坎镇" code="410923103" />
+    <street name="张果屯镇" code="410923104" />
+    <street name="杨村乡" code="410923200" />
+    <street name="千口乡" code="410923202" />
+    <street name="谷金楼乡" code="410923204" />
+    <street name="西邵乡" code="410923205" />
+    <street name="寺庄乡" code="410923206" />
+    <street name="梁村乡" code="410923207" />
+    <street name="近德固乡" code="410923208" />
+</county>
+<county name="范县" code="410926">
+    <street name="城关镇" code="410926100" />
+    <street name="濮城镇" code="410926101" />
+    <street name="龙王庄镇" code="410926102" />
+    <street name="高码头镇" code="410926103" />
+    <street name="王楼镇" code="410926104" />
+    <street name="辛庄镇" code="410926105" />
+    <street name="杨集乡" code="410926201" />
+    <street name="陈庄乡" code="410926202" />
+    <street name="白衣阁乡" code="410926203" />
+    <street name="颜村铺乡" code="410926205" />
+    <street name="陆集乡" code="410926208" />
+    <street name="张庄乡" code="410926209" />
+</county>
+<county name="台前" code="410927">
+    <street name="城关镇" code="410927100" />
+    <street name="侯庙镇" code="410927101" />
+    <street name="孙口镇" code="410927102" />
+    <street name="打渔陈镇" code="410927103" />
+    <street name="马楼镇" code="410927104" />
+    <street name="吴坝镇" code="410927105" />
+    <street name="后方乡" code="410927200" />
+    <street name="清水河乡" code="410927201" />
+    <street name="夹河乡" code="410927205" />
+</county>
+<county name="濮阳" code="410928">
+    <street name="城关镇" code="410928100" />
+    <street name="濮阳县柳屯镇" code="410928101" />
+    <street name="濮阳县文留镇" code="410928102" />
+    <street name="濮阳县庆祖镇" code="410928103" />
+    <street name="濮阳县八公桥镇" code="410928104" />
+    <street name="濮阳县徐镇镇" code="410928106" />
+    <street name="濮阳县户部寨镇" code="410928107" />
+    <street name="濮阳县鲁河镇" code="410928108" />
+    <street name="濮阳县子岸镇" code="410928109" />
+    <street name="濮阳县胡状镇" code="410928110" />
+    <street name="濮阳县清河头乡" code="410928202" />
+    <street name="濮阳县梁庄乡" code="410928204" />
+    <street name="濮阳县王称固乡" code="410928205" />
+    <street name="濮阳县白罡乡" code="410928206" />
+    <street name="濮阳县梨园乡" code="410928207" />
+    <street name="濮阳县五星乡" code="410928208" />
+    <street name="濮阳县郎中乡" code="410928211" />
+    <street name="濮阳县海通乡" code="410928212" />
+    <street name="濮阳县渠村乡" code="410928213" />
+    <street name="濮阳县习城乡" code="410928214" />
+</county>
+</city>
+</address>

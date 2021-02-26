@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="通化" code="220500">
+<county name="东昌" code="220502">
+    <street name="东昌街道" code="220502001" />
+    <street name="民主街道" code="220502002" />
+    <street name="老站街道" code="220502003" />
+    <street name="团结街道" code="220502004" />
+    <street name="新站街道" code="220502005" />
+    <street name="光明街道" code="220502006" />
+    <street name="龙泉街道" code="220502007" />
+    <street name="金厂镇" code="220502100" />
+    <street name="通化经济开发区（特殊乡镇）" code="220502120" />
+    <street name="环通乡" code="220502200" />
+    <street name="江东乡" code="220502201" />
+</county>
+<county name="二道江" code="220503">
+    <street name="桃园街道" code="220503001" />
+    <street name="东通化街道" code="220503002" />
+    <street name="鸭园镇" code="220503100" />
+    <street name="铁厂镇" code="220503101" />
+    <street name="五道江镇" code="220503102" />
+    <street name="二道江乡" code="220503200" />
+</county>
+<county name="通化" code="220521">
+    <street name="快大茂镇" code="220521100" />
+    <street name="二密镇" code="220521101" />
+    <street name="果松镇" code="220521102" />
+    <street name="石湖镇" code="220521103" />
+    <street name="大安镇" code="220521104" />
+    <street name="光华镇" code="220521105" />
+    <street name="兴林镇" code="220521106" />
+    <street name="英额布镇" code="220521107" />
+    <street name="三棵榆树镇" code="220521108" />
+    <street name="西江镇" code="220521109" />
+    <street name="通化聚鑫经济开发区管理委员会（特殊乡镇）" code="220521120" />
+    <street name="富江乡" code="220521200" />
+    <street name="四棚乡" code="220521201" />
+    <street name="东来乡" code="220521202" />
+    <street name="大泉源满族朝鲜族乡" code="220521203" />
+    <street name="金斗朝鲜族满族乡" code="220521204" />
+    <street name="东宝新村" code="220521401" />
+</county>
+<county name="辉南" code="220523">
+    <street name="朝阳镇" code="220523100" />
+    <street name="辉南镇" code="220523101" />
+    <street name="样子哨镇" code="220523102" />
+    <street name="杉松岗镇" code="220523103" />
+    <street name="石道河镇" code="220523104" />
+    <street name="辉发城镇" code="220523105" />
+    <street name="抚民镇" code="220523106" />
+    <street name="金川镇" code="220523107" />
+    <street name="团林镇" code="220523108" />
+    <street name="庆阳镇" code="220523109" />
+    <street name="楼街朝鲜族乡" code="220523200" />
+    <street name="辉南县经济技术开发区" code="220523400" />
+</county>
+<county name="柳河" code="220524">
+    <street name="柳河镇" code="220524100" />
+    <street name="三源浦朝鲜族镇" code="220524101" />
+    <street name="五道沟镇" code="220524102" />
+    <street name="驼腰岭镇" code="220524103" />
+    <street name="孤山子镇" code="220524104" />
+    <street name="圣水河子镇" code="220524105" />
+    <street name="罗通山镇" code="220524106" />
+    <street name="安口镇" code="220524107" />
+    <street name="向阳镇" code="220524108" />
+    <street name="红石镇" code="220524109" />
+    <street name="凉水河子镇" code="220524110" />
+    <street name="亨通镇" code="220524111" />
+    <street name="柳南乡" code="220524200" />
+    <street name="时家店乡" code="220524201" />
+    <street name="姜家店朝鲜族乡" code="220524202" />
+</county>
+<county name="梅河口" code="220581">
+    <street name="新华街道" code="220581001" />
+    <street name="光明街道" code="220581002" />
+    <street name="和平街道办事处（梅河口市经济贸易开发区）（省级）" code="220581070" />
+    <street name="解放街道办事处（梅河口市经济贸易开发区）（省级）" code="220581071" />
+    <street name="福民街道办事处（梅河口市经济贸易开发区）（省级）" code="220581072" />
+    <street name="山城镇" code="220581100" />
+    <street name="红梅镇" code="220581101" />
+    <street name="海龙镇" code="220581102" />
+    <street name="新合镇" code="220581103" />
+    <street name="曙光镇" code="220581104" />
+    <street name="中和镇" code="220581105" />
+    <street name="黑山头镇" code="220581106" />
+    <street name="水道镇" code="220581107" />
+    <street name="进化镇" code="220581108" />
+    <street name="一座营镇" code="220581109" />
+    <street name="康大营镇" code="220581110" />
+    <street name="牛心顶镇" code="220581111" />
+    <street name="杏岭乡" code="220581200" />
+    <street name="李炉乡" code="220581201" />
+    <street name="湾龙乡" code="220581202" />
+    <street name="双兴乡" code="220581203" />
+    <street name="兴华乡" code="220581204" />
+    <street name="小杨满族朝鲜族乡" code="220581205" />
+    <street name="吉乐乡" code="220581206" />
+</county>
+<county name="集安" code="220582">
+    <street name="团结街道" code="220582001" />
+    <street name="黎明街道" code="220582002" />
+    <street name="通胜街道" code="220582003" />
+    <street name="青石镇" code="220582100" />
+    <street name="榆林镇" code="220582101" />
+    <street name="花甸镇" code="220582102" />
+    <street name="头道镇" code="220582103" />
+    <street name="清河镇" code="220582104" />
+    <street name="台上镇" code="220582105" />
+    <street name="财源镇" code="220582106" />
+    <street name="大路镇" code="220582107" />
+    <street name="太王镇" code="220582108" />
+    <street name="麻线乡" code="220582200" />
+    <street name="凉水朝鲜族乡" code="220582201" />
+</county>
+</city>
+</address>

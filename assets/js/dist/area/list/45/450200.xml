@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="柳州" code="450200">
+<county name="城中" code="450202">
+    <street name="城中街道" code="450202001" />
+    <street name="公园街道" code="450202002" />
+    <street name="中南街道" code="450202003" />
+    <street name="水上街道" code="450202004" />
+    <street name="潭中街道" code="450202005" />
+    <street name="河东街道" code="450202006" />
+    <street name="静兰街道" code="450202007" />
+</county>
+<county name="鱼峰" code="450203">
+    <street name="天马街道" code="450203001" />
+    <street name="驾鹤街道" code="450203002" />
+    <street name="箭盘山街道" code="450203003" />
+    <street name="五里亭街道" code="450203004" />
+    <street name="荣军街道" code="450203005" />
+    <street name="白莲街道" code="450203006" />
+    <street name="麒麟街道" code="450203007" />
+    <street name="阳和街道" code="450203008" />
+    <street name="雒容镇" code="450203100" />
+    <street name="洛埠镇" code="450203101" />
+</county>
+<county name="柳南" code="450204">
+    <street name="河西街道" code="450204001" />
+    <street name="南站街道" code="450204002" />
+    <street name="鹅山街道" code="450204003" />
+    <street name="柳南街道" code="450204004" />
+    <street name="柳石街道" code="450204005" />
+    <street name="银山街道" code="450204006" />
+    <street name="潭西街道" code="450204007" />
+    <street name="南环街道" code="450204008" />
+    <street name="太阳村镇" code="450204100" />
+</county>
+<county name="柳北" code="450205">
+    <street name="解放街道" code="450205001" />
+    <street name="雅儒街道" code="450205002" />
+    <street name="胜利街道" code="450205003" />
+    <street name="雀儿山街道" code="450205004" />
+    <street name="钢城街道" code="450205005" />
+    <street name="锦绣街道" code="450205006" />
+    <street name="白露街道" code="450205007" />
+    <street name="石碑坪镇" code="450205100" />
+    <street name="沙塘镇" code="450205101" />
+    <street name="长塘镇" code="450205102" />
+</county>
+<county name="柳江" code="450221">
+    <street name="拉堡镇" code="450221100" />
+    <street name="里雍镇" code="450221101" />
+    <street name="百朋镇" code="450221102" />
+    <street name="成团镇" code="450221103" />
+    <street name="洛满镇" code="450221104" />
+    <street name="流山镇" code="450221105" />
+    <street name="三都镇" code="450221106" />
+    <street name="里高镇" code="450221107" />
+    <street name="进德镇" code="450221108" />
+    <street name="穿山镇" code="450221109" />
+    <street name="土博镇" code="450221110" />
+    <street name="白沙乡" code="450221200" />
+    <street name="新兴工业园" code="450221400" />
+    <street name="新兴农场" code="450221401" />
+</county>
+<county name="柳城" code="450222">
+    <street name="大埔镇" code="450222100" />
+    <street name="龙头镇" code="450222101" />
+    <street name="太平镇" code="450222102" />
+    <street name="沙埔镇" code="450222103" />
+    <street name="东泉镇" code="450222104" />
+    <street name="凤山镇" code="450222105" />
+    <street name="六塘镇" code="450222106" />
+    <street name="冲脉镇" code="450222107" />
+    <street name="寨隆镇" code="450222108" />
+    <street name="古砦仫佬族乡" code="450222200" />
+    <street name="马山乡" code="450222201" />
+    <street name="社冲乡" code="450222202" />
+</county>
+<county name="鹿寨" code="450223">
+    <street name="鹿寨镇" code="450223100" />
+    <street name="中渡镇" code="450223102" />
+    <street name="寨沙镇" code="450223103" />
+    <street name="平山镇" code="450223104" />
+    <street name="黄冕乡" code="450223200" />
+    <street name="江口乡" code="450223201" />
+    <street name="导江乡" code="450223202" />
+    <street name="拉沟乡" code="450223203" />
+    <street name="四排乡" code="450223204" />
+</county>
+<county name="融安" code="450224">
+    <street name="长安镇" code="450224100" />
+    <street name="浮石镇" code="450224101" />
+    <street name="泗顶镇" code="450224102" />
+    <street name="板榄镇" code="450224103" />
+    <street name="大将镇" code="450224104" />
+    <street name="大良镇" code="450224105" />
+    <street name="雅瑶乡" code="450224200" />
+    <street name="大坡乡" code="450224201" />
+    <street name="东起乡" code="450224202" />
+    <street name="沙子乡" code="450224203" />
+    <street name="桥板乡" code="450224204" />
+    <street name="潭头乡" code="450224205" />
+</county>
+<county name="融水" code="450225">
+    <street name="融水镇" code="450225100" />
+    <street name="和睦镇" code="450225101" />
+    <street name="三防镇" code="450225102" />
+    <street name="怀宝镇" code="450225103" />
+    <street name="永乐乡" code="450225200" />
+    <street name="四荣乡" code="450225201" />
+    <street name="香粉乡" code="450225202" />
+    <street name="安太乡" code="450225203" />
+    <street name="洞头乡" code="450225204" />
+    <street name="汪洞乡" code="450225205" />
+    <street name="同练瑶族乡" code="450225206" />
+    <street name="滚贝侗族乡" code="450225207" />
+    <street name="杆洞乡" code="450225208" />
+    <street name="安陲乡" code="450225209" />
+    <street name="大浪乡" code="450225210" />
+    <street name="白云乡" code="450225211" />
+    <street name="红水乡" code="450225212" />
+    <street name="拱洞乡" code="450225213" />
+    <street name="良寨乡" code="450225214" />
+    <street name="大年乡" code="450225215" />
+</county>
+<county name="三江" code="450226">
+    <street name="古宜镇" code="450226100" />
+    <street name="斗江镇" code="450226101" />
+    <street name="丹洲镇" code="450226102" />
+    <street name="独峒乡" code="450226200" />
+    <street name="八江乡" code="450226201" />
+    <street name="林溪乡" code="450226202" />
+    <street name="同乐苗族乡" code="450226203" />
+    <street name="梅林乡" code="450226204" />
+    <street name="富禄苗族乡" code="450226205" />
+    <street name="洋溪乡" code="450226206" />
+    <street name="良口乡" code="450226207" />
+    <street name="老堡乡" code="450226208" />
+    <street name="高基瑶族乡" code="450226209" />
+    <street name="和平乡" code="450226210" />
+    <street name="程村乡" code="450226211" />
+</county>
+</city>
+</address>

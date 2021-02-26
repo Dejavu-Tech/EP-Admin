@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="贺州" code="451100">
+<county name="八步" code="451102">
+    <street name="八步街道" code="451102001" />
+    <street name="城东街道" code="451102002" />
+    <street name="江南街道" code="451102003" />
+    <street name="贺街镇" code="451102101" />
+    <street name="步头镇" code="451102102" />
+    <street name="莲塘镇" code="451102103" />
+    <street name="大宁镇" code="451102104" />
+    <street name="南乡镇" code="451102105" />
+    <street name="桂岭镇" code="451102106" />
+    <street name="开山镇" code="451102107" />
+    <street name="里松镇" code="451102109" />
+    <street name="信都镇" code="451102114" />
+    <street name="灵峰镇" code="451102115" />
+    <street name="仁义镇" code="451102116" />
+    <street name="铺门镇" code="451102117" />
+    <street name="黄洞瑶族乡" code="451102200" />
+</county>
+<county name="平桂" code="451119">
+</county>
+<county name="昭平" code="451121">
+    <street name="昭平镇" code="451121100" />
+    <street name="文竹镇" code="451121101" />
+    <street name="黄姚镇" code="451121102" />
+    <street name="富罗镇" code="451121103" />
+    <street name="北陀镇" code="451121104" />
+    <street name="马江镇" code="451121105" />
+    <street name="五将镇" code="451121107" />
+    <street name="仙回瑶族乡" code="451121201" />
+    <street name="走马乡" code="451121202" />
+    <street name="樟木林乡" code="451121205" />
+    <street name="凤凰乡" code="451121206" />
+    <street name="木格乡" code="451121208" />
+</county>
+<county name="钟山" code="451122">
+    <street name="钟山镇" code="451122100" />
+    <street name="回龙镇" code="451122104" />
+    <street name="石龙镇" code="451122105" />
+    <street name="凤翔镇" code="451122106" />
+    <street name="珊瑚镇" code="451122107" />
+    <street name="同古镇" code="451122108" />
+    <street name="公安镇" code="451122109" />
+    <street name="清塘镇" code="451122111" />
+    <street name="燕塘镇" code="451122112" />
+    <street name="红花镇" code="451122113" />
+    <street name="花山瑶族乡" code="451122200" />
+    <street name="两安瑶族乡" code="451122201" />
+</county>
+<county name="富川" code="451123">
+    <street name="富阳镇" code="451123100" />
+    <street name="白沙镇" code="451123101" />
+    <street name="莲山镇" code="451123102" />
+    <street name="古城镇" code="451123103" />
+    <street name="福利镇" code="451123104" />
+    <street name="麦岭镇" code="451123105" />
+    <street name="葛坡镇" code="451123106" />
+    <street name="城北镇" code="451123107" />
+    <street name="朝东镇" code="451123108" />
+    <street name="新华乡" code="451123200" />
+    <street name="石家乡" code="451123201" />
+    <street name="柳家乡" code="451123203" />
+</county>
+</city>
+</address>

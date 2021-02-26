@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="山南" code="542200">
+<county name="乃东" code="542221">
+    <street name="泽当镇" code="542221100" />
+    <street name="昌珠镇" code="542221101" />
+    <street name="颇章乡" code="542221200" />
+    <street name="结巴乡" code="542221201" />
+    <street name="多颇章乡" code="542221202" />
+    <street name="索珠乡" code="542221203" />
+    <street name="亚堆乡" code="542221204" />
+</county>
+<county name="扎囊" code="542222">
+    <street name="扎唐镇" code="542222100" />
+    <street name="桑耶镇" code="542222101" />
+    <street name="阿扎乡" code="542222200" />
+    <street name="扎其乡" code="542222201" />
+    <street name="吉汝乡" code="542222202" />
+</county>
+<county name="贡嘎" code="542223">
+    <street name="吉雄镇" code="542223100" />
+    <street name="岗堆镇" code="542223101" />
+    <street name="甲竹林镇" code="542223102" />
+    <street name="江塘镇" code="542223103" />
+    <street name="杰德秀镇" code="542223104" />
+    <street name="朗杰学乡" code="542223200" />
+    <street name="昌果乡" code="542223201" />
+    <street name="东拉乡" code="542223202" />
+</county>
+<county name="桑日" code="542224">
+    <street name="桑日镇" code="542224100" />
+    <street name="增期乡" code="542224200" />
+    <street name="白堆乡" code="542224201" />
+    <street name="绒乡" code="542224202" />
+</county>
+<county name="琼结" code="542225">
+    <street name="琼结镇" code="542225100" />
+    <street name="拉玉乡" code="542225200" />
+    <street name="下水乡" code="542225201" />
+    <street name="加麻乡" code="542225202" />
+</county>
+<county name="曲松" code="542226">
+    <street name="曲松镇" code="542226100" />
+    <street name="罗布沙镇" code="542226101" />
+    <street name="邱多江乡" code="542226200" />
+    <street name="堆随乡" code="542226201" />
+    <street name="下江乡" code="542226202" />
+</county>
+<county name="措美" code="542227">
+    <street name="措美镇" code="542227100" />
+    <street name="哲古镇" code="542227101" />
+    <street name="乃西乡" code="542227200" />
+    <street name="古堆乡" code="542227201" />
+</county>
+<county name="洛扎" code="542228">
+    <street name="洛扎镇" code="542228100" />
+    <street name="拉康镇" code="542228101" />
+    <street name="生格乡" code="542228200" />
+    <street name="边巴乡" code="542228201" />
+    <street name="扎日乡" code="542228202" />
+    <street name="色乡" code="542228203" />
+    <street name="拉郊乡" code="542228204" />
+</county>
+<county name="加查" code="542229">
+    <street name="加查镇" code="542229100" />
+    <street name="安绕镇" code="542229101" />
+    <street name="拉绥乡" code="542229200" />
+    <street name="崔久乡" code="542229201" />
+    <street name="坝乡" code="542229202" />
+    <street name="冷达乡" code="542229203" />
+    <street name="洛林乡" code="542229204" />
+</county>
+<county name="隆子" code="542231">
+    <street name="隆子镇" code="542231100" />
+    <street name="日当镇" code="542231101" />
+    <street name="加玉乡" code="542231200" />
+    <street name="列麦乡" code="542231201" />
+    <street name="热荣乡" code="542231202" />
+    <street name="三安曲林乡" code="542231203" />
+    <street name="准巴乡" code="542231204" />
+    <street name="斗玉珞巴民族乡" code="542231205" />
+    <street name="雪沙乡" code="542231206" />
+    <street name="扎日乡" code="542231207" />
+    <street name="玉麦乡" code="542231208" />
+</county>
+<county name="错那" code="542232">
+    <street name="错那镇" code="542232100" />
+    <street name="勒门巴民族乡" code="542232200" />
+    <street name="贡日门巴民族乡" code="542232201" />
+    <street name="吉巴门巴民族乡" code="542232202" />
+    <street name="麻玛门巴民族乡" code="542232203" />
+    <street name="库局乡" code="542232204" />
+    <street name="曲卓木乡" code="542232205" />
+    <street name="浪坡乡" code="542232206" />
+    <street name="觉拉乡" code="542232207" />
+    <street name="卡达乡" code="542232208" />
+</county>
+<county name="浪卡子" code="542233">
+    <street name="浪卡子镇" code="542233100" />
+    <street name="打隆镇" code="542233101" />
+    <street name="普玛江塘乡" code="542233200" />
+    <street name="多却乡" code="542233201" />
+    <street name="卡龙乡" code="542233202" />
+    <street name="阿扎乡" code="542233203" />
+    <street name="工布学乡" code="542233204" />
+    <street name="卡热乡" code="542233205" />
+    <street name="白地乡" code="542233206" />
+    <street name="张达乡" code="542233207" />
+</county>
+</city>
+</address>

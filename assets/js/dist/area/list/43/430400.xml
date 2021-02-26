@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="衡阳" code="430400">
+<county name="珠晖" code="430405">
+    <street name="广东路街道" code="430405001" />
+    <street name="东风路街道" code="430405002" />
+    <street name="冶金街道" code="430405003" />
+    <street name="苗圃街道" code="430405004" />
+    <street name="粤汉街道" code="430405005" />
+    <street name="新湘街道" code="430405006" />
+    <street name="衡州路街道" code="430405007" />
+    <street name="茶山坳镇" code="430405100" />
+    <street name="东阳渡镇" code="430405101" />
+    <street name="和平乡" code="430405200" />
+    <street name="酃湖乡" code="430405201" />
+    <street name="金甲岭农场" code="430405400" />
+    <street name="白渔潭园艺场" code="430405401" />
+    <street name="酃湖渔场" code="430405402" />
+    <street name="松林茶场" code="430405403" />
+</county>
+<county name="雁峰" code="430406">
+    <street name="先锋街道" code="430406001" />
+    <street name="雁峰街道" code="430406002" />
+    <street name="天马山街道" code="430406003" />
+    <street name="黄茶岭街道" code="430406004" />
+    <street name="白沙洲街道" code="430406005" />
+    <street name="岳屏镇" code="430406100" />
+    <street name="湘江乡" code="430406200" />
+    <street name="白沙洲工业园" code="430406400" />
+</county>
+<county name="石鼓" code="430407">
+    <street name="人民路街道" code="430407001" />
+    <street name="青山街道" code="430407002" />
+    <street name="潇湘街道" code="430407003" />
+    <street name="五一街道" code="430407004" />
+    <street name="合江街道" code="430407005" />
+    <street name="黄沙湾街道" code="430407006" />
+    <street name="松木乡" code="430407200" />
+    <street name="角山乡" code="430407201" />
+    <street name="松木工业园" code="430407400" />
+</county>
+<county name="蒸湘" code="430408">
+    <street name="蒸湘街道" code="430408001" />
+    <street name="红湘街道" code="430408002" />
+    <street name="华兴街道" code="430408003" />
+    <street name="联合街道" code="430408004" />
+    <street name="呆鹰岭镇" code="430408100" />
+    <street name="长湖乡" code="430408200" />
+    <street name="雨母山乡" code="430408201" />
+</county>
+<county name="南岳" code="430412">
+    <street name="祝融街道" code="430412001" />
+    <street name="南岳镇" code="430412100" />
+    <street name="岳林乡" code="430412200" />
+    <street name="龙凤乡" code="430412201" />
+    <street name="拜殿乡" code="430412202" />
+</county>
+<county name="衡阳" code="430421">
+    <street name="西渡镇" code="430421100" />
+    <street name="集兵镇" code="430421101" />
+    <street name="杉桥镇" code="430421103" />
+    <street name="井头镇" code="430421104" />
+    <street name="演陂镇" code="430421105" />
+    <street name="金兰镇" code="430421106" />
+    <street name="洪市镇" code="430421107" />
+    <street name="曲兰镇" code="430421108" />
+    <street name="金溪镇" code="430421109" />
+    <street name="界牌镇" code="430421110" />
+    <street name="渣江镇" code="430421111" />
+    <street name="三湖镇" code="430421112" />
+    <street name="台源镇" code="430421113" />
+    <street name="关市镇" code="430421114" />
+    <street name="库宗桥镇" code="430421115" />
+    <street name="岘山镇" code="430421116" />
+    <street name="石市镇" code="430421117" />
+    <street name="樟木乡" code="430421200" />
+    <street name="岣嵝乡" code="430421201" />
+    <street name="栏垅乡" code="430421205" />
+    <street name="大安乡" code="430421207" />
+    <street name="溪江乡" code="430421208" />
+    <street name="长安乡" code="430421210" />
+    <street name="板市乡" code="430421211" />
+    <street name="樟树乡" code="430421212" />
+    <street name="潮江乡" code="430421213" />
+</county>
+<county name="衡南" code="430422">
+    <street name="云集镇" code="430422100" />
+    <street name="向阳镇" code="430422101" />
+    <street name="廖田镇" code="430422102" />
+    <street name="茶市镇" code="430422103" />
+    <street name="冠市镇" code="430422104" />
+    <street name="江口镇" code="430422105" />
+    <street name="宝盖镇" code="430422106" />
+    <street name="花桥镇" code="430422107" />
+    <street name="铁丝塘镇" code="430422108" />
+    <street name="泉溪镇" code="430422109" />
+    <street name="洪山镇" code="430422110" />
+    <street name="三塘镇" code="430422111" />
+    <street name="谭子山镇" code="430422112" />
+    <street name="鸡笼镇" code="430422113" />
+    <street name="泉湖镇" code="430422114" />
+    <street name="柞市镇" code="430422115" />
+    <street name="茅市镇" code="430422116" />
+    <street name="硫市镇" code="430422117" />
+    <street name="栗江镇" code="430422118" />
+    <street name="近尾洲镇" code="430422119" />
+    <street name="车江镇" code="430422120" />
+    <street name="咸塘镇" code="430422121" />
+    <street name="松江镇" code="430422122" />
+    <street name="相市乡" code="430422200" />
+    <street name="洲市乡" code="430422201" />
+    <street name="川口乡" code="430422202" />
+    <street name="衡南县原种场" code="430422402" />
+    <street name="衡州监狱" code="430422404" />
+    <street name="衡南县岐山办事处" code="430422406" />
+</county>
+<county name="衡山" code="430423">
+    <street name="开云镇" code="430423100" />
+    <street name="白果镇" code="430423101" />
+    <street name="东湖镇" code="430423102" />
+    <street name="萱洲镇" code="430423103" />
+    <street name="长江镇" code="430423104" />
+    <street name="新桥镇" code="430423105" />
+    <street name="马迹镇" code="430423106" />
+    <street name="店门镇" code="430423107" />
+    <street name="贺家乡" code="430423200" />
+    <street name="永和乡" code="430423201" />
+    <street name="沙泉乡" code="430423202" />
+    <street name="福田乡" code="430423203" />
+    <street name="岭坡乡" code="430423204" />
+    <street name="望峰乡" code="430423205" />
+    <street name="长青乡" code="430423206" />
+    <street name="贯塘乡" code="430423207" />
+    <street name="江东乡" code="430423208" />
+</county>
+<county name="衡东" code="430424">
+    <street name="城关镇" code="430424100" />
+    <street name="石湾镇" code="430424101" />
+    <street name="新塘镇" code="430424102" />
+    <street name="大浦镇" code="430424103" />
+    <street name="吴集镇" code="430424104" />
+    <street name="甘溪镇" code="430424105" />
+    <street name="杨林镇" code="430424106" />
+    <street name="草市镇" code="430424107" />
+    <street name="杨桥镇" code="430424108" />
+    <street name="霞流镇" code="430424109" />
+    <street name="荣恒镇" code="430424110" />
+    <street name="高湖镇" code="430424111" />
+    <street name="白莲镇" code="430424112" />
+    <street name="大桥镇" code="430424113" />
+    <street name="蓬源镇" code="430424114" />
+    <street name="莫井乡" code="430424200" />
+    <street name="踏庄乡" code="430424201" />
+    <street name="高塘乡" code="430424202" />
+    <street name="南湾乡" code="430424204" />
+    <street name="三樟乡" code="430424208" />
+    <street name="栗木乡" code="430424209" />
+    <street name="珍珠乡" code="430424210" />
+    <street name="石滩乡" code="430424211" />
+    <street name="德圳乡" code="430424212" />
+    <street name="大浦工业园" code="430424400" />
+</county>
+<county name="祁东" code="430426">
+    <street name="洪桥镇" code="430426100" />
+    <street name="白鹤铺镇" code="430426101" />
+    <street name="金桥镇" code="430426102" />
+    <street name="鸟江镇" code="430426103" />
+    <street name="粮市镇" code="430426104" />
+    <street name="河洲镇" code="430426105" />
+    <street name="归阳镇" code="430426106" />
+    <street name="过水坪镇" code="430426107" />
+    <street name="双桥镇" code="430426108" />
+    <street name="灵官镇" code="430426109" />
+    <street name="风石堰镇" code="430426110" />
+    <street name="白地市镇" code="430426111" />
+    <street name="黄土铺镇" code="430426112" />
+    <street name="石亭子镇" code="430426113" />
+    <street name="官家嘴镇" code="430426114" />
+    <street name="步云桥镇" code="430426115" />
+    <street name="砖塘镇" code="430426116" />
+    <street name="蒋家桥镇" code="430426117" />
+    <street name="太和堂镇" code="430426118" />
+    <street name="马杜桥乡" code="430426200" />
+    <street name="凤歧坪乡" code="430426201" />
+    <street name="城连圩乡" code="430426202" />
+    <street name="四明山乡" code="430426203" />
+</county>
+<county name="耒阳" code="430481">
+    <street name="蔡子池街道" code="430481001" />
+    <street name="灶市街街道" code="430481002" />
+    <street name="水东江街道" code="430481003" />
+    <street name="五里牌街道" code="430481004" />
+    <street name="三顺街道" code="430481005" />
+    <street name="黄市镇" code="430481100" />
+    <street name="小水镇" code="430481101" />
+    <street name="公平圩镇" code="430481102" />
+    <street name="泗门洲镇" code="430481103" />
+    <street name="三都镇" code="430481104" />
+    <street name="南阳镇" code="430481105" />
+    <street name="竹市镇" code="430481106" />
+    <street name="夏塘镇" code="430481107" />
+    <street name="龙塘镇" code="430481108" />
+    <street name="哲桥镇" code="430481109" />
+    <street name="永济镇" code="430481110" />
+    <street name="遥田镇" code="430481111" />
+    <street name="新市镇" code="430481112" />
+    <street name="洲陂乡" code="430481200" />
+    <street name="亮源乡" code="430481201" />
+    <street name="马水乡" code="430481202" />
+    <street name="太平圩乡" code="430481203" />
+    <street name="导子乡" code="430481204" />
+    <street name="东湖圩乡" code="430481205" />
+    <street name="上架乡" code="430481206" />
+    <street name="沙明乡" code="430481207" />
+    <street name="大义乡" code="430481208" />
+    <street name="磨形乡" code="430481209" />
+    <street name="南京乡" code="430481210" />
+    <street name="仁义乡" code="430481211" />
+    <street name="余庆乡" code="430481212" />
+    <street name="长坪乡" code="430481213" />
+    <street name="太和圩乡" code="430481214" />
+    <street name="坛下乡" code="430481215" />
+    <street name="大市乡" code="430481216" />
+    <street name="肥田乡" code="430481217" />
+</county>
+<county name="常宁" code="430482">
+    <street name="宜阳街道" code="430482001" />
+    <street name="泉峰街道" code="430482002" />
+    <street name="培元街道" code="430482003" />
+    <street name="水口山街道" code="430482004" />
+    <street name="天堂山办事处" code="430482006" />
+    <street name="柏坊镇" code="430482101" />
+    <street name="松柏镇" code="430482102" />
+    <street name="烟洲镇" code="430482103" />
+    <street name="荫田镇" code="430482104" />
+    <street name="白沙镇" code="430482105" />
+    <street name="西岭镇" code="430482106" />
+    <street name="盐湖镇" code="430482107" />
+    <street name="三角塘镇" code="430482108" />
+    <street name="洋泉镇" code="430482109" />
+    <street name="庙前镇" code="430482110" />
+    <street name="罗桥镇" code="430482111" />
+    <street name="板桥镇" code="430482112" />
+    <street name="胜桥镇" code="430482113" />
+    <street name="官岭镇" code="430482114" />
+    <street name="新河镇" code="430482115" />
+    <street name="宜潭乡" code="430482200" />
+    <street name="蓬塘乡" code="430482201" />
+    <street name="兰江乡" code="430482202" />
+    <street name="大堡乡" code="430482203" />
+    <street name="江河乡" code="430482204" />
+    <street name="弥泉乡" code="430482205" />
+    <street name="塔山瑶族乡" code="430482206" />
+</county>
+</city>
+</address>

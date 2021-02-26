@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="东方" code="469007">
+<county name="东方" code="469007001">
+    <street name="八所镇" code="469007100" />
+    <street name="东河镇" code="469007101" />
+    <street name="大田镇" code="469007102" />
+    <street name="感城镇" code="469007103" />
+    <street name="板桥镇" code="469007104" />
+    <street name="三家镇" code="469007105" />
+    <street name="四更镇" code="469007106" />
+    <street name="新龙镇" code="469007107" />
+    <street name="天安乡" code="469007200" />
+    <street name="江边乡" code="469007201" />
+    <street name="国营广坝农场" code="469007400" />
+    <street name="东方华侨农场" code="469007500" />
+</county>
+</city>
+</address>

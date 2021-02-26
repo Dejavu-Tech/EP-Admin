@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="常州" code="320400">
+<county name="天宁" code="320402">
+    <street name="雕庄街道" code="320402001" />
+    <street name="青龙街道" code="320402002" />
+    <street name="茶山街道" code="320402003" />
+    <street name="红梅街道" code="320402004" />
+    <street name="天宁街道" code="320402005" />
+    <street name="兰陵街道" code="320402006" />
+</county>
+<county name="钟楼" code="320404">
+    <street name="五星街道" code="320404001" />
+    <street name="永红街道" code="320404002" />
+    <street name="北港街道" code="320404003" />
+    <street name="西林街道" code="320404004" />
+    <street name="南大街街道" code="320404005" />
+    <street name="荷花池街道" code="320404006" />
+    <street name="新闸街道" code="320404007" />
+</county>
+<county name="戚墅堰" code="320405">
+</county>
+<county name="新北" code="320411">
+    <street name="河海街道" code="320411001" />
+    <street name="三井街道" code="320411002" />
+    <street name="龙虎塘街道" code="320411003" />
+    <street name="春江镇" code="320411100" />
+    <street name="孟河镇" code="320411101" />
+    <street name="新桥镇" code="320411102" />
+    <street name="薛家镇" code="320411103" />
+    <street name="罗溪镇" code="320411104" />
+    <street name="西夏墅镇" code="320411105" />
+</county>
+<county name="武进" code="320412">
+    <street name="戚墅堰街道" code="320405001" />
+    <street name="丁堰街道" code="320405002" />
+    <street name="潞城街道" code="320405003" />
+    <street name="湖塘镇" code="320412100" />
+    <street name="牛塘镇" code="320412102" />
+    <street name="洛阳镇" code="320412103" />
+    <street name="遥观镇" code="320412104" />
+    <street name="横林镇" code="320412105" />
+    <street name="横山桥镇" code="320412106" />
+    <street name="郑陆镇" code="320412109" />
+    <street name="雪堰镇" code="320412110" />
+    <street name="前黄镇" code="320412113" />
+    <street name="礼嘉镇" code="320412114" />
+    <street name="邹区镇" code="320412116" />
+    <street name="嘉泽镇" code="320412119" />
+    <street name="湟里镇" code="320412120" />
+    <street name="奔牛镇" code="320412122" />
+    <street name="武进经济开发区" code="320412400" />
+    <street name="高新区" code="320412411" />
+    <street name="西太湖生态休闲区" code="320412412" />
+    <street name="太湖旅游度假区管委会" code="320412413" />
+</county>
+<county name="溧阳" code="320481">
+    <street name="昆仑街道" code="320481001" />
+    <street name="溧城镇" code="320481100" />
+    <street name="埭头镇" code="320481101" />
+    <street name="上黄镇" code="320481102" />
+    <street name="戴埠镇" code="320481103" />
+    <street name="天目湖镇" code="320481106" />
+    <street name="别桥镇" code="320481107" />
+    <street name="上兴镇" code="320481109" />
+    <street name="竹箦镇" code="320481111" />
+    <street name="南渡镇" code="320481114" />
+    <street name="社渚镇" code="320481116" />
+    <street name="常州监狱" code="320481400" />
+    <street name="溧阳监狱" code="320481401" />
+</county>
+<county name="金坛" code="320482">
+    <street name="东城街道" code="320482002" />
+    <street name="西城街道" code="320482003" />
+    <street name="金城镇" code="320482100" />
+    <street name="儒林镇" code="320482104" />
+    <street name="尧塘镇" code="320482105" />
+    <street name="直溪镇" code="320482106" />
+    <street name="朱林镇" code="320482108" />
+    <street name="薛埠镇" code="320482109" />
+    <street name="指前镇" code="320482112" />
+    <street name="开发区" code="320482400" />
+</county>
+</city>
+</address>

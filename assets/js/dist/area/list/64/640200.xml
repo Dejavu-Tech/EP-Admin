@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="石嘴山" code="640200">
+<county name="大武口" code="640202">
+    <street name="长胜街道" code="640202001" />
+    <street name="朝阳街道" code="640202002" />
+    <street name="人民路街道" code="640202003" />
+    <street name="长城街道" code="640202004" />
+    <street name="青山街道" code="640202005" />
+    <street name="石炭井街道" code="640202006" />
+    <street name="白芨沟街道" code="640202007" />
+    <street name="沟口街道" code="640202008" />
+    <street name="长兴街道" code="640202010" />
+    <street name="锦林街道" code="640202011" />
+    <street name="星海镇" code="640202100" />
+</county>
+<county name="惠农" code="640205">
+    <street name="育才路街道" code="640205001" />
+    <street name="南街街道" code="640205002" />
+    <street name="中街街道" code="640205003" />
+    <street name="北街街道" code="640205004" />
+    <street name="河滨街道" code="640205005" />
+    <street name="火车站街道" code="640205006" />
+    <street name="红果子镇" code="640205100" />
+    <street name="尾闸镇" code="640205101" />
+    <street name="园艺镇" code="640205102" />
+    <street name="庙台乡" code="640205200" />
+    <street name="礼和乡" code="640205201" />
+    <street name="燕子墩乡" code="640205202" />
+    <street name="简泉农场" code="640205401" />
+    <street name="国营农林牧场" code="640205402" />
+    <street name="良种繁殖场" code="640205403" />
+</county>
+<county name="平罗" code="640221">
+    <street name="城关镇" code="640221100" />
+    <street name="黄渠桥镇" code="640221101" />
+    <street name="宝丰镇" code="640221102" />
+    <street name="头闸镇" code="640221103" />
+    <street name="姚伏镇" code="640221104" />
+    <street name="崇岗镇" code="640221105" />
+    <street name="陶乐镇" code="640221106" />
+    <street name="高庄乡" code="640221200" />
+    <street name="灵沙乡" code="640221201" />
+    <street name="渠口乡" code="640221202" />
+    <street name="通伏乡" code="640221203" />
+    <street name="高仁乡" code="640221204" />
+    <street name="红崖子乡" code="640221205" />
+    <street name="前进农场" code="640221400" />
+</county>
+</city>
+</address>

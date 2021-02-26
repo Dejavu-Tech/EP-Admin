@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="茂名" code="440900">
+<county name="茂南" code="440902">
+    <street name="红旗街道" code="440902001" />
+    <street name="河西街道" code="440902002" />
+    <street name="河东街道" code="440902003" />
+    <street name="露天矿街道" code="440902004" />
+    <street name="新华街道" code="440902005" />
+    <street name="官渡街道" code="440902006" />
+    <street name="站前街道" code="440902007" />
+    <street name="金塘镇" code="440902100" />
+    <street name="公馆镇" code="440902101" />
+    <street name="新坡镇" code="440902102" />
+    <street name="镇盛镇" code="440902103" />
+    <street name="鳌头镇" code="440902104" />
+    <street name="袂花镇" code="440902105" />
+    <street name="高山镇" code="440902106" />
+    <street name="山阁镇" code="440902107" />
+    <street name="茂南开发区" code="440902400" />
+</county>
+<county name="电白" code="440903">
+    <street name="南海街道" code="440903001" />
+    <street name="高地街道" code="440903002" />
+    <street name="羊角镇" code="440903101" />
+    <street name="坡心镇" code="440903102" />
+    <street name="七迳镇" code="440903103" />
+    <street name="小良镇" code="440903104" />
+    <street name="沙院镇" code="440903105" />
+    <street name="马踏镇" code="440923100" />
+    <street name="岭门镇" code="440923101" />
+    <street name="树仔镇" code="440923104" />
+    <street name="麻岗镇" code="440923106" />
+    <street name="旦场镇" code="440923107" />
+    <street name="霞洞镇" code="440923115" />
+    <street name="观珠镇" code="440923116" />
+    <street name="沙琅镇" code="440923117" />
+    <street name="黄岭镇" code="440923118" />
+    <street name="望夫镇" code="440923119" />
+    <street name="罗坑镇" code="440923120" />
+    <street name="那霍镇" code="440923121" />
+    <street name="水东镇" code="440923123" />
+    <street name="博贺镇" code="440923125" />
+    <street name="林头镇" code="440923126" />
+    <street name="电城镇" code="440923127" />
+    <street name="陈村镇" code="440923128" />
+    <street name="曙光农场" code="440923451" />
+    <street name="水丰农场" code="440923452" />
+    <street name="新华农场" code="440923453" />
+    <street name="电白盐场" code="440923454" />
+</county>
+<county name="高州" code="440981">
+    <street name="石仔岭街道" code="440981002" />
+    <street name="山美街道" code="440981003" />
+    <street name="金山街道" code="440981006" />
+    <street name="潘州街道" code="440981007" />
+    <street name="宝光街道" code="440981008" />
+    <street name="谢鸡镇" code="440981100" />
+    <street name="新垌镇" code="440981101" />
+    <street name="云潭镇" code="440981102" />
+    <street name="分界镇" code="440981103" />
+    <street name="根子镇" code="440981104" />
+    <street name="泗水镇" code="440981105" />
+    <street name="镇江镇" code="440981107" />
+    <street name="沙田镇" code="440981109" />
+    <street name="南塘镇" code="440981110" />
+    <street name="荷花镇" code="440981111" />
+    <street name="石板镇" code="440981112" />
+    <street name="大井镇" code="440981115" />
+    <street name="潭头镇" code="440981116" />
+    <street name="大坡镇" code="440981119" />
+    <street name="平山镇" code="440981120" />
+    <street name="深镇镇" code="440981121" />
+    <street name="马贵镇" code="440981122" />
+    <street name="古丁镇" code="440981123" />
+    <street name="曹江镇" code="440981124" />
+    <street name="荷塘镇" code="440981126" />
+    <street name="石鼓镇" code="440981127" />
+    <street name="东岸镇" code="440981128" />
+    <street name="长坡镇" code="440981129" />
+    <street name="团结农场" code="440981450" />
+    <street name="胜利农场" code="440981451" />
+    <street name="火星农场" code="440981452" />
+</county>
+<county name="化州" code="440982">
+    <street name="河西街道" code="440982001" />
+    <street name="东山街道" code="440982002" />
+    <street name="下郭街道" code="440982003" />
+    <street name="南盛街道" code="440982004" />
+    <street name="石湾街道" code="440982005" />
+    <street name="长岐镇" code="440982100" />
+    <street name="同庆镇" code="440982101" />
+    <street name="杨梅镇" code="440982102" />
+    <street name="良光镇" code="440982103" />
+    <street name="笪桥镇" code="440982104" />
+    <street name="丽岗镇" code="440982106" />
+    <street name="新安镇" code="440982107" />
+    <street name="官桥镇" code="440982108" />
+    <street name="林尘镇" code="440982110" />
+    <street name="合江镇" code="440982112" />
+    <street name="那务镇" code="440982113" />
+    <street name="播扬镇" code="440982114" />
+    <street name="宝圩镇" code="440982115" />
+    <street name="平定镇" code="440982116" />
+    <street name="文楼镇" code="440982117" />
+    <street name="江湖镇" code="440982118" />
+    <street name="中垌镇" code="440982120" />
+    <street name="鉴江开发区" code="440982400" />
+    <street name="新时代农场" code="440982401" />
+    <street name="新华农场" code="440982402" />
+    <street name="和平农场" code="440982403" />
+    <street name="红阳农场" code="440982404" />
+    <street name="红峰农场" code="440982405" />
+    <street name="建设农场" code="440982406" />
+    <street name="石滩农场" code="440982407" />
+</county>
+<county name="信宜" code="440983">
+    <street name="东镇街道" code="440983001" />
+    <street name="镇隆镇" code="440983101" />
+    <street name="水口镇" code="440983102" />
+    <street name="丁堡镇" code="440983105" />
+    <street name="池洞镇" code="440983106" />
+    <street name="贵子镇" code="440983112" />
+    <street name="怀乡镇" code="440983113" />
+    <street name="茶山镇" code="440983114" />
+    <street name="洪冠镇" code="440983115" />
+    <street name="白石镇" code="440983116" />
+    <street name="大成镇" code="440983117" />
+    <street name="钱排镇" code="440983118" />
+    <street name="合水镇" code="440983119" />
+    <street name="新宝镇" code="440983120" />
+    <street name="平塘镇" code="440983121" />
+    <street name="思贺镇" code="440983122" />
+    <street name="金垌镇" code="440983123" />
+    <street name="朱砂镇" code="440983124" />
+    <street name="北界镇" code="440983125" />
+    <street name="信宜市国营红旗农场" code="440983400" />
+</county>
+</city>
+</address>

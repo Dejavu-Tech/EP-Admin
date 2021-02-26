@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="鹤壁" code="410600">
+<county name="鹤山" code="410602">
+    <street name="中北街道" code="410602001" />
+    <street name="中山路街道" code="410602002" />
+    <street name="新华街街道" code="410602003" />
+    <street name="鹤山街街道" code="410602004" />
+    <street name="九矿广场街道" code="410602005" />
+    <street name="鹤壁集镇" code="410602100" />
+    <street name="姬家山乡" code="410602201" />
+</county>
+<county name="山城" code="410603">
+    <street name="红旗街道" code="410603001" />
+    <street name="长风中路街道" code="410603002" />
+    <street name="山城路街道" code="410603003" />
+    <street name="汤河街街道" code="410603004" />
+    <street name="鹿楼街道" code="410603005" />
+    <street name="宝山街道" code="410603006" />
+    <street name="大胡街道" code="410603007" />
+    <street name="石林镇" code="410603100" />
+</county>
+<county name="淇滨" code="410611">
+    <street name="金山办事处" code="410611001" />
+    <street name="九州路街道" code="410611002" />
+    <street name="黎阳路街道" code="410611003" />
+    <street name="大赉店镇" code="410611100" />
+    <street name="钜桥镇" code="410611101" />
+    <street name="上峪乡" code="410611200" />
+    <street name="大河涧乡" code="410611201" />
+    <street name="长江路街道" code="410611562" />
+    <street name="海河路办事处" code="410611563" />
+    <street name="渤海路办事处" code="410611564" />
+    <street name="东杨办事处" code="410611565" />
+</county>
+<county name="浚县" code="410621">
+    <street name="卫溪街道" code="410621001" />
+    <street name="浚州街道" code="410621002" />
+    <street name="黎阳街道" code="410621003" />
+    <street name="伾山街道" code="410621004" />
+    <street name="善堂镇" code="410621101" />
+    <street name="屯子镇" code="410621102" />
+    <street name="新镇镇" code="410621104" />
+    <street name="小河镇" code="410621105" />
+    <street name="卫贤镇" code="410621107" />
+    <street name="王庄镇" code="410621108" />
+    <street name="白寺乡" code="410621201" />
+</county>
+<county name="淇县" code="410622">
+    <street name="朝歌街道" code="410622001" />
+    <street name="桥盟街道" code="410622002" />
+    <street name="卫都街道" code="410622003" />
+    <street name="灵山街道" code="410622004" />
+    <street name="高村镇" code="410622101" />
+    <street name="北阳镇" code="410622102" />
+    <street name="西岗镇" code="410622103" />
+    <street name="庙口镇" code="410622104" />
+    <street name="黄洞乡" code="410622202" />
+</county>
+</city>
+</address>

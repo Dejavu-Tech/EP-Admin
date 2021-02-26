@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="贵港" code="450800">
+<county name="港北" code="450802">
+    <street name="贵城街道" code="450802001" />
+    <street name="港城镇" code="450802100" />
+    <street name="大圩镇" code="450802101" />
+    <street name="庆丰镇" code="450802102" />
+    <street name="奇石乡" code="450802200" />
+    <street name="中里乡" code="450802201" />
+    <street name="根竹乡" code="450802202" />
+    <street name="武乐乡" code="450802203" />
+</county>
+<county name="港南" code="450803">
+    <street name="江南办事处" code="450803001" />
+    <street name="桥圩镇" code="450803100" />
+    <street name="木格镇" code="450803101" />
+    <street name="木梓镇" code="450803102" />
+    <street name="湛江镇" code="450803103" />
+    <street name="东津镇" code="450803104" />
+    <street name="八塘镇" code="450803105" />
+    <street name="新塘乡" code="450803200" />
+    <street name="瓦塘乡" code="450803201" />
+</county>
+<county name="覃塘" code="450804">
+    <street name="覃塘镇" code="450804100" />
+    <street name="东龙镇" code="450804101" />
+    <street name="三里镇" code="450804102" />
+    <street name="黄练镇" code="450804103" />
+    <street name="石卡镇" code="450804104" />
+    <street name="五里镇" code="450804105" />
+    <street name="山北乡" code="450804200" />
+    <street name="樟木乡" code="450804201" />
+    <street name="蒙公乡" code="450804203" />
+    <street name="大岭乡" code="450804204" />
+</county>
+<county name="平南" code="450821">
+    <street name="平南镇" code="450821100" />
+    <street name="平山镇" code="450821101" />
+    <street name="寺面镇" code="450821102" />
+    <street name="六陈镇" code="450821103" />
+    <street name="大新镇" code="450821104" />
+    <street name="大安镇" code="450821105" />
+    <street name="武林镇" code="450821106" />
+    <street name="大坡镇" code="450821107" />
+    <street name="大洲镇" code="450821108" />
+    <street name="镇隆镇" code="450821109" />
+    <street name="上渡镇" code="450821110" />
+    <street name="安怀镇" code="450821112" />
+    <street name="丹竹镇" code="450821113" />
+    <street name="官成镇" code="450821114" />
+    <street name="思旺镇" code="450821115" />
+    <street name="大鹏镇" code="450821116" />
+    <street name="同和镇" code="450821117" />
+    <street name="东华乡" code="450821202" />
+    <street name="思界乡" code="450821204" />
+    <street name="国安瑶族乡" code="450821205" />
+    <street name="马练瑶族乡" code="450821206" />
+</county>
+<county name="桂平" code="450881">
+    <street name="木乐镇" code="450881101" />
+    <street name="木圭镇" code="450881102" />
+    <street name="石咀镇" code="450881103" />
+    <street name="油麻镇" code="450881104" />
+    <street name="社坡镇" code="450881105" />
+    <street name="罗秀镇" code="450881106" />
+    <street name="麻垌镇" code="450881107" />
+    <street name="社步镇" code="450881108" />
+    <street name="下湾镇" code="450881109" />
+    <street name="木根镇" code="450881110" />
+    <street name="中沙镇" code="450881111" />
+    <street name="大洋镇" code="450881113" />
+    <street name="大湾镇" code="450881114" />
+    <street name="白沙镇" code="450881115" />
+    <street name="石龙镇" code="450881116" />
+    <street name="蒙圩镇" code="450881117" />
+    <street name="西山镇" code="450881118" />
+    <street name="南木镇" code="450881119" />
+    <street name="江口镇" code="450881120" />
+    <street name="金田镇" code="450881121" />
+    <street name="紫荆镇" code="450881122" />
+    <street name="马皮乡" code="450881200" />
+    <street name="寻旺乡" code="450881202" />
+    <street name="罗播乡" code="450881203" />
+    <street name="厚禄乡" code="450881204" />
+    <street name="垌心乡" code="450881206" />
+</county>
+</city>
+</address>

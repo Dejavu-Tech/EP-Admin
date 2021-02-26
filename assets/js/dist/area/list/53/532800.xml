@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="西双版纳" code="532800">
+<county name="景洪" code="532801">
+    <street name="允景洪街道" code="532801001" />
+    <street name="嘎洒镇" code="532801102" />
+    <street name="勐龙镇" code="532801103" />
+    <street name="勐罕镇" code="532801104" />
+    <street name="勐养镇" code="532801105" />
+    <street name="普文镇" code="532801106" />
+    <street name="景哈乡" code="532801202" />
+    <street name="景讷乡" code="532801203" />
+    <street name="大渡岗乡" code="532801204" />
+    <street name="勐旺乡" code="532801205" />
+    <street name="基诺乡" code="532801206" />
+    <street name="景洪农场" code="532801401" />
+    <street name="东风农场" code="532801402" />
+    <street name="橄榄坝农场" code="532801403" />
+    <street name="勐养农场" code="532801404" />
+    <street name="大渡岗农场" code="532801405" />
+    <street name="西双版纳州渡假区管理委员" code="532801406" />
+    <street name="景洪工业园区" code="532801407" />
+    <street name="西双版纳监狱" code="532801408" />
+</county>
+<county name="勐海" code="532822">
+    <street name="勐海镇" code="532822101" />
+    <street name="打洛镇" code="532822102" />
+    <street name="勐混镇" code="532822103" />
+    <street name="勐遮镇" code="532822104" />
+    <street name="勐满镇" code="532822105" />
+    <street name="勐阿镇" code="532822106" />
+    <street name="勐宋乡" code="532822201" />
+    <street name="勐往乡" code="532822202" />
+    <street name="格朗和乡" code="532822203" />
+    <street name="布朗山乡" code="532822204" />
+    <street name="西定乡" code="532822205" />
+    <street name="黎明农场" code="532822401" />
+</county>
+<county name="勐腊" code="532823">
+    <street name="勐腊镇" code="532823101" />
+    <street name="勐捧镇" code="532823102" />
+    <street name="勐满镇" code="532823103" />
+    <street name="勐仑镇" code="532823104" />
+    <street name="西双版纳磨憨经济开发区（尚勇镇）" code="532823105" />
+    <street name="勐伴镇" code="532823106" />
+    <street name="关累镇" code="532823107" />
+    <street name="易武乡" code="532823201" />
+    <street name="象明乡" code="532823202" />
+    <street name="瑶区乡" code="532823203" />
+    <street name="勐腊农场" code="532823401" />
+    <street name="勐捧农场" code="532823402" />
+    <street name="勐满农场" code="532823403" />
+    <street name="勐醒农场" code="532823404" />
+</county>
+</city>
+</address>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="澄迈" code="469027">
+<county name="澄迈" code="469027001">
+    <street name="金江镇" code="469023100" />
+    <street name="老城镇" code="469023101" />
+    <street name="瑞溪镇" code="469023102" />
+    <street name="永发镇" code="469023103" />
+    <street name="加乐镇" code="469023104" />
+    <street name="文儒镇" code="469023105" />
+    <street name="中兴镇" code="469023106" />
+    <street name="仁兴镇" code="469023107" />
+    <street name="福山镇" code="469023108" />
+    <street name="桥头镇" code="469023109" />
+    <street name="大丰镇" code="469023110" />
+    <street name="国营红光农场" code="469023400" />
+    <street name="国营红岗农场" code="469023401" />
+    <street name="国营西达农场" code="469023402" />
+    <street name="国营昆仑农场" code="469023403" />
+    <street name="国营和岭农场" code="469023404" />
+    <street name="国营金安农场" code="469023405" />
+</county>
+</city>
+</address>

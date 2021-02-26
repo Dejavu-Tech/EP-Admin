@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="六盘水" code="520200">
+<county name="钟山" code="520201">
+    <street name="黄土坡街道" code="520201001" />
+    <street name="荷城街道" code="520201002" />
+    <street name="凤凰街道" code="520201003" />
+    <street name="德坞街道" code="520201004" />
+    <street name="荷泉街道" code="520201005" />
+    <street name="红岩街道" code="520201006" />
+    <street name="杨柳街道" code="520201007" />
+    <street name="大河镇" code="520201101" />
+    <street name="汪家寨镇" code="520201102" />
+    <street name="大湾镇" code="520201103" />
+    <street name="月照彝族回族苗族乡" code="520201200" />
+    <street name="双戛彝族乡" code="520201201" />
+</county>
+<county name="六枝特" code="520203">
+    <street name="九龙街道" code="520203001" />
+    <street name="银壶街道" code="520203002" />
+    <street name="塔山街道" code="520203003" />
+    <street name="平寨镇" code="520203100" />
+    <street name="郎岱镇" code="520203101" />
+    <street name="岩脚镇" code="520203102" />
+    <street name="木岗镇" code="520203103" />
+    <street name="大用镇" code="520203104" />
+    <street name="新窑乡" code="520203200" />
+    <street name="落别布依族彝族乡" code="520203201" />
+    <street name="折溪彝族乡" code="520203202" />
+    <street name="牛场苗族彝族乡" code="520203203" />
+    <street name="新场乡" code="520203204" />
+    <street name="中寨苗族彝族布依族乡" code="520203205" />
+    <street name="堕却乡" code="520203206" />
+    <street name="箐口彝族仡佬族布依族乡" code="520203207" />
+    <street name="洒志彝族布依族苗族乡" code="520203208" />
+    <street name="毛口布依族苗族乡" code="520203209" />
+    <street name="龙场乡" code="520203210" />
+    <street name="新华乡" code="520203211" />
+    <street name="梭戛苗族彝族回族乡" code="520203212" />
+    <street name="陇脚布依族乡" code="520203213" />
+</county>
+<county name="水城" code="520221">
+    <street name="尖山街道" code="520221001" />
+    <street name="双水街道" code="520221002" />
+    <street name="滥坝镇" code="520221100" />
+    <street name="老鹰山镇" code="520221101" />
+    <street name="比德镇" code="520221102" />
+    <street name="化乐镇" code="520221103" />
+    <street name="蟠龙镇" code="520221104" />
+    <street name="阿戛镇" code="520221105" />
+    <street name="勺米镇" code="520221106" />
+    <street name="玉舍镇" code="520221107" />
+    <street name="都格镇" code="520221108" />
+    <street name="发耳镇" code="520221109" />
+    <street name="鸡场镇" code="520221110" />
+    <street name="木果镇" code="520221111" />
+    <street name="保华镇" code="520221112" />
+    <street name="董地苗族彝族乡" code="520221200" />
+    <street name="陡箐苗族彝族乡" code="520221201" />
+    <street name="南开苗族彝族乡" code="520221204" />
+    <street name="青林苗族彝族乡" code="520221205" />
+    <street name="金盆苗族彝族乡" code="520221207" />
+    <street name="发箐苗族彝族乡" code="520221209" />
+    <street name="纸厂彝族乡" code="520221213" />
+    <street name="坪寨彝族乡" code="520221214" />
+    <street name="龙场苗族白族彝族乡" code="520221218" />
+    <street name="营盘苗族彝族白族乡" code="520221219" />
+    <street name="顺场苗族彝族布依族乡" code="520221220" />
+    <street name="花戛苗族布依族彝族乡" code="520221221" />
+    <street name="杨梅彝族苗族回族乡" code="520221222" />
+    <street name="新街彝族苗族布依族乡" code="520221223" />
+    <street name="野钟苗族彝族布依族乡" code="520221224" />
+    <street name="果布戛彝族苗族布依族乡" code="520221225" />
+    <street name="米箩布依族苗族彝族乡" code="520221226" />
+    <street name="盐井乡" code="520221228" />
+    <street name="猴场苗族布依族乡" code="520221230" />
+    <street name="红岩布依族彝族苗族乡" code="520221231" />
+</county>
+<county name="盘县" code="520222">
+    <street name="亦资街道" code="520222001" />
+    <street name="翰林街道" code="520222002" />
+    <street name="两河街道" code="520222003" />
+    <street name="红果镇" code="520222100" />
+    <street name="城关镇" code="520222101" />
+    <street name="板桥镇" code="520222102" />
+    <street name="水塘镇" code="520222103" />
+    <street name="民主镇" code="520222104" />
+    <street name="大山镇" code="520222105" />
+    <street name="保田镇" code="520222106" />
+    <street name="老厂镇" code="520222107" />
+    <street name="玛依镇" code="520222108" />
+    <street name="石桥镇" code="520222109" />
+    <street name="平关镇" code="520222110" />
+    <street name="响水镇" code="520222111" />
+    <street name="火铺镇" code="520222112" />
+    <street name="乐民镇" code="520222113" />
+    <street name="西冲镇" code="520222114" />
+    <street name="断江镇" code="520222115" />
+    <street name="盘江镇" code="520222116" />
+    <street name="柏果镇" code="520222117" />
+    <street name="洒基镇" code="520222118" />
+    <street name="刘官镇" code="520222119" />
+    <street name="滑石镇" code="520222120" />
+    <street name="新民镇" code="520222121" />
+    <street name="珠东镇" code="520222122" />
+    <street name="忠义乡" code="520222200" />
+    <street name="普田回族乡" code="520222202" />
+    <street name="鸡场坪彝族乡" code="520222206" />
+    <street name="松河彝族乡" code="520222207" />
+    <street name="坪地彝族乡" code="520222208" />
+    <street name="四格彝族乡" code="520222209" />
+    <street name="淤泥彝族乡" code="520222210" />
+    <street name="普古彝族苗族乡" code="520222211" />
+    <street name="旧营白族彝族苗族乡" code="520222212" />
+    <street name="羊场布依族白族苗族乡" code="520222213" />
+    <street name="保基苗族彝族乡" code="520222214" />
+    <street name="英武乡" code="520222215" />
+    <street name="马场彝族苗族乡" code="520222216" />
+</county>
+</city>
+</address>

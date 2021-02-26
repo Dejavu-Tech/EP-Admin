@@ -1,0 +1,76 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var chartjs               = true;
+- var page_chartjs          = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | ChartJS
+                                      span
+                                        | Chart
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Charts
+                                      li.breadcrumb-item.active ChartJS Chart
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-xl-6.col-md-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Bar Chart
+                            .card-body.chart-block
+                              canvas#myBarGraph
+                        .col-xl-6.col-md-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Line Graph
+                            .card-body.chart-block
+                              canvas#myGraph
+                        .col-xl-6.col-md-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Radar Graph
+                            .card-body.chart-block
+                              canvas#myRadarGraph
+                        .col-xl-6.col-md-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Line Chart
+                            .card-body.chart-block
+                              canvas#myLineCharts
+                        .col-xl-6.col-md-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Doughnut Chart
+                            .card-body.chart-block.chart-vertical-center
+                              canvas#myDoughnutGraph
+                        .col-xl-6.col-md-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Polar Chart
+                            .card-body.chart-block.chart-vertical-center
+                              canvas#myPolarGraph
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

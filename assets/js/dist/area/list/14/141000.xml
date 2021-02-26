@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="临汾" code="141000">
+<county name="尧都" code="141002">
+    <street name="解放路街道" code="141002001" />
+    <street name="鼓楼西街街道" code="141002002" />
+    <street name="水塔街街道" code="141002003" />
+    <street name="南街街道" code="141002004" />
+    <street name="乡贤街街道" code="141002005" />
+    <street name="辛寺街街道" code="141002006" />
+    <street name="铁路东街道" code="141002007" />
+    <street name="车站街街道" code="141002008" />
+    <street name="汾河街道" code="141002009" />
+    <street name="滨河办事处" code="141002010" />
+    <street name="屯里镇" code="141002100" />
+    <street name="乔李镇" code="141002101" />
+    <street name="大阳镇" code="141002102" />
+    <street name="县底镇" code="141002103" />
+    <street name="刘村镇" code="141002104" />
+    <street name="金殿镇" code="141002105" />
+    <street name="吴村镇" code="141002106" />
+    <street name="土门镇" code="141002107" />
+    <street name="魏村镇" code="141002108" />
+    <street name="尧庙镇" code="141002109" />
+    <street name="段店乡" code="141002200" />
+    <street name="贾得乡" code="141002201" />
+    <street name="贺家庄乡" code="141002202" />
+    <street name="一平垣乡" code="141002203" />
+    <street name="枕头乡" code="141002204" />
+    <street name="河底乡" code="141002205" />
+</county>
+<county name="曲沃" code="141021">
+    <street name="乐昌镇" code="141021100" />
+    <street name="史村镇" code="141021101" />
+    <street name="曲村镇" code="141021102" />
+    <street name="高显镇" code="141021103" />
+    <street name="里村镇" code="141021104" />
+    <street name="北董乡" code="141021200" />
+    <street name="杨谈乡" code="141021201" />
+</county>
+<county name="翼城" code="141022">
+    <street name="唐兴镇" code="141022100" />
+    <street name="南梁镇" code="141022101" />
+    <street name="里砦镇" code="141022102" />
+    <street name="隆化镇" code="141022103" />
+    <street name="桥上镇" code="141022104" />
+    <street name="西阎镇" code="141022105" />
+    <street name="中卫乡" code="141022200" />
+    <street name="南唐乡" code="141022201" />
+    <street name="王庄乡" code="141022202" />
+    <street name="浇底乡" code="141022203" />
+</county>
+<county name="襄汾" code="141023">
+    <street name="新城镇" code="141023100" />
+    <street name="赵康镇" code="141023101" />
+    <street name="汾城镇" code="141023102" />
+    <street name="南贾镇" code="141023103" />
+    <street name="古城镇" code="141023104" />
+    <street name="襄陵镇" code="141023105" />
+    <street name="邓庄镇" code="141023106" />
+    <street name="陶寺乡" code="141023200" />
+    <street name="永固乡" code="141023201" />
+    <street name="景毛乡" code="141023202" />
+    <street name="西贾乡" code="141023203" />
+    <street name="南辛店乡" code="141023204" />
+    <street name="大邓乡" code="141023205" />
+</county>
+<county name="洪洞" code="141024">
+    <street name="大槐树镇" code="141024100" />
+    <street name="甘亭镇" code="141024101" />
+    <street name="曲亭镇" code="141024102" />
+    <street name="苏堡镇" code="141024103" />
+    <street name="广胜寺镇" code="141024104" />
+    <street name="明姜镇" code="141024105" />
+    <street name="赵城镇" code="141024106" />
+    <street name="万安镇" code="141024107" />
+    <street name="刘家垣镇" code="141024108" />
+    <street name="淹底乡" code="141024200" />
+    <street name="兴唐寺乡" code="141024201" />
+    <street name="堤村乡" code="141024202" />
+    <street name="辛村乡" code="141024203" />
+    <street name="龙马乡" code="141024204" />
+    <street name="山头乡" code="141024205" />
+    <street name="左木乡" code="141024206" />
+</county>
+<county name="古县" code="141025">
+    <street name="岳阳镇" code="141025100" />
+    <street name="北平镇" code="141025101" />
+    <street name="古阳镇" code="141025102" />
+    <street name="旧县镇" code="141025103" />
+    <street name="石壁乡" code="141025200" />
+    <street name="永乐乡" code="141025201" />
+    <street name="南垣乡" code="141025202" />
+</county>
+<county name="安泽" code="141026">
+    <street name="府城镇" code="141026100" />
+    <street name="和川镇" code="141026101" />
+    <street name="唐城镇" code="141026102" />
+    <street name="冀氏镇" code="141026103" />
+    <street name="马必乡" code="141026200" />
+    <street name="杜村乡" code="141026201" />
+    <street name="良马乡" code="141026202" />
+</county>
+<county name="浮山" code="141027">
+    <street name="天坛镇" code="141027100" />
+    <street name="响水河镇" code="141027101" />
+    <street name="张庄乡" code="141027200" />
+    <street name="东张乡" code="141027201" />
+    <street name="槐埝乡" code="141027202" />
+    <street name="北王乡" code="141027203" />
+    <street name="北韩乡" code="141027204" />
+    <street name="米家垣乡" code="141027205" />
+    <street name="寨圪塔乡" code="141027206" />
+</county>
+<county name="吉县" code="141028">
+    <street name="吉昌镇" code="141028100" />
+    <street name="屯里镇" code="141028101" />
+    <street name="壶口镇" code="141028102" />
+    <street name="车城乡" code="141028200" />
+    <street name="文城乡" code="141028201" />
+    <street name="东城乡" code="141028202" />
+    <street name="柏山寺乡" code="141028203" />
+    <street name="中垛乡" code="141028204" />
+</county>
+<county name="乡宁" code="141029">
+    <street name="昌宁镇" code="141029100" />
+    <street name="光华镇" code="141029101" />
+    <street name="台头镇" code="141029102" />
+    <street name="管头镇" code="141029103" />
+    <street name="西坡镇" code="141029104" />
+    <street name="双鹤乡" code="141029200" />
+    <street name="关王庙乡" code="141029201" />
+    <street name="尉庄乡" code="141029202" />
+    <street name="西交口乡" code="141029203" />
+    <street name="枣岭乡" code="141029204" />
+</county>
+<county name="大宁" code="141030">
+    <street name="昕水镇" code="141030100" />
+    <street name="曲峨镇" code="141030101" />
+    <street name="三多乡" code="141030200" />
+    <street name="太德乡" code="141030201" />
+    <street name="徐家垛乡" code="141030202" />
+    <street name="太古乡" code="141030203" />
+</county>
+<county name="隰县" code="141031">
+    <street name="龙泉镇" code="141031100" />
+    <street name="午城镇" code="141031101" />
+    <street name="黄土镇" code="141031102" />
+    <street name="阳头升乡" code="141031200" />
+    <street name="寨子乡" code="141031201" />
+    <street name="陡坡乡" code="141031202" />
+    <street name="下李乡" code="141031203" />
+    <street name="城南乡" code="141031204" />
+</county>
+<county name="永和" code="141032">
+    <street name="芝河镇" code="141032100" />
+    <street name="桑壁镇" code="141032101" />
+    <street name="阁底乡" code="141032200" />
+    <street name="南庄乡" code="141032201" />
+    <street name="打石腰乡" code="141032202" />
+    <street name="坡头乡" code="141032203" />
+    <street name="交口乡" code="141032204" />
+</county>
+<county name="蒲县" code="141033">
+    <street name="蒲城镇" code="141033100" />
+    <street name="薛关镇" code="141033101" />
+    <street name="黑龙关镇" code="141033102" />
+    <street name="克城镇" code="141033103" />
+    <street name="山中乡" code="141033200" />
+    <street name="古县乡" code="141033201" />
+    <street name="红道乡" code="141033202" />
+    <street name="乔家湾乡" code="141033203" />
+    <street name="太林乡" code="141033204" />
+</county>
+<county name="汾西" code="141034">
+    <street name="永安镇" code="141034100" />
+    <street name="对竹镇" code="141034101" />
+    <street name="勍香镇" code="141034102" />
+    <street name="和平镇" code="141034103" />
+    <street name="僧念镇" code="141034104" />
+    <street name="佃坪乡" code="141034200" />
+    <street name="团柏乡" code="141034201" />
+    <street name="邢家要乡" code="141034202" />
+    <street name="管理委员会" code="141034400" />
+</county>
+<county name="侯马" code="141081">
+    <street name="路东街道" code="141081001" />
+    <street name="路西街道" code="141081002" />
+    <street name="浍滨街道" code="141081003" />
+    <street name="上马街道" code="141081004" />
+    <street name="张村街道" code="141081005" />
+    <street name="新田乡" code="141081200" />
+    <street name="高村乡" code="141081201" />
+    <street name="凤城乡" code="141081202" />
+</county>
+<county name="霍州" code="141082">
+    <street name="鼓楼街道" code="141082001" />
+    <street name="北环路街道" code="141082002" />
+    <street name="南环路街道" code="141082003" />
+    <street name="开元街道" code="141082004" />
+    <street name="退沙街道" code="141082005" />
+    <street name="白龙镇" code="141082100" />
+    <street name="辛置镇" code="141082101" />
+    <street name="大张镇" code="141082102" />
+    <street name="李曹镇" code="141082103" />
+    <street name="陶唐峪乡" code="141082200" />
+    <street name="三教乡" code="141082201" />
+    <street name="师庄乡" code="141082202" />
+</county>
+</city>
+</address>

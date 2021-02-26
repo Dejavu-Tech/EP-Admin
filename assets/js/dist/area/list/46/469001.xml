@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="五指山" code="469001">
+<county name="五指山" code="469001001">
+    <street name="通什镇" code="469001100" />
+    <street name="南圣镇" code="469001101" />
+    <street name="毛阳镇" code="469001102" />
+    <street name="番阳镇" code="469001103" />
+    <street name="畅好乡" code="469001200" />
+    <street name="毛道乡" code="469001201" />
+    <street name="水满乡" code="469001202" />
+    <street name="国营畅好农场" code="469001400" />
+</county>
+</city>
+</address>

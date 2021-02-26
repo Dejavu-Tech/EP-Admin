@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="赤峰" code="150400">
+<county name="红山" code="150402">
+    <street name="西屯街道" code="150402001" />
+    <street name="三中街街道" code="150402002" />
+    <street name="永巨街道" code="150402003" />
+    <street name="东城街道" code="150402004" />
+    <street name="南新街街道" code="150402005" />
+    <street name="站前街道" code="150402006" />
+    <street name="铁南街道" code="150402007" />
+    <street name="长青街道" code="150402008" />
+    <street name="哈达街道" code="150402009" />
+    <street name="西城街道" code="150402010" />
+    <street name="桥北街道" code="150402011" />
+    <street name="红庙子镇" code="150402100" />
+    <street name="文钟镇" code="150402102" />
+    <street name="红山工业园区" code="150402400" />
+    <street name="红山物流园区" code="150402401" />
+    <street name="红山区农畜产品加工产业园区" code="150402402" />
+</county>
+<county name="元宝山" code="150403">
+    <street name="西露天街道" code="150403001" />
+    <street name="平庄城区街道" code="150403002" />
+    <street name="平庄东城街道" code="150403003" />
+    <street name="平庄西城街道" code="150403004" />
+    <street name="马林街道" code="150403005" />
+    <street name="云杉路街道" code="150403006" />
+    <street name="风水沟镇" code="150403100" />
+    <street name="元宝山镇" code="150403101" />
+    <street name="美丽河镇" code="150403102" />
+    <street name="平庄镇" code="150403103" />
+    <street name="五家镇" code="150403104" />
+    <street name="小五家乡" code="150403200" />
+    <street name="赤峰市资源型经济转型开发试验区" code="150403400" />
+</county>
+<county name="松山" code="150404">
+    <street name="振兴街道" code="150404001" />
+    <street name="向阳街道" code="150404002" />
+    <street name="松州街道" code="150404003" />
+    <street name="铁东街道" code="150404004" />
+    <street name="穆家营子镇" code="150404100" />
+    <street name="初头朗镇" code="150404101" />
+    <street name="大庙镇" code="150404102" />
+    <street name="王府镇" code="150404103" />
+    <street name="老府镇" code="150404104" />
+    <street name="哈拉道口镇" code="150404105" />
+    <street name="上官地镇" code="150404106" />
+    <street name="安庆镇" code="150404107" />
+    <street name="太平地镇" code="150404108" />
+    <street name="当铺地满族乡" code="150404200" />
+    <street name="夏家店乡" code="150404201" />
+    <street name="城子乡" code="150404202" />
+    <street name="大夫营子乡" code="150404203" />
+    <street name="岗子乡" code="150404204" />
+    <street name="玉龙街道" code="150404400" />
+    <street name="全宁街道" code="150404401" />
+    <street name="兴安街道" code="150404407" />
+</county>
+<county name="阿鲁科尔沁" code="150421">
+    <street name="天山镇" code="150421100" />
+    <street name="天山口镇" code="150421101" />
+    <street name="双胜镇" code="150421102" />
+    <street name="坤都镇" code="150421103" />
+    <street name="巴彦花镇" code="150421104" />
+    <street name="绍根镇" code="150421105" />
+    <street name="扎嘎斯台镇" code="150421106" />
+    <street name="新民乡" code="150421200" />
+    <street name="先锋乡" code="150421201" />
+    <street name="罕苏木苏木乡" code="150421202" />
+    <street name="赛汉塔拉苏木乡" code="150421203" />
+    <street name="巴拉奇如德苏木乡" code="150421204" />
+    <street name="乌兰哈达乡" code="150421205" />
+    <street name="巴彦温都尔苏木" code="150421206" />
+    <street name="轻工食品产业园" code="150421400" />
+    <street name="新能源产业园" code="150421401" />
+    <street name="绍根煤碳及煤化工产业园" code="150421402" />
+    <street name="天山办事处" code="150421403" />
+</county>
+<county name="巴林左" code="150422">
+    <street name="林东镇" code="150422100" />
+    <street name="隆昌镇" code="150422101" />
+    <street name="十三敖包镇" code="150422102" />
+    <street name="碧流台镇" code="150422103" />
+    <street name="富河镇" code="150422104" />
+    <street name="白音勿拉镇" code="150422105" />
+    <street name="哈拉哈达镇" code="150422106" />
+    <street name="查干哈达苏木乡" code="150422200" />
+    <street name="乌兰达坝苏木乡" code="150422201" />
+    <street name="三山乡" code="150422202" />
+    <street name="花加拉嘎乡" code="150422203" />
+    <street name="上京高新技术产业集中区" code="150422400" />
+    <street name="南塔工业集中区" code="150422401" />
+    <street name="凤凰山工业集中区" code="150422402" />
+    <street name="林东西城街道" code="150422403" />
+    <street name="林东东城街道" code="150422404" />
+</county>
+<county name="巴林右" code="150423">
+    <street name="大板镇" code="150423100" />
+    <street name="索博日嘎镇" code="150423101" />
+    <street name="宝日勿苏镇" code="150423102" />
+    <street name="查干诺尔镇" code="150423103" />
+    <street name="巴彦琥硕镇" code="150423105" />
+    <street name="西拉沐沦苏木乡" code="150423200" />
+    <street name="巴彦塔拉苏木乡" code="150423201" />
+    <street name="幸福之路苏木乡" code="150423202" />
+    <street name="查干沐沦苏木" code="150423203" />
+    <street name="大板煤电化基地" code="150423400" />
+</county>
+<county name="林西" code="150424">
+    <street name="林西镇" code="150424100" />
+    <street name="新城子镇" code="150424101" />
+    <street name="新林镇" code="150424102" />
+    <street name="五十家子镇" code="150424103" />
+    <street name="官地镇" code="150424104" />
+    <street name="大井镇" code="150424105" />
+    <street name="统部镇" code="150424106" />
+    <street name="大营子乡" code="150424200" />
+    <street name="十二吐乡" code="150424201" />
+    <street name="城北街道" code="150424400" />
+    <street name="城南街道" code="150424401" />
+    <street name="内蒙古林西工业园区" code="150424402" />
+</county>
+<county name="克什克腾" code="150425">
+    <street name="经棚镇" code="150425100" />
+    <street name="宇宙地镇" code="150425101" />
+    <street name="土城子镇" code="150425102" />
+    <street name="同兴镇" code="150425103" />
+    <street name="万合永镇" code="150425104" />
+    <street name="芝瑞镇" code="150425105" />
+    <street name="达来诺日镇" code="150425106" />
+    <street name="新开地乡" code="150425200" />
+    <street name="红山子乡" code="150425201" />
+    <street name="达日罕乌拉苏木乡" code="150425202" />
+    <street name="巴彦查干苏木乡" code="150425203" />
+    <street name="浩来呼热苏木" code="150425204" />
+    <street name="乌兰布统苏木" code="150425205" />
+    <street name="克旗经棚街道" code="150425400" />
+    <street name="热水塘温泉疗养旅游开发区管委会" code="150425401" />
+    <street name="克什克腾旗煤电化基地" code="150425402" />
+    <street name="克什克腾旗渔场" code="150425502" />
+</county>
+<county name="翁牛特" code="150426">
+    <street name="乌丹镇" code="150426100" />
+    <street name="乌敦套海镇" code="150426101" />
+    <street name="五分地镇" code="150426102" />
+    <street name="桥头镇" code="150426103" />
+    <street name="广德公镇" code="150426104" />
+    <street name="梧桐花镇" code="150426105" />
+    <street name="海拉苏镇" code="150426106" />
+    <street name="亿合公镇" code="150426107" />
+    <street name="解放营子乡" code="150426200" />
+    <street name="阿什罕苏木" code="150426201" />
+    <street name="新苏莫苏木" code="150426202" />
+    <street name="白音套海苏木" code="150426203" />
+    <street name="毛山东乡" code="150426204" />
+    <street name="格日僧苏木" code="150426205" />
+    <street name="玉龙工业园区" code="150426400" />
+    <street name="紫城" code="150426402" />
+    <street name="全宁" code="150426403" />
+</county>
+<county name="喀喇沁" code="150428">
+    <street name="锦山镇" code="150428100" />
+    <street name="美林镇" code="150428101" />
+    <street name="王爷府镇" code="150428102" />
+    <street name="小牛群镇" code="150428103" />
+    <street name="牛家营子镇" code="150428104" />
+    <street name="乃林镇" code="150428105" />
+    <street name="西桥镇" code="150428106" />
+    <street name="十家满族乡" code="150428200" />
+    <street name="南台子乡" code="150428201" />
+    <street name="乃林果树农场" code="150428400" />
+    <street name="马鞍山羊场" code="150428401" />
+    <street name="赤峰市和美工贸园区" code="150428402" />
+    <street name="锦山工业园区" code="150428403" />
+</county>
+<county name="宁城" code="150429">
+    <street name="天义镇" code="150429100" />
+    <street name="小城子镇" code="150429101" />
+    <street name="大城子镇" code="150429102" />
+    <street name="八里罕镇" code="150429103" />
+    <street name="黑里河镇" code="150429104" />
+    <street name="甸子镇" code="150429105" />
+    <street name="大双庙镇" code="150429106" />
+    <street name="汐子镇" code="150429107" />
+    <street name="大明镇" code="150429108" />
+    <street name="忙农镇" code="150429109" />
+    <street name="五化镇" code="150429110" />
+    <street name="三座店乡" code="150429200" />
+    <street name="必斯营子乡" code="150429201" />
+    <street name="一肯中乡" code="150429202" />
+    <street name="存金沟乡" code="150429203" />
+    <street name="中京工业园" code="150429400" />
+    <street name="塞飞亚食品工业园" code="150429401" />
+    <street name="八里罕酒业园区" code="150429402" />
+    <street name="再生资源产业园" code="150429403" />
+    <street name="生物科技产业园区" code="150429404" />
+    <street name="汐子工业园" code="150429405" />
+    <street name="农机产业园区" code="150429406" />
+</county>
+<county name="敖汉" code="150430">
+    <street name="新惠镇" code="150430100" />
+    <street name="四家子镇" code="150430101" />
+    <street name="长胜镇" code="150430102" />
+    <street name="贝子府镇" code="150430103" />
+    <street name="四道湾子镇" code="150430104" />
+    <street name="下洼镇" code="150430105" />
+    <street name="金厂沟梁镇" code="150430106" />
+    <street name="兴隆洼镇" code="150430107" />
+    <street name="牛古吐乡" code="150430201" />
+    <street name="木头营子乡" code="150430202" />
+    <street name="古鲁板蒿乡" code="150430203" />
+    <street name="丰收乡" code="150430204" />
+    <street name="玛尼罕乡" code="150430205" />
+    <street name="萨力巴乡" code="150430206" />
+    <street name="敖润苏莫苏木乡" code="150430207" />
+    <street name="林家地乡" code="150430208" />
+    <street name="国营种羊场" code="150430400" />
+    <street name="敖汉旗新惠工业园区" code="150430401" />
+    <street name="贝子府化工集中区" code="150430402" />
+    <street name="四家子冶金工业集中区" code="150430403" />
+</county>
+</city>
+</address>

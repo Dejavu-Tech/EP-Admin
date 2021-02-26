@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="乌兰察布" code="150900">
+<county name="集宁" code="150902">
+    <street name="新体路街道" code="150902001" />
+    <street name="桥东街道" code="150902002" />
+    <street name="前进路街道" code="150902003" />
+    <street name="常青街道" code="150902004" />
+    <street name="虎山街道" code="150902005" />
+    <street name="桥西街道" code="150902006" />
+    <street name="新华街街道" code="150902007" />
+    <street name="泉山街道" code="150902008" />
+    <street name="白海子镇" code="150902105" />
+    <street name="马莲渠乡" code="150902205" />
+</county>
+<county name="卓资" code="150921">
+    <street name="卓资山镇" code="150921106" />
+    <street name="旗下营镇" code="150921107" />
+    <street name="卓资县十八台镇" code="150921108" />
+    <street name="卓资县巴音锡勒镇" code="150921109" />
+    <street name="卓资县梨花镇" code="150921110" />
+    <street name="卓资县大榆树乡" code="150921210" />
+    <street name="卓资县红召乡" code="150921211" />
+    <street name="卓资县复兴乡" code="150921212" />
+</county>
+<county name="化德" code="150922">
+    <street name="化德县长顺镇" code="150922103" />
+    <street name="化德县朝阳镇" code="150922104" />
+    <street name="化德县七号镇" code="150922105" />
+    <street name="化德县德包图乡" code="150922200" />
+    <street name="化德县公腊胡洞乡" code="150922201" />
+    <street name="化德县白音特拉乡" code="150922218" />
+</county>
+<county name="商都" code="150923">
+    <street name="七台镇" code="150923101" />
+    <street name="十八顷镇" code="150923102" />
+    <street name="大黑沙土镇" code="150923103" />
+    <street name="西井子镇" code="150923104" />
+    <street name="屯垦队镇" code="150923105" />
+    <street name="小海子镇" code="150923106" />
+    <street name="大库伦乡" code="150923200" />
+    <street name="卯都乡" code="150923201" />
+    <street name="玻璃忽镜乡" code="150923202" />
+    <street name="三大顷乡" code="150923203" />
+</county>
+<county name="兴和" code="150924">
+    <street name="城关镇" code="150924106" />
+    <street name="张皋镇" code="150924107" />
+    <street name="赛乌素镇" code="150924108" />
+    <street name="鄂尔栋镇" code="150924109" />
+    <street name="店子镇" code="150924110" />
+    <street name="大库联乡" code="150924209" />
+    <street name="民族团结乡" code="150924210" />
+    <street name="大同夭乡" code="150924211" />
+    <street name="五股泉乡" code="150924212" />
+    <street name="南部矿区管委会" code="150924400" />
+</county>
+<county name="凉城" code="150925">
+    <street name="岱海镇" code="150925103" />
+    <street name="六苏木镇" code="150925104" />
+    <street name="麦胡图镇" code="150925105" />
+    <street name="永兴镇" code="150925106" />
+    <street name="蛮汉镇" code="150925107" />
+    <street name="天成乡" code="150925218" />
+    <street name="曹碾满族乡" code="150925219" />
+    <street name="厂汉营乡" code="150925220" />
+    <street name="岱海循环工业发展区" code="150925400" />
+    <street name="蛮汉山林场" code="150925401" />
+    <street name="岱海林场" code="150925402" />
+    <street name="岱海旅游区办事处" code="150925403" />
+</county>
+<county name="察哈尔右翼前" code="150926">
+    <street name="土贵乌拉镇" code="150926105" />
+    <street name="平地泉镇" code="150926106" />
+    <street name="玫瑰营镇" code="150926107" />
+    <street name="巴音塔拉镇" code="150926108" />
+    <street name="黄旗海镇" code="150926109" />
+    <street name="乌拉哈乌拉乡" code="150926209" />
+    <street name="黄茂营乡" code="150926210" />
+    <street name="三岔口乡" code="150926211" />
+    <street name="老圈沟乡" code="150926212" />
+    <street name="察右前旗天皮山冶金化工工业园区" code="150926400" />
+    <street name="察右前旗察哈尔工业园区" code="150926401" />
+</county>
+<county name="察哈尔右翼中" code="150927">
+    <street name="科布尔镇" code="150927103" />
+    <street name="铁沙盖镇" code="150927104" />
+    <street name="黄羊城镇" code="150927105" />
+    <street name="广益隆镇" code="150927106" />
+    <street name="乌素图镇" code="150927107" />
+    <street name="大滩乡" code="150927216" />
+    <street name="宏盘乡" code="150927217" />
+    <street name="巴音乡" code="150927218" />
+    <street name="库联苏木" code="150927219" />
+    <street name="乌兰哈页苏木" code="150927220" />
+    <street name="察右中旗土城子乡" code="150927221" />
+    <street name="辉腾锡勒园区管理委员会" code="150927400" />
+</county>
+<county name="察哈尔右翼后" code="150928">
+    <street name="白音察干镇" code="150928105" />
+    <street name="察哈尔右翼后旗土牧尔台镇" code="150928106" />
+    <street name="察哈尔右翼后旗红格尔图镇" code="150928107" />
+    <street name="察哈尔右翼后旗贲红镇" code="150928108" />
+    <street name="察哈尔右翼后旗大六号镇" code="150928109" />
+    <street name="察哈尔右翼后旗当郎忽洞苏木" code="150928209" />
+    <street name="察哈尔右翼后旗乌兰哈达苏木" code="150928210" />
+    <street name="察哈尔右翼后旗锡勒乡" code="150928211" />
+</county>
+<county name="四子王" code="150929">
+    <street name="四子王旗乌兰花镇" code="150929100" />
+    <street name="四子王旗吉生太镇" code="150929101" />
+    <street name="四子王旗库伦图镇" code="150929102" />
+    <street name="四子王旗供济堂镇" code="150929103" />
+    <street name="四子王旗白音朝克图镇" code="150929104" />
+    <street name="四子王旗红格尔苏木" code="150929200" />
+    <street name="四子王旗江岸苏木" code="150929201" />
+    <street name="四子王旗查干补力格苏木" code="150929202" />
+    <street name="四子王旗脑木更苏木" code="150929203" />
+    <street name="四子王旗东八号乡" code="150929204" />
+    <street name="四子王旗忽鸡图乡" code="150929205" />
+    <street name="四子王旗大黑河乡" code="150929206" />
+    <street name="四子王旗巴音敖包苏木" code="150929207" />
+    <street name="四子王旗乌兰牧场" code="150929400" />
+</county>
+<county name="丰镇" code="150981">
+    <street name="新城区街道" code="150981005" />
+    <street name="旧城区街道" code="150981006" />
+    <street name="北城区街道" code="150981007" />
+    <street name="工业区街道" code="150981008" />
+    <street name="南城区街道" code="150981009" />
+    <street name="隆盛庄镇" code="150981107" />
+    <street name="黑土台镇" code="150981108" />
+    <street name="红砂坝镇" code="150981109" />
+    <street name="巨宝庄镇" code="150981110" />
+    <street name="三义泉镇" code="150981111" />
+    <street name="浑源窑乡" code="150981207" />
+    <street name="元山子乡" code="150981208" />
+    <street name="官屯堡乡" code="150981209" />
+</county>
+</city>
+</address>

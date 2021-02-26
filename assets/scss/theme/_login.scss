@@ -1,0 +1,521 @@
+/**=====================
+    24. Authentication CSS Start
+==========================**/
+//urls
+$url_0: url(../images/other-images/auth-layer.png);
+$url_1: url(../images/other-images/auth-bg-1.jpg);
+
+.auth-minibox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.authentication-main {
+  .auth-innerright {
+    .card-body{
+      .theme-form{
+        width: calc(100% - 290px);
+      }
+    }
+    .reset-password-box {
+      .card-body {
+        .theme-form {
+          width: auto;
+        }
+      }
+    }
+    .authentication-box {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.auth-minibox1{
+  width: 460px;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.auth-bg {
+  .card-body{
+    .theme-form{
+      width: calc(100% - 290px);
+    }
+    background-color: $card-body-color;
+  }
+  // background: $url_1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px 100px;
+}
+.auth-bg-video {
+  .card-body{
+    .theme-form{
+      width: calc(100% - 290px);
+    }
+    background-color: $card-body-color;
+    padding: 0;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.31);
+  padding: 50px 0;
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+  }
+}
+.reset-password-box {
+  width: 645px;
+  z-index: 2;
+  .card {
+    padding: 30px;
+  }
+  .theme-form {
+    .form-group {
+      label {
+        font-size: 12px;
+        color: $theme-body-sub-title-color;
+      }
+      .form-control {
+        font-size: 18px;
+      }
+      .btn {
+        font-size: 18px;
+        padding: 6px 24px;
+      }
+    }
+    .opt-box {
+      background: rgba($primary-color, 0.03);
+      .opt-text {
+        font-size: 36px;
+        padding: 25px 0;
+      }
+    }
+  }
+  .reset-password-link {
+    color: $theme-body-sub-title-color;
+  }
+  .reset-password-box h6 {
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+}
+@keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+//New scss
+$contW: 900px;
+$imgW: 290px;
+$formW: $contW - $imgW;
+$switchAT: 1.2s;
+$inputW: 260px;
+$btnH: 36px;
+$diffRatio: ($contW - $imgW) / $contW;
+
+@mixin signUpActive {
+  .cont.s--signup & {
+    @content;
+  }
+}
+
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: $contW;
+  margin: 0 auto 0;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+}
+.cont{
+  & > div{
+    &:nth-child(1){
+      height:100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: $formW;
+  top: 0;
+  padding: 30px;
+  height: 100%;
+  padding-left: $imgW + 60px;
+  background: #fff;
+  transition: transform $switchAT ease-in-out;
+  width: calc(100% + 260px);
+
+  @include signUpActive {
+    transform: translate3d($formW * -1,0,0);
+  }
+}
+
+.img {
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: $imgW;
+  height: 100%;
+  padding-top: 360px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $contW;
+    height: 100%;
+    background-image: url('../images/other-images/login-bg.jpg');
+    background-size: cover;
+    transition: transform $switchAT ease-in-out;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+  }
+
+  @include signUpActive {
+    &:before {
+      transform: translate3d($formW,0,0);
+    }
+  }
+
+  &__text {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform $switchAT ease-in-out;
+
+
+    &.m--up {
+
+      @include signUpActive {
+        transform: translateX($imgW*2);
+      }
+    }
+
+    &.m--in {
+      transform: translateX($imgW * -2);
+
+      @include signUpActive {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__btn {
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    height: 40px;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 50px;
+
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #fff;
+      border-radius: 25px;
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      transition: transform $switchAT;
+
+      &.m--in {
+        transform: translateY($btnH*-2);
+
+        @include signUpActive {
+          transform: translateY(0);
+        }
+      }
+
+      &.m--up {
+        @include signUpActive {
+          transform: translateY($btnH*2);
+        }
+      }
+    }
+  }
+}
+
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #cfcfcf;
+}
+
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: #d4af7a;
+  text-transform: uppercase;
+}
+
+.fb-btn {
+  border: 2px solid #d3dae9;
+  color: darken(#d3dae9, 20%);
+
+  span {
+    font-weight: bold;
+    color: darken(#768cb6, 20%);
+  }
+}
+
+.sign-in {
+  transition-timing-function: ease-out;
+
+  @include signUpActive {
+    transition-timing-function: ease-in-out;
+    transition-duration: $switchAT;
+    transform: translate3d($formW,0,0);
+  }
+}
+
+.sign-up {
+  transform: translate3d($contW * -1,0,0);
+
+  @include signUpActive {
+    transform: translate3d(0,0,0);
+  }
+}
+
+.icon-link {
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  &--twitter {
+    left: auto;
+    right: 5px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .auth-bg-video {
+    .card-body{
+      .theme-form{
+        width: calc(100%);
+        margin-bottom: 295px;
+      }
+      .s--signup {
+        .theme-form{
+          margin-top: 295px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .cont { 
+      .img:before {
+        transform: translate3d(0, 0px, 0) !important;
+     }
+    }
+    .theme-form {
+      .login-divider, .form-divider {
+        &:before {
+          left: 41% !important;
+        }
+      }
+    }
+  }
+  .sub-cont {
+    left: 0;
+    padding-left: 30px;
+    transform: translate3d(0, 488px, 0) !important;
+    height: calc(100% + 260px);
+    width: 100%;
+    .img {
+      width: 100%;
+      height: auto;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+  .img__btn {
+    margin: 0 auto 50px;
+    width: 20%;
+  }
+  .theme-form {
+    .login-divider, .form-divider {
+      &:before {
+        left: 46% !important;
+      }
+    }
+  }
+  .img__text {
+    &.m--up {
+      transform: translateY(0) !important;
+    }
+    &.m--in {
+      transform: translateY(-580px) !important;
+      transform: translatX(0px) !important;
+    }
+  }
+  .cont {
+    width: 100%;
+    &.s--signup {
+       .img {
+          &:before {
+            transform: translate3d(0, 0px, 0) !important;
+          }
+        }
+      .sub-cont {
+        transform: translate3d(0, 0, 0) !important;
+      }
+      .img__text {
+        &.m--in {
+          transform: translateX(0px) !important;
+          transform: translateY(0) !important;
+        }
+        &.m--up {
+          transform: translateX(0px) !important;
+          transform: translateY(-580px) !important;
+        }
+      }
+    }
+  }
+  .img {
+    padding-top: 200px;
+  }
+  .authentication-main {
+    padding: 30px;
+    .auth-innerright {
+      .card-body {
+        .theme-form {
+          margin-bottom: 280px;
+          width: 100%;
+        }
+        .s--signup {
+          .theme-form {
+            margin-top: 280px;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .reset-password-box {
+        .card-body {
+          .theme-form {
+            margin-bottom: 0;
+          }
+        }
+      } 
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .sub-cont {
+    transform: translate3d(0, 535px, 0) !important;
+  }
+  .auth-bg {
+    padding: 15px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .authentication-main {
+    margin-top: 10px;
+  }
+  .img__btn {
+    width: 32%;
+  }
+  .sub-cont {
+    transform: translate3d(0, 570px, 0) !important;
+  }
+  .theme-form {
+    .login-divider, .form-divider {
+      &:before {
+        left: 39% !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .auth-bg-video {
+    .theme-form {
+      .login-divider, .form-divider {
+        &:before {
+          left: 38% !important;
+        }
+      }
+    }
+  }
+  .img__btn {
+    width: 43%;
+  }
+  .sub-cont {
+    transform: translate3d(0, 588px, 0) !important;
+  }
+  .theme-form {
+    .login-divider, .form-divider {
+      &:before {
+        left: 32% !important;
+      }
+    }
+  }
+}
+
+/**=====================
+    24. Authentication CSS Ends
+==========================**/
+
+
+
+
+

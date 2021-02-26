@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="盐城" code="320900">
+<county name="亭湖" code="320902">
+    <street name="五星街道" code="320902001" />
+    <street name="文峰街道" code="320902002" />
+    <street name="先锋街道" code="320902003" />
+    <street name="毓龙街道" code="320902004" />
+    <street name="新洋街道" code="320902007" />
+    <street name="大洋街道" code="320902008" />
+    <street name="伍佑街道（城南新区）" code="320902050" />
+    <street name="黄海街道（城南新区）" code="320902051" />
+    <street name="新河街道（城南新区）" code="320902052" />
+    <street name="新城街道（盐城经济技术开发区）" code="320902053" />
+    <street name="南洋镇" code="320902100" />
+    <street name="新兴镇" code="320902102" />
+    <street name="便仓镇" code="320902104" />
+    <street name="盐东镇" code="320902107" />
+    <street name="黄尖镇" code="320902108" />
+    <street name="步凤镇（盐城经济技术开发区）" code="320902150" />
+    <street name="亭湖新区" code="320902400" />
+    <street name="环保产业园" code="320902402" />
+</county>
+<county name="盐都" code="320903">
+    <street name="张庄街道" code="320903002" />
+    <street name="盐龙街道" code="320903003" />
+    <street name="潘黄街道" code="320903004" />
+    <street name="滨湖街道" code="320903005" />
+    <street name="北龙港街道" code="320903006" />
+    <street name="中兴街道" code="320903007" />
+    <street name="葛武街道" code="320903008" />
+    <street name="北蒋街道" code="320903009" />
+    <street name="鞍湖街道" code="320903010" />
+    <street name="冈中街道" code="320903011" />
+    <street name="新都街道（城南新区）" code="320903050" />
+    <street name="大纵湖镇" code="320903100" />
+    <street name="楼王镇" code="320903102" />
+    <street name="学富镇" code="320903103" />
+    <street name="尚庄镇" code="320903105" />
+    <street name="秦南镇" code="320903108" />
+    <street name="龙冈镇" code="320903109" />
+    <street name="郭猛镇" code="320903111" />
+    <street name="大冈镇" code="320903112" />
+    <street name="新区管委会" code="320903400" />
+    <street name="农村经济开发区" code="320903402" />
+</county>
+<county name="响水" code="320921">
+    <street name="响水镇" code="320921100" />
+    <street name="陈家港镇" code="320921101" />
+    <street name="小尖镇" code="320921102" />
+    <street name="黄圩镇" code="320921103" />
+    <street name="大有镇" code="320921104" />
+    <street name="双港镇" code="320921105" />
+    <street name="南河镇" code="320921106" />
+    <street name="运河镇" code="320921107" />
+    <street name="县开发区" code="320921400" />
+    <street name="省属黄海农场" code="320921401" />
+    <street name="省属灌东盐场" code="320921402" />
+</county>
+<county name="滨海" code="320922">
+    <street name="东坎街道" code="320922001" />
+    <street name="坎南街道" code="320922002" />
+    <street name="坎北街道" code="320922003" />
+    <street name="东坎镇" code="320922100" />
+    <street name="五汛镇" code="320922101" />
+    <street name="蔡桥镇" code="320922102" />
+    <street name="正红镇" code="320922103" />
+    <street name="通榆镇" code="320922104" />
+    <street name="界牌镇" code="320922105" />
+    <street name="八巨镇" code="320922106" />
+    <street name="八滩镇" code="320922107" />
+    <street name="滨淮镇" code="320922109" />
+    <street name="天场镇" code="320922110" />
+    <street name="陈涛镇" code="320922111" />
+    <street name="滨海港镇" code="320922112" />
+    <street name="滨淮农场" code="320922400" />
+    <street name="新滩盐场" code="320922401" />
+    <street name="开发区工业园" code="320922402" />
+    <street name="开发区沿海工业园" code="320922403" />
+    <street name="滨海港经济区" code="320922404" />
+    <street name="滨海县现代农业产业园区" code="320922405" />
+</county>
+<county name="阜宁" code="320923">
+    <street name="阜城镇" code="320923100" />
+    <street name="沟墩镇" code="320923101" />
+    <street name="陈良镇" code="320923102" />
+    <street name="三灶镇" code="320923103" />
+    <street name="郭墅镇（澳洋工业园）" code="320923104" />
+    <street name="新沟镇" code="320923105" />
+    <street name="陈集镇" code="320923106" />
+    <street name="羊寨镇" code="320923107" />
+    <street name="芦蒲镇" code="320923108" />
+    <street name="板湖镇" code="320923109" />
+    <street name="东沟镇" code="320923110" />
+    <street name="益林镇" code="320923111" />
+    <street name="古河镇" code="320923112" />
+    <street name="罗桥镇" code="320923113" />
+    <street name="开发区" code="320923400" />
+    <street name="金沙湖管委会" code="320923401" />
+</county>
+<county name="射阳" code="320924">
+    <street name="合德镇" code="320924100" />
+    <street name="临海镇" code="320924101" />
+    <street name="千秋镇" code="320924102" />
+    <street name="四明镇" code="320924104" />
+    <street name="海河镇" code="320924106" />
+    <street name="海通镇" code="320924108" />
+    <street name="兴桥镇" code="320924109" />
+    <street name="新坍镇" code="320924110" />
+    <street name="长荡镇" code="320924111" />
+    <street name="盘湾镇" code="320924112" />
+    <street name="特庸镇" code="320924113" />
+    <street name="洋马镇" code="320924114" />
+    <street name="黄沙港镇" code="320924117" />
+    <street name="县经济开发区" code="320924400" />
+    <street name="淮海农场" code="320924401" />
+    <street name="临海农场" code="320924402" />
+    <street name="新洋农场" code="320924403" />
+    <street name="盐场" code="320924404" />
+    <street name="射阳港经济区" code="320924406" />
+</county>
+<county name="建湖" code="320925">
+    <street name="近湖镇" code="320925100" />
+    <street name="建阳镇" code="320925101" />
+    <street name="九龙口镇" code="320925102" />
+    <street name="恒济镇" code="320925103" />
+    <street name="颜单镇" code="320925104" />
+    <street name="沿河镇" code="320925105" />
+    <street name="芦沟镇" code="320925106" />
+    <street name="庆丰镇" code="320925107" />
+    <street name="上冈镇" code="320925108" />
+    <street name="冈西镇" code="320925111" />
+    <street name="宝塔镇" code="320925113" />
+    <street name="高作镇" code="320925114" />
+    <street name="开发区" code="320925400" />
+    <street name="高新技术经济区" code="320925401" />
+</county>
+<county name="东台" code="320981">
+    <street name="溱东镇" code="320981100" />
+    <street name="时堰镇" code="320981101" />
+    <street name="五烈镇" code="320981106" />
+    <street name="梁垛镇" code="320981107" />
+    <street name="安丰镇" code="320981108" />
+    <street name="南沈灶镇" code="320981109" />
+    <street name="富安镇" code="320981110" />
+    <street name="唐洋镇" code="320981112" />
+    <street name="新街镇" code="320981113" />
+    <street name="许河镇" code="320981114" />
+    <street name="三仓镇" code="320981115" />
+    <street name="头灶镇" code="320981118" />
+    <street name="弶港镇" code="320981121" />
+    <street name="东台镇" code="320981122" />
+    <street name="江苏省新曹农场" code="320981400" />
+    <street name="江苏省农垦弶港农场" code="320981401" />
+    <street name="开发区" code="320981409" />
+    <street name="沿海经济区" code="320981410" />
+    <street name="城东新区" code="320981411" />
+    <street name="西溪景区" code="320981412" />
+</county>
+<county name="大丰" code="320982">
+    <street name="大中镇" code="320982100" />
+    <street name="草堰镇" code="320982101" />
+    <street name="白驹镇" code="320982102" />
+    <street name="刘庄镇" code="320982103" />
+    <street name="西团镇" code="320982104" />
+    <street name="小海镇" code="320982105" />
+    <street name="大桥镇" code="320982106" />
+    <street name="草庙镇" code="320982107" />
+    <street name="万盈镇" code="320982108" />
+    <street name="南阳镇" code="320982109" />
+    <street name="新丰镇" code="320982110" />
+    <street name="三龙镇" code="320982111" />
+    <street name="大中农场" code="320982400" />
+    <street name="方强农场" code="320982401" />
+    <street name="东坝头农场" code="320982402" />
+    <street name="大丰经济开发区管委会" code="320982403" />
+    <street name="大丰港经济开发区管委会" code="320982404" />
+    <street name="大丰常州高新区管委会" code="320982405" />
+</county>
+</city>
+</address>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="徐州" code="320300">
+<county name="鼓楼" code="320302">
+    <street name="黄楼街道" code="320302001" />
+    <street name="丰财街道" code="320302002" />
+    <street name="琵琶街道" code="320302003" />
+    <street name="牌楼街道" code="320302004" />
+    <street name="铜沛街道" code="320302005" />
+    <street name="环城街道" code="320302006" />
+    <street name="九里街道" code="320302007" />
+    <street name="金山桥街道" code="320302051" />
+    <street name="东环街道" code="320302052" />
+    <street name="大黄山街道" code="320302053" />
+    <street name="大庙街道" code="320302054" />
+</county>
+<county name="云龙" code="320303">
+    <street name="彭城街道" code="320303001" />
+    <street name="子房街道" code="320303002" />
+    <street name="黄山街道" code="320303003" />
+    <street name="骆驼山街道" code="320303004" />
+    <street name="大郭庄街道" code="320303005" />
+    <street name="翠屏山街道" code="320303006" />
+    <street name="大龙湖街道" code="320303007" />
+    <street name="潘塘街道" code="320303008" />
+    <street name="淮海食品城" code="320303400" />
+</county>
+<county name="贾汪" code="320305">
+    <street name="老矿街道" code="320305001" />
+    <street name="大泉街道" code="320305003" />
+    <street name="大吴街道" code="320305004" />
+    <street name="潘安湖街道" code="320305005" />
+    <street name="青山泉镇" code="320305102" />
+    <street name="紫庄镇" code="320305104" />
+    <street name="塔山镇" code="320305105" />
+    <street name="汴塘镇" code="320305106" />
+    <street name="江庄镇" code="320305107" />
+    <street name="鹿庄粮棉原种场" code="320305401" />
+    <street name="工业园区管委会" code="320305402" />
+</county>
+<county name="泉山" code="320311">
+    <street name="王陵街道" code="320311001" />
+    <street name="七里沟街道" code="320311002" />
+    <street name="永安街道" code="320311003" />
+    <street name="湖滨街道" code="320311004" />
+    <street name="段庄街道" code="320311005" />
+    <street name="翟山街道" code="320311006" />
+    <street name="奎山街道" code="320311007" />
+    <street name="和平街道" code="320311008" />
+    <street name="金山街道" code="320311009" />
+    <street name="泰山街道" code="320311010" />
+    <street name="庞庄街道" code="320311011" />
+    <street name="火花街道" code="320311012" />
+    <street name="桃园街道" code="320311013" />
+    <street name="苏山街道" code="320311014" />
+    <street name="徐州泉山经济开发区" code="320311401" />
+    <street name="徐州软件园管理委员会" code="320311402" />
+</county>
+<county name="丰县" code="320321">
+    <street name="中阳里办事处" code="320321001" />
+    <street name="凤城镇" code="320321101" />
+    <street name="首羡镇" code="320321102" />
+    <street name="顺河镇" code="320321103" />
+    <street name="常店镇" code="320321104" />
+    <street name="欢口镇" code="320321105" />
+    <street name="师寨镇" code="320321106" />
+    <street name="华山镇" code="320321107" />
+    <street name="梁寨镇" code="320321108" />
+    <street name="范楼镇" code="320321109" />
+    <street name="孙楼镇" code="320321110" />
+    <street name="宋楼镇" code="320321111" />
+    <street name="大沙河镇" code="320321112" />
+    <street name="王沟镇" code="320321113" />
+    <street name="赵庄镇" code="320321114" />
+    <street name="大沙河林场" code="320321401" />
+</county>
+<county name="沛县" code="320322">
+    <street name="龙固镇" code="320322101" />
+    <street name="杨屯镇" code="320322102" />
+    <street name="大屯镇" code="320322103" />
+    <street name="沛城镇" code="320322104" />
+    <street name="胡寨镇" code="320322105" />
+    <street name="魏庙镇" code="320322106" />
+    <street name="五段镇" code="320322107" />
+    <street name="张庄镇" code="320322108" />
+    <street name="张寨镇" code="320322109" />
+    <street name="敬安镇" code="320322110" />
+    <street name="河口镇" code="320322111" />
+    <street name="栖山镇" code="320322112" />
+    <street name="鹿楼镇" code="320322113" />
+    <street name="朱寨镇" code="320322114" />
+    <street name="安国镇" code="320322115" />
+    <street name="中煤集团大屯煤电（集团）公司" code="320322401" />
+    <street name="沛县新城区" code="320322402" />
+    <street name="沛县湖西农场管理委员会" code="320322403" />
+    <street name="经济开发区" code="320322404" />
+</county>
+<county name="铜山" code="320323">
+    <street name="三河尖街道" code="320312001" />
+    <street name="张双楼街道" code="320312002" />
+    <street name="垞城街道" code="320312003" />
+    <street name="张集街道" code="320312004" />
+    <street name="义安街道" code="320312005" />
+    <street name="利国街道" code="320312006" />
+    <street name="电厂街道" code="320312007" />
+    <street name="拾屯街道" code="320312008" />
+    <street name="铜山街道" code="320312009" />
+    <street name="新区街道" code="320312051" />
+    <street name="三堡街道" code="320312052" />
+    <street name="何桥镇" code="320312102" />
+    <street name="黄集镇" code="320312103" />
+    <street name="马坡镇" code="320312104" />
+    <street name="郑集镇" code="320312105" />
+    <street name="柳新镇" code="320312106" />
+    <street name="刘集镇" code="320312107" />
+    <street name="大彭镇" code="320312108" />
+    <street name="汉王镇" code="320312109" />
+    <street name="棠张镇" code="320312111" />
+    <street name="张集镇" code="320312112" />
+    <street name="房村镇" code="320312113" />
+    <street name="伊庄镇" code="320312114" />
+    <street name="单集镇" code="320312115" />
+    <street name="利国镇" code="320312116" />
+    <street name="徐庄镇" code="320312117" />
+    <street name="大许镇" code="320312118" />
+    <street name="茅村镇" code="320312119" />
+    <street name="柳泉镇" code="320312120" />
+    <street name="国营沿湖农场" code="320312401" />
+    <street name="徐州高新技术产业开发区" code="320312402" />
+</county>
+<county name="睢宁" code="320324">
+    <street name="睢城镇" code="320324101" />
+    <street name="王集镇" code="320324102" />
+    <street name="双沟镇" code="320324103" />
+    <street name="岚山镇" code="320324104" />
+    <street name="李集镇" code="320324105" />
+    <street name="桃园镇" code="320324106" />
+    <street name="官山镇" code="320324107" />
+    <street name="高作镇" code="320324108" />
+    <street name="沙集镇" code="320324109" />
+    <street name="凌城镇" code="320324110" />
+    <street name="邱集镇" code="320324111" />
+    <street name="古邳镇" code="320324112" />
+    <street name="姚集镇" code="320324113" />
+    <street name="魏集镇" code="320324114" />
+    <street name="梁集镇" code="320324115" />
+    <street name="庆安镇" code="320324116" />
+    <street name="经济开发区" code="320324401" />
+    <street name="宁江工业园" code="320324402" />
+    <street name="八里金属机电产业园" code="320324403" />
+    <street name="桃岚化工园" code="320324404" />
+    <street name="临空产业园" code="320324405" />
+    <street name="现代农业示范区" code="320324406" />
+</county>
+<county name="新沂" code="320381">
+    <street name="新安街道" code="320381001" />
+    <street name="北沟街道" code="320381002" />
+    <street name="墨河街道" code="320381003" />
+    <street name="唐店街道" code="320381004" />
+    <street name="瓦窑镇" code="320381102" />
+    <street name="港头镇" code="320381103" />
+    <street name="合沟镇" code="320381105" />
+    <street name="草桥镇" code="320381106" />
+    <street name="窑湾镇" code="320381107" />
+    <street name="棋盘镇" code="320381108" />
+    <street name="马陵山镇" code="320381109" />
+    <street name="新店镇" code="320381110" />
+    <street name="邵店镇" code="320381111" />
+    <street name="时集镇" code="320381113" />
+    <street name="高流镇" code="320381114" />
+    <street name="阿湖镇" code="320381115" />
+    <street name="双塘镇" code="320381116" />
+    <street name="经济开发区" code="320381401" />
+    <street name="锡沂工业园区" code="320381402" />
+</county>
+<county name="邳州" code="320382">
+    <street name="东湖街道" code="320382001" />
+    <street name="运河街道" code="320382002" />
+    <street name="戴圩街道" code="320382003" />
+    <street name="炮车街道" code="320382004" />
+    <street name="邳城镇" code="320382102" />
+    <street name="官湖镇" code="320382103" />
+    <street name="四户镇" code="320382104" />
+    <street name="宿羊山镇" code="320382105" />
+    <street name="八义集镇" code="320382106" />
+    <street name="土山镇" code="320382107" />
+    <street name="碾庄镇" code="320382108" />
+    <street name="港上镇" code="320382109" />
+    <street name="邹庄镇" code="320382110" />
+    <street name="占城镇" code="320382111" />
+    <street name="新河镇" code="320382112" />
+    <street name="八路镇" code="320382113" />
+    <street name="铁富镇" code="320382115" />
+    <street name="岔河镇" code="320382116" />
+    <street name="陈楼镇" code="320382118" />
+    <street name="邢楼镇" code="320382119" />
+    <street name="戴庄镇" code="320382120" />
+    <street name="车辐山镇" code="320382121" />
+    <street name="燕子埠镇" code="320382122" />
+    <street name="赵墩镇" code="320382123" />
+    <street name="议堂镇" code="320382124" />
+    <street name="邳城农场" code="320382401" />
+    <street name="张楼农场" code="320382402" />
+    <street name="江苏邳州经济开发区" code="320382403" />
+</county>
+</city>
+</address>

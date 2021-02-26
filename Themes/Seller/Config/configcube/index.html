@@ -1,0 +1,133 @@
+{template '_header'}
+<style type='text/css'>
+    .dd-handle { height: 40px; line-height: 30px}
+    .dd-list { width:860px;}
+</style>
+
+<div class="page-header">
+	当前位置：<span class="text-primary">魔方推荐</span>
+</div>
+
+<div class="page-content">
+	<img src="{php echo EATER_PLANET_STATIC . 'images/'}cube.jpg">
+	<div class="alert alert-primary" style="margin-top: 10px;">提示：拖动改变位置，最多添加4个，请参照上图</div>
+
+	<form action="" method="post" class="form-validate">
+		<table class="table">
+			<thead>
+				<th></th>
+				<th>图片</th>
+				<th>链接</th>
+				<th>操作</th>
+			</thead>
+			<tbody id="tbody">
+				<?php foreach( $cubes as $i $cube ){ ?>
+					<tr class="cube-item">
+						<td>
+							<a href="javascript:;" class="btn btn-pill btn-primary btn-sm btn-move"><i class="fa fa-arrows"></i></a>
+						</td>
+						<td>
+							<div class="input-group img-item">
+								<div class="input-group-addon" style="padding: 0 5px;">
+									<img src="{: tomedia($cube['img'])}" style="height:20px;width:20px" onerror="this.src='/assets/ep/images/nopic.png'" />
+								</div>
+
+								<input type="text" class="form-control" name="cube_img[]" value="{$cube['img']}" readonly="readonly" />
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-pill btn-primary btn-select-pic">选择图片</button>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="input-group form-group" style="margin: 0;">
+								<input type="text" value="{$cube['url']}" class="form-control valid" name="cube_url[]" placeholder="" id="cubelink_{php echo $i+10000}">
+								<div class="input-group-append">
+<span data-input="#cubelink_{php echo $i+10000}" data-toggle="selectUrl" class="btn btn-pill btn-primary">选择链接</span>
+</div>
+								<!-- <input type="text" value="{$cube['url']}" class="form-control valid"  readonly="readonly"> -->
+							</div>
+						</td>
+						<td>
+							<button type="button" class="btn btn-danger  btn-sm" onclick="removeCube(this)"><i class="fa fa-remove"></i></button>
+						</td>
+					</tr>
+				<?php } ?>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<input type="submit" class="btn btn-primary" value="保存">
+						<button type="button" class="btn btn-pill btn-primary" onclick="addCube()"><i class="fa fa-plus"></i> 添加魔方</button>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</form>
+</div>
+
+<script language='javascript'>
+	$(function () {
+		bindEvents();
+	})
+	function removeCube(obj){
+		$(obj).closest('.cube-item').remove();
+	}
+	function addCube(){
+	    if($('.cube-item').length>=4){
+		tip.msgbox.err('最多添加4个魔方');
+		return;
+	    }
+	   	var timestamp=new Date().getTime();
+		var html='<tr class="cube-item">';
+		html+='<td><a href="javascript:;" class="btn btn-pill btn-primary btn-sm btn-move"><i class="fa fa-arrows"></i></a></td>';
+		html+='<td>';
+		html+='<div class="input-group img-item">';
+		html+='<div class="input-group-addon">';
+		html+='<img src="" style="height:20px;width:20px" onerror="this.src=\'/assets/ep/images/nopic.png\'"/>';
+		html+='</div>';
+		html+='<input type="text" class="form-control" name="cube_img[]" />';
+		html+='<div class="input-group-btn">';
+		html+='<button type="button" class="btn btn-pill btn-primary btn-select-pic">选择图片</button>';
+		html+='</div>';
+		html+='</div>';
+		html+='</td><td><div class="input-group form-group" style="margin: 0;">';
+		html+='<input type="text" value="" class="form-control valid" name="cube_url[]" placeholder="" id="cubelink_'+timestamp+'">';
+		html+='<span data-input="#cubelink_'+timestamp+'" data-toggle="selectUrl" class="input-group-addon btn btn-pill btn-primary">选择链接</span></div>'
+		html+='</td><td><button type="button" class="btn btn-danger  btn-sm" onclick="removeCube(this)"><i class="fa fa-remove"></i></button>';
+
+		html+='</td>';
+		html+='</tr>';
+		$('#tbody').append(html);
+		bindEvents();
+	}
+	function bindEvents() {
+		require(['jquery', 'util'], function ($, util) {
+			$('.btn-select-pic').unbind('click').click(function () {
+				var imgitem = $(this).closest('.img-item');
+				util.image('', function (data) {
+					imgitem.find('img').attr('src', data['url']);
+					imgitem.find('input').val(data['attachment']);
+				});
+			});
+		});
+		require(['jquery.ui'] ,function(){
+			$("#tbody").sortable({handle: '.btn-move'});
+		})
+	}
+	myrequire(['jquery.nestable'], function () {
+		$('#div_nestable').nestable({maxDepth: 1});
+		$('.dd-item').addClass('full');
+		$(".dd-handle a,.dd-handle div").mousedown(function (e) {
+			e.stopPropagation();
+		});
+		$("#save_sort").click(function () {
+			var json = window.JSON.stringify($('#div_nestable').nestable("serialize"));
+			$(':input[name=datas]').val(json);
+		})
+	})
+</script>
+
+{template '_footer'}
+
+
+<!--OTEzNzAyMDIzNTAzMjQyOTE0-->

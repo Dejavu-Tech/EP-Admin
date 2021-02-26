@@ -1,0 +1,91 @@
+<div class="table-responsive custom-scrollbar" style="max-height: calc(100vh - 110px);overflow:auto;overflow-x:hidden;max-width:850px;">
+    <table class="display supplyquery table-xs" style="width: 100%">
+        <div class="input-group m-b-10">
+            <input type="text" placeholder="请输入名称进行搜索" id="select-url-kw" value="" class="form-control">
+            <div class="input-group-append" data-type="url"><span class="btn btn-primary select-btn">搜索</span></div>
+        </div>
+
+        <tbody>
+        <?php foreach( $need_data as $row ){ ?>
+        <tr>
+            <td>{$row['community_name']}</td>
+            <td>{$row['head_name']}</td>
+            <td>{$row['head_mobile']}</td>
+            <td>{$row['fullAddress']}</td>
+            <td style="white-space:nowrap;text-align: right;"><a href="javascript:;" class="btn-primary btn-sm choose_dan_head" data-json='{:json_encode($row);}'>选择</a></td>
+        </tr>
+        <?php } ?>
+        <?php if(count($need_data)<=0){ ?>
+        <tr>
+            <td colspan='4' align='center'>未找到可分配的小区</td>
+        </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var query_kwd = '{$kwd}';
+    var query_url = "{:U('communityhead/lineheadquery', array('is_soli' => 1 ))}";
+    var can_next = true;
+    $(".select-btn").click(function(){
+
+        query_kwd = $.trim($("#select-url-kw").val());
+
+
+        if(!can_next)
+        {
+            return false;
+        }
+        can_next = false;
+        $.ajax({
+            url:query_url,
+            type:'post',
+            dataType:'json',
+            data:{keyword:query_kwd,is_ajax:1},
+            success:function(ret){
+                if(ret.code == 0)
+                {
+                    $('.supplyquery tbody').html(ret.html);
+                    //	$('#pager_ajax').html(ret.pager);
+                }
+                can_next = true;
+            }
+        })
+    });
+
+    $(document).undelegate(".choose_dan_head","click").delegate(".choose_dan_head","click",function(){
+        var json_obj = JSON.parse($(this).attr('data-json'));
+
+        var is_exist = false;
+        $('.multi-audio-item').each(function(){
+            var data_id = $(this).attr('data-id');
+            if(data_id == json_obj.id){
+                is_exist = true;
+                return false;
+            }
+        });
+        if(!is_exist){
+            $('#head_id').val(json_obj.id);
+            var p_html = '';
+            p_html+= '<div class="multi-audio-item" style="width: auto;margin-right: 20px" data-id="'+json_obj.id+'">';
+            p_html+= '    <div class="input-group" style="display: flex;">';
+            p_html+= '       <input type="text" class="btn btn-primary img-textname" readonly="" value="'+json_obj.community_name+'">';
+            p_html+= '       <input type="hidden" class="mult_heads" value="'+json_obj.id+'" name="head_id[]">';
+            p_html+= '       <button class="close m-l-5" style="height:10px;width:10px;cursor:pointer" data-dismiss="modal" aria-label="Close" data-id="'+json_obj.id+'" onclick="cancle_head(this, '+json_obj.id+')" type="button" title="删除该团长"><span aria-hidden="true">×</span></button>';
+            p_html+= '    </div>';
+            p_html+= '</div>';
+
+            // $(cur_open_div).parent().siblings().remove();
+            //$('.mult_choose_goodsid').remove();
+
+            // $(cur_open_div).val( json_obj.id );
+        <?php if($is_mult == 1){ ?>
+                $('.multi-audio-details').append(p_html);
+            <?php }else{ ?>
+                $('.multi-audio-details').html(p_html);
+                layer.close(layer.index);
+            <?php } ?>
+        }
+    });
+</script>

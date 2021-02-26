@@ -1,0 +1,84 @@
+/**=====================
+   18. Mega option CSS Start
+==========================**/
+.mega-inline{
+	margin-bottom: -30px;
+	display: flex;
+	.card{
+		border: 1px solid #f3f3f3;
+	}
+	.mega-title-badge{
+		display:table;
+		width: 100%;
+		font-size: 14px;
+    	font-weight: 600;
+    	text-transform: uppercase;
+	}
+	.media{
+		.radio{
+			margin-left: 3px;
+		}
+	}
+}
+.mega-vertical{
+	display: flex;
+	flex-wrap: wrap;
+	.mega-title-badge{
+		display:table;
+		width: 100%;
+		font-size: 14px;
+    	font-weight: 600;
+    	text-transform: uppercase;
+	}
+	.media{
+		.radio{
+			margin-left: 3px;
+		}
+	}
+}
+.mega-title{
+	font-weight: 600;
+}
+.mega-horizontal{
+	display: flex;
+	flex-wrap: wrap;
+	.card{
+		border: 1px solid #f3f3f3;
+	}
+	.mega-title-badge{
+		display:table;
+		width: 100%;
+		font-size: 14px;
+    	font-weight: 600;
+    	text-transform: uppercase;
+	}
+	.media{
+		.radio{
+			margin-left: 3px;
+		}
+	}
+}
+.plain-style{
+	.card{
+		box-shadow: none;
+		border: none;
+	}
+}
+.border-style{
+	.card{
+		box-shadow: none;
+		border: 1px solid $light-gray;
+	}
+}
+.offer-style{
+	.card{
+		box-shadow: none;
+		border: 1px dashed $light-gray;
+	}
+}
+.rating-star-wrapper{
+	color: #797979;
+}
+/**=====================
+     18. Mega option CSS Ends
+==========================**/

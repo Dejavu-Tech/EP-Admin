@@ -1,0 +1,195 @@
+// vertical menu start
+.mega-menu-header
+  .vertical-mobile-sidebar
+    i.sidebar-toggle-btn(data-feather='align-right')
+  .vertical-menu-main
+    nav#main-nav
+      // Sample menu definition
+      ul#main-menu.sm.pixelstrap
+        li
+          .text-right.mobile-back
+            | Back
+            i.fa.fa-angle-right.pl-2(aria-hidden='true')
+        li
+          a(href='#')
+            i.mt-0(data-feather='command')
+            | Mega menu
+          ul.mega-menu
+            li
+              .card-body
+                .row
+                  .col-xl-3.list-unstyled
+                    div
+                      p.title
+                        | Builder [BS4+] 
+                        span.badge.badge-success.ml-2 New
+                    div
+                      a(href='javascript:;')  Page Builder 
+                    div
+                      a(href='javascript:;')  Form Builder
+                    div
+                      a(href='javascript:;')  Button Builder 
+                    .mt-3
+                      p.title Accordion
+                    div
+                      #accordionoc.default-according.style-1
+                        .card
+                          div
+                            h5.mb-0
+                              button.btn.btn-link.p-2(data-toggle='collapse', data-target='#collapseicon', aria-expanded='true', aria-controls='collapseicon')
+                                | Accordion 1
+                          #collapseicon.collapse.show(data-parent='#accordionoc')
+                            .card-body.p-2
+                              | Anim pariatur cliche reprehenderit.
+                        .card
+                          div
+                            h5.mb-0
+                              button.btn.btn-link.text-muted.collapsed.p-1(data-toggle='collapse', data-target='#collapseicon1', aria-expanded='false', aria-controls='collapseicon1')
+                                | Accordion 2
+                          #collapseicon1.collapse(data-parent='#accordionoc')
+                            .card-body.p-2
+                              | Anim pariatur cliche reprehenderit.
+                        .card
+                          div
+                            h5.mb-0
+                              button.btn.btn-link.text-muted.collapsed.p-1(data-toggle='collapse', data-target='#collapseicon2', aria-expanded='false', aria-controls='collapseicon2')
+                                | Accordion 3
+                          #collapseicon2.collapse(data-parent='#accordionoc')
+                            .card-body.p-2
+                              | Anim pariatur cliche reprehenderit.
+                  .col-xl-2.list-unstyled.xs-mt
+                    div
+                      p.title Drill Down
+                    .drilldown
+                      .drilldown-container
+                        .drilldown-root
+                          div
+                            a.font-primary.mt-0(href='#') First Level Menu
+                          div
+                            a.pl-0(href='#')
+                              i.icon-support
+                              |   Base 
+                              span.float-right →
+                            .drilldown-sub
+                              .drilldown-back
+                                a.font-primary.f-w-100(href='#')
+                                  span ←
+                                  |  Second Level Menu
+                              div
+                                a(href='#')
+                                  i.fa.fa-angle-right
+                                  |   State color
+                              div
+                                a(href='#')
+                                  i.fa.fa-angle-right
+                                  |   Tabs 
+                                  span.float-right →
+                                .drilldown-sub
+                                  .drilldown-back
+                                    a.font-primary.f-w-100(href='#')
+                                      span ←
+                                      |  Third Level Menu
+                                  div
+                                    a(href='#')
+                                      i.fa.fa-angle-right
+                                      |   Bootstrap Tabs
+                                  div
+                                    a(href='#')
+                                      i.fa.fa-angle-right
+                                      |   Line Tabs
+                              div
+                                a(href='#')
+                                  i.fa.fa-angle-right
+                                  |   Typography
+                              div
+                                a(href='#')
+                                  i.fa.fa-angle-right
+                                  |   Progress
+                              div
+                                a(href='#')
+                                  i.fa.fa-angle-right
+                                  |   Model
+                              div
+                                a(href='#')
+                                  i.fa.fa-angle-right
+                                  |   Alert
+                              div
+                                a(href='#')
+                                  i.fa.fa-angle-right
+                                  |   Popover
+                          div
+                            a(href='#')
+                              i.icon-dropbox
+                              |   Advanced
+                          div
+                            a(href='#')
+                              i.fa.fa-spin.fa-spinner
+                              |   Animation
+                          div
+                            a(href='#')
+                              i.icon-package
+                              |   Icons
+                          div
+                            a(href='#')
+                              i.icon-cloud-down
+                              |   Buttons
+                          div
+                            a(href='#')
+                              i.icon-notepad
+                              |   Forms
+                          div
+                            a.mb-0(href='#')
+                              i.icon-harddrives
+                              |   Tables
+                  .col-xl-3.galleria-list.clearfix.lg-mt
+                    div
+                      p.title Galleria
+                    div
+                      .galleria.row
+                        .col-6
+                          a(href='javascript:void(0)')
+                            img(src='../assets/images/slider/1.jpg', alt='')
+                          h4.username.text-ellipsis
+                            | Airi Satou
+                            small Algerian
+                        .col-6
+                          a(href='javascript:void(0)')
+                            img(src='../assets/images/slider/2.jpg', alt='')
+                          h4.username.text-ellipsis
+                            | Fiona Green
+                            small Korean
+                        .col-6.mb-0
+                          a(href='javascript:void(0)')
+                            img(src='../assets/images/slider/3.jpg', alt='')
+                          h4.username.text-ellipsis.mb-0
+                            | Gavin Joyce
+                            small Indian
+                        .col-6.mb-0
+                          a(href='javascript:void(0)')
+                            img(src='../assets/images/slider/4.jpg', alt='')
+                          h4.username.text-ellipsis.mb-0
+                            | Howard Hatfield
+                            small Japanese
+                  .col-xl-4.list-unstyled.custom-nav-img.lg-mt
+                    div
+                      p.title Contact Form
+                    div
+                      form.theme-form
+                        .form-group
+                          label.col-form-label.pt-0
+                            i.icon-user.pr-2
+                            |                                                                         Your Name
+                          input.form-control(type='text', placeholder='Enter your name')
+                        .form-group
+                          label.col-form-label
+                            i.icon-email.pr-2
+                            | Your Email
+                          input.form-control(type='email', placeholder='Enter your emailid')
+                        .form-group
+                          label.col-form-label
+                            i.icon-comment.pr-2
+                            | Your Message
+                          textarea.form-control(placeholder='Enter your message', rows='2')
+                        .form-group.mb-0
+                          button.btn.btn-pill.btn-primary Send
+// vertical menu ends

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>index</title>
+</head>
+<body style="width:100%;margin:0 auto;text-align: center;">
+<input type="hidden" id="order_id" name="order_id" value="{$orderdistribution_info['order_id']}"/>
+<input type="hidden" id="third_distribution_type" name="third_distribution_type" value="{$orderdistribution_info['third_distribution_type']}"/>
+<div class="layui-card-body" style="padding:15px 0 0 15px;">
+	<?php if($orderdistribution_info['state'] == 0 || $orderdistribution_info['state'] == 1 || $orderdistribution_info['state'] == 2){ ?>
+	<a href="javascript:;" class="btn btn-primary cancelBtn">取消配送订单</a>
+	<?php } ?>
+</div>
+<table class="display " style="width:100%;">
+	<thead>
+	<tr>
+		<th>快递</th>
+		<th>配送信息</th>
+		<th>订单号</th>
+		<th>时间</th>
+	</tr>
+	</thead>
+	<tbody>
+	<?php if(!empty($log_list)){?>
+	<?php foreach($log_list as $k=>$v){ ?>
+	<tr>
+		<td>
+			<?php echo $third_name;?>
+		</td>
+		<td><?php echo $v['remark'];?></td>
+		<td><?php echo $orderdistribution_info['third_order_id'];?></td>
+		<td><?php echo date('Y-m-d H:i:s',$v['addtime']); ?></td>
+	</tr>
+	<?php } ?>
+	<?php } ?>
+	</tbody>
+</table>
+</body>
+<script>
+	$(function(){
+		$('.cancelBtn').click(function(){
+			var order_id = $('#order_id').val();
+			var third_distribution_type = $('#third_distribution_type').val();
+			$.post("{:U('order/third_cancel_reason')}", {third_distribution_type:third_distribution_type,order_id:order_id}, function(shtml){
+				layer.open({
+					type: 1,
+					area: '600px',
+					content: shtml //注意，如果str是object，那么需要字符拼接。
+				});
+			});
+		})
+	})
+</script>
+</html>

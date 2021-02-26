@@ -1,0 +1,35 @@
+<div class="modal-dialog modal-dialog-centered btn-showcase">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title">快递信息</h5>
+			<button data-dismiss="modal" class="close" type="button">×</button>
+		</div>
+		<?php  if($code == 2){ ?>
+		<div style="padding-top: 10px;padding-left: 30px;font-size:16px;color:red;">{$reason}</div>
+		<?php }?>
+		<div class="package-status">
+		</div>
+		<div class="package-status">
+			<div class="status-box" >
+				<?php foreach( $list as  $item  ){ ?>
+				<ul  class="status-list">
+					<li style="padding-top: 10px;">
+						<div></div>
+						<div class="status-content-before">{$item['AcceptStation']}</div>
+						<div class="status-time-before">{$item['AcceptTime']}</div>
+						<div class="status-line"></div>
+					</li>
+				</ul>
+				<?php } ?>
+				<li style="padding-top: 10px;"></li>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+

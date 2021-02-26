@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="西安" code="610100">
+<county name="新城" code="610102">
+    <street name="西一路街道" code="610102001" />
+    <street name="长乐中路街道" code="610102002" />
+    <street name="中山门街道" code="610102003" />
+    <street name="韩森寨街道" code="610102004" />
+    <street name="解放门街道" code="610102005" />
+    <street name="自强路街道" code="610102006" />
+    <street name="太华路街道" code="610102007" />
+    <street name="长乐西路街道" code="610102008" />
+    <street name="胡家庙街道" code="610102009" />
+</county>
+<county name="碑林" code="610103">
+    <street name="南院门街道" code="610103001" />
+    <street name="柏树林街道" code="610103002" />
+    <street name="长乐坊街道" code="610103003" />
+    <street name="东关南街街道" code="610103004" />
+    <street name="太乙路街道" code="610103005" />
+    <street name="文艺路街道" code="610103006" />
+    <street name="长安路街道" code="610103007" />
+    <street name="张家村街道" code="610103008" />
+</county>
+<county name="莲湖" code="610104">
+    <street name="青年路街道" code="610104001" />
+    <street name="北院门街道" code="610104002" />
+    <street name="北关街道" code="610104003" />
+    <street name="红庙坡街道" code="610104004" />
+    <street name="环城西路街道" code="610104005" />
+    <street name="西关街道" code="610104006" />
+    <street name="土门街道" code="610104007" />
+    <street name="桃园路街道" code="610104008" />
+    <street name="枣园街道" code="610104009" />
+</county>
+<county name="灞桥" code="610111">
+    <street name="纺织城街道" code="610111001" />
+    <street name="十里铺街道" code="610111002" />
+    <street name="红旗街道" code="610111003" />
+    <street name="席王街道" code="610111004" />
+    <street name="洪庆街道" code="610111005" />
+    <street name="狄寨街道" code="610111006" />
+    <street name="灞桥街道" code="610111007" />
+    <street name="新筑街道" code="610111008" />
+    <street name="新合街道" code="610111009" />
+</county>
+<county name="未央" code="610112">
+    <street name="张家堡街道" code="610112001" />
+    <street name="三桥街道" code="610112002" />
+    <street name="辛家庙街道" code="610112003" />
+    <street name="徐家湾街道" code="610112004" />
+    <street name="大明宫街道" code="610112005" />
+    <street name="谭家街道" code="610112006" />
+    <street name="草滩街道" code="610112007" />
+    <street name="六村堡街道" code="610112008" />
+    <street name="未央宫街道" code="610112009" />
+    <street name="汉城街道" code="610112010" />
+    <street name="未央湖街道" code="610112011" />
+    <street name="建章路街道" code="610112012" />
+</county>
+<county name="雁塔" code="610113">
+    <street name="小寨路街道" code="610113001" />
+    <street name="大雁塔街道" code="610113002" />
+    <street name="长延堡街道" code="610113003" />
+    <street name="电子城街道" code="610113004" />
+    <street name="等驾坡街道" code="610113005" />
+    <street name="鱼化寨街道" code="610113006" />
+    <street name="丈八沟街道" code="610113007" />
+    <street name="曲江街道" code="610113008" />
+</county>
+<county name="阎良" code="610114">
+    <street name="凤凰路街道" code="610114001" />
+    <street name="新华路街道" code="610114002" />
+    <street name="振兴街道" code="610114003" />
+    <street name="新兴街道" code="610114004" />
+    <street name="北屯街道" code="610114005" />
+    <street name="武屯镇" code="610114100" />
+    <street name="关山镇" code="610114101" />
+</county>
+<county name="临潼" code="610115">
+    <street name="骊山街道" code="610115001" />
+    <street name="秦陵街道" code="610115002" />
+    <street name="新丰街道" code="610115003" />
+    <street name="代王街道" code="610115004" />
+    <street name="斜口街道" code="610115005" />
+    <street name="行者街道" code="610115006" />
+    <street name="零口街道" code="610115007" />
+    <street name="相桥街道" code="610115008" />
+    <street name="雨金街道" code="610115009" />
+    <street name="新市街道" code="610115010" />
+    <street name="徐杨街道" code="610115011" />
+    <street name="西泉街道" code="610115012" />
+    <street name="栎阳街道" code="610115013" />
+    <street name="马额街道" code="610115014" />
+    <street name="何寨街道" code="610115015" />
+    <street name="交口街道" code="610115016" />
+    <street name="油槐街道" code="610115017" />
+    <street name="北田街道" code="610115018" />
+    <street name="铁炉街道" code="610115019" />
+    <street name="任留街道" code="610115020" />
+    <street name="穆寨街道" code="610115021" />
+    <street name="小金街道" code="610115022" />
+    <street name="仁宗街道" code="610115023" />
+</county>
+<county name="长安" code="610116">
+    <street name="韦曲街道" code="610116001" />
+    <street name="郭杜街道" code="610116002" />
+    <street name="滦镇街道" code="610116003" />
+    <street name="引镇街道" code="610116004" />
+    <street name="王寺街道" code="610116005" />
+    <street name="马王街道" code="610116006" />
+    <street name="太乙宫街道" code="610116007" />
+    <street name="东大街道" code="610116008" />
+    <street name="子午街道" code="610116009" />
+    <street name="斗门街道" code="610116010" />
+    <street name="细柳街道" code="610116011" />
+    <street name="杜曲街道" code="610116012" />
+    <street name="大兆街道" code="610116013" />
+    <street name="黄良街道" code="610116014" />
+    <street name="兴隆街道" code="610116015" />
+    <street name="王曲街道" code="610116016" />
+    <street name="鸣犊街道" code="610116017" />
+    <street name="王莽街道" code="610116018" />
+    <street name="五台街道" code="610116019" />
+    <street name="高桥街道" code="610116020" />
+    <street name="五星街道" code="610116021" />
+    <street name="灵沼街道" code="610116022" />
+    <street name="杨庄街道" code="610116023" />
+    <street name="炮里街道" code="610116024" />
+    <street name="魏寨街道" code="610116025" />
+</county>
+<county name="蓝田" code="610122">
+    <street name="蓝关镇" code="610122100" />
+    <street name="洩湖镇" code="610122101" />
+    <street name="华胥镇" code="610122102" />
+    <street name="前卫镇" code="610122103" />
+    <street name="汤峪镇" code="610122104" />
+    <street name="焦岱镇" code="610122105" />
+    <street name="玉山镇" code="610122106" />
+    <street name="三里镇" code="610122107" />
+    <street name="普化镇" code="610122108" />
+    <street name="葛牌镇" code="610122109" />
+    <street name="灞源镇" code="610122110" />
+    <street name="九间房镇" code="610122111" />
+    <street name="蓝桥镇" code="610122112" />
+    <street name="玉川镇" code="610122113" />
+    <street name="辋川镇" code="610122114" />
+    <street name="厚镇" code="610122115" />
+    <street name="三官庙镇" code="610122116" />
+    <street name="金山镇" code="610122117" />
+    <street name="安村镇" code="610122118" />
+    <street name="孟村镇" code="610122119" />
+    <street name="小寨镇" code="610122120" />
+    <street name="史家寨镇" code="610122121" />
+</county>
+<county name="周至" code="610124">
+    <street name="二曲镇" code="610124100" />
+    <street name="哑柏镇" code="610124101" />
+    <street name="终南镇" code="610124102" />
+    <street name="马召镇" code="610124103" />
+    <street name="集贤镇" code="610124104" />
+    <street name="楼观镇" code="610124105" />
+    <street name="尚村镇" code="610124106" />
+    <street name="广济镇" code="610124107" />
+    <street name="厚畛子镇" code="610124108" />
+    <street name="青化镇" code="610124109" />
+    <street name="竹峪镇" code="610124110" />
+    <street name="翠峰镇" code="610124111" />
+    <street name="四屯镇" code="610124112" />
+    <street name="侯家村镇" code="610124113" />
+    <street name="辛家寨镇" code="610124114" />
+    <street name="司竹镇" code="610124115" />
+    <street name="九峰镇" code="610124116" />
+    <street name="富仁镇" code="610124117" />
+    <street name="骆峪镇" code="610124118" />
+    <street name="陈河镇" code="610124119" />
+    <street name="板房子镇" code="610124120" />
+    <street name="王家河镇" code="610124121" />
+</county>
+<county name="户县" code="610125">
+    <street name="甘亭镇" code="610125100" />
+    <street name="余下镇" code="610125101" />
+    <street name="祖庵镇" code="610125102" />
+    <street name="秦渡镇" code="610125103" />
+    <street name="大王镇" code="610125104" />
+    <street name="草堂镇" code="610125105" />
+    <street name="蒋村镇" code="610125106" />
+    <street name="庞光镇" code="610125107" />
+    <street name="涝店镇" code="610125108" />
+    <street name="甘河镇" code="610125109" />
+    <street name="石井镇" code="610125110" />
+    <street name="玉蝉镇" code="610125111" />
+    <street name="五竹镇" code="610125112" />
+    <street name="苍游镇" code="610125113" />
+    <street name="渭丰镇" code="610125114" />
+    <street name="天桥镇" code="610125115" />
+</county>
+<county name="高陵" code="610126">
+    <street name="鹿苑街道" code="610126001" />
+    <street name="泾渭街道" code="610126002" />
+    <street name="崇皇街道" code="610126003" />
+    <street name="通远镇" code="610126101" />
+    <street name="耿镇" code="610126102" />
+    <street name="榆楚镇" code="610126104" />
+    <street name="湾子镇" code="610126105" />
+    <street name="张卜镇" code="610126106" />
+</county>
+</city>
+</address>

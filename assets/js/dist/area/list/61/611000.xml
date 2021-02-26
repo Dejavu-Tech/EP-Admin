@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="商洛" code="611000">
+<county name="商州" code="611002">
+    <street name="城关街道" code="611002001" />
+    <street name="大赵峪街道" code="611002002" />
+    <street name="陈塬街道" code="611002003" />
+    <street name="刘湾街道" code="611002004" />
+    <street name="夜村镇" code="611002101" />
+    <street name="沙河子镇" code="611002104" />
+    <street name="杨峪河镇" code="611002105" />
+    <street name="金陵寺镇" code="611002106" />
+    <street name="黑山镇" code="611002107" />
+    <street name="杨斜镇" code="611002108" />
+    <street name="麻街镇" code="611002109" />
+    <street name="黑龙口镇" code="611002110" />
+    <street name="牧护关镇" code="611002111" />
+    <street name="大荆镇" code="611002112" />
+    <street name="腰市镇" code="611002113" />
+    <street name="板桥镇" code="611002114" />
+    <street name="北宽坪镇" code="611002115" />
+    <street name="砚池河镇" code="611002116" />
+    <street name="麻池河镇" code="611002117" />
+    <street name="西荆镇" code="611002118" />
+    <street name="三岔河镇" code="611002119" />
+    <street name="上官坊镇" code="611002120" />
+    <street name="闫村镇" code="611002121" />
+    <street name="二龙山水库" code="611002400" />
+    <street name="南秦水库" code="611002401" />
+    <street name="二龙山国营林场" code="611002402" />
+    <street name="商丹循环工业园" code="611002403" />
+    <street name="荆河工业园" code="611002404" />
+    <street name="荆河农业示范园" code="611002405" />
+    <street name="高校园区" code="611002406" />
+    <street name="商洛职业技术学院" code="611002407" />
+    <street name="氟化硅产业业园" code="611002408" />
+</county>
+<county name="洛南" code="611021">
+    <street name="城关镇" code="611021100" />
+    <street name="景村镇" code="611021101" />
+    <street name="古城镇" code="611021102" />
+    <street name="三要镇" code="611021103" />
+    <street name="灵口镇" code="611021104" />
+    <street name="寺耳镇" code="611021106" />
+    <street name="巡检镇" code="611021107" />
+    <street name="石坡镇" code="611021108" />
+    <street name="石门镇" code="611021109" />
+    <street name="麻坪镇" code="611021110" />
+    <street name="洛源镇" code="611021111" />
+    <street name="保安镇" code="611021112" />
+    <street name="卫东镇" code="611021113" />
+    <street name="永丰镇" code="611021114" />
+    <street name="谢湾镇" code="611021115" />
+    <street name="四皓镇" code="611021116" />
+    <street name="柏峪寺镇" code="611021117" />
+    <street name="高耀镇" code="611021118" />
+    <street name="寺坡镇" code="611021119" />
+</county>
+<county name="丹凤" code="611022">
+    <street name="龙驹寨镇" code="611022100" />
+    <street name="庾岭镇" code="611022101" />
+    <street name="蔡川镇" code="611022102" />
+    <street name="峦庄镇" code="611022103" />
+    <street name="铁峪铺镇" code="611022104" />
+    <street name="武关镇" code="611022105" />
+    <street name="竹林关镇" code="611022106" />
+    <street name="土门镇" code="611022107" />
+    <street name="寺坪镇" code="611022108" />
+    <street name="商镇" code="611022109" />
+    <street name="棣花镇" code="611022110" />
+    <street name="资峪镇" code="611022111" />
+    <street name="北赵川镇" code="611022112" />
+    <street name="桃坪镇" code="611022113" />
+    <street name="月日镇" code="611022114" />
+    <street name="花瓶子镇" code="611022115" />
+</county>
+<county name="商南" code="611023">
+    <street name="城关镇" code="611023100" />
+    <street name="富水镇" code="611023101" />
+    <street name="湘河镇" code="611023102" />
+    <street name="白浪镇" code="611023103" />
+    <street name="赵川镇" code="611023104" />
+    <street name="过风楼镇" code="611023107" />
+    <street name="试马镇" code="611023108" />
+    <street name="清油河镇" code="611023109" />
+    <street name="十里坪镇" code="611023110" />
+    <street name="金丝峡镇" code="611023111" />
+    <street name="青山镇" code="611023112" />
+    <street name="水沟镇" code="611023113" />
+    <street name="魏家台镇" code="611023114" />
+</county>
+<county name="山阳" code="611024">
+    <street name="城关镇" code="611024100" />
+    <street name="高坝店镇" code="611024101" />
+    <street name="天竺山镇" code="611024102" />
+    <street name="中村镇" code="611024103" />
+    <street name="银花镇" code="611024104" />
+    <street name="西照川镇" code="611024105" />
+    <street name="漫川关镇" code="611024106" />
+    <street name="南宽坪镇" code="611024107" />
+    <street name="户家塬镇" code="611024108" />
+    <street name="杨地镇" code="611024109" />
+    <street name="牛耳川镇" code="611024110" />
+    <street name="小河口镇" code="611024111" />
+    <street name="色河铺镇" code="611024112" />
+    <street name="板岩镇" code="611024113" />
+    <street name="元子街镇" code="611024114" />
+    <street name="十里铺镇" code="611024115" />
+    <street name="延坪镇" code="611024116" />
+    <street name="两岭镇" code="611024117" />
+    <street name="王闫镇" code="611024118" />
+    <street name="天桥镇" code="611024119" />
+    <street name="石佛寺镇" code="611024120" />
+    <street name="法官镇" code="611024121" />
+    <street name="双坪镇" code="611024122" />
+</county>
+<county name="镇安" code="611025">
+    <street name="永乐镇" code="611025100" />
+    <street name="回龙镇" code="611025101" />
+    <street name="铁厂镇" code="611025102" />
+    <street name="大坪镇" code="611025103" />
+    <street name="米粮镇" code="611025104" />
+    <street name="茅坪回族镇" code="611025105" />
+    <street name="西口回族镇" code="611025106" />
+    <street name="高峰镇" code="611025107" />
+    <street name="青铜关镇" code="611025108" />
+    <street name="柴坪镇" code="611025109" />
+    <street name="达仁镇" code="611025110" />
+    <street name="木王镇" code="611025111" />
+    <street name="东川镇" code="611025112" />
+    <street name="云盖寺镇" code="611025113" />
+    <street name="庙沟镇" code="611025114" />
+    <street name="张家镇" code="611025115" />
+    <street name="灵龙镇" code="611025116" />
+    <street name="月河镇" code="611025117" />
+    <street name="杨泗镇" code="611025118" />
+    <street name="黑窑沟林厂" code="611025400" />
+    <street name="木王林厂" code="611025401" />
+    <street name="镇安县苗圃" code="611025402" />
+</county>
+<county name="柞水" code="611026">
+    <street name="乾佑镇" code="611026100" />
+    <street name="营盘镇" code="611026101" />
+    <street name="下梁镇" code="611026102" />
+    <street name="石瓮镇" code="611026103" />
+    <street name="小岭镇" code="611026104" />
+    <street name="凤凰镇" code="611026105" />
+    <street name="红岩寺镇" code="611026106" />
+    <street name="曹坪镇" code="611026107" />
+    <street name="蔡玉窑镇" code="611026108" />
+    <street name="杏坪镇" code="611026109" />
+    <street name="瓦房口镇" code="611026110" />
+    <street name="柴庄镇" code="611026111" />
+    <street name="丰北河镇" code="611026112" />
+</county>
+</city>
+</address>

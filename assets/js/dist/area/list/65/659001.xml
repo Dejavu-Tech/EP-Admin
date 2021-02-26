@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="石河子" code="659001">
+<county name="石河子" code="659001001">
+    <street name="向阳街道" code="659001002" />
+    <street name="红山街道" code="659001003" />
+    <street name="老街街道" code="659001004" />
+    <street name="东城街道" code="659001005" />
+    <street name="北泉镇" code="659001100" />
+    <street name="石河子乡" code="659001200" />
+    <street name="兵团一五二团" code="659001500" />
+</county>
+</city>
+</address>

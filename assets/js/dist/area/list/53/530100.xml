@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="昆明" code="530100">
+<county name="五华" code="530102">
+    <street name="华山街道" code="530102001" />
+    <street name="护国街道" code="530102002" />
+    <street name="大观街道" code="530102003" />
+    <street name="龙翔街道" code="530102004" />
+    <street name="丰宁街道" code="530102005" />
+    <street name="莲华街道" code="530102006" />
+    <street name="红云街道" code="530102007" />
+    <street name="黑林铺街道" code="530102008" />
+    <street name="普吉街道" code="530102009" />
+    <street name="西翥街道" code="530102010" />
+    <street name="昆明国家高新技术产业开发区" code="530102401" />
+</county>
+<county name="盘龙" code="530103">
+    <street name="拓东街道" code="530103001" />
+    <street name="鼓楼街道" code="530103002" />
+    <street name="东华街道" code="530103003" />
+    <street name="联盟街道" code="530103004" />
+    <street name="金辰街道" code="530103005" />
+    <street name="青云街道" code="530103006" />
+    <street name="龙泉街道" code="530103007" />
+    <street name="茨坝街道" code="530103008" />
+    <street name="双龙街道" code="530103009" />
+    <street name="松华街道" code="530103010" />
+    <street name="盘龙区滇源街道" code="530103011" />
+    <street name="盘龙区阿子营街道" code="530103012" />
+</county>
+<county name="官渡" code="530111">
+    <street name="关上街道" code="530111001" />
+    <street name="太和街道" code="530111002" />
+    <street name="吴井街道" code="530111003" />
+    <street name="金马街道" code="530111004" />
+    <street name="小板桥街道" code="530111005" />
+    <street name="官渡街道" code="530111006" />
+    <street name="矣六街道" code="530111007" />
+    <street name="六甲街道" code="530111008" />
+    <street name="大板桥街道" code="530111009" />
+    <street name="阿拉街道" code="530111010" />
+    <street name="昆明经济技术开发区" code="530111402" />
+</county>
+<county name="西山" code="530112">
+    <street name="西苑街道" code="530112001" />
+    <street name="马街街道" code="530112002" />
+    <street name="金碧街道" code="530112003" />
+    <street name="永昌街道" code="530112004" />
+    <street name="前卫街道" code="530112005" />
+    <street name="福海街道" code="530112006" />
+    <street name="棕树营街道" code="530112007" />
+    <street name="碧鸡街道" code="530112008" />
+    <street name="海口街道" code="530112009" />
+    <street name="团结街道" code="530112010" />
+    <street name="昆明滇池国家旅游度假区" code="530112403" />
+</county>
+<county name="东川" code="530113">
+    <street name="铜都街道" code="530113001" />
+    <street name="汤丹镇" code="530113102" />
+    <street name="因民镇" code="530113103" />
+    <street name="阿旺镇" code="530113104" />
+    <street name="乌龙镇" code="530113105" />
+    <street name="红土地镇" code="530113106" />
+    <street name="拖布卡镇" code="530113107" />
+    <street name="舍块乡" code="530113201" />
+</county>
+<county name="呈贡" code="530121">
+    <street name="龙城街道" code="530114001" />
+    <street name="洛龙街道" code="530114002" />
+    <street name="斗南街道" code="530114003" />
+    <street name="乌龙街道" code="530114004" />
+    <street name="吴家营街道" code="530114005" />
+    <street name="雨花街道" code="530114006" />
+    <street name="七甸街道" code="530114007" />
+    <street name="洛羊街道" code="530114008" />
+    <street name="大渔街道" code="530114009" />
+    <street name="马金铺街道" code="530114010" />
+</county>
+<county name="晋宁" code="530122">
+    <street name="昆阳街道" code="530122001" />
+    <street name="晋城镇" code="530122102" />
+    <street name="二街镇" code="530122103" />
+    <street name="上蒜镇" code="530122105" />
+    <street name="六街镇" code="530122106" />
+    <street name="双河彝族乡" code="530122201" />
+    <street name="夕阳彝族乡" code="530122202" />
+</county>
+<county name="富民" code="530124">
+    <street name="永定街道" code="530124001" />
+    <street name="罗免镇" code="530124103" />
+    <street name="赤鹫镇" code="530124104" />
+    <street name="东村镇" code="530124105" />
+    <street name="款庄镇" code="530124106" />
+    <street name="散旦镇" code="530124107" />
+</county>
+<county name="宜良" code="530125">
+    <street name="匡远街道" code="530125001" />
+    <street name="汤池街道" code="530125002" />
+    <street name="北古城镇" code="530125102" />
+    <street name="狗街镇" code="530125103" />
+    <street name="竹山镇" code="530125105" />
+    <street name="马街镇" code="530125106" />
+    <street name="耿家营乡" code="530125201" />
+    <street name="九乡乡" code="530125202" />
+    <street name="昆明阳宗海风景名胜区" code="530125404" />
+</county>
+<county name="石林" code="530126">
+    <street name="鹿阜街道" code="530126001" />
+    <street name="西街口镇" code="530126105" />
+    <street name="长湖镇" code="530126106" />
+    <street name="圭山镇" code="530126107" />
+    <street name="大可乡" code="530126201" />
+</county>
+<county name="嵩明" code="530127">
+    <street name="嵩阳街道" code="530127001" />
+    <street name="小街镇" code="530127102" />
+    <street name="杨林镇" code="530127103" />
+    <street name="牛栏江镇" code="530127104" />
+</county>
+<county name="禄劝" code="530128">
+    <street name="屏山街道" code="530128001" />
+    <street name="撒营盘镇" code="530128102" />
+    <street name="转龙镇" code="530128103" />
+    <street name="茂山镇" code="530128104" />
+    <street name="团街镇" code="530128105" />
+    <street name="中屏镇" code="530128106" />
+    <street name="皎平渡镇" code="530128107" />
+    <street name="乌东德镇" code="530128108" />
+    <street name="翠华镇" code="530128109" />
+    <street name="九龙镇" code="530128110" />
+    <street name="云龙乡" code="530128204" />
+    <street name="汤郎乡" code="530128207" />
+    <street name="马鹿塘乡" code="530128208" />
+    <street name="则黑乡" code="530128211" />
+    <street name="乌蒙乡" code="530128212" />
+    <street name="雪山乡" code="530128213" />
+    <street name="禄劝工业园区管理委员会" code="530128401" />
+</county>
+<county name="寻甸" code="530129">
+    <street name="仁德街道" code="530129001" />
+    <street name="羊街镇" code="530129103" />
+    <street name="柯渡镇" code="530129104" />
+    <street name="倘甸镇" code="530129105" />
+    <street name="功山镇" code="530129106" />
+    <street name="河口镇" code="530129107" />
+    <street name="七星镇" code="530129108" />
+    <street name="先锋镇" code="530129109" />
+    <street name="鸡街镇" code="530129110" />
+    <street name="凤合镇" code="530129111" />
+    <street name="六哨乡" code="530129205" />
+    <street name="联合乡" code="530129208" />
+    <street name="金源乡" code="530129209" />
+    <street name="甸沙乡" code="530129210" />
+    <street name="昆明倘甸产业园区轿子山旅游开发区" code="530129405" />
+</county>
+<county name="安宁" code="530181">
+    <street name="连然街道" code="530181001" />
+    <street name="金方街道" code="530181002" />
+    <street name="八街街道" code="530181003" />
+    <street name="温泉街道" code="530181004" />
+    <street name="青龙街道" code="530181005" />
+    <street name="禄脿街道" code="530181006" />
+    <street name="草铺街道" code="530181007" />
+    <street name="太平新城街道" code="530181008" />
+    <street name="县街街道" code="530181009" />
+</county>
+</city>
+</address>

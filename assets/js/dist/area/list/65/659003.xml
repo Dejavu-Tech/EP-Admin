@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="图木舒克" code="659003">
+<county name="图木舒克" code="659003001">
+    <street name="前海街道" code="659003002" />
+    <street name="永安坝街道" code="659003003" />
+    <street name="兵团四十四团" code="659003504" />
+    <street name="兵团四十九团" code="659003509" />
+    <street name="兵团五十团" code="659003510" />
+    <street name="兵团五十一团" code="659003511" />
+    <street name="兵团五十三团" code="659003513" />
+    <street name="兵团图木舒克市喀拉拜勒镇" code="659003514" />
+    <street name="兵团图木舒克市永安坝" code="659003515" />
+</county>
+</city>
+</address>

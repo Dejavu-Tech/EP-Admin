@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宿迁" code="321300">
+<county name="宿城" code="321302">
+    <street name="幸福街道" code="321302001" />
+    <street name="项里街道" code="321302002" />
+    <street name="河滨街道" code="321302003" />
+    <street name="古城街道" code="321302004" />
+    <street name="黄河街道" code="321302050" />
+    <street name="古楚街道" code="321302051" />
+    <street name="双庄镇" code="321302100" />
+    <street name="耿车镇" code="321302101" />
+    <street name="埠子镇" code="321302102" />
+    <street name="龙河镇" code="321302103" />
+    <street name="洋北镇" code="321302104" />
+    <street name="中扬镇" code="321302107" />
+    <street name="陈集镇" code="321302109" />
+    <street name="蔡集镇" code="321302110" />
+    <street name="王官集镇" code="321302111" />
+    <street name="洋河镇" code="321302150" />
+    <street name="仓集镇" code="321302151" />
+    <street name="郑楼镇" code="321302152" />
+    <street name="罗圩乡" code="321302201" />
+    <street name="屠园乡" code="321302203" />
+    <street name="三棵树乡" code="321302350" />
+    <street name="南蔡乡" code="321302351" />
+    <street name="宿城开发区" code="321302400" />
+    <street name="苏州宿迁工业园" code="321302450" />
+</county>
+<county name="宿豫" code="321311">
+    <street name="顺河镇" code="321311100" />
+    <street name="仰化镇" code="321311105" />
+    <street name="大兴镇" code="321311106" />
+    <street name="丁嘴镇" code="321311107" />
+    <street name="来龙镇" code="321311108" />
+    <street name="陆集镇" code="321311110" />
+    <street name="关庙镇" code="321311111" />
+    <street name="侍岭镇" code="321311112" />
+    <street name="新庄镇" code="321311113" />
+    <street name="晓店镇" code="321311150" />
+    <street name="皂河镇" code="321311151" />
+    <street name="黄墩镇" code="321311152" />
+    <street name="曹集乡" code="321311201" />
+    <street name="保安乡" code="321311202" />
+    <street name="井头乡" code="321311350" />
+    <street name="宿豫经济开发区" code="321311401" />
+    <street name="宿迁生态化工科技产业园" code="321311402" />
+    <street name="张家港宿豫工业园" code="321311403" />
+    <street name="嶂山林场" code="321311450" />
+    <street name="宿迁市软件与服务外包产业园" code="321311451" />
+</county>
+<county name="沭阳" code="321322">
+    <street name="沭城街道" code="321322001" />
+    <street name="南湖街道" code="321322002" />
+    <street name="梦溪街道" code="321322003" />
+    <street name="十字街道" code="321322004" />
+    <street name="章集街道" code="321322005" />
+    <street name="七雄街道" code="321322006" />
+    <street name="陇集镇" code="321322101" />
+    <street name="胡集镇" code="321322102" />
+    <street name="钱集镇" code="321322103" />
+    <street name="塘沟镇" code="321322104" />
+    <street name="马厂镇" code="321322105" />
+    <street name="沂涛镇" code="321322106" />
+    <street name="庙头镇" code="321322107" />
+    <street name="韩山镇" code="321322108" />
+    <street name="华冲镇" code="321322109" />
+    <street name="桑墟镇" code="321322110" />
+    <street name="悦来镇" code="321322111" />
+    <street name="刘集镇" code="321322112" />
+    <street name="李恒镇" code="321322114" />
+    <street name="扎下镇" code="321322115" />
+    <street name="颜集镇" code="321322116" />
+    <street name="潼阳镇" code="321322117" />
+    <street name="龙庙镇" code="321322118" />
+    <street name="高墟镇" code="321322119" />
+    <street name="耿圩镇" code="321322120" />
+    <street name="汤涧镇" code="321322122" />
+    <street name="新河镇" code="321322124" />
+    <street name="贤官镇" code="321322125" />
+    <street name="吴集镇" code="321322126" />
+    <street name="湖东镇" code="321322127" />
+    <street name="青伊湖镇" code="321322128" />
+    <street name="北丁集乡" code="321322200" />
+    <street name="周集乡" code="321322201" />
+    <street name="东小店乡" code="321322202" />
+    <street name="张圩乡" code="321322203" />
+    <street name="茆圩乡" code="321322204" />
+    <street name="西圩乡" code="321322205" />
+    <street name="万匹乡" code="321322206" />
+    <street name="官墩乡" code="321322207" />
+    <street name="青伊湖农场" code="321322400" />
+    <street name="沭阳经济开发区" code="321322401" />
+</county>
+<county name="泗阳" code="321323">
+    <street name="众兴镇" code="321323100" />
+    <street name="爱园镇" code="321323101" />
+    <street name="王集镇" code="321323102" />
+    <street name="裴圩镇" code="321323103" />
+    <street name="新袁镇" code="321323104" />
+    <street name="李口镇" code="321323105" />
+    <street name="临河镇" code="321323106" />
+    <street name="穿城镇" code="321323107" />
+    <street name="张家圩镇" code="321323108" />
+    <street name="高渡镇" code="321323109" />
+    <street name="卢集镇" code="321323110" />
+    <street name="庄圩乡" code="321323200" />
+    <street name="里仁乡" code="321323201" />
+    <street name="三庄乡" code="321323202" />
+    <street name="南刘集乡" code="321323203" />
+    <street name="八集乡" code="321323204" />
+    <street name="棉花原种场" code="321323400" />
+    <street name="泗阳农场" code="321323401" />
+    <street name="江苏泗阳开发区" code="321323402" />
+</county>
+<county name="泗洪" code="321324">
+    <street name="青阳镇" code="321324100" />
+    <street name="双沟镇" code="321324101" />
+    <street name="上塘镇" code="321324102" />
+    <street name="魏营镇" code="321324103" />
+    <street name="临淮镇" code="321324104" />
+    <street name="半城镇" code="321324105" />
+    <street name="孙园镇" code="321324106" />
+    <street name="梅花镇" code="321324107" />
+    <street name="归仁镇" code="321324108" />
+    <street name="金锁镇" code="321324109" />
+    <street name="朱湖镇" code="321324110" />
+    <street name="界集镇" code="321324111" />
+    <street name="太平镇" code="321324112" />
+    <street name="龙集镇" code="321324113" />
+    <street name="四河乡" code="321324200" />
+    <street name="峰山乡" code="321324201" />
+    <street name="天岗湖乡" code="321324202" />
+    <street name="车门乡" code="321324203" />
+    <street name="瑶沟乡" code="321324204" />
+    <street name="石集乡" code="321324205" />
+    <street name="城头乡" code="321324206" />
+    <street name="陈圩乡" code="321324207" />
+    <street name="曹庙乡" code="321324208" />
+    <street name="五里江农场" code="321324400" />
+    <street name="洪泽湖农场" code="321324401" />
+    <street name="泗洪经济开发区" code="321324402" />
+</county>
+</city>
+</address>

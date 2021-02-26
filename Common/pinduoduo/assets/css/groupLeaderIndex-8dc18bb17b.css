@@ -1,0 +1,169 @@
+
+html{
+    background-color:#eee;
+}
+.body{
+    display: none;
+    position: relative;
+}
+header .share{
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    position:fixed;
+}
+.zhanwei{
+    width: 100%;
+    height: 30px;
+}
+header .share img {
+    width:18px;
+    height: 15px;
+    margin-right: 10px;
+}
+header .info{
+	text-align: center;
+    width:100%;
+    height:155px;
+    background:#ff6f60 url(../../../bg-854fdadfc7.png) no-repeat center center;
+    color:#fff;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    background-size: cover;
+}
+header .info a{
+    color: #fff;
+}
+header .info .img {
+    border:none;
+}
+header .info .img img{
+    width: 60px;
+    height: 60px;
+    background-position: center center;
+    background-size: cover;
+    border:2px solid #fff;
+    border-radius: 50%;
+}
+header .info .nickname{
+    margin:10px 0 6px 0;
+    font-size: 16px;
+}
+header .bind,header .nobind{
+    font-size: 14px;
+}
+section .bottom2{
+    border-width: 0 0 1px;
+    -webkit-border-image: url(../../../border-3c0f4b98d7.gif) 2 stretch;
+    -webkit-box-align: center;
+    background-color: #fff; 
+}
+section .message label{
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    line-height: 8px;
+}
+section .gray{
+	color:#999;
+    font-size: 14px;
+}
+section .font{
+   font-size: 15px;
+   color: #333;
+}
+section .myfans,.cs{
+    margin-bottom: 10px;
+}
+section .leader div:first-of-type{
+    color: #ffaa00;
+}
+section .bonus{
+    height:85px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    padding: 0 10px 0 15px;
+    background-color: #fff
+}
+section .bonus .total2 div:first-of-type{
+    font-size: 14px;
+    color: #333;
+    padding: 16px 0 5px 0;
+
+}
+section .bonus .total2 div:last-of-type{
+    color: #ff534c;
+    font-size: 28px;
+}
+section .myqcode,.myfans,.mycard,.cs,.leader{
+    height: 44px;
+}
+section  .myqcode,.myfans,.mycard,.cs,.leader{
+	width: 100%;
+	display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align:center;
+    -webkit-box-pack: justify;
+    padding: 0 10px 0 15px;
+    background-color: #fff
+}
+.recommend{
+    /* height: 115px; */
+	text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-size: 12px;
+    padding: 20px 0 20px 0;
+}
+.recommend .button{
+    width: 90%;
+    height: 44px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    line-height: 44px;
+}
+.recommend button{
+    outline:none; 
+    border:0; 
+    background-color:transparent;
+    font-size: 15px;
+    color: #999;
+}
+section .message .myqcode span img{
+    width: 20px;
+    height: 20px;
+}
+section .message .bonus .cashout p{
+   font-size: 14px;
+   line-height: 85px;
+}
+section .message a{
+	color:#000;
+}
+em{font-style: normal;}
+/*红点*/
+.bottom .mycard em.redpoint {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: red;
+    margin: 0px 0px 0 5px;
+}

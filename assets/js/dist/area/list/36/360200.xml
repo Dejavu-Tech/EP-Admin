@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="景德镇" code="360200">
+<county name="昌江" code="360202">
+    <street name="西郊街道" code="360202001" />
+    <street name="新枫街道" code="360202002" />
+    <street name="竟成镇" code="360202100" />
+    <street name="鲇鱼山镇" code="360202101" />
+    <street name="丽阳乡" code="360202201" />
+    <street name="荷塘乡" code="360202202" />
+    <street name="吕蒙乡" code="360202290" />
+    <street name="昌江化工园区" code="360202451" />
+    <street name="六零二所高科技园" code="360202452" />
+    <street name="昌江开发区" code="360202453" />
+    <street name="枫树山总场" code="360202500" />
+</county>
+<county name="珠山" code="360203">
+    <street name="石狮埠街道" code="360203001" />
+    <street name="新厂街道" code="360203002" />
+    <street name="里村街道" code="360203003" />
+    <street name="周路口街道" code="360203004" />
+    <street name="昌江街道" code="360203005" />
+    <street name="新村街道" code="360203006" />
+    <street name="珠山街道" code="360203007" />
+    <street name="太白园街道" code="360203008" />
+    <street name="昌河街道" code="360203009" />
+    <street name="高新技术开发区" code="360203400" />
+</county>
+<county name="浮梁" code="360222">
+    <street name="浮梁镇" code="360222100" />
+    <street name="鹅湖镇" code="360222101" />
+    <street name="经公桥镇" code="360222102" />
+    <street name="蛟潭镇" code="360222103" />
+    <street name="湘湖镇" code="360222104" />
+    <street name="瑶里镇" code="360222105" />
+    <street name="洪源镇" code="360222106" />
+    <street name="寿安镇" code="360222107" />
+    <street name="三龙镇" code="360222108" />
+    <street name="王港乡" code="360222200" />
+    <street name="庄湾乡" code="360222201" />
+    <street name="黄坛乡" code="360222203" />
+    <street name="兴田乡" code="360222204" />
+    <street name="江村乡" code="360222205" />
+    <street name="峙滩乡" code="360222206" />
+    <street name="勒功乡" code="360222207" />
+    <street name="西湖乡" code="360222208" />
+    <street name="罗家桥乡" code="360222209" />
+    <street name="浮梁工业园区" code="360222400" />
+    <street name="罗家垦殖场" code="360222500" />
+</county>
+<county name="乐平" code="360281">
+    <street name="洎阳街道" code="360281001" />
+    <street name="塔山街道" code="360281002" />
+    <street name="镇桥镇" code="360281100" />
+    <street name="乐港镇" code="360281101" />
+    <street name="涌山镇" code="360281102" />
+    <street name="众埠镇" code="360281103" />
+    <street name="接渡镇" code="360281104" />
+    <street name="洪岩镇" code="360281105" />
+    <street name="礼林镇" code="360281106" />
+    <street name="后港镇" code="360281107" />
+    <street name="塔前镇" code="360281108" />
+    <street name="双田镇" code="360281109" />
+    <street name="临港镇" code="360281110" />
+    <street name="高家镇" code="360281111" />
+    <street name="名口镇" code="360281112" />
+    <street name="浯口镇" code="360281113" />
+    <street name="鸬鹚乡" code="360281200" />
+    <street name="十里岗乡" code="360281201" />
+    <street name="农业高新园" code="360281400" />
+    <street name="江西乐平工业园区" code="360281401" />
+</county>
+</city>
+</address>

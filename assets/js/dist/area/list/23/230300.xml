@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="鸡西" code="230300">
+<county name="鸡冠" code="230302">
+    <street name="向阳街道" code="230302001" />
+    <street name="南山街道" code="230302002" />
+    <street name="立新街道" code="230302003" />
+    <street name="东风街道" code="230302004" />
+    <street name="红军路街道" code="230302005" />
+    <street name="西鸡西街道" code="230302006" />
+    <street name="西山街道" code="230302007" />
+    <street name="红星乡" code="230302200" />
+    <street name="西郊乡" code="230302201" />
+</county>
+<county name="恒山" code="230303">
+    <street name="桦木林街道" code="230303001" />
+    <street name="大恒山街道" code="230303002" />
+    <street name="小恒山街道" code="230303003" />
+    <street name="二道河子街道" code="230303004" />
+    <street name="张新街道" code="230303005" />
+    <street name="奋斗街道" code="230303006" />
+    <street name="柳毛街道" code="230303007" />
+    <street name="红旗乡" code="230303200" />
+    <street name="柳毛乡" code="230303201" />
+</county>
+<county name="滴道" code="230304">
+    <street name="东兴街道" code="230304001" />
+    <street name="矿里街道" code="230304002" />
+    <street name="洗煤街道" code="230304003" />
+    <street name="大通沟街道" code="230304004" />
+    <street name="滴道河乡" code="230304200" />
+    <street name="兰岭乡" code="230304201" />
+</county>
+<county name="梨树" code="230305">
+    <street name="街里街道" code="230305001" />
+    <street name="穆棱街道" code="230305002" />
+    <street name="平岗街道" code="230305003" />
+    <street name="碱场街道" code="230305004" />
+    <street name="石磷街道" code="230305005" />
+    <street name="梨树区（镇）直辖地域" code="230305198" />
+</county>
+<county name="城子河" code="230306">
+    <street name="城子河街道" code="230306001" />
+    <street name="正阳街道" code="230306002" />
+    <street name="东海街道" code="230306003" />
+    <street name="城西街道" code="230306004" />
+    <street name="杏花街道" code="230306005" />
+    <street name="长青乡" code="230306200" />
+    <street name="永丰乡" code="230306201" />
+</county>
+<county name="麻山" code="230307">
+    <street name="麻山街道" code="230307001" />
+    <street name="麻山区（镇）直辖地域" code="230307198" />
+</county>
+<county name="鸡东" code="230321">
+    <street name="鸡东镇" code="230321100" />
+    <street name="平阳镇" code="230321101" />
+    <street name="向阳镇" code="230321102" />
+    <street name="哈达镇" code="230321103" />
+    <street name="永安镇" code="230321104" />
+    <street name="永和镇" code="230321105" />
+    <street name="东海镇" code="230321106" />
+    <street name="兴农镇" code="230321107" />
+    <street name="鸡林乡" code="230321200" />
+    <street name="明德乡" code="230321205" />
+    <street name="下亮子乡" code="230321206" />
+    <street name="林业局" code="230321400" />
+    <street name="八五一０农场" code="230321500" />
+</county>
+<county name="虎林" code="230381">
+    <street name="虎林镇" code="230381100" />
+    <street name="东方红镇" code="230381101" />
+    <street name="迎春镇" code="230381102" />
+    <street name="虎头镇" code="230381103" />
+    <street name="杨岗镇" code="230381104" />
+    <street name="东诚镇" code="230381105" />
+    <street name="宝东镇" code="230381106" />
+    <street name="新乐乡" code="230381203" />
+    <street name="伟光乡" code="230381204" />
+    <street name="珍宝岛乡" code="230381206" />
+    <street name="阿北乡" code="230381207" />
+    <street name="东方红林业局" code="230381400" />
+    <street name="迎春林业局" code="230381401" />
+    <street name="八五０农场" code="230381500" />
+    <street name="八五四农场" code="230381501" />
+    <street name="八五六农场" code="230381502" />
+    <street name="八五八农场" code="230381503" />
+    <street name="庆丰农场" code="230381504" />
+    <street name="云山农场" code="230381505" />
+</county>
+<county name="密山" code="230382">
+    <street name="中心街道" code="230382001" />
+    <street name="密山镇" code="230382100" />
+    <street name="连珠山镇" code="230382101" />
+    <street name="当壁镇" code="230382102" />
+    <street name="知一镇" code="230382103" />
+    <street name="黑台镇" code="230382104" />
+    <street name="兴凯镇" code="230382105" />
+    <street name="裴德镇" code="230382106" />
+    <street name="白鱼湾镇" code="230382107" />
+    <street name="柳毛乡" code="230382200" />
+    <street name="杨木乡" code="230382201" />
+    <street name="兴凯湖乡" code="230382202" />
+    <street name="承紫河乡" code="230382203" />
+    <street name="二人班乡" code="230382206" />
+    <street name="太平乡" code="230382208" />
+    <street name="和平乡" code="230382210" />
+    <street name="富源乡" code="230382212" />
+    <street name="林业局" code="230382400" />
+    <street name="青年水库" code="230382480" />
+    <street name="煤炭工业局" code="230382481" />
+    <street name="经济开发区管理委员会" code="230382482" />
+    <street name="牡丹江管理局局直" code="230382501" />
+    <street name="八五五农场" code="230382502" />
+    <street name="八五七农场" code="230382503" />
+    <street name="八五一一农场" code="230382504" />
+    <street name="兴凯湖农场" code="230382505" />
+    <street name="牡丹江管理局北大营管委会" code="230382506" />
+    <street name="牡丹江管理局双峰农场" code="230382507" />
+    <street name="水产养殖有限公司" code="230382580" />
+    <street name="种畜场" code="230382581" />
+    <street name="水田良种场" code="230382582" />
+    <street name="市良种场" code="230382583" />
+    <street name="校办企业公司" code="230382584" />
+    <street name="蜂蜜山粮库有限公司" code="230382585" />
+</county>
+</city>
+</address>

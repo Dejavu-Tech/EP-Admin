@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="东营" code="370500">
+<county name="东营" code="370502">
+    <street name="文汇街道" code="370502001" />
+    <street name="黄河路街道" code="370502002" />
+    <street name="东城街道" code="370502003" />
+    <street name="辛店街道" code="370502004" />
+    <street name="胜利街道" code="370502005" />
+    <street name="胜园街道" code="370502006" />
+    <street name="牛庄镇" code="370502102" />
+    <street name="六户镇" code="370502103" />
+    <street name="史口镇" code="370502104" />
+    <street name="龙居镇" code="370502105" />
+</county>
+<county name="河口" code="370503">
+    <street name="河口街道" code="370503001" />
+    <street name="六合街道" code="370503002" />
+    <street name="义和镇" code="370503100" />
+    <street name="仙河镇" code="370503101" />
+    <street name="孤岛镇" code="370503102" />
+    <street name="新户镇" code="370503103" />
+    <street name="开发区管委会" code="370503400" />
+    <street name="河口蓝色经济开发区管理委员会" code="370503401" />
+</county>
+<county name="垦利" code="370521">
+    <street name="垦利街道" code="370521001" />
+    <street name="兴隆街道" code="370521002" />
+    <street name="胜坨镇" code="370521101" />
+    <street name="郝家镇" code="370521102" />
+    <street name="永安镇" code="370521104" />
+    <street name="黄河口镇" code="370521105" />
+    <street name="董集镇" code="370521106" />
+    <street name="开发区类似乡级单位" code="370521400" />
+    <street name="社管会类似乡级单位" code="370521401" />
+    <street name="红光类似乡级单位" code="370521402" />
+    <street name="垦东类似乡级单位" code="370521403" />
+    <street name="东营市现代畜牧业示范区类似乡级单位" code="370521404" />
+</county>
+<county name="利津" code="370522">
+    <street name="利津街道" code="370522001" />
+    <street name="凤凰城街道" code="370522002" />
+    <street name="北宋镇" code="370522101" />
+    <street name="盐窝镇" code="370522102" />
+    <street name="陈庄镇" code="370522103" />
+    <street name="汀罗镇" code="370522104" />
+    <street name="明集乡" code="370522201" />
+    <street name="刁口乡" code="370522206" />
+    <street name="利津县经济开发区" code="370522400" />
+    <street name="利津县县城社区管理委员会" code="370522401" />
+</county>
+<county name="广饶" code="370523">
+    <street name="广饶街道" code="370523001" />
+    <street name="乐安街道" code="370523002" />
+    <street name="大王镇" code="370523101" />
+    <street name="稻庄镇" code="370523102" />
+    <street name="丁庄镇" code="370523104" />
+    <street name="李鹊镇" code="370523106" />
+    <street name="大码头镇" code="370523107" />
+    <street name="花官镇" code="370523108" />
+    <street name="陈官乡" code="370523208" />
+    <street name="东营农业高新技术产业示范区" code="370523400" />
+    <street name="广饶滨海新区管理委员会" code="370523401" />
+</county>
+</city>
+</address>

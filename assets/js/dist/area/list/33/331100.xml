@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="丽水" code="331100">
+<county name="莲都" code="331102">
+    <street name="紫金街道" code="331102001" />
+    <street name="岩泉街道" code="331102002" />
+    <street name="万象街道" code="331102003" />
+    <street name="白云街道" code="331102004" />
+    <street name="水阁街道" code="331102005" />
+    <street name="富岭街道" code="331102006" />
+    <street name="联城街道" code="331102007" />
+    <street name="碧湖镇" code="331102100" />
+    <street name="大港头镇" code="331102102" />
+    <street name="老竹畲族镇" code="331102103" />
+    <street name="雅溪镇" code="331102104" />
+    <street name="太平乡" code="331102200" />
+    <street name="仙渡乡" code="331102201" />
+    <street name="峰源乡" code="331102202" />
+    <street name="丽新畲族乡" code="331102204" />
+    <street name="黄村乡" code="331102206" />
+</county>
+<county name="青田" code="331121">
+    <street name="鹤城街道" code="331121001" />
+    <street name="瓯南街道" code="331121002" />
+    <street name="油竹街道" code="331121003" />
+    <street name="温溪镇" code="331121101" />
+    <street name="东源镇" code="331121102" />
+    <street name="高湖镇" code="331121103" />
+    <street name="船寮镇" code="331121104" />
+    <street name="海口镇" code="331121105" />
+    <street name="腊口镇" code="331121106" />
+    <street name="北山镇" code="331121107" />
+    <street name="山口镇" code="331121108" />
+    <street name="仁庄镇" code="331121109" />
+    <street name="万山乡" code="331121200" />
+    <street name="黄垟乡" code="331121201" />
+    <street name="季宅乡" code="331121202" />
+    <street name="高市乡" code="331121203" />
+    <street name="海溪乡" code="331121204" />
+    <street name="章村乡" code="331121205" />
+    <street name="祯旺乡" code="331121206" />
+    <street name="祯埠乡" code="331121207" />
+    <street name="舒桥乡" code="331121208" />
+    <street name="巨浦乡" code="331121209" />
+    <street name="万阜乡" code="331121211" />
+    <street name="方山乡" code="331121212" />
+    <street name="汤垟乡" code="331121213" />
+    <street name="贵岙乡" code="331121214" />
+    <street name="小舟山乡" code="331121215" />
+    <street name="吴坑乡" code="331121216" />
+    <street name="仁宫乡" code="331121217" />
+    <street name="章旦乡" code="331121218" />
+    <street name="阜山乡" code="331121219" />
+    <street name="石溪乡" code="331121220" />
+</county>
+<county name="缙云" code="331122">
+    <street name="五云街道" code="331122001" />
+    <street name="新碧街道" code="331122002" />
+    <street name="仙都街道" code="331122003" />
+    <street name="壶镇镇" code="331122101" />
+    <street name="新建镇" code="331122102" />
+    <street name="舒洪镇" code="331122103" />
+    <street name="大洋镇" code="331122105" />
+    <street name="东渡镇" code="331122106" />
+    <street name="东方镇" code="331122107" />
+    <street name="大源镇" code="331122108" />
+    <street name="七里乡" code="331122203" />
+    <street name="前路乡" code="331122206" />
+    <street name="三溪乡" code="331122207" />
+    <street name="溶江乡" code="331122208" />
+    <street name="双溪口乡" code="331122209" />
+    <street name="胡源乡" code="331122210" />
+    <street name="方溪乡" code="331122211" />
+    <street name="石笕乡" code="331122212" />
+</county>
+<county name="遂昌" code="331123">
+    <street name="妙高街道" code="331123001" />
+    <street name="云峰街道" code="331123002" />
+    <street name="新路湾镇" code="331123102" />
+    <street name="北界镇" code="331123103" />
+    <street name="金竹镇" code="331123104" />
+    <street name="大柘镇" code="331123105" />
+    <street name="石练镇" code="331123106" />
+    <street name="王村口镇" code="331123107" />
+    <street name="黄沙腰镇" code="331123108" />
+    <street name="三仁畲族乡" code="331123200" />
+    <street name="濂竹乡" code="331123201" />
+    <street name="应村乡" code="331123202" />
+    <street name="高坪乡" code="331123203" />
+    <street name="湖山乡" code="331123204" />
+    <street name="蔡源乡" code="331123205" />
+    <street name="焦滩乡" code="331123206" />
+    <street name="龙洋乡" code="331123207" />
+    <street name="柘岱口乡" code="331123208" />
+    <street name="西畈乡" code="331123209" />
+    <street name="垵口乡" code="331123210" />
+</county>
+<county name="松阳" code="331124">
+    <street name="西屏街道" code="331124001" />
+    <street name="水南街道" code="331124002" />
+    <street name="望松街道" code="331124003" />
+    <street name="古市镇" code="331124101" />
+    <street name="玉岩镇" code="331124102" />
+    <street name="象溪镇" code="331124103" />
+    <street name="大东坝镇" code="331124104" />
+    <street name="新兴镇" code="331124105" />
+    <street name="叶村乡" code="331124201" />
+    <street name="斋坛乡" code="331124202" />
+    <street name="三都乡" code="331124203" />
+    <street name="竹源乡" code="331124204" />
+    <street name="四都乡" code="331124205" />
+    <street name="赤寿乡" code="331124206" />
+    <street name="樟溪乡" code="331124208" />
+    <street name="枫坪乡" code="331124211" />
+    <street name="板桥畲族乡" code="331124212" />
+    <street name="裕溪乡" code="331124213" />
+    <street name="安民乡" code="331124214" />
+</county>
+<county name="云和" code="331125">
+    <street name="浮云街道" code="331125001" />
+    <street name="元和街道" code="331125002" />
+    <street name="白龙山街道" code="331125003" />
+    <street name="凤凰山街道" code="331125004" />
+    <street name="崇头镇" code="331125105" />
+    <street name="石塘镇" code="331125106" />
+    <street name="紧水滩镇" code="331125107" />
+    <street name="雾溪畲族乡" code="331125201" />
+    <street name="安溪畲族乡" code="331125202" />
+    <street name="赤石乡" code="331125206" />
+</county>
+<county name="庆元" code="331126">
+    <street name="松源街道" code="331126001" />
+    <street name="濛洲街道" code="331126002" />
+    <street name="屏都街道" code="331126003" />
+    <street name="黄田镇" code="331126101" />
+    <street name="竹口镇" code="331126102" />
+    <street name="荷地镇" code="331126104" />
+    <street name="左溪镇" code="331126105" />
+    <street name="贤良镇" code="331126106" />
+    <street name="百山祖镇" code="331126107" />
+    <street name="岭头乡" code="331126200" />
+    <street name="五大堡乡" code="331126201" />
+    <street name="淤上乡" code="331126202" />
+    <street name="安南乡" code="331126203" />
+    <street name="张村乡" code="331126204" />
+    <street name="隆宫乡" code="331126205" />
+    <street name="举水乡" code="331126206" />
+    <street name="江根乡" code="331126207" />
+    <street name="龙溪乡" code="331126209" />
+    <street name="官塘乡" code="331126211" />
+</county>
+<county name="景宁" code="331127">
+    <street name="红星街道" code="331127001" />
+    <street name="鹤溪街道" code="331127002" />
+    <street name="渤海镇" code="331127101" />
+    <street name="东坑镇" code="331127102" />
+    <street name="英川镇" code="331127103" />
+    <street name="沙湾镇" code="331127104" />
+    <street name="大均乡" code="331127201" />
+    <street name="澄照乡" code="331127202" />
+    <street name="梅岐乡" code="331127203" />
+    <street name="郑坑乡" code="331127205" />
+    <street name="大漈乡" code="331127208" />
+    <street name="景南乡" code="331127209" />
+    <street name="雁溪乡" code="331127210" />
+    <street name="鸬鹚乡" code="331127212" />
+    <street name="梧桐乡" code="331127213" />
+    <street name="标溪乡" code="331127214" />
+    <street name="毛垟乡" code="331127215" />
+    <street name="秋炉乡" code="331127216" />
+    <street name="大地乡" code="331127217" />
+    <street name="家地乡" code="331127218" />
+    <street name="九龙乡" code="331127219" />
+</county>
+<county name="龙泉" code="331181">
+    <street name="龙渊街道" code="331181001" />
+    <street name="西街街道" code="331181002" />
+    <street name="剑池街道" code="331181003" />
+    <street name="石达石街道" code="331181004" />
+    <street name="八都镇" code="331181100" />
+    <street name="上垟镇" code="331181101" />
+    <street name="小梅镇" code="331181102" />
+    <street name="查田镇" code="331181103" />
+    <street name="安仁镇" code="331181104" />
+    <street name="锦溪镇" code="331181105" />
+    <street name="住龙镇" code="331181106" />
+    <street name="屏南镇" code="331181107" />
+    <street name="兰巨乡" code="331181200" />
+    <street name="宝溪乡" code="331181202" />
+    <street name="竹垟畲族乡" code="331181203" />
+    <street name="道太乡" code="331181204" />
+    <street name="岩樟乡" code="331181205" />
+    <street name="城北乡" code="331181206" />
+    <street name="龙南乡" code="331181207" />
+</county>
+</city>
+</address>

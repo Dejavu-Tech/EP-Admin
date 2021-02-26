@@ -1,0 +1,99 @@
+/**=====================
+     62. knowledgebase CSS start
+==========================**/
+.browse{
+  margin-bottom: -30px;
+  .browse-articles{
+    margin-bottom: 30px;
+    span{
+      vertical-align: middle;
+      svg{
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        vertical-align: text-top;
+      }
+    }
+    h6{
+      font-weight: 600;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba($dark-gray, 0.3);
+      span{
+        svg{
+          width: 16px;
+          height: 16px;
+          vertical-align: text-top;
+        }
+      }
+    }
+    ul{
+      li{
+        padding: 10px;
+        border-radius: 8px;
+        a{
+          color: $theme-body-font-color;
+        }
+        &:hover{
+          background-color: $light;
+        }
+      }
+    }
+  }
+}
+.latest{
+  .card{
+    .card-body{
+      padding: 30px;
+    }
+  }
+}
+@media only screen and (max-width: 1366px){
+  .browse{
+    div[class^="col-"]{
+      &:nth-child(3){
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px){
+  .browse{
+    margin-bottom: -20px;
+    .browse-articles{
+      margin-bottom: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 575px){
+  .browse{
+    margin-bottom: -15px;
+    .browse-articles{
+      margin-bottom: 15px;
+    }
+  }
+}
+@media only screen and (max-width: 360px){
+  .browse{
+    .browse-articles{
+      ul{
+        li{
+          a{
+            span{
+              &:nth-child(2){
+                width: 158px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/**=====================
+     62. knowledgebase CSS end
+==========================**/

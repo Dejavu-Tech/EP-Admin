@@ -1,0 +1,130 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var apex                  = true;
+- var page_apex             = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Apex
+                                      span
+                                        | Chart
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Charts
+                                      li.breadcrumb-item.active Apex Chart
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Basic Area Chart 
+                            .card-body.p-0
+                              #basic-apex
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Area Spaline Chart 
+                            .card-body.p-0
+                              #area-spaline
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Bar chart
+                            .card-body.p-0
+                              #basic-bar
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Column Chart 
+                            .card-body.p-0
+                              #column-chart
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5 
+                                | 3d Bubble Chart 
+                            .card-body.p-0
+                              #chart-bubble
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Candlestick Chart 
+                            .card-body.p-0
+                              #candlestick
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Stepline Chart 
+                            .card-body.p-0
+                              #stepline
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Column Chart
+                            .card-body.p-0
+                              #annotationchart
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Pie Chart 
+                            .card-body.apex-chart.p-0
+                              #piechart
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Donut Chart
+                            .card-body.apex-chart.p-0
+                              #donutchart
+                        .col-sm-12.xl-100
+                          .card
+                            .card-header
+                              h5 Mixed Chart
+                            .card-body.p-0
+                              #mixedchart
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Radar Chart 
+                            .card-body.p-0
+                              #radarchart
+                        .col-sm-12.col-xl-6.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Radial Bar Chart
+                            .card-body.p-0
+                              #circlechart
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

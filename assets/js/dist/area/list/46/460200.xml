@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="三亚" code="460200">
+<county name="海棠" code="460202">
+    <street name="海棠湾镇" code="460202001" />
+    <street name="国营南田农场" code="460202002" />
+</county>
+<county name="吉阳" code="460203">
+    <street name="吉阳镇" code="460203001" />
+    <street name="国营南新农场" code="460203002" />
+	<street name="河东区街道" code="460203003" />
+</county>
+<county name="天涯" code="460204">
+    <street name="凤凰镇" code="460204001" />
+    <street name="天涯镇" code="460204002" />
+	<street name="育才镇" code="460204003" />
+	<street name="国营立才农场" code="460204004" />
+	<street name="河西区街道" code="460204005" />
+</county>
+<county name="崖州" code="460205">
+    <street name="崖城镇" code="460205001" />
+    <street name="国营南滨农场" code="460205002" />
+</county>
+</city>
+</address>

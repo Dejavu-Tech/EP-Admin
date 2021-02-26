@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="龙岩" code="350800">
+<county name="新罗" code="350802">
+    <street name="东城街道" code="350802001" />
+    <street name="南城街道" code="350802002" />
+    <street name="西城街道" code="350802003" />
+    <street name="中城街道" code="350802004" />
+    <street name="西陂街道" code="350802005" />
+    <street name="曹溪街道" code="350802006" />
+    <street name="东肖街道" code="350802007" />
+    <street name="龙门街道" code="350802008" />
+    <street name="铁山街道" code="350802009" />
+    <street name="北城街道" code="350802010" />
+    <street name="红坊镇" code="350802100" />
+    <street name="适中镇" code="350802101" />
+    <street name="雁石镇" code="350802102" />
+    <street name="白沙镇" code="350802103" />
+    <street name="万安镇" code="350802104" />
+    <street name="大池镇" code="350802105" />
+    <street name="小池镇" code="350802106" />
+    <street name="江山镇" code="350802107" />
+    <street name="岩山乡" code="350802201" />
+    <street name="苏坂乡" code="350802202" />
+</county>
+<county name="长汀" code="350821">
+    <street name="汀州镇" code="350821100" />
+    <street name="大同镇" code="350821101" />
+    <street name="古城镇" code="350821102" />
+    <street name="新桥镇" code="350821103" />
+    <street name="馆前镇" code="350821104" />
+    <street name="童坊镇" code="350821105" />
+    <street name="河田镇" code="350821106" />
+    <street name="南山镇" code="350821107" />
+    <street name="濯田镇" code="350821108" />
+    <street name="四都镇" code="350821109" />
+    <street name="涂坊镇" code="350821110" />
+    <street name="策武镇" code="350821111" />
+    <street name="三洲镇" code="350821112" />
+    <street name="铁长乡" code="350821201" />
+    <street name="庵杰乡" code="350821202" />
+    <street name="宣成乡" code="350821204" />
+    <street name="红山乡" code="350821205" />
+    <street name="羊牯乡" code="350821206" />
+</county>
+<county name="永定" code="350822">
+    <street name="凤城镇" code="350822100" />
+    <street name="坎市镇" code="350822101" />
+    <street name="下洋镇" code="350822102" />
+    <street name="湖雷镇" code="350822103" />
+    <street name="高陂镇" code="350822104" />
+    <street name="抚市镇" code="350822105" />
+    <street name="湖坑镇" code="350822106" />
+    <street name="培丰镇" code="350822107" />
+    <street name="龙潭镇" code="350822108" />
+    <street name="峰市镇" code="350822109" />
+    <street name="城郊乡" code="350822200" />
+    <street name="西溪乡" code="350822201" />
+    <street name="金砂乡" code="350822202" />
+    <street name="仙师乡" code="350822203" />
+    <street name="洪山乡" code="350822204" />
+    <street name="湖山乡" code="350822205" />
+    <street name="岐岭乡" code="350822206" />
+    <street name="古竹乡" code="350822207" />
+    <street name="堂堡乡" code="350822208" />
+    <street name="合溪乡" code="350822209" />
+    <street name="虎岗镇" code="350822210" />
+    <street name="大溪乡" code="350822211" />
+    <street name="陈东乡" code="350822212" />
+    <street name="高头乡" code="350822213" />
+</county>
+<county name="上杭" code="350823">
+    <street name="临江镇" code="350823100" />
+    <street name="临城镇" code="350823101" />
+    <street name="中都镇" code="350823102" />
+    <street name="蓝溪镇" code="350823103" />
+    <street name="稔田镇" code="350823104" />
+    <street name="白砂镇" code="350823105" />
+    <street name="古田镇" code="350823106" />
+    <street name="才溪镇" code="350823107" />
+    <street name="南阳镇" code="350823108" />
+    <street name="蛟洋镇" code="350823109" />
+    <street name="旧县镇" code="350823110" />
+    <street name="湖洋镇" code="350823111" />
+    <street name="溪口镇" code="350823112" />
+    <street name="下都乡" code="350823201" />
+    <street name="庐丰畲族乡" code="350823202" />
+    <street name="太拔镇" code="350823203" />
+    <street name="茶地乡" code="350823205" />
+    <street name="泮境乡" code="350823206" />
+    <street name="步云乡" code="350823208" />
+    <street name="通贤镇" code="350823210" />
+    <street name="官庄畲族乡" code="350823211" />
+    <street name="珊瑚乡" code="350823212" />
+</county>
+<county name="武平" code="350824">
+    <street name="平川镇" code="350824100" />
+    <street name="中山镇" code="350824101" />
+    <street name="岩前镇" code="350824102" />
+    <street name="十方镇" code="350824103" />
+    <street name="中堡镇" code="350824104" />
+    <street name="桃溪镇" code="350824105" />
+    <street name="城厢镇" code="350824106" />
+    <street name="万安乡" code="350824201" />
+    <street name="东留镇" code="350824202" />
+    <street name="民主乡" code="350824203" />
+    <street name="下坝乡" code="350824204" />
+    <street name="中赤乡" code="350824205" />
+    <street name="象洞乡" code="350824206" />
+    <street name="武东镇" code="350824207" />
+    <street name="永平乡" code="350824208" />
+    <street name="湘店乡" code="350824209" />
+    <street name="大禾乡" code="350824210" />
+</county>
+<county name="连城" code="350825">
+    <street name="莲峰镇" code="350825100" />
+    <street name="北团镇" code="350825101" />
+    <street name="姑田镇" code="350825102" />
+    <street name="朋口镇" code="350825103" />
+    <street name="莒溪镇" code="350825104" />
+    <street name="新泉镇" code="350825105" />
+    <street name="庙前镇" code="350825106" />
+    <street name="文亨镇" code="350825107" />
+    <street name="揭乐乡" code="350825200" />
+    <street name="塘前乡" code="350825201" />
+    <street name="隔川乡" code="350825202" />
+    <street name="四堡乡" code="350825203" />
+    <street name="罗坊乡" code="350825204" />
+    <street name="林坊乡" code="350825205" />
+    <street name="曲溪乡" code="350825208" />
+    <street name="赖源乡" code="350825209" />
+    <street name="宣和乡" code="350825210" />
+</county>
+<county name="漳平" code="350881">
+    <street name="菁城街道" code="350881001" />
+    <street name="桂林街道" code="350881002" />
+    <street name="新桥镇" code="350881100" />
+    <street name="双洋镇" code="350881101" />
+    <street name="永福镇" code="350881102" />
+    <street name="溪南镇" code="350881103" />
+    <street name="和平镇" code="350881104" />
+    <street name="拱桥镇" code="350881105" />
+    <street name="象湖镇" code="350881106" />
+    <street name="赤水镇" code="350881107" />
+    <street name="芦芝乡" code="350881200" />
+    <street name="西园乡" code="350881201" />
+    <street name="南洋乡" code="350881202" />
+    <street name="官田乡" code="350881203" />
+    <street name="吾祠乡" code="350881204" />
+    <street name="灵地乡" code="350881205" />
+</county>
+</city>
+</address>

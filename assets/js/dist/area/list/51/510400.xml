@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="攀枝花" code="510400">
+<county name="东区" code="510402">
+    <street name="大渡口街道" code="510402001" />
+    <street name="炳草岗街道" code="510402002" />
+    <street name="南山街道" code="510402003" />
+    <street name="向阳村街道" code="510402004" />
+    <street name="弄弄坪街道" code="510402005" />
+    <street name="枣子坪街道" code="510402006" />
+    <street name="长寿路街道" code="510402007" />
+    <street name="密地街道" code="510402008" />
+    <street name="瓜子坪街道" code="510402009" />
+    <street name="银江镇" code="510402100" />
+</county>
+<county name="西区" code="510403">
+    <street name="清香坪街道" code="510403001" />
+    <street name="玉泉街道" code="510403002" />
+    <street name="河门口街道" code="510403003" />
+    <street name="陶家渡街道" code="510403004" />
+    <street name="摩梭河街道" code="510403005" />
+    <street name="大宝鼎街道" code="510403006" />
+    <street name="格里坪镇" code="510403100" />
+</county>
+<county name="仁和" code="510411">
+    <street name="大河中路街道" code="510411001" />
+    <street name="仁和镇" code="510411100" />
+    <street name="平地镇" code="510411101" />
+    <street name="大田镇" code="510411102" />
+    <street name="福田镇" code="510411103" />
+    <street name="同德镇" code="510411104" />
+    <street name="金江镇" code="510411105" />
+    <street name="布德镇" code="510411106" />
+    <street name="前进镇" code="510411107" />
+    <street name="大龙潭彝族乡" code="510411200" />
+    <street name="啊喇彝族乡" code="510411201" />
+    <street name="总发乡" code="510411202" />
+    <street name="太平乡" code="510411203" />
+    <street name="务本乡" code="510411204" />
+    <street name="中坝乡" code="510411205" />
+</county>
+<county name="米易" code="510421">
+    <street name="攀莲镇" code="510421100" />
+    <street name="丙谷镇" code="510421101" />
+    <street name="得石镇" code="510421102" />
+    <street name="撒莲镇" code="510421103" />
+    <street name="垭口镇" code="510421104" />
+    <street name="白马镇" code="510421105" />
+    <street name="普威镇" code="510421106" />
+    <street name="草场乡" code="510421200" />
+    <street name="湾丘彝族乡" code="510421201" />
+    <street name="白坡彝族乡" code="510421202" />
+    <street name="麻陇彝族乡" code="510421203" />
+    <street name="新山傈僳族乡" code="510421204" />
+</county>
+<county name="盐边" code="510422">
+    <street name="桐子林镇" code="510422100" />
+    <street name="红格镇" code="510422101" />
+    <street name="渔门镇" code="510422102" />
+    <street name="永兴镇" code="510422103" />
+    <street name="益民乡" code="510422200" />
+    <street name="新九乡" code="510422201" />
+    <street name="和爱彝族乡" code="510422202" />
+    <street name="红果彝族乡" code="510422203" />
+    <street name="鳡鱼彝族乡" code="510422204" />
+    <street name="共和乡" code="510422205" />
+    <street name="国胜乡" code="510422206" />
+    <street name="红宝苗族彝族乡" code="510422207" />
+    <street name="惠民乡" code="510422208" />
+    <street name="箐河傈僳族乡" code="510422209" />
+    <street name="温泉彝族乡" code="510422210" />
+    <street name="格萨拉彝族乡" code="510422211" />
+</county>
+</city>
+</address>

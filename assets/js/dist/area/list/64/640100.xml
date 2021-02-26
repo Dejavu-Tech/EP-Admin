@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="银川" code="640100">
+<county name="兴庆" code="640104">
+    <street name="凤凰北街街道" code="640104001" />
+    <street name="解放西街街道" code="640104002" />
+    <street name="文化街街道" code="640104003" />
+    <street name="富宁街街道" code="640104004" />
+    <street name="新华街街道" code="640104005" />
+    <street name="玉皇阁北街街道" code="640104006" />
+    <street name="前进街街道" code="640104007" />
+    <street name="中山南街街道" code="640104008" />
+    <street name="银古路街道" code="640104009" />
+    <street name="胜利街街道" code="640104010" />
+    <street name="丽景街街道" code="640104011" />
+    <street name="掌政镇" code="640104100" />
+    <street name="大新镇" code="640104101" />
+    <street name="通贵乡" code="640104200" />
+    <street name="月牙湖乡" code="640104201" />
+    <street name="燕鸽湖管委会" code="640104400" />
+</county>
+<county name="西夏" code="640105">
+    <street name="西花园街道" code="640105001" />
+    <street name="北京西路街道" code="640105002" />
+    <street name="文昌路街道" code="640105003" />
+    <street name="朔方路街道" code="640105004" />
+    <street name="宁华路街道" code="640105005" />
+    <street name="贺兰山西路街道" code="640105006" />
+    <street name="兴泾镇" code="640105100" />
+    <street name="镇北堡镇" code="640105101" />
+</county>
+<county name="金凤" code="640106">
+    <street name="满城北街街道" code="640106001" />
+    <street name="黄河东路街道" code="640106002" />
+    <street name="长城中路街道" code="640106003" />
+    <street name="北京中路街道" code="640106004" />
+    <street name="上海西路街道" code="640106005" />
+    <street name="良田镇" code="640106100" />
+    <street name="丰登镇" code="640106101" />
+</county>
+<county name="永宁" code="640121">
+    <street name="杨和镇" code="640121100" />
+    <street name="李俊镇" code="640121101" />
+    <street name="望远镇" code="640121102" />
+    <street name="望洪镇" code="640121103" />
+    <street name="闽宁镇" code="640121104" />
+    <street name="胜利乡" code="640121200" />
+    <street name="黄羊滩农场" code="640121400" />
+    <street name="玉泉营农场" code="640121401" />
+</county>
+<county name="贺兰" code="640122">
+    <street name="习岗镇" code="640122100" />
+    <street name="金贵镇" code="640122101" />
+    <street name="立岗镇" code="640122102" />
+    <street name="洪广镇" code="640122103" />
+    <street name="常信乡" code="640122200" />
+    <street name="南梁台子管委会" code="640122400" />
+    <street name="暖泉农场" code="640122401" />
+    <street name="宁夏原种场" code="640122402" />
+    <street name="京星农牧场" code="640122403" />
+</county>
+<county name="灵武" code="640181">
+    <street name="城区街道" code="640181001" />
+    <street name="东塔镇" code="640181100" />
+    <street name="郝家桥镇" code="640181101" />
+    <street name="崇兴镇" code="640181102" />
+    <street name="宁东镇" code="640181103" />
+    <street name="马家滩镇" code="640181104" />
+    <street name="临河镇" code="640181105" />
+    <street name="梧桐树乡" code="640181200" />
+    <street name="白土岗乡" code="640181201" />
+    <street name="灵武农场" code="640181400" />
+    <street name="狼皮子梁管委会" code="640181401" />
+</county>
+</city>
+</address>

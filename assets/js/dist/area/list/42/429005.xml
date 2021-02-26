@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="潜江" code="429005">
+<county name="潜江" code="429005001">
+    <street name="杨市办事处" code="429005002" />
+    <street name="周矶办事处" code="429005003" />
+    <street name="广华办事处" code="429005004" />
+    <street name="泰丰办事处" code="429005005" />
+    <street name="高场办事处" code="429005006" />
+    <street name="竹根滩镇" code="429005100" />
+    <street name="渔洋镇" code="429005101" />
+    <street name="王场镇" code="429005102" />
+    <street name="高石碑镇" code="429005103" />
+    <street name="熊口镇" code="429005104" />
+    <street name="老新镇" code="429005105" />
+    <street name="浩口镇" code="429005106" />
+    <street name="积玉口镇" code="429005107" />
+    <street name="张金镇" code="429005108" />
+    <street name="龙湾镇" code="429005109" />
+    <street name="江汉石油管理局" code="429005400" />
+    <street name="潜江经济开发区" code="429005401" />
+    <street name="周矶管理区" code="429005450" />
+    <street name="后湖管理区" code="429005451" />
+    <street name="熊口管理区" code="429005452" />
+    <street name="总口管理区" code="429005453" />
+    <street name="白鹭湖管理区" code="429005454" />
+    <street name="运粮湖管理区" code="429005455" />
+    <street name="浩口原种场" code="429005457" />
+</county>
+</city>
+</address>

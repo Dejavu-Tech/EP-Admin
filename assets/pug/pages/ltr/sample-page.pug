@@ -1,0 +1,47 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Sample
+                                      span
+                                        | Page
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Pages
+                                      li.breadcrumb-item.active Sample page
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Sample Card
+                              span lorem ipsum dolor sit amet, consectetur adipisicing elit
+                            .card-body
+                              p
+                                | "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

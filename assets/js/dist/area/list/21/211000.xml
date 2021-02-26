@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="辽阳" code="211000">
+<county name="白塔" code="211002">
+    <street name="星火街道" code="211002001" />
+    <street name="胜利街道" code="211002002" />
+    <street name="跃进街道" code="211002003" />
+    <street name="卫国路街道" code="211002005" />
+    <street name="站前街道" code="211002006" />
+    <street name="武圣街道" code="211002010" />
+    <street name="襄平街道" code="211002011" />
+    <street name="文圣街道" code="211002012" />
+    <street name="南门街道" code="211002013" />
+    <street name="东兴街道" code="211002014" />
+    <street name="新华街道" code="211002015" />
+</county>
+<county name="文圣" code="211003">
+    <street name="庆阳街道" code="211003004" />
+    <street name="东京陵街道" code="211003008" />
+    <street name="小屯镇" code="211003101" />
+    <street name="罗大台镇" code="211003102" />
+</county>
+<county name="宏伟" code="211004">
+    <street name="工农街道" code="211004001" />
+    <street name="光华街道" code="211004002" />
+    <street name="新村街道" code="211004003" />
+    <street name="长征街道" code="211004004" />
+    <street name="曙光镇" code="211004101" />
+    <street name="兰家镇" code="211004102" />
+</county>
+<county name="弓长岭" code="211005">
+    <street name="苏家街道" code="211005001" />
+    <street name="团山街道" code="211005002" />
+    <street name="安平街道" code="211005003" />
+    <street name="汤河镇" code="211005101" />
+    <street name="安平乡" code="211005201" />
+</county>
+<county name="太子河" code="211011">
+    <street name="望水台街道" code="211011002" />
+    <street name="铁西街道" code="211011003" />
+    <street name="祁家镇" code="211011101" />
+    <street name="沙岭镇" code="211011102" />
+    <street name="王家镇" code="211011103" />
+    <street name="东宁卫乡" code="211011204" />
+</county>
+<county name="辽阳" code="211021">
+    <street name="首山镇" code="211021100" />
+    <street name="刘二堡镇" code="211021101" />
+    <street name="小北河镇" code="211021103" />
+    <street name="黄泥洼镇" code="211021104" />
+    <street name="唐马寨镇" code="211021106" />
+    <street name="穆家镇" code="211021107" />
+    <street name="柳壕镇" code="211021108" />
+    <street name="河栏镇" code="211021110" />
+    <street name="隆昌镇" code="211021111" />
+    <street name="八会镇" code="211021112" />
+    <street name="寒岭镇" code="211021113" />
+    <street name="兴隆镇" code="211021114" />
+    <street name="下达河乡" code="211021201" />
+    <street name="吉洞峪满族乡" code="211021202" />
+    <street name="甜水满族乡" code="211021206" />
+</county>
+<county name="灯塔" code="211081">
+    <street name="烟台街道" code="211081001" />
+    <street name="万宝桥街道" code="211081002" />
+    <street name="古城子街道" code="211081003" />
+    <street name="佟二堡镇" code="211081101" />
+    <street name="铧子镇" code="211081102" />
+    <street name="张台子镇" code="211081103" />
+    <street name="西大窑镇" code="211081104" />
+    <street name="沈旦堡镇" code="211081105" />
+    <street name="西马峰镇" code="211081106" />
+    <street name="柳条寨镇" code="211081107" />
+    <street name="柳河子镇" code="211081108" />
+    <street name="大河南镇" code="211081111" />
+    <street name="五星镇" code="211081114" />
+    <street name="鸡冠山乡" code="211081205" />
+</county>
+</city>
+</address>

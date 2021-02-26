@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="揭阳" code="445200">
+<county name="榕城" code="445202">
+    <street name="榕华街道" code="445202001" />
+    <street name="新兴街道" code="445202002" />
+    <street name="中山街道" code="445202003" />
+    <street name="西马街道" code="445202004" />
+    <street name="东兴街道" code="445202005" />
+    <street name="榕东街道" code="445202006" />
+    <street name="仙桥街道" code="445202007" />
+    <street name="梅云街道" code="445202008" />
+    <street name="东升街道" code="445202009" />
+    <street name="东阳街道" code="445202010" />
+    <street name="渔湖镇" code="445202101" />
+    <street name="炮台镇" code="445202102" />
+    <street name="地都镇" code="445202103" />
+    <street name="登岗镇" code="445202105" />
+</county>
+<county name="揭东" code="445221">
+    <street name="曲溪街道" code="445203001" />
+    <street name="磐东街道" code="445203002" />
+    <street name="云路镇" code="445203102" />
+    <street name="玉窖镇" code="445203103" />
+    <street name="锡场镇" code="445203104" />
+    <street name="新亨镇" code="445203105" />
+    <street name="玉湖镇" code="445203106" />
+    <street name="埔田镇" code="445203107" />
+    <street name="霖磐镇" code="445203108" />
+    <street name="月城镇" code="445203109" />
+    <street name="白塔镇" code="445203110" />
+    <street name="龙尾镇" code="445203111" />
+    <street name="桂岭镇" code="445203112" />
+    <street name="东径茶场" code="445203401" />
+    <street name="坪上农场" code="445203402" />
+    <street name="揭阳高新技术产业开发区" code="445203403" />
+    <street name="卅岭农场" code="445203404" />
+    <street name="蓝城区工业园区管理处" code="445203405" />
+    <street name="珠海（揭阳）产业转移工业园" code="445203406" />
+</county>
+<county name="揭西" code="445222">
+    <street name="河婆街道" code="445222001" />
+    <street name="龙潭镇" code="445222102" />
+    <street name="南山镇" code="445222103" />
+    <street name="五经富镇" code="445222104" />
+    <street name="京溪园镇" code="445222105" />
+    <street name="灰寨镇" code="445222106" />
+    <street name="塔头镇" code="445222107" />
+    <street name="东园镇" code="445222108" />
+    <street name="凤江镇" code="445222109" />
+    <street name="棉湖镇" code="445222110" />
+    <street name="金和镇" code="445222111" />
+    <street name="大溪镇" code="445222112" />
+    <street name="钱坑镇" code="445222113" />
+    <street name="坪上镇" code="445222114" />
+    <street name="五云镇" code="445222115" />
+    <street name="上砂镇" code="445222116" />
+    <street name="良田乡" code="445222201" />
+    <street name="北山农林场" code="445222401" />
+    <street name="果林场" code="445222402" />
+    <street name="油桐林场" code="445222403" />
+    <street name="高田农场" code="445222404" />
+    <street name="河輋农场" code="445222405" />
+    <street name="县苗圃场" code="445222406" />
+</county>
+<county name="惠来" code="445224">
+    <street name="惠城镇" code="445224100" />
+    <street name="华湖镇" code="445224102" />
+    <street name="仙庵镇" code="445224103" />
+    <street name="靖海镇" code="445224104" />
+    <street name="周田镇" code="445224105" />
+    <street name="前詹镇" code="445224106" />
+    <street name="神泉镇" code="445224107" />
+    <street name="东陇镇" code="445224108" />
+    <street name="岐石镇" code="445224109" />
+    <street name="隆江镇" code="445224110" />
+    <street name="溪西镇" code="445224111" />
+    <street name="鳌江镇" code="445224112" />
+    <street name="东港镇" code="445224113" />
+    <street name="葵潭镇" code="445224114" />
+    <street name="东埔农场" code="445224401" />
+    <street name="揭阳市大南山华侨管理区" code="445224402" />
+    <street name="葵潭农场" code="445224403" />
+    <street name="青坑林场" code="445224404" />
+    <street name="揭阳（惠来）沿海经济开发试验区" code="445224450" />
+    <street name="揭阳大南海石化工业区" code="445224451" />
+</county>
+<county name="普宁" code="445281">
+    <street name="流沙东街道" code="445281001" />
+    <street name="流沙南街道" code="445281002" />
+    <street name="流沙西街道" code="445281003" />
+    <street name="流沙北街道" code="445281004" />
+    <street name="池尾街道" code="445281005" />
+    <street name="燎原街道" code="445281006" />
+    <street name="大南山街道" code="445281007" />
+    <street name="赤岗镇" code="445281102" />
+    <street name="大坝镇" code="445281103" />
+    <street name="洪阳镇" code="445281104" />
+    <street name="南溪镇" code="445281105" />
+    <street name="广太镇" code="445281106" />
+    <street name="麒麟镇" code="445281107" />
+    <street name="南径镇" code="445281108" />
+    <street name="占陇镇" code="445281109" />
+    <street name="军埠镇" code="445281110" />
+    <street name="下架山镇" code="445281111" />
+    <street name="高埔镇" code="445281113" />
+    <street name="云落镇" code="445281114" />
+    <street name="大坪镇" code="445281115" />
+    <street name="船埔镇" code="445281116" />
+    <street name="梅林镇" code="445281117" />
+    <street name="里湖镇" code="445281119" />
+    <street name="梅塘镇" code="445281121" />
+    <street name="后溪乡" code="445281201" />
+    <street name="大池农场" code="445281401" />
+    <street name="马鞍山农场" code="445281402" />
+    <street name="大坪农场" code="445281403" />
+    <street name="普侨区" code="445281404" />
+    <street name="三坑农场" code="445281405" />
+    <street name="乌石农场" code="445281406" />
+    <street name="科技工业园" code="445281407" />
+    <street name="英歌山工业园" code="445281408" />
+</county>
+</city>
+</address>

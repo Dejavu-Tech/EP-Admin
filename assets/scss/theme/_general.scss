@@ -1,0 +1,237 @@
+/**=====================
+     01. General CSS Start
+==========================**/
+//Custom css Start
+html {
+  scroll-behavior: smooth;
+}
+body {
+    background-color: $body-bg-color;
+    font-size: $body-font-size;
+    overflow-x: hidden;
+    font-family: $font-nunito,"PingFang SC";
+    color: $theme-font-color;
+}
+ul {
+    padding-left: $ul-padding-left;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-right: $ul-padding-right;
+}
+* a {
+    color: $primary-color;
+}
+*.btn:focus{
+    box-shadow : $btn-focus-box-shadow !important;
+}
+p {
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    letter-spacing: $paragraph-letter-spacing;
+}
+code{
+    color: $code-tag-color !important;
+    background-color: $code-tag-bg-color;
+    padding: $code-tag-padding;
+    margin: $code-tag-margin;
+    border-radius: $code-tag-border-radious;
+}
+blockquote{
+    border-left: $blockquote-border;
+    padding: $blockquote-padding;
+}
+blockquote{
+    &.text-center{
+        border: none;
+        padding: $blockquote-padding;
+    }
+}
+blockquote{
+    &.text-right{
+        border-left: none;
+        border-right: $blockquote-border;
+        padding: $blockquote-padding;
+    }
+}
+:focus{
+    outline-color: $all-focus-outline-color;
+}
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+svg{
+    vertical-align: baseline;
+}
+input {
+    &:focus {
+        outline-color: $transparent-color;
+    }
+}
+.media-widgets {
+    .media-body {
+        margin-bottom: 30px;
+    }
+}
+//Custom css End
+
+//Typography css start
+
+.typography {
+    h1,.h1,
+    h2,.h2,
+    h3,.h3,
+    h4,.h4,
+    h5,.h5,
+    h6,.h6 {
+        margin: 20px 0;
+        margin-top: 0;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    small {
+        padding-left: $small-tag-padding;
+        color: $small-tag-color;
+    }
+}
+pre{
+    background-color: $pre-tag-bg-color;
+    padding: $pre-tag-padding;
+}
+
+a{
+    &:hover{
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+//Typography css end
+
+.owl-theme {
+    .owl-dots {
+        .owl-dot{
+            span{
+                background: lighten($primary-color, 20%);
+            }
+            &.active,&:hover {
+                span {
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+    .owl-nav{
+        &.disabled {
+            &+ .owl-dots {
+                margin-bottom: -10px;
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+.click2edit{
+    &~.note-editor{
+        &.note-frame{
+            margin-bottom: 30px;
+        }
+    }
+}
+.note-editor{
+    &.note-frame {
+        border-color: $light-color;
+    }
+}
+.note-editor{
+    &.note-frame {
+        border-color: $light-color;
+    }
+}
+.my-gallery{
+    img{
+        border-radius: 15px !important;
+    }
+}
+// modal page
+.modal-dialog{
+    .modal-content{
+        .modal-body{
+            p{
+                a{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+// index page notify
+.alert-theme{
+    button{
+        top: 33px !important;
+        right: 35px !important;
+        color: $primary-color;
+    }
+    img{
+        margin-right: 10px;
+   }
+
+    span{
+        + span{
+            + span{
+                padding: 15px;
+                background-color: lighten($primary-color, 44%);
+                box-shadow: 2px 12px 20px -15px rgba($primary-color, 0.3);
+                border: 1px solid rgba($primary-color, 0.02);
+                border-radius: 15px;
+                color: rgba($primary-color, 0.5);
+                > strong{
+                    color: rgba($primary-color, 0.9);
+                    padding-right: 2px;
+                }
+            }
+        }
+    }
+}
+.alert-copy{
+    border: 1px solid $primary-color;
+    line-height: 1;
+    display: inline-block;
+    width: 300px;
+    color: $white;
+    background-color: $primary-color;
+    box-shadow: 3px 3px 5px 0 #9b9b9b;
+    .close{
+        box-shadow: none;
+        color: $white;
+        line-height: 1.4;
+        font-weight: 100;
+    }
+}
+
+.ace-editor {
+    height: 400px;
+    width: 100%;
+}
+.editor-toolbar{
+    width: 100% !important;
+}
+.CodeMirror{
+    top:0!important;
+}
+.language {
+  position: relative;
+}
+.js-languageSelect{
+  position: absolute;
+  top: 18px;
+  right: 30px;
+  padding: 12px;
+}
+// range slider
+.irs-line-mid, .irs-line-left, .irs-line-right, .irs-bar, .irs-bar-edge {
+    background-color: $primary-color;
+}
+/**=====================
+      01. General CSS Ends
+==========================**/

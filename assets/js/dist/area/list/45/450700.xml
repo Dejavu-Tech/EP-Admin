@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="钦州" code="450700">
+<county name="钦南" code="450702">
+    <street name="向阳街道" code="450702001" />
+    <street name="水东街道" code="450702002" />
+    <street name="文峰街道" code="450702003" />
+    <street name="南珠街道" code="450702004" />
+    <street name="沙埠镇" code="450702100" />
+    <street name="康熙岭镇" code="450702101" />
+    <street name="黄屋屯镇" code="450702102" />
+    <street name="尖山镇" code="450702103" />
+    <street name="大番坡镇" code="450702104" />
+    <street name="龙门港镇" code="450702105" />
+    <street name="久隆镇" code="450702107" />
+    <street name="东场镇" code="450702108" />
+    <street name="那丽镇" code="450702109" />
+    <street name="那彭镇" code="450702110" />
+    <street name="那思镇" code="450702111" />
+    <street name="犀牛脚镇" code="450702112" />
+    <street name="丽光华侨农场" code="450702400" />
+    <street name="钦州港经济技术开发区" code="450702401" />
+    <street name="三娘湾旅游管理区" code="450702402" />
+    <street name="广西钦州保税港区" code="450702403" />
+    <street name="中马钦州产业园区" code="450702404" />
+</county>
+<county name="钦北" code="450703">
+    <street name="长田街道" code="450703001" />
+    <street name="鸿亭街道" code="450703002" />
+    <street name="子材街道" code="450703003" />
+    <street name="大垌镇" code="450703100" />
+    <street name="平吉镇" code="450703101" />
+    <street name="青塘镇" code="450703102" />
+    <street name="小董镇" code="450703103" />
+    <street name="板城镇" code="450703104" />
+    <street name="那蒙镇" code="450703105" />
+    <street name="长滩镇" code="450703106" />
+    <street name="新棠镇" code="450703107" />
+    <street name="大直镇" code="450703108" />
+    <street name="大寺镇" code="450703109" />
+    <street name="贵台镇" code="450703110" />
+</county>
+<county name="灵山" code="450721">
+    <street name="灵城镇" code="450721100" />
+    <street name="新圩镇" code="450721101" />
+    <street name="丰塘镇" code="450721102" />
+    <street name="平山镇" code="450721103" />
+    <street name="石塘镇" code="450721104" />
+    <street name="佛子镇" code="450721105" />
+    <street name="平南镇" code="450721106" />
+    <street name="烟墩镇" code="450721107" />
+    <street name="檀圩镇" code="450721108" />
+    <street name="那隆镇" code="450721109" />
+    <street name="三隆镇" code="450721110" />
+    <street name="陆屋镇" code="450721111" />
+    <street name="旧州镇" code="450721112" />
+    <street name="太平镇" code="450721113" />
+    <street name="沙坪镇" code="450721114" />
+    <street name="武利镇" code="450721115" />
+    <street name="文利镇" code="450721116" />
+    <street name="伯劳镇" code="450721117" />
+    <street name="国营新光农场" code="450721400" />
+    <street name="国营华山农场" code="450721401" />
+</county>
+<county name="浦北" code="450722">
+    <street name="小江镇" code="450722100" />
+    <street name="泉水镇" code="450722101" />
+    <street name="石埇镇" code="450722102" />
+    <street name="安石镇" code="450722103" />
+    <street name="张黄镇" code="450722104" />
+    <street name="大成镇" code="450722105" />
+    <street name="白石水镇" code="450722106" />
+    <street name="北通镇" code="450722107" />
+    <street name="三合镇" code="450722108" />
+    <street name="龙门镇" code="450722109" />
+    <street name="福旺镇" code="450722110" />
+    <street name="寨圩镇" code="450722111" />
+    <street name="乐民镇" code="450722112" />
+    <street name="六硍镇" code="450722113" />
+    <street name="平睦镇" code="450722114" />
+    <street name="官垌镇" code="450722115" />
+</county>
+</city>
+</address>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="株洲" code="430200">
+<county name="荷塘" code="430202">
+    <street name="月塘街道" code="430202001" />
+    <street name="茨菇塘街道" code="430202002" />
+    <street name="宋家桥街道" code="430202003" />
+    <street name="桂花街道" code="430202004" />
+    <street name="金山街道" code="430202005" />
+    <street name="仙庾镇" code="430202100" />
+    <street name="明照乡" code="430202201" />
+</county>
+<county name="芦淞" code="430203">
+    <street name="贺家土街道" code="430203001" />
+    <street name="建设街道" code="430203002" />
+    <street name="建宁街道" code="430203003" />
+    <street name="董家段街道" code="430203004" />
+    <street name="庆云街道" code="430203005" />
+    <street name="枫溪街道" code="430203006" />
+    <street name="龙泉街道" code="430203007" />
+    <street name="白关镇" code="430203100" />
+    <street name="五里墩乡" code="430203201" />
+    <street name="姚家坝乡" code="430203202" />
+</county>
+<county name="石峰" code="430204">
+    <street name="田心街道" code="430204001" />
+    <street name="响石岭街道" code="430204002" />
+    <street name="清水塘街道" code="430204003" />
+    <street name="铜塘湾街道" code="430204004" />
+    <street name="井龙街道" code="430204005" />
+    <street name="学林街道" code="430204006" />
+    <street name="龙头铺镇" code="430204100" />
+    <street name="云田镇" code="430204101" />
+</county>
+<county name="天元" code="430211">
+    <street name="嵩山路街道" code="430211001" />
+    <street name="泰山路街道" code="430211002" />
+    <street name="栗雨街道" code="430211003" />
+    <street name="马家河镇" code="430211100" />
+    <street name="群丰镇" code="430211101" />
+    <street name="雷打石镇" code="430211102" />
+    <street name="三门镇" code="430211103" />
+</county>
+<county name="株洲" code="430221">
+    <street name="渌口镇" code="430221100" />
+    <street name="朱亭镇" code="430221101" />
+    <street name="古岳峰镇" code="430221106" />
+    <street name="淦田镇" code="430221107" />
+    <street name="龙凤乡" code="430221200" />
+    <street name="龙潭乡" code="430221201" />
+    <street name="砖桥乡" code="430221202" />
+    <street name="平山乡" code="430221203" />
+    <street name="洲坪乡" code="430221207" />
+    <street name="南阳桥乡" code="430221208" />
+    <street name="仙井乡" code="430221209" />
+    <street name="堂市乡" code="430221212" />
+    <street name="王十万乡" code="430221213" />
+    <street name="太湖乡" code="430221214" />
+</county>
+<county name="攸县" code="430223">
+    <street name="联星街道" code="430223001" />
+    <street name="江桥街道" code="430223002" />
+    <street name="酒埠江镇" code="430223102" />
+    <street name="桃水镇" code="430223103" />
+    <street name="网岭镇" code="430223106" />
+    <street name="渌田镇" code="430223109" />
+    <street name="柏市镇" code="430223110" />
+    <street name="大同桥镇" code="430223111" />
+    <street name="石羊塘镇" code="430223115" />
+    <street name="黄丰桥镇" code="430223118" />
+    <street name="鸾山镇" code="430223119" />
+    <street name="丫江桥镇" code="430223120" />
+    <street name="上云桥镇" code="430223121" />
+    <street name="皇图岭镇" code="430223122" />
+    <street name="新市镇" code="430223123" />
+    <street name="菜花坪镇" code="430223124" />
+    <street name="莲塘坳镇" code="430223125" />
+    <street name="湖南坳乡" code="430223204" />
+    <street name="坪阳庙乡" code="430223205" />
+    <street name="槚山乡" code="430223207" />
+    <street name="鸭塘铺乡" code="430223212" />
+    <street name="攸县工业园" code="430223400" />
+</county>
+<county name="茶陵" code="430224">
+    <street name="城关镇" code="430224100" />
+    <street name="界首镇" code="430224101" />
+    <street name="湖口镇" code="430224103" />
+    <street name="浣溪镇" code="430224104" />
+    <street name="马江镇" code="430224105" />
+    <street name="高陇镇" code="430224106" />
+    <street name="潞水镇" code="430224108" />
+    <street name="虎踞镇" code="430224109" />
+    <street name="平水镇" code="430224110" />
+    <street name="枣市镇" code="430224111" />
+    <street name="火田镇" code="430224112" />
+    <street name="严塘镇" code="430224113" />
+    <street name="腰陂镇" code="430224114" />
+    <street name="秩堂镇" code="430224115" />
+    <street name="下东乡" code="430224202" />
+    <street name="舲舫乡" code="430224203" />
+    <street name="思聪乡" code="430224204" />
+    <street name="洣江乡" code="430224205" />
+    <street name="八团乡" code="430224207" />
+    <street name="桃坑乡" code="430224213" />
+    <street name="茶陵监狱" code="430224403" />
+    <street name="汉背办事处" code="430224404" />
+    <street name="利民办事处" code="430224405" />
+    <street name="茶陵县红色农场" code="430224500" />
+</county>
+<county name="炎陵" code="430225">
+    <street name="霞阳镇" code="430225100" />
+    <street name="沔渡镇" code="430225101" />
+    <street name="十都镇" code="430225102" />
+    <street name="水口镇" code="430225103" />
+    <street name="三河镇" code="430225104" />
+    <street name="鹿原镇" code="430225105" />
+    <street name="垄溪乡" code="430225200" />
+    <street name="石洲乡" code="430225201" />
+    <street name="策源乡" code="430225202" />
+    <street name="下村乡" code="430225203" />
+    <street name="中村乡" code="430225204" />
+    <street name="龙渣瑶族乡" code="430225205" />
+    <street name="平乐乡" code="430225206" />
+    <street name="船形乡" code="430225207" />
+    <street name="东风乡" code="430225208" />
+    <street name="炎陵县大院农场" code="430225400" />
+    <street name="炎陵县桃源洞管理局" code="430225401" />
+</county>
+<county name="醴陵" code="430281">
+    <street name="阳三石街道" code="430281002" />
+    <street name="西山街道" code="430281003" />
+    <street name="黄泥坳街道" code="430281004" />
+    <street name="来龙门街道" code="430281006" />
+    <street name="南桥镇" code="430281100" />
+    <street name="富里镇" code="430281101" />
+    <street name="白兔潭镇" code="430281102" />
+    <street name="浦口镇" code="430281103" />
+    <street name="王坊镇" code="430281104" />
+    <street name="王仙镇" code="430281105" />
+    <street name="泗汾镇" code="430281107" />
+    <street name="沈潭镇" code="430281108" />
+    <street name="船湾镇" code="430281109" />
+    <street name="大障镇" code="430281110" />
+    <street name="贺家桥镇" code="430281111" />
+    <street name="仙霞镇" code="430281118" />
+    <street name="黄獭嘴镇" code="430281119" />
+    <street name="均楚镇" code="430281120" />
+    <street name="东富镇" code="430281121" />
+    <street name="石亭镇" code="430281122" />
+    <street name="栗山坝镇" code="430281123" />
+    <street name="神福港镇" code="430281124" />
+    <street name="孙家湾乡" code="430281204" />
+    <street name="清水江乡" code="430281205" />
+    <street name="嘉树乡" code="430281206" />
+    <street name="新阳乡" code="430281213" />
+    <street name="官庄乡" code="430281214" />
+    <street name="枫林市乡" code="430281215" />
+    <street name="东堡乡" code="430281216" />
+    <street name="板杉乡" code="430281217" />
+    <street name="湖南醴陵经济开发区" code="430281400" />
+    <street name="醴陵市长庆示范区" code="430281401" />
+</county>
+</city>
+</address>

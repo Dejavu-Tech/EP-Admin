@@ -1,0 +1,27 @@
+
+
+*, *:before, *:after { }
+.ncsc-form-default div.bottom { text-align: center; }
+.ks-contentbox .bottom { padding: 10px; }
+a.ncsc-btn { -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; background-color: #f5f5f5; border-color: #dcdcdc #dcdcdc #b3b3b3; border-image: none; border-style: solid; border-width: 1px; color: #777; cursor: pointer; display: inline-block; font: 12px/20px "microsoft yahei";  padding: 4px 12px; text-align: center; vertical-align: middle; }
+a.ncsc-btn-green, .nscs-table-handle a.btn-green:hover { background-color: #5bb75b; border-color: #52a452 #52a452 #448944; color:#fff; }
+a.ncsc-btn-mini { background-color: #f5f5f5; border-color: #dcdcdc #dcdcdc #b3b3b3; border-style: solid; border-width: 1px; color: #777; cursor: pointer; display: inline-block; font: 12px/20px arial; height: 20px; margin:5px; margin-right: 2px; padding: 0 10px; text-align: center; vertical-align: middle; }
+
+/*弹出层*/
+.ks-ext-mask {filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#BFFFFFFF', endColorstr='#BFFFFFFF');background:rgba(255,255,255,0.75);}
+.dialog{ background-color: #FFF; width: 640px; margin-left: -320px; border: 1px solid #CCC; position: fixed; z-index: 9999; top: 25%; left: 50%;}
+.dialog{ top: 30%;}
+.ks-contentbox { display: block; }
+.ks-contentbox .title { font-size: 14px;font-weight: bold; color: #555; background-color: #FFF;  padding: 10px; border-bottom: solid 1px #E6E6E6; position: relative; z-index: 1;}
+a.ks-ext-close { font: lighter 14px/20px Verdana; color: #999; text-align: center; display: block; width: 20px; height: 20px; position: absolute; z-index: 1; top: 10px; right: 10px; cursor: pointer;}
+a:hover.ks-ext-close { text-decoration: none; color: #27A9E3;}
+
+#dialog dl{margin:10px;}
+#dialog dl dt{}
+#dialog dl dd{margin:5px 0;}
+
+.h50{height:50px;}
+.h200{height:200px;}
+
+.w200{width:200px;}
+.w400{width:400px;}

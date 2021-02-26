@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="安庆" code="340800">
+<county name="迎江" code="340802">
+    <street name="宜城路街道" code="340802001" />
+    <street name="新河路街道" code="340802002" />
+    <street name="华中路街道" code="340802003" />
+    <street name="人民路街道" code="340802004" />
+    <street name="孝肃路街道" code="340802005" />
+    <street name="建设路街道" code="340802006" />
+    <street name="老峰镇" code="340802100" />
+    <street name="龙狮桥乡" code="340802200" />
+    <street name="长风乡" code="340802201" />
+    <street name="新洲乡" code="340802202" />
+</county>
+<county name="大观" code="340803">
+    <street name="德宽路街道" code="340803001" />
+    <street name="玉琳路街道" code="340803002" />
+    <street name="龙山路街道" code="340803003" />
+    <street name="菱湖街道" code="340803004" />
+    <street name="集贤路街道" code="340803005" />
+    <street name="石化路街道" code="340803006" />
+    <street name="花亭路街道" code="340803007" />
+    <street name="海口镇" code="340803100" />
+    <street name="十里铺乡" code="340803200" />
+    <street name="山口乡" code="340803201" />
+    <street name="大观开发区" code="340803400" />
+    <street name="安徽安庆海口经济开发区" code="340803401" />
+    <street name="皖河农场" code="340803500" />
+</county>
+<county name="宜秀" code="340811">
+    <street name="大桥街道" code="340811001" />
+    <street name="菱北街道" code="340811002" />
+    <street name="大龙山镇" code="340811100" />
+    <street name="杨桥镇" code="340811101" />
+    <street name="罗岭镇" code="340811102" />
+    <street name="白泽湖乡" code="340811200" />
+    <street name="五横乡" code="340811201" />
+</county>
+<county name="怀宁" code="340822">
+    <street name="高河镇" code="340822100" />
+    <street name="石牌镇" code="340822101" />
+    <street name="月山镇" code="340822102" />
+    <street name="马庙镇" code="340822103" />
+    <street name="金拱镇" code="340822104" />
+    <street name="茶岭镇" code="340822105" />
+    <street name="公岭镇" code="340822106" />
+    <street name="黄墩镇" code="340822107" />
+    <street name="三桥镇" code="340822108" />
+    <street name="小市镇" code="340822109" />
+    <street name="黄龙镇" code="340822110" />
+    <street name="平山镇" code="340822111" />
+    <street name="腊树镇" code="340822112" />
+    <street name="洪铺镇" code="340822113" />
+    <street name="江镇镇" code="340822114" />
+    <street name="凉亭乡" code="340822200" />
+    <street name="石镜乡" code="340822201" />
+    <street name="秀山乡" code="340822202" />
+    <street name="清河乡" code="340822203" />
+    <street name="雷埠乡" code="340822204" />
+</county>
+<county name="枞阳" code="340823">
+    <street name="枞阳镇" code="340823100" />
+    <street name="欧山镇" code="340823101" />
+    <street name="汤沟镇" code="340823102" />
+    <street name="老洲镇" code="340823103" />
+    <street name="陈瑶湖镇" code="340823104" />
+    <street name="周潭镇" code="340823105" />
+    <street name="横埠镇" code="340823106" />
+    <street name="项铺镇" code="340823107" />
+    <street name="钱桥镇" code="340823108" />
+    <street name="麒麟镇" code="340823109" />
+    <street name="义津镇" code="340823110" />
+    <street name="浮山镇" code="340823111" />
+    <street name="会宫镇" code="340823112" />
+    <street name="官埠桥镇" code="340823113" />
+    <street name="铁铜乡" code="340823200" />
+    <street name="凤仪乡" code="340823201" />
+    <street name="长沙乡" code="340823202" />
+    <street name="钱铺乡" code="340823203" />
+    <street name="金社乡" code="340823204" />
+    <street name="白梅乡" code="340823205" />
+    <street name="白湖乡" code="340823206" />
+    <street name="雨坛乡" code="340823207" />
+    <street name="枞阳经济开发区" code="340823400" />
+</county>
+<county name="潜山" code="340824">
+    <street name="梅城镇" code="340824100" />
+    <street name="源潭镇" code="340824101" />
+    <street name="余井镇" code="340824102" />
+    <street name="王河镇" code="340824103" />
+    <street name="黄铺镇" code="340824104" />
+    <street name="槎水镇" code="340824105" />
+    <street name="水吼镇" code="340824106" />
+    <street name="官庄镇" code="340824107" />
+    <street name="黄泥镇" code="340824108" />
+    <street name="黄柏镇" code="340824109" />
+    <street name="天柱山镇" code="340824110" />
+    <street name="塔畈乡" code="340824200" />
+    <street name="油坝乡" code="340824201" />
+    <street name="龙潭乡" code="340824202" />
+    <street name="痘姆乡" code="340824203" />
+    <street name="五庙乡" code="340824204" />
+    <street name="开发区" code="340824400" />
+    <street name="旅游度假区" code="340824401" />
+</county>
+<county name="太湖" code="340825">
+    <street name="晋熙镇" code="340825100" />
+    <street name="徐桥镇" code="340825101" />
+    <street name="新仓镇" code="340825102" />
+    <street name="小池镇" code="340825103" />
+    <street name="寺前镇" code="340825104" />
+    <street name="天华镇" code="340825105" />
+    <street name="牛镇镇" code="340825106" />
+    <street name="弥陀镇" code="340825107" />
+    <street name="北中镇" code="340825108" />
+    <street name="百里镇" code="340825109" />
+    <street name="大石乡" code="340825200" />
+    <street name="城西乡" code="340825201" />
+    <street name="江塘乡" code="340825202" />
+    <street name="汤泉乡" code="340825203" />
+    <street name="刘畈乡" code="340825204" />
+    <street name="经济开发区" code="340825400" />
+    <street name="花凉亭水电站" code="340825401" />
+</county>
+<county name="宿松" code="340826">
+    <street name="孚玉镇" code="340826100" />
+    <street name="复兴镇" code="340826101" />
+    <street name="汇口镇" code="340826102" />
+    <street name="许岭镇" code="340826103" />
+    <street name="下仓镇" code="340826104" />
+    <street name="二郎镇" code="340826105" />
+    <street name="破凉镇" code="340826106" />
+    <street name="凉亭镇" code="340826107" />
+    <street name="长铺镇" code="340826108" />
+    <street name="高岭乡" code="340826200" />
+    <street name="程岭乡" code="340826201" />
+    <street name="九姑乡" code="340826202" />
+    <street name="千岭乡" code="340826203" />
+    <street name="洲头乡" code="340826204" />
+    <street name="佐坝乡" code="340826205" />
+    <street name="北浴乡" code="340826206" />
+    <street name="陈汉乡" code="340826207" />
+    <street name="隘口乡" code="340826208" />
+    <street name="柳坪乡" code="340826209" />
+    <street name="趾凤乡" code="340826210" />
+    <street name="河塌乡" code="340826211" />
+    <street name="五里乡" code="340826212" />
+    <street name="九成监狱管理分局" code="340826400" />
+    <street name="华阳河农场总场" code="340826401" />
+</county>
+<county name="望江" code="340827">
+    <street name="华阳镇" code="340827100" />
+    <street name="杨湾镇" code="340827101" />
+    <street name="漳湖镇" code="340827102" />
+    <street name="赛口镇" code="340827103" />
+    <street name="高士镇" code="340827104" />
+    <street name="鸦滩镇" code="340827105" />
+    <street name="长岭镇" code="340827106" />
+    <street name="太慈镇" code="340827107" />
+    <street name="凉泉乡" code="340827200" />
+    <street name="雷池乡" code="340827201" />
+    <street name="望江县经济开发区" code="340827400" />
+</county>
+<county name="岳西" code="340828">
+    <street name="天堂镇" code="340828100" />
+    <street name="店前镇" code="340828101" />
+    <street name="来榜镇" code="340828102" />
+    <street name="菖蒲镇" code="340828103" />
+    <street name="头陀镇" code="340828104" />
+    <street name="白帽镇" code="340828105" />
+    <street name="温泉镇" code="340828106" />
+    <street name="响肠镇" code="340828107" />
+    <street name="河图镇" code="340828108" />
+    <street name="五河镇" code="340828109" />
+    <street name="主簿镇" code="340828110" />
+    <street name="冶溪镇" code="340828111" />
+    <street name="黄尾镇" code="340828112" />
+    <street name="毛尖山乡" code="340828200" />
+    <street name="莲云乡" code="340828201" />
+    <street name="青天乡" code="340828202" />
+    <street name="包家乡" code="340828203" />
+    <street name="古坊乡" code="340828204" />
+    <street name="田头乡" code="340828205" />
+    <street name="中关乡" code="340828206" />
+    <street name="石关乡" code="340828207" />
+    <street name="姚河乡" code="340828208" />
+    <street name="和平乡" code="340828209" />
+    <street name="巍岭乡" code="340828210" />
+    <street name="安徽岳西县经济开发区" code="340828400" />
+</county>
+<county name="桐城" code="340881">
+    <street name="龙腾街道" code="340881001" />
+    <street name="文昌街道" code="340881002" />
+    <street name="龙眠街道" code="340881003" />
+    <street name="孔城镇" code="340881100" />
+    <street name="吕亭镇" code="340881101" />
+    <street name="范岗镇" code="340881102" />
+    <street name="新渡镇" code="340881103" />
+    <street name="双港镇" code="340881104" />
+    <street name="大关镇" code="340881105" />
+    <street name="青草镇" code="340881106" />
+    <street name="金神镇" code="340881107" />
+    <street name="嬉子湖镇" code="340881108" />
+    <street name="唐湾镇" code="340881109" />
+    <street name="黄甲镇" code="340881110" />
+    <street name="鲟鱼镇" code="340881111" />
+    <street name="桐城经济开发区" code="340881400" />
+    <street name="桐城双新经济开发区" code="340881401" />
+</county>
+</city>
+</address>

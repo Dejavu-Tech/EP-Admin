@@ -1,0 +1,136 @@
+/**=====================
+    52. Datepicker CSS Start
+==========================**/
+//colors
+.datepicker--day-name {
+  color: $black;
+  font-weight: bold;
+}
+.datepicker--cell {
+  &.-current- {
+    color: $black;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid $primary-color;
+  }
+  &.-focus- {
+    background: $primary-color;
+    color: $white;
+  }
+  &.-selected- {
+    background: $primary-color;
+  }
+}
+.daterangepicker.ltr {
+  color: $dark-gray;
+  z-index: 8;
+  tr {
+    font-size: 13px;
+    td {
+      height: 34px;
+      width: 34px;
+      &.in-range {
+        background-color: #faf6ff;
+      }
+      &.active {
+        background-color: #faf6ff;
+      }
+    }
+  }
+  .ranges {
+    float: none;
+    li {
+      color: $primary-color;
+      &:hover {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: $white;
+      }
+      &.active {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: $white;
+      }
+    }
+  }
+  .calendar-time select {
+    color: $dark-gray;
+  }
+}
+.daterangepicker {
+  select {
+    &.monthselect, &.yearselect {
+      background: $transparent-color;
+    }
+  }
+}
+.datetime-picker {
+  .theme-form{
+    .form-control{
+        border-radius: 15px 0 0 15px !important;
+    }  
+    .input-group-text{
+      border-radius: 0 15px 15px 0 !important;
+    }
+  }
+  .bootstrap-datetimepicker-widget.dropdown-menu {
+    width: auto;
+  }
+}
+.date-range-picker{
+  .theme-form{
+    margin-bottom: 30px;
+  }
+  > div{
+    &:last-child{
+      .theme-form{
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+.daterangepicker{
+  &:before {
+    border-bottom: 7px solid $light-semi-gray;
+  }
+  .daterangepicker_input {
+    i {
+      font-size: 14px;
+      color: $semi-dark;
+    }
+  }
+
+  .input-mini{
+   border-color: $light-semi-gray !important;
+   font-size: 14px;
+   color: $semi-dark;
+ }
+ th,td{
+  height: 34px;
+  width: 34px;
+  background-color: #faf6ff;
+    color: $primary-color;
+  &:hover{
+    color: $dark-color;
+  }
+  &.prev,&.next{
+    color: $white;
+    height: 34px;
+    width: 34px;
+    background-color: $primary-color;
+  }
+  &.month{
+    color: $primary-color;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+}
+/**=====================
+   52. Datepicker CSS End
+==========================**/
+
+
+
+

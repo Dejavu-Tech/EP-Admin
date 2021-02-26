@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="商丘" code="411400">
+<county name="梁园" code="411402">
+    <street name="前进街道" code="411402001" />
+    <street name="长征街道" code="411402002" />
+    <street name="八八街道" code="411402003" />
+    <street name="东风街道" code="411402004" />
+    <street name="中州街道" code="411402005" />
+    <street name="白云街道" code="411402006" />
+    <street name="平原街道" code="411402007" />
+    <street name="建设街道" code="411402008" />
+    <street name="平台街道" code="411402009" />
+    <street name="平安街道" code="411402010" />
+    <street name="谢集镇" code="411402100" />
+    <street name="双八镇" code="411402101" />
+    <street name="张阁镇" code="411402102" />
+    <street name="周集乡" code="411402200" />
+    <street name="水池铺乡" code="411402201" />
+    <street name="观堂乡" code="411402202" />
+    <street name="王楼乡" code="411402203" />
+    <street name="李庄乡" code="411402204" />
+    <street name="孙福集乡" code="411402205" />
+    <street name="刘口乡" code="411402206" />
+</county>
+<county name="睢阳" code="411403">
+    <street name="古城街道" code="411403001" />
+    <street name="文化街道" code="411403002" />
+    <street name="东方街道" code="411403003" />
+    <street name="新城街道" code="411403004" />
+    <street name="宋城街道" code="411403006" />
+    <street name="宋集镇" code="411403100" />
+    <street name="郭村镇" code="411403101" />
+    <street name="李口镇" code="411403102" />
+    <street name="高辛镇" code="411403103" />
+    <street name="坞墙镇" code="411403104" />
+    <street name="冯桥镇" code="411403105" />
+    <street name="路河镇" code="411403106" />
+    <street name="闫集镇" code="411403107" />
+    <street name="包公庙乡" code="411403204" />
+    <street name="娄店乡" code="411403205" />
+    <street name="毛固堆乡" code="411403206" />
+    <street name="勒马乡" code="411403208" />
+    <street name="临河店乡" code="411403209" />
+    <street name="古宋乡" code="411403210" />
+</county>
+<county name="民权" code="411421">
+    <street name="城关镇" code="411421100" />
+    <street name="人和镇" code="411421101" />
+    <street name="龙塘镇" code="411421102" />
+    <street name="北关镇" code="411421103" />
+    <street name="程庄镇" code="411421104" />
+    <street name="王庄寨镇" code="411421105" />
+    <street name="孙六镇" code="411421106" />
+    <street name="白云寺镇" code="411421107" />
+    <street name="王桥镇" code="411421108" />
+    <street name="庄子镇" code="411421109" />
+    <street name="伯党乡" code="411421200" />
+    <street name="花园乡" code="411421201" />
+    <street name="野岗乡" code="411421204" />
+    <street name="双塔乡" code="411421205" />
+    <street name="林七乡" code="411421206" />
+    <street name="胡集乡" code="411421207" />
+    <street name="禇庙乡" code="411421208" />
+    <street name="老颜集乡" code="411421210" />
+    <street name="商丘市农场" code="411421400" />
+    <street name="商丘市林场" code="411421401" />
+</county>
+<county name="睢县" code="411422">
+    <street name="长岗镇" code="411422100" />
+    <street name="平岗镇" code="411422101" />
+    <street name="周堂镇" code="411422102" />
+    <street name="蓼堤镇" code="411422103" />
+    <street name="西陵寺镇" code="411422104" />
+    <street name="城关镇" code="411422105" />
+    <street name="潮庄镇" code="411422106" />
+    <street name="尚屯镇" code="411422107" />
+    <street name="后台乡" code="411422200" />
+    <street name="河集乡" code="411422202" />
+    <street name="孙聚寨乡" code="411422203" />
+    <street name="白楼乡" code="411422204" />
+    <street name="河堤乡" code="411422205" />
+    <street name="白庙乡" code="411422206" />
+    <street name="胡堂乡" code="411422207" />
+    <street name="尤吉屯乡" code="411422208" />
+    <street name="董店乡" code="411422210" />
+    <street name="涧岗乡" code="411422211" />
+    <street name="匡城乡" code="411422213" />
+    <street name="城郊乡" code="411422214" />
+</county>
+<county name="宁陵" code="411423">
+    <street name="城关镇" code="411423100" />
+    <street name="张弓镇" code="411423101" />
+    <street name="柳河镇" code="411423102" />
+    <street name="逻岗镇" code="411423103" />
+    <street name="石桥镇" code="411423104" />
+    <street name="黄岗镇" code="411423105" />
+    <street name="华堡镇" code="411423106" />
+    <street name="刘楼乡" code="411423203" />
+    <street name="程楼乡" code="411423204" />
+    <street name="乔楼乡" code="411423205" />
+    <street name="城郊乡" code="411423206" />
+    <street name="阳驿乡" code="411423207" />
+    <street name="孔集乡" code="411423209" />
+    <street name="赵村乡" code="411423210" />
+    <street name="产业集聚区" code="411423400" />
+</county>
+<county name="柘城" code="411424">
+    <street name="长江新城街道" code="411424001" />
+    <street name="浦东街道" code="411424002" />
+    <street name="柘城县城关镇" code="411424100" />
+    <street name="陈青集镇" code="411424101" />
+    <street name="起台镇" code="411424102" />
+    <street name="胡襄镇" code="411424103" />
+    <street name="慈圣镇" code="411424104" />
+    <street name="安平镇" code="411424105" />
+    <street name="远襄镇" code="411424106" />
+    <street name="岗王镇" code="411424107" />
+    <street name="邵元乡" code="411424200" />
+    <street name="张桥乡" code="411424201" />
+    <street name="洪恩乡" code="411424203" />
+    <street name="老王集乡" code="411424204" />
+    <street name="大仵乡" code="411424205" />
+    <street name="马集乡" code="411424206" />
+    <street name="牛城乡" code="411424207" />
+    <street name="惠济乡" code="411424208" />
+    <street name="伯岗乡" code="411424210" />
+    <street name="申桥乡" code="411424212" />
+    <street name="李原乡" code="411424213" />
+    <street name="皇集乡" code="411424214" />
+</county>
+<county name="虞城" code="411425">
+    <street name="城关镇" code="411425100" />
+    <street name="界沟镇" code="411425101" />
+    <street name="营郭镇" code="411425102" />
+    <street name="杜集镇" code="411425103" />
+    <street name="谷熟镇" code="411425104" />
+    <street name="大杨集镇" code="411425105" />
+    <street name="贾寨镇" code="411425106" />
+    <street name="利民镇" code="411425107" />
+    <street name="张集镇" code="411425108" />
+    <street name="站集镇" code="411425109" />
+    <street name="黄冢乡" code="411425200" />
+    <street name="沙集乡" code="411425201" />
+    <street name="店集乡" code="411425202" />
+    <street name="闻集乡" code="411425204" />
+    <street name="芒种桥乡" code="411425205" />
+    <street name="刘店乡" code="411425207" />
+    <street name="大候乡" code="411425208" />
+    <street name="城郊乡" code="411425210" />
+    <street name="郑集乡" code="411425211" />
+    <street name="李老家乡" code="411425212" />
+    <street name="稍岗乡" code="411425213" />
+    <street name="镇里固乡" code="411425214" />
+    <street name="古王集乡" code="411425215" />
+    <street name="刘集乡" code="411425219" />
+    <street name="乔集乡" code="411425220" />
+    <street name="田庙乡" code="411425221" />
+</county>
+<county name="夏邑" code="411426">
+    <street name="城关镇" code="411426100" />
+    <street name="会亭镇" code="411426101" />
+    <street name="马头镇" code="411426102" />
+    <street name="济阳镇" code="411426103" />
+    <street name="李集镇" code="411426104" />
+    <street name="车站镇" code="411426105" />
+    <street name="杨集镇" code="411426106" />
+    <street name="韩道口镇" code="411426107" />
+    <street name="太平镇" code="411426108" />
+    <street name="罗庄镇" code="411426109" />
+    <street name="火店镇" code="411426110" />
+    <street name="北岭镇" code="411426111" />
+    <street name="曹集乡" code="411426200" />
+    <street name="胡桥乡" code="411426201" />
+    <street name="歧河乡" code="411426202" />
+    <street name="郭店乡" code="411426203" />
+    <street name="业庙乡" code="411426204" />
+    <street name="中峰乡" code="411426205" />
+    <street name="桑固乡" code="411426207" />
+    <street name="何营乡" code="411426208" />
+    <street name="王集乡" code="411426210" />
+    <street name="刘店集乡" code="411426211" />
+    <street name="骆集乡" code="411426212" />
+    <street name="孔庄乡" code="411426214" />
+</county>
+<county name="永城" code="411481">
+    <street name="演集镇" code="411481100" />
+    <street name="城关镇" code="411481101" />
+    <street name="芒山镇" code="411481102" />
+    <street name="高庄镇" code="411481103" />
+    <street name="酇城镇" code="411481104" />
+    <street name="裴桥镇" code="411481105" />
+    <street name="马桥镇" code="411481106" />
+    <street name="薛湖镇" code="411481107" />
+    <street name="蒋口镇" code="411481108" />
+    <street name="陈集镇" code="411481109" />
+    <street name="十八里镇" code="411481110" />
+    <street name="太邱镇" code="411481111" />
+    <street name="李寨镇" code="411481112" />
+    <street name="苗桥镇" code="411481113" />
+    <street name="顺和镇" code="411481114" />
+    <street name="茴村镇" code="411481115" />
+    <street name="酇阳镇" code="411481116" />
+    <street name="龙岗镇" code="411481117" />
+    <street name="马牧镇" code="411481118" />
+    <street name="王集镇" code="411481119" />
+    <street name="刘河镇" code="411481120" />
+    <street name="城厢乡" code="411481200" />
+    <street name="候岭乡" code="411481201" />
+    <street name="黄口乡" code="411481202" />
+    <street name="新桥乡" code="411481203" />
+    <street name="双桥乡" code="411481204" />
+    <street name="卧龙乡" code="411481207" />
+    <street name="条河乡" code="411481217" />
+    <street name="陈官庄乡" code="411481219" />
+</county>
+</city>
+</address>

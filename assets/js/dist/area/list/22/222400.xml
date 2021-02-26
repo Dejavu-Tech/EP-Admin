@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="延边朝鲜族" code="222400">
+<county name="延吉" code="222401">
+    <street name="进学街道" code="222401001" />
+    <street name="北山街道" code="222401002" />
+    <street name="新兴街道" code="222401003" />
+    <street name="公园街道" code="222401004" />
+    <street name="河南街道" code="222401005" />
+    <street name="建工街道" code="222401006" />
+    <street name="小营镇" code="222401100" />
+    <street name="依兰镇" code="222401101" />
+    <street name="三道湾镇" code="222401102" />
+    <street name="朝阳川镇" code="222401105" />
+    <street name="延吉市林业局" code="222401400" />
+    <street name="东山农场" code="222401401" />
+    <street name="延边原种场" code="222401402" />
+    <street name="延边新兴工业集中区" code="222401404" />
+</county>
+<county name="图们" code="222402">
+    <street name="向上街道" code="222402001" />
+    <street name="新华街道" code="222402002" />
+    <street name="月宫街道" code="222402003" />
+    <street name="月晴镇" code="222402100" />
+    <street name="石岘镇" code="222402101" />
+    <street name="长安镇" code="222402102" />
+    <street name="凉水镇" code="222402103" />
+</county>
+<county name="敦化" code="222403">
+    <street name="渤海街道" code="222403001" />
+    <street name="胜利街道" code="222403002" />
+    <street name="民主街道" code="222403003" />
+    <street name="丹江街道" code="222403004" />
+    <street name="大石头镇" code="222403100" />
+    <street name="黄泥河镇" code="222403101" />
+    <street name="官地镇" code="222403102" />
+    <street name="沙河沿镇" code="222403103" />
+    <street name="秋梨沟镇" code="222403104" />
+    <street name="额穆镇" code="222403105" />
+    <street name="贤儒镇" code="222403106" />
+    <street name="大蒲柴河镇" code="222403107" />
+    <street name="雁鸣湖镇" code="222403108" />
+    <street name="江源镇" code="222403109" />
+    <street name="江南镇" code="222403110" />
+    <street name="大桥乡" code="222403200" />
+    <street name="黑石乡" code="222403201" />
+    <street name="青沟子乡" code="222403202" />
+    <street name="翰章乡" code="222403203" />
+    <street name="红石乡" code="222403204" />
+    <street name="丹峰林业有限公司" code="222403400" />
+    <street name="黄泥河林业局" code="222403401" />
+    <street name="大石头林业有限公司" code="222403402" />
+    <street name="敦化市林业局" code="222403403" />
+    <street name="敖东鹿场" code="222403404" />
+    <street name="红石鹿场" code="222403406" />
+</county>
+<county name="珲春" code="222404">
+    <street name="靖和街道" code="222404001" />
+    <street name="新安街道" code="222404002" />
+    <street name="河南街道" code="222404003" />
+    <street name="近海街道" code="222404060" />
+    <street name="春化镇" code="222404100" />
+    <street name="敬信镇" code="222404101" />
+    <street name="板石镇" code="222404102" />
+    <street name="英安镇" code="222404103" />
+    <street name="马川子乡" code="222404200" />
+    <street name="杨泡满族乡" code="222404201" />
+    <street name="三家子满族乡" code="222404202" />
+    <street name="密江乡" code="222404203" />
+    <street name="哈达门乡" code="222404204" />
+    <street name="珲春林业局" code="222404400" />
+    <street name="双新果树场" code="222404401" />
+</county>
+<county name="龙井" code="222405">
+    <street name="安民街道" code="222405001" />
+    <street name="龙门街道" code="222405002" />
+    <street name="开山屯镇" code="222405100" />
+    <street name="老头沟镇" code="222405102" />
+    <street name="三合镇" code="222405103" />
+    <street name="东盛涌镇" code="222405104" />
+    <street name="智新镇" code="222405105" />
+    <street name="德新乡" code="222405200" />
+    <street name="白金乡" code="222405201" />
+    <street name="龙井市林业局" code="222405400" />
+    <street name="龙井大苏果树农场" code="222405401" />
+</county>
+<county name="和龙" code="222406">
+    <street name="民慧街道" code="222406001" />
+    <street name="光明街道" code="222406002" />
+    <street name="文化街道" code="222406003" />
+    <street name="八家子镇" code="222406100" />
+    <street name="福洞镇" code="222406101" />
+    <street name="头道镇" code="222406102" />
+    <street name="西城镇" code="222406103" />
+    <street name="南坪镇" code="222406104" />
+    <street name="东城镇" code="222406105" />
+    <street name="崇善镇" code="222406106" />
+    <street name="龙城镇" code="222406107" />
+    <street name="和龙林业局" code="222406400" />
+    <street name="八家子林业局" code="222406401" />
+    <street name="和龙市林业局" code="222406402" />
+</county>
+<county name="汪清" code="222424">
+    <street name="南山社区工作委员会" code="222424003" />
+    <street name="大明社区工作委员会" code="222424004" />
+    <street name="大川社区工作委员会" code="222424005" />
+    <street name="幸福社区工作委员会" code="222424006" />
+    <street name="新民社区工作委员会" code="222424007" />
+    <street name="新华社区工作委员会" code="222424008" />
+    <street name="东振社区工作委员会" code="222424009" />
+    <street name="江北社区工作委员会" code="222424010" />
+    <street name="汪清镇" code="222424100" />
+    <street name="大兴沟镇" code="222424101" />
+    <street name="天桥岭镇" code="222424102" />
+    <street name="罗子沟镇" code="222424103" />
+    <street name="百草沟镇" code="222424104" />
+    <street name="春阳镇" code="222424105" />
+    <street name="复兴镇" code="222424106" />
+    <street name="东光镇" code="222424107" />
+    <street name="鸡冠乡" code="222424200" />
+    <street name="汪清林业局" code="222424400" />
+    <street name="天桥岭林业局" code="222424401" />
+    <street name="大兴沟林业局" code="222424402" />
+    <street name="八人沟农场" code="222424404" />
+    <street name="罗子沟农场" code="222424407" />
+    <street name="复兴农场" code="222424408" />
+</county>
+<county name="安图" code="222426">
+    <street name="明月镇" code="222426100" />
+    <street name="松江镇" code="222426101" />
+    <street name="二道白河镇" code="222426102" />
+    <street name="两江镇" code="222426103" />
+    <street name="石门镇" code="222426104" />
+    <street name="万宝镇" code="222426105" />
+    <street name="亮兵镇" code="222426106" />
+    <street name="长白山保护开发区管委会池北区（特殊乡镇）" code="222426120" />
+    <street name="县级直管村级单位（特殊镇）" code="222426198" />
+    <street name="新合乡" code="222426200" />
+    <street name="永庆乡" code="222426201" />
+    <street name="白河林业局" code="222426400" />
+    <street name="安图林业有限公司" code="222426401" />
+    <street name="安图县林业局" code="222426402" />
+    <street name="海沟金矿" code="222426403" />
+</county>
+</city>
+</address>

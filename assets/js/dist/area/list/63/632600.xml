@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="果洛" code="632600">
+<county name="玛沁" code="632621">
+    <street name="大武镇" code="632621100" />
+    <street name="拉加镇" code="632621101" />
+    <street name="大武乡" code="632621200" />
+    <street name="东倾沟乡" code="632621201" />
+    <street name="雪山乡" code="632621202" />
+    <street name="下大武乡" code="632621203" />
+    <street name="优云乡" code="632621204" />
+    <street name="当洛乡" code="632621205" />
+</county>
+<county name="班玛" code="632622">
+    <street name="赛来塘镇" code="632622100" />
+    <street name="多贡麻乡" code="632622200" />
+    <street name="马可河乡" code="632622201" />
+    <street name="吉卡乡" code="632622202" />
+    <street name="达卡乡" code="632622203" />
+    <street name="知钦乡" code="632622204" />
+    <street name="江日堂乡" code="632622205" />
+    <street name="亚尔堂乡" code="632622206" />
+    <street name="灯塔乡" code="632622207" />
+</county>
+<county name="甘德" code="632623">
+    <street name="柯曲镇" code="632623100" />
+    <street name="上贡麻乡" code="632623200" />
+    <street name="下贡麻乡" code="632623201" />
+    <street name="岗龙乡" code="632623202" />
+    <street name="青珍乡" code="632623203" />
+    <street name="江千乡" code="632623204" />
+    <street name="下藏科乡" code="632623205" />
+</county>
+<county name="达日" code="632624">
+    <street name="吉迈镇" code="632624100" />
+    <street name="满掌乡" code="632624200" />
+    <street name="德昂乡" code="632624201" />
+    <street name="窝赛乡" code="632624202" />
+    <street name="莫坝乡" code="632624203" />
+    <street name="上红科乡" code="632624204" />
+    <street name="下红科乡" code="632624205" />
+    <street name="建设乡" code="632624206" />
+    <street name="桑日麻乡" code="632624207" />
+    <street name="特合土乡" code="632624208" />
+</county>
+<county name="久治" code="632625">
+    <street name="智青松多镇" code="632625100" />
+    <street name="门堂乡" code="632625200" />
+    <street name="哇赛乡" code="632625201" />
+    <street name="索呼日麻乡" code="632625202" />
+    <street name="白玉乡" code="632625203" />
+    <street name="哇尔依乡" code="632625204" />
+</county>
+<county name="玛多" code="632626">
+    <street name="玛查理镇" code="632626100" />
+    <street name="花石峡镇" code="632626101" />
+    <street name="黄河乡" code="632626200" />
+    <street name="扎陵湖乡" code="632626201" />
+</county>
+</city>
+</address>

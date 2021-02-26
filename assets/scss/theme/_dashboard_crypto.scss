@@ -1,0 +1,625 @@
+/**=====================
+    70 Dashboard Crypto CSS Start
+    ==========================**/
+    .custom-cursor{
+      cursor: url(../images/cursor.png), auto;
+    }
+    .apexcharts-canvas.zoomable .hovering-zoom{
+      cursor: url(../images/cursor.png), auto;
+    }
+    .card-bg{
+      background-image: url(../images/dashboard/bg.jpg);
+      background-blend-mode: overlay;
+      background-color: #f6f3fa;
+      &.card .card-header{
+        background-color: transparent;
+        z-index: 9;
+      } 
+      .media{
+       position: absolute;
+       bottom: 15px;
+       z-index: 9;
+       left: 15px;
+       width: calc(100% - 35px);    
+       align-items: center;
+       h5{
+        color: $white;
+        font-weight: 700;
+        padding-top: 12px;
+        margin-left: 10px;
+      }
+    }    
+  }
+  .crypto-slider{
+    .owl-dots{
+      display: none;
+    }
+    .owl-nav{
+      display: inline-flex !important;
+      position: absolute;
+      right: -115px;
+      top: 0px;
+      height: 85px;
+      box-shadow: 0px 0px 25px 0px rgba(126, 55, 216, 0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 0;
+      button{
+        &:focus{
+          outline: none;
+        }
+      }
+      [class*='owl-']{
+        &:hover{
+          background: none !important;
+          color: inherit;
+        }
+      }
+      .owl-prev{
+        span{
+          &:before{
+            font-size: 20px;
+            content: "\f3cf";
+            font-family: Ionicons;
+          }
+        }
+      }
+      .owl-next{
+        span{
+          &:before{
+            font-size: 20px;
+            content: "\f3d1";
+            font-family: Ionicons;
+          }
+        }
+      }
+      span{
+        font-size: 0px;
+        padding: 0 15px;
+      }
+    }
+  }
+  #bitcoinchart-1{
+    .apexcharts-tooltip.light {
+      border: none;
+      background: lighten($danger-color, 15%);
+      color: $white;
+    }
+    .apexcharts-tooltip.light .apexcharts-tooltip-title {
+      background: lighten($danger-color, 10%);
+      border-bottom: none;
+      color: $white;
+    }
+  }
+  #bitcoinchart-2{
+    .apexcharts-tooltip.light {
+      border: none;
+      background: lighten($primary-color, 15%);
+      color: $white;
+    }
+    .apexcharts-tooltip.light .apexcharts-tooltip-title {
+      background: lighten($primary-color, 10%);
+      border-bottom: none;
+      color: $white;
+    }
+  }
+  #bitcoinchart-3{
+    .apexcharts-tooltip.light {
+      border: none;
+      background: #ffd85d;
+      color: $white;
+    }
+    .apexcharts-tooltip.light .apexcharts-tooltip-title {
+      background: #ffc200;
+      border-bottom: none;
+      color: $white;
+    }
+  }
+  #candlestick-chart{
+    .apexcharts-yaxistooltip,.apexcharts-xaxistooltip {
+      background: lighten($danger-color, 10%);
+      border: none;
+      border-radius: 8px;
+      color: $white;
+    }
+    [class*="apexcharts-yaxistooltip-"]{
+      &:after {
+        border-left-color: lighten($danger-color, 10%);
+      }
+      &:before{
+        border-left-color: transparent;
+      }
+    }
+    .apexcharts-xaxistooltip-bottom{
+      &:after {
+        border-bottom-color: lighten($danger-color, 10%);
+      }
+      &:before{
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  .sales-product-table{
+    padding: 0 20px;
+  }
+  .btn-gradient-custom {
+    position: relative;
+    letter-spacing: 0.8px;
+    background-image: linear-gradient(to right, #3fa5ff, #1c91f8);
+    box-shadow: 2.5px 4.33px 18px 0 rgba(21, 141, 247, 0.25);
+    color: $white;
+    &:hover {
+      background-size: 100%;
+    }
+    .round-shape {
+      width: 33px;
+      height: 33px;
+      background-color: #0580ee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      i {
+        color: $white;
+        font-size: 17px;
+      }
+    }
+  }
+  .bck-gradient-primary {
+    background-image: $gradient-primary-direction;
+    box-shadow: 2.5px 4.33px 18px 0 rgba($primary-color, 0.25);
+    color: $white;
+  }
+  .bck-gradient-secondary {
+    background-image: $gradient-secondary-direction;
+    box-shadow: -0.5px 4.33px 16px 0px rgba(251, 46, 99, 0.25);
+    color: $white;
+  }
+  .bck-gradient-warning {
+    background-image: $gradient-warning-direction;
+    box-shadow:-0.5px 4.33px 16px 0px rgba(255, 83, 19, 0.25);
+    color: $white;
+  }
+  .crypto-graph-card {
+    .media {
+      .bitcoin-graph-content {
+        span {
+          color: $light-font;
+        }
+      }
+      .badge {
+        background-color: #f3f9ff;
+      }
+      .right-setting {
+        .setting-dot {
+          .setting-bg {
+            background-color: $white;
+            box-shadow: 2.5px 4.33px 18px 0 rgba(251, 46, 99, 0.10);
+          }
+        }
+        h6{
+          margin-top: 8px;
+        }
+      }
+      .rounded-icon {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        margin-right: 15px;
+        border-radius: 100%;
+        i {
+          font-size: 25px;
+        }
+        &:hover {
+          background-size: 100%;
+        }
+      }
+    }
+    &.secondary-crypto {
+      .media {
+        .badge {
+          background-color: #fff6f8;
+        }
+      }
+    }
+    &.warning-crypto {
+      .media {
+        .badge {
+          background-color: #fff8f3;
+        }
+      }
+    }
+  }
+  .crypto-table-market {
+    table {
+      thead{
+        tr {
+          th {
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: none;
+            background-color: $light-body-bg-color;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 20px;
+            &:nth-child(3) {
+              color: $light-font;
+            }
+            &:last-child{
+              text-align: right;
+            }
+            .badge {
+              font-weight: normal;
+            }
+          }
+          &:nth-child(4){
+            td{
+              &:nth-child(4){
+                span{
+                  background-color: rgba($success-color,0.1);
+                }
+              }
+            }
+          }
+          &:first-child{
+            td{
+             &:nth-child(4){
+              span{
+                background-color: rgba($primary-color, 0.1);
+              }
+            } 
+          }
+        }
+
+        &:nth-child(2){
+          td{
+            &:nth-child(4){
+              span{
+                background-color: rgba($primary-color, 0.1);
+              }
+            }
+          }
+        }
+        &:nth-child(3){
+          td{
+            &:nth-child(4){
+              span{
+                background-color: rgba($secondary-color, 0.1);
+              }
+            }
+          }
+        }
+        &:nth-child(5){
+          td{
+            &:nth-child(4){
+              span{
+                background-color: rgba($primary-color, 0.1);
+              }
+            }
+          }
+        }
+      }
+      .btn-gradient-custom {
+        td {
+          color: $white;
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+.year-overview{
+  .card-body{
+    padding: 0 50px;
+  }
+}
+.coin-card{
+  &.card-body{
+    padding: 20px !important;
+  }
+}
+.btc-earning .ct-series.ct-series-b .ct-line {
+  stroke: #dbdfe9;
+  stroke-width: 2px;
+  stroke-dasharray: 5px 2px;
+  stroke: #dbdfe9;
+  stroke-width: 2px;
+  stroke-dasharray: 16px 12px;
+  animation: btc-dashoffset 300ms infinite linear;
+  opacity: 0.5;
+}
+@keyframes btc-dashoffset {
+  0% {
+    stroke-dashoffset: 22px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.btc-earning {
+  height: 400px;
+  width: 105%;
+  padding-top: 100px;
+  margin-bottom: -15px;
+  svg {
+    .ct-series-a  {
+      .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+        stroke: #ffffff;
+      }
+    }
+  }
+}
+.btc-overview{
+  .text-bg{
+    position: absolute;
+    top: 26%;
+    right: 21%;
+    span{
+      font-size: 200px;
+      color: rgba(255, 255, 255, 0.1);
+      font-weight: 700;
+    }
+  }
+  .rounded-icon{
+    background-color: rgba($theme-default-color, 0.7);
+  }
+}  
+#bitcoinchart-1, #bitcoinchart-2, #bitcoinchart-3 {
+  margin-bottom: -15px;
+  margin-top: -57px;
+}
+.bitcoin-1{
+  background-color: $secondary-color;
+}
+.btc-buy-sell{
+  .btc-amount{
+    padding: 12px 10px;
+    border-radius: 8px;
+    background-color: rgba($theme-default-color, 0.1);
+    span{
+      color: #000000;
+    }
+  }
+  li{
+    padding-bottom: 38px;
+    &:nth-child(2){
+      .btc-amount{
+        background-color: rgba($primary-color, 0.1);
+      }
+    } 
+    &:nth-child(3){
+      .btc-amount{
+        background-color: rgba($warning-color,0.1);
+      }
+    }
+  }
+} 
+.btc-buy{
+  padding-top: 15px;
+  padding-bottom: 7px;
+  .btn{
+    box-shadow: -0.5px 4.33px 16px 0px rgba($secondary-color, 0.25);P
+    &:first-child{
+      padding: 12px 14px;
+      margin-right: -40px;
+      z-index: 1;
+      position: relative;
+      background-color: $white !important;
+      color: black;
+    }
+  }
+  .btn{
+    padding: 12px 50px;
+  }
+}
+.btc-sell{
+  .btn{
+    &:nth-child(2){
+      z-index: 1;
+    }
+  }
+  .btn{
+    padding: 12px 50px;
+    margin-right: -40px;
+    position: relative;
+    z-index: 9;
+    background-color: rgba($secondary-color , 0.1);
+        box-shadow: -0.5px 4.33px 16px 0px rgba($secondary-color, 0.25);
+  }
+}
+.more-btn{
+  .btn-block {
+    position: relative;
+    font-size: 22px;
+  }
+  .btn-light {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .btn{
+    &:nth-child(2){
+      padding: 28px 21px;
+      margin-right: 13px;
+      z-index: 1;
+      background-color: $white !important;
+      color: black;
+      border-radius: 50% 0 0 50%;
+      &:focus, &:hover, &:active{
+        border-color: transparent !important;
+      }
+    }
+  }
+  .btn{
+    padding: 24px 50px;
+    margin-right: -50px;
+    padding-left: 27px;
+    border-radius: 25px;
+  }
+}
+.Add-card {
+  .card {
+    border-radius: 20px;
+  }
+}
+.card-arrow{
+  box-shadow: 0px 0px 25px 0px rgba(126, 55, 216, 0.05); 
+}
+.add-arrow{
+  box-shadow: 0px 0px 25px 0px rgba(126, 55, 216, 0.05); 
+  margin-left: 100px;
+}
+.right-angle {
+  background-color: $white ;
+  border-radius: 20px;
+  padding: 20px;
+  i{
+    padding-left: 16px;
+  }
+}
+.btc-table{
+  .card-header{
+    padding: 45px 50px !important;
+  }
+  .card-body{
+    padding: 40px 50px;
+  }  
+}
+@media screen and (min-device-width: 1366px) and (max-device-width: 1440px) {
+  .xl-50 {
+    max-width: 50%;
+    flex:0 0 50%;
+  }
+  .xl-100{
+    max-width: 100%;
+    flex:0 0 100%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .Add-card {
+    display: none;
+  }
+  .crypto-slider {
+    .owl-nav {
+      display: none !important;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+.btc-overview{
+ .text-bg {
+  position: absolute;
+  top: 24%;
+  right: 23%;
+}
+}  
+}
+@media screen and (max-width: 767px) {
+  .btc-overview{
+    span{
+      font-size: 145px !important;
+    }
+    .text-bg{
+      position: absolute;
+      top: 30%;
+      right: 25%;
+    }
+  }
+}  
+@media screen and (max-width: 575px) {
+  .crypto-table-market {
+    table {
+      thead {
+        tr {
+          th {
+            padding: 15px;
+          }
+        }
+      }
+      tbody {
+        tr {
+         td {
+          &:first-child {
+            min-width: 100px;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            min-width: 97px !important;
+          }
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+.btc-table{
+  .card-header{
+    padding-bottom: 36px !important; 
+  }
+  .btc-buy{
+    padding-top: 0 !important;
+  }
+  .btc-sell{
+    .btn{
+        padding: 12px 40px;
+        z-index: 1;
+        margin-right: -30px;
+    }
+  }
+}
+.btc-overview{
+  .card-header{
+    .text-right{
+      text-align: left !important;
+      float: none;
+      margin-top: 20px;
+    }
+  }
+  .text-bg{
+    position: absolute;
+    top: 38%;
+    right: 22%;
+  }
+  .media{
+    display: unset;
+  }
+}
+.btc-table-xs{
+  margin-bottom: 15px;
+}
+.btc-table-xs-l{
+  padding-left: 15px;
+}
+}
+@media screen and (max-width: 360px) {
+  .btc-table{
+    .card-header{
+      padding: 45px 35px !important;
+    }
+  }
+  .btc-overview{
+    .text-bg {
+      position: absolute;
+      top: 42%;
+      right: 18%;
+    }
+  }
+}
+
+/**=====================
+   70. Dashboard Crypto  CSS End
+    ==========================**/

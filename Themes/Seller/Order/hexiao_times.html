@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>到店核销</title>
+	<style>
+		.layui-table th{border-color: #e6e6e6;}
+	</style>
+</head>
+<body>
+<div class="layui-fluid">
+	<div class="layui-row layui-col-space10">
+	  <div class="layui-col-md12">
+		<h4 style="text-align:center;font-weight:bold;">到店核销</h4>
+	  </div>
+	  <input type="hidden" id="order_goods_hexiao_id" name="order_goods_hexiao_id" value="{$order_hexiao_info['id']}"/>
+	  <div class="layui-col-md12">
+	    <img src="<?php echo $order_hexiao_info['goods_images']; ?>" width="80px;" height="80px;">
+	    <div style="display:inline-block;vertical-align: top;margin-top:10px;margin-left: 5px;">{$order_hexiao_info['goods_name']}</div>
+	  </div>
+	  <div class="layui-col-md12">
+	  	<table class="layui-table" lay-size="lg">
+			<colgroup>
+		      <col width="200">
+		      <col width="150">
+		      <col width="150">
+		    </colgroup>
+	  		<thead>
+			    <tr>
+			      <th colspan="3" style="color:#000000;font-weight:bold;">商品使用次数（<?php echo $order_hexiao_info['hexiao_count']; ?>次）：</th>
+			    </tr> 
+			</thead>
+	  		<tbody>
+			<?php foreach($hx_list as $k=>$v){ ?>
+			<tr>
+				<td>{$order_hexiao_info['goods_name']}</td>
+				<td>已使用（<?php echo $v['hexiao_count']; ?>次）</td>
+				<td><?php echo date('Y-m-d H:i:s',$v['addtime']); ?></td>
+			</tr>
+			<?php } ?>
+			<?php 
+				$count = $order_hexiao_info['hexiao_count'] - $hx_count;
+				for($i = 0;$i < $count;$i++){
+			?>
+				<tr>
+					<td>{$order_hexiao_info['goods_name']}</td>
+					<td>未使用</td>
+					<td>
+						<input type="checkbox" name="is_hexiao" value="1">
+					</td>
+				</tr>
+			<?php } ?>
+			</tbody>
+		</table>
+	  </div>
+	</div>
+</div>
+<script type="text/javascript" src="./resource/js/lib/jquery-1.11.1.min.js"></script>
+<script>
+	function hexiao_goods(){
+		var hx_count = 0;
+		var s_url = "{:U('order/hexiao_goods')}";
+		var hx_id = $('#order_goods_hexiao_id').val();
+		$('input[name="is_hexiao"]').each(function(){
+			if($(this).is(":checked")){
+				hx_count++;
+			}
+		})
+		if(hx_count == 0){
+			layer.msg('请选择商品核销次数');
+			return false;
+		}
+		layer.confirm("确认使用商品", function(index){
+			 $.ajax({
+				url:s_url,
+				type:'post',
+				dataType:'json',
+				data:{hx_id:hx_id,hx_count:hx_count},
+				success:function(info){
+					if(info.status == 0)
+					{
+						layer.msg(info.result.message,{icon: 1,time: 2000});
+					}else if(info.status == 1){
+						layer.msg('操作成功',{time: 1000,
+							end:function(){
+								location.href = info.result.url;
+							}
+						}); 
+					}
+				}
+			})
+		}); 
+	}
+</script>
+</body>
+</html>
+	
+			

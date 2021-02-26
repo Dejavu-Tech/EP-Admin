@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="海北" code="632200">
+<county name="门源" code="632221">
+    <street name="浩门镇" code="632221100" />
+    <street name="青石咀镇" code="632221101" />
+    <street name="泉口镇" code="632221102" />
+    <street name="东川镇" code="632221103" />
+    <street name="北山乡" code="632221200" />
+    <street name="麻莲乡" code="632221201" />
+    <street name="西滩乡" code="632221202" />
+    <street name="阴田乡" code="632221203" />
+    <street name="仙米乡" code="632221204" />
+    <street name="珠固乡" code="632221205" />
+    <street name="苏吉滩乡" code="632221206" />
+    <street name="皇城蒙古族乡" code="632221207" />
+    <street name="门源监狱" code="632221400" />
+    <street name="门源种马场" code="632221401" />
+</county>
+<county name="祁连" code="632222">
+    <street name="八宝镇" code="632222100" />
+    <street name="峨堡镇" code="632222101" />
+    <street name="默勒镇" code="632222102" />
+    <street name="扎麻什乡" code="632222200" />
+    <street name="阿柔乡" code="632222201" />
+    <street name="野牛沟乡" code="632222202" />
+    <street name="央隆乡" code="632222203" />
+</county>
+<county name="海晏" code="632223">
+    <street name="三角城镇" code="632223100" />
+    <street name="西海镇（海北州政府驻地）" code="632223101" />
+    <street name="金滩乡" code="632223200" />
+    <street name="哈勒景蒙古族乡" code="632223201" />
+    <street name="青海湖乡" code="632223202" />
+    <street name="甘子河乡" code="632223203" />
+</county>
+<county name="刚察" code="632224">
+    <street name="沙柳河镇" code="632224100" />
+    <street name="哈尔盖镇" code="632224101" />
+    <street name="伊克乌兰乡" code="632224200" />
+    <street name="泉吉乡" code="632224201" />
+    <street name="吉尔孟乡" code="632224202" />
+    <street name="青海湖农场" code="632224400" />
+    <street name="三角城种羊场" code="632224401" />
+</county>
+</city>
+</address>

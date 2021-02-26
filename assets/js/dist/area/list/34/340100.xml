@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="合肥" code="340100">
+<county name="瑶海" code="340102">
+    <street name="明光路街道" code="340102001" />
+    <street name="车站街道" code="340102002" />
+    <street name="胜利路街道" code="340102003" />
+    <street name="三里街街道" code="340102004" />
+    <street name="铜陵路街道" code="340102005" />
+    <street name="七里站街道" code="340102006" />
+    <street name="红光街道" code="340102007" />
+    <street name="和平路街道" code="340102008" />
+    <street name="大通路街道" code="340102009" />
+    <street name="城东街道" code="340102010" />
+    <street name="长淮街道" code="340102011" />
+    <street name="方庙街道" code="340102012" />
+    <street name="七里塘街道" code="340102013" />
+    <street name="大兴镇" code="340102100" />
+    <street name="三十头镇" code="340102101" />
+    <street name="磨店乡" code="340102200" />
+    <street name="瑶海区工业园" code="340102400" />
+    <street name="合肥龙岗综合经济开发区" code="340102401" />
+</county>
+<county name="庐阳" code="340103">
+    <street name="亳州路街道" code="340103001" />
+    <street name="双岗街道" code="340103002" />
+    <street name="杏林街道" code="340103003" />
+    <street name="海棠街道" code="340103004" />
+    <street name="杏花村街道" code="340103005" />
+    <street name="逍遥津街道" code="340103006" />
+    <street name="三孝口街道" code="340103009" />
+    <street name="四里河街道" code="340103012" />
+    <street name="大杨镇" code="340103100" />
+    <street name="三十岗乡" code="340103200" />
+    <street name="庐阳工业区（林店街道）" code="340103400" />
+</county>
+<county name="蜀山" code="340104">
+    <street name="三里庵街道" code="340104001" />
+    <street name="稻香村街道" code="340104002" />
+    <street name="琥珀街道" code="340104003" />
+    <street name="南七街道" code="340104004" />
+    <street name="西园街道" code="340104005" />
+    <street name="五里墩街道" code="340104006" />
+    <street name="荷叶地街道" code="340104007" />
+    <street name="笔架山街道" code="340104008" />
+    <street name="井岗镇" code="340104100" />
+    <street name="南岗镇" code="340104101" />
+    <street name="小庙镇" code="340104102" />
+    <street name="蜀山新产业园区" code="340104400" />
+    <street name="高新技术产业开发区" code="340104401" />
+    <street name="莲花社区管理委员会" code="340104402" />
+    <street name="芙蓉社区管理委员会" code="340104403" />
+    <street name="锦绣社区管理委员会" code="340104404" />
+    <street name="海恒社区管理委员会" code="340104405" />
+    <street name="临湖社区管理管委会" code="340104406" />
+</county>
+<county name="包河" code="340111">
+    <street name="骆岗街道" code="340111001" />
+    <street name="常青街道" code="340111002" />
+    <street name="芜湖路街道" code="340111003" />
+    <street name="包公街道" code="340111004" />
+    <street name="望湖街道" code="340111005" />
+    <street name="义城街道" code="340111006" />
+    <street name="烟墩街道" code="340111007" />
+    <street name="滨湖世纪社区" code="340111008" />
+    <street name="淝河镇" code="340111100" />
+    <street name="大圩镇" code="340111102" />
+</county>
+<county name="长丰" code="340121">
+    <street name="水湖镇" code="340121100" />
+    <street name="庄墓镇" code="340121101" />
+    <street name="杨庙镇" code="340121102" />
+    <street name="吴山镇" code="340121103" />
+    <street name="岗集镇" code="340121104" />
+    <street name="双墩镇" code="340121105" />
+    <street name="下塘镇" code="340121106" />
+    <street name="朱巷镇" code="340121107" />
+    <street name="罗塘乡" code="340121200" />
+    <street name="义井乡" code="340121201" />
+    <street name="陶楼乡" code="340121202" />
+    <street name="造甲乡" code="340121203" />
+    <street name="左店乡" code="340121204" />
+    <street name="杜集乡" code="340121205" />
+    <street name="双凤开发区" code="340121400" />
+    <street name="安徽省水家湖农场" code="340121401" />
+</county>
+<county name="肥东" code="340122">
+    <street name="店埠镇" code="340122100" />
+    <street name="撮镇镇" code="340122101" />
+    <street name="梁园镇" code="340122102" />
+    <street name="桥头集镇" code="340122103" />
+    <street name="长临河镇" code="340122104" />
+    <street name="石塘镇" code="340122105" />
+    <street name="古城镇" code="340122106" />
+    <street name="八斗镇" code="340122107" />
+    <street name="元疃镇" code="340122108" />
+    <street name="白龙镇" code="340122109" />
+    <street name="包公镇" code="340122110" />
+    <street name="陈集镇" code="340122111" />
+    <street name="众兴乡" code="340122200" />
+    <street name="张集乡" code="340122201" />
+    <street name="马湖乡" code="340122202" />
+    <street name="响导乡" code="340122204" />
+    <street name="杨店乡" code="340122205" />
+    <street name="牌坊回族满族乡" code="340122206" />
+    <street name="肥东新城开发区" code="340122401" />
+    <street name="合肥循环经济示范园" code="340122402" />
+</county>
+<county name="肥西" code="340123">
+    <street name="上派镇" code="340123100" />
+    <street name="三河镇" code="340123101" />
+    <street name="高刘镇" code="340123102" />
+    <street name="官亭镇" code="340123103" />
+    <street name="山南镇" code="340123105" />
+    <street name="花岗镇" code="340123106" />
+    <street name="紫蓬镇" code="340123107" />
+    <street name="桃花镇" code="340123108" />
+    <street name="丰乐镇" code="340123109" />
+    <street name="高店乡" code="340123200" />
+    <street name="铭传乡" code="340123201" />
+    <street name="柿树岗乡" code="340123202" />
+    <street name="严店乡" code="340123203" />
+    <street name="桃花工业园管委会" code="340123400" />
+    <street name="紫蓬山管委会" code="340123401" />
+</county>
+<county name="巢湖" code="341400">
+    <street name="中庙街道" code="340181001" />
+    <street name="亚父街道" code="340181002" />
+    <street name="卧牛山街道" code="340181003" />
+    <street name="凤凰山街道" code="340181004" />
+    <street name="天河街道" code="340181005" />
+    <street name="半汤街道" code="340181006" />
+    <street name="栏杆集镇" code="340181100" />
+    <street name="苏湾镇" code="340181101" />
+    <street name="柘皋镇" code="340181102" />
+    <street name="银屏镇" code="340181103" />
+    <street name="夏阁镇" code="340181104" />
+    <street name="中垾镇" code="340181105" />
+    <street name="散兵镇" code="340181106" />
+    <street name="烔炀镇" code="340181107" />
+    <street name="黄麓镇" code="340181108" />
+    <street name="槐林镇" code="340181109" />
+    <street name="坝镇镇" code="340181110" />
+    <street name="庙岗乡" code="340181200" />
+</county>
+<county name="庐江" code="341421">
+    <street name="庐城镇" code="340124100" />
+    <street name="冶父山镇" code="340124101" />
+    <street name="万山镇" code="340124102" />
+    <street name="汤池镇" code="340124103" />
+    <street name="郭河镇" code="340124104" />
+    <street name="金牛镇" code="340124105" />
+    <street name="石头镇" code="340124106" />
+    <street name="同大镇" code="340124107" />
+    <street name="白山镇" code="340124108" />
+    <street name="盛桥镇" code="340124109" />
+    <street name="白湖镇" code="340124110" />
+    <street name="龙桥镇" code="340124111" />
+    <street name="矾山镇" code="340124112" />
+    <street name="罗河镇" code="340124113" />
+    <street name="泥河镇" code="340124114" />
+    <street name="乐桥镇" code="340124115" />
+    <street name="柯坦镇" code="340124116" />
+    <street name="安徽庐江经济开发区" code="340124400" />
+    <street name="安徽省白湖监狱管理分局" code="340124401" />
+    <street name="安徽省白湖阀门厂有限公司" code="340124402" />
+    <street name="安徽省罪犯技术培训中心" code="340124403" />
+</county>
+</city>
+</address>

@@ -1,0 +1,731 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var counter               = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Pricing
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Apps
+                                      li.breadcrumb-item ECommerce    
+                                      li.breadcrumb-item.active Pricing
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card
+                            .card-header 
+                                h5 Simple Pricing Card
+                            .card-body.row.pricing-content
+                              .col-xl-3.col-sm-6.xl-50.box-col-6
+                                .card.text-center.pricing-simple
+                                  .card-body
+                                    h3 Standard
+                                    h1 $15
+                                    h6.mb-0 Lorum Ipsum
+                                  a.btn.btn-lg.btn-primary.btn-block.btn-pill(href='#')
+                                    h5.mb-0 Purchase
+                              .col-xl-3.col-sm-6.xl-50.box-col-6
+                                .card.text-center.pricing-simple
+                                  .card-body
+                                    h3 Business
+                                    h1 $25
+                                    h6.mb-0 Lorum Ipsum
+                                  a.btn.btn-lg.btn-primary.btn-block.btn-pill(href='#')
+                                    h5.mb-0 Purchase
+                              .col-xl-3.col-sm-6.xl-50.box-col-6
+                                .card.text-center.pricing-simple
+                                  .card-body
+                                    h3 Premium
+                                    h1 $35
+                                    h6.mb-0 Lorum Ipsum
+                                  a.btn.btn-lg.btn-primary.btn-block.btn-pill(href='#')
+                                    h5.mb-0 Purchase
+                              .col-xl-3.col-sm-6.xl-50.box-col-6
+                                .card.text-center.pricing-simple
+                                  .card-body
+                                    h3 Extra
+                                    h1 $45
+                                    h6.mb-0 Lorum Ipsum
+                                  a.btn.btn-lg.btn-primary.btn-block.btn-pill(href='#')
+                                    h5.mb-0 Purchase
+                        .col-sm-12
+                          .card
+                              .card-header 
+                                  h5 Pricing
+                              .card-body.row.pricing-content
+                                .col-md-4
+                                  .pricing-block.card.text-center
+                                    svg(x='0', y='0', viewBox='0 0 360 220')
+                                      g
+                                        path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                        c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                        s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                        L0.732,193.75z')
+                                      text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $10
+                                      text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                      text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                    .pricing-inner
+                                      h3.font-primary Standard
+                                      ul.pricing-inner
+                                        li
+                                          h6
+                                            b 50GB
+                                            |  Disk Space
+                                        li
+                                          h6
+                                            b 50
+                                            |  Email Accounts
+                                        li
+                                          h6
+                                            b 50GB
+                                            |  Bandwidth
+                                        li
+                                          h6
+                                            b 10
+                                            |  Subdomains
+                                        li
+                                          h6
+                                            b 15
+                                            |  Domains
+                                      button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                .col-md-4
+                                  .pricing-block.card.text-center
+                                    svg(x='0', y='0', viewBox='0 0 360 220')
+                                      g
+                                        path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                        c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                        s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                        L0.732,193.75z')
+                                      text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $20
+                                      text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                      text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                    .pricing-inner
+                                      h3.font-primary Business
+                                      ul.pricing-inner
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Disk Space
+                                        li
+                                          h6
+                                            b 60
+                                            |  Email Accounts
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Bandwidth
+                                        li
+                                          h6
+                                            b 15
+                                            |  Subdomains
+                                        li
+                                          h6
+                                            b 20
+                                            |  Domains
+                                      button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                .col-md-4
+                                  .pricing-block.card.text-center
+                                    svg(x='0', y='0', viewBox='0 0 360 220')
+                                      g
+                                        path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                        c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                        s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                        L0.732,193.75z')
+                                      text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $30
+                                      text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                      text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                    .pricing-inner
+                                      h3.font-primary Premium
+                                      ul.pricing-inner
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Disk Space
+                                        li
+                                          h6
+                                            b 60
+                                            |  Email Accounts
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Bandwidth
+                                        li
+                                          h6
+                                            b 15
+                                            |  Subdomains
+                                        li
+                                          h6
+                                            b 20
+                                            |  Domains
+                                      button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                        .col-sm-12
+                          .card
+                              .card-header 
+                                  h5 Pricing Table With Border
+                              .card-body.row.pricing-card-design-2.pricing-content
+                                .col-md-4
+                                  .pricing-block.card.text-center
+                                    svg(x='0', y='0', viewBox='0 0 360 220')
+                                      g
+                                        path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                        c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                        s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                        L0.732,193.75z')
+                                      text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $10
+                                      text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                      text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                    .pricing-inner
+                                      h3.font-primary Standard
+                                      ul.pricing-inner
+                                        li
+                                          h6
+                                            b 50GB
+                                            |  Disk Space
+                                        li
+                                          h6
+                                            b 50
+                                            |  Email Accounts
+                                        li
+                                          h6
+                                            b 50GB
+                                            |  Bandwidth
+                                        li
+                                          h6
+                                            b 10
+                                            |  Subdomains
+                                        li
+                                          h6
+                                            b 15
+                                            |  Domains
+                                      button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                .col-md-4
+                                  .pricing-block.card.text-center
+                                    svg(x='0', y='0', viewBox='0 0 360 220')
+                                      g
+                                        path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                        c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                        s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                        L0.732,193.75z')
+                                      text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $20
+                                      text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                      text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                    .pricing-inner
+                                      h3.font-primary Business
+                                      ul.pricing-inner
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Disk Space
+                                        li
+                                          h6
+                                            b 60
+                                            |  Email Accounts
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Bandwidth
+                                        li
+                                          h6
+                                            b 15
+                                            |  Subdomains
+                                        li
+                                          h6
+                                            b 20
+                                            |  Domains
+                                      button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                .col-md-4
+                                  .pricing-block.card.text-center
+                                    svg(x='0', y='0', viewBox='0 0 360 220')
+                                      g
+                                        path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                        c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                        s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                        L0.732,193.75z')
+                                      text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $30
+                                      text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                      text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                    .pricing-inner
+                                      h3.font-primary Premium
+                                      ul.pricing-inner
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Disk Space
+                                        li
+                                          h6
+                                            b 60
+                                            |  Email Accounts
+                                        li
+                                          h6
+                                            b 60GB
+                                            |  Bandwidth
+                                        li
+                                          h6
+                                            b 15
+                                            |  Subdomains
+                                        li
+                                          h6
+                                            b 20
+                                            |  Domains
+                                      button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                        .col-sm-12
+                           .card
+                              .card-header 
+                                  h5 Color Highlight
+                              .card-body.pricing-card-design-1
+                                .row.pricing-content
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $10
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Standard
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 50
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 10
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 15
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center.bg-primary
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#6821c1', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $20
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3 Business
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $30
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Premium
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                        .col-sm-12
+                          .card
+                              .card-header 
+                                  h5 Pricing Table With Ribbons
+                              .card-body.pricing-card-design-3
+                                .row.pricing-content-ribbons
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      .ribbon.ribbon-bookmark.ribbon-vertical-left.ribbon-danger
+                                        i.icofont.icofont-love
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $10
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Standard
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 50
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 10
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 15
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $20
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Business
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $30
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Premium
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $10
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Standard
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 50
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 10
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 15
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      .ribbon.ribbon-bookmark.ribbon-danger Popular
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $20
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Business
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $30
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Premium
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $10
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Standard
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 50
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 50GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 10
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 15
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $20
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Business
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                                  .col-md-4
+                                    .pricing-block.card.text-center
+                                      .ribbon.ribbon-clip-right.ribbon-right.ribbon-danger Popular
+                                      svg(x='0', y='0', viewBox='0 0 360 220')
+                                        g
+                                          path(fill='#7e37d8', d='M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061\
+                                          c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243\
+                                          s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48\
+                                          L0.732,193.75z')
+                                        text(transform='matrix(1 0 0 1 69.7256 116.2686)', fill='#fff', font-size='60') $30
+                                        text(transform='matrix(0.9566 0 0 1 197.3096 83.9121)', fill='#fff', font-size='29.0829') .99
+                                        text(transform='matrix(1 0 0 1 233.9629 115.5303)', fill='#fff', font-size='15.4128') /Month
+                                      .pricing-inner
+                                        h3.font-primary Premium
+                                        ul.pricing-inner
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Disk Space
+                                          li
+                                            h6
+                                              b 60
+                                              |  Email Accounts
+                                          li
+                                            h6
+                                              b 60GB
+                                              |  Bandwidth
+                                          li
+                                            h6
+                                              b 15
+                                              |  Subdomains
+                                          li
+                                            h6
+                                              b 20
+                                              |  Domains
+                                        button.btn.btn-primary.btn-lg.btn-pill(type='button', data-original-title='btn btn-primary btn-lg', title='') Subscribe
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

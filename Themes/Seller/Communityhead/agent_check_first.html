@@ -1,0 +1,34 @@
+
+
+<div class="modal-dialog modal-dialog-centered btn-showcase" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">团长申请</h5>
+            <button data-dismiss="modal" class="close" type="button">×</button>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal form-validate" action="{:U('commu  nity/agent_check_first')}" method="post" enctype="multipart/form-data">
+                <input type='hidden' name='id' value='{$id}' />
+                确认该会员的团长申请
+            </form>
+        </div>
+        <div class="modal-footer">
+            <input type="hidden" id="sb_type" name="cansub" value="1" />
+            <button class="btn btn-primary btn-order" type="submit" data-value="1" name="cansub">确定</button>
+            <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    //没有选中时间段不能导出
+    $(function () {
+        $('.btn-primary').click(function () {
+            var e = $(this).attr('data-value');
+
+           $('#sb_type').val(e);
+
+        })
+    })
+</script>
+

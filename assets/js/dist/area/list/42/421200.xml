@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="咸宁" code="421200">
+<county name="咸安" code="421202">
+    <street name="温泉办事处" code="421202001" />
+    <street name="浮山办事处" code="421202002" />
+    <street name="永安办事处" code="421202003" />
+    <street name="汀泗桥镇" code="421202100" />
+    <street name="向阳湖镇" code="421202101" />
+    <street name="官埠桥镇" code="421202102" />
+    <street name="横沟桥镇" code="421202103" />
+    <street name="贺胜桥镇" code="421202104" />
+    <street name="双溪桥镇" code="421202105" />
+    <street name="马桥镇" code="421202106" />
+    <street name="桂花镇" code="421202107" />
+    <street name="高桥镇" code="421202108" />
+    <street name="大幕乡" code="421202200" />
+    <street name="向阳湖奶牛良种场" code="421202450" />
+    <street name="咸宁市经济技术开发区" code="421202570" />
+    <street name="湖北咸安经济开发区" code="421202571" />
+</county>
+<county name="嘉鱼" code="421221">
+    <street name="陆溪镇" code="421221100" />
+    <street name="高铁岭镇" code="421221101" />
+    <street name="官桥镇" code="421221102" />
+    <street name="鱼岳镇" code="421221103" />
+    <street name="新街镇" code="421221104" />
+    <street name="渡普镇" code="421221105" />
+    <street name="潘家湾镇" code="421221106" />
+    <street name="牌洲湾镇" code="421221107" />
+    <street name="头墩农场" code="421221450" />
+    <street name="嘉鱼县经济开发区" code="421221570" />
+</county>
+<county name="通城" code="421222">
+    <street name="隽水镇" code="421222100" />
+    <street name="麦市镇" code="421222101" />
+    <street name="塘湖镇" code="421222102" />
+    <street name="关刀镇" code="421222103" />
+    <street name="沙堆镇" code="421222104" />
+    <street name="五里镇" code="421222105" />
+    <street name="石南镇" code="421222106" />
+    <street name="北港镇" code="421222107" />
+    <street name="马港镇" code="421222108" />
+    <street name="四庄乡" code="421222200" />
+    <street name="大坪乡" code="421222201" />
+    <street name="鹿角山林场" code="421222500" />
+    <street name="锡山森林公园管理处" code="421222501" />
+    <street name="黄龙林场" code="421222502" />
+    <street name="黄袍林场" code="421222503" />
+    <street name="药姑林场" code="421222504" />
+</county>
+<county name="崇阳" code="421223">
+    <street name="天城镇" code="421223100" />
+    <street name="沙坪镇" code="421223101" />
+    <street name="石城镇" code="421223102" />
+    <street name="桂花泉镇" code="421223103" />
+    <street name="白霓镇" code="421223104" />
+    <street name="路口镇" code="421223105" />
+    <street name="金塘镇" code="421223106" />
+    <street name="青山镇" code="421223107" />
+    <street name="肖岭乡" code="421223200" />
+    <street name="铜钟乡" code="421223201" />
+    <street name="港口乡" code="421223202" />
+    <street name="高枧乡" code="421223203" />
+    <street name="崇阳县工业园区" code="421223570" />
+</county>
+<county name="通山" code="421224">
+    <street name="通羊镇" code="421224100" />
+    <street name="南林桥镇" code="421224101" />
+    <street name="黄沙铺镇" code="421224102" />
+    <street name="厦铺镇" code="421224103" />
+    <street name="九宫山镇" code="421224104" />
+    <street name="闯王镇" code="421224105" />
+    <street name="洪港镇" code="421224106" />
+    <street name="大畈镇" code="421224107" />
+    <street name="大路乡" code="421224200" />
+    <street name="杨芳林乡" code="421224201" />
+    <street name="燕厦乡" code="421224202" />
+    <street name="慈口乡" code="421224203" />
+    <street name="九宫山自然保护管理局" code="421224450" />
+    <street name="开发区" code="421224570" />
+</county>
+<county name="赤壁" code="421281">
+    <street name="蒲圻街道" code="421281001" />
+    <street name="赤马港街道" code="421281002" />
+    <street name="陆水湖街道" code="421281003" />
+    <street name="新店镇" code="421281100" />
+    <street name="赵李桥镇" code="421281101" />
+    <street name="茶庵岭镇" code="421281102" />
+    <street name="车埠镇" code="421281103" />
+    <street name="赤壁镇" code="421281104" />
+    <street name="柳山湖镇" code="421281105" />
+    <street name="神山镇" code="421281106" />
+    <street name="中伙铺镇" code="421281107" />
+    <street name="官塘驿镇" code="421281108" />
+    <street name="黄盖湖镇" code="421281109" />
+    <street name="余家桥乡" code="421281200" />
+    <street name="蒲纺工业园" code="421281400" />
+    <street name="官塘驿林场" code="421281401" />
+    <street name="羊楼洞茶场" code="421281402" />
+    <street name="沧湖开发区" code="421281403" />
+    <street name="赤壁市经济开发区" code="421281404" />
+</county>
+</city>
+</address>

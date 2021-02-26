@@ -1,0 +1,87 @@
+<extend name="Public/base"/>
+
+<block name="header">
+</block>
+
+<block name="body">
+    <?php
+        defined('SAE_MYSQL_HOST_M') or define('SAE_MYSQL_HOST_M', '127.0.0.1');
+        defined('SAE_MYSQL_HOST_M') or define('SAE_MYSQL_PORT', '3306');
+    ?>
+    <div class="col-xl-12 xl-100 box-col-12">
+        <div class="card crypto-revenue">
+            <div class="card-header p-t-40 p-b-0">
+                <h3>创建数据库</h3>
+                <ul class="creative-dots">
+                    <li class="bg-primary big-dot"></li>
+                    <li class="bg-secondary semi-big-dot"></li>
+                    <li class="bg-warning medium-dot"></li>
+                    <li class="bg-info semi-medium-dot"></li>
+                    <li class="bg-secondary semi-small-dot"></li>
+                    <li class="bg-primary small-dot"></li>
+                </ul>
+                <section class="abstract">请于获取服务器数据库信息并填写于此</section>
+            </div>
+            <form class="form theme-form" action="__SELF__" method="post" target="_self">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <select class="form-control  digits" name="db[]">
+                                        <option>mysqli</option>
+                                        <option>mysql</option>
+                                    </select>
+                                </div>
+                                <label class="col-sm-8 col-form-label">数据库连接类型，服务器支持的情况下建议使用mysqli</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="db[]" value="<defined name='SAE_MYSQL_HOST_M'>{$Think.const.SAE_MYSQL_HOST_M}<else/>127.0.0.1</defined>">
+                                </div>
+                                <label class="col-sm-8 col-form-label">数据库服务器IP，一般为127.0.0.1，使用localhost可能导致网站速度变慢</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="db[]" value="<defined name='SAE_MYSQL_DB'>{$Think.const.SAE_MYSQL_DB}</defined>">
+                                </div>
+                                <label class="col-sm-8 col-form-label">数据库名</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="db[]"
+                                           value="<defined name='SAE_MYSQL_USER'>{$Think.const.SAE_MYSQL_USER}</defined>">
+                                </div>
+                                <label class="col-sm-8 col-form-label">数据库用户名</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="password" name="db[]"
+                                           value="<defined name='SAE_MYSQL_PASS'>{$Think.const.SAE_MYSQL_PASS}</defined>">
+                                </div>
+                                <label class="col-sm-8 col-form-label">数据库密码</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="db[]"
+                                           value="<defined name='SAE_MYSQL_PORT'>{$Think.const.SAE_MYSQL_PORT}<else/>3306</defined>">
+                                </div>
+                                <label class="col-sm-8 col-form-label">数据库端口，数据库服务连接端口，一般为3306</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <div class="pull-right p-b-30">
+                        <a class="btn btn-pill btn-light" href="{:U('Install/step1')}">上一步</a>
+                        <a id="submit" class="btn btn-pill btn-primary" style="color:#FFF" onclick="$('form').submit();return false;">下一步</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</block>
+
+<block name="footer">
+</block>

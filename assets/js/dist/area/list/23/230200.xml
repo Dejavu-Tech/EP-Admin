@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="齐齐哈尔" code="230200">
+<county name="龙沙" code="230202">
+    <street name="五龙街道" code="230202001" />
+    <street name="湖滨街道" code="230202002" />
+    <street name="江安街道" code="230202003" />
+    <street name="正阳街道" code="230202004" />
+    <street name="彩虹街道" code="230202005" />
+    <street name="南航街道" code="230202006" />
+    <street name="大民街道" code="230202007" />
+    <street name="齐齐哈尔局直" code="230202579" />
+</county>
+<county name="建华" code="230203">
+    <street name="中华街道" code="230203002" />
+    <street name="西大桥街道" code="230203004" />
+    <street name="卜奎街道" code="230203005" />
+    <street name="建设街道" code="230203006" />
+    <street name="文化街道" code="230203007" />
+    <street name="建华区（镇）直辖地域" code="230203198" />
+</county>
+<county name="铁锋" code="230204">
+    <street name="站前街道" code="230204001" />
+    <street name="南浦街道" code="230204002" />
+    <street name="通东街道" code="230204003" />
+    <street name="光荣街道" code="230204004" />
+    <street name="龙华街道" code="230204005" />
+    <street name="北局宅街道" code="230204006" />
+    <street name="东湖街道" code="230204008" />
+    <street name="扎龙镇" code="230204100" />
+    <street name="齐齐哈尔种畜场" code="230204500" />
+</county>
+<county name="昂昂溪" code="230205">
+    <street name="新兴街道" code="230205001" />
+    <street name="新建街道" code="230205002" />
+    <street name="林机街道" code="230205005" />
+    <street name="道北街道" code="230205006" />
+    <street name="水师营满族镇" code="230205100" />
+    <street name="榆树屯镇" code="230205101" />
+</county>
+<county name="富拉尔基" code="230206">
+    <street name="红岸街道" code="230206001" />
+    <street name="沿江街道" code="230206003" />
+    <street name="电力街道" code="230206004" />
+    <street name="幸福街道" code="230206005" />
+    <street name="红宝石街道" code="230206006" />
+    <street name="北兴街道" code="230206007" />
+    <street name="铁北街道" code="230206008" />
+    <street name="和平街道" code="230206009" />
+    <street name="长青乡" code="230206200" />
+    <street name="杜尔门沁达斡尔族乡" code="230206202" />
+</county>
+<county name="碾子山" code="230207">
+    <street name="东安街道" code="230207001" />
+    <street name="富强街道" code="230207002" />
+    <street name="跃进街道" code="230207003" />
+    <street name="繁荣街道" code="230207004" />
+    <street name="碾子山区（镇）直辖地域" code="230207198" />
+</county>
+<county name="梅里斯达斡尔族" code="230208">
+    <street name="梅里斯街道" code="230208001" />
+    <street name="雅尔塞镇" code="230208101" />
+    <street name="卧牛吐达斡尔族镇" code="230208102" />
+    <street name="达呼店镇" code="230208103" />
+    <street name="共和镇" code="230208104" />
+    <street name="莽格吐达斡尔族乡" code="230208200" />
+    <street name="梅里斯乡" code="230208201" />
+    <street name="哈拉海农场" code="230208501" />
+</county>
+<county name="龙江" code="230221">
+    <street name="龙江镇" code="230221100" />
+    <street name="景星镇" code="230221101" />
+    <street name="龙兴镇" code="230221102" />
+    <street name="山泉镇" code="230221103" />
+    <street name="七棵树镇" code="230221104" />
+    <street name="杏山镇" code="230221105" />
+    <street name="白山乡" code="230221200" />
+    <street name="黑岗乡" code="230221201" />
+    <street name="广厚乡" code="230221202" />
+    <street name="华民乡" code="230221203" />
+    <street name="哈拉海乡" code="230221204" />
+    <street name="头站乡" code="230221214" />
+    <street name="鲁河乡" code="230221215" />
+    <street name="济沁河乡" code="230221217" />
+</county>
+<county name="依安" code="230223">
+    <street name="依安镇" code="230223100" />
+    <street name="依龙镇" code="230223101" />
+    <street name="双阳镇" code="230223102" />
+    <street name="三兴镇" code="230223103" />
+    <street name="中心镇" code="230223104" />
+    <street name="新兴镇" code="230223105" />
+    <street name="富饶乡" code="230223200" />
+    <street name="解放乡" code="230223201" />
+    <street name="阳春乡" code="230223202" />
+    <street name="新发乡" code="230223203" />
+    <street name="太东乡" code="230223204" />
+    <street name="上游乡" code="230223205" />
+    <street name="红星乡" code="230223206" />
+    <street name="先锋乡" code="230223207" />
+    <street name="新屯乡" code="230223208" />
+    <street name="依安农场" code="230223500" />
+    <street name="红旗种马场" code="230223501" />
+</county>
+<county name="泰来" code="230224">
+    <street name="泰来镇" code="230224100" />
+    <street name="平洋镇" code="230224101" />
+    <street name="汤池镇" code="230224102" />
+    <street name="江桥蒙古族镇" code="230224103" />
+    <street name="塔子城镇" code="230224104" />
+    <street name="大兴镇" code="230224105" />
+    <street name="和平镇" code="230224106" />
+    <street name="克利镇" code="230224107" />
+    <street name="胜利蒙古族乡" code="230224200" />
+    <street name="宁姜蒙古族乡" code="230224209" />
+    <street name="葡萄场" code="230224400" />
+    <street name="果树场" code="230224401" />
+    <street name="泰来县一苗圃" code="230224402" />
+    <street name="泰来县二苗圃" code="230224403" />
+    <street name="东方红机械林场" code="230224404" />
+    <street name="六三监狱" code="230224480" />
+    <street name="泰来农场" code="230224500" />
+    <street name="第一良种场" code="230224580" />
+    <street name="第二良种场" code="230224581" />
+    <street name="宏胜种畜场" code="230224582" />
+    <street name="二龙涛农场" code="230224583" />
+</county>
+<county name="甘南" code="230225">
+    <street name="甘南镇" code="230225100" />
+    <street name="兴十四镇" code="230225101" />
+    <street name="平阳镇" code="230225102" />
+    <street name="东阳镇" code="230225103" />
+    <street name="巨宝镇" code="230225104" />
+    <street name="长山乡" code="230225201" />
+    <street name="中兴乡" code="230225202" />
+    <street name="兴隆乡" code="230225203" />
+    <street name="宝山乡" code="230225204" />
+    <street name="查哈阳乡" code="230225206" />
+    <street name="查哈阳农场" code="230225500" />
+    <street name="北京市双河农场" code="230225580" />
+</county>
+<county name="富裕" code="230227">
+    <street name="富裕镇" code="230227100" />
+    <street name="富路镇" code="230227101" />
+    <street name="富海镇" code="230227102" />
+    <street name="二道湾镇" code="230227103" />
+    <street name="龙安桥镇" code="230227104" />
+    <street name="塔哈镇" code="230227105" />
+    <street name="繁荣乡" code="230227200" />
+    <street name="绍文乡" code="230227201" />
+    <street name="忠厚乡" code="230227202" />
+    <street name="友谊乡" code="230227203" />
+    <street name="富裕牧场" code="230227500" />
+    <street name="繁荣种畜场" code="230227501" />
+</county>
+<county name="克山" code="230229">
+    <street name="克山镇" code="230229100" />
+    <street name="北兴镇" code="230229101" />
+    <street name="西城镇" code="230229102" />
+    <street name="古城镇" code="230229103" />
+    <street name="北联镇" code="230229104" />
+    <street name="西河镇" code="230229105" />
+    <street name="河南乡" code="230229200" />
+    <street name="双河乡" code="230229201" />
+    <street name="河北乡" code="230229203" />
+    <street name="古北乡" code="230229204" />
+    <street name="西联乡" code="230229205" />
+    <street name="发展乡" code="230229206" />
+    <street name="西建乡" code="230229207" />
+    <street name="向华乡" code="230229208" />
+    <street name="曙光乡" code="230229210" />
+    <street name="克山县河北林场" code="230229400" />
+    <street name="克山县涌泉林场" code="230229401" />
+    <street name="克山县北联林场" code="230229402" />
+    <street name="克山农场" code="230229500" />
+    <street name="克山县第一良种场" code="230229580" />
+    <street name="克山县第二良种场" code="230229581" />
+    <street name="克山县种猪场" code="230229583" />
+    <street name="克山县种畜场" code="230229584" />
+</county>
+<county name="克东" code="230230">
+    <street name="克东镇" code="230230100" />
+    <street name="宝泉镇" code="230230101" />
+    <street name="乾丰镇" code="230230102" />
+    <street name="玉岗镇" code="230230103" />
+    <street name="金城乡" code="230230200" />
+    <street name="润津乡" code="230230202" />
+    <street name="昌盛乡" code="230230204" />
+    <street name="第一苗圃" code="230230400" />
+    <street name="第二苗圃" code="230230401" />
+    <street name="爱华林场" code="230230402" />
+    <street name="发展林场" code="230230403" />
+    <street name="东兴林场" code="230230404" />
+    <street name="红旗奶山羊场" code="230230580" />
+    <street name="第一良种场" code="230230581" />
+    <street name="第二良种繁殖场" code="230230582" />
+    <street name="果树繁殖场" code="230230583" />
+    <street name="种猪场" code="230230584" />
+    <street name="黑龙江省社会救助安置中心" code="230230585" />
+</county>
+<county name="拜泉" code="230231">
+    <street name="拜泉镇" code="230231100" />
+    <street name="三道镇" code="230231101" />
+    <street name="兴农镇" code="230231102" />
+    <street name="长春镇" code="230231103" />
+    <street name="龙泉镇" code="230231104" />
+    <street name="国富镇" code="230231105" />
+    <street name="富强镇" code="230231106" />
+    <street name="新生乡" code="230231200" />
+    <street name="兴国乡" code="230231201" />
+    <street name="上升乡" code="230231203" />
+    <street name="兴华乡" code="230231204" />
+    <street name="大众乡" code="230231206" />
+    <street name="丰产乡" code="230231209" />
+    <street name="永勤乡" code="230231210" />
+    <street name="爱农乡" code="230231212" />
+    <street name="时中乡" code="230231214" />
+</county>
+<county name="讷河" code="230281">
+    <street name="雨亭街道" code="230281001" />
+    <street name="通江街道" code="230281002" />
+    <street name="拉哈镇" code="230281101" />
+    <street name="二克浅镇" code="230281102" />
+    <street name="学田镇" code="230281103" />
+    <street name="龙河镇" code="230281104" />
+    <street name="讷南镇" code="230281105" />
+    <street name="六合镇" code="230281106" />
+    <street name="长发镇" code="230281107" />
+    <street name="通南镇" code="230281108" />
+    <street name="同义镇" code="230281109" />
+    <street name="九井镇" code="230281110" />
+    <street name="老莱镇" code="230281111" />
+    <street name="孔国乡" code="230281201" />
+    <street name="和盛乡" code="230281207" />
+    <street name="同心乡" code="230281208" />
+    <street name="兴旺鄂温克族乡" code="230281210" />
+    <street name="龙河镇保安林场" code="230281400" />
+    <street name="龙河镇茂山林场" code="230281401" />
+    <street name="龙河镇国庆林场" code="230281402" />
+    <street name="学田镇富源林场" code="230281403" />
+    <street name="老莱镇宽余林场" code="230281404" />
+    <street name="新江林场" code="230281405" />
+    <street name="一良苗圃" code="230281406" />
+    <street name="黑龙江省老莱监狱" code="230281480" />
+    <street name="六合镇黎明奶牛场" code="230281581" />
+    <street name="孔国乡进化种猪场" code="230281582" />
+    <street name="二克浅镇二里种畜场" code="230281583" />
+    <street name="龙河镇青色草原种畜场" code="230281584" />
+    <street name="第一良种场" code="230281585" />
+    <street name="第二良种场" code="230281586" />
+    <street name="第三良种场" code="230281587" />
+    <street name="第四良种场" code="230281588" />
+</county>
+</city>
+</address>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="梅州" code="441400">
+<county name="梅江" code="441402">
+    <street name="江南街道" code="441402004" />
+    <street name="金山街道" code="441402006" />
+    <street name="西郊街道" code="441402007" />
+    <street name="三角镇" code="441402102" />
+    <street name="长沙镇" code="441402103" />
+    <street name="城北镇" code="441402105" />
+    <street name="西阳镇" code="441402106" />
+</county>
+<county name="梅县" code="441421">
+    <street name="新城办事处" code="441421001" />
+    <street name="城东镇" code="441421101" />
+    <street name="石扇镇" code="441421102" />
+    <street name="梅西镇" code="441421103" />
+    <street name="大坪镇" code="441421104" />
+    <street name="石坑镇" code="441421105" />
+    <street name="水车镇" code="441421109" />
+    <street name="梅南镇" code="441421110" />
+    <street name="丙村镇" code="441421113" />
+    <street name="白渡镇" code="441421115" />
+    <street name="松源镇" code="441421116" />
+    <street name="隆文镇" code="441421117" />
+    <street name="桃尧镇" code="441421118" />
+    <street name="畲江镇" code="441421126" />
+    <street name="雁洋镇" code="441421129" />
+    <street name="松口镇" code="441421130" />
+    <street name="南口镇" code="441421131" />
+    <street name="程江镇" code="441421132" />
+    <street name="扶大镇" code="441421133" />
+    <street name="梅西水库" code="441421500" />
+</county>
+<county name="大埔" code="441422">
+    <street name="湖寮镇" code="441422100" />
+    <street name="青溪镇" code="441422103" />
+    <street name="三河镇" code="441422105" />
+    <street name="银江镇" code="441422108" />
+    <street name="洲瑞镇" code="441422109" />
+    <street name="光德镇" code="441422112" />
+    <street name="桃源镇" code="441422113" />
+    <street name="百侯镇" code="441422116" />
+    <street name="大东镇" code="441422117" />
+    <street name="大麻镇" code="441422121" />
+    <street name="枫朗镇" code="441422122" />
+    <street name="茶阳镇" code="441422123" />
+    <street name="高陂镇" code="441422124" />
+    <street name="西河镇" code="441422125" />
+    <street name="丰溪林场" code="441422400" />
+    <street name="洲瑞林场" code="441422401" />
+    <street name="大埔林场" code="441422402" />
+</county>
+<county name="丰顺" code="441423">
+    <street name="北斗镇" code="441423103" />
+    <street name="汤西镇" code="441423104" />
+    <street name="汤南镇" code="441423105" />
+    <street name="埔寨镇" code="441423106" />
+    <street name="建桥镇" code="441423110" />
+    <street name="龙岗镇" code="441423111" />
+    <street name="潘田镇" code="441423112" />
+    <street name="黄金镇" code="441423114" />
+    <street name="小胜镇" code="441423122" />
+    <street name="砂田镇" code="441423123" />
+    <street name="八乡山镇" code="441423124" />
+    <street name="丰良镇" code="441423125" />
+    <street name="潭江镇" code="441423126" />
+    <street name="汤坑镇" code="441423127" />
+    <street name="留隍镇" code="441423128" />
+    <street name="大龙华镇" code="441423129" />
+    <street name="埔寨农场" code="441423450" />
+</county>
+<county name="五华" code="441424">
+    <street name="转水镇" code="441424103" />
+    <street name="潭下镇" code="441424108" />
+    <street name="郭田镇" code="441424117" />
+    <street name="双华镇" code="441424118" />
+    <street name="梅林镇" code="441424125" />
+    <street name="华阳镇" code="441424126" />
+    <street name="华城镇" code="441424130" />
+    <street name="周江镇" code="441424131" />
+    <street name="水寨镇" code="441424134" />
+    <street name="河东镇" code="441424135" />
+    <street name="岐岭镇" code="441424136" />
+    <street name="长布镇" code="441424137" />
+    <street name="横陂镇" code="441424138" />
+    <street name="安流镇" code="441424139" />
+    <street name="棉洋镇" code="441424140" />
+    <street name="龙村镇" code="441424141" />
+</county>
+<county name="平远" code="441426">
+    <street name="石正镇" code="441426101" />
+    <street name="八尺镇" code="441426104" />
+    <street name="差干镇" code="441426105" />
+    <street name="河头镇" code="441426107" />
+    <street name="中行镇" code="441426108" />
+    <street name="上举镇" code="441426109" />
+    <street name="泗水镇" code="441426110" />
+    <street name="长田镇" code="441426114" />
+    <street name="热柘镇" code="441426115" />
+    <street name="东石镇" code="441426117" />
+    <street name="仁居镇" code="441426118" />
+    <street name="大柘镇" code="441426119" />
+</county>
+<county name="蕉岭" code="441427">
+    <street name="三圳镇" code="441427103" />
+    <street name="文福镇" code="441427106" />
+    <street name="广福镇" code="441427107" />
+    <street name="新铺镇" code="441427112" />
+    <street name="蓝坊镇" code="441427113" />
+    <street name="南礤镇" code="441427114" />
+    <street name="蕉城镇" code="441427115" />
+    <street name="长潭镇" code="441427116" />
+    <street name="华侨农场" code="441427450" />
+</county>
+<county name="兴宁" code="441481">
+    <street name="兴田街道" code="441481001" />
+    <street name="福兴街道" code="441481002" />
+    <street name="宁新街道" code="441481003" />
+    <street name="永和镇" code="441481107" />
+    <street name="新圩镇" code="441481111" />
+    <street name="罗浮镇" code="441481115" />
+    <street name="罗岗镇" code="441481116" />
+    <street name="黄槐镇" code="441481117" />
+    <street name="龙田镇" code="441481123" />
+    <street name="石马镇" code="441481124" />
+    <street name="宁中镇" code="441481128" />
+    <street name="径南镇" code="441481129" />
+    <street name="坭陂镇" code="441481130" />
+    <street name="水口镇" code="441481131" />
+    <street name="黄陂镇" code="441481132" />
+    <street name="合水镇" code="441481133" />
+    <street name="大坪镇" code="441481134" />
+    <street name="叶塘镇" code="441481135" />
+    <street name="新陂镇" code="441481136" />
+    <street name="刁坊镇" code="441481137" />
+</county>
+</city>
+</address>

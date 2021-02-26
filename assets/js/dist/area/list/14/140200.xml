@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="大同" code="140200">
+<county name="城区" code="140202">
+    <street name="南关街道" code="140202001" />
+    <street name="北关街道" code="140202002" />
+    <street name="东街街道" code="140202003" />
+    <street name="西街街道" code="140202004" />
+    <street name="南街街道" code="140202005" />
+    <street name="北街街道" code="140202006" />
+    <street name="新建南路街道" code="140202007" />
+    <street name="新建北路街道" code="140202008" />
+    <street name="大庆路街道" code="140202009" />
+    <street name="新华街街道" code="140202010" />
+    <street name="西花园街道" code="140202011" />
+    <street name="老平旺街道" code="140202012" />
+    <street name="向阳里街道" code="140202013" />
+    <street name="振华南街街道" code="140202014" />
+    <street name="开源街街道" code="140202015" />
+</county>
+<county name="矿区" code="140203">
+    <street name="新胜街道" code="140203001" />
+    <street name="新平旺街道" code="140203002" />
+    <street name="煤峪口街道" code="140203003" />
+    <street name="永定庄街道" code="140203004" />
+    <street name="同家梁街道" code="140203005" />
+    <street name="四老沟街道" code="140203006" />
+    <street name="忻州窑街道" code="140203007" />
+    <street name="白洞街道" code="140203008" />
+    <street name="雁崖街道" code="140203009" />
+    <street name="挖金湾街道" code="140203010" />
+    <street name="晋华宫街道" code="140203011" />
+    <street name="马脊梁街道" code="140203012" />
+    <street name="大斗沟街道" code="140203013" />
+    <street name="王村街道" code="140203014" />
+    <street name="姜家湾街道" code="140203015" />
+    <street name="新泉路街道" code="140203016" />
+    <street name="民胜街道" code="140203017" />
+    <street name="口泉街道" code="140203018" />
+    <street name="马口街道" code="140203019" />
+    <street name="燕子山街道" code="140203020" />
+    <street name="杏儿沟街道" code="140203021" />
+    <street name="青磁窑街道" code="140203022" />
+    <street name="平泉路街道" code="140203023" />
+    <street name="四台沟街道" code="140203024" />
+    <street name="和顺街道" code="140203025" />
+    <street name="和瑞街道" code="140203026" />
+    <street name="平盛路街道" code="140203027" />
+    <street name="清泉街街道" code="140203028" />
+</county>
+<county name="南郊" code="140211">
+    <street name="古店镇" code="140211100" />
+    <street name="高山镇" code="140211101" />
+    <street name="云冈镇" code="140211102" />
+    <street name="口泉乡" code="140211200" />
+    <street name="新旺乡" code="140211201" />
+    <street name="水泊寺乡" code="140211202" />
+    <street name="马军营乡" code="140211205" />
+    <street name="西韩岭乡" code="140211206" />
+    <street name="平旺乡" code="140211207" />
+    <street name="鸦儿崖乡" code="140211210" />
+</county>
+<county name="新荣" code="140212">
+    <street name="新荣镇" code="140212100" />
+    <street name="破鲁堡乡" code="140212200" />
+    <street name="郭家窑乡" code="140212202" />
+    <street name="花元屯乡" code="140212203" />
+    <street name="西村乡" code="140212206" />
+    <street name="上深涧乡" code="140212207" />
+    <street name="堡子湾乡" code="140212209" />
+    <street name="新荣区街道管理中心" code="140212400" />
+</county>
+<county name="阳高" code="140221">
+    <street name="龙泉镇" code="140221100" />
+    <street name="罗文皂镇" code="140221101" />
+    <street name="大白登镇" code="140221102" />
+    <street name="王官屯镇" code="140221103" />
+    <street name="古城镇" code="140221104" />
+    <street name="东小村镇" code="140221105" />
+    <street name="友宰镇" code="140221106" />
+    <street name="长城乡" code="140221201" />
+    <street name="北徐屯乡" code="140221202" />
+    <street name="狮子屯乡" code="140221204" />
+    <street name="下深井乡" code="140221209" />
+    <street name="马家皂乡" code="140221211" />
+    <street name="鳌石乡" code="140221212" />
+</county>
+<county name="天镇" code="140222">
+    <street name="玉泉镇" code="140222100" />
+    <street name="谷前堡镇" code="140222101" />
+    <street name="米薪关镇" code="140222102" />
+    <street name="逯家湾镇" code="140222103" />
+    <street name="新平镇" code="140222104" />
+    <street name="卅里铺乡" code="140222200" />
+    <street name="南河堡乡" code="140222202" />
+    <street name="贾家屯乡" code="140222204" />
+    <street name="赵家沟乡" code="140222206" />
+    <street name="南高崖乡" code="140222208" />
+    <street name="张西河乡" code="140222209" />
+</county>
+<county name="广灵" code="140223">
+    <street name="壶泉镇" code="140223100" />
+    <street name="南村镇" code="140223101" />
+    <street name="一斗泉乡" code="140223200" />
+    <street name="蕉山乡" code="140223202" />
+    <street name="加斗乡" code="140223203" />
+    <street name="宜兴乡" code="140223206" />
+    <street name="作疃乡" code="140223207" />
+    <street name="梁庄乡" code="140223209" />
+    <street name="望狐乡" code="140223211" />
+</county>
+<county name="灵丘" code="140224">
+    <street name="武灵镇" code="140224100" />
+    <street name="东河南镇" code="140224101" />
+    <street name="上寨镇" code="140224102" />
+    <street name="落水河乡" code="140224200" />
+    <street name="史庄乡" code="140224203" />
+    <street name="赵北乡" code="140224205" />
+    <street name="石家田乡" code="140224206" />
+    <street name="柳科乡" code="140224207" />
+    <street name="白崖台乡" code="140224208" />
+    <street name="红石塄乡" code="140224210" />
+    <street name="下关乡" code="140224212" />
+    <street name="独峪乡" code="140224213" />
+</county>
+<county name="浑源" code="140225">
+    <street name="永安镇" code="140225100" />
+    <street name="西坊城镇" code="140225101" />
+    <street name="蔡村镇" code="140225102" />
+    <street name="沙圪坨镇" code="140225103" />
+    <street name="王庄堡镇" code="140225104" />
+    <street name="大磁窑镇" code="140225105" />
+    <street name="东坊城乡" code="140225201" />
+    <street name="裴村乡" code="140225203" />
+    <street name="驼峰乡" code="140225204" />
+    <street name="西留村乡" code="140225205" />
+    <street name="下韩村乡" code="140225206" />
+    <street name="南榆林乡" code="140225208" />
+    <street name="吴城乡" code="140225210" />
+    <street name="黄花滩乡" code="140225212" />
+    <street name="大仁庄乡" code="140225213" />
+    <street name="千佛岭乡" code="140225215" />
+    <street name="官儿乡" code="140225218" />
+    <street name="青磁窑乡" code="140225220" />
+</county>
+<county name="左云" code="140226">
+    <street name="云兴镇" code="140226100" />
+    <street name="鹊儿山镇" code="140226101" />
+    <street name="店湾镇" code="140226102" />
+    <street name="管家堡乡" code="140226200" />
+    <street name="张家场乡" code="140226201" />
+    <street name="三屯乡" code="140226205" />
+    <street name="马道头乡" code="140226206" />
+    <street name="小京庄乡" code="140226207" />
+    <street name="水窑乡" code="140226209" />
+</county>
+<county name="大同" code="140227">
+    <street name="西坪镇" code="140227100" />
+    <street name="倍加造镇" code="140227101" />
+    <street name="周士庄镇" code="140227102" />
+    <street name="吉家庄乡" code="140227201" />
+    <street name="峰峪乡" code="140227202" />
+    <street name="杜庄乡" code="140227204" />
+    <street name="党留庄乡" code="140227205" />
+    <street name="瓜园乡" code="140227207" />
+    <street name="巨乐乡" code="140227209" />
+    <street name="许堡乡" code="140227211" />
+    <street name="经济技术开发区" code="140227400" />
+    <street name="湖东办事处" code="140227401" />
+    <street name="东街办事处" code="140227402" />
+    <street name="西街办事处" code="140227403" />
+</county>
+</city>
+</address>

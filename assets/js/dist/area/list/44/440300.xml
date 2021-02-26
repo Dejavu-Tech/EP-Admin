@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="深圳" code="440300">
+<county name="罗湖" code="440303">
+    <street name="桂园街道" code="440303001" />
+    <street name="黄贝街道" code="440303002" />
+    <street name="东门街道" code="440303003" />
+    <street name="翠竹街道" code="440303004" />
+    <street name="南湖街道" code="440303005" />
+    <street name="笋岗街道" code="440303006" />
+    <street name="东湖街道" code="440303007" />
+    <street name="莲塘街道" code="440303008" />
+    <street name="东晓街道" code="440303009" />
+    <street name="清水河街道" code="440303010" />
+</county>
+<county name="福田" code="440304">
+    <street name="南园街道" code="440304001" />
+    <street name="园岭街道" code="440304002" />
+    <street name="福田街道" code="440304004" />
+    <street name="沙头街道" code="440304005" />
+    <street name="香蜜湖街道" code="440304006" />
+    <street name="梅林街道" code="440304007" />
+    <street name="莲花街道" code="440304008" />
+    <street name="华富街道" code="440304009" />
+    <street name="福保街道" code="440304010" />
+    <street name="华强北街道" code="440304011" />
+    <street name="福田保税区" code="440304400" />
+</county>
+<county name="南山" code="440305">
+    <street name="南头街道" code="440305001" />
+    <street name="南山街道" code="440305002" />
+    <street name="沙河街道" code="440305003" />
+    <street name="蛇口街道" code="440305005" />
+    <street name="招商街道" code="440305006" />
+    <street name="粤海街道" code="440305007" />
+    <street name="桃源街道" code="440305008" />
+    <street name="西丽街道" code="440305009" />
+</county>
+<county name="宝安" code="440306">
+    <street name="新安街道" code="440306001" />
+    <street name="光明办事处" code="440306002" />
+    <street name="西乡街道" code="440306003" />
+    <street name="福永街道" code="440306004" />
+    <street name="沙井街道" code="440306005" />
+    <street name="松岗街道" code="440306006" />
+    <street name="公明办事处" code="440306007" />
+    <street name="石岩街道" code="440306008" />
+    <street name="观澜街道" code="440306010" />
+    <street name="大浪街道" code="440306011" />
+    <street name="龙华街道" code="440306012" />
+    <street name="民治街道" code="440306013" />
+    <street name="深圳市宝安国际机场" code="440306400" />
+</county>
+<county name="龙岗" code="440307">
+    <street name="平湖街道" code="440307003" />
+    <street name="坪地街道" code="440307006" />
+    <street name="坪山街道" code="440307007" />
+    <street name="坑梓街道" code="440307008" />
+    <street name="葵涌街道" code="440307009" />
+    <street name="大鹏街道" code="440307010" />
+    <street name="南澳街道" code="440307011" />
+    <street name="南湾街道" code="440307012" />
+    <street name="坂田街道" code="440307013" />
+    <street name="布吉街道" code="440307014" />
+    <street name="龙城街道" code="440307015" />
+    <street name="龙岗街道" code="440307016" />
+    <street name="横岗街道" code="440307017" />
+    <street name="深圳市大工业区" code="440307401" />
+</county>
+<county name="盐田" code="440308">
+    <street name="梅沙街道" code="440308001" />
+    <street name="盐田街道" code="440308002" />
+    <street name="沙头角街道" code="440308003" />
+    <street name="海山街道" code="440308004" />
+    <street name="市保税区（沙头角）" code="440308400" />
+    <street name="市保税区（盐田港）" code="440308401" />
+</county>
+<county name="坪山" code="440309">
+    <street name="坪山街道" code="440309001" />
+    <street name="坑梓街道" code="440309002" />   
+</county>
+<county name="光明" code="440310">
+    <street name="光明街道" code="440310001" />
+    <street name="公明街道" code="440310002" />   
+    <street name="新湖街道" code="440310003" />   
+    <street name="凤凰街道" code="440310004" />   
+    <street name="玉塘街道" code="440310005" />   
+    <street name="马田街道" code="440310006" />  
+</county>
+<county name="龙华" code="440311">
+    <street name="观澜街道" code="440311001" />
+    <street name="大浪街道" code="440311002" />   
+    <street name="龙华街道" code="440311003" />   
+    <street name="民治街道" code="440311004" /> 
+    <street name="福城街道" code="440311005" /> 
+    <street name="观湖街道" code="440311006" /> 
+</county>
+</city>
+</address>

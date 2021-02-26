@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>指定核销信息</title>
+	<style>
+		.layui-table th{border-color: #e6e6e6;}
+	</style>
+</head>
+<body>
+<div class="layui-fluid">
+	<div class="layui-row layui-col-space10">
+	  <div class="layui-col-md12">
+		<h4 style="text-align:center;font-weight:bold;">指定核销信息</h4>
+	  </div><div class="layui-col-md12">
+	    <img src="<?php echo tomedia($goods_info['goods_images']); ?>" width="80px;" height="80px;">
+	    <div style="display:inline-block;vertical-align: top;margin-top:10px;margin-left: 5px;">{$goods_info['goods_name']}</div>
+	  </div>
+	  <div class="layui-col-md12">
+	  	<table class="layui-table" lay-size="lg">
+			<colgroup>
+		      <col width="150">
+		      <col width="500">
+		    </colgroup>
+	  		<tbody>
+			<tr>
+				<td>指定核销人员：</td>
+				<td>
+					<?php foreach($smember_list as $k=>$v){ ?>
+						{$v}&nbsp;&nbsp;
+					<?php } ?>
+				</td>
+			</tr>
+			<tr>
+				<td>指定核销门店：</td>
+				<td>
+					<?php foreach($salesroom_list as $k=>$v){ ?>
+						{$v['room_name']}&nbsp;&nbsp;
+					<?php } ?>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	  </div>
+	</div>
+</div>
+<script type="text/javascript" src="./resource/js/lib/jquery-1.11.1.min.js"></script>
+<script>
+	function hexiao_goods(){
+		var hx_count = 0;
+		var s_url = "{:U('order/hexiao_goods')}";
+		var hx_id = $('#order_goods_hexiao_id').val();
+		$('input[name="is_hexiao"]').each(function(){
+			if($(this).is(":checked")){
+				hx_count++;
+			}
+		})
+		if(hx_count == 0){
+			layer.msg('请选择商品核销次数');
+			return false;
+		}
+		layer.confirm("确认使用商品", function(index){
+			 $.ajax({
+				url:s_url,
+				type:'post',
+				dataType:'json',
+				data:{hx_id:hx_id,hx_count:hx_count},
+				success:function(info){
+					if(info.status == 0)
+					{
+						layer.msg(info.result.message,{icon: 1,time: 2000});
+					}else if(info.status == 1){
+						layer.msg('操作成功',{time: 1000,
+							end:function(){
+								location.href = info.result.url;
+							}
+						}); 
+					}
+				}
+			})
+		}); 
+	}
+</script>
+</body>
+</html>
+	
+			

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="淮北" code="340600">
+<county name="杜集" code="340602">
+    <street name="高岳街道" code="340602001" />
+    <street name="矿山集街道" code="340602002" />
+    <street name="朔里镇" code="340602100" />
+    <street name="石台镇" code="340602101" />
+    <street name="段圆镇" code="340602102" />
+    <street name="淮北杜集经济开发区" code="340602400" />
+</county>
+<county name="相山" code="340603">
+    <street name="相南街道" code="340603001" />
+    <street name="东街道" code="340603002" />
+    <street name="西街道" code="340603003" />
+    <street name="三堤口街道" code="340603004" />
+    <street name="东山街道" code="340603005" />
+    <street name="人民路街道" code="340603006" />
+    <street name="刘桥街道" code="340603007" />
+    <street name="任圩街道" code="340603008" />
+    <street name="南黎办事处" code="340603009" />
+    <street name="曲阳办事处" code="340603010" />
+    <street name="渠沟镇" code="340603100" />
+    <street name="淮北凤凰山经济开发区" code="340603400" />
+</county>
+<county name="烈山" code="340604">
+    <street name="杨庄街道" code="340604001" />
+    <street name="临海童街道" code="340604002" />
+    <street name="百善街道" code="340604003" />
+    <street name="任楼街道" code="340604004" />
+    <street name="烈山镇" code="340604100" />
+    <street name="宋町镇" code="340604101" />
+    <street name="古饶镇" code="340604102" />
+    <street name="烈山区工业园" code="340604400" />
+</county>
+<county name="濉溪" code="340621">
+    <street name="濉溪镇" code="340621100" />
+    <street name="韩村镇" code="340621101" />
+    <street name="刘桥镇" code="340621102" />
+    <street name="五沟镇" code="340621103" />
+    <street name="临涣镇" code="340621104" />
+    <street name="双堆集镇" code="340621105" />
+    <street name="铁佛镇" code="340621106" />
+    <street name="南坪镇" code="340621107" />
+    <street name="百善镇" code="340621108" />
+    <street name="孙町镇" code="340621109" />
+    <street name="四铺镇" code="340621110" />
+    <street name="濉溪县经济开发区" code="340621400" />
+    <street name="濉溪县濉芜产业园" code="340621401" />
+</county>
+</city>
+</address>

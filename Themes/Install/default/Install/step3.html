@@ -1,0 +1,59 @@
+<extend name="Public/base"/>
+
+<block name="header">
+</block>
+
+<block name="body">
+    <div class="col-xl-12 xl-100 box-col-12">
+        <div class="card crypto-revenue">
+            <div class="card-header p-t-40 p-b-0">
+                <h3>初始管理员帐号信息</h3>
+                <ul class="creative-dots">
+                    <li class="bg-primary big-dot"></li>
+                    <li class="bg-secondary semi-big-dot"></li>
+                    <li class="bg-warning medium-dot"></li>
+                    <li class="bg-info semi-medium-dot"></li>
+                    <li class="bg-secondary semi-small-dot"></li>
+                    <li class="bg-primary small-dot"></li>
+                </ul>
+                <section class="abstract">初始管理员信息不可删除，请谨慎填写</section>
+            </div>
+            <form class="form theme-form" action="__SELF__" method="post" target="_self">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="text" name="seller[]" value="admin">
+                                </div>
+                                <label class="col-sm-8 col-form-label">建议为英文+数字，禁止使用中文与特殊字符</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="password" name="seller[]" value="">
+                                </div>
+                                <label class="col-sm-8 col-form-label">密码</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control" type="password" name="seller[]" value="">
+                                </div>
+                                <label class="col-sm-8 col-form-label">再次输入上述密码以确认</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="pull-right p-b-30">
+                        <a class="btn btn-pill btn-light" href="{:U('Install/step2')}">上一步</a>
+                        <a id="submit" class="btn btn-pill btn-primary" style="color:#FFF" onclick="$('form').submit();return false;">下一步</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</block>
+
+<block name="footer">
+</block>

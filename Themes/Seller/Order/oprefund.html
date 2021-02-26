@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+	<title><?php echo $shoname_name; ?></title>
+	<link rel="shortcut icon" href="" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="author" content="Dejavu871.Tech.">
+	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- Font Awesome-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<!-- ico-font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+	<!-- Themify icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
+	<!-- Flag icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
+	<!-- Feather icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+	<!-- Plugins css start-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
+	<!-- Plugins css Ends-->
+	<!-- Bootstrap css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+	<!-- App css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
+	<!-- Responsive css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+
+<script type="text/javascript">
+	window.sysinfo = {
+	<?php if(!empty($_W['uniacid'])){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
+
+	<?php if(!empty($_W['acid'])){ ?>'acid': '{$_W['acid']}',<?php } ?>
+
+	<?php if(!empty($_W['openid'])){ ?>'openid': '{$_W['openid']}',<?php } ?>
+
+	<?php if(!empty($_W['uid'])){ ?>'uid': '{$_W['uid']}',<?php } ?>
+
+	'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
+
+	'siteroot': '{$_W['siteroot']}',
+			'siteurl': '{$_W['siteurl']}',
+			'attachurl': '{$_W['attachurl']}',
+			'attachurl_local': '{$_W['attachurl_local']}',
+			'attachurl_remote': '{$_W['attachurl_remote']}',
+			'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
+	'cookie' : {'pre': ''},
+	'account' : {:json_encode($_W['account'])},
+	};
+</script>
+
+<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+
+<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+<style>
+    tbody tr td{
+        position: relative;
+    }
+    tbody tr  .icow-weibiaoti--{
+        visibility: hidden;
+        display: inline-block;
+        color: #fff;
+        height:18px;
+        width:18px;
+        background: #e0e0e0;
+        text-align: center;
+        line-height: 18px;
+        vertical-align: middle;
+    }
+    tbody tr:hover .icow-weibiaoti--{
+        visibility: visible;
+    }
+    tbody tr  .icow-weibiaoti--.hidden{
+        visibility: hidden !important;
+    }
+    .full .icow-weibiaoti--{
+        margin-left:10px;
+    }
+    .full>span{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+    }
+    tbody tr .label{
+        margin: 5px 0;
+    }
+    .goods_attribute a{
+        cursor: pointer;
+    }
+    .newgoodsflag{
+        width: 22px;height: 16px;
+        background-color: #ff0000;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        bottom: 70px;
+        left: 57px;
+        font-size: 12px;
+    }
+	.a{cursor: pointer;}
+	.img-40 {
+		width: 40px;
+		height: 40px;
+	}
+	.daterangepicker select.ampmselect, .daterangepicker select.hourselect, .daterangepicker select.minuteselect{
+		width:auto!important;
+	}
+.order-container{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .order-container-left,.order-container-right{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+	.ordertable { width:100%;position: relative;margin-bottom:10px}
+	.ordertable tr td:first-child { text-align: right }
+	.ordertable tr td {padding:8px 5px 0;vertical-align: top}
+	.ordertable1 tr td { text-align: right; }
+	.ops .btn { padding:5px 10px;}
+    <?php if(count($step_array)>4){ ?>.ui-step-4 li { width:20%;}<?php } ?>
+    .order-container-right{
+        padding:30px 0 0 15px ;
+    }
+    .trorder td{
+        text-align: center;
+    }
+    .navbar-inner tr th{
+        text-align: center
+    }
+    .table .trorder td{
+        border-right:1px solid #efefef;
+    }
+
+</style>
+<style>
+.step-region {
+    position: relative;
+    margin-bottom: 10px;
+}
+.ui-step {
+    padding: 14px 0 8px 0;
+    zoom: 1;
+    margin: 0 50px;
+}
+.ui-step li {
+    float: left;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+.ui-step-4 li {
+    width: 24.9999%;
+}
+.ui-step li::before, .ui-step li::after {
+    position: absolute;
+    left: 0;
+    top: 27px;
+    display: block;
+    content: ' ';
+    width: 50%;
+    height: 4px;
+
+    z-index: 1;
+}
+.ui-step li:first-child::before {
+    width: 0;
+}
+
+.ui-step li.ui-step-done::before, .ui-step li.ui-step-done::after, .ui-step li.ui-step-done .ui-step-number {
+    background: #54c952;
+}
+.ui-step .ui-step-number {
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    margin: 10px 0;
+    line-height: 37px;
+
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.ui-step li.ui-step-done .ui-step-number {
+
+}
+.ui-step li.ui-step-done::before, .ui-step li.ui-step-done::after, .ui-step li.ui-step-done .ui-step-number {
+    background: #54c952;
+}
+.ui-step .ui-step-title {
+
+    font-size: 12px;
+    line-height: 18px;
+}
+.ui-step .ui-step-meta {
+
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ui-step li::before, .ui-step li::after {
+    position: absolute;
+    left: 0;
+    top: 27px;
+    display: block;
+    content: ' ';
+    width: 50%;
+    height: 4px;
+
+    z-index: 1;
+}
+.ui-step li::after {
+    left: 50%;
+}
+.ui-step li.ui-step-done::before, .ui-step li.ui-step-done::after, .ui-step li.ui-step-done .ui-step-number {
+    background: #54c952;
+}
+.ui-step:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.m-t-none{line-height:36px;}
+</style>
+</head>
+<body class="custom-scrollbar" >
+
+<table id="demo" lay-filter="test"></table>
+
+<div class="page-wrapper custom-scrollbar">
+	<div class="page-body-wrapper">
+		<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+			<div class="container-fluid">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-lg-6 main-header">
+							<h6 class="mb-0">当前位置</h6>
+							<h2>维权<span>处理</span></h2>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card">
+						<div class="card-body" >
+			<div class="step-region">
+				<ul class="ui-step ui-step-4">
+					<li class="ui-step-done">
+						<div class="ui-step-number">1</div>
+						<div class="ui-step-title">用户发起退单</div>
+						<?php if($step_array[1]['done'] == 1){ ?>
+						<div class="ui-step-meta"><?php echo date('Y-m-d', $step_array[1]['time']); ?><br><?php echo date('H:i:s', $step_array[1]['time']); ?></div>
+						<?php } ?>
+					</li>
+					<li <?php if($step_array[2]['done'] == 1){ ?> class="ui-step-done"<?php } ?>>
+						<div class="ui-step-number">2</div>
+						<div class="ui-step-title">平台审核</div>
+						<?php if($step_array[2]['done'] == 1){ ?>
+						<div class="ui-step-meta"><?php echo date('Y-m-d', $step_array[2]['time']); ?><br><?php echo date('H:i:s', $step_array[2]['time']); ?></div>
+						<?php } ?>
+					</li>
+					<li style="display:none;">
+						<div class="ui-step-number">3</div>
+						<div class="ui-step-title">
+											退回货物
+						</div>
+						<div class="ui-step-meta">
+						</div>
+					</li>
+
+					<li <?php if($ref_info['state'] == 3){ ?> class="ui-step-done"<?php } ?>>
+						<div class="ui-step-number">3</div>
+						<div class="ui-step-title">退款成功</div>
+						<?php if($step_array[3]['done'] == 1){ ?>
+						<div class="ui-step-meta"><?php echo date('Y-m-d', $step_array[3]['time']); ?><br><?php echo date('H:i:s', $step_array[3]['time']); ?></div>
+						<?php } ?>
+					</li>
+
+
+				</ul>
+			</div>
+
+			<form action="" class="form theme-form layui-form" lay-filter="example" method="post" >
+
+				<input type="hidden" name="id" value="{$item['id']}" />
+
+				<input type="hidden" name="dispatchid" value="{$dispatch['id']}" />
+
+				<?php if($order_refund['state'] == 5){ ?>
+				<div class="row order-container">
+					<div style="border-right: 1px solid #efefef;">
+						<div class='panel-body' >
+							<h4 class="m-t-none m-b" style="line-height:36px;border-bottom:1px solid #efefef;">维权信息</h4>
+							<table class='ordertable' style='table-layout:fixed;text-align:left;'>
+								 <tr>
+									<td style="text-align:left;">当前订单状态：<b style="font-size:24px;">客户取消售后！</b></td>
+								 </tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<?php }else if($order_refund['state'] == 1){ ?>
+				<div class="row order-container">
+					<div style="border-right: 1px solid #efefef;">
+						<div class='panel-body' >
+							<h4 class="m-t-none m-b" style="border-bottom:1px solid #efefef;">维权信息</h4>
+							<table class='ordertable' style='table-layout:fixed;text-align:left;'>
+								 <tr>
+									<td style="text-align:left;">当前订单状态：<b style="font-size:24px;">平台审核拒绝！</b></td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">审核记录：<?php echo $order_refund['remarkrefund']; ?></td>
+								 </tr>
+								  <tr>
+									<td style="text-align:left;">
+										<a class='btn btn-primary btn-xs'  data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/oprefund_doform', array('ref_id' => $order_refund['ref_id']))}" >
+											<i class="icow icow-flag-o" style="color: #df5254;display: inline-block;vertical-align: middle" title="平台审核"></i>
+											重新审核
+											&nbsp
+										</a>
+									</td>
+								 </tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<?php }else if($order_refund['state'] == 0){ ?>
+				<div class="row order-container">
+					<div style="border-right: 1px solid #efefef;">
+						<div class='panel-body' >
+							<h4 class="m-t-none m-b" style="border-bottom:1px solid #efefef;">维权信息</h4>
+							<table class='ordertable' style='table-layout:fixed;text-align:left;'>
+								 <tr>
+									<td style="text-align:left;">当前订单状态：<b style="font-size:24px;">平台审核，待处理</b></td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">请您在进行同意或拒绝操作前，尽量充分于买家沟通达成一致，避免误解。</td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">审核记录是要展示给用户的，认真填写哦！</td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">
+										<a class='btn btn-primary btn-xs'  data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/oprefund_doform', array('ref_id' => $order_refund['ref_id']))}" >
+											<i class="icow icow-flag-o" style="color: #df5254;display: inline-block;vertical-align: middle" title="平台审核"></i>
+											立即审核
+											&nbsp
+										</a>
+									</td>
+								 </tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<?php }else if($order_refund['state'] == 3){ ?>
+				<div class="row order-container">
+					<div style="border-right: 1px solid #efefef;">
+						<div class='panel-body' >
+							<h4 class="m-t-none m-b" style="border-bottom:1px solid #efefef;">维权信息</h4>
+							<table class='ordertable' style='table-layout:fixed;text-align:left;'>
+								 <tr>
+									<td style="text-align:left;">当前订单状态：<b style="font-size:24px;">退单已完成！</b></td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">订单退单已完成，用户申请退款金额已打入对应用户账户。</td>
+								 </tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<?php }else if($order_refund['state'] == 4){ ?>
+				<div class="row order-container">
+					<div style="border-right: 1px solid #efefef;">
+						<div class='panel-body' >
+							<h4 class="m-t-none m-b" style="border-bottom:1px solid #efefef;">维权信息</h4>
+							<table class='ordertable' style='table-layout:fixed;text-align:left;'>
+								 <tr>
+									<td style="text-align:left;">当前订单状态：<b style="font-size:24px;">退款失败！</b></td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">审核记录：<?php echo $order_refund['remarkrefund']; ?></td>
+								 </tr>
+								  <tr>
+									<td style="text-align:left;">
+										<a class='btn btn-primary btn-xs'  data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/oprefund_doform', array('ref_id' => $order_refund['ref_id']))}" >
+											<i class="icow icow-flag-o" style="color: #df5254;display: inline-block;vertical-align: middle" title="平台审核"></i>
+											重新审核
+											&nbsp
+										</a>
+									</td>
+								 </tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+
+
+				<div class="row order-container" style="margin-top:10px;">
+					<div style="border-right: 1px solid #efefef;">
+						<div class='panel-body' >
+							<h4 class="m-t-none m-b" style="border-bottom:1px solid #efefef;">退款信息</h4>
+							<table class='ordertable' style='table-layout:fixed;text-align:left;'>
+								 <tr>
+									<td style="text-align:left;">订单编号：<a href="{:U('order/detail', array('id' => $item['order_id'] ) )}" class="text-primary" target="_blank"><?php echo $item['order_num_alias']; ?></a></td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">退单编号：<?php echo $order_refund['ref_id']; ?></td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">申请退单时间：<?php echo date('Y-m-d H:i:s', $order_refund['addtime']); ?></td>
+								 </tr>
+								<?php if( $item['type'] == 'integral' ){ ?>
+								<tr>
+									<td style="text-align:left;">退单积分：<?php echo $order_refund['ref_money']; ?>
+										<?php if(!empty($order_refund['ref_shipping_fare'])){ ?>+运费<?php echo $order_refund['ref_shipping_fare']; ?><?php } ?>
+									</td>
+								</tr>
+								<?php }else{ ?>
+								<tr>
+									<td style="text-align:left;">退单金额：<?php echo $order_refund['ref_money']; ?></td>
+								</tr>
+								<?php } ?>
+								 <tr>
+									<td style="text-align:left;">退单类型：{$r_type[$order_refund['ref_type']]}</td>
+								 </tr>
+								  <tr>
+									<td style="text-align:left;">问题类型：{$order_refund['ref_name']}</td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">问题描述：{$order_refund['ref_description']}</td>
+								 </tr>
+								 <tr>
+									<td style="text-align:left;">反馈图片：<br/>
+
+										<?php foreach($refund_imgs as $k1 => $v1){ ?>
+										 <a target='_blank' href="{: tomedia($v1['image'])}"><img style='width:100px;;padding:1px;border:1px solid #ccc' src="{: tomedia($v1['image'])}"></a>
+										 <?php } ?>
+									</td>
+								 </tr>
+
+
+								 <tr>
+									<td style="text-align:left;">联系方式：
+											<?php echo $order_refund['complaint_name']; ?>&nbsp;<?php echo $order_refund['ref_mobile']; ?></td>
+								 </tr>
+
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+				<div style="margin-top:10px;">
+				   <div class="panel-heading" style="border-bottom:1px solid #efefef;">
+					   <span>订单信息</span>
+				   </div>
+				   <div class=" table-responsive goods_list" style="overflow: hidden;">
+
+					   <table class="table" style="border: 1px solid #efefef;">
+						   <thead class="navbar-inner">
+						   <tr>
+							   <th>商品标题</th>
+							   <th>商品规格</th>
+
+							   <th>单价(元)</th>
+							   <th>数量</th>
+							   <th>折扣前/折扣后(元)</th>
+							   <!--<th>操作</th>-->
+						   </tr>
+						   </thead>
+						   <?php foreach( $item['goods'] as $goods ){ ?>
+						   <tr class="trorder">
+							   <td style="text-align: left">
+								   <?php if(!empty($category[$goods['pcate']]['name'])){ ?>
+								   <span class="text-error">[{$category[$goods['pcate']]['name']}] </span>
+								   <?php } ?>
+								   <?php if( !empty($children[$goods['pcate']][$goods['ccate']][1]) ){ ?>
+								   <span class="text-info">[{$children[$goods['pcate']][$goods['ccate']][1]}] </span>
+								   <?php } ?>
+								   {$goods['name']}
+							   </td>
+							   <td>
+								   <?php if( !empty($goods['option_sku']) ){ ?><span class="label label-info">{$goods['option_sku']}</span> <?php } ?></td>
+
+							   <td>{$goods['price']}</td>
+							   <td>{$goods['quantity']}</td>
+							   <td><?php echo $goods['oldprice'] * $goods['quantity']/$goods['total']; ?>
+							   </td>
+						   </tr>
+						   <?php } ?>
+						   <tr class="trorder">
+							   <td colspan="2" style="padding-left: 20px">
+
+							   </td>
+							   <?php $colspan=$item['ispackage']?6:7; ?>
+							   <?php if($showdiyform){ ?>
+							   <?php $colspan++; ?>
+							   <?php } ?>
+							   <td colspan="3" style="padding-right: 60px;text-align: right">
+								   <div class="price">
+									   <p> <span class="price-inner">商品小计：</span><span style="font-weight: bold"> <?php if( $item['type'] == 'integral' ){ ?>积分：<?php }else{ ?>¥<?php } ?>{:round( $total_fare ,2)}</span></p>
+									   <p><span class="price-inner">运费：</span>¥{:round( $total_shipping_fare,2)}</p>
+
+									   <?php if($total_voucher_credit>0){ ?>
+									   <p><span class="price-inner">优惠券优惠：</span><span class="text-danger">-¥{:round( $total_voucher_credit,2)}</span></p>
+									   <?php } ?>
+									   <?php if($total_fullreduction_money>0){ ?>
+									   <p><span class="price-inner">满减优惠：</span><span class="text-danger">-¥{:round( $total_fullreduction_money,2)}</span></p>
+									   <?php } ?>
+
+									   <?php if($total_score_for_money>0){ ?>
+									   <p><span class="price-inner">积分抵扣：</span><span class="text-danger">-¥{:round( $total_score_for_money,2)}</span></p>
+									   <?php } ?>
+
+
+									   <?php if( $item['type'] == 'integral' ){ ?>
+									   <p><span class="price-inner">实付款：</span><span style="font-size: 14px;font-weight: bold;color: #e4393c">积分：{:round($total_fare,2)}
+										   <?php if( !empty($total_shipping_fare) ){ ?>+运费：¥{:round( $total_shipping_fare,2)}<?php } ?>
+									   </span></p>
+									   <?php }else{ ?>
+									   <p><span class="price-inner">实付款：</span><span style="font-size: 14px;font-weight: bold;color: #e4393c">¥{:round($total_total_fare,2)}</span></p>
+									   <?php } ?>
+								   </div>
+							   </td>
+						   </tr>
+					   </table>
+				   </div>
+			   </div>
+
+				<div class="panel-heading" >
+					   <span>退款处理记录</span>
+				</div>
+				<div class="row order-container" style="margin-top:10px;">
+
+					<div style="border-right: 1px solid #efefef;">
+						<div class='panel-body' >
+							<table class='ordertable' style='table-layout:fixed;text-align:center;'>
+								 <thead class="navbar-inner">
+								   <tr>
+									  <th style="text-align:center;">
+											处理时间
+										</th>
+										<th style="text-align:center;">
+											订单操作记录
+										</th>
+										<th style="text-align:center;">
+											操作人
+										</th>
+								   </tr>
+								   </thead>
+								 <?php foreach($order_refund_history as $val){ ?>
+								 <tr>
+									<td style="text-align:center;"><?php echo date('Y-m-d H:i:s',$val['addtime']);?></td>
+									<td style="text-align:center;"><?php echo $val['message'];?></td>
+									<td style="text-align:center;"><?php echo $val['type']; ?></td>
+								 </tr>
+								 <?php } ?>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+			</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 footer-copyright">
+						<p class="mb-0">Copyright © 2019-2021 Dejavu.Tech. All rights reserved.</p>
+					</div>
+					<div class="col-md-6">
+						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+
+
+
+<script src="/layuiadmin/layui/layui1.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap js-->
+
+<!-- Sidebar jquery-->
+<script src="/assets/js/sidebar-menu.js"></script>
+
+<!-- feather icon js-->
+
+<!-- Plugins JS start-->
+
+<script src="/assets/js/chat-menu.js"></script>
+<!-- Plugins JS Ends-->
+<!-- Theme js-->
+<script src="/assets/js/script.js"></script>
+
+<!-- Theme js-->
+<script src="/assets/js/theme-customizer/customizer1.js"></script>
+
+<script>
+	layui.config({
+		base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+</script>
+
+<script>
+//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+var layer = layui.layer;
+var $;
+
+layui.use(['jquery', 'layer','form'], function(){
+  $ = layui.$;
+  var form = layui.form;
+
+
+	$('.deldom').click(function(){
+		var s_url = $(this).attr('data-href');
+		layer.confirm($(this).attr('data-confirm'), function(index){
+					 $.ajax({
+						url:s_url,
+						type:'post',
+						dataType:'json',
+						success:function(info){
+
+							if(info.status == 0)
+							{
+								layer.msg(info.result.message,{icon: 1,time: 2000});
+							}else if(info.status == 1){
+								var go_url = location.href;
+								if( info.result.hasOwnProperty("url") )
+								{
+									go_url = info.result.url;
+								}
+
+								layer.msg('操作成功',{time: 1000,
+									end:function(){
+										location.href = info.result.url;
+									}
+								});
+							}
+						}
+					})
+				});
+	})
+
+	$('.btn-operation').click(function(){
+		var ids_arr = [];
+		var obj = $(this);
+		var s_toggle = $(this).attr('data-toggle');
+		var s_url = $(this).attr('data-href');
+
+
+		$("input[name=item_checkbox]").each(function() {
+
+			if( $(this).prop('checked') )
+			{
+				ids_arr.push( $(this).val() );
+			}
+		})
+		if(ids_arr.length < 1)
+		{
+			layer.msg('请选择要操作的内容');
+		}else{
+			var can_sub = true;
+			if( s_toggle == 'batch-remove' )
+			{
+				can_sub = false;
+
+				layer.confirm($(obj).attr('data-confirm'), function(index){
+					 $.ajax({
+						url:s_url,
+						type:'post',
+						dataType:'json',
+						data:{ids:ids_arr},
+						success:function(info){
+
+							if(info.status == 0)
+							{
+								layer.msg(info.result.message,{icon: 1,time: 2000});
+							}else if(info.status == 1){
+								var go_url = location.href;
+								if( info.result.hasOwnProperty("url") )
+								{
+									go_url = info.result.url;
+								}
+
+								layer.msg('操作成功',{time: 1000,
+									end:function(){
+										location.href = info.result.url;
+									}
+								});
+							}
+						}
+					})
+				});
+			}else{
+				$.ajax({
+					url:s_url,
+					type:'post',
+					dataType:'json',
+					data:{ids:ids_arr},
+					success:function(info){
+
+						if(info.status == 0)
+						{
+							layer.msg(info.result.message,{icon: 1,time: 2000});
+						}else if(info.status == 1){
+							var go_url = location.href;
+							if( info.result.hasOwnProperty("url") )
+							{
+								go_url = info.result.url;
+							}
+
+							layer.msg('操作成功',{time: 1000,
+								end:function(){
+									location.href = info.result.url;
+								}
+							});
+						}
+					}
+				})
+			}
+		}
+	})
+
+	form.on('switch(restwsitch)', function(data){
+
+	  var s_url = $(this).attr('data-href')
+
+	  var rest = 1;
+	  if(data.elem.checked)
+	  {
+		rest = 1;
+	  }else{
+		rest = 0;
+	  }
+
+	  $.ajax({
+			url:s_url,
+			type:'post',
+			dataType:'json',
+			data:{rest:rest},
+			success:function(info){
+
+				if(info.status == 0)
+				{
+					layer.msg(info.result.message,{icon: 1,time: 2000});
+				}else if(info.status == 1){
+					var go_url = location.href;
+					if( info.result.hasOwnProperty("url") )
+					{
+						go_url = info.result.url;
+					}
+
+					layer.msg('操作成功',{time: 1000,
+						end:function(){
+							location.href = info.result.url;
+						}
+					});
+				}
+			}
+		})
+	});
+	form.on('switch(enablewsitch)', function(data){
+
+	  var s_url = $(this).attr('data-href')
+
+	  var enable = 1;
+	  if(data.elem.checked)
+	  {
+		enable = 1;
+	  }else{
+		enable = 0;
+	  }
+
+	  $.ajax({
+			url:s_url,
+			type:'post',
+			dataType:'json',
+			data:{enable:enable},
+			success:function(info){
+
+				if(info.status == 0)
+				{
+					layer.msg(info.result.message,{icon: 1,time: 2000});
+				}else if(info.status == 1){
+					var go_url = location.href;
+					if( info.result.hasOwnProperty("url") )
+					{
+						go_url = info.result.url;
+					}
+
+					layer.msg('操作成功',{time: 1000,
+						end:function(){
+							location.href = info.result.url;
+						}
+					});
+				}
+			}
+		})
+	});
+
+	form.on('switch(statewsitch)', function(data){
+
+	  var s_url = $(this).attr('data-href')
+
+	  var state = 1;
+	  if(data.elem.checked)
+	  {
+		state = 1;
+	  }else{
+		state = 0;
+	  }
+
+	  $.ajax({
+			url:s_url,
+			type:'post',
+			dataType:'json',
+			data:{state:state},
+			success:function(info){
+
+				if(info.status == 0)
+				{
+					layer.msg(info.result.message,{icon: 1,time: 2000});
+				}else if(info.status == 1){
+					var go_url = location.href;
+					if( info.result.hasOwnProperty("url") )
+					{
+						go_url = info.result.url;
+					}
+
+					layer.msg('操作成功',{time: 1000,
+						end:function(){
+							location.href = info.result.url;
+						}
+					});
+				}
+			}
+		})
+	});
+	form.on('checkbox(checkboxall)', function(data){
+
+	  if(data.elem.checked)
+	  {
+		$("input[name=item_checkbox]").each(function() {
+			$(this).prop("checked", true);
+		});
+		$("input[name=checkall]").each(function() {
+			$(this).prop("checked", true);
+		});
+
+	  }else{
+		$("input[name=item_checkbox]").each(function() {
+			$(this).prop("checked", false);
+		});
+		$("input[name=checkall]").each(function() {
+			$(this).prop("checked", false);
+		});
+	  }
+
+	  form.render('checkbox');
+	});
+
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+
+	 $.ajax({
+		url: data.form.action,
+		type: data.form.method,
+		data: data.field,
+		dataType:'json',
+		success: function (info) {
+
+			if(info.status == 0)
+			{
+				layer.msg(info.result.message,{icon: 1,time: 2000});
+			}else if(info.status == 1){
+				var go_url = location.href;
+				if( info.result.hasOwnProperty("url") )
+				{
+					go_url = info.result.url;
+				}
+
+				layer.msg('操作成功',{time: 1000,
+					end:function(){
+						location.href = info.result.url;
+					}
+				});
+			}
+		}
+	});
+
+    return false;
+  });
+})
+
+</script>
+<script>
+var ajax_url = "";
+$(function(){
+
+	$("[data-toggle='ajaxModal']").click(function () {
+        var s_url = $(this).attr('data-href');
+		ajax_url = s_url;
+		console.log(23);
+       $.ajax({
+				url:s_url,
+				type:"get",
+				success:function(shtml){
+					$('#ajaxModal').html(shtml);
+					$("#ajaxModal").modal();
+				}
+		})
+    });
+	$(document).delegate(".modal-footer .btn-order","click",function(){
+		var loadingIndex = layer.load();
+		var s_data = $('#ajaxModal form').serialize();
+
+		$.ajax({
+			url:ajax_url,
+			type:'post',
+			dataType:'json',
+			data:s_data,
+			success:function(info){
+
+
+
+				if(info.status == 0)
+				{
+					layer.msg(info.result.message,{icon: 1,time: 2000});
+					layer.close(loadingIndex);
+				}else if(info.status == 1){
+					var go_url = location.href;
+					if( info.result.hasOwnProperty("url") )
+					{
+						go_url = info.result.url;
+					}
+
+					layer.msg('操作成功',{time: 1000,
+						end:function(){
+							location.href = info.result.url;
+						}
+					});
+				}
+			}
+		})
+		return false;
+	})
+
+
+})
+</script>
+<div id="ajaxModal" class="modal fade" style="display: none;">
+
+</div>
+
+<script>
+    //没有选中时间段不能导出
+    $(function () {
+        $('.btn-submit').click(function () {
+            var e = $(this).data('export');
+            if(e==1 ){
+                if($('#keyword').val() !='' ){
+                    $('#export').val(1);
+                    $('#search').submit();
+                }else if($('#searchtime').val()!=''){
+                    $('#export').val(1);
+                    $('#search').submit();
+                }else{
+                   $('#export').val(1);
+                    $('#search').submit();
+                    return;
+                }
+            }else{
+                $('#export').val(0);
+                $('#search').submit();
+            }
+        })
+    })
+</script>
+</body>

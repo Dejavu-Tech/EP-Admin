@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="万宁" code="469006">
+<county name="万宁" code="469006001">
+    <street name="万城镇" code="469006100" />
+    <street name="龙滚镇" code="469006101" />
+    <street name="和乐镇" code="469006102" />
+    <street name="后安镇" code="469006103" />
+    <street name="大茂镇" code="469006104" />
+    <street name="东澳镇" code="469006105" />
+    <street name="礼纪镇" code="469006106" />
+    <street name="长丰镇" code="469006107" />
+    <street name="山根镇" code="469006108" />
+    <street name="北大镇" code="469006109" />
+    <street name="南桥镇" code="469006110" />
+    <street name="三更罗镇" code="469006111" />
+    <street name="国营东兴农场" code="469006400" />
+    <street name="国营东和农场" code="469006401" />
+    <street name="国营新中农场" code="469006404" />
+    <street name="兴隆华侨农场" code="469006500" />
+    <street name="地方国营六连林场" code="469006501" />
+</county>
+</city>
+</address>

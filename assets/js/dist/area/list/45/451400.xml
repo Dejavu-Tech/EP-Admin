@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="崇左" code="451400">
+<county name="江州" code="451402">
+    <street name="太平街道" code="451402001" />
+    <street name="江南街道" code="451402002" />
+    <street name="石景林街道" code="451402003" />
+    <street name="新和镇" code="451402101" />
+    <street name="濑湍镇" code="451402102" />
+    <street name="江州镇" code="451402103" />
+    <street name="左州镇" code="451402104" />
+    <street name="那隆镇" code="451402105" />
+    <street name="驮卢镇" code="451402106" />
+    <street name="罗白乡" code="451402201" />
+    <street name="板利乡" code="451402202" />
+    <street name="新和华侨农场" code="451402400" />
+    <street name="左江华侨农场" code="451402401" />
+</county>
+<county name="扶绥" code="451421">
+    <street name="新宁镇" code="451421100" />
+    <street name="渠黎镇" code="451421101" />
+    <street name="渠旧镇" code="451421102" />
+    <street name="柳桥镇" code="451421103" />
+    <street name="东门镇" code="451421104" />
+    <street name="山圩镇" code="451421105" />
+    <street name="中东镇" code="451421106" />
+    <street name="东罗镇" code="451421107" />
+    <street name="龙头乡" code="451421201" />
+    <street name="岜盆乡" code="451421202" />
+    <street name="昌平乡" code="451421203" />
+    <street name="广西农垦国有山圩农场" code="451421400" />
+</county>
+<county name="宁明" code="451422">
+    <street name="城中镇" code="451422100" />
+    <street name="爱店镇" code="451422101" />
+    <street name="明江镇" code="451422102" />
+    <street name="海渊镇" code="451422103" />
+    <street name="亭亮乡" code="451422201" />
+    <street name="寨安乡" code="451422202" />
+    <street name="峙浪乡" code="451422203" />
+    <street name="东安乡" code="451422204" />
+    <street name="板棍乡" code="451422205" />
+    <street name="北江乡" code="451422206" />
+    <street name="桐棉乡" code="451422207" />
+    <street name="那堪乡" code="451422208" />
+    <street name="那楠乡" code="451422209" />
+    <street name="国营宁明华侨农场" code="451422401" />
+    <street name="国营天西华侨农场" code="451422402" />
+</county>
+<county name="龙州" code="451423">
+    <street name="龙州镇" code="451423100" />
+    <street name="下冻镇" code="451423101" />
+    <street name="水口镇" code="451423102" />
+    <street name="金龙镇" code="451423103" />
+    <street name="响水镇" code="451423104" />
+    <street name="八角乡" code="451423201" />
+    <street name="上降乡" code="451423202" />
+    <street name="彬桥乡" code="451423203" />
+    <street name="上龙乡" code="451423204" />
+    <street name="武德乡" code="451423205" />
+    <street name="逐卜乡" code="451423206" />
+    <street name="上金乡" code="451423207" />
+</county>
+<county name="大新" code="451424">
+    <street name="桃城镇" code="451424100" />
+    <street name="全茗镇" code="451424101" />
+    <street name="雷平镇" code="451424102" />
+    <street name="硕龙镇" code="451424103" />
+    <street name="下雷镇" code="451424104" />
+    <street name="五山乡" code="451424200" />
+    <street name="龙门乡" code="451424201" />
+    <street name="昌明乡" code="451424202" />
+    <street name="福隆乡" code="451424203" />
+    <street name="那岭乡" code="451424204" />
+    <street name="恩城乡" code="451424205" />
+    <street name="榄圩乡" code="451424206" />
+    <street name="宝圩乡" code="451424207" />
+    <street name="堪圩乡" code="451424208" />
+    <street name="国营桃城华侨农场" code="451424400" />
+</county>
+<county name="天等" code="451425">
+    <street name="天等镇" code="451425100" />
+    <street name="龙茗镇" code="451425101" />
+    <street name="进结镇" code="451425102" />
+    <street name="向都镇" code="451425103" />
+    <street name="东平镇" code="451425104" />
+    <street name="都康乡" code="451425200" />
+    <street name="宁干乡" code="451425201" />
+    <street name="驮堪乡" code="451425202" />
+    <street name="福新乡" code="451425203" />
+    <street name="进远乡" code="451425205" />
+    <street name="上映乡" code="451425206" />
+    <street name="把荷乡" code="451425207" />
+    <street name="小山乡" code="451425208" />
+</county>
+<county name="凭祥" code="451481">
+    <street name="凭祥镇" code="451481100" />
+    <street name="友谊镇" code="451481101" />
+    <street name="上石镇" code="451481102" />
+    <street name="夏石镇" code="451481103" />
+    <street name="广西凭祥综合保税区" code="451481400" />
+</county>
+</city>
+</address>

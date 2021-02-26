@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="盘锦" code="211100">
+<county name="双台子" code="211102">
+    <street name="东风街道" code="211102001" />
+    <street name="胜利街道" code="211102002" />
+    <street name="建设街道" code="211102003" />
+    <street name="红旗街道" code="211102004" />
+    <street name="辽河街道" code="211102005" />
+    <street name="石油街道" code="211102006" />
+    <street name="化工街道" code="211102007" />
+    <street name="铁东街道" code="211102008" />
+    <street name="双盛街道" code="211102009" />
+    <street name="陆家乡" code="211102201" />
+    <street name="双台子区良种场" code="211102400" />
+</county>
+<county name="兴隆台" code="211103">
+    <street name="振兴街道" code="211103001" />
+    <street name="兴隆街道" code="211103002" />
+    <street name="渤海街道" code="211103003" />
+    <street name="新工街道" code="211103004" />
+    <street name="于楼街道" code="211103005" />
+    <street name="友谊街道" code="211103006" />
+    <street name="曙光街道" code="211103007" />
+    <street name="欢喜街道" code="211103008" />
+    <street name="平安街道" code="211103009" />
+    <street name="新生街道" code="211103010" />
+    <street name="红村街道" code="211103011" />
+    <street name="高升街道" code="211103012" />
+    <street name="沈采街道" code="211103013" />
+    <street name="锦采街道" code="211103014" />
+    <street name="茨采街道" code="211103015" />
+    <street name="创新街道" code="211103016" />
+    <street name="兴盛街道" code="211103017" />
+    <street name="兴海街道" code="211103018" />
+</county>
+<county name="大洼" code="211121">
+    <street name="荣滨街道" code="211121001" />
+    <street name="二界沟街道" code="211121002" />
+    <street name="大洼镇" code="211121100" />
+    <street name="田庄台镇" code="211121101" />
+    <street name="东风镇" code="211121103" />
+    <street name="新开镇" code="211121104" />
+    <street name="田家镇" code="211121105" />
+    <street name="清水镇" code="211121106" />
+    <street name="新兴镇" code="211121107" />
+    <street name="西安镇" code="211121108" />
+    <street name="新立镇" code="211121109" />
+    <street name="荣兴镇" code="211121110" />
+    <street name="王家镇" code="211121111" />
+    <street name="唐家镇" code="211121112" />
+    <street name="平安镇" code="211121113" />
+    <street name="赵圈河镇" code="211121114" />
+    <street name="榆树镇" code="211121115" />
+</county>
+<county name="盘山" code="211122">
+    <street name="沙岭镇" code="211122101" />
+    <street name="高升镇" code="211122102" />
+    <street name="胡家镇" code="211122103" />
+    <street name="石新镇" code="211122104" />
+    <street name="东郭镇" code="211122105" />
+    <street name="羊圈子镇" code="211122106" />
+    <street name="古城子镇" code="211122107" />
+    <street name="坝墙子镇" code="211122108" />
+    <street name="太平镇" code="211122109" />
+    <street name="陈家镇" code="211122110" />
+    <street name="甜水镇" code="211122111" />
+    <street name="吴家镇" code="211122112" />
+    <street name="得胜镇" code="211122113" />
+    <street name="盘山县林场" code="211122400" />
+</county>
+</city>
+</address>

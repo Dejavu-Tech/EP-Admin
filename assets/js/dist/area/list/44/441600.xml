@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="河源" code="441600">
+<county name="源城" code="441602">
+    <street name="上城街道" code="441602001" />
+    <street name="新江街道" code="441602002" />
+    <street name="东埔街道" code="441602003" />
+    <street name="源西街道" code="441602004" />
+    <street name="高埔岗街道" code="441602005" />
+    <street name="源南镇" code="441602100" />
+    <street name="埔前镇" code="441602101" />
+</county>
+<county name="紫金" code="441621">
+    <street name="紫城镇" code="441621100" />
+    <street name="龙窝镇" code="441621102" />
+    <street name="九和镇" code="441621103" />
+    <street name="上义镇" code="441621104" />
+    <street name="蓝塘镇" code="441621105" />
+    <street name="凤安镇" code="441621106" />
+    <street name="义容镇" code="441621107" />
+    <street name="古竹镇" code="441621108" />
+    <street name="临江镇" code="441621109" />
+    <street name="柏埔镇" code="441621110" />
+    <street name="黄塘镇" code="441621111" />
+    <street name="敬梓镇" code="441621112" />
+    <street name="水墩镇" code="441621114" />
+    <street name="南岭镇" code="441621115" />
+    <street name="苏区镇" code="441621116" />
+    <street name="瓦溪镇" code="441621117" />
+    <street name="好义镇" code="441621118" />
+    <street name="中坝镇" code="441621119" />
+</county>
+<county name="龙川" code="441622">
+    <street name="老隆镇" code="441622100" />
+    <street name="义都镇" code="441622102" />
+    <street name="佗城镇" code="441622103" />
+    <street name="鹤市镇" code="441622104" />
+    <street name="黄布镇" code="441622105" />
+    <street name="紫市镇" code="441622106" />
+    <street name="通衢镇" code="441622107" />
+    <street name="登云镇" code="441622109" />
+    <street name="丰稔镇" code="441622110" />
+    <street name="四都镇" code="441622111" />
+    <street name="铁场镇" code="441622112" />
+    <street name="龙母镇" code="441622114" />
+    <street name="田心镇" code="441622115" />
+    <street name="黎咀镇" code="441622116" />
+    <street name="黄石镇" code="441622117" />
+    <street name="赤光镇" code="441622118" />
+    <street name="回龙镇" code="441622119" />
+    <street name="新田镇" code="441622120" />
+    <street name="车田镇" code="441622121" />
+    <street name="岩镇镇" code="441622123" />
+    <street name="麻布岗镇" code="441622124" />
+    <street name="贝岭镇" code="441622125" />
+    <street name="细坳镇" code="441622126" />
+    <street name="上坪镇" code="441622127" />
+</county>
+<county name="连平" code="441623">
+    <street name="元善镇" code="441623100" />
+    <street name="上坪镇" code="441623101" />
+    <street name="内莞镇" code="441623102" />
+    <street name="陂头镇" code="441623104" />
+    <street name="溪山镇" code="441623105" />
+    <street name="隆街镇" code="441623107" />
+    <street name="田源镇" code="441623108" />
+    <street name="油溪镇" code="441623109" />
+    <street name="忠信镇" code="441623110" />
+    <street name="高莞镇" code="441623111" />
+    <street name="大湖镇" code="441623113" />
+    <street name="三角镇" code="441623114" />
+    <street name="绣缎镇" code="441623115" />
+</county>
+<county name="和平" code="441624">
+    <street name="阳明镇" code="441624100" />
+    <street name="大坝镇" code="441624101" />
+    <street name="长塘镇" code="441624102" />
+    <street name="下车镇" code="441624103" />
+    <street name="上陵镇" code="441624104" />
+    <street name="优胜镇" code="441624105" />
+    <street name="贝墩镇" code="441624106" />
+    <street name="古寨镇" code="441624107" />
+    <street name="彭寨镇" code="441624108" />
+    <street name="合水镇" code="441624109" />
+    <street name="公白镇" code="441624110" />
+    <street name="青州镇" code="441624111" />
+    <street name="浰源镇" code="441624112" />
+    <street name="热水镇" code="441624113" />
+    <street name="东水镇" code="441624114" />
+    <street name="礼士镇" code="441624115" />
+    <street name="林寨镇" code="441624116" />
+</county>
+<county name="东源" code="441625">
+    <street name="仙塘镇" code="441625100" />
+    <street name="灯塔镇" code="441625101" />
+    <street name="骆湖镇" code="441625102" />
+    <street name="船塘镇" code="441625103" />
+    <street name="顺天镇" code="441625104" />
+    <street name="上莞镇" code="441625105" />
+    <street name="曾田镇" code="441625106" />
+    <street name="柳城镇" code="441625107" />
+    <street name="义合镇" code="441625108" />
+    <street name="蓝口镇" code="441625109" />
+    <street name="黄田镇" code="441625110" />
+    <street name="叶潭镇" code="441625111" />
+    <street name="黄村镇" code="441625112" />
+    <street name="康禾镇" code="441625113" />
+    <street name="锡场镇" code="441625114" />
+    <street name="新港镇" code="441625115" />
+    <street name="双江镇" code="441625116" />
+    <street name="涧头镇" code="441625117" />
+    <street name="新回龙镇" code="441625121" />
+    <street name="半江镇" code="441625122" />
+    <street name="漳溪乡" code="441625200" />
+</county>
+</city>
+</address>

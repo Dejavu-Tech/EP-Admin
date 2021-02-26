@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="珠海" code="440400">
+<county name="香洲" code="440402">
+    <street name="翠香街道" code="440402001" />
+    <street name="梅华街道" code="440402002" />
+    <street name="前山街道" code="440402003" />
+    <street name="吉大街道" code="440402004" />
+    <street name="拱北街道" code="440402005" />
+    <street name="香湾街道" code="440402006" />
+    <street name="狮山街道" code="440402007" />
+    <street name="湾仔街道" code="440402008" />
+    <street name="唐家湾镇" code="440402100" />
+    <street name="南屏镇" code="440402102" />
+    <street name="横琴镇" code="440402104" />
+    <street name="桂山镇" code="440402105" />
+    <street name="万山镇" code="440402106" />
+    <street name="担杆镇" code="440402107" />
+    <street name="大学园区" code="440402400" />
+    <street name="南屏科技园" code="440402401" />
+    <street name="保税区" code="440402402" />
+    <street name="前山商贸物流中心" code="440402403" />
+    <street name="洪湾商贸物流中心" code="440402404" />
+    <street name="金鼎工业园" code="440402405" />
+</county>
+<county name="斗门" code="440403">
+    <street name="白藤街道" code="440403001" />
+    <street name="莲洲镇" code="440403100" />
+    <street name="斗门镇" code="440403103" />
+    <street name="乾务镇" code="440403105" />
+    <street name="白蕉镇" code="440403106" />
+    <street name="井岸镇" code="440403107" />
+</county>
+<county name="金湾" code="440404">
+    <street name="三灶镇" code="440404100" />
+    <street name="南水镇" code="440404101" />
+    <street name="红旗镇" code="440404103" />
+    <street name="平沙镇" code="440404104" />
+    <street name="联港工业区" code="440404400" />
+    <street name="航空产业园" code="440404401" />
+</county>
+</city>
+</address>

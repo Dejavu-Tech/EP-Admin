@@ -1,0 +1,76 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var dropzone              = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Dropzone
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Ui Elements
+                                      li.breadcrumb-item.active Dropzone
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Single File Upload
+                            .card-body
+                              form#singleFileUpload.dropzone.digits(action='/upload.php')
+                                .dz-message.needsclick
+                                  i.icon-cloud-up
+                                  h6 Drop files here or click to upload.
+                                  span.note.needsclick
+                                    | (This is just a demo dropzone. Selected files are 
+                                    strong not
+                                    |  actually uploaded.)
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Multi File Upload
+                            .card-body
+                              form#multiFileUpload.dropzone.dropzone-primary(action='/upload.php')
+                                .dz-message.needsclick
+                                  i.icon-cloud-up
+                                  h6 Drop files here or click to upload.
+                                  span.note.needsclick
+                                    | (This is just a demo dropzone. Selected files are 
+                                    strong not
+                                    |  actually uploaded.)
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 File Type Validation
+                            .card-body
+                              form#fileTypeValidation.dropzone.dropzone-info(action='/upload.php')
+                                .dz-message.needsclick
+                                  i.icon-cloud-up
+                                  h6 Drop files here or click to upload.
+                                  span.note.needsclick
+                                    | (This is just a demo dropzone. Selected files are 
+                                    strong not
+                                    |  actually uploaded.)
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

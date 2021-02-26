@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="廊坊" code="131000">
+<county name="安次" code="131002">
+    <street name="银河南路街道" code="131002001" />
+    <street name="光明西道街道" code="131002002" />
+    <street name="永华道街道" code="131002003" />
+    <street name="落垡镇" code="131002100" />
+    <street name="码头镇" code="131002101" />
+    <street name="葛渔城镇" code="131002102" />
+    <street name="东沽港镇" code="131002103" />
+    <street name="杨税务乡" code="131002200" />
+    <street name="仇庄乡" code="131002201" />
+    <street name="调河头乡" code="131002202" />
+    <street name="北史家务乡" code="131002203" />
+</county>
+<county name="广阳" code="131003">
+    <street name="银河北路街道" code="131003001" />
+    <street name="爱民东道街道" code="131003002" />
+    <street name="解放道街道" code="131003003" />
+    <street name="新开路街道" code="131003004" />
+    <street name="新源道街道" code="131003005" />
+    <street name="南尖塔镇" code="131003100" />
+    <street name="万庄镇" code="131003101" />
+    <street name="九州镇" code="131003102" />
+    <street name="北旺乡" code="131003200" />
+    <street name="廊坊经济技术开发区" code="131003450" />
+    <street name="新世纪步行街管理委员会" code="131003500" />
+</county>
+<county name="固安" code="131022">
+    <street name="固安镇" code="131022100" />
+    <street name="宫村镇" code="131022101" />
+    <street name="柳泉镇" code="131022102" />
+    <street name="牛驼镇" code="131022103" />
+    <street name="马庄镇" code="131022104" />
+    <street name="东湾乡" code="131022200" />
+    <street name="彭村乡" code="131022201" />
+    <street name="渠沟乡" code="131022202" />
+    <street name="礼让店乡" code="131022203" />
+    <street name="固安温泉休闲商务产业园区" code="131022400" />
+</county>
+<county name="永清" code="131023">
+    <street name="城区街道" code="131023001" />
+    <street name="永清镇" code="131023100" />
+    <street name="韩村镇" code="131023101" />
+    <street name="后奕镇" code="131023102" />
+    <street name="别古庄镇" code="131023103" />
+    <street name="里澜城镇" code="131023104" />
+    <street name="管家务回族乡" code="131023200" />
+    <street name="曹家务乡" code="131023201" />
+    <street name="龙虎庄乡" code="131023202" />
+    <street name="刘街乡" code="131023203" />
+    <street name="三圣口乡" code="131023204" />
+    <street name="永清县工业园区" code="131023400" />
+</county>
+<county name="香河" code="131024">
+    <street name="淑阳镇" code="131024100" />
+    <street name="蒋辛屯镇" code="131024101" />
+    <street name="渠口镇" code="131024102" />
+    <street name="安头屯镇" code="131024103" />
+    <street name="安平镇" code="131024104" />
+    <street name="刘宋镇" code="131024105" />
+    <street name="五百户镇" code="131024106" />
+    <street name="钱旺乡" code="131024200" />
+    <street name="钳屯乡" code="131024201" />
+    <street name="香河开发区" code="131024500" />
+    <street name="香河现代产业园" code="131024501" />
+</county>
+<county name="大城" code="131025">
+    <street name="平舒镇" code="131025100" />
+    <street name="旺村镇" code="131025101" />
+    <street name="大尚屯镇" code="131025102" />
+    <street name="南赵扶镇" code="131025103" />
+    <street name="留各庄镇" code="131025104" />
+    <street name="权村镇" code="131025105" />
+    <street name="里坦镇" code="131025106" />
+    <street name="广安镇" code="131025107" />
+    <street name="北位乡" code="131025200" />
+    <street name="臧屯乡" code="131025202" />
+    <street name="摩配园区管委会" code="131025400" />
+</county>
+<county name="文安" code="131026">
+    <street name="文安镇" code="131026100" />
+    <street name="新镇镇" code="131026101" />
+    <street name="苏桥镇" code="131026102" />
+    <street name="大柳河镇" code="131026103" />
+    <street name="左各庄镇" code="131026104" />
+    <street name="滩里镇" code="131026105" />
+    <street name="史各庄镇" code="131026106" />
+    <street name="赵各庄镇" code="131026107" />
+    <street name="兴隆宫镇" code="131026108" />
+    <street name="大留镇镇" code="131026109" />
+    <street name="孙氏镇" code="131026110" />
+    <street name="德归镇" code="131026111" />
+    <street name="大围河回族满族乡" code="131026200" />
+</county>
+<county name="大厂" code="131028">
+    <street name="大厂镇" code="131028100" />
+    <street name="夏垫镇" code="131028101" />
+    <street name="祁各庄镇" code="131028102" />
+    <street name="邵府乡" code="131028201" />
+    <street name="陈府乡" code="131028202" />
+    <street name="大厂工业园区" code="131028400" />
+</county>
+<county name="霸州" code="131081">
+    <street name="霸州镇" code="131081100" />
+    <street name="南孟镇" code="131081101" />
+    <street name="信安镇" code="131081102" />
+    <street name="堂二里镇" code="131081103" />
+    <street name="煎茶铺镇" code="131081104" />
+    <street name="胜芳镇" code="131081105" />
+    <street name="杨芬港镇" code="131081106" />
+    <street name="岔河集乡" code="131081200" />
+    <street name="康仙庄乡" code="131081201" />
+    <street name="东杨庄乡" code="131081202" />
+    <street name="王庄子乡" code="131081203" />
+    <street name="东段乡" code="131081204" />
+    <street name="霸州经济技术开发区" code="131081450" />
+</county>
+<county name="三河" code="131082">
+    <street name="鼎盛东大街街道" code="131082001" />
+    <street name="泃阳西大街街道" code="131082002" />
+    <street name="泃阳镇" code="131082100" />
+    <street name="李旗庄镇" code="131082101" />
+    <street name="杨庄镇" code="131082102" />
+    <street name="皇庄镇" code="131082103" />
+    <street name="新集镇" code="131082104" />
+    <street name="段甲岭镇" code="131082105" />
+    <street name="黄土庄镇" code="131082106" />
+    <street name="高楼镇" code="131082107" />
+    <street name="齐心庄镇" code="131082108" />
+    <street name="燕郊镇" code="131082109" />
+    <street name="燕郊经济技术开发区" code="131082450" />
+    <street name="三河市农业高新技术园区" code="131082451" />
+</county>
+</city>
+</address>

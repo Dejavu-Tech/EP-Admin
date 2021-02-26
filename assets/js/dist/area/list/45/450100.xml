@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="南宁" code="450100">
+<county name="兴宁" code="450102">
+    <street name="民生街道" code="450102001" />
+    <street name="朝阳街道" code="450102002" />
+    <street name="三塘镇" code="450102101" />
+    <street name="五塘镇" code="450102102" />
+    <street name="昆仑镇" code="450102104" />
+    <street name="九曲湾农场" code="450102450" />
+</county>
+<county name="青秀" code="450103">
+    <street name="新竹街道" code="450103001" />
+    <street name="中山街道" code="450103002" />
+    <street name="建政街道" code="450103003" />
+    <street name="南湖街道" code="450103004" />
+    <street name="津头街道" code="450103005" />
+    <street name="仙葫经济开发区管理委员会" code="450103006" />
+    <street name="刘圩镇" code="450103100" />
+    <street name="南阳镇" code="450103101" />
+    <street name="伶俐镇" code="450103102" />
+    <street name="长塘镇" code="450103103" />
+    <street name="青秀山管理委员会" code="450103451" />
+</county>
+<county name="江南" code="450105">
+    <street name="福建园街道" code="450105001" />
+    <street name="江南街道" code="450105002" />
+    <street name="沙井街道" code="450105003" />
+    <street name="那洪街道" code="450105004" />
+    <street name="金凯街道" code="450105005" />
+    <street name="吴圩镇" code="450105102" />
+    <street name="苏圩镇" code="450105103" />
+    <street name="延安镇" code="450105104" />
+    <street name="江西镇" code="450105105" />
+    <street name="经济技术开发区" code="450105450" />
+    <street name="明阳工业园区管委会" code="450105451" />
+</county>
+<county name="西乡塘" code="450107">
+    <street name="衡阳街道" code="450107001" />
+    <street name="北湖街道" code="450107002" />
+    <street name="西乡塘街道" code="450107003" />
+    <street name="安吉街道" code="450107004" />
+    <street name="华强街道" code="450107005" />
+    <street name="新阳街道" code="450107006" />
+    <street name="上尧街道" code="450107007" />
+    <street name="安宁街道" code="450107008" />
+    <street name="石埠街道" code="450107009" />
+    <street name="心圩街道" code="450107010" />
+    <street name="金陵镇" code="450107100" />
+    <street name="双定镇" code="450107101" />
+    <street name="坛洛镇" code="450107105" />
+    <street name="那龙矿务局" code="450107450" />
+    <street name="金光农场" code="450107453" />
+    <street name="高新技术开发区管委会" code="450107454" />
+</county>
+<county name="良庆" code="450108">
+    <street name="大沙田街道" code="450108001" />
+    <street name="玉洞街道" code="450108002" />
+    <street name="良庆镇" code="450108100" />
+    <street name="那马镇" code="450108101" />
+    <street name="那陈镇" code="450108102" />
+    <street name="大塘镇" code="450108103" />
+    <street name="南晓镇" code="450108104" />
+    <street name="良庆经济开发区管委会" code="450108452" />
+</county>
+<county name="邕宁" code="450109">
+    <street name="蒲庙镇" code="450109100" />
+    <street name="那楼镇" code="450109101" />
+    <street name="新江镇" code="450109102" />
+    <street name="百济镇" code="450109103" />
+    <street name="中和乡" code="450109202" />
+</county>
+<county name="武鸣" code="450122">
+    <street name="城厢镇" code="450122100" />
+    <street name="太平镇" code="450122102" />
+    <street name="双桥镇" code="450122103" />
+    <street name="宁武镇" code="450122104" />
+    <street name="锣圩镇" code="450122105" />
+    <street name="仙湖镇" code="450122106" />
+    <street name="府城镇" code="450122107" />
+    <street name="陆斡镇" code="450122108" />
+    <street name="两江镇" code="450122109" />
+    <street name="罗波镇" code="450122110" />
+    <street name="灵马镇" code="450122111" />
+    <street name="甘圩镇" code="450122112" />
+    <street name="马头镇" code="450122113" />
+    <street name="百合农场" code="450122450" />
+    <street name="南宁华侨投资区" code="450122451" />
+    <street name="东风农场" code="450122452" />
+</county>
+<county name="隆安" code="450123">
+    <street name="城厢镇" code="450123100" />
+    <street name="南圩镇" code="450123101" />
+    <street name="雁江镇" code="450123102" />
+    <street name="那桐镇" code="450123103" />
+    <street name="乔建镇" code="450123104" />
+    <street name="丁当镇" code="450123105" />
+    <street name="古潭乡" code="450123201" />
+    <street name="都结乡" code="450123203" />
+    <street name="布泉乡" code="450123204" />
+    <street name="屏山乡" code="450123205" />
+    <street name="隆安华侨管理区管理委员会" code="450123450" />
+</county>
+<county name="马山" code="450124">
+    <street name="白山镇" code="450124100" />
+    <street name="百龙滩镇" code="450124101" />
+    <street name="林圩镇" code="450124102" />
+    <street name="古零镇" code="450124103" />
+    <street name="金钗镇" code="450124104" />
+    <street name="周鹿镇" code="450124105" />
+    <street name="永州镇" code="450124106" />
+    <street name="乔利乡" code="450124200" />
+    <street name="加方乡" code="450124201" />
+    <street name="古寨瑶族乡" code="450124202" />
+    <street name="里当瑶族乡" code="450124203" />
+    <street name="光明山林场" code="450124450" />
+</county>
+<county name="上林" code="450125">
+    <street name="大丰镇" code="450125100" />
+    <street name="明亮镇" code="450125101" />
+    <street name="巷贤镇" code="450125102" />
+    <street name="白圩镇" code="450125103" />
+    <street name="三里镇" code="450125104" />
+    <street name="乔贤镇" code="450125105" />
+    <street name="西燕镇" code="450125106" />
+    <street name="澄泰乡" code="450125200" />
+    <street name="木山乡" code="450125202" />
+    <street name="塘红乡" code="450125203" />
+    <street name="镇圩瑶族乡" code="450125205" />
+</county>
+<county name="宾阳" code="450126">
+    <street name="宾州镇" code="450126100" />
+    <street name="黎塘镇" code="450126101" />
+    <street name="甘棠镇" code="450126102" />
+    <street name="思陇镇" code="450126103" />
+    <street name="新桥镇" code="450126104" />
+    <street name="新圩镇" code="450126105" />
+    <street name="邹圩镇" code="450126106" />
+    <street name="大桥镇" code="450126107" />
+    <street name="武陵镇" code="450126108" />
+    <street name="中华镇" code="450126109" />
+    <street name="古辣镇" code="450126110" />
+    <street name="露圩镇" code="450126111" />
+    <street name="王灵镇" code="450126112" />
+    <street name="和吉镇" code="450126113" />
+    <street name="洋桥镇" code="450126114" />
+    <street name="陈平镇" code="450126115" />
+    <street name="廖平农场" code="450126451" />
+</county>
+<county name="横县" code="450127">
+    <street name="横州镇" code="450127100" />
+    <street name="百合镇" code="450127101" />
+    <street name="那阳镇" code="450127102" />
+    <street name="南乡镇" code="450127103" />
+    <street name="新福镇" code="450127104" />
+    <street name="莲塘镇" code="450127105" />
+    <street name="平马镇" code="450127106" />
+    <street name="峦城镇" code="450127107" />
+    <street name="六景镇" code="450127108" />
+    <street name="石塘镇" code="450127110" />
+    <street name="陶圩镇" code="450127112" />
+    <street name="校椅镇" code="450127113" />
+    <street name="云表镇" code="450127114" />
+    <street name="马岭镇" code="450127115" />
+    <street name="马山乡" code="450127200" />
+    <street name="平朗乡" code="450127203" />
+    <street name="镇龙乡" code="450127204" />
+    <street name="良圻农场" code="450127450" />
+</county>
+</city>
+</address>

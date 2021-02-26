@@ -1,0 +1,127 @@
+<div class="table-responsive custom-scrollbar" style="max-height: calc(100vh - 110px);overflow:auto;overflow-x:hidden;max-width:850px;">
+	<div class="input-group m-b-10">
+		<input type="text" placeholder="请输入会员卡名称" id="select-url-kw" value="" class="form-control">
+		<div class="input-group-append" data-type="url"><span class="btn btn-primary select-btn">搜索</span></div>
+	</div>
+	<table class="display couponquery table-xs" style="width:100%;">
+    <tbody>
+		<tr>
+			<th>会员卡名称</th>
+			<th>原价</th>
+			<th>现价</th>
+			<th>有效天数</th>
+			<th>操作</th>
+		</tr>
+        <?php foreach( $list as  $row  ){ ?>
+        <tr>
+            <td>{$row['cardname']}</td>
+			<td>{$row['orignprice']}</td>
+			<td>{$row['price']}</td>
+			<td>{$row['expire_day']}天</td>
+			<td style="white-space:nowrap;text-align: right;"><a href="javascript:;" class="btn-primary btn-sm choose_dan_link" data-json='{:json_encode($row);}'>选择</a></td>
+        </tr>
+        <?php } ?>
+        <?php if( count($list)<=0){ ?>
+        <tr>
+            <td colspan='5' align='center'>未找到会员卡</td>
+        </tr>
+        <?php } ?>
+    </tbody>
+	<?php if( count($list) > 0){ ?>
+	<tfoot>
+		<tr>
+			<td colspan='5' align='center' id="pager_ajax">{$pager}</td>
+		</tr>
+	</tfoot>
+	<?php } ?>
+</table>
+    </div>
+<script>
+var query_kwd = "{$kwd}";
+var query_url = "{:U('user/query_card')}";
+var can_next = true;
+var member_id = "{$member['member_id']}";
+
+$(document).delegate(".choose_dan_link","click",function(){
+	var json_obj = JSON.parse($(this).attr('data-json'));
+	var card_id = json_obj.id;
+	$.ajax({
+		url:"{:U('user/open_ucard')}",
+		type:'post',
+		dataType:'json',
+		data:{card_id:card_id,member_id:member_id},
+		success:function(info){
+			if(info.status == 0)
+			{
+				layer.msg(info.result.message,{icon: 1,time: 2000});
+			}else if(info.status == 1){
+				var go_url = location.href;
+				if( info.result.hasOwnProperty("url") )
+				{
+					go_url = info.result.url;
+				}
+
+				layer.msg('操作成功',{time: 1000,
+					end:function(){
+						location.href = info.result.url;
+					}
+				});
+			}
+		}
+	})
+	layer.close(layer.index);
+});
+
+$(".select-btn").click(function(){
+
+	query_kwd = $.trim($("#select-url-kw").val());
+
+	var s_page = $(this).attr('page');
+	if(!can_next)
+	{
+		return false;
+	}
+	can_next = false;
+	$.ajax({
+		url:query_url,
+		type:'post',
+		dataType:'json',
+		data:{keyword:query_kwd, page:1,is_ajax:1},
+		success:function(ret){
+			if(ret.code == 0)
+			{
+				$('.supplyquery tbody').html(ret.html);
+
+				$('#pager_ajax').html(ret.pager);
+			}
+			can_next = true;
+		}
+	})
+});
+$("body").delegate(".pagination a","click",function(){
+	var s_page = $(this).attr('page');
+	if(!can_next)
+	{
+		return false;
+	}
+	can_next = false;
+	$.ajax({
+		url:query_url,
+		type:'post',
+		dataType:'json',
+		data:{keyword:query_kwd, page:s_page,is_ajax:1},
+		success:function(ret){
+			if(ret.code == 0)
+			{
+				$('.supplyquery tbody').html(ret.html);
+				$('#pager_ajax').html(ret.pager);
+
+			}
+			can_next = true;
+		}
+	})
+})
+
+
+
+</script>

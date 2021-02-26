@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="三沙" code="460300">
+<county name="西沙" code="460321">
+    <street name="永兴岛" code="460321451" />
+</county>
+<county name="南沙" code="460322">
+    <street name="永暑岛" code="460322451" />
+</county>
+<county name="中沙" code="460323">
+    <street name="中沙岛礁" code="460323451" />
+</county>
+</city>
+</address>

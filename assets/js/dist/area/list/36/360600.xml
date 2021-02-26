@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="鹰潭" code="360600">
+<county name="月湖" code="360602">
+    <street name="江边街道" code="360602001" />
+    <street name="交通街道" code="360602002" />
+    <street name="东湖街道" code="360602003" />
+    <street name="梅园街道" code="360602004" />
+    <street name="四青街道" code="360602005" />
+    <street name="白露街道" code="360602006" />
+    <street name="童家镇" code="360602100" />
+    <street name="夏埠乡" code="360602200" />
+</county>
+<county name="余江" code="360622">
+    <street name="邓埠镇" code="360622100" />
+    <street name="锦江镇" code="360622101" />
+    <street name="潢溪镇" code="360622102" />
+    <street name="中童镇" code="360622103" />
+    <street name="马荃镇" code="360622104" />
+    <street name="画桥镇" code="360622105" />
+    <street name="平定乡" code="360622200" />
+    <street name="春涛乡" code="360622201" />
+    <street name="杨溪乡" code="360622202" />
+    <street name="洪湖乡" code="360622203" />
+    <street name="黄庄乡" code="360622204" />
+    <street name="余江县工业园区" code="360622408" />
+    <street name="鹰潭市龙岗新区" code="360622409" />
+    <street name="高公寨营林场" code="360622501" />
+    <street name="刘家站垦殖场" code="360622502" />
+    <street name="邓家埠水稻原种场" code="360622503" />
+    <street name="余江县水产场" code="360622504" />
+    <street name="塘潮源林场" code="360622505" />
+    <street name="张公桥农场" code="360622506" />
+    <street name="青年综合垦殖场" code="360622507" />
+    <street name="大桥农场" code="360622508" />
+</county>
+<county name="贵溪" code="360681">
+    <street name="花园街道" code="360681001" />
+    <street name="雄石街道" code="360681002" />
+    <street name="东门街道" code="360681003" />
+    <street name="泗沥镇" code="360681100" />
+    <street name="河潭镇" code="360681101" />
+    <street name="周坊镇" code="360681102" />
+    <street name="鸿塘镇" code="360681103" />
+    <street name="志光镇" code="360681104" />
+    <street name="流口镇" code="360681105" />
+    <street name="罗河镇" code="360681106" />
+    <street name="金屯镇" code="360681107" />
+    <street name="塘湾镇" code="360681108" />
+    <street name="文坊镇" code="360681109" />
+    <street name="冷水镇" code="360681110" />
+    <street name="滨江镇" code="360681111" />
+    <street name="天禄镇" code="360681112" />
+    <street name="龙虎山镇（龙虎山风景旅游区管委会）" code="360681190" />
+    <street name="上清镇（龙虎山风景旅游区管委会）" code="360681191" />
+    <street name="白田乡" code="360681201" />
+    <street name="雷溪乡" code="360681202" />
+    <street name="彭湾乡" code="360681203" />
+    <street name="樟坪畲族乡" code="360681204" />
+    <street name="耳口乡" code="360681205" />
+    <street name="贵溪市工业园区" code="360681407" />
+    <street name="江北办事处" code="360681408" />
+    <street name="塔桥园艺场" code="360681500" />
+    <street name="河潭埠垦殖场" code="360681501" />
+    <street name="西窑林场" code="360681502" />
+    <street name="双圳林场" code="360681503" />
+    <street name="耳口林场" code="360681504" />
+    <street name="冷水林场" code="360681505" />
+    <street name="三县岭林场" code="360681506" />
+    <street name="上清林场（龙虎山风景旅游区管委会）" code="360681592" />
+</county>
+</city>
+</address>

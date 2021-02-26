@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+  <title><?php echo $shoname; ?></title>
+  <link rel="shortcut icon" href="" />
+
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <link rel="stylesheet" href="/layuiadmin/style/admin.css" media="all">
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href="./resource/css/bootstrap.min.css?v=201903260001" rel="stylesheet">
+<link href="./resource/css/common.css?v=201903260001" rel="stylesheet">
+
+<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+<link rel="stylesheet" href="/layuiadmin/layui/css/layui.css" media="all">
+<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+
+<link href="/assets/css/ep/log_bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/ep/log_log.css" rel="stylesheet">
+
+
+<style>
+.daterangepicker select.ampmselect, .daterangepicker select.hourselect, .daterangepicker select.minuteselect
+{
+    width: auto!important;
+}
+</style>
+
+<style>
+        .main{
+            width: 100%;
+        }
+        .contain{
+            position: relative;
+            margin: 0 auto;
+            height: 220px;
+            overflow: hidden;/*设置文案容器高度，超出部分隐藏*/
+        }
+        .open-btn{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            height: 80px;
+            background: linear-gradient(180deg,rgba(255,255,255,0),#fff);/*实现渐变效果，遮罩效果*/
+        }
+        .open-btn a{
+            text-decoration: none;
+            color: chocolate;
+            display: inline-block;
+            margin-top: 60px;
+        }
+		.shrink{
+            display:none;
+        }
+
+</style>
+
+</head>
+<body layadmin-themealias="default">
+
+<div class="layui-fluid">
+	<div class="layui-card">
+		<div class="layui-card-header layui-elem-quote">当前位置：<span class="line-text">更新日志</span></div>
+		<div class="layui-card-body" style="padding:15px;">
+
+		</div>
+
+
+		<div class="updatehead">社区团购系统&nbsp&nbsp&nbsp&nbsp更新日志</div>
+		<div class="container"  style="width: 1500px;">
+		<div class="history">
+		<div class="history-date">
+		<ul>
+			<h2 class="date02"></h2>
+
+			<?php foreach($data as $key => $var ){ ?>
+				<li style="width: 1500px;" id="li_{$key}" log_id="{$key}">
+
+				<dl><dt><font style="color:;"><?php echo $var['version'] ?></font></dt></dl><br />
+				<h3><span>更新日期：<?php echo $var['release'] ?></span></h3>
+				<dl >
+
+					<div class="contain" id="textcontain_{$key}" style="font-size:14px" >
+					<span><p>&nbsp;</p><p id="p_{$key}"><?php echo $var['desc'] ?></p> <br></span>
+
+					 <div class="open-btn" id="btncontain_{$key}" >
+							<a class="tg_log" log_id="{$key}" style="color:#FFFFFF;"><div id="color_{$key}">查看更多</div></a>
+					</div>
+
+					<div class="shrink" id="shrink_{$key}" >
+							<a class="tg_log2" log_id="{$key}" style="color:#428bca;" >收起</a>
+					</div>
+					</div>
+				</dl>
+				</li>
+			<?php } ?>
+
+
+		</ul>
+		</div>
+		</div>
+		</div>
+
+
+</div>
+</div>
+
+<script src="/layuiadmin/layui/layui.js"></script>
+
+<script>
+	layui.config({
+		base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+</script>
+
+<script>
+
+	$(window).load(function() {
+
+		var log_id = 139;
+
+		for(i=0 ; i< log_id ; i++){
+
+			var a = $("#p_"+i).height();
+			if( a < 200 ){
+				$("#btncontain_"+i).hide();//隐藏查看更多按钮
+
+			}else{
+				$("#btncontain_"+i).show();//显示查看更多按钮
+				$("#color_"+i).css("color","#428bca");
+			}
+		}
+	});
+
+</script>
+
+
+<script>
+	$('.tg_log').click(function(){
+		var log_id = $(this).attr("log_id");
+		layer.closeAll();
+       $("#textcontain_"+log_id).height("auto");//取消文字容器高度限制
+       $("#btncontain_"+log_id).hide();//隐藏查看更多按钮
+	   $("#shrink_"+log_id).toggle();
+	});
+
+	$('.tg_log2').click(function(){
+		var log_id = $(this).attr("log_id");
+		layer.closeAll();
+       $("#textcontain_"+log_id).height('220');//取消文字容器高度限制
+       $("#btncontain_"+log_id).show();//显示查看更多按钮
+		$("#shrink_"+log_id).hide();
+	});
+
+</script>
+
+
+
+</body>

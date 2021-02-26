@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="酒泉" code="620900">
+<county name="肃州" code="620902">
+    <street name="东北街街道" code="620902001" />
+    <street name="东南街街道" code="620902002" />
+    <street name="工业园街道" code="620902003" />
+    <street name="新城街道" code="620902004" />
+    <street name="西北街街道" code="620902005" />
+    <street name="西南街街道" code="620902006" />
+    <street name="西洞镇" code="620902100" />
+    <street name="清水镇" code="620902101" />
+    <street name="总寨镇" code="620902102" />
+    <street name="金佛寺镇" code="620902103" />
+    <street name="上坝镇" code="620902104" />
+    <street name="三墩镇" code="620902105" />
+    <street name="银达镇" code="620902106" />
+    <street name="西峰乡" code="620902200" />
+    <street name="泉湖乡" code="620902201" />
+    <street name="果园乡" code="620902202" />
+    <street name="下河清乡" code="620902205" />
+    <street name="黄泥堡乡" code="620902207" />
+    <street name="铧尖乡" code="620902208" />
+    <street name="东洞乡" code="620902209" />
+    <street name="丰乐乡" code="620902211" />
+    <street name="国营下河清农场" code="620902401" />
+    <street name="玉门油田生活基地街道" code="620902402" />
+    <street name="酒泉经济技术开发区" code="620902403" />
+    <street name="十号基地" code="620902404" />
+</county>
+<county name="金塔" code="620921">
+    <street name="中东镇" code="620921100" />
+    <street name="鼎新镇" code="620921101" />
+    <street name="金塔镇" code="620921102" />
+    <street name="东坝镇" code="620921103" />
+    <street name="航天镇" code="620921105" />
+    <street name="大庄子乡" code="620921203" />
+    <street name="古城乡" code="620921204" />
+    <street name="西坝乡" code="620921205" />
+    <street name="羊井子湾乡" code="620921209" />
+    <street name="甘肃亚盛农工商集团有限责任公司" code="620921400" />
+    <street name="工业园区管委会" code="620921401" />
+    <street name="农林场站" code="620921402" />
+    <street name="三合乡" code="620921403" />
+    <street name="城市社区管理委员会" code="620921404" />
+</county>
+<county name="瓜州" code="620922">
+    <street name="渊泉镇" code="620922100" />
+    <street name="柳园镇" code="620922101" />
+    <street name="三道沟镇" code="620922102" />
+    <street name="南岔镇" code="620922103" />
+    <street name="锁阳城镇" code="620922104" />
+    <street name="河东乡" code="620922200" />
+    <street name="布隆吉乡" code="620922201" />
+    <street name="西湖乡" code="620922203" />
+    <street name="瓜州乡" code="620922204" />
+    <street name="腰站子东乡族乡" code="620922209" />
+    <street name="七墩回族东乡族乡" code="620922212" />
+    <street name="双塔乡" code="620922213" />
+    <street name="广至藏族乡" code="620922214" />
+    <street name="沙河回族乡" code="620922215" />
+    <street name="梁湖乡" code="620922216" />
+    <street name="国营小宛农场" code="620922400" />
+</county>
+<county name="肃北" code="620923">
+    <street name="党城湾镇" code="620923100" />
+    <street name="马鬃山镇" code="620923101" />
+    <street name="盐池湾乡" code="620923201" />
+    <street name="石包城乡" code="620923202" />
+</county>
+<county name="阿克塞" code="620924">
+    <street name="红柳湾镇" code="620924100" />
+    <street name="阿克旗乡" code="620924200" />
+    <street name="阿勒腾乡" code="620924203" />
+</county>
+<county name="玉门" code="620981">
+    <street name="老市区管理委员会" code="620981001" />
+    <street name="新市区街道" code="620981002" />
+    <street name="东镇街道" code="620981003" />
+    <street name="玉门镇" code="620981101" />
+    <street name="赤金镇" code="620981102" />
+    <street name="花海镇" code="620981103" />
+    <street name="下西号乡" code="620981200" />
+    <street name="玉门市黄闸湾乡" code="620981201" />
+    <street name="柳河乡" code="620981202" />
+    <street name="昌马乡" code="620981203" />
+    <street name="清泉乡" code="620981205" />
+    <street name="小金湾乡" code="620981206" />
+    <street name="柳湖乡" code="620981207" />
+    <street name="独山子乡" code="620981208" />
+    <street name="六墩乡" code="620981209" />
+    <street name="国营饮马农场" code="620981400" />
+    <street name="国营黄花农场" code="620981401" />
+    <street name="甘肃农垦裕盛农业公司" code="620981402" />
+    <street name="甘肃省农垦建筑工程公司" code="620981403" />
+    <street name="甘肃矿区" code="620981404" />
+</county>
+<county name="敦煌" code="620982">
+    <street name="七里镇" code="620982100" />
+    <street name="沙州镇" code="620982101" />
+    <street name="肃州镇" code="620982102" />
+    <street name="莫高镇" code="620982103" />
+    <street name="转渠口镇" code="620982104" />
+    <street name="阳关镇" code="620982105" />
+    <street name="月牙泉镇" code="620982106" />
+    <street name="郭家堡乡" code="620982201" />
+    <street name="黄渠乡" code="620982204" />
+    <street name="国营敦煌农场" code="620982400" />
+    <street name="青海石油管理局生活基地" code="620982401" />
+</county>
+</city>
+</address>

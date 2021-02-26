@@ -1,0 +1,19 @@
+<div class="table-responsive custom-scrollbar" style="max-height: calc(100vh - 110px);overflow:auto;overflow-x:hidden;max-width:850px;">
+    <table class="display supplyquery table-xs" style="width:100%;">
+        <tbody>
+
+        <?php foreach($ds as $row){ ?>
+        <tr>
+            <td><?php echo $row['rolename']; ?></td>
+            <td style="white-space:nowrap;text-align: right;"><a href="javascript:;" class="btn-primary btn-sm" onclick='select_role(<?php echo json_encode($row); ?>)'>选择</a></td>
+        </tr>
+        <?php } ?>
+
+        <?php if( count($ds)<=0 ){ ?>
+        <tr>
+            <td colspan='2' align='center'>未找到权限组</td>
+        </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+</div>

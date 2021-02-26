@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="甘孜" code="513300">
+<county name="康定" code="513321">
+    <street name="炉城镇" code="513321100" />
+    <street name="姑咱镇" code="513321101" />
+    <street name="新都桥镇" code="513321102" />
+    <street name="雅拉乡" code="513321201" />
+    <street name="时济乡" code="513321202" />
+    <street name="前溪乡" code="513321203" />
+    <street name="舍联乡" code="513321204" />
+    <street name="麦崩乡" code="513321205" />
+    <street name="三合乡" code="513321206" />
+    <street name="金汤乡" code="513321207" />
+    <street name="捧塔乡" code="513321208" />
+    <street name="沙德乡" code="513321209" />
+    <street name="贡嘎山乡" code="513321210" />
+    <street name="普沙绒乡" code="513321211" />
+    <street name="吉居乡" code="513321212" />
+    <street name="瓦泽乡" code="513321213" />
+    <street name="呷巴乡" code="513321214" />
+    <street name="甲根坝乡" code="513321215" />
+    <street name="朋布西乡" code="513321216" />
+    <street name="塔公乡" code="513321217" />
+    <street name="孔玉乡" code="513321218" />
+</county>
+<county name="泸定" code="513322">
+    <street name="泸桥镇" code="513322100" />
+    <street name="冷碛镇" code="513322101" />
+    <street name="兴隆镇" code="513322102" />
+    <street name="磨西镇" code="513322103" />
+    <street name="岚安乡" code="513322200" />
+    <street name="烹坝乡" code="513322201" />
+    <street name="田坝乡" code="513322202" />
+    <street name="杵坭乡" code="513322203" />
+    <street name="加郡乡" code="513322204" />
+    <street name="德威乡" code="513322205" />
+    <street name="新兴乡" code="513322206" />
+    <street name="得妥乡" code="513322207" />
+</county>
+<county name="丹巴" code="513323">
+    <street name="章谷镇" code="513323100" />
+    <street name="巴底镇" code="513323101" />
+    <street name="巴旺乡" code="513323201" />
+    <street name="聂呷乡" code="513323202" />
+    <street name="革什扎乡" code="513323203" />
+    <street name="边耳乡" code="513323204" />
+    <street name="丹东乡" code="513323205" />
+    <street name="东谷乡" code="513323206" />
+    <street name="水子乡" code="513323207" />
+    <street name="格宗乡" code="513323208" />
+    <street name="梭坡乡" code="513323209" />
+    <street name="中路乡" code="513323210" />
+    <street name="岳扎乡" code="513323211" />
+    <street name="半扇门乡" code="513323212" />
+    <street name="太平桥乡" code="513323213" />
+</county>
+<county name="九龙" code="513324">
+    <street name="呷尔镇" code="513324100" />
+    <street name="烟袋镇" code="513324101" />
+    <street name="汤古乡" code="513324200" />
+    <street name="斜卡乡" code="513324201" />
+    <street name="三岩龙乡" code="513324202" />
+    <street name="上团乡" code="513324203" />
+    <street name="八窝龙乡" code="513324204" />
+    <street name="乃渠乡" code="513324205" />
+    <street name="乌拉溪乡" code="513324206" />
+    <street name="魁多乡" code="513324208" />
+    <street name="子耳彝族乡" code="513324209" />
+    <street name="三垭彝族乡" code="513324210" />
+    <street name="俄尔彝族乡" code="513324211" />
+    <street name="小金彝族乡" code="513324212" />
+    <street name="朵洛彝族乡" code="513324213" />
+    <street name="踏卡彝族乡" code="513324214" />
+    <street name="湾坝彝族乡" code="513324215" />
+    <street name="洪坝乡" code="513324216" />
+</county>
+<county name="雅江" code="513325">
+    <street name="河口镇" code="513325100" />
+    <street name="呷拉乡" code="513325200" />
+    <street name="八角楼乡" code="513325201" />
+    <street name="普巴绒乡" code="513325202" />
+    <street name="祝桑乡" code="513325203" />
+    <street name="米龙乡" code="513325204" />
+    <street name="八衣绒乡" code="513325205" />
+    <street name="波斯河乡" code="513325206" />
+    <street name="恶古乡" code="513325207" />
+    <street name="牙衣河乡" code="513325208" />
+    <street name="西俄洛乡" code="513325209" />
+    <street name="麻郎错乡" code="513325210" />
+    <street name="德差乡" code="513325211" />
+    <street name="红龙乡" code="513325212" />
+    <street name="柯拉乡" code="513325213" />
+    <street name="瓦多乡" code="513325214" />
+    <street name="木绒乡" code="513325215" />
+</county>
+<county name="道孚" code="513326">
+    <street name="鲜水镇" code="513326100" />
+    <street name="八美镇" code="513326101" />
+    <street name="格西乡" code="513326200" />
+    <street name="麻孜乡" code="513326201" />
+    <street name="孔色乡" code="513326202" />
+    <street name="葛卡乡" code="513326203" />
+    <street name="亚卓乡" code="513326204" />
+    <street name="仲尼乡" code="513326205" />
+    <street name="红顶乡" code="513326206" />
+    <street name="扎拖乡" code="513326207" />
+    <street name="下拖乡" code="513326208" />
+    <street name="瓦日乡" code="513326209" />
+    <street name="木茹乡" code="513326210" />
+    <street name="甲斯孔乡" code="513326211" />
+    <street name="甲宗乡" code="513326212" />
+    <street name="七美乡" code="513326213" />
+    <street name="银恩乡" code="513326214" />
+    <street name="维它乡" code="513326215" />
+    <street name="龙灯乡" code="513326216" />
+    <street name="协德乡" code="513326217" />
+    <street name="色卡乡" code="513326218" />
+    <street name="沙冲乡" code="513326219" />
+</county>
+<county name="炉霍" code="513327">
+    <street name="新都镇" code="513327100" />
+    <street name="泥巴乡" code="513327200" />
+    <street name="雅德乡" code="513327201" />
+    <street name="洛秋乡" code="513327202" />
+    <street name="斯木乡" code="513327203" />
+    <street name="宜木乡" code="513327204" />
+    <street name="仁达乡" code="513327205" />
+    <street name="朱倭乡" code="513327206" />
+    <street name="旦都乡" code="513327207" />
+    <street name="充古乡" code="513327208" />
+    <street name="更知乡" code="513327209" />
+    <street name="卡娘乡" code="513327210" />
+    <street name="宗塔乡" code="513327211" />
+    <street name="宗麦乡" code="513327212" />
+    <street name="上罗柯马乡" code="513327213" />
+    <street name="下罗柯马乡" code="513327214" />
+</county>
+<county name="甘孜" code="513328">
+    <street name="甘孜镇" code="513328100" />
+    <street name="呷拉乡" code="513328200" />
+    <street name="色西底乡" code="513328201" />
+    <street name="南多乡" code="513328202" />
+    <street name="生康乡" code="513328203" />
+    <street name="贡隆乡" code="513328204" />
+    <street name="扎科乡" code="513328205" />
+    <street name="来马乡" code="513328206" />
+    <street name="昔色乡" code="513328207" />
+    <street name="卡攻乡" code="513328208" />
+    <street name="仁果乡" code="513328209" />
+    <street name="拖坝乡" code="513328210" />
+    <street name="斯俄乡" code="513328211" />
+    <street name="庭卡乡" code="513328212" />
+    <street name="下雄乡" code="513328213" />
+    <street name="四通达乡" code="513328214" />
+    <street name="夺多乡" code="513328215" />
+    <street name="泥柯乡" code="513328216" />
+    <street name="茶扎乡" code="513328217" />
+    <street name="大德乡" code="513328218" />
+    <street name="卡龙乡" code="513328219" />
+    <street name="查龙乡" code="513328220" />
+</county>
+<county name="新龙" code="513329">
+    <street name="如龙镇" code="513329100" />
+    <street name="沙堆乡" code="513329200" />
+    <street name="乐安乡" code="513329201" />
+    <street name="大盖乡" code="513329202" />
+    <street name="绕鲁乡" code="513329203" />
+    <street name="色威乡" code="513329204" />
+    <street name="甲拉西乡" code="513329205" />
+    <street name="拉日马乡" code="513329206" />
+    <street name="博美乡" code="513329207" />
+    <street name="尤拉西乡" code="513329208" />
+    <street name="子拖西乡" code="513329209" />
+    <street name="和平乡" code="513329210" />
+    <street name="洛古乡" code="513329211" />
+    <street name="雄龙西乡" code="513329212" />
+    <street name="麻日乡" code="513329213" />
+    <street name="通宵乡" code="513329214" />
+    <street name="友谊乡" code="513329215" />
+    <street name="皮擦乡" code="513329216" />
+    <street name="银多乡" code="513329217" />
+</county>
+<county name="德格" code="513330">
+    <street name="更庆镇" code="513330100" />
+    <street name="达马乡" code="513330200" />
+    <street name="普马乡" code="513330201" />
+    <street name="岳巴乡" code="513330202" />
+    <street name="八帮乡" code="513330203" />
+    <street name="龚垭乡" code="513330204" />
+    <street name="白垭乡" code="513330205" />
+    <street name="汪布顶乡" code="513330206" />
+    <street name="柯洛洞乡" code="513330207" />
+    <street name="卡松渡乡" code="513330208" />
+    <street name="俄南乡" code="513330209" />
+    <street name="竹庆乡" code="513330210" />
+    <street name="俄支乡" code="513330211" />
+    <street name="马尼干戈乡" code="513330212" />
+    <street name="玉隆乡" code="513330213" />
+    <street name="错阿乡" code="513330214" />
+    <street name="中扎科乡" code="513330215" />
+    <street name="然姑乡" code="513330216" />
+    <street name="窝公乡" code="513330217" />
+    <street name="温拖乡" code="513330218" />
+    <street name="年古乡" code="513330219" />
+    <street name="浪多乡" code="513330220" />
+    <street name="阿须乡" code="513330221" />
+    <street name="打滚乡" code="513330222" />
+    <street name="亚丁乡" code="513330223" />
+    <street name="所巴乡" code="513330224" />
+</county>
+<county name="白玉" code="513331">
+    <street name="建设镇" code="513331100" />
+    <street name="阿察镇" code="513331101" />
+    <street name="金沙乡" code="513331200" />
+    <street name="绒盖乡" code="513331201" />
+    <street name="章都乡" code="513331202" />
+    <street name="麻绒乡" code="513331203" />
+    <street name="河坡乡" code="513331204" />
+    <street name="热加乡" code="513331205" />
+    <street name="登龙乡" code="513331206" />
+    <street name="赠科乡" code="513331207" />
+    <street name="麻邛乡" code="513331209" />
+    <street name="辽西乡" code="513331210" />
+    <street name="纳塔乡" code="513331211" />
+    <street name="安孜乡" code="513331212" />
+    <street name="盖玉乡" code="513331213" />
+    <street name="沙马乡" code="513331214" />
+    <street name="山岩乡" code="513331215" />
+</county>
+<county name="石渠" code="513332">
+    <street name="尼呷镇" code="513332100" />
+    <street name="洛须镇" code="513332101" />
+    <street name="色须镇" code="513332102" />
+    <street name="真达乡" code="513332200" />
+    <street name="奔达乡" code="513332201" />
+    <street name="正科乡" code="513332202" />
+    <street name="麻呷乡" code="513332203" />
+    <street name="德荣马乡" code="513332204" />
+    <street name="长沙贡马乡" code="513332206" />
+    <street name="呷衣乡" code="513332207" />
+    <street name="格孟乡" code="513332208" />
+    <street name="蒙宜乡" code="513332209" />
+    <street name="新荣乡" code="513332210" />
+    <street name="宜牛乡" code="513332211" />
+    <street name="虾扎乡" code="513332212" />
+    <street name="起坞乡" code="513332213" />
+    <street name="阿日扎乡" code="513332214" />
+    <street name="长须贡马乡" code="513332215" />
+    <street name="长沙干马乡" code="513332216" />
+    <street name="长须干马乡" code="513332217" />
+    <street name="温波乡" code="513332218" />
+    <street name="瓦须乡" code="513332219" />
+</county>
+<county name="色达" code="513333">
+    <street name="色柯镇" code="513333100" />
+    <street name="翁达镇" code="513333101" />
+    <street name="泥朵乡" code="513333200" />
+    <street name="克戈乡" code="513333201" />
+    <street name="然充乡" code="513333202" />
+    <street name="康勒乡" code="513333203" />
+    <street name="大章乡" code="513333204" />
+    <street name="大则乡" code="513333205" />
+    <street name="亚龙乡" code="513333206" />
+    <street name="塔子乡" code="513333207" />
+    <street name="年龙乡" code="513333208" />
+    <street name="洛若乡" code="513333209" />
+    <street name="霍西乡" code="513333210" />
+    <street name="旭日乡" code="513333211" />
+    <street name="杨各乡" code="513333212" />
+    <street name="甲学乡" code="513333213" />
+    <street name="歌乐沱乡" code="513333214" />
+</county>
+<county name="理塘" code="513334">
+    <street name="高城镇" code="513334100" />
+    <street name="君坝乡" code="513334200" />
+    <street name="哈依乡" code="513334201" />
+    <street name="觉吾乡" code="513334202" />
+    <street name="莫坝乡" code="513334203" />
+    <street name="亚火乡" code="513334204" />
+    <street name="绒坝乡" code="513334205" />
+    <street name="呷柯乡" code="513334206" />
+    <street name="奔戈乡" code="513334207" />
+    <street name="村戈乡" code="513334208" />
+    <street name="禾尼乡" code="513334209" />
+    <street name="曲登乡" code="513334210" />
+    <street name="喇嘛垭乡" code="513334211" />
+    <street name="章纳乡" code="513334212" />
+    <street name="上木拉乡" code="513334213" />
+    <street name="下木拉乡" code="513334214" />
+    <street name="中木拉乡" code="513334215" />
+    <street name="雄坝乡" code="513334216" />
+    <street name="甲洼乡" code="513334217" />
+    <street name="藏坝乡" code="513334218" />
+    <street name="格木乡" code="513334219" />
+    <street name="拉波乡" code="513334220" />
+    <street name="麦洼乡" code="513334221" />
+    <street name="德巫乡" code="513334222" />
+</county>
+<county name="巴塘" code="513335">
+    <street name="夏邛镇" code="513335100" />
+    <street name="拉哇乡" code="513335200" />
+    <street name="党巴乡" code="513335201" />
+    <street name="竹巴龙乡" code="513335202" />
+    <street name="中心绒乡" code="513335203" />
+    <street name="苏哇龙乡" code="513335204" />
+    <street name="昌波乡" code="513335205" />
+    <street name="地巫乡" code="513335206" />
+    <street name="中咱乡" code="513335207" />
+    <street name="亚日贡乡" code="513335208" />
+    <street name="波密乡" code="513335209" />
+    <street name="莫多乡" code="513335210" />
+    <street name="松多乡" code="513335211" />
+    <street name="波戈溪乡" code="513335212" />
+    <street name="甲英乡" code="513335213" />
+    <street name="措拉乡" code="513335214" />
+    <street name="茶洛乡" code="513335215" />
+    <street name="列衣乡" code="513335216" />
+    <street name="德达乡" code="513335217" />
+</county>
+<county name="乡城" code="513336">
+    <street name="香巴拉镇" code="513336100" />
+    <street name="尼斯乡" code="513336200" />
+    <street name="沙贡乡" code="513336201" />
+    <street name="水洼乡" code="513336202" />
+    <street name="青德乡" code="513336203" />
+    <street name="青麦乡" code="513336204" />
+    <street name="然乌乡" code="513336205" />
+    <street name="洞松乡" code="513336206" />
+    <street name="热打乡" code="513336207" />
+    <street name="定波乡" code="513336208" />
+    <street name="正斗乡" code="513336209" />
+    <street name="白依乡" code="513336210" />
+</county>
+<county name="稻城" code="513337">
+    <street name="金珠镇" code="513337100" />
+    <street name="香格里拉镇" code="513337101" />
+    <street name="桑堆乡" code="513337200" />
+    <street name="省母乡" code="513337201" />
+    <street name="傍河乡" code="513337202" />
+    <street name="色拉乡" code="513337203" />
+    <street name="巨龙乡" code="513337204" />
+    <street name="邓波乡" code="513337205" />
+    <street name="木拉乡" code="513337206" />
+    <street name="赤土乡" code="513337207" />
+    <street name="蒙自乡" code="513337209" />
+    <street name="各卡乡" code="513337210" />
+    <street name="吉呷乡" code="513337211" />
+    <street name="俄牙同乡" code="513337212" />
+</county>
+<county name="得荣" code="513338">
+    <street name="松麦镇" code="513338100" />
+    <street name="瓦卡镇" code="513338101" />
+    <street name="斯闸乡" code="513338200" />
+    <street name="徐龙乡" code="513338201" />
+    <street name="日龙乡" code="513338202" />
+    <street name="曲雅贡乡" code="513338203" />
+    <street name="奔都乡" code="513338204" />
+    <street name="八日乡" code="513338205" />
+    <street name="古学乡" code="513338206" />
+    <street name="贡波乡" code="513338208" />
+    <street name="白松乡" code="513338209" />
+    <street name="茨巫乡" code="513338210" />
+</county>
+</city>
+</address>

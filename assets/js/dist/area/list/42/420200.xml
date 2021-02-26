@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="黄石" code="420200">
+<county name="黄石港" code="420202">
+    <street name="花湖街道" code="420202070" />
+    <street name="江北管理区" code="420202400" />
+    <street name="黄石港区社区工作管理委员会" code="420202401" />
+</county>
+<county name="西塞山" code="420203">
+    <street name="冶钢农场" code="420203400" />
+    <street name="社区工作管理委员会" code="420203401" />
+    <street name="西塞山工业园区管委会" code="420203402" />
+</county>
+<county name="下陆" code="420204">
+    <street name="团城山街道" code="420204070" />
+    <street name="社区事务管理委员会" code="420204400" />
+    <street name="长乐山工业园管理委员会" code="420204401" />
+    <street name="东方山风景区" code="420204402" />
+</county>
+<county name="铁山" code="420205">
+    <street name="区直辖村模拟镇" code="420205198" />
+</county>
+<county name="阳新" code="420222">
+    <street name="兴国镇" code="420222100" />
+    <street name="富池镇" code="420222101" />
+    <street name="黄颡口镇" code="420222102" />
+    <street name="韦源口镇" code="420222103" />
+    <street name="太子镇" code="420222104" />
+    <street name="大王镇" code="420222105" />
+    <street name="陶港镇" code="420222106" />
+    <street name="白沙镇" code="420222107" />
+    <street name="浮屠镇" code="420222108" />
+    <street name="三溪镇" code="420222109" />
+    <street name="龙港镇" code="420222110" />
+    <street name="洋港镇" code="420222111" />
+    <street name="排市镇" code="420222112" />
+    <street name="木港镇" code="420222113" />
+    <street name="枫林镇" code="420222114" />
+    <street name="王英镇" code="420222115" />
+    <street name="综合农场" code="420222450" />
+    <street name="率洲农场" code="420222451" />
+    <street name="半壁山农场" code="420222452" />
+    <street name="荆头山农场" code="420222453" />
+    <street name="原种场" code="420222454" />
+    <street name="金海开发区" code="420222455" />
+</county>
+<county name="大冶" code="420281">
+    <street name="东岳路街道" code="420281001" />
+    <street name="东风路街道" code="420281002" />
+    <street name="金湖街道" code="420281003" />
+    <street name="罗家桥街道" code="420281004" />
+    <street name="金山街道" code="420281070" />
+    <street name="金牛镇" code="420281100" />
+    <street name="保安镇" code="420281101" />
+    <street name="灵乡镇" code="420281102" />
+    <street name="金山店镇" code="420281103" />
+    <street name="还地桥镇" code="420281104" />
+    <street name="殷祖镇" code="420281105" />
+    <street name="刘仁八镇" code="420281107" />
+    <street name="陈贵镇" code="420281108" />
+    <street name="大箕铺镇" code="420281109" />
+    <street name="汪仁镇" code="420281170" />
+    <street name="茗山乡" code="420281200" />
+    <street name="东风农场管理区" code="420281401" />
+    <street name="四顾闸管理处" code="420281402" />
+</county>
+</city>
+</address>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="拉萨" code="540100">
+<county name="城关" code="540102">
+    <street name="八廓街道" code="540102002" />
+    <street name="吉日街道" code="540102003" />
+    <street name="吉崩岗街道" code="540102004" />
+    <street name="扎细街道" code="540102005" />
+    <street name="公德林街道" code="540102006" />
+    <street name="嘎玛贡桑街道" code="540102007" />
+    <street name="两岛街道" code="540102008" />
+    <street name="金珠西路街道" code="540102009" />
+    <street name="蔡公堂乡" code="540102200" />
+    <street name="纳金乡" code="540102201" />
+    <street name="娘热乡" code="540102202" />
+    <street name="夺底乡" code="540102203" />
+</county>
+<county name="林周" code="540121">
+    <street name="甘丹曲果镇" code="540121100" />
+    <street name="春堆乡" code="540121200" />
+    <street name="松盘乡" code="540121201" />
+    <street name="强嘎乡" code="540121202" />
+    <street name="卡孜乡" code="540121203" />
+    <street name="边交林乡" code="540121204" />
+    <street name="江热夏乡" code="540121205" />
+    <street name="阿朗乡" code="540121206" />
+    <street name="唐古乡" code="540121207" />
+    <street name="旁多乡" code="540121208" />
+</county>
+<county name="当雄" code="540122">
+    <street name="当曲卡镇" code="540122100" />
+    <street name="羊八井镇" code="540122101" />
+    <street name="格达乡" code="540122200" />
+    <street name="宁中乡" code="540122201" />
+    <street name="公塘乡" code="540122202" />
+    <street name="龙仁乡" code="540122203" />
+    <street name="乌玛塘乡" code="540122204" />
+    <street name="纳木湖乡" code="540122205" />
+</county>
+<county name="尼木" code="540123">
+    <street name="塔荣镇" code="540123100" />
+    <street name="麻江乡" code="540123200" />
+    <street name="普松乡" code="540123201" />
+    <street name="卡如乡" code="540123202" />
+    <street name="尼木乡" code="540123203" />
+    <street name="续迈乡" code="540123204" />
+    <street name="帕古乡" code="540123205" />
+    <street name="吞巴乡" code="540123206" />
+</county>
+<county name="曲水" code="540124">
+    <street name="曲水镇" code="540124100" />
+    <street name="达嘎乡" code="540124200" />
+    <street name="才纳乡" code="540124201" />
+    <street name="南木乡" code="540124202" />
+    <street name="聂当乡" code="540124203" />
+    <street name="茶巴拉乡" code="540124204" />
+</county>
+<county name="堆龙德庆" code="540125">
+    <street name="东嘎镇" code="540125100" />
+    <street name="乃琼镇" code="540125101" />
+    <street name="羊达乡" code="540125200" />
+    <street name="古荣乡" code="540125201" />
+    <street name="柳梧乡" code="540125202" />
+    <street name="马乡" code="540125203" />
+    <street name="德庆乡" code="540125204" />
+</county>
+<county name="达孜" code="540126">
+    <street name="德庆镇" code="540126100" />
+    <street name="塔杰乡" code="540126200" />
+    <street name="章多乡" code="540126201" />
+    <street name="唐嘎乡" code="540126202" />
+    <street name="雪乡" code="540126203" />
+    <street name="帮堆乡" code="540126204" />
+</county>
+<county name="墨竹工卡" code="540127">
+    <street name="工卡镇" code="540127100" />
+    <street name="扎雪乡" code="540127200" />
+    <street name="门巴乡" code="540127201" />
+    <street name="扎西岗乡" code="540127202" />
+    <street name="日多乡" code="540127203" />
+    <street name="尼玛江热乡" code="540127204" />
+    <street name="甲玛乡" code="540127205" />
+    <street name="唐加乡" code="540127206" />
+</county>
+</city>
+</address>

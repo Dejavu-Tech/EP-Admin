@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="运城" code="140800">
+<county name="盐湖" code="140802">
+    <street name="中城街道" code="140802001" />
+    <street name="东城街道" code="140802002" />
+    <street name="西城街道" code="140802003" />
+    <street name="南城街道" code="140802004" />
+    <street name="北城街道" code="140802005" />
+    <street name="安邑街道" code="140802006" />
+    <street name="大渠街道" code="140802007" />
+    <street name="姚孟街道" code="140802008" />
+    <street name="解州镇" code="140802100" />
+    <street name="龙居镇" code="140802101" />
+    <street name="北相镇" code="140802102" />
+    <street name="泓芝驿镇" code="140802103" />
+    <street name="三路里镇" code="140802104" />
+    <street name="陶村镇" code="140802105" />
+    <street name="东郭镇" code="140802106" />
+    <street name="席张乡" code="140802200" />
+    <street name="金井乡" code="140802201" />
+    <street name="王范乡" code="140802202" />
+    <street name="冯村乡" code="140802203" />
+    <street name="上郭乡" code="140802204" />
+    <street name="上王乡" code="140802205" />
+    <street name="禹都经济技术开发区" code="140802400" />
+    <street name="运城市空港经济开发区" code="140802401" />
+</county>
+<county name="临猗" code="140821">
+    <street name="猗氏镇" code="140821100" />
+    <street name="嵋阳镇" code="140821101" />
+    <street name="临晋镇" code="140821102" />
+    <street name="七级镇" code="140821103" />
+    <street name="东张镇" code="140821104" />
+    <street name="孙吉镇" code="140821105" />
+    <street name="三管镇" code="140821106" />
+    <street name="牛杜镇" code="140821107" />
+    <street name="耽子镇" code="140821108" />
+    <street name="楚侯乡" code="140821200" />
+    <street name="庙上乡" code="140821201" />
+    <street name="角杯乡" code="140821202" />
+    <street name="北辛乡" code="140821203" />
+    <street name="北景乡" code="140821204" />
+    <street name="卓里工贸区" code="140821400" />
+    <street name="闫家庄工贸区" code="140821401" />
+</county>
+<county name="万荣" code="140822">
+    <street name="解店镇" code="140822100" />
+    <street name="通化镇" code="140822101" />
+    <street name="汉薛镇" code="140822102" />
+    <street name="荣河镇" code="140822103" />
+    <street name="万泉乡" code="140822200" />
+    <street name="里望乡" code="140822201" />
+    <street name="西村乡" code="140822202" />
+    <street name="南张乡" code="140822203" />
+    <street name="高村乡" code="140822204" />
+    <street name="皇甫乡" code="140822205" />
+    <street name="贾村乡" code="140822206" />
+    <street name="王显乡" code="140822207" />
+    <street name="光华乡" code="140822208" />
+    <street name="裴庄乡" code="140822209" />
+</county>
+<county name="闻喜" code="140823">
+    <street name="桐城镇" code="140823100" />
+    <street name="郭家庄镇" code="140823101" />
+    <street name="畖底镇" code="140823102" />
+    <street name="薛店镇" code="140823103" />
+    <street name="东镇镇" code="140823104" />
+    <street name="礼元镇" code="140823105" />
+    <street name="河底镇" code="140823106" />
+    <street name="神柏乡" code="140823200" />
+    <street name="阳隅乡" code="140823201" />
+    <street name="侯村乡" code="140823202" />
+    <street name="裴社乡" code="140823203" />
+    <street name="后宫乡" code="140823204" />
+    <street name="石门乡" code="140823205" />
+</county>
+<county name="稷山" code="140824">
+    <street name="稷峰镇" code="140824100" />
+    <street name="西社镇" code="140824101" />
+    <street name="化峪镇" code="140824102" />
+    <street name="翟店镇" code="140824103" />
+    <street name="清河镇" code="140824104" />
+    <street name="蔡村乡" code="140824200" />
+    <street name="太阳乡" code="140824201" />
+</county>
+<county name="新绛" code="140825">
+    <street name="龙兴镇" code="140825100" />
+    <street name="三泉镇" code="140825101" />
+    <street name="泽掌镇" code="140825102" />
+    <street name="北张镇" code="140825103" />
+    <street name="古交镇" code="140825104" />
+    <street name="万安镇" code="140825105" />
+    <street name="阳王镇" code="140825106" />
+    <street name="泉掌镇" code="140825107" />
+    <street name="横桥乡" code="140825200" />
+    <street name="社区办" code="140825400" />
+    <street name="新绛县煤化园区管委会" code="140825498" />
+</county>
+<county name="绛县" code="140826">
+    <street name="古绛镇" code="140826100" />
+    <street name="横水镇" code="140826101" />
+    <street name="陈村镇" code="140826102" />
+    <street name="卫庄镇" code="140826103" />
+    <street name="磨里镇" code="140826104" />
+    <street name="南樊镇" code="140826105" />
+    <street name="安峪镇" code="140826106" />
+    <street name="大交镇" code="140826107" />
+    <street name="郝庄乡" code="140826200" />
+    <street name="冷口乡" code="140826201" />
+    <street name="山西绛县经济开发区" code="140826400" />
+</county>
+<county name="垣曲" code="140827">
+    <street name="新城镇" code="140827100" />
+    <street name="历山镇" code="140827101" />
+    <street name="古城镇" code="140827102" />
+    <street name="王茅镇" code="140827103" />
+    <street name="毛家湾镇" code="140827104" />
+    <street name="蒲掌乡" code="140827200" />
+    <street name="英言乡" code="140827201" />
+    <street name="解峪乡" code="140827202" />
+    <street name="华峰乡" code="140827203" />
+    <street name="长直乡" code="140827204" />
+    <street name="皋落乡" code="140827205" />
+</county>
+<county name="夏县" code="140828">
+    <street name="瑶峰镇" code="140828100" />
+    <street name="庙前镇" code="140828101" />
+    <street name="裴介镇" code="140828102" />
+    <street name="水头镇" code="140828103" />
+    <street name="埝掌镇" code="140828104" />
+    <street name="泗交镇" code="140828105" />
+    <street name="尉郭乡" code="140828200" />
+    <street name="禹王乡" code="140828201" />
+    <street name="胡张乡" code="140828202" />
+    <street name="南大里乡" code="140828203" />
+    <street name="祁家河乡" code="140828204" />
+</county>
+<county name="平陆" code="140829">
+    <street name="圣人涧镇" code="140829100" />
+    <street name="常乐镇" code="140829101" />
+    <street name="张店镇" code="140829102" />
+    <street name="张村镇" code="140829103" />
+    <street name="曹川镇" code="140829104" />
+    <street name="三门镇" code="140829105" />
+    <street name="洪池乡" code="140829200" />
+    <street name="杜马乡" code="140829201" />
+    <street name="部官乡" code="140829202" />
+    <street name="坡底乡" code="140829203" />
+</county>
+<county name="芮城" code="140830">
+    <street name="古魏镇" code="140830100" />
+    <street name="风陵渡镇" code="140830101" />
+    <street name="陌南镇" code="140830102" />
+    <street name="西陌镇" code="140830103" />
+    <street name="永乐镇" code="140830104" />
+    <street name="大王镇" code="140830105" />
+    <street name="阳城镇" code="140830106" />
+    <street name="东垆乡" code="140830200" />
+    <street name="南卫乡" code="140830201" />
+    <street name="学张乡" code="140830202" />
+    <street name="风陵渡经济开发区" code="140830400" />
+</county>
+<county name="永济" code="140881">
+    <street name="城西街道" code="140881001" />
+    <street name="城北街道" code="140881002" />
+    <street name="城东街道" code="140881003" />
+    <street name="虞乡镇" code="140881100" />
+    <street name="卿头镇" code="140881101" />
+    <street name="开张镇" code="140881102" />
+    <street name="栲栳镇" code="140881103" />
+    <street name="蒲州镇" code="140881104" />
+    <street name="韩阳镇" code="140881105" />
+    <street name="张营镇" code="140881106" />
+    <street name="伍姓湖农场" code="140881400" />
+    <street name="虞乡农场" code="140881401" />
+    <street name="董村农场" code="140881402" />
+</county>
+<county name="河津" code="140882">
+    <street name="城区街道" code="140882001" />
+    <street name="清涧街道" code="140882002" />
+    <street name="樊村镇" code="140882100" />
+    <street name="僧楼镇" code="140882101" />
+    <street name="小梁乡" code="140882200" />
+    <street name="柴家乡" code="140882201" />
+    <street name="赵家庄乡" code="140882202" />
+    <street name="下化乡" code="140882203" />
+    <street name="阳村乡" code="140882204" />
+    <street name="山西铝厂" code="140882450" />
+</county>
+</city>
+</address>

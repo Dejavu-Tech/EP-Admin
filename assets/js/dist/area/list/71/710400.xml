@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="台中" code="710400">
+<county name="大安" code="710451">
+</county>
+<county name="大肚" code="710444">
+</county>
+<county name="大甲" code="710449">
+</county>
+<county name="大里" code="710432">
+</county>
+<county name="大雅" code="710442">
+</county>
+<county name="东势" code="710438">
+</county>
+<county name="丰原" code="710435">
+</county>
+<county name="和平" code="710439">
+</county>
+<county name="后里" code="710436">
+</county>
+<county name="龙井" code="710446">
+</county>
+<county name="清水" code="710448">
+</county>
+<county name="沙鹿" code="710445">
+</county>
+<county name="神冈" code="710443">
+</county>
+<county name="石冈" code="710437">
+</county>
+<county name="太平" code="710431">
+</county>
+<county name="潭子" code="710441">
+</county>
+<county name="外埔" code="710450">
+</county>
+<county name="雾峰" code="710433">
+</county>
+<county name="梧栖" code="710447">
+</county>
+<county name="乌日" code="710434">
+</county>
+<county name="新社" code="710440">
+</county>
+<county name="北区" code="710405">
+</county>
+<county name="北屯" code="710406">
+</county>
+<county name="东区" code="710402">
+</county>
+<county name="南区" code="710403">
+</county>
+<county name="南屯" code="710408">
+</county>
+<county name="西区" code="710404">
+</county>
+<county name="西屯" code="710407">
+</county>
+<county name="中区" code="710401">
+</county>
+</city>
+</address>

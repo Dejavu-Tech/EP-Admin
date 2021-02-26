@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="娄底" code="431300">
+<county name="娄星" code="431302">
+    <street name="乐坪街道" code="431302001" />
+    <street name="花山街道" code="431302002" />
+    <street name="黄泥塘街道" code="431302003" />
+    <street name="长青街道" code="431302004" />
+    <street name="大科街道" code="431302005" />
+    <street name="涟滨街道" code="431302006" />
+    <street name="大埠桥街道" code="431302007" />
+    <street name="杉山镇" code="431302100" />
+    <street name="万宝镇" code="431302101" />
+    <street name="茶园镇" code="431302103" />
+    <street name="石井镇" code="431302104" />
+    <street name="百亩乡" code="431302202" />
+    <street name="小碧乡" code="431302203" />
+    <street name="双江乡" code="431302204" />
+</county>
+<county name="双峰" code="431321">
+    <street name="永丰镇" code="431321100" />
+    <street name="荷叶镇" code="431321101" />
+    <street name="井字镇" code="431321102" />
+    <street name="梓门桥镇" code="431321103" />
+    <street name="杏子铺镇" code="431321104" />
+    <street name="走马街镇" code="431321105" />
+    <street name="蛇形山镇" code="431321106" />
+    <street name="洪山殿镇" code="431321107" />
+    <street name="甘棠镇" code="431321108" />
+    <street name="三塘铺镇" code="431321109" />
+    <street name="青树坪镇" code="431321110" />
+    <street name="花门镇" code="431321111" />
+    <street name="锁石镇" code="431321112" />
+    <street name="石牛乡" code="431321200" />
+    <street name="沙塘乡" code="431321201" />
+    <street name="印塘乡" code="431321202" />
+    <street name="经济开发区" code="431321400" />
+</county>
+<county name="新化" code="431322">
+    <street name="上梅镇" code="431322100" />
+    <street name="石冲口镇" code="431322101" />
+    <street name="洋溪镇" code="431322102" />
+    <street name="槎溪镇" code="431322103" />
+    <street name="水车镇" code="431322104" />
+    <street name="文田镇" code="431322105" />
+    <street name="奉家镇" code="431322106" />
+    <street name="炉观镇" code="431322107" />
+    <street name="游家镇" code="431322108" />
+    <street name="西河镇" code="431322109" />
+    <street name="孟公镇" code="431322110" />
+    <street name="琅塘镇" code="431322111" />
+    <street name="白溪镇" code="431322112" />
+    <street name="圳上镇" code="431322113" />
+    <street name="吉庆镇" code="431322114" />
+    <street name="温塘镇" code="431322115" />
+    <street name="田坪镇" code="431322116" />
+    <street name="桑梓镇" code="431322117" />
+    <street name="曹家镇" code="431322118" />
+    <street name="科头乡" code="431322200" />
+    <street name="维山乡" code="431322201" />
+    <street name="天门乡" code="431322202" />
+    <street name="荣华乡" code="431322203" />
+    <street name="金凤乡" code="431322204" />
+    <street name="油溪乡" code="431322205" />
+    <street name="坐石乡" code="431322206" />
+    <street name="上渡办事处" code="431322450" />
+    <street name="大熊山国有林场" code="431322500" />
+    <street name="古台山国有林场" code="431322501" />
+</county>
+<county name="冷水江" code="431381">
+    <street name="冷水江街道" code="431381001" />
+    <street name="锡矿山街道" code="431381002" />
+    <street name="沙塘湾街道" code="431381003" />
+    <street name="布溪街道" code="431381004" />
+    <street name="禾青镇" code="431381100" />
+    <street name="岩口镇" code="431381101" />
+    <street name="渣渡镇" code="431381102" />
+    <street name="铎山镇" code="431381103" />
+    <street name="毛易镇" code="431381104" />
+    <street name="三尖镇" code="431381105" />
+    <street name="金竹山镇" code="431381106" />
+    <street name="潘桥乡" code="431381200" />
+    <street name="梓龙乡" code="431381203" />
+    <street name="矿山乡" code="431381204" />
+    <street name="中连乡" code="431381205" />
+    <street name="同兴乡" code="431381206" />
+</county>
+<county name="涟源" code="431382">
+    <street name="蓝田街道" code="431382001" />
+    <street name="六亩塘镇" code="431382100" />
+    <street name="石马山镇" code="431382101" />
+    <street name="安平镇" code="431382102" />
+    <street name="湄江镇" code="431382103" />
+    <street name="伏口镇" code="431382104" />
+    <street name="桥头河镇" code="431382105" />
+    <street name="七星街镇" code="431382106" />
+    <street name="杨市镇" code="431382107" />
+    <street name="枫坪镇" code="431382108" />
+    <street name="斗笠山镇" code="431382109" />
+    <street name="水洞底镇" code="431382110" />
+    <street name="白马镇" code="431382111" />
+    <street name="茅塘镇" code="431382112" />
+    <street name="荷塘镇" code="431382113" />
+    <street name="金石镇" code="431382114" />
+    <street name="龙塘镇" code="431382115" />
+    <street name="渡头塘镇" code="431382116" />
+    <street name="三甲乡" code="431382200" />
+    <street name="古塘乡" code="431382202" />
+</county>
+</city>
+</address>

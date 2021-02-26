@@ -1,0 +1,61 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var form_builder_1        = true;
+- var counter               = true;
+
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Form Builder
+                                      span
+                                        | 1
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Perk UI
+                                      li.breadcrumb-item Builders  
+                                      li.breadcrumb-item.active Form Builder 1
+                    // Container-fluid starts
+                    .form-builder
+                      .container-fluid
+                        .row
+                          .col-sm-12
+                            .card
+                              .card-header
+                                h5 Drag & Drop components
+                                span Copy the html code from View HTML tab 
+                              .card-body
+                                .row.clearfix.form-builder
+                                  .col-lg-12.col-xl-6
+                                    .form-builder-header-1
+                                      ul#formtabs.nav.nav-primary
+                                    form#components.form-horizontal.theme-form
+                                      fieldset
+                                        .tab-content
+                                  .col-lg-12.col-xl-6.lg-mt-col
+                                    .form-builder-header-1
+                                      h6 Drag Elements Here
+                                    #build
+                                      form#target.form-horizontal.drag-box
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

@@ -1,0 +1,59 @@
+// vertical menu start
+.vertical-menu-main
+  nav#main-nav
+    // Sample menu definition
+    ul#main-menu.sm.pixelstrap
+      li
+        .text-right.mobile-back
+          | Back
+          i.fa.fa-angle-right.pl-2(aria-hidden='true')
+      li
+        a(href='../ltr/index.html')
+          i.font-primary(data-feather='home')
+          |  Dashboard
+      li
+        a(href='#')
+          i.font-primary(data-feather='anchor')
+          |  Starter Kit
+        ul
+          li
+            a(href='#') Color Version
+            ul
+              li
+                a(href='index.html') Layout Light
+              li
+                a(href='layout-dark.html') Layout Dark
+          li
+            a(href='#') Sidebar
+            ul
+              li
+                a(href='compact.html') Compact Sidebar
+              li
+                a(href='sidebar-fixed.html') Sidebar Fixed
+              li
+                a.disabled(href='') Disable
+          li
+            a(href='#') Page Layout
+            ul
+              li
+                a(href='box-layout.html') Boxed
+              li
+                a(href='layout-rtl.html') RTL
+          li.active
+            a(href='#') Menu Options
+            ul
+              li
+                a.current(href='vertical.html') Vertical Menu
+              li
+                a(href='mega-menu.html') Mega Menu
+              li
+                a(href='fix-header.html') Fix header
+      li
+        a(href='http://support.pixelstrap.com/help-center', target='_blank')
+          i.font-primary(data-feather='headphones')
+          |  Raise Support
+      li
+        a(href='../document/index.html', target='_blank')
+          i.font-primary(data-feather='file-text')
+          |  Documentation
+// vertical menu ends

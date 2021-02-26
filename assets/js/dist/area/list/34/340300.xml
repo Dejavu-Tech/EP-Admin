@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="蚌埠" code="340300">
+<county name="龙子湖" code="340302">
+    <street name="东风街道" code="340302001" />
+    <street name="延安街道" code="340302002" />
+    <street name="治淮街道" code="340302003" />
+    <street name="东升街道" code="340302004" />
+    <street name="解放街道" code="340302005" />
+    <street name="曹山街道" code="340302006" />
+    <street name="长淮卫镇" code="340302100" />
+    <street name="李楼乡" code="340302200" />
+</county>
+<county name="蚌山" code="340303">
+    <street name="天桥街道" code="340303001" />
+    <street name="青年街道" code="340303002" />
+    <street name="纬二路街道" code="340303003" />
+    <street name="黄庄街道" code="340303004" />
+    <street name="宏业村街道" code="340303005" />
+    <street name="胜利街道" code="340303006" />
+    <street name="龙湖街道" code="340303007" />
+    <street name="湖滨社区行政事务管理中心" code="340303008" />
+    <street name="淮河社区行政事务管理中心" code="340303009" />
+    <street name="燕山乡" code="340303200" />
+    <street name="雪华乡" code="340303201" />
+</county>
+<county name="禹会" code="340304">
+    <street name="秦集镇" code="340304100" />
+    <street name="马城镇" code="340304101" />
+    <street name="禹会虚镇" code="340304198" />
+    <street name="长青乡" code="340304200" />
+    <street name="高新技术开发区" code="340304400" />
+    <street name="安徽怀远马城经济开发区" code="340304401" />
+</county>
+<county name="淮上" code="340311">
+    <street name="淮滨社区" code="340311001" />
+    <street name="小蚌埠镇" code="340311100" />
+    <street name="吴小街镇" code="340311101" />
+    <street name="曹老集镇" code="340311102" />
+    <street name="梅桥镇" code="340311103" />
+    <street name="蚌埠工业园区" code="340311400" />
+</county>
+<county name="怀远" code="340321">
+    <street name="城关镇" code="340321100" />
+    <street name="鲍集镇" code="340321101" />
+    <street name="龙亢镇" code="340321102" />
+    <street name="河溜镇" code="340321103" />
+    <street name="常坟镇" code="340321104" />
+    <street name="双桥集镇" code="340321106" />
+    <street name="魏庄镇" code="340321107" />
+    <street name="万福镇" code="340321108" />
+    <street name="唐集镇" code="340321109" />
+    <street name="淝南乡" code="340321200" />
+    <street name="淝河乡" code="340321201" />
+    <street name="褚集乡" code="340321202" />
+    <street name="陈集乡" code="340321203" />
+    <street name="古城乡" code="340321204" />
+    <street name="徐圩乡" code="340321205" />
+    <street name="兰桥乡" code="340321206" />
+    <street name="荆芡乡" code="340321207" />
+    <street name="找郢乡" code="340321208" />
+    <street name="龙亢农场" code="340321400" />
+    <street name="经济开发区" code="340321401" />
+</county>
+<county name="五河" code="340322">
+    <street name="城关镇" code="340322100" />
+    <street name="新集镇" code="340322101" />
+    <street name="沫河口镇" code="340322102" />
+    <street name="小溪镇" code="340322103" />
+    <street name="双忠庙镇" code="340322104" />
+    <street name="小圩镇" code="340322105" />
+    <street name="东刘集镇" code="340322106" />
+    <street name="头铺镇" code="340322107" />
+    <street name="大新镇" code="340322108" />
+    <street name="武桥镇" code="340322109" />
+    <street name="朱顶镇" code="340322110" />
+    <street name="浍南镇" code="340322111" />
+    <street name="申集镇" code="340322112" />
+    <street name="沱湖乡" code="340322200" />
+    <street name="临北回族乡" code="340322201" />
+    <street name="城南工业园" code="340322400" />
+    <street name="沫口精细化工园" code="340322401" />
+</county>
+<county name="固镇" code="340323">
+    <street name="城关镇" code="340323100" />
+    <street name="王庄镇" code="340323101" />
+    <street name="新马桥镇" code="340323102" />
+    <street name="连城镇" code="340323103" />
+    <street name="刘集镇" code="340323104" />
+    <street name="任桥镇" code="340323105" />
+    <street name="湖沟镇" code="340323106" />
+    <street name="濠城镇" code="340323107" />
+    <street name="石湖乡" code="340323200" />
+    <street name="杨庙乡" code="340323201" />
+    <street name="仲兴乡" code="340323202" />
+    <street name="固镇开发区" code="340323400" />
+</county>
+</city>
+</address>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="三门峡" code="411200">
+<county name="湖滨" code="411202">
+    <street name="湖滨街道" code="411202001" />
+    <street name="前进街道" code="411202002" />
+    <street name="车站街道" code="411202003" />
+    <street name="涧河街道" code="411202004" />
+    <street name="大安街道" code="411202005" />
+    <street name="会兴街道" code="411202006" />
+    <street name="崖底街道" code="411202007" />
+    <street name="交口乡" code="411202201" />
+    <street name="磁钟乡" code="411202202" />
+    <street name="高庙乡" code="411202203" />
+    <street name="河南三门峡经济开发区" code="411202560" />
+</county>
+<county name="渑池" code="411221">
+    <street name="城关镇" code="411221100" />
+    <street name="英豪镇" code="411221101" />
+    <street name="张村镇" code="411221102" />
+    <street name="洪阳镇" code="411221103" />
+    <street name="天池镇" code="411221104" />
+    <street name="仰韶镇" code="411221105" />
+    <street name="仁村乡" code="411221203" />
+    <street name="果园乡" code="411221206" />
+    <street name="陈村乡" code="411221207" />
+    <street name="坡头乡" code="411221208" />
+    <street name="段村乡" code="411221209" />
+    <street name="南村乡" code="411221210" />
+</county>
+<county name="陕州" code="411222">
+    <street name="大营镇" code="411222100" />
+    <street name="原店镇" code="411222101" />
+    <street name="西张村镇" code="411222102" />
+    <street name="观音堂镇" code="411222103" />
+    <street name="张汴乡" code="411222200" />
+    <street name="张湾乡" code="411222201" />
+    <street name="菜园乡" code="411222203" />
+    <street name="张茅乡" code="411222205" />
+    <street name="王家后乡" code="411222206" />
+    <street name="硖石乡" code="411222207" />
+    <street name="西李村乡" code="411222210" />
+    <street name="宫前乡" code="411222211" />
+    <street name="店子乡" code="411222212" />
+</county>
+<county name="卢氏" code="411224">
+    <street name="城关镇" code="411224100" />
+    <street name="杜关镇" code="411224101" />
+    <street name="五里川镇" code="411224102" />
+    <street name="官道口镇" code="411224103" />
+    <street name="朱阳关镇" code="411224104" />
+    <street name="官坡镇" code="411224105" />
+    <street name="范里镇" code="411224106" />
+    <street name="东明镇" code="411224107" />
+    <street name="双龙湾镇" code="411224108" />
+    <street name="文峪乡" code="411224200" />
+    <street name="横涧乡" code="411224201" />
+    <street name="双槐树乡" code="411224203" />
+    <street name="汤河乡" code="411224204" />
+    <street name="瓦窑沟乡" code="411224205" />
+    <street name="狮子坪乡" code="411224206" />
+    <street name="沙河乡" code="411224207" />
+    <street name="徐家湾乡" code="411224208" />
+    <street name="潘河乡" code="411224209" />
+    <street name="木桐乡" code="411224210" />
+</county>
+<county name="义马" code="411281">
+    <street name="千秋路街道" code="411281001" />
+    <street name="朝阳路街道" code="411281002" />
+    <street name="新义街街道" code="411281003" />
+    <street name="常村路街道" code="411281004" />
+    <street name="泰山路街道" code="411281005" />
+    <street name="新区街道" code="411281006" />
+    <street name="东区街道" code="411281007" />
+</county>
+<county name="灵宝" code="411282">
+    <street name="城关镇" code="411282100" />
+    <street name="尹庄镇" code="411282101" />
+    <street name="朱阳镇" code="411282102" />
+    <street name="阳平镇" code="411282103" />
+    <street name="故县镇" code="411282104" />
+    <street name="豫灵镇" code="411282105" />
+    <street name="大王镇" code="411282106" />
+    <street name="阳店镇" code="411282107" />
+    <street name="函谷关镇" code="411282108" />
+    <street name="焦村镇" code="411282109" />
+    <street name="川口乡" code="411282200" />
+    <street name="寺河乡" code="411282201" />
+    <street name="苏村乡" code="411282202" />
+    <street name="五亩乡" code="411282203" />
+    <street name="西阎乡" code="411282204" />
+    <street name="灵宝市园艺场" code="411282400" />
+    <street name="涧东区管委会" code="411282401" />
+    <street name="涧西区管委会" code="411282402" />
+</county>
+</city>
+</address>

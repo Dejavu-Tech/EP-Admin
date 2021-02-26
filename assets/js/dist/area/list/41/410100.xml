@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="郑州" code="410100">
+<county name="中原" code="410102">
+    <street name="林山寨街道" code="410102001" />
+    <street name="建设路街道" code="410102002" />
+    <street name="棉纺路街道" code="410102003" />
+    <street name="秦岭路街道" code="410102004" />
+    <street name="桐柏路街道" code="410102005" />
+    <street name="三官庙街道" code="410102006" />
+    <street name="绿东村街道" code="410102007" />
+    <street name="汝河路街道" code="410102008" />
+    <street name="航海西路街道" code="410102009" />
+    <street name="中原西路街道" code="410102010" />
+    <street name="西流湖街道" code="410102011" />
+    <street name="须水街道" code="410102012" />
+    <street name="石佛镇" code="410102160" />
+    <street name="沟赵乡" code="410102360" />
+    <street name="枫杨办事处" code="410102560" />
+    <street name="梧桐办事处" code="410102561" />
+    <street name="双桥办事处" code="410102562" />
+</county>
+<county name="二七" code="410103">
+    <street name="淮河路街道" code="410103001" />
+    <street name="解放路街道" code="410103002" />
+    <street name="铭功路街道" code="410103003" />
+    <street name="一马路街道" code="410103004" />
+    <street name="蜜蜂张街道" code="410103005" />
+    <street name="五里堡街道" code="410103006" />
+    <street name="大学路街道" code="410103007" />
+    <street name="建中街街道" code="410103008" />
+    <street name="福华街街道" code="410103009" />
+    <street name="德化街街道" code="410103010" />
+    <street name="嵩山路街道" code="410103011" />
+    <street name="京广路街道" code="410103012" />
+    <street name="长江路街道" code="410103013" />
+    <street name="马寨镇" code="410103100" />
+    <street name="侯寨乡" code="410103201" />
+</county>
+<county name="管城回族" code="410104">
+    <street name="北下街街道" code="410104001" />
+    <street name="西大街街道" code="410104002" />
+    <street name="南关街道" code="410104003" />
+    <street name="城东路街道" code="410104004" />
+    <street name="东大街街道" code="410104005" />
+    <street name="二里岗街道" code="410104006" />
+    <street name="陇海马路街道" code="410104007" />
+    <street name="紫荆山南路街道" code="410104008" />
+    <street name="航海东路街道" code="410104009" />
+    <street name="十八里河镇" code="410104100" />
+    <street name="南曹乡" code="410104201" />
+    <street name="圃田乡" code="410104202" />
+    <street name="经济开发区明湖街道" code="410104560" />
+    <street name="经济开发区潮河街道" code="410104561" />
+    <street name="京航街道" code="410104562" />
+    <street name="商都路街道" code="410104570" />
+</county>
+<county name="金水" code="410105">
+    <street name="经八路街道" code="410105001" />
+    <street name="花园路街道" code="410105002" />
+    <street name="人民路街道" code="410105003" />
+    <street name="杜岭街道" code="410105004" />
+    <street name="大石桥街道" code="410105005" />
+    <street name="南阳路街道" code="410105006" />
+    <street name="南阳新村街道" code="410105007" />
+    <street name="文化路街道" code="410105008" />
+    <street name="丰产路街道" code="410105009" />
+    <street name="东风路街道" code="410105010" />
+    <street name="北林路街道" code="410105011" />
+    <street name="未来路街道" code="410105012" />
+    <street name="凤凰台街道" code="410105013" />
+    <street name="龙子湖街道" code="410105014" />
+    <street name="祭城路街道" code="410105015" />
+    <street name="兴达路街道" code="410105016" />
+    <street name="国基路街道" code="410105017" />
+    <street name="杨金路街道" code="410105018" />
+    <street name="丰庆路街道" code="410105019" />
+    <street name="如意湖街道" code="410105560" />
+    <street name="博学路街道" code="410105561" />
+    <street name="龙湖街道" code="410105562" />
+    <street name="龙源路街道" code="410105563" />
+    <street name="金光路街道" code="410105564" />
+</county>
+<county name="上街" code="410106">
+    <street name="济源路街道" code="410106001" />
+    <street name="中心路街道" code="410106002" />
+    <street name="新安路街道" code="410106003" />
+    <street name="工业路街道" code="410106004" />
+    <street name="矿山街道" code="410106005" />
+    <street name="峡窝镇" code="410106100" />
+</county>
+<county name="惠济" code="410108">
+    <street name="新城街道" code="410108001" />
+    <street name="刘寨街道" code="410108002" />
+    <street name="老鸦陈街道" code="410108003" />
+    <street name="长兴路街道" code="410108004" />
+    <street name="迎宾路街道" code="410108005" />
+    <street name="大河路街道" code="410108006" />
+    <street name="花园口镇" code="410108100" />
+    <street name="古荥镇" code="410108101" />
+</county>
+<county name="中牟" code="410122">
+    <street name="青年路街道" code="410122001" />
+    <street name="东风路街道" code="410122002" />
+    <street name="广惠街街道" code="410122003" />
+    <street name="韩寺镇" code="410122101" />
+    <street name="官渡镇" code="410122102" />
+    <street name="狼城岗镇" code="410122103" />
+    <street name="万滩镇" code="410122104" />
+    <street name="白沙镇" code="410122105" />
+    <street name="郑庵镇" code="410122106" />
+    <street name="张庄镇" code="410122108" />
+    <street name="黄店镇" code="410122109" />
+    <street name="大孟镇" code="410122110" />
+    <street name="九龙镇" code="410122111" />
+    <street name="刘集镇" code="410122112" />
+    <street name="八岗镇" code="410122113" />
+    <street name="雁鸣湖镇" code="410122114" />
+    <street name="姚家镇" code="410122115" />
+    <street name="三官庙镇" code="410122116" />
+    <street name="刁家乡" code="410122208" />
+    <street name="前程办事处" code="410122563" />
+    <street name="祥云办事处" code="410122565" />
+    <street name="杨桥办事处" code="410122570" />
+    <street name="豫兴办事处" code="410122571" />
+    <street name="滨河办事处" code="410122580" />
+</county>
+<county name="巩义" code="410181">
+    <street name="新华路街道" code="410181001" />
+    <street name="杜甫路街道" code="410181002" />
+    <street name="永安路街道" code="410181003" />
+    <street name="孝义街道" code="410181004" />
+    <street name="紫荆路街道" code="410181005" />
+    <street name="米河镇" code="410181100" />
+    <street name="新中镇" code="410181101" />
+    <street name="小关镇" code="410181102" />
+    <street name="竹林镇" code="410181103" />
+    <street name="大峪沟镇" code="410181104" />
+    <street name="河洛镇" code="410181105" />
+    <street name="站街镇" code="410181106" />
+    <street name="康店镇" code="410181108" />
+    <street name="北山口镇" code="410181110" />
+    <street name="西村镇" code="410181111" />
+    <street name="芝田镇" code="410181112" />
+    <street name="回郭镇" code="410181113" />
+    <street name="鲁庄镇" code="410181114" />
+    <street name="夹津口镇" code="410181115" />
+    <street name="涉村镇" code="410181116" />
+</county>
+<county name="荥阳" code="410182">
+    <street name="索河街道" code="410182001" />
+    <street name="京城路街道" code="410182002" />
+    <street name="乔楼镇" code="410182101" />
+    <street name="豫龙镇" code="410182102" />
+    <street name="广武镇" code="410182103" />
+    <street name="王村镇" code="410182104" />
+    <street name="汜水镇" code="410182105" />
+    <street name="高山镇" code="410182106" />
+    <street name="刘河镇" code="410182108" />
+    <street name="崔庙镇" code="410182109" />
+    <street name="贾峪镇" code="410182110" />
+    <street name="城关乡" code="410182200" />
+    <street name="高村乡" code="410182201" />
+    <street name="金寨回族乡" code="410182204" />
+</county>
+<county name="新密" code="410183">
+    <street name="青屏街街道" code="410183001" />
+    <street name="新华路街道" code="410183002" />
+    <street name="西大街街道" code="410183003" />
+    <street name="城关镇" code="410183100" />
+    <street name="米村镇" code="410183101" />
+    <street name="牛店镇" code="410183102" />
+    <street name="平陌镇" code="410183103" />
+    <street name="超化镇" code="410183104" />
+    <street name="苟堂镇" code="410183105" />
+    <street name="大隗镇" code="410183106" />
+    <street name="刘寨镇" code="410183107" />
+    <street name="白寨镇" code="410183108" />
+    <street name="岳村镇" code="410183109" />
+    <street name="来集镇" code="410183110" />
+    <street name="曲梁镇" code="410183113" />
+    <street name="袁庄乡" code="410183200" />
+    <street name="矿区街道" code="410183400" />
+    <street name="尖山风景区管理委员会" code="410183401" />
+    <street name="郑州曲梁产业集聚区管理委员会" code="410183402" />
+</county>
+<county name="新郑" code="410184">
+    <street name="新建路街道" code="410184001" />
+    <street name="新华路街道" code="410184002" />
+    <street name="新烟街道" code="410184003" />
+    <street name="新村镇" code="410184101" />
+    <street name="辛店镇" code="410184102" />
+    <street name="观音寺镇" code="410184103" />
+    <street name="梨河镇" code="410184104" />
+    <street name="和庄镇" code="410184105" />
+    <street name="薛店镇" code="410184106" />
+    <street name="孟庄镇" code="410184107" />
+    <street name="郭店镇" code="410184108" />
+    <street name="龙湖镇" code="410184109" />
+    <street name="城关乡" code="410184200" />
+    <street name="八千乡" code="410184202" />
+    <street name="龙王乡" code="410184203" />
+    <street name="新港办事处" code="410184400" />
+    <street name="郑港办事处" code="410184401" />
+    <street name="具茨山国家级森林公园管理委员会" code="410184402" />
+    <street name="中心城区新区建设管理委员会" code="410184403" />
+    <street name="银河办事处" code="410184404" />
+</county>
+<county name="登封" code="410185">
+    <street name="嵩阳街道" code="410185001" />
+    <street name="少林街道" code="410185002" />
+    <street name="中岳街道" code="410185003" />
+    <street name="大金店镇" code="410185100" />
+    <street name="颖阳镇" code="410185101" />
+    <street name="卢店镇" code="410185102" />
+    <street name="告成镇" code="410185103" />
+    <street name="阳城区镇" code="410185104" />
+    <street name="大冶镇" code="410185105" />
+    <street name="宣化镇" code="410185106" />
+    <street name="徐庄镇" code="410185107" />
+    <street name="东华镇" code="410185108" />
+    <street name="白坪乡" code="410185202" />
+    <street name="君召乡" code="410185203" />
+    <street name="石道乡" code="410185204" />
+    <street name="唐庄乡" code="410185205" />
+    <street name="送表矿区" code="410185400" />
+</county>
+</city>
+</address>

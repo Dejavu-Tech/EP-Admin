@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="泰州" code="321200">
+<county name="海陵" code="321202">
+    <street name="城东街道" code="321202001" />
+    <street name="城西街道" code="321202002" />
+    <street name="城南街道" code="321202003" />
+    <street name="城中街道" code="321202004" />
+    <street name="城北街道" code="321202005" />
+    <street name="京泰路街道" code="321202007" />
+    <street name="红旗街道" code="321202050" />
+    <street name="凤凰街道" code="321202051" />
+    <street name="寺巷街道" code="321202052" />
+    <street name="明珠街道" code="321202053" />
+    <street name="九龙镇" code="321202100" />
+    <street name="罡杨镇" code="321202101" />
+    <street name="苏陈镇" code="321202102" />
+    <street name="城北物流园区" code="321202401" />
+    <street name="海陵工业园区" code="321202406" />
+    <street name="农业示范园区" code="321202407" />
+    <street name="火车站街区" code="321202408" />
+    <street name="医药城" code="321202451" />
+</county>
+<county name="高港" code="321203">
+    <street name="口岸街道" code="321203001" />
+    <street name="刁铺街道" code="321203002" />
+    <street name="许庄街道" code="321203003" />
+    <street name="沿江街道" code="321203050" />
+    <street name="永安洲镇" code="321203100" />
+    <street name="白马镇" code="321203101" />
+    <street name="胡庄镇" code="321203103" />
+    <street name="大泗镇" code="321203104" />
+    <street name="野徐镇" code="321203150" />
+    <street name="泰州市高港区科技创业园管理委员会" code="321203400" />
+</county>
+<county name="兴化" code="321281">
+    <street name="戴窑镇" code="321281100" />
+    <street name="合陈镇" code="321281101" />
+    <street name="永丰镇" code="321281102" />
+    <street name="新垛镇" code="321281103" />
+    <street name="安丰镇" code="321281104" />
+    <street name="海南镇" code="321281105" />
+    <street name="钓鱼镇" code="321281106" />
+    <street name="大邹镇" code="321281107" />
+    <street name="沙沟镇" code="321281108" />
+    <street name="中堡镇" code="321281109" />
+    <street name="李中镇" code="321281110" />
+    <street name="西郊镇" code="321281111" />
+    <street name="临城镇" code="321281112" />
+    <street name="垛田镇" code="321281113" />
+    <street name="竹泓镇" code="321281114" />
+    <street name="沈沦镇" code="321281115" />
+    <street name="大垛镇" code="321281116" />
+    <street name="荻垛镇" code="321281117" />
+    <street name="陶庄镇" code="321281118" />
+    <street name="昌荣镇" code="321281119" />
+    <street name="茅山镇" code="321281120" />
+    <street name="周庄镇" code="321281121" />
+    <street name="陈堡镇" code="321281122" />
+    <street name="戴南镇" code="321281123" />
+    <street name="张郭镇" code="321281124" />
+    <street name="昭阳镇" code="321281125" />
+    <street name="大营镇" code="321281126" />
+    <street name="下圩镇" code="321281127" />
+    <street name="城东镇" code="321281128" />
+    <street name="老圩乡" code="321281200" />
+    <street name="周奋乡" code="321281201" />
+    <street name="缸顾乡" code="321281202" />
+    <street name="西鲍乡" code="321281203" />
+    <street name="林湖乡" code="321281204" />
+    <street name="开发区" code="321281400" />
+    <street name="良种场" code="321281401" />
+</county>
+<county name="靖江" code="321282">
+    <street name="靖城街道" code="321282001" />
+    <street name="新桥镇" code="321282101" />
+    <street name="东兴镇" code="321282102" />
+    <street name="斜桥镇" code="321282103" />
+    <street name="西来镇" code="321282104" />
+    <street name="季市镇" code="321282105" />
+    <street name="孤山镇" code="321282106" />
+    <street name="生祠镇" code="321282108" />
+    <street name="马桥镇" code="321282109" />
+    <street name="城南办事处" code="321282401" />
+    <street name="新港城" code="321282402" />
+    <street name="城北园区" code="321282403" />
+    <street name="江阴园区" code="321282404" />
+    <street name="滨江新城" code="321282406" />
+</county>
+<county name="泰兴" code="321283">
+    <street name="济川街道" code="321283001" />
+    <street name="黄桥镇" code="321283100" />
+    <street name="分界镇" code="321283101" />
+    <street name="古溪镇" code="321283102" />
+    <street name="元竹镇" code="321283104" />
+    <street name="珊瑚镇" code="321283105" />
+    <street name="广陵镇" code="321283106" />
+    <street name="曲霞镇" code="321283108" />
+    <street name="张桥镇" code="321283109" />
+    <street name="河失镇" code="321283112" />
+    <street name="新街镇" code="321283113" />
+    <street name="姚王镇" code="321283114" />
+    <street name="宣堡镇" code="321283115" />
+    <street name="滨江镇" code="321283123" />
+    <street name="虹桥镇" code="321283124" />
+    <street name="根思乡" code="321283200" />
+    <street name="市农科所" code="321283401" />
+</county>
+<county name="姜堰" code="321284">
+    <street name="姜堰镇" code="321204100" />
+    <street name="溱潼镇" code="321204101" />
+    <street name="蒋垛镇" code="321204102" />
+    <street name="顾高镇" code="321204103" />
+    <street name="大伦镇" code="321204104" />
+    <street name="张甸镇" code="321204105" />
+    <street name="梁徐镇" code="321204107" />
+    <street name="桥头镇" code="321204109" />
+    <street name="淤溪镇" code="321204110" />
+    <street name="白米镇" code="321204111" />
+    <street name="娄庄镇" code="321204112" />
+    <street name="沈高镇" code="321204113" />
+    <street name="兴泰镇" code="321204114" />
+    <street name="俞垛镇" code="321204115" />
+    <street name="华港镇" code="321204116" />
+    <street name="开发区" code="321204400" />
+    <street name="溱湖风景区" code="321204401" />
+    <street name="林场" code="321204403" />
+    <street name="种猪场" code="321204404" />
+    <street name="林业站" code="321204405" />
+    <street name="渔业社" code="321204406" />
+</county>
+</city>
+</address>

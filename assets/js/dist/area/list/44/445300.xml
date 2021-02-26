@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="云浮" code="445300">
+<county name="云城" code="445302">
+    <street name="云城街道" code="445302001" />
+    <street name="高峰街道" code="445302002" />
+    <street name="河口街道" code="445302003" />
+    <street name="安塘街道" code="445302004" />
+    <street name="腰古镇" code="445302102" />
+    <street name="思劳镇" code="445302103" />
+    <street name="都杨镇" code="445302104" />
+</county>
+<county name="新兴" code="445321">
+    <street name="新城镇" code="445321100" />
+    <street name="车岗镇" code="445321101" />
+    <street name="水台镇" code="445321103" />
+    <street name="稔村镇" code="445321104" />
+    <street name="东成镇" code="445321105" />
+    <street name="太平镇" code="445321107" />
+    <street name="里洞镇" code="445321108" />
+    <street name="六祖镇" code="445321109" />
+    <street name="大江镇" code="445321110" />
+    <street name="天堂镇" code="445321112" />
+    <street name="河头镇" code="445321113" />
+    <street name="簕竹镇" code="445321114" />
+    <street name="广东省西江林业局良洞迳林场" code="445321501" />
+    <street name="云浮市国有水台林场" code="445321502" />
+    <street name="国营新兴县岩头林场" code="445321503" />
+</county>
+<county name="郁南" code="445322">
+    <street name="都城镇" code="445322100" />
+    <street name="平台镇" code="445322101" />
+    <street name="桂圩镇" code="445322102" />
+    <street name="通门镇" code="445322104" />
+    <street name="建城镇" code="445322105" />
+    <street name="宝珠镇" code="445322106" />
+    <street name="大方镇" code="445322108" />
+    <street name="千官镇" code="445322110" />
+    <street name="大湾镇" code="445322111" />
+    <street name="河口镇" code="445322112" />
+    <street name="宋桂镇" code="445322113" />
+    <street name="东坝镇" code="445322114" />
+    <street name="连滩镇" code="445322115" />
+    <street name="历洞镇" code="445322116" />
+    <street name="南江口镇" code="445322117" />
+    <street name="西江林场" code="445322400" />
+    <street name="通门林场" code="445322401" />
+    <street name="大历林场" code="445322402" />
+    <street name="同乐林场" code="445322403" />
+</county>
+<county name="云安" code="445323">
+    <street name="六都镇" code="445323100" />
+    <street name="高村镇" code="445323101" />
+    <street name="白石镇" code="445323102" />
+    <street name="镇安镇" code="445323103" />
+    <street name="富林镇" code="445323104" />
+    <street name="南盛镇" code="445323107" />
+    <street name="前锋镇" code="445323108" />
+    <street name="石城镇" code="445323109" />
+    <street name="大云雾林场" code="445323400" />
+</county>
+<county name="罗定" code="445381">
+    <street name="罗城街道" code="445381001" />
+    <street name="素龙街道" code="445381002" />
+    <street name="附城街道" code="445381003" />
+    <street name="双东镇街道" code="445381004" />
+    <street name="罗镜镇" code="445381100" />
+    <street name="太平镇" code="445381101" />
+    <street name="分界镇" code="445381102" />
+    <street name="罗平镇" code="445381104" />
+    <street name="船步镇" code="445381105" />
+    <street name="满塘镇" code="445381106" />
+    <street name="苹塘镇" code="445381107" />
+    <street name="金鸡镇" code="445381108" />
+    <street name="围底镇" code="445381109" />
+    <street name="华石镇" code="445381110" />
+    <street name="林滨镇" code="445381111" />
+    <street name="黎少镇" code="445381113" />
+    <street name="生江镇" code="445381114" />
+    <street name="连州镇" code="445381115" />
+    <street name="泗纶镇" code="445381116" />
+    <street name="加益镇" code="445381118" />
+    <street name="龙湾镇" code="445381119" />
+    <street name="罗平农场" code="445381400" />
+</county>
+</city>
+</address>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="天水" code="620500">
+<county name="秦州" code="620502">
+    <street name="大城街道" code="620502001" />
+    <street name="七里墩街道" code="620502002" />
+    <street name="东关街道" code="620502003" />
+    <street name="中城街道" code="620502004" />
+    <street name="西关街道" code="620502005" />
+    <street name="石马坪街道" code="620502006" />
+    <street name="天水郡街道" code="620502007" />
+    <street name="玉泉镇" code="620502100" />
+    <street name="太京镇" code="620502101" />
+    <street name="藉口镇" code="620502102" />
+    <street name="皂郊镇" code="620502103" />
+    <street name="汪川镇" code="620502104" />
+    <street name="牡丹镇" code="620502105" />
+    <street name="关子镇" code="620502106" />
+    <street name="平南镇" code="620502107" />
+    <street name="天水镇" code="620502108" />
+    <street name="娘娘坝镇" code="620502109" />
+    <street name="中梁乡" code="620502200" />
+    <street name="秦岭乡" code="620502201" />
+    <street name="杨家寺乡" code="620502202" />
+    <street name="齐寿乡" code="620502203" />
+    <street name="华歧乡" code="620502204" />
+    <street name="大门乡" code="620502205" />
+</county>
+<county name="麦积" code="620503">
+    <street name="道北街道" code="620503001" />
+    <street name="北道埠街道" code="620503002" />
+    <street name="桥南街道" code="620503003" />
+    <street name="社棠镇" code="620503100" />
+    <street name="马跑泉镇" code="620503101" />
+    <street name="甘泉镇" code="620503102" />
+    <street name="渭南镇" code="620503103" />
+    <street name="东岔镇" code="620503104" />
+    <street name="花牛镇" code="620503105" />
+    <street name="中滩镇" code="620503106" />
+    <street name="新阳镇" code="620503107" />
+    <street name="元龙镇" code="620503108" />
+    <street name="伯阳镇" code="620503109" />
+    <street name="麦积镇" code="620503110" />
+    <street name="石佛镇" code="620503111" />
+    <street name="五龙乡" code="620503201" />
+    <street name="琥珀乡" code="620503202" />
+    <street name="党川乡" code="620503203" />
+    <street name="利桥乡" code="620503204" />
+    <street name="三岔乡" code="620503205" />
+    <street name="天水经济开发区" code="620503400" />
+    <street name="天水市高新技术工业园" code="620503401" />
+    <street name="天水市农业高新技术示范区" code="620503402" />
+    <street name="天水市麦积区三阳工业示范区" code="620503403" />
+    <street name="天水市麦积区廿铺工业示范区" code="620503404" />
+    <street name="天水市麦积区甘泉科技园区" code="620503405" />
+</county>
+<county name="清水" code="620521">
+    <street name="永清镇" code="620521100" />
+    <street name="红堡镇" code="620521101" />
+    <street name="白驼镇" code="620521102" />
+    <street name="金集镇" code="620521103" />
+    <street name="秦亭镇" code="620521104" />
+    <street name="山门镇" code="620521105" />
+    <street name="白沙乡" code="620521200" />
+    <street name="松树乡" code="620521201" />
+    <street name="王河乡" code="620521202" />
+    <street name="远门乡" code="620521203" />
+    <street name="土门乡" code="620521204" />
+    <street name="郭川乡" code="620521205" />
+    <street name="贾川乡" code="620521206" />
+    <street name="丰望乡" code="620521207" />
+    <street name="草川铺乡" code="620521208" />
+    <street name="陇东乡" code="620521209" />
+    <street name="黄门乡" code="620521210" />
+    <street name="新城乡" code="620521211" />
+    <street name="清水县科技养殖示范园区" code="620521400" />
+</county>
+<county name="秦安" code="620522">
+    <street name="兴国镇" code="620522100" />
+    <street name="莲花镇" code="620522101" />
+    <street name="西川镇" code="620522102" />
+    <street name="陇城镇" code="620522103" />
+    <street name="郭嘉镇" code="620522104" />
+    <street name="刘坪乡" code="620522200" />
+    <street name="五营乡" code="620522201" />
+    <street name="中山乡" code="620522202" />
+    <street name="叶堡乡" code="620522203" />
+    <street name="安伏乡" code="620522204" />
+    <street name="魏店乡" code="620522205" />
+    <street name="王铺乡" code="620522206" />
+    <street name="千户乡" code="620522207" />
+    <street name="王窑乡" code="620522208" />
+    <street name="云山乡" code="620522209" />
+    <street name="王尹乡" code="620522210" />
+    <street name="兴丰乡" code="620522211" />
+</county>
+<county name="甘谷" code="620523">
+    <street name="大像山镇" code="620523100" />
+    <street name="磐安镇" code="620523101" />
+    <street name="新兴镇" code="620523102" />
+    <street name="安远镇" code="620523103" />
+    <street name="六峰镇" code="620523104" />
+    <street name="金山乡" code="620523203" />
+    <street name="八里湾乡" code="620523204" />
+    <street name="西坪乡" code="620523205" />
+    <street name="大庄乡" code="620523206" />
+    <street name="大石乡" code="620523208" />
+    <street name="礼辛乡" code="620523209" />
+    <street name="谢家湾乡" code="620523211" />
+    <street name="武家河乡" code="620523213" />
+    <street name="古坡乡" code="620523214" />
+    <street name="白家湾乡" code="620523215" />
+</county>
+<county name="武山" code="620524">
+    <street name="城关镇" code="620524100" />
+    <street name="洛门镇" code="620524101" />
+    <street name="鸳鸯镇" code="620524102" />
+    <street name="滩歌镇" code="620524103" />
+    <street name="四门镇" code="620524104" />
+    <street name="马力镇" code="620524105" />
+    <street name="山丹乡" code="620524200" />
+    <street name="榆盘乡" code="620524201" />
+    <street name="咀头乡" code="620524202" />
+    <street name="桦林乡" code="620524203" />
+    <street name="高楼乡" code="620524204" />
+    <street name="杨河乡" code="620524205" />
+    <street name="沿安乡" code="620524206" />
+    <street name="温泉乡" code="620524207" />
+    <street name="龙台乡" code="620524208" />
+</county>
+<county name="张家川" code="620525">
+    <street name="张家川镇" code="620525100" />
+    <street name="龙山镇" code="620525101" />
+    <street name="恭门镇" code="620525102" />
+    <street name="刘堡乡" code="620525201" />
+    <street name="张棉乡" code="620525202" />
+    <street name="胡川乡" code="620525203" />
+    <street name="木河乡" code="620525204" />
+    <street name="大阳乡" code="620525206" />
+    <street name="川王乡" code="620525207" />
+    <street name="马关乡" code="620525208" />
+    <street name="连五乡" code="620525209" />
+    <street name="梁山乡" code="620525210" />
+    <street name="平安乡" code="620525213" />
+    <street name="阎家乡" code="620525214" />
+    <street name="马鹿乡" code="620525215" />
+</county>
+</city>
+</address>

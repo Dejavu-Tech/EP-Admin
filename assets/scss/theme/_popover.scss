@@ -1,0 +1,38 @@
+/**=====================
+     15. Popover CSS Start
+==========================**/
+.popover-header {
+  background-color: $dark-color;
+  color: $white;
+}
+.popover-main{
+  .btn-showcase{
+    a{
+      color: $white;
+    }
+    button{
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+.clockpicker-popover{
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  .popover-title{    
+    padding: 10px 14px;
+  }
+  .popover-content{
+      background-color: #ffffff;
+      padding: 15px;
+    }
+  button{
+    border-radius: 25px;
+    width: 100px;
+    margin: 0 auto 10px;
+  }
+}
+/**=====================
+     15. Popover CSS Ends
+==========================**/

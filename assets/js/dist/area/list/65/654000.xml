@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="伊犁" code="654000">
+<county name="伊宁市" code="654002">
+    <street name="萨依布依街道" code="654002001" />
+    <street name="墩买里街道" code="654002002" />
+    <street name="伊犁河路街道" code="654002003" />
+    <street name="喀赞其街道" code="654002004" />
+    <street name="都来提巴格街道" code="654002005" />
+    <street name="琼科瑞克街道" code="654002006" />
+    <street name="艾兰木巴格街道" code="654002007" />
+    <street name="解放路街道" code="654002008" />
+    <street name="伊宁市边境经济合作区管委会" code="654002009" />
+    <street name="巴彦岱镇" code="654002100" />
+    <street name="英也尔乡" code="654002200" />
+    <street name="汉宾乡" code="654002201" />
+    <street name="塔什科瑞克乡" code="654002202" />
+    <street name="喀尔墩乡" code="654002203" />
+    <street name="托格拉克乡" code="654002204" />
+    <street name="克伯克圩孜乡" code="654002205" />
+    <street name="达达木图乡" code="654002206" />
+    <street name="潘津乡" code="654002207" />
+    <street name="伊犁州农业良种繁育中心" code="654002400" />
+    <street name="伊宁市园艺场" code="654002401" />
+    <street name="伊犁州奶牛场" code="654002402" />
+</county>
+<county name="奎屯" code="654003">
+    <street name="团结路街道" code="654003001" />
+    <street name="乌东路街道" code="654003002" />
+    <street name="北京路街道" code="654003003" />
+    <street name="乌鲁木齐西路街道" code="654003004" />
+    <street name="火车站街道" code="654003005" />
+    <street name="开干齐乡" code="654003201" />
+    <street name="兵团一三一团" code="654003508" />
+    <street name="天北新区" code="654003510" />
+</county>
+<county name="伊宁县" code="654021">
+    <street name="吉里于孜镇" code="654021100" />
+    <street name="墩麻扎镇" code="654021101" />
+    <street name="胡地于孜乡" code="654021200" />
+    <street name="吐鲁番于孜乡" code="654021201" />
+    <street name="喀拉亚尕奇乡" code="654021202" />
+    <street name="武功乡" code="654021203" />
+    <street name="萨地克于孜乡" code="654021204" />
+    <street name="愉群翁回族乡" code="654021205" />
+    <street name="阿热吾斯塘乡" code="654021206" />
+    <street name="英塔木镇" code="654021207" />
+    <street name="巴依托海乡" code="654021208" />
+    <street name="维吾尔玉其温乡" code="654021209" />
+    <street name="萨木于孜乡" code="654021210" />
+    <street name="喀什乡" code="654021211" />
+    <street name="麻扎乡" code="654021212" />
+    <street name="温亚尔乡" code="654021213" />
+    <street name="阿乌利亚乡" code="654021214" />
+    <street name="曲鲁海乡" code="654021215" />
+    <street name="青年农场" code="654021400" />
+    <street name="多浪农场" code="654021401" />
+    <street name="兵团七十团中心团场" code="654021501" />
+</county>
+<county name="察布查尔" code="654022">
+    <street name="察布查尔镇" code="654022100" />
+    <street name="爱新色里镇" code="654022101" />
+    <street name="堆齐牛录乡" code="654022200" />
+    <street name="孙扎齐牛录镇" code="654022201" />
+    <street name="绰霍尔乡" code="654022202" />
+    <street name="纳达齐牛录乡" code="654022203" />
+    <street name="扎库齐牛录乡" code="654022204" />
+    <street name="米粮泉回族乡" code="654022205" />
+    <street name="坎乡" code="654022206" />
+    <street name="阔洪奇乡" code="654022207" />
+    <street name="海努克乡" code="654022208" />
+    <street name="加尕斯台乡" code="654022209" />
+    <street name="琼博拉乡" code="654022210" />
+    <street name="安班巴格良繁场" code="654022401" />
+    <street name="伊犁州平原林场" code="654022403" />
+    <street name="山区林场" code="654022404" />
+    <street name="都拉塔口岸" code="654022408" />
+    <street name="兵团六十七团" code="654022502" />
+    <street name="兵团六十八团" code="654022503" />
+    <street name="兵团六十九团" code="654022504" />
+</county>
+<county name="霍城" code="654023">
+    <street name="水定镇" code="654023100" />
+    <street name="清水河镇" code="654023101" />
+    <street name="芦草沟镇" code="654023102" />
+    <street name="惠远镇" code="654023103" />
+    <street name="萨尔布拉克镇" code="654023104" />
+    <street name="兰干乡" code="654023200" />
+    <street name="三道河乡" code="654023201" />
+    <street name="伊车嘎善乡" code="654023203" />
+    <street name="三宫乡" code="654023204" />
+    <street name="大西沟乡" code="654023205" />
+    <street name="格干沟牧场" code="654023400" />
+    <street name="莫乎尔牧场" code="654023401" />
+    <street name="果子沟牧场" code="654023402" />
+    <street name="良种繁育中心" code="654023403" />
+    <street name="霍尔果斯口岸" code="654023404" />
+    <street name="煤炭局" code="654023411" />
+    <street name="兵团六十一团" code="654023505" />
+    <street name="兵团六十二团" code="654023506" />
+    <street name="兵团六十三团" code="654023507" />
+    <street name="兵团六十四团" code="654023508" />
+    <street name="兵团六十六团（中心团场）" code="654023509" />
+</county>
+<county name="巩留" code="654024">
+    <street name="巩留镇" code="654024100" />
+    <street name="阿克吐别克镇" code="654024101" />
+    <street name="库尔德宁镇" code="654024102" />
+    <street name="吉尔格郎乡" code="654024201" />
+    <street name="阿尕尔森乡" code="654024202" />
+    <street name="东买里镇" code="654024203" />
+    <street name="塔斯托别乡" code="654024204" />
+    <street name="提克阿热克乡" code="654024205" />
+    <street name="综合农场" code="654024400" />
+    <street name="阔什阿尕什羊场" code="654024401" />
+    <street name="牛场" code="654024402" />
+    <street name="良凡场" code="654024403" />
+    <street name="林场" code="654024405" />
+    <street name="莫乎尔农场" code="654024406" />
+    <street name="兵团七十三团" code="654024510" />
+</county>
+<county name="新源" code="654025">
+    <street name="新源镇" code="654025100" />
+    <street name="则克台镇" code="654025101" />
+    <street name="阿热勒托别镇" code="654025102" />
+    <street name="塔勒德镇" code="654025103" />
+    <street name="那拉提镇" code="654025104" />
+    <street name="肖尔布拉克镇" code="654025105" />
+    <street name="喀拉布拉镇" code="654025106" />
+    <street name="别斯托别乡" code="654025200" />
+    <street name="坎苏乡" code="654025201" />
+    <street name="阿勒玛勒镇" code="654025203" />
+    <street name="吐尔根乡" code="654025204" />
+    <street name="种羊场" code="654025400" />
+    <street name="公安农场" code="654025403" />
+    <street name="兵团七十一团" code="654025511" />
+    <street name="兵团七十二团" code="654025512" />
+</county>
+<county name="昭苏" code="654026">
+    <street name="昭苏镇" code="654026100" />
+    <street name="洪纳海乡" code="654026200" />
+    <street name="乌尊布拉克乡" code="654026201" />
+    <street name="阿克达拉乡" code="654026202" />
+    <street name="萨尔阔布乡" code="654026203" />
+    <street name="喀夏加尔乡" code="654026204" />
+    <street name="喀拉苏乡" code="654026205" />
+    <street name="察汗乌苏蒙古族乡" code="654026206" />
+    <street name="夏特柯尔克孜族乡" code="654026207" />
+    <street name="胡松图喀尔逊蒙古族乡" code="654026208" />
+    <street name="种马场" code="654026402" />
+    <street name="天山西部林业局昭苏林场" code="654026403" />
+    <street name="昭苏马场" code="654026404" />
+    <street name="兵团七十四团" code="654026513" />
+    <street name="兵团七十五团" code="654026514" />
+    <street name="兵团七十六团" code="654026515" />
+    <street name="兵团七十七团" code="654026516" />
+</county>
+<county name="特克斯" code="654027">
+    <street name="特克斯镇" code="654027100" />
+    <street name="乔拉克铁热克镇" code="654027101" />
+    <street name="喀拉达拉镇" code="654027102" />
+    <street name="呼吉尔特蒙古民族乡" code="654027200" />
+    <street name="阔克苏乡" code="654027201" />
+    <street name="齐勒乌泽克镇" code="654027202" />
+    <street name="阔克铁热克柯尔克孜民族乡" code="654027203" />
+    <street name="喀拉托海乡" code="654027206" />
+    <street name="特克斯军马场" code="654027404" />
+    <street name="科克苏林场" code="654027405" />
+    <street name="兵团七十八团" code="654027517" />
+</county>
+<county name="尼勒克" code="654028">
+    <street name="尼勒克镇" code="654028100" />
+    <street name="苏布台乡" code="654028200" />
+    <street name="喀拉苏乡" code="654028201" />
+    <street name="加哈乌拉斯台乡" code="654028202" />
+    <street name="尼勒克县乌赞乡" code="654028203" />
+    <street name="科克浩特浩尔蒙古民族乡" code="654028204" />
+    <street name="乌拉斯台乡" code="654028205" />
+    <street name="克令乡" code="654028206" />
+    <street name="喀拉托别乡" code="654028207" />
+    <street name="胡吉尔台乡" code="654028208" />
+    <street name="木斯乡" code="654028209" />
+    <street name="尼勒克马场" code="654028402" />
+    <street name="种蜂场" code="654028404" />
+    <street name="兵团七十九团" code="654028518" />
+</county>
+
+<county name="霍尔果斯" code="654029">
+    <street name="大西沟乡" code="654029100" />
+    <street name="格干沟牧场" code="654029101" />
+    <street name="莫乎尔牧场" code="654029102" />
+    <street name="霍尔果斯口岸" code="654029103" />
+    <street name="兵团六十一团" code="654029104" />
+    <street name="兵团六十二团" code="654029105" />
+    <street name="兵团六十三团" code="654029106" />
+    <street name="伊车嘎善乡" code="654029107" />
+</county>
+</city>
+</address>

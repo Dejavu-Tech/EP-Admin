@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+	<title><?php echo $shoname_name; ?></title>
+	<link rel="shortcut icon" href="" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="author" content="Dejavu871.Tech.">
+	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- Font Awesome-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<!-- ico-font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+	<!-- Themify icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
+	<!-- Flag icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
+	<!-- Feather icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+	<!-- Plugins css start-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
+	<!-- Plugins css Ends-->
+	<!-- Bootstrap css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+	<!-- App css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
+	<!-- Responsive css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+	window.sysinfo = {
+	<?php if(!empty($_W['uniacid'])){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
+
+	<?php if(!empty($_W['acid'])){ ?>'acid': '{$_W['acid']}',<?php } ?>
+
+	<?php if(!empty($_W['openid'])){ ?>'openid': '{$_W['openid']}',<?php } ?>
+
+	<?php if(!empty($_W['uid'])){ ?>'uid': '{$_W['uid']}',<?php } ?>
+
+	'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
+
+	'siteroot': '{$_W['siteroot']}',
+			'siteurl': '{$_W['siteurl']}',
+			'attachurl': '{$_W['attachurl']}',
+			'attachurl_local': '{$_W['attachurl_local']}',
+			'attachurl_remote': '{$_W['attachurl_remote']}',
+			'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
+	'cookie' : {'pre': ''},
+	'account' : {:json_encode($_W['account'])},
+	};
+</script>
+
+<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+
+</head>
+<body class="custom-scrollbar" >
+
+<div class="page-wrapper custom-scrollbar">
+	<div class="page-body-wrapper">
+		<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+			<div class="container-fluid">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-lg-6 main-header">
+							<h6 class="mb-0">当前位置</h6>
+							<h2>订单<span>批量发货</span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<ul class="nav nav-pills m-b-20" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<li class="nav-item"><a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">批量发货到团长</a></li>
+					<li class="nav-item"><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">快递单号导入</a></li>
+					<li class="nav-item"><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">订单批量团长签收</a></li>
+					<li class="nav-item"><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">订单批量确认收货</a></li>
+				</ul>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 col-xl-12 xl-100">
+						<div class="card">
+							<div class="card-body">
+								<form action="" id="importform" class="form theme-form layui-form" lay-filter="example" method="post" enctype="multipart/form-data">
+									<input type="hidden" name="type" id="type" value="{$type}"/>
+									<div class="tab-content" id="v-pills-tabContent">
+										<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+											<div class="alert alert-primary" role="alert">
+												<h5>批量发货到团长</h5>
+												<p>功能介绍: 使用excel快速导入进行订单发货，如重复导入数据将以最新导入数据为准，请谨慎使用，数据导入订单状态自动修改为配送中。
+													一次导入的数据不要太多，大量数据请分批导入，建议在服务器负载低的时候进行。</p>
+												使用方法:
+												<p>1. 下载Excel模板文件并录入信息</p>
+												<p>2. 上传Excel导入</p>
+												<p>格式要求: Excel第一列必须为订单编号</p>
+											</div>
+											<div class="form-group row">
+												<label class="col-sm-2 col-form-label">EXCEL文件</label>
+												<div class="col-sm-10">
+													<input type="file" name="excelfile" class="form-control" />
+													<small>如果遇到数据重复则将进行数据更新</small>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-primary btn-order" name="cancelsend" value="yes">确认导入</button>
+												<a class="btn btn-info" href="{:U('order/batchsend_import', array('type' => 'normal'))}" >
+													<i class="fa fa-download" title=""></i> 下载Excel模板文件
+												</a>
+											</div>
+											<a class='btn btn-pill btn-primary btn-op' data-sec="1" data-confirm='此操作将对所有配送方式为“到点自提”，“团长配送”的待发货订单发货，进入下一环节待团长签收（待确认送达团长）?' data-toggle="ajaxModal" href="javascript:;" data-href="{:U('delivery/onekey_tosendallorder', array('sec' => 1) )}" >
+												一键发货到团长
+											</a>
+										</div>
+										<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+											<div class="alert alert-primary" role="alert">
+												<h5>快递单号导入</h5>
+												<p>功能介绍: 使用excel快速导入进行订单发货，如重复导入数据将以最新导入数据为准，请谨慎使用，数据导入订单状态自动修改为已发货。
+													一次导入的数据不要太多，大量数据请分批导入，建议在服务器负载低的时候进行。</p>
+												使用方法:
+												<p>1. 下载Excel模板文件并录入信息</p>
+												<p>2. 选择快递</p>
+												<p>3. 上传Excel文件导入</p>
+												<p>格式要求: Excel第一列必须为订单编号，第二列必须为快递单号</p>
+											</div>
+
+											<?php if( !empty($type) && $type=='mult'){ ?>
+											<div class="form-group row" >
+												<label class="col-sm-2 col-form-label">快递</label>
+												<div class="col-sm-10">
+													<select class="form-control" name="express" id="express">
+														<option value="" data-name="">请选择快递</option>
+														<?php foreach( $express_list as $value ){ ?>
+														<option value="{$value['id']}" data-name="{$value['name']}">{$value['name']}</option>
+														<?php } ?>
+													</select>
+													<input type='hidden' name='expresscom' id='expresscom' value=""/>
+												</div>
+											</div>
+											<?php } ?>
+											<div class="form-group row">
+												<label class="col-sm-2 col-form-label">EXCEL文件</label>
+												<div class="col-sm-10">
+													<input type="file" name="excelfile" class="form-control" />
+													<small>如果遇到数据重复则将进行数据更新</small>
+												</div>
+											</div>
+											<div class="modal-footer" style="text-align: left">
+												<button type="submit" class="btn btn-primary btn-order" name="cancelsend" value="yes">确认导入</button>
+												<a class="btn btn-info" href="{:U('order/batchsend_import', array('type' => 'normal'))}" >
+													<i class="fa fa-download" title=""></i> 下载Excel模板文件
+												</a>
+											</div>
+
+										</div>
+										<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+											<div class="alert alert-primary" role="alert">
+												<h5>订单批量团长签收</h5>
+												<p>功能介绍: 使用excel快速导入配送中订单进行团长批量签收， 如重复导入数据将以最新导入数据为准，请谨慎使用。 数据导入订单状态自动修改为已送达团长， 一次导入的数据不要太多,大量数据请分批导入,建议在服务器负载低的时候进行</p>
+												使用方法:
+												<p>1. 下载Excel模板文件并录入信息</p>
+												<p>2. 上传Excel导入</p>
+												<p>格式要求: Excel第一列必须为订单编号</p>
+											</div>
+											<div class="form-group row">
+												<label class="col-sm-2 col-form-label">EXCEL文件</label>
+												<div class="col-sm-10">
+													<input type="file" name="excelfile" class="form-control" />
+													<small>如果遇到数据重复则将进行数据更新</small>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-primary btn-order" name="cancelsend" value="yes">确认导入</button>
+												<a class="btn btn-info" href="{:U('order/batchsend_import', array('type' => 'normal'))}" >
+													<i class="fa fa-download" title=""></i> 下载Excel模板文件
+												</a>
+											</div>
+											<a class='btn btn-pill btn-primary btn-op ' data-sec="1" data-confirm='对所有待团长签收（待确认送达团长）进行签收，进入下一环节待用户确认收货（待团长核销）' data-toggle="ajaxModal" href="javascript:;" data-href="{:U('delivery/onekey_opsend_tuanz_over', array('sec' => 1) )}" >
+												一键团长签收
+											</a>
+										</div>
+										<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+											<div class="alert alert-primary" role="alert">
+												<h5>订单批量确认收货</h5>
+												<p>功能介绍: 使用excel快速导入待收货的订单进行批量用户确认收货， 如重复导入数据将以最新导入数据为准，请谨慎使用。
+													数据导入订单状态自动修改为确认收货，并进行团长佣金结算。 一次导入的数据不要太多，大量数据请分批导入，建议在服务器负载低的时候进行</p>
+												使用方法:
+												<p>1. 下载Excel模板文件并录入信息</p>
+												<p>2. 上传Excel导入</p>
+												<p>格式要求: Excel第一列必须为订单编号</p>
+											</div>
+											<div class="form-group row">
+												<label class="col-sm-2 col-form-label">EXCEL文件</label>
+												<div class="col-sm-10">
+													<input type="file" name="excelfile" class="form-control" />
+													<small>如果遇到数据重复则将进行数据更新</small>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-primary btn-order" name="cancelsend" value="yes">确认导入</button>
+												<a class="btn btn-info" href="{:U('order/batchsend_import', array('type' => 'mult'))}" >
+													<i class="fa fa-download" title=""></i> 下载Excel模板文件
+												</a>
+											</div>
+											<a class='btn btn-pill btn-primary btn-op ' data-sec="1" data-confirm='对所有的配送方式的订单进行确认收货（团长核销/快递的收货）' data-toggle="ajaxModal" href="javascript:;" data-href="{:U('delivery/onekey_opreceive', array('sec' => 1) )}" >
+												一键确认收货
+											</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 footer-copyright">
+						<p class="mb-0">Copyright © 2019-2021 Dejavu.Tech. All rights reserved.</p>
+					</div>
+					<div class="col-md-6">
+						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+<script src="/assets/js/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap js-->
+<script src="/assets/js/bootstrap/popper.min.js"></script>
+<script src="/assets/js/bootstrap/bootstrap.js"></script>
+
+<!-- Sidebar jquery-->
+<script src="/assets/js/sidebar-menu.js"></script>
+
+<!-- feather icon js-->
+
+<!-- Plugins JS start-->
+
+
+<script src="/assets/js/chat-menu.js"></script>
+<!-- Plugins JS Ends-->
+<!-- Theme js-->
+<script src="/assets/js/script.js"></script>
+
+<!-- Theme js-->
+<script src="/assets/js/theme-customizer/customizer1.js"></script>
+<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
+<script src="/layuiadmin/layui/layui1.js"></script>
+<script>
+	layui.config({
+		base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+</script>
+
+<script>
+//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+var layer = layui.layer;
+var $;
+
+layui.use(['jquery', 'layer','form'], function(){
+  $ = layui.$;
+  var form = layui.form;
+
+	$("[data-toggle='ajaxModal']").click(function () {
+        var s_url = $(this).attr('data-href');
+		ajax_url = s_url;
+
+	    layer.confirm($(this).attr('data-confirm'), function(index){
+			$.post(ajax_url, {}, function(shtml){
+             layer.open({
+                type: 1,
+                area: '700px',
+                content: shtml //注意，如果str是object，那么需要字符拼接。
+              });
+            });
+	   })
+
+    });
+
+
+	$('.deldom').click(function(){
+		var s_url = $(this).attr('data-href');
+		layer.confirm($(this).attr('data-confirm'), function(index){
+					 $.ajax({
+						url:s_url,
+						type:'post',
+						dataType:'json',
+						success:function(info){
+
+							if(info.status == 0)
+							{
+								layer.msg(info.result.message,{icon: 1,time: 2000});
+							}else if(info.status == 1){
+								var go_url = location.href;
+								if( info.result.hasOwnProperty("url") )
+								{
+									go_url = info.result.url;
+								}
+
+								layer.msg('操作成功',{time: 1000,
+									end:function(){
+										location.href = info.result.url;
+									}
+								});
+							}
+						}
+					})
+				});
+	})
+
+	$('.btn-operation').click(function(){
+		var ids_arr = [];
+		var obj = $(this);
+		var s_toggle = $(this).attr('data-toggle');
+		var s_url = $(this).attr('data-href');
+
+
+		$("input[name=item_checkbox]").each(function() {
+
+			if( $(this).prop('checked') )
+			{
+				ids_arr.push( $(this).val() );
+			}
+		})
+		if(ids_arr.length < 1)
+		{
+			layer.msg('请选择要操作的内容');
+		}else{
+			var can_sub = true;
+			if( s_toggle == 'batch-remove' )
+			{
+				can_sub = false;
+
+				layer.confirm($(obj).attr('data-confirm'), function(index){
+					 $.ajax({
+						url:s_url,
+						type:'post',
+						dataType:'json',
+						data:{ids:ids_arr},
+						success:function(info){
+
+							if(info.status == 0)
+							{
+								layer.msg(info.result.message,{icon: 1,time: 2000});
+							}else if(info.status == 1){
+								var go_url = location.href;
+								if( info.result.hasOwnProperty("url") )
+								{
+									go_url = info.result.url;
+								}
+
+								layer.msg('操作成功',{time: 1000,
+									end:function(){
+										location.href = info.result.url;
+									}
+								});
+							}
+						}
+					})
+				});
+			}else{
+				$.ajax({
+					url:s_url,
+					type:'post',
+					dataType:'json',
+					data:{ids:ids_arr},
+					success:function(info){
+
+						if(info.status == 0)
+						{
+							layer.msg(info.result.message,{icon: 1,time: 2000});
+						}else if(info.status == 1){
+							var go_url = location.href;
+							if( info.result.hasOwnProperty("url") )
+							{
+								go_url = info.result.url;
+							}
+
+							layer.msg('操作成功',{time: 1000,
+								end:function(){
+									location.href = info.result.url;
+								}
+							});
+						}
+					}
+				})
+			}
+		}
+	})
+
+	form.on('switch(restwsitch)', function(data){
+
+	  var s_url = $(this).attr('data-href')
+
+	  var rest = 1;
+	  if(data.elem.checked)
+	  {
+		rest = 1;
+	  }else{
+		rest = 0;
+	  }
+
+	  $.ajax({
+			url:s_url,
+			type:'post',
+			dataType:'json',
+			data:{rest:rest},
+			success:function(info){
+
+				if(info.status == 0)
+				{
+					layer.msg(info.result.message,{icon: 1,time: 2000});
+				}else if(info.status == 1){
+					var go_url = location.href;
+					if( info.result.hasOwnProperty("url") )
+					{
+						go_url = info.result.url;
+					}
+
+					layer.msg('操作成功',{time: 1000,
+						end:function(){
+							location.href = info.result.url;
+						}
+					});
+				}
+			}
+		})
+	});
+	form.on('switch(enablewsitch)', function(data){
+
+	  var s_url = $(this).attr('data-href')
+
+	  var enable = 1;
+	  if(data.elem.checked)
+	  {
+		enable = 1;
+	  }else{
+		enable = 0;
+	  }
+
+	  $.ajax({
+			url:s_url,
+			type:'post',
+			dataType:'json',
+			data:{enable:enable},
+			success:function(info){
+
+				if(info.status == 0)
+				{
+					layer.msg(info.result.message,{icon: 1,time: 2000});
+				}else if(info.status == 1){
+					var go_url = location.href;
+					if( info.result.hasOwnProperty("url") )
+					{
+						go_url = info.result.url;
+					}
+
+					layer.msg('操作成功',{time: 1000,
+						end:function(){
+							location.href = info.result.url;
+						}
+					});
+				}
+			}
+		})
+	});
+
+	form.on('switch(statewsitch)', function(data){
+
+	  var s_url = $(this).attr('data-href')
+
+	  var state = 1;
+	  if(data.elem.checked)
+	  {
+		state = 1;
+	  }else{
+		state = 0;
+	  }
+
+	  $.ajax({
+			url:s_url,
+			type:'post',
+			dataType:'json',
+			data:{state:state},
+			success:function(info){
+
+				if(info.status == 0)
+				{
+					layer.msg(info.result.message,{icon: 1,time: 2000});
+				}else if(info.status == 1){
+					var go_url = location.href;
+					if( info.result.hasOwnProperty("url") )
+					{
+						go_url = info.result.url;
+					}
+
+					layer.msg('操作成功',{time: 1000,
+						end:function(){
+							location.href = info.result.url;
+						}
+					});
+				}
+			}
+		})
+	});
+	form.on('checkbox(checkboxall)', function(data){
+
+	  if(data.elem.checked)
+	  {
+		$("input[name=item_checkbox]").each(function() {
+			$(this).prop("checked", true);
+		});
+		$("input[name=checkall]").each(function() {
+			$(this).prop("checked", true);
+		});
+
+	  }else{
+		$("input[name=item_checkbox]").each(function() {
+			$(this).prop("checked", false);
+		});
+		$("input[name=checkall]").each(function() {
+			$(this).prop("checked", false);
+		});
+	  }
+
+	  form.render('checkbox');
+	});
+
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+
+	 $.ajax({
+		url: data.form.action,
+		type: data.form.method,
+		data: data.field,
+		dataType:'json',
+		success: function (info) {
+
+			if(info.status == 0)
+			{
+				layer.msg(info.result.message,{icon: 1,time: 2000});
+			}else if(info.status == 1){
+				var go_url = location.href;
+				if( info.result.hasOwnProperty("url") )
+				{
+					go_url = info.result.url;
+				}
+
+				layer.msg('操作成功',{time: 1000,
+					end:function(){
+						location.href = info.result.url;
+					}
+				});
+			}
+		}
+	});
+
+    return false;
+  });
+})
+
+</script>
+
+<script language='javascript'>
+    $(function(){
+
+        $('#importform').submit(function(){
+			if($("#type").val() == 'mult'){
+				if(!$(":input[name=express]").val()){
+					layer.msg("您还未选择快递");
+					return false;
+				}
+			}
+            if(!$(":input[name=excelfile]").val()){
+                layer.msg("您还未选择Excel文件");
+                return false;
+            }
+        })
+
+        $("#express").change(function () {
+            var obj = $(this);
+            var sel = obj.find("option:selected").attr("data-name");
+            $("#expresscom").val(sel);
+        });
+
+    })
+
+</script>
+</body>

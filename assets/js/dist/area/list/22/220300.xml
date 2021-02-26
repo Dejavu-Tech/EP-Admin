@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="四平" code="220300">
+<county name="铁西" code="220302">
+    <street name="仁兴街道" code="220302001" />
+    <street name="英雄街道" code="220302002" />
+    <street name="站前街道" code="220302003" />
+    <street name="北沟街道" code="220302004" />
+    <street name="地直街道" code="220302005" />
+    <street name="平西乡" code="220302200" />
+    <street name="红嘴高新技术开发区" code="220302400" />
+</county>
+<county name="铁东" code="220303">
+    <street name="平东街道" code="220303001" />
+    <street name="北市场街道" code="220303002" />
+    <street name="七马路街道" code="220303003" />
+    <street name="四马路街道" code="220303004" />
+    <street name="解放街道" code="220303005" />
+    <street name="北门街道" code="220303006" />
+    <street name="黄土坑街道" code="220303007" />
+    <street name="平南街道" code="220303008" />
+    <street name="山门镇" code="220303100" />
+    <street name="石岭镇" code="220303101" />
+    <street name="叶赫满族镇" code="220303102" />
+    <street name="四平经济开发区（省级）（特殊乡镇）" code="220303170" />
+    <street name="城东乡" code="220303200" />
+</county>
+<county name="梨树" code="220322">
+    <street name="梨树镇" code="220322100" />
+    <street name="郭家店镇" code="220322101" />
+    <street name="榆树台镇" code="220322102" />
+    <street name="孤家子镇（四平辽河农垦管理区）" code="220322103" />
+    <street name="小城子镇" code="220322104" />
+    <street name="喇嘛甸镇" code="220322105" />
+    <street name="蔡家镇" code="220322106" />
+    <street name="刘家馆子镇" code="220322107" />
+    <street name="十家堡镇" code="220322108" />
+    <street name="孟家岭镇" code="220322109" />
+    <street name="万发镇" code="220322110" />
+    <street name="东河镇" code="220322111" />
+    <street name="沈洋镇" code="220322112" />
+    <street name="林海镇" code="220322113" />
+    <street name="小宽镇" code="220322114" />
+    <street name="白山乡" code="220322200" />
+    <street name="泉眼岭乡" code="220322201" />
+    <street name="胜利乡" code="220322202" />
+    <street name="四棵树乡" code="220322203" />
+    <street name="双河乡" code="220322204" />
+    <street name="金山乡" code="220322205" />
+    <street name="国营梨树农场（四平辽河农垦管理区）" code="220322400" />
+    <street name="良种场生产区" code="220322405" />
+</county>
+<county name="伊通" code="220323">
+    <street name="伊通镇" code="220323100" />
+    <street name="二道镇" code="220323101" />
+    <street name="伊丹镇" code="220323102" />
+    <street name="马鞍镇" code="220323103" />
+    <street name="景台镇" code="220323104" />
+    <street name="靠山镇" code="220323105" />
+    <street name="大孤山镇" code="220323106" />
+    <street name="小孤山镇" code="220323107" />
+    <street name="营城子镇" code="220323108" />
+    <street name="西苇镇" code="220323109" />
+    <street name="河源镇" code="220323110" />
+    <street name="黄岭子镇" code="220323111" />
+    <street name="新兴乡" code="220323200" />
+    <street name="莫里青乡" code="220323201" />
+    <street name="三道乡" code="220323202" />
+</county>
+<county name="公主岭" code="220381">
+    <street name="河南街道" code="220381001" />
+    <street name="河北街道" code="220381002" />
+    <street name="东三街道" code="220381003" />
+    <street name="岭东街道" code="220381004" />
+    <street name="铁北街道" code="220381005" />
+    <street name="岭西街道" code="220381006" />
+    <street name="刘房子街道" code="220381007" />
+    <street name="南崴子街道" code="220381008" />
+    <street name="环岭街道" code="220381009" />
+    <street name="苇子沟街道" code="220381010" />
+    <street name="二十家子镇" code="220381100" />
+    <street name="黑林子镇" code="220381101" />
+    <street name="陶家屯镇" code="220381102" />
+    <street name="范家屯镇" code="220381103" />
+    <street name="响水镇" code="220381104" />
+    <street name="大岭镇" code="220381105" />
+    <street name="怀德镇" code="220381106" />
+    <street name="双城堡镇" code="220381107" />
+    <street name="双龙镇" code="220381108" />
+    <street name="杨大城子镇" code="220381109" />
+    <street name="毛城子镇" code="220381110" />
+    <street name="玻璃城子镇" code="220381111" />
+    <street name="朝阳坡镇" code="220381112" />
+    <street name="大榆树镇" code="220381113" />
+    <street name="秦家屯镇" code="220381114" />
+    <street name="八屋镇" code="220381115" />
+    <street name="十屋镇" code="220381116" />
+    <street name="桑树台镇" code="220381117" />
+    <street name="龙山乡" code="220381200" />
+    <street name="永发乡" code="220381201" />
+    <street name="省原种繁殖场" code="220381400" />
+    <street name="四平农科院" code="220381401" />
+    <street name="公主岭市种猪场" code="220381402" />
+    <street name="十屋农场" code="220381403" />
+    <street name="十屋种牛场" code="220381404" />
+    <street name="创业农场" code="220381405" />
+    <street name="公主岭市鹿场" code="220381406" />
+    <street name="范家屯经济开发区" code="220381407" />
+</county>
+<county name="双辽" code="220382">
+    <street name="郑家屯街道" code="220382001" />
+    <street name="辽西街道" code="220382002" />
+    <street name="辽南街道" code="220382003" />
+    <street name="辽北街道" code="220382004" />
+    <street name="辽东街道" code="220382005" />
+    <street name="红旗街道" code="220382006" />
+    <street name="茂林镇" code="220382100" />
+    <street name="双山镇" code="220382101" />
+    <street name="卧虎镇" code="220382102" />
+    <street name="服先镇" code="220382103" />
+    <street name="王奔镇" code="220382104" />
+    <street name="玻璃山镇" code="220382105" />
+    <street name="兴隆镇" code="220382106" />
+    <street name="东明镇" code="220382107" />
+    <street name="那木乡" code="220382200" />
+    <street name="柳条乡" code="220382201" />
+    <street name="新立乡" code="220382202" />
+    <street name="永加乡" code="220382203" />
+    <street name="双辽农场（四平辽河农垦管理区）" code="220382400" />
+    <street name="双辽种羊场（四平辽河农垦管理区）" code="220382401" />
+    <street name="双辽经济开发区" code="220382402" />
+</county>
+</city>
+</address>

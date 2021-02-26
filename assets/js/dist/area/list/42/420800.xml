@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="荆门" code="420800">
+<county name="东宝" code="420802">
+    <street name="龙泉街道" code="420802001" />
+    <street name="泉口街道" code="420802002" />
+    <street name="栗溪镇" code="420802100" />
+    <street name="子陵镇" code="420802101" />
+    <street name="漳河镇" code="420802102" />
+    <street name="马河镇" code="420802103" />
+    <street name="石桥驿镇" code="420802104" />
+    <street name="牌楼镇" code="420802105" />
+    <street name="仙居乡" code="420802200" />
+    <street name="东宝工业园区" code="420802400" />
+</county>
+<county name="掇刀" code="420804">
+    <street name="掇刀街道" code="420804001" />
+    <street name="白庙街道" code="420804002" />
+    <street name="兴隆街道" code="420804003" />
+    <street name="双喜街道" code="420804004" />
+    <street name="团林铺镇" code="420804100" />
+    <street name="麻城镇" code="420804101" />
+    <street name="荆门经济开发区" code="420804400" />
+</county>
+<county name="京山" code="420821">
+    <street name="新市镇" code="420821100" />
+    <street name="永兴镇" code="420821101" />
+    <street name="曹武镇" code="420821102" />
+    <street name="罗店镇" code="420821103" />
+    <street name="宋河镇" code="420821104" />
+    <street name="坪坝镇" code="420821105" />
+    <street name="三阳镇" code="420821106" />
+    <street name="绿林镇" code="420821107" />
+    <street name="杨集镇" code="420821108" />
+    <street name="孙桥镇" code="420821109" />
+    <street name="石龙镇" code="420821110" />
+    <street name="永隆镇" code="420821111" />
+    <street name="雁门口镇" code="420821112" />
+    <street name="钱场镇" code="420821113" />
+    <street name="开发区（镇）" code="420821170" />
+    <street name="温泉新区" code="420821449" />
+    <street name="太子山" code="420821450" />
+    <street name="罗汉寺办事处" code="420821451" />
+    <street name="长滩办事处" code="420821452" />
+    <street name="何集办事处" code="420821453" />
+    <street name="易家岭办事处" code="420821455" />
+    <street name="屈家岭经济开发区" code="420821456" />
+    <street name="原种场镇" code="420821598" />
+</county>
+<county name="沙洋" code="420822">
+    <street name="沙洋镇" code="420822100" />
+    <street name="五里铺镇" code="420822101" />
+    <street name="十里铺镇" code="420822102" />
+    <street name="纪山镇" code="420822103" />
+    <street name="拾回桥镇" code="420822104" />
+    <street name="后港镇" code="420822105" />
+    <street name="毛李镇" code="420822106" />
+    <street name="官当镇" code="420822107" />
+    <street name="李市镇" code="420822108" />
+    <street name="马良镇" code="420822109" />
+    <street name="高阳镇" code="420822110" />
+    <street name="沈集镇" code="420822111" />
+    <street name="曾集镇" code="420822112" />
+    <street name="沙洋监狱管理局" code="420822450" />
+</county>
+<county name="钟祥" code="420881">
+    <street name="郢中街道" code="420881001" />
+    <street name="洋梓镇" code="420881100" />
+    <street name="长寿镇" code="420881101" />
+    <street name="丰乐镇" code="420881102" />
+    <street name="胡集镇" code="420881103" />
+    <street name="双河镇" code="420881104" />
+    <street name="磷矿镇" code="420881105" />
+    <street name="文集镇" code="420881106" />
+    <street name="冷水镇" code="420881107" />
+    <street name="石牌镇" code="420881108" />
+    <street name="旧口镇" code="420881109" />
+    <street name="柴湖镇" code="420881110" />
+    <street name="长滩镇" code="420881111" />
+    <street name="东桥镇" code="420881112" />
+    <street name="客店镇" code="420881113" />
+    <street name="张集镇" code="420881114" />
+    <street name="九里乡" code="420881200" />
+    <street name="湖北钟祥经济开发区" code="420881400" />
+    <street name="钟祥市官庄湖管理区" code="420881450" />
+    <street name="南湖原种场" code="420881451" />
+    <street name="罗汉寺种畜场" code="420881452" />
+    <street name="双桥原种场" code="420881453" />
+    <street name="东岳种畜场" code="420881454" />
+    <street name="康桥湖农场" code="420881455" />
+    <street name="大口林场" code="420881456" />
+    <street name="盘石岭林场" code="420881457" />
+    <street name="温峡水库" code="420881458" />
+    <street name="石门水库" code="420881459" />
+    <street name="黄坡水库" code="420881460" />
+    <street name="湖北钟祥胡集经济技术开发区" code="420881461" />
+</county>
+</city>
+</address>

@@ -1,0 +1,396 @@
+- var prism                 = true;
+- var chartist              = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var apex                  = true;
+- var dashboard_ecommerce   = true;
+- var counter               = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Ecommerce
+                                      span
+                                        | Dashboard  
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right
+                                  ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Dashboard
+                                      li.breadcrumb-item.active Ecommerce 
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-lg-12.xl-100
+                          .row.ecommerce-chart-card
+                            .col-xl-3.xl-50.col-md-6.box-col-6
+                              .card.gradient-primary.o-hidden
+                                .card-body.tag-card
+                                  .ecommerce-chart
+                                    .media.ecommerce-small-chart
+                                      .small-bar
+                                        .small-chart1.flot-chart-container
+                                      .sale-chart    
+                                        .media-body.m-l-40
+                                          h6.f-w-100.m-l-10 $3,54,632
+                                          h4.mb-0.f-w-700.m-l-10 Total Sale
+                                  span.tag-hover-effect
+                                      span.dots-group
+                                            span.dots.dots1
+                                            span.dots.dots2.dot-small
+                                            span.dots.dots3.dot-small
+                                            span.dots.dots4.dot-medium
+                                            span.dots.dots5.dot-small
+                                            span.dots.dots6.dot-small
+                                            span.dots.dots7.dot-small-semi
+                                            span.dots.dots8.dot-small-semi
+                                            span.dots.dots9.dot-small        
+                            .col-xl-3.xl-50.col-md-6.box-col-6
+                              .card.gradient-secondary.o-hidden
+                                .card-body.tag-card
+                                  .ecommerce-chart
+                                    .media.ecommerce-small-chart
+                                      .small-bar
+                                        .small-chart2.flot-chart-container
+                                      .sale-chart    
+                                        .media-body.m-l-40
+                                          h6.f-w-100.m-l-10 $2,89,246
+                                          h4.mb-0.f-w-700.m-l-10 Total Sale
+                                  span.tag-hover-effect
+                                      span.dots-group
+                                            span.dots.dots1
+                                            span.dots.dots2.dot-small
+                                            span.dots.dots3.dot-small
+                                            span.dots.dots4.dot-medium
+                                            span.dots.dots5.dot-small
+                                            span.dots.dots6.dot-small
+                                            span.dots.dots7.dot-small-semi
+                                            span.dots.dots8.dot-small-semi
+                                            span.dots.dots9.dot-small              
+                            .col-xl-3.xl-50.col-md-6.box-col-6
+                              .card.gradient-warning.o-hidden
+                                .card-body.tag-card
+                                  .ecommerce-chart
+                                    .media.ecommerce-small-chart
+                                      .small-bar
+                                        .small-chart3.flot-chart-container
+                                      .sale-chart    
+                                        .media-body.m-l-40
+                                          h6.f-w-100.m-l-10 $1,58,268
+                                          h4.mb-0.f-w-700.m-l-10 Total Sale
+                                  span.tag-hover-effect
+                                      span.dots-group
+                                            span.dots.dots1
+                                            span.dots.dots2.dot-small
+                                            span.dots.dots3.dot-small
+                                            span.dots.dots4.dot-medium
+                                            span.dots.dots5.dot-small
+                                            span.dots.dots6.dot-small
+                                            span.dots.dots7.dot-small-semi
+                                            span.dots.dots8.dot-small-semi
+                                            span.dots.dots9.dot-small                     
+                            .col-xl-3.xl-50.col-md-6.box-col-6
+                              .card.gradient-info.o-hidden
+                                .card-body.tag-card
+                                  .ecommerce-chart
+                                    .media.ecommerce-small-chart
+                                      .small-bar
+                                        .small-chart4.flot-chart-container
+                                      .sale-chart    
+                                        .media-body.m-l-40
+                                          h6.f-w-100.m-l-10 $2,99,568
+                                          h4.mb-0.f-w-700.m-l-10 Total Sale
+                                  span.tag-hover-effect
+                                      span.dots-group
+                                            span.dots.dots1
+                                            span.dots.dots2.dot-small
+                                            span.dots.dots3.dot-small
+                                            span.dots.dots4.dot-medium
+                                            span.dots.dots5.dot-small
+                                            span.dots.dots6.dot-small
+                                            span.dots.dots7.dot-small-semi
+                                            span.dots.dots8.dot-small-semi
+                                            span.dots.dots9.dot-small                     
+                        .col-xl-12.xl-100.box-col-12
+                                .card.crypto-revenue
+                                  .card-header.pb-0.d-flex
+                                    h5 Revenue Statistics
+                                      span.badge.badge-pill.pill-badge-secondary.f-14.f-w-600 2021
+                                    ul.creative-dots
+                                      li.bg-primary.big-dot
+                                      li.bg-secondary.semi-big-dot
+                                      li.bg-warning.medium-dot
+                                      li.bg-info.semi-medium-dot
+                                      li.bg-secondary.semi-small-dot
+                                      li.bg-primary.small-dot
+                                    .header-right.pull-right.text-right
+                                        h5.mb-2 80 / 100
+                                        h6.f-w-700.mb-0 Total 81,67,536 $
+                                  .card-body.pt-0
+                                    #area-spaline
+                        .col-xl-8.xl-100.box-col-12
+                            .card
+                              .card-header.no-border
+                                h5 Best Selling Product
+                                ul.creative-dots
+                                  li.bg-primary.big-dot
+                                  li.bg-secondary.semi-big-dot
+                                  li.bg-warning.medium-dot
+                                  li.bg-info.semi-medium-dot
+                                  li.bg-secondary.semi-small-dot
+                                  li.bg-primary.small-dot
+                                //- .setting-dot
+                                //-   .setting-bg-primary.position-set.pull-right
+                                //-     i.fa.fa-spin.fa-cog
+                                .card-header-right
+                                      ul.list-unstyled.card-option
+                                        li
+                                          i.icofont.icofont-gear.fa.fa-spin.font-primary
+                                        li
+                                          i.view-html.fa.fa-code.font-primary
+                                        li
+                                          i.icofont.icofont-maximize.full-card.font-primary
+                                        li
+                                          i.icofont.icofont-minus.minimize-card.font-primary
+                                        li
+                                          i.icofont.icofont-refresh.reload-card.font-primary
+                                        li
+                                          i.icofont.icofont-error.close-card.font-primary
+                              .card-body.pt-0
+                                .activity-table.table-responsive.recent-table
+                                  table.table.table-bordernone
+                                    tbody
+                                      tr
+                                        td
+                                          .recent-images
+                                            img.img-fluid(src='../assets/images/dashboard-ecommerce/1.png', alt='')
+                                        td
+                                          h5.default-text.mb-0.f-w-700.f-18 Earton Men Running Shoes
+                                        td
+                                          span.badge.badge-pill.recent-badge.f-12 Men wear
+                                        td.f-w-700 $45.00
+                                        td
+                                          h6.mb-0 Stock
+                                        td
+                                          span.badge.badge-pill.recent-badge
+                                              i(data-feather='more-horizontal')
+                                      tr
+                                        td
+                                          .recent-images-primary
+                                            img.img-fluid(src='../assets/images/dashboard-ecommerce/2.png', alt='')
+                                        td
+                                          h5.font-primary.mb-0.f-w-700.f-18 Kanvas Katha Women Bag
+                                        td
+                                          span.badge.badge-pill.recent-badge.f-12 Brazil
+                                        td.f-w-700 $78.00
+                                        td
+                                          h6.mb-0 Stock
+                                        td
+                                          span.badge.badge-pill.recent-badge
+                                              i(data-feather='more-horizontal')
+                                      tr
+                                        td
+                                          .recent-images-secondary
+                                            img.img-fluid(src='../assets/images/dashboard-ecommerce/3.png', alt='')
+                                        td
+                                          h5.font-secondary.mb-0.f-w-700.f-18 Unisex Aviator Sunglasses
+                                        td
+                                          span.badge.badge-pill.recent-badge.f-12 London
+                                        td.f-w-700 $50.00
+                                        td
+                                          h6.mb-0 Stock
+                                        td
+                                          span.badge.badge-pill.recent-badge
+                                              i(data-feather='more-horizontal')
+                                      tr
+                                        td
+                                          .recent-images-warning
+                                            img.img-fluid(src='../assets/images/dashboard-ecommerce/4.png', alt='')
+                                        td
+                                          h5.font-warning.mb-0.f-w-700.f-18 Men’s Cotton Round T-shirt
+                                        td
+                                          span.badge.badge-pill.recent-badge.f-12 U.S.A
+                                        td.f-w-700 $38.00
+                                        td
+                                          h6.mb-0 Stock
+                                        td
+                                          span.badge.badge-pill.recent-badge
+                                              i(data-feather='more-horizontal') 
+                                .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head5', title='Copy')
+                                      i.icofont.icofont-copy-alt
+                                    pre
+                                      code.language-html#example-head5
+                                        | &lt;!-- Cod Box Copy begin --&gt;
+                                        | &lt;div class="activity-table table-responsive recent-table"&gt;
+                                        | &lt;table class="table table-bordernone"&gt;
+                                        | &lt;tbody&gt;
+                                        | &lt;tr&gt;
+                                        | &lt;td&gt;
+                                        | &lt;div class="recent-images"&gt;&lt;img class="img-fluid" src="../assets/images/dashboard-ecommerce/1.png" alt=""&gt;&lt;/div&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h5 class="default-text mb-0 f-w-700 f-18"&gt;Earton Men Running Shoes&lt;/h5&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge f-12"&gt;Men wear&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;td class="f-w-700"&gt;$45.00&lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h6 class="mb-0"&gt;Stock&lt;/h6&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge"&gt;&lt;i data-feather="more-horizontal"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;/tr&gt;
+                                        | &lt;tr&gt;
+                                        | &lt;td&gt;
+                                        | &lt;div class="recent-images-primary"&gt;&lt;img class="img-fluid" src="../assets/images/dashboard-ecommerce/2.png" alt=""&gt;&lt;/div&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h5 class="font-primary mb-0 f-w-700 f-18"&gt;Kanvas Katha Women Bag&lt;/h5&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge f-12"&gt;Brazil&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;td class="f-w-700"&gt;$78.00&lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h6 class="mb-0"&gt;Stock&lt;/h6&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge"&gt;&lt;i data-feather="more-horizontal"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;/tr&gt;
+                                        | &lt;tr&gt;
+                                        | &lt;td&gt;
+                                        | &lt;div class="recent-images-secondary"&gt;&lt;img class="img-fluid" src="../assets/images/dashboard-ecommerce/3.png" alt=""&gt;&lt;/div&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h5 class="font-secondary mb-0 f-w-700 f-18"&gt;Unisex Aviator Sunglasses&lt;/h5&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge f-12"&gt;London&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;td class="f-w-700"&gt;$50.00&lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h6 class="mb-0"&gt;Stock&lt;/h6&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge"&gt;&lt;i data-feather="more-horizontal"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;/tr&gt;
+                                        | &lt;tr&gt;
+                                        | &lt;td&gt;
+                                        | &lt;div class="recent-images-warning"&gt;&lt;img class="img-fluid" src="../assets/images/dashboard-ecommerce/4.png" alt=""&gt;&lt;/div&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h5 class="font-warning mb-0 f-w-700 f-18"&gt;Men&rsquo;s Cotton Round T-shirt&lt;/h5&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge f-12"&gt;U.S.A&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;td class="f-w-700"&gt;$38.00&lt;/td&gt;
+                                        | &lt;td&gt;
+                                        | &lt;h6 class="mb-0"&gt;Stock&lt;/h6&gt;
+                                        | &lt;/td&gt;
+                                        | &lt;td&gt;&lt;span class="badge badge-pill recent-badge"&gt;&lt;i data-feather="more-horizontal"&gt; &lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+                                        | &lt;/tr&gt;
+                                        | &lt;/tbody&gt;
+                                        | &lt;/table&gt;
+                                        | &lt;/div&gt;
+                                        | &lt;!-- Cod Box Copy end --&gt;
+                        .col-xl-4.xl-50.box-col-6
+                            .card.gradient-secondary.o-hidden.monthly-overview
+                              .card-header.no-border.bg-transparent.pb-0
+                                h5 Smart-Watch
+                                h6.mb-2 60% OFF
+                                span.pull-right.right-badge
+                                  span.badge.badge-pill $301
+                              .card-body.pt-0
+                                ul.rounds-decore
+                                  li
+                                  li
+                                  li
+                                  li                                        
+                                span.overview-dots.full-lg-dots
+                                  span.dots-group
+                                    span.dots.dots1
+                                    span.dots.dots2.dot-small
+                                    span.dots.dots3.dot-small
+                                    span.dots.dots4.dot-medium
+                                    span.dots.dots5.dot-small
+                                    span.dots.dots6.dot-small
+                                    span.dots.dots7.dot-small-semi
+                                    span.dots.dots8.dot-small-semi
+                                    span.dots.dots9.dot-small
+                                .p-watch
+                                   img.img-fluid(src='../assets/images/dashboard-ecommerce/watch.png', alt='')
+                        .col-xl-4.xl-50.box-col-6
+                          .card.gradient-primary.o-hidden.monthly-overview
+                            .card-body.pb-0#customers-ratio  
+                              .media.customers
+                                .media-body
+                                  h5 New Customers
+                                .setting-dot
+                                  .setting-bg-primary.date-picker-setting.position-set.pull-right
+                                    i.fa.fa-spin.fa-cog
+                                span.overview-dots.full-lg-dots
+                                  span.dots-group
+                                    span.dots.dots1
+                                    span.dots.dots2.dot-small
+                                    span.dots.dots3.dot-small
+                                    span.dots.dots4.dot-medium
+                                    span.dots.dots5.dot-small
+                                    span.dots.dots6.dot-small
+                                    span.dots.dots7.dot-small-semi
+                                    span.dots.dots8.dot-small-semi
+                                    span.dots.dots9.dot-small          
+                        .col-xl-8.xl-100.box-col-12
+                                .card.month-overview
+                                  .card-header.pb-3
+                                      h5 This Month Revenue
+                                      h2.m-t-20.f-w-800 $57k
+                                      span.badge.badge-pill.pill-badge-secondary.f-14.f-w-600 14%
+                                      ul.creative-dots
+                                        li.bg-primary.big-dot
+                                        li.bg-secondary.semi-big-dot
+                                        li.bg-warning.medium-dot
+                                        li.bg-info.semi-medium-dot
+                                        li.bg-secondary.semi-small-dot
+                                        li.bg-primary.small-dot
+                                      .card-header-right
+                                          ul.list-unstyled.card-option
+                                            li
+                                              i.icofont.icofont-gear.fa.fa-spin.font-primary
+                                            li
+                                              i.view-html.fa.fa-code.font-primary
+                                            li
+                                              i.icofont.icofont-maximize.full-card.font-primary
+                                            li
+                                              i.icofont.icofont-minus.minimize-card.font-primary
+                                            li
+                                              i.icofont.icofont-refresh.reload-card.font-primary
+                                            li
+                                              i.icofont.icofont-error.close-card.font-primary
+                                  .card-body.p-b-20.row
+                                      .col-6.p-b-20.ct-10.pr-0.default-chartist-container
+                                      .col-6.p-b-20.ct-11.pl-0.default-chartist-container 
+                                      .code-box-copy
+                                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head6', title='Copy')
+                                            i.icofont.icofont-copy-alt
+                                          pre
+                                            code.language-html#example-head6
+                                              | &lt;!-- Cod Box Copy begin --&gt;
+                                              | &lt;div class="card-body p-b-20 row"&gt;
+                                              | &lt;div class="col-6 p-b-20 ct-10 pr-0 default-chartist-container"&gt;&lt;/div&gt;
+                                              | &lt;div class="col-6 p-b-20 ct-11 pl-0 default-chartist-container"&gt; &lt;/div&gt;
+                                              | &lt;/div&gt;
+                                              | &lt;!-- Cod Box Copy end --&gt;          
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

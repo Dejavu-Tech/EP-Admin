@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="巴音郭楞" code="652800">
+<county name="库尔勒" code="652801">
+    <street name="团结街道" code="652801001" />
+    <street name="萨依巴格街道" code="652801002" />
+    <street name="天山街道" code="652801003" />
+    <street name="新城街道" code="652801004" />
+    <street name="建设街道" code="652801005" />
+    <street name="塔什店镇" code="652801100" />
+    <street name="上户镇" code="652801101" />
+    <street name="库尔勒市西尼尔镇" code="652801102" />
+    <street name="铁克其乡" code="652801200" />
+    <street name="恰尔巴格乡" code="652801201" />
+    <street name="英下乡" code="652801202" />
+    <street name="库尔勒市兰干乡" code="652801203" />
+    <street name="和什力克乡" code="652801204" />
+    <street name="哈拉玉宫乡" code="652801205" />
+    <street name="阿瓦提乡" code="652801206" />
+    <street name="库尔勒市托布力其乡" code="652801207" />
+    <street name="普惠乡" code="652801208" />
+    <street name="库尔楚园艺场" code="652801400" />
+    <street name="包头湖农场" code="652801401" />
+    <street name="普惠农场" code="652801402" />
+    <street name="巴州阿瓦提农场" code="652801403" />
+    <street name="巴州沙依东园艺场" code="652801404" />
+    <street name="巴州奶牛场" code="652801408" />
+    <street name="普惠牧场" code="652801409" />
+    <street name="经济牧场" code="652801410" />
+    <street name="良种场" code="652801411" />
+    <street name="兵团二十九团" code="652801501" />
+    <street name="农二师三十团" code="652801502" />
+</county>
+<county name="轮台" code="652822">
+    <street name="轮台镇" code="652822100" />
+    <street name="轮南镇" code="652822101" />
+    <street name="群巴克镇" code="652822102" />
+    <street name="阳霞镇" code="652822103" />
+    <street name="哈尔巴克乡" code="652822201" />
+    <street name="野云沟乡" code="652822202" />
+    <street name="阿克萨来乡" code="652822203" />
+    <street name="塔尔拉克乡" code="652822204" />
+    <street name="草湖乡" code="652822205" />
+    <street name="铁热克巴扎乡" code="652822206" />
+    <street name="策达雅乡" code="652822207" />
+</county>
+<county name="尉犁" code="652823">
+    <street name="尉犁镇" code="652823100" />
+    <street name="塔里木乡" code="652823200" />
+    <street name="兴平乡" code="652823201" />
+    <street name="团结乡" code="652823202" />
+    <street name="墩阔坦乡" code="652823203" />
+    <street name="喀尔曲尕乡" code="652823204" />
+    <street name="阿克苏普乡" code="652823205" />
+    <street name="古勒巴格乡" code="652823206" />
+    <street name="兵团三十一团" code="652823501" />
+    <street name="农二师三十三团" code="652823502" />
+    <street name="兵团三十四团" code="652823503" />
+</county>
+<county name="若羌" code="652824">
+    <street name="若羌镇" code="652824100" />
+    <street name="依吞布拉克镇" code="652824101" />
+    <street name="罗布泊镇" code="652824102" />
+    <street name="瓦石峡镇" code="652824103" />
+    <street name="铁干里克乡" code="652824200" />
+    <street name="吾塔木乡" code="652824201" />
+    <street name="铁木里克乡" code="652824203" />
+    <street name="祁曼塔克乡" code="652824204" />
+    <street name="兵团三十六团" code="652824501" />
+</county>
+<county name="且末" code="652825">
+    <street name="且末镇" code="652825100" />
+    <street name="奥依亚依拉克镇" code="652825101" />
+    <street name="阿热勒乡" code="652825200" />
+    <street name="琼库勒乡" code="652825201" />
+    <street name="托格拉克勒克乡" code="652825202" />
+    <street name="巴格艾日克乡" code="652825203" />
+    <street name="英吾斯塘乡" code="652825204" />
+    <street name="阿克提坎墩乡" code="652825205" />
+    <street name="阔什萨特玛乡" code="652825206" />
+    <street name="塔提让镇" code="652825207" />
+    <street name="阿羌乡" code="652825208" />
+    <street name="库拉木勒克乡" code="652825209" />
+    <street name="兵团农二师且末工程支队" code="652825501" />
+    <street name="兵团三十八团" code="652825502" />
+</county>
+<county name="焉耆" code="652826">
+    <street name="焉耆镇" code="652826100" />
+    <street name="七个星镇" code="652826101" />
+    <street name="永宁镇" code="652826102" />
+    <street name="四十里城子镇" code="652826103" />
+    <street name="北大渠乡" code="652826200" />
+    <street name="五号渠乡" code="652826201" />
+    <street name="查汗采开乡" code="652826203" />
+    <street name="包尔海乡" code="652826204" />
+    <street name="王家庄牧场" code="652826400" />
+    <street name="苏海良种场" code="652826401" />
+    <street name="兵团二十七团" code="652826501" />
+</county>
+<county name="和静" code="652827">
+    <street name="和静镇" code="652827100" />
+    <street name="巴仑台镇" code="652827101" />
+    <street name="巴润哈尔莫墩镇" code="652827102" />
+    <street name="哈尔莫墩镇" code="652827103" />
+    <street name="巴音布鲁克镇" code="652827104" />
+    <street name="巩乃斯镇" code="652827105" />
+    <street name="乃门莫墩乡" code="652827200" />
+    <street name="协比乃尔布呼乡" code="652827201" />
+    <street name="克尔古提乡" code="652827203" />
+    <street name="阿拉沟乡" code="652827204" />
+    <street name="额勒再特乌鲁乡" code="652827205" />
+    <street name="巴音郭愣乡" code="652827206" />
+    <street name="乌拉斯台农场" code="652827400" />
+    <street name="兵团二十一团" code="652827501" />
+    <street name="兵团二十二团" code="652827502" />
+    <street name="兵团二二三团" code="652827503" />
+    <street name="兵团农二师湖光糖厂" code="652827504" />
+</county>
+<county name="和硕" code="652828">
+    <street name="特吾里克镇" code="652828100" />
+    <street name="乌什塔拉回族民族乡" code="652828200" />
+    <street name="曲惠乡" code="652828201" />
+    <street name="塔哈其乡" code="652828202" />
+    <street name="苏哈特乡" code="652828203" />
+    <street name="乃仁克尔乡" code="652828204" />
+    <street name="新塔热乡" code="652828205" />
+    <street name="清水河农场" code="652828400" />
+    <street name="和硕县马兰公安管区" code="652828402" />
+    <street name="兵团二师二十四团" code="652828504" />
+</county>
+<county name="博湖" code="652829">
+    <street name="博湖镇" code="652829100" />
+    <street name="本布图镇" code="652829101" />
+    <street name="塔温觉肯乡" code="652829200" />
+    <street name="乌兰再格森乡" code="652829202" />
+    <street name="才坎诺尔乡" code="652829203" />
+    <street name="查干诺尔乡" code="652829204" />
+    <street name="博斯腾湖乡" code="652829205" />
+    <street name="兵团二十五团" code="652829501" />
+</county>
+</city>
+</address>

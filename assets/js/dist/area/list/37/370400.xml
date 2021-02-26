@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="枣庄" code="370400">
+<county name="市中" code="370402">
+    <street name="中心街街道" code="370402001" />
+    <street name="各塔埠街道" code="370402002" />
+    <street name="矿区街道" code="370402003" />
+    <street name="文化路街道" code="370402004" />
+    <street name="龙山路街道" code="370402005" />
+    <street name="光明路街道" code="370402006" />
+    <street name="税郭镇" code="370402101" />
+    <street name="孟庄镇" code="370402102" />
+    <street name="齐村镇" code="370402103" />
+    <street name="永安乡" code="370402201" />
+    <street name="西王庄乡" code="370402202" />
+</county>
+<county name="薛城" code="370403">
+    <street name="临城街道" code="370403001" />
+    <street name="兴仁街道" code="370403002" />
+    <street name="兴城街道" code="370403003" />
+    <street name="张范街道" code="370403004" />
+    <street name="沙沟镇" code="370403101" />
+    <street name="周营镇" code="370403102" />
+    <street name="邹坞镇" code="370403103" />
+    <street name="陶庄镇" code="370403104" />
+    <street name="常庄镇" code="370403106" />
+</county>
+<county name="峄城" code="370404">
+    <street name="坛山街道" code="370404001" />
+    <street name="吴林街道" code="370404002" />
+    <street name="古邵镇" code="370404100" />
+    <street name="阴平镇" code="370404101" />
+    <street name="底阁镇" code="370404102" />
+    <street name="榴园镇" code="370404103" />
+    <street name="峨山镇" code="370404104" />
+</county>
+<county name="台儿庄" code="370405">
+    <street name="运河街道" code="370405001" />
+    <street name="邳庄镇" code="370405100" />
+    <street name="张山子镇" code="370405101" />
+    <street name="泥沟镇" code="370405102" />
+    <street name="涧头集镇" code="370405103" />
+    <street name="马兰屯镇" code="370405104" />
+</county>
+<county name="山亭" code="370406">
+    <street name="山城街道" code="370406001" />
+    <street name="店子镇" code="370406101" />
+    <street name="西集镇" code="370406102" />
+    <street name="桑村镇" code="370406103" />
+    <street name="北庄镇" code="370406104" />
+    <street name="城头镇" code="370406105" />
+    <street name="徐庄镇" code="370406106" />
+    <street name="水泉镇" code="370406107" />
+    <street name="冯卯镇" code="370406108" />
+    <street name="凫城镇" code="370406109" />
+</county>
+<county name="滕州" code="370481">
+    <street name="荆河街道" code="370481001" />
+    <street name="龙泉街道" code="370481002" />
+    <street name="北辛街道" code="370481003" />
+    <street name="善南街道" code="370481004" />
+    <street name="东沙河镇" code="370481100" />
+    <street name="洪绪镇" code="370481101" />
+    <street name="南沙河镇" code="370481102" />
+    <street name="大坞镇" code="370481103" />
+    <street name="滨湖镇" code="370481104" />
+    <street name="级索镇" code="370481105" />
+    <street name="西岗镇" code="370481106" />
+    <street name="姜屯镇" code="370481107" />
+    <street name="鲍沟镇" code="370481108" />
+    <street name="张汪镇" code="370481109" />
+    <street name="官桥镇" code="370481110" />
+    <street name="柴胡店镇" code="370481111" />
+    <street name="羊庄镇" code="370481112" />
+    <street name="木石镇" code="370481113" />
+    <street name="界河镇" code="370481114" />
+    <street name="龙阳镇" code="370481115" />
+    <street name="东郭镇" code="370481116" />
+</county>
+</city>
+</address>

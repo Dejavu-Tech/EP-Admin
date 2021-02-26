@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="吐鲁番" code="652100">
+<county name="高昌" code="652101">
+    <street name="老城街道" code="652101001" />
+    <street name="高昌街道" code="652101002" />
+    <street name="葡萄沟街道" code="652101003" />
+    <street name="七泉湖镇" code="652101100" />
+    <street name="大河沿镇" code="652101101" />
+    <street name="亚尔镇" code="652101200" />
+    <street name="艾丁湖乡" code="652101201" />
+    <street name="葡萄乡" code="652101202" />
+    <street name="恰特喀勒乡" code="652101203" />
+    <street name="二堡乡" code="652101204" />
+    <street name="三堡乡" code="652101205" />
+    <street name="胜金乡" code="652101206" />
+    <street name="红柳河园艺场" code="652101400" />
+    <street name="原种场" code="652101401" />
+    <street name="兵团二二一团" code="652101502" />
+</county>
+<county name="鄯善" code="652122">
+    <street name="鄯善镇" code="652122100" />
+    <street name="七克台镇" code="652122101" />
+    <street name="火车站镇" code="652122102" />
+    <street name="连木沁镇" code="652122103" />
+    <street name="鲁克沁镇" code="652122104" />
+    <street name="辟展乡" code="652122200" />
+    <street name="东巴扎回族民族乡" code="652122201" />
+    <street name="吐峪沟乡" code="652122202" />
+    <street name="达浪坎乡" code="652122203" />
+    <street name="迪坎乡" code="652122204" />
+    <street name="南山矿区" code="652122400" />
+    <street name="园艺场" code="652122500" />
+</county>
+<county name="托克逊" code="652123">
+    <street name="托克逊镇" code="652123100" />
+    <street name="库米什镇" code="652123101" />
+    <street name="库加依镇" code="652123102" />
+    <street name="阿乐惠镇" code="652123103" />
+    <street name="夏乡" code="652123200" />
+    <street name="郭勒布依乡" code="652123201" />
+    <street name="伊拉湖乡" code="652123202" />
+    <street name="博斯坦乡" code="652123203" />
+</county>
+</city>
+</address>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="吴忠" code="640300">
+<county name="利通" code="640302">
+    <street name="金积镇" code="640302100" />
+    <street name="金银滩镇" code="640302101" />
+    <street name="高闸镇" code="640302102" />
+    <street name="扁担沟镇" code="640302103" />
+    <street name="上桥镇" code="640302104" />
+    <street name="古城镇" code="640302105" />
+    <street name="金星镇" code="640302106" />
+    <street name="胜利镇" code="640302107" />
+    <street name="东塔寺乡" code="640302200" />
+    <street name="板桥乡" code="640302201" />
+    <street name="马莲渠乡" code="640302202" />
+    <street name="郭家桥乡" code="640302203" />
+    <street name="巴浪湖农场" code="640302400" />
+    <street name="孙家滩管委会" code="640302401" />
+    <street name="太阳山开发区" code="640302402" />
+</county>
+<county name="红寺堡" code="640303">
+    <street name="红寺堡开发区红寺堡镇" code="640303100" />
+    <street name="红寺堡开发区太阳山镇" code="640303101" />
+    <street name="红寺堡开发区大河乡" code="640303200" />
+    <street name="红寺堡开发区南川乡" code="640303201" />
+    <street name="红寺堡工业园区管委会" code="640303400" />
+</county>
+<county name="盐池" code="640323">
+    <street name="花马池镇" code="640323100" />
+    <street name="大水坑镇" code="640323101" />
+    <street name="惠安堡镇" code="640323102" />
+    <street name="高沙窝镇" code="640323103" />
+    <street name="王乐井乡" code="640323200" />
+    <street name="冯记沟乡" code="640323201" />
+    <street name="青山乡" code="640323202" />
+    <street name="麻黄山乡" code="640323203" />
+</county>
+<county name="同心" code="640324">
+    <street name="豫海镇" code="640324100" />
+    <street name="河西镇" code="640324101" />
+    <street name="韦州镇" code="640324102" />
+    <street name="下马关镇" code="640324103" />
+    <street name="预旺镇" code="640324104" />
+    <street name="王团镇" code="640324105" />
+    <street name="丁塘镇" code="640324106" />
+    <street name="田老庄乡" code="640324201" />
+    <street name="马高庄乡" code="640324202" />
+    <street name="张家塬乡" code="640324203" />
+    <street name="兴隆乡" code="640324204" />
+</county>
+<county name="青铜峡" code="640381">
+    <street name="裕民街道" code="640381001" />
+    <street name="小坝镇" code="640381100" />
+    <street name="大坝镇" code="640381101" />
+    <street name="青铜峡镇" code="640381102" />
+    <street name="叶盛镇" code="640381103" />
+    <street name="瞿靖镇" code="640381104" />
+    <street name="峡口镇" code="640381105" />
+    <street name="邵岗镇" code="640381106" />
+    <street name="陈袁滩镇" code="640381107" />
+    <street name="连湖农场" code="640381400" />
+    <street name="树新林场" code="640381401" />
+</county>
+</city>
+</address>

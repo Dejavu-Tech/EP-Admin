@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="漳州" code="350600">
+<county name="芗城" code="350602">
+    <street name="东铺头街道" code="350602001" />
+    <street name="西桥街道" code="350602002" />
+    <street name="新桥街道" code="350602003" />
+    <street name="巷口街道" code="350602004" />
+    <street name="南坑街道" code="350602005" />
+    <street name="通北街道" code="350602006" />
+    <street name="浦南镇" code="350602100" />
+    <street name="天宝镇" code="350602101" />
+    <street name="芝山镇" code="350602102" />
+    <street name="石亭镇" code="350602103" />
+    <street name="芗城区奶牛场" code="350602400" />
+    <street name="后房农场" code="350602401" />
+    <street name="天宝林场" code="350602402" />
+    <street name="五峰农场" code="350602404" />
+</county>
+<county name="龙文" code="350603">
+    <street name="蓝田镇" code="350603100" />
+    <street name="步文镇" code="350603101" />
+    <street name="朝阳镇" code="350603102" />
+    <street name="郭坑镇" code="350603103" />
+    <street name="蓝田开发区管委会" code="350603500" />
+</county>
+<county name="云霄" code="350622">
+    <street name="云陵镇" code="350622100" />
+    <street name="陈岱镇" code="350622101" />
+    <street name="东厦镇" code="350622102" />
+    <street name="莆美镇" code="350622103" />
+    <street name="列屿镇" code="350622104" />
+    <street name="火田镇" code="350622105" />
+    <street name="下河乡" code="350622200" />
+    <street name="马铺乡" code="350622201" />
+    <street name="和平乡" code="350622202" />
+    <street name="和平农场" code="350622400" />
+    <street name="常山华侨经济开发区" code="350622500" />
+    <street name="云陵工业开发区" code="350622501" />
+</county>
+<county name="漳浦" code="350623">
+    <street name="绥安镇" code="350623100" />
+    <street name="旧镇镇" code="350623101" />
+    <street name="佛昙镇" code="350623102" />
+    <street name="赤湖镇" code="350623103" />
+    <street name="杜浔镇" code="350623104" />
+    <street name="霞美镇" code="350623105" />
+    <street name="官浔镇" code="350623106" />
+    <street name="石榴镇" code="350623107" />
+    <street name="盘陀镇" code="350623108" />
+    <street name="长桥镇" code="350623109" />
+    <street name="前亭镇" code="350623110" />
+    <street name="马坪镇" code="350623111" />
+    <street name="深土镇" code="350623112" />
+    <street name="六鳌镇" code="350623113" />
+    <street name="沙西镇" code="350623114" />
+    <street name="古雷镇" code="350623115" />
+    <street name="大南坂镇" code="350623116" />
+    <street name="南浦乡" code="350623200" />
+    <street name="赤岭畲族乡" code="350623201" />
+    <street name="湖西畲族乡" code="350623202" />
+    <street name="赤土乡" code="350623203" />
+    <street name="漳浦盐场" code="350623400" />
+    <street name="万安农场" code="350623401" />
+    <street name="石古农场" code="350623402" />
+    <street name="长桥农场" code="350623403" />
+    <street name="白竹湖农场" code="350623404" />
+    <street name="南山华侨茶果场" code="350623405" />
+    <street name="中西林场" code="350623406" />
+    <street name="玳瑁山茶场" code="350623407" />
+    <street name="下蔡林场" code="350623408" />
+</county>
+<county name="诏安" code="350624">
+    <street name="南诏镇" code="350624100" />
+    <street name="四都镇" code="350624101" />
+    <street name="梅岭镇" code="350624102" />
+    <street name="桥东镇" code="350624103" />
+    <street name="深桥镇" code="350624104" />
+    <street name="太平镇" code="350624105" />
+    <street name="霞葛镇" code="350624106" />
+    <street name="官陂镇" code="350624107" />
+    <street name="秀篆镇" code="350624108" />
+    <street name="金星乡" code="350624200" />
+    <street name="西潭乡" code="350624201" />
+    <street name="白洋乡" code="350624202" />
+    <street name="建设乡" code="350624203" />
+    <street name="红星乡" code="350624204" />
+    <street name="梅洲乡" code="350624205" />
+    <street name="国营西山农场" code="350624401" />
+    <street name="国营湖内林场" code="350624402" />
+    <street name="岭下溪国有防护林场" code="350624403" />
+    <street name="诏安工业园区管委会" code="350624501" />
+    <street name="诏安金都工业集中区管委会" code="350624502" />
+</county>
+<county name="长泰" code="350625">
+    <street name="武安镇" code="350625100" />
+    <street name="岩溪镇" code="350625101" />
+    <street name="陈巷镇" code="350625102" />
+    <street name="枋洋镇" code="350625103" />
+    <street name="坂里乡" code="350625200" />
+    <street name="国营古农农场" code="350625400" />
+    <street name="长泰经济开发区" code="350625500" />
+    <street name="马洋溪生态旅游区" code="350625501" />
+    <street name="林墩工业区" code="350625502" />
+</county>
+<county name="东山" code="350626">
+    <street name="西埔镇" code="350626100" />
+    <street name="樟塘镇" code="350626101" />
+    <street name="康美镇" code="350626102" />
+    <street name="杏陈镇" code="350626103" />
+    <street name="陈城镇" code="350626104" />
+    <street name="前楼镇" code="350626105" />
+    <street name="铜陵镇" code="350626106" />
+</county>
+<county name="南靖" code="350627">
+    <street name="山城镇" code="350627100" />
+    <street name="丰田镇" code="350627101" />
+    <street name="靖城镇" code="350627102" />
+    <street name="龙山镇" code="350627103" />
+    <street name="金山镇" code="350627104" />
+    <street name="和溪镇" code="350627105" />
+    <street name="奎洋镇" code="350627106" />
+    <street name="梅林镇" code="350627107" />
+    <street name="书洋镇" code="350627108" />
+    <street name="船场镇" code="350627109" />
+    <street name="南坑镇" code="350627110" />
+    <street name="大房农场" code="350627400" />
+</county>
+<county name="平和" code="350628">
+    <street name="小溪镇" code="350628100" />
+    <street name="山格镇" code="350628101" />
+    <street name="文峰镇" code="350628102" />
+    <street name="南胜镇" code="350628103" />
+    <street name="坂仔镇" code="350628104" />
+    <street name="安厚镇" code="350628105" />
+    <street name="大溪镇" code="350628106" />
+    <street name="霞寨镇" code="350628107" />
+    <street name="九峰镇" code="350628108" />
+    <street name="芦溪镇" code="350628109" />
+    <street name="五寨乡" code="350628200" />
+    <street name="国强乡" code="350628201" />
+    <street name="崎岭乡" code="350628202" />
+    <street name="长乐乡" code="350628203" />
+    <street name="秀峰乡" code="350628204" />
+    <street name="安厚农场" code="350628400" />
+    <street name="福建平和工业园区" code="350628401" />
+</county>
+<county name="华安" code="350629">
+    <street name="华丰镇" code="350629100" />
+    <street name="丰山镇" code="350629101" />
+    <street name="沙建镇" code="350629102" />
+    <street name="新圩镇" code="350629103" />
+    <street name="高安镇" code="350629104" />
+    <street name="仙都镇" code="350629105" />
+    <street name="高车乡" code="350629200" />
+    <street name="马坑乡" code="350629201" />
+    <street name="湖林乡" code="350629203" />
+    <street name="福建土楼（华安）旅游区" code="350629400" />
+</county>
+<county name="龙海" code="350681">
+    <street name="石码镇" code="350681100" />
+    <street name="海澄镇" code="350681101" />
+    <street name="角美镇" code="350681102" />
+    <street name="白水镇" code="350681103" />
+    <street name="浮宫镇" code="350681104" />
+    <street name="程溪镇" code="350681105" />
+    <street name="港尾镇" code="350681106" />
+    <street name="九湖镇" code="350681107" />
+    <street name="颜厝镇" code="350681108" />
+    <street name="榜山镇" code="350681109" />
+    <street name="紫泥镇" code="350681110" />
+    <street name="东园镇" code="350681111" />
+    <street name="东泗乡" code="350681200" />
+    <street name="隆教畲族乡" code="350681201" />
+    <street name="双第华侨农场" code="350681400" />
+    <street name="九龙岭林场" code="350681401" />
+    <street name="程溪农场" code="350681402" />
+    <street name="良种场" code="350681403" />
+    <street name="苍坂农场" code="350681404" />
+    <street name="林下林场" code="350681405" />
+    <street name="角美工业开发区" code="350681500" />
+    <street name="招商局漳州开发区" code="350681501" />
+    <street name="东园开发区" code="350681502" />
+    <street name="龙池开发区" code="350681503" />
+</county>
+</city>
+</address>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="衡水" code="131100">
+<county name="桃城" code="131102">
+    <street name="河西街道" code="131102001" />
+    <street name="河东街道" code="131102002" />
+    <street name="路北街道" code="131102003" />
+    <street name="中华街道" code="131102004" />
+    <street name="郑家河沿镇" code="131102100" />
+    <street name="赵家圈镇" code="131102101" />
+    <street name="邓庄镇" code="131102102" />
+    <street name="何家庄乡" code="131102200" />
+    <street name="大麻森乡" code="131102201" />
+    <street name="彭杜村乡" code="131102203" />
+    <street name="衡水高新技术产业开发区" code="131102400" />
+    <street name="衡水湖自然保护区管理处" code="131102401" />
+</county>
+<county name="枣强" code="131121">
+    <street name="枣强镇" code="131121100" />
+    <street name="恩察镇" code="131121101" />
+    <street name="大营镇" code="131121102" />
+    <street name="嘉会镇" code="131121103" />
+    <street name="马屯镇" code="131121104" />
+    <street name="肖张镇" code="131121105" />
+    <street name="张秀屯乡" code="131121200" />
+    <street name="新屯乡" code="131121201" />
+    <street name="王均乡" code="131121202" />
+    <street name="唐林乡" code="131121203" />
+    <street name="王常乡" code="131121204" />
+</county>
+<county name="武邑" code="131122">
+    <street name="武邑镇" code="131122100" />
+    <street name="清凉店镇" code="131122101" />
+    <street name="审坡镇" code="131122102" />
+    <street name="赵桥镇" code="131122103" />
+    <street name="韩庄镇" code="131122104" />
+    <street name="肖桥头镇" code="131122105" />
+    <street name="龙店乡" code="131122200" />
+    <street name="圈头乡" code="131122201" />
+    <street name="大紫塔乡" code="131122203" />
+</county>
+<county name="武强" code="131123">
+    <street name="武强镇" code="131123100" />
+    <street name="街关镇" code="131123101" />
+    <street name="周窝镇" code="131123102" />
+    <street name="豆村乡" code="131123200" />
+    <street name="北代乡" code="131123201" />
+    <street name="孙庄乡" code="131123202" />
+</county>
+<county name="饶阳" code="131124">
+    <street name="饶阳镇" code="131124100" />
+    <street name="大尹村镇" code="131124101" />
+    <street name="五公镇" code="131124102" />
+    <street name="大官亭镇" code="131124103" />
+    <street name="王同岳乡" code="131124200" />
+    <street name="留楚乡" code="131124202" />
+    <street name="东里满乡" code="131124203" />
+</county>
+<county name="安平" code="131125">
+    <street name="安平镇" code="131125100" />
+    <street name="马店镇" code="131125101" />
+    <street name="南王庄镇" code="131125102" />
+    <street name="大何庄乡" code="131125200" />
+    <street name="程油子乡" code="131125201" />
+    <street name="西两洼乡" code="131125202" />
+    <street name="大子文乡" code="131125203" />
+    <street name="东黄城乡" code="131125204" />
+</county>
+<county name="故城" code="131126">
+    <street name="郑口镇" code="131126100" />
+    <street name="夏庄镇" code="131126101" />
+    <street name="青罕镇" code="131126102" />
+    <street name="故城镇" code="131126103" />
+    <street name="武官寨镇" code="131126104" />
+    <street name="饶阳店镇" code="131126105" />
+    <street name="军屯镇" code="131126106" />
+    <street name="建国镇" code="131126107" />
+    <street name="西半屯镇" code="131126108" />
+    <street name="辛庄乡" code="131126200" />
+    <street name="里老乡" code="131126201" />
+    <street name="房庄乡" code="131126202" />
+    <street name="三朗乡" code="131126203" />
+</county>
+<county name="景县" code="131127">
+    <street name="景州镇" code="131127100" />
+    <street name="龙华镇" code="131127101" />
+    <street name="广川镇" code="131127102" />
+    <street name="王瞳镇" code="131127103" />
+    <street name="洚河流镇" code="131127104" />
+    <street name="安陵镇" code="131127105" />
+    <street name="杜桥镇" code="131127106" />
+    <street name="王谦寺镇" code="131127107" />
+    <street name="北留智镇" code="131127108" />
+    <street name="留智庙镇" code="131127109" />
+    <street name="刘集乡" code="131127200" />
+    <street name="连镇乡" code="131127201" />
+    <street name="梁集乡" code="131127202" />
+    <street name="温城乡" code="131127203" />
+    <street name="后留名府乡" code="131127204" />
+    <street name="青兰乡" code="131127205" />
+</county>
+<county name="阜城" code="131128">
+    <street name="阜城镇" code="131128100" />
+    <street name="古城镇" code="131128101" />
+    <street name="码头镇" code="131128102" />
+    <street name="霞口镇" code="131128103" />
+    <street name="崔家庙镇" code="131128104" />
+    <street name="漫河乡" code="131128200" />
+    <street name="建桥乡" code="131128201" />
+    <street name="蒋坊乡" code="131128202" />
+    <street name="大白乡" code="131128203" />
+    <street name="王集乡" code="131128204" />
+</county>
+<county name="冀州" code="131181">
+    <street name="冀州镇" code="131181100" />
+    <street name="魏家屯镇" code="131181101" />
+    <street name="官道李镇" code="131181102" />
+    <street name="南午村镇" code="131181103" />
+    <street name="周村镇" code="131181104" />
+    <street name="码头李镇" code="131181105" />
+    <street name="西王镇" code="131181106" />
+    <street name="门家庄乡" code="131181200" />
+    <street name="徐家庄乡" code="131181201" />
+    <street name="北漳淮乡" code="131181202" />
+    <street name="小寨乡" code="131181203" />
+</county>
+<county name="深州" code="131182">
+    <street name="唐奉镇" code="131182100" />
+    <street name="深州镇" code="131182101" />
+    <street name="辰时镇" code="131182102" />
+    <street name="榆科镇" code="131182103" />
+    <street name="魏家桥镇" code="131182104" />
+    <street name="大堤镇" code="131182105" />
+    <street name="前磨头镇" code="131182106" />
+    <street name="王家井镇" code="131182107" />
+    <street name="护驾迟镇" code="131182108" />
+    <street name="大屯镇" code="131182109" />
+    <street name="兵曹乡" code="131182200" />
+    <street name="穆村乡" code="131182201" />
+    <street name="东安庄乡" code="131182202" />
+    <street name="北溪村乡" code="131182203" />
+    <street name="大冯营乡" code="131182204" />
+    <street name="乔屯乡" code="131182206" />
+    <street name="太古庄乡" code="131182207" />
+    <street name="河北省深州监狱" code="131182400" />
+    <street name="深州市城市新区管理委员会" code="131182401" />
+    <street name="深州市双井经济开发区" code="131182402" />
+</county>
+</city>
+</address>

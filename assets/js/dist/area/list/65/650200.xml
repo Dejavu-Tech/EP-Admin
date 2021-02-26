@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="克拉玛依" code="650200">
+<county name="独山子" code="650202">
+    <street name="金山路街道" code="650202001" />
+    <street name="西宁路街道" code="650202002" />
+    <street name="新北区办事处" code="650202003" />
+</county>
+<county name="克拉玛依" code="650203">
+    <street name="天山路街道" code="650203001" />
+    <street name="胜利路街道" code="650203002" />
+    <street name="昆仑路街道" code="650203003" />
+    <street name="银河路街道" code="650203004" />
+    <street name="金龙镇街道" code="650203005" />
+    <street name="五五新镇街道" code="650203006" />
+    <street name="小拐乡" code="650203200" />
+    <street name="农业开发区" code="650203400" />
+    <street name="兵团一二九团" code="650203506" />
+    <street name="兵团一三六团" code="650203530" />
+</county>
+<county name="白碱滩" code="650204">
+    <street name="中兴路街道" code="650204001" />
+    <street name="三平路街道" code="650204002" />
+</county>
+<county name="乌尔禾" code="650205">
+    <street name="柳树街街道" code="650205001" />
+    <street name="乌尔禾镇" code="650205200" />
+    <street name="兵团一三七团" code="650205509" />
+</county>
+</city>
+</address>

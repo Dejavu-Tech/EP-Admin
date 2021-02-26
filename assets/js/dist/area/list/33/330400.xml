@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="嘉兴" code="330400">
+<county name="南湖" code="330402">
+    <street name="建设街道" code="330402007" />
+    <street name="解放街道" code="330402008" />
+    <street name="新嘉街道" code="330402009" />
+    <street name="南湖街道" code="330402010" />
+    <street name="新兴街道" code="330402011" />
+    <street name="城南街道" code="330402012" />
+    <street name="东栅街道" code="330402013" />
+    <street name="长水街道" code="330402014" />
+    <street name="凤桥镇" code="330402100" />
+    <street name="余新镇" code="330402101" />
+    <street name="新丰镇" code="330402103" />
+    <street name="七星镇" code="330402104" />
+    <street name="大桥镇" code="330402105" />
+</county>
+<county name="秀洲" code="330411">
+    <street name="新城街道" code="330411002" />
+    <street name="嘉北街道" code="330411003" />
+    <street name="塘汇街道" code="330411004" />
+    <street name="高照街道" code="330411005" />
+    <street name="王江泾镇" code="330411101" />
+    <street name="油车港镇" code="330411103" />
+    <street name="新塍镇" code="330411104" />
+    <street name="王店镇" code="330411105" />
+    <street name="洪合镇" code="330411106" />
+</county>
+<county name="嘉善" code="330421">
+    <street name="魏塘街道" code="330421001" />
+    <street name="罗星街道" code="330421002" />
+    <street name="惠民街道" code="330421003" />
+    <street name="大云镇" code="330421102" />
+    <street name="西塘镇" code="330421103" />
+    <street name="干窑镇" code="330421105" />
+    <street name="陶庄镇" code="330421107" />
+    <street name="姚庄镇" code="330421111" />
+    <street name="天凝镇" code="330421112" />
+</county>
+<county name="海盐" code="330424">
+    <street name="武原街道" code="330424001" />
+    <street name="西塘桥街道" code="330424002" />
+    <street name="元通街道" code="330424003" />
+    <street name="秦山街道" code="330424004" />
+    <street name="沈荡镇" code="330424101" />
+    <street name="百步镇" code="330424102" />
+    <street name="于城镇" code="330424103" />
+    <street name="澉浦镇" code="330424105" />
+    <street name="通元镇" code="330424106" />
+</county>
+<county name="海宁" code="330481">
+    <street name="硖石街道" code="330481001" />
+    <street name="海洲街道" code="330481002" />
+    <street name="海昌街道" code="330481003" />
+    <street name="马桥街道" code="330481004" />
+    <street name="许村镇" code="330481101" />
+    <street name="长安镇" code="330481103" />
+    <street name="周王庙镇" code="330481105" />
+    <street name="丁桥镇" code="330481106" />
+    <street name="斜桥镇" code="330481107" />
+    <street name="黄湾镇" code="330481108" />
+    <street name="盐官镇" code="330481110" />
+    <street name="袁花镇" code="330481112" />
+</county>
+<county name="平湖" code="330482">
+    <street name="当湖街道" code="330482001" />
+    <street name="钟埭街道" code="330482002" />
+    <street name="曹桥街道" code="330482003" />
+    <street name="乍浦镇" code="330482101" />
+    <street name="新埭镇" code="330482102" />
+    <street name="新仓镇" code="330482103" />
+    <street name="广陈镇" code="330482106" />
+    <street name="林埭镇" code="330482107" />
+    <street name="独山港镇" code="330482108" />
+</county>
+<county name="桐乡" code="330483">
+    <street name="梧桐街道" code="330483001" />
+    <street name="龙翔街道" code="330483002" />
+    <street name="凤鸣街道" code="330483003" />
+    <street name="乌镇镇" code="330483100" />
+    <street name="濮院镇" code="330483101" />
+    <street name="屠甸镇" code="330483102" />
+    <street name="石门镇" code="330483103" />
+    <street name="河山镇" code="330483104" />
+    <street name="洲泉镇" code="330483105" />
+    <street name="大麻镇" code="330483106" />
+    <street name="崇福镇" code="330483107" />
+    <street name="高桥镇" code="330483108" />
+</county>
+</city>
+</address>

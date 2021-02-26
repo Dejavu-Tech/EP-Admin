@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="庆阳" code="621000">
+<county name="西峰" code="621002">
+    <street name="北街办事处" code="621002001" />
+    <street name="南街办事处" code="621002002" />
+    <street name="西街办事处" code="621002003" />
+    <street name="肖金镇" code="621002100" />
+    <street name="董志镇" code="621002101" />
+    <street name="后官寨乡" code="621002200" />
+    <street name="彭原乡" code="621002201" />
+    <street name="温泉乡" code="621002202" />
+    <street name="什社乡" code="621002203" />
+    <street name="显胜乡" code="621002204" />
+</county>
+<county name="庆城" code="621021">
+    <street name="庆城镇" code="621021100" />
+    <street name="驿马镇" code="621021101" />
+    <street name="三十里铺镇" code="621021102" />
+    <street name="马岭镇" code="621021103" />
+    <street name="玄马镇" code="621021104" />
+    <street name="赤城乡" code="621021200" />
+    <street name="白马铺乡" code="621021201" />
+    <street name="桐川乡" code="621021202" />
+    <street name="太白梁乡" code="621021203" />
+    <street name="土桥乡" code="621021204" />
+    <street name="蔡口集乡" code="621021205" />
+    <street name="高楼乡" code="621021206" />
+    <street name="南庄乡" code="621021207" />
+    <street name="翟家河乡" code="621021208" />
+    <street name="蔡家庙乡" code="621021209" />
+</county>
+<county name="环县" code="621022">
+    <street name="环城镇" code="621022100" />
+    <street name="曲子镇" code="621022101" />
+    <street name="甜水镇" code="621022102" />
+    <street name="木钵镇" code="621022103" />
+    <street name="天池乡" code="621022200" />
+    <street name="演武乡" code="621022201" />
+    <street name="合道乡" code="621022202" />
+    <street name="樊家川乡" code="621022203" />
+    <street name="八珠乡" code="621022204" />
+    <street name="洪德乡" code="621022205" />
+    <street name="耿湾乡" code="621022206" />
+    <street name="秦团庄乡" code="621022207" />
+    <street name="山城乡" code="621022208" />
+    <street name="南湫乡" code="621022209" />
+    <street name="罗山川乡" code="621022210" />
+    <street name="虎洞乡" code="621022211" />
+    <street name="小南沟乡" code="621022212" />
+    <street name="车道乡" code="621022213" />
+    <street name="毛井乡" code="621022214" />
+    <street name="芦家湾乡" code="621022215" />
+    <street name="四合原旅游开发办公室" code="621022500" />
+</county>
+<county name="华池" code="621023">
+    <street name="悦乐镇" code="621023100" />
+    <street name="柔远镇" code="621023101" />
+    <street name="元城镇" code="621023102" />
+    <street name="南梁镇" code="621023103" />
+    <street name="城壕乡" code="621023200" />
+    <street name="五蛟乡" code="621023201" />
+    <street name="上里塬乡" code="621023202" />
+    <street name="王咀子乡" code="621023203" />
+    <street name="白马乡" code="621023204" />
+    <street name="怀安乡" code="621023205" />
+    <street name="乔川乡" code="621023206" />
+    <street name="乔河乡" code="621023207" />
+    <street name="山庄乡" code="621023208" />
+    <street name="林镇乡" code="621023210" />
+    <street name="紫坊畔乡" code="621023211" />
+</county>
+<county name="合水" code="621024">
+    <street name="西华池镇" code="621024100" />
+    <street name="老城镇" code="621024101" />
+    <street name="太白镇" code="621024102" />
+    <street name="吉岘乡" code="621024200" />
+    <street name="肖咀乡" code="621024201" />
+    <street name="段家集乡" code="621024202" />
+    <street name="固城乡" code="621024203" />
+    <street name="太莪乡" code="621024204" />
+    <street name="店子乡" code="621024205" />
+    <street name="何家畔乡" code="621024206" />
+    <street name="板桥乡" code="621024207" />
+    <street name="蒿咀铺乡" code="621024208" />
+</county>
+<county name="正宁" code="621025">
+    <street name="山河镇" code="621025100" />
+    <street name="榆林子镇" code="621025101" />
+    <street name="宫河镇" code="621025102" />
+    <street name="永和镇" code="621025103" />
+    <street name="西坡乡" code="621025200" />
+    <street name="永正乡" code="621025201" />
+    <street name="周家乡" code="621025202" />
+    <street name="湫头乡" code="621025203" />
+    <street name="五顷原乡" code="621025204" />
+    <street name="三嘉乡" code="621025205" />
+</county>
+<county name="宁县" code="621026">
+    <street name="新宁镇" code="621026100" />
+    <street name="平子镇" code="621026101" />
+    <street name="早胜镇" code="621026102" />
+    <street name="长庆桥镇" code="621026103" />
+    <street name="和盛镇" code="621026104" />
+    <street name="湘乐镇" code="621026105" />
+    <street name="新庄镇" code="621026106" />
+    <street name="盘克镇" code="621026107" />
+    <street name="米桥乡" code="621026200" />
+    <street name="良平乡" code="621026201" />
+    <street name="中村乡" code="621026202" />
+    <street name="太昌乡" code="621026203" />
+    <street name="焦村乡" code="621026204" />
+    <street name="南义乡" code="621026205" />
+    <street name="瓦斜乡" code="621026206" />
+    <street name="金村乡" code="621026207" />
+    <street name="九岘乡" code="621026208" />
+    <street name="春荣乡" code="621026209" />
+</county>
+<county name="镇原" code="621027">
+    <street name="城关镇" code="621027100" />
+    <street name="屯字镇" code="621027101" />
+    <street name="孟坝镇" code="621027102" />
+    <street name="三岔镇" code="621027103" />
+    <street name="平泉镇" code="621027104" />
+    <street name="开边镇" code="621027105" />
+    <street name="太平镇" code="621027106" />
+    <street name="临泾乡" code="621027200" />
+    <street name="南川乡" code="621027201" />
+    <street name="上肖乡" code="621027202" />
+    <street name="新集乡" code="621027203" />
+    <street name="方山乡" code="621027204" />
+    <street name="殷家城乡" code="621027205" />
+    <street name="马渠乡" code="621027206" />
+    <street name="庙渠乡" code="621027207" />
+    <street name="武沟乡" code="621027208" />
+    <street name="郭原乡" code="621027209" />
+    <street name="中原乡" code="621027210" />
+    <street name="新城乡" code="621027211" />
+</county>
+</city>
+</address>

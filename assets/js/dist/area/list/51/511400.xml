@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="眉山" code="511400">
+<county name="东坡" code="511402">
+    <street name="通惠街道" code="511402001" />
+    <street name="大石桥街道" code="511402002" />
+    <street name="苏祠街道" code="511402003" />
+    <street name="白马镇" code="511402100" />
+    <street name="象耳镇" code="511402101" />
+    <street name="太和镇" code="511402102" />
+    <street name="悦兴镇" code="511402103" />
+    <street name="尚义镇" code="511402104" />
+    <street name="多悦镇" code="511402105" />
+    <street name="秦家镇" code="511402106" />
+    <street name="万胜镇" code="511402107" />
+    <street name="崇仁镇" code="511402108" />
+    <street name="思蒙镇" code="511402109" />
+    <street name="修文镇" code="511402110" />
+    <street name="松江镇" code="511402112" />
+    <street name="崇礼镇" code="511402113" />
+    <street name="富牛镇" code="511402114" />
+    <street name="永寿镇" code="511402115" />
+    <street name="三苏乡" code="511402204" />
+    <street name="广济乡" code="511402205" />
+    <street name="盘鳌乡" code="511402206" />
+    <street name="土地乡" code="511402210" />
+    <street name="复盛乡" code="511402211" />
+    <street name="复兴乡" code="511402212" />
+    <street name="金花乡" code="511402213" />
+    <street name="柳圣乡" code="511402214" />
+</county>
+<county name="仁寿" code="511421">
+    <street name="文宫镇" code="511421102" />
+    <street name="禾加镇" code="511421112" />
+    <street name="龙马镇" code="511421116" />
+    <street name="方加镇" code="511421117" />
+    <street name="文林镇" code="511421123" />
+    <street name="大化镇" code="511421124" />
+    <street name="高家镇" code="511421125" />
+    <street name="中农镇" code="511421126" />
+    <street name="禄加镇" code="511421127" />
+    <street name="宝飞镇" code="511421128" />
+    <street name="彰加镇" code="511421129" />
+    <street name="慈航镇" code="511421130" />
+    <street name="汪洋镇" code="511421131" />
+    <street name="钟祥镇" code="511421132" />
+    <street name="始建镇" code="511421133" />
+    <street name="满井镇" code="511421134" />
+    <street name="富加镇" code="511421135" />
+    <street name="龙正镇" code="511421136" />
+    <street name="黑龙滩镇" code="511421137" />
+    <street name="清水镇" code="511421138" />
+    <street name="视高镇" code="511421139" />
+    <street name="北斗镇" code="511421140" />
+    <street name="兴盛镇" code="511421141" />
+    <street name="观寺镇" code="511421142" />
+    <street name="虞丞乡" code="511421200" />
+    <street name="青岗乡" code="511421203" />
+    <street name="古佛乡" code="511421209" />
+    <street name="板燕乡" code="511421210" />
+    <street name="石咀乡" code="511421218" />
+    <street name="藕塘乡" code="511421219" />
+    <street name="玉龙乡" code="511421222" />
+    <street name="合兴乡" code="511421232" />
+    <street name="促进乡" code="511421239" />
+    <street name="鸭池乡" code="511421251" />
+    <street name="双堡乡" code="511421254" />
+    <street name="河口乡" code="511421258" />
+    <street name="板桥乡" code="511421259" />
+    <street name="元通乡" code="511421268" />
+    <street name="向家乡" code="511421269" />
+    <street name="里仁乡" code="511421276" />
+    <street name="兆嘉乡" code="511421281" />
+    <street name="宝马乡" code="511421287" />
+    <street name="珠嘉乡" code="511421288" />
+    <street name="鳌陵乡" code="511421289" />
+    <street name="中岗乡" code="511421291" />
+    <street name="龙桥乡" code="511421292" />
+    <street name="曲江乡" code="511421293" />
+    <street name="城堰乡" code="511421294" />
+    <street name="谢安乡" code="511421295" />
+    <street name="新店乡" code="511421296" />
+    <street name="天峨乡" code="511421297" />
+    <street name="识经乡" code="511421298" />
+    <street name="凤陵乡" code="511421299" />
+    <street name="涂加乡" code="511421300" />
+    <street name="四公乡" code="511421301" />
+    <street name="松峰乡" code="511421302" />
+    <street name="曹家乡" code="511421303" />
+    <street name="景贤乡" code="511421304" />
+    <street name="农旺乡" code="511421305" />
+    <street name="洪峰乡" code="511421306" />
+</county>
+<county name="彭山" code="511422">
+    <street name="青龙镇" code="511422101" />
+    <street name="公义镇" code="511422103" />
+    <street name="观音镇" code="511422105" />
+    <street name="彭溪镇" code="511422107" />
+    <street name="黄丰镇" code="511422108" />
+    <street name="谢家镇" code="511422110" />
+    <street name="牧马镇" code="511422111" />
+    <street name="凤鸣镇" code="511422112" />
+    <street name="江口镇" code="511422113" />
+    <street name="保胜乡" code="511422205" />
+    <street name="义和乡" code="511422211" />
+    <street name="武阳乡" code="511422212" />
+    <street name="锦江乡" code="511422213" />
+</county>
+<county name="洪雅" code="511423">
+    <street name="止戈镇" code="511423101" />
+    <street name="三宝镇" code="511423102" />
+    <street name="花溪镇" code="511423108" />
+    <street name="洪川镇" code="511423112" />
+    <street name="余坪镇" code="511423113" />
+    <street name="槽渔滩镇" code="511423114" />
+    <street name="中保镇" code="511423115" />
+    <street name="东岳镇" code="511423116" />
+    <street name="柳江镇" code="511423117" />
+    <street name="高庙镇" code="511423118" />
+    <street name="瓦屋山镇" code="511423119" />
+    <street name="中山乡" code="511423200" />
+    <street name="将军乡" code="511423201" />
+    <street name="汉王乡" code="511423205" />
+    <street name="桃源乡" code="511423212" />
+</county>
+<county name="丹棱" code="511424">
+    <street name="仁美镇" code="511424102" />
+    <street name="丹棱镇" code="511424105" />
+    <street name="杨场镇" code="511424106" />
+    <street name="双桥镇" code="511424107" />
+    <street name="张场镇" code="511424108" />
+    <street name="石桥乡" code="511424200" />
+    <street name="顺龙乡" code="511424204" />
+</county>
+<county name="青神" code="511425">
+    <street name="汉阳镇" code="511425102" />
+    <street name="河坝子镇" code="511425105" />
+    <street name="南城镇" code="511425106" />
+    <street name="青城镇" code="511425107" />
+    <street name="瑞峰镇" code="511425108" />
+    <street name="黑龙镇" code="511425109" />
+    <street name="西龙镇" code="511425110" />
+    <street name="高台乡" code="511425205" />
+    <street name="白果乡" code="511425217" />
+    <street name="罗波乡" code="511425218" />
+</county>
+</city>
+</address>

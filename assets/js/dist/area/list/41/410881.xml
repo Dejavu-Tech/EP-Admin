@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="济源" code="410881">
+<county name="济源" code="410881001">
+    <street name="沁园街道" code="419001001" />
+    <street name="济水街道" code="419001002" />
+    <street name="北海街道" code="419001003" />
+    <street name="天坛街道" code="419001004" />
+    <street name="玉泉街道" code="419001005" />
+    <street name="克井镇" code="419001100" />
+    <street name="五龙口镇" code="419001101" />
+    <street name="轵城镇" code="419001102" />
+    <street name="承留镇" code="419001103" />
+    <street name="邵原镇" code="419001104" />
+    <street name="坡头镇" code="419001105" />
+    <street name="梨林镇" code="419001106" />
+    <street name="大峪镇" code="419001107" />
+    <street name="思礼镇" code="419001108" />
+    <street name="王屋镇" code="419001109" />
+    <street name="下冶镇" code="419001110" />
+</county>
+</city>
+</address>

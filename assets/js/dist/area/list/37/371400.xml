@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="德州" code="371400">
+<county name="德城" code="371402">
+    <street name="新湖街道" code="371402001" />
+    <street name="新华街道" code="371402002" />
+    <street name="天衢街道" code="371402003" />
+    <street name="运河街道" code="371402005" />
+    <street name="广川街道" code="371402006" />
+    <street name="长河街道" code="371402007" />
+    <street name="宋官屯街道" code="371402008" />
+    <street name="二屯镇" code="371402100" />
+    <street name="黄河涯镇" code="371402101" />
+    <street name="赵虎镇" code="371402106" />
+    <street name="抬头寺镇" code="371402107" />
+    <street name="袁桥镇" code="371402108" />
+</county>
+<county name="陵城" code="371421">
+    <street name="安德街道" code="371421001" />
+    <street name="临齐街道" code="371421002" />
+    <street name="郑家寨镇" code="371421101" />
+    <street name="糜镇" code="371421102" />
+    <street name="宋家镇" code="371421103" />
+    <street name="徽王庄镇" code="371421104" />
+    <street name="神头镇" code="371421105" />
+    <street name="滋镇" code="371421106" />
+    <street name="前孙镇" code="371421107" />
+    <street name="边临镇" code="371421108" />
+    <street name="义渡口镇" code="371421109" />
+    <street name="丁庄镇" code="371421110" />
+    <street name="于集乡" code="371421202" />
+</county>
+<county name="宁津" code="371422">
+    <street name="宁城街道" code="371422001" />
+    <street name="津城街道" code="371422002" />
+    <street name="柴胡店镇" code="371422101" />
+    <street name="长官镇" code="371422102" />
+    <street name="杜集镇" code="371422103" />
+    <street name="保店镇" code="371422104" />
+    <street name="大柳镇" code="371422105" />
+    <street name="大曹镇" code="371422106" />
+    <street name="相衙镇" code="371422107" />
+    <street name="时集镇" code="371422108" />
+    <street name="张大庄镇" code="371422109" />
+    <street name="刘营伍乡" code="371422201" />
+</county>
+<county name="庆云" code="371423">
+    <street name="渤海路街道" code="371423001" />
+    <street name="庆云镇" code="371423100" />
+    <street name="常家镇" code="371423101" />
+    <street name="尚堂镇" code="371423102" />
+    <street name="崔口镇" code="371423103" />
+    <street name="东辛店镇" code="371423104" />
+    <street name="严务乡" code="371423200" />
+    <street name="中丁乡" code="371423202" />
+    <street name="徐园子乡" code="371423203" />
+</county>
+<county name="临邑" code="371424">
+    <street name="邢侗街道" code="371424001" />
+    <street name="恒源街道" code="371424002" />
+    <street name="临盘街道" code="371424003" />
+    <street name="临邑镇" code="371424100" />
+    <street name="临南镇" code="371424102" />
+    <street name="德平镇" code="371424103" />
+    <street name="林子镇" code="371424104" />
+    <street name="兴隆镇" code="371424105" />
+    <street name="孟寺镇" code="371424106" />
+    <street name="翟家镇" code="371424107" />
+    <street name="理合务镇" code="371424108" />
+    <street name="宿安乡" code="371424202" />
+</county>
+<county name="齐河" code="371425">
+    <street name="晏城街道" code="371425001" />
+    <street name="晏北街道" code="371425002" />
+    <street name="表白寺镇" code="371425101" />
+    <street name="焦庙镇" code="371425102" />
+    <street name="赵官镇" code="371425103" />
+    <street name="祝阿镇" code="371425104" />
+    <street name="仁里集镇" code="371425105" />
+    <street name="潘店镇" code="371425106" />
+    <street name="胡官屯镇" code="371425107" />
+    <street name="宣章屯镇" code="371425108" />
+    <street name="马集镇" code="371425109" />
+    <street name="华店乡" code="371425200" />
+    <street name="安头乡" code="371425201" />
+    <street name="刘桥乡" code="371425203" />
+    <street name="大黄乡" code="371425204" />
+</county>
+<county name="平原" code="371426">
+    <street name="龙门街道" code="371426001" />
+    <street name="桃园街道" code="371426002" />
+    <street name="王凤楼镇" code="371426101" />
+    <street name="前曹镇" code="371426102" />
+    <street name="恩城镇" code="371426103" />
+    <street name="王庙镇" code="371426104" />
+    <street name="王杲铺镇" code="371426105" />
+    <street name="张华镇" code="371426106" />
+    <street name="腰站镇" code="371426107" />
+    <street name="王打卦镇" code="371426108" />
+    <street name="坊子乡" code="371426200" />
+    <street name="三唐乡" code="371426202" />
+</county>
+<county name="夏津" code="371427">
+    <street name="银城街道" code="371427001" />
+    <street name="北城街道" code="371427002" />
+    <street name="南城镇" code="371427100" />
+    <street name="苏留庄镇" code="371427101" />
+    <street name="新盛店镇" code="371427102" />
+    <street name="雷集镇" code="371427103" />
+    <street name="郑保屯镇" code="371427104" />
+    <street name="白马湖镇" code="371427105" />
+    <street name="东李官屯镇" code="371427106" />
+    <street name="宋楼镇" code="371427107" />
+    <street name="香赵庄镇" code="371427108" />
+    <street name="双庙镇" code="371427109" />
+    <street name="渡口驿乡" code="371427200" />
+    <street name="田庄乡" code="371427204" />
+</county>
+<county name="武城" code="371428">
+    <street name="广运街道" code="371428001" />
+    <street name="武城镇" code="371428100" />
+    <street name="老城镇" code="371428101" />
+    <street name="鲁权屯镇" code="371428103" />
+    <street name="郝王庄镇" code="371428104" />
+    <street name="甲马营镇" code="371428106" />
+    <street name="四女寺镇" code="371428107" />
+    <street name="李家户镇" code="371428108" />
+</county>
+<county name="乐陵" code="371481">
+    <street name="市中街道" code="371481001" />
+    <street name="胡家街道" code="371481002" />
+    <street name="云红街道" code="371481003" />
+    <street name="郭家街道" code="371481004" />
+    <street name="杨安镇" code="371481100" />
+    <street name="朱集镇" code="371481101" />
+    <street name="黄夹镇" code="371481102" />
+    <street name="丁坞镇" code="371481103" />
+    <street name="花园镇" code="371481104" />
+    <street name="郑店镇" code="371481105" />
+    <street name="化楼镇" code="371481106" />
+    <street name="孔镇" code="371481107" />
+    <street name="铁营镇" code="371481108" />
+    <street name="西段乡" code="371481200" />
+    <street name="大孙乡" code="371481201" />
+    <street name="寨头堡乡" code="371481203" />
+</county>
+<county name="禹城" code="371482">
+    <street name="市中街道" code="371482001" />
+    <street name="伦镇" code="371482100" />
+    <street name="房寺镇" code="371482101" />
+    <street name="张庄镇" code="371482102" />
+    <street name="辛店镇" code="371482103" />
+    <street name="安仁镇" code="371482104" />
+    <street name="辛寨镇" code="371482105" />
+    <street name="梁家镇" code="371482106" />
+    <street name="十里望镇" code="371482107" />
+    <street name="李屯乡" code="371482200" />
+    <street name="莒镇乡" code="371482202" />
+</county>
+</city>
+</address>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="晋城" code="140500">
+<county name="城区" code="140502">
+    <street name="东街街道" code="140502001" />
+    <street name="西街街道" code="140502002" />
+    <street name="南街街道" code="140502003" />
+    <street name="北街街道" code="140502004" />
+    <street name="矿区街道" code="140502005" />
+    <street name="钟家庄办事处" code="140502006" />
+    <street name="西上庄办事处" code="140502007" />
+    <street name="北石店镇" code="140502100" />
+    <street name="开发区" code="140502400" />
+</county>
+<county name="沁水" code="140521">
+    <street name="龙港镇" code="140521100" />
+    <street name="中村镇" code="140521101" />
+    <street name="郑庄镇" code="140521102" />
+    <street name="端氏镇" code="140521103" />
+    <street name="嘉峰镇" code="140521104" />
+    <street name="郑村镇" code="140521105" />
+    <street name="柿庄镇" code="140521106" />
+    <street name="樊村河乡" code="140521200" />
+    <street name="土沃乡" code="140521201" />
+    <street name="张村乡" code="140521202" />
+    <street name="苏庄乡" code="140521203" />
+    <street name="胡底乡" code="140521204" />
+    <street name="固县乡" code="140521205" />
+    <street name="十里乡" code="140521206" />
+</county>
+<county name="阳城" code="140522">
+    <street name="凤城镇" code="140522100" />
+    <street name="北留镇" code="140522101" />
+    <street name="润城镇" code="140522102" />
+    <street name="町店镇" code="140522103" />
+    <street name="芹池镇" code="140522104" />
+    <street name="次营镇" code="140522105" />
+    <street name="横河镇" code="140522106" />
+    <street name="河北镇" code="140522107" />
+    <street name="蟒河镇" code="140522108" />
+    <street name="东冶镇" code="140522109" />
+    <street name="白桑乡" code="140522200" />
+    <street name="寺头乡" code="140522201" />
+    <street name="西河乡" code="140522202" />
+    <street name="演礼乡" code="140522203" />
+    <street name="固隆乡" code="140522204" />
+    <street name="董封乡" code="140522205" />
+    <street name="驾岭乡" code="140522206" />
+    <street name="东城街道" code="140522400" />
+    <street name="林场管理处" code="140522401" />
+</county>
+<county name="陵川" code="140524">
+    <street name="崇文镇" code="140524100" />
+    <street name="礼义镇" code="140524101" />
+    <street name="附城镇" code="140524102" />
+    <street name="西河底镇" code="140524103" />
+    <street name="平城镇" code="140524104" />
+    <street name="杨村镇" code="140524105" />
+    <street name="潞城镇" code="140524106" />
+    <street name="夺火乡" code="140524204" />
+    <street name="马圪当乡" code="140524206" />
+    <street name="古郊乡" code="140524207" />
+    <street name="六泉乡" code="140524209" />
+    <street name="秦家庄乡" code="140524212" />
+</county>
+<county name="泽州" code="140525">
+    <street name="南村镇" code="140525100" />
+    <street name="下村镇" code="140525101" />
+    <street name="大东沟镇" code="140525102" />
+    <street name="周村镇" code="140525103" />
+    <street name="犁川镇" code="140525104" />
+    <street name="晋庙铺镇" code="140525105" />
+    <street name="金村镇" code="140525106" />
+    <street name="高都镇" code="140525107" />
+    <street name="巴公镇" code="140525108" />
+    <street name="大阳镇" code="140525109" />
+    <street name="山河镇" code="140525110" />
+    <street name="大箕镇" code="140525111" />
+    <street name="柳树口镇" code="140525112" />
+    <street name="北义城镇" code="140525113" />
+    <street name="川底乡" code="140525200" />
+    <street name="李寨乡" code="140525201" />
+    <street name="南岭乡" code="140525202" />
+</county>
+<county name="高平" code="140581">
+    <street name="北城街道" code="140581001" />
+    <street name="东城街道" code="140581002" />
+    <street name="南城街道" code="140581003" />
+    <street name="米山镇" code="140581101" />
+    <street name="三甲镇" code="140581102" />
+    <street name="神农镇" code="140581103" />
+    <street name="陈区镇" code="140581104" />
+    <street name="北诗镇" code="140581105" />
+    <street name="河西镇" code="140581106" />
+    <street name="马村镇" code="140581107" />
+    <street name="野川镇" code="140581108" />
+    <street name="寺庄镇" code="140581109" />
+    <street name="建宁乡" code="140581201" />
+    <street name="石末乡" code="140581202" />
+    <street name="原村乡" code="140581203" />
+    <street name="永录乡" code="140581204" />
+</county>
+</city>
+</address>

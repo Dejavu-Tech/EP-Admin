@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="双鸭山" code="230500">
+<county name="尖山" code="230502">
+    <street name="二马路街道" code="230502001" />
+    <street name="八马路街道" code="230502002" />
+    <street name="中心站街道" code="230502003" />
+    <street name="富安街道" code="230502004" />
+    <street name="窑地街道" code="230502005" />
+    <street name="长安街道" code="230502006" />
+    <street name="铁西街道" code="230502007" />
+    <street name="安邦乡" code="230502200" />
+</county>
+<county name="岭东" code="230503">
+    <street name="中山街道" code="230503001" />
+    <street name="北山街道" code="230503002" />
+    <street name="南山街道" code="230503003" />
+    <street name="东山街道" code="230503004" />
+    <street name="中心街道" code="230503005" />
+    <street name="西山街道" code="230503006" />
+    <street name="长胜乡" code="230503200" />
+    <street name="岭东区青山旅游公司" code="230503400" />
+    <street name="岭东区岭东经营所" code="230503401" />
+</county>
+<county name="四方台" code="230505">
+    <street name="振兴中路街道" code="230505001" />
+    <street name="振兴东路街道" code="230505002" />
+    <street name="集贤街道" code="230505004" />
+    <street name="东荣街道" code="230505005" />
+    <street name="太保镇" code="230505101" />
+</county>
+<county name="宝山" code="230506">
+    <street name="红旗街道" code="230506001" />
+    <street name="跃进街道" code="230506002" />
+    <street name="东保卫街道" code="230506003" />
+    <street name="七星街道" code="230506004" />
+    <street name="双阳街道" code="230506005" />
+    <street name="新安街道" code="230506006" />
+    <street name="电厂街道" code="230506007" />
+    <street name="七星镇" code="230506101" />
+    <street name="双鸭山林业局宝山经营所" code="230506401" />
+    <street name="双鸭山林业局大叶沟林场" code="230506402" />
+    <street name="双鸭山农场" code="230506500" />
+</county>
+<county name="集贤" code="230521">
+    <street name="福利镇" code="230521100" />
+    <street name="集贤镇" code="230521101" />
+    <street name="升昌镇" code="230521102" />
+    <street name="丰乐镇" code="230521103" />
+    <street name="太平镇" code="230521104" />
+    <street name="腰屯乡" code="230521201" />
+    <street name="兴安乡" code="230521202" />
+    <street name="永安乡" code="230521204" />
+    <street name="太平林场" code="230521401" />
+    <street name="丰乐林场" code="230521402" />
+    <street name="七星林场" code="230521403" />
+    <street name="峻山林场" code="230521404" />
+    <street name="爱林林场" code="230521405" />
+    <street name="腰屯林场" code="230521406" />
+    <street name="升平煤矿" code="230521407" />
+    <street name="黑龙江省双鸭山监狱" code="230521480" />
+    <street name="二九一农场" code="230521500" />
+    <street name="良种场" code="230521581" />
+    <street name="种畜场" code="230521582" />
+    <street name="果树示范场" code="230521583" />
+</county>
+<county name="友谊" code="230522">
+    <street name="友谊镇" code="230522100" />
+    <street name="兴隆镇" code="230522101" />
+    <street name="龙山镇" code="230522102" />
+    <street name="凤岗镇" code="230522103" />
+    <street name="兴盛乡" code="230522200" />
+    <street name="东建乡" code="230522201" />
+    <street name="庆丰乡" code="230522202" />
+    <street name="建设乡" code="230522203" />
+    <street name="友邻乡" code="230522204" />
+    <street name="新镇乡" code="230522205" />
+    <street name="成富朝鲜族满族乡" code="230522206" />
+    <street name="红兴隆管理局局直" code="230522501" />
+    <street name="友谊农场" code="230522502" />
+</county>
+<county name="宝清" code="230523">
+    <street name="宝清镇" code="230523100" />
+    <street name="七星泡镇" code="230523101" />
+    <street name="青原镇" code="230523102" />
+    <street name="夹信子镇" code="230523103" />
+    <street name="龙头镇" code="230523104" />
+    <street name="小城子镇" code="230523105" />
+    <street name="朝阳乡" code="230523202" />
+    <street name="万金山乡" code="230523203" />
+    <street name="尖山子乡" code="230523204" />
+    <street name="七星河乡" code="230523209" />
+    <street name="双鸭山林业局上游经营所" code="230523400" />
+    <street name="双鸭山林业局南瓮泉经营所" code="230523401" />
+    <street name="双鸭山林业局七一林场" code="230523402" />
+    <street name="双鸭山林业局七星河林场" code="230523403" />
+    <street name="双鸭山林业局红旗林场" code="230523404" />
+    <street name="双鸭山林业局三岔河林场" code="230523405" />
+    <street name="双鸭山林业局青龙林场" code="230523406" />
+    <street name="双鸭山林业局宝石经营所" code="230523407" />
+    <street name="双鸭山林业局七星河金矿" code="230523408" />
+    <street name="桦南林业局岚峰林场" code="230523409" />
+    <street name="五九七农场" code="230523500" />
+    <street name="八五二农场" code="230523501" />
+    <street name="八五三农场" code="230523502" />
+</county>
+<county name="饶河" code="230524">
+    <street name="饶河镇" code="230524100" />
+    <street name="小佳河镇" code="230524101" />
+    <street name="西丰镇" code="230524102" />
+    <street name="五林洞镇" code="230524103" />
+    <street name="西林子乡" code="230524200" />
+    <street name="四排乡" code="230524201" />
+    <street name="大佳河乡" code="230524203" />
+    <street name="山里乡" code="230524204" />
+    <street name="大通河乡" code="230524207" />
+    <street name="小佳河林场" code="230524400" />
+    <street name="威山林场" code="230524401" />
+    <street name="西丰林场" code="230524402" />
+    <street name="大牙克林场" code="230524403" />
+    <street name="石场林场" code="230524404" />
+    <street name="宝马山林场" code="230524405" />
+    <street name="大岱林场" code="230524406" />
+    <street name="永幸林场" code="230524407" />
+    <street name="奇源林场" code="230524408" />
+    <street name="芦源林场" code="230524409" />
+    <street name="五林洞林场" code="230524410" />
+    <street name="饶河农场" code="230524500" />
+    <street name="红旗岭农场" code="230524501" />
+    <street name="八五九农场" code="230524502" />
+    <street name="胜利农场" code="230524503" />
+    <street name="红卫农场" code="230524504" />
+</county>
+</city>
+</address>

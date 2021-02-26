@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="淮南" code="340400">
+<county name="大通" code="340402">
+    <street name="大通街道" code="340402001" />
+    <street name="上窑镇" code="340402100" />
+    <street name="洛河镇" code="340402101" />
+    <street name="九龙岗镇" code="340402102" />
+    <street name="孔店乡" code="340402200" />
+    <street name="淮南经济开发区" code="340402400" />
+</county>
+<county name="田家庵" code="340403">
+    <street name="田东街道" code="340403001" />
+    <street name="新淮街道" code="340403002" />
+    <street name="国庆街道" code="340403003" />
+    <street name="淮滨街道" code="340403004" />
+    <street name="朝阳街道" code="340403005" />
+    <street name="公园街道" code="340403006" />
+    <street name="洞山街道" code="340403007" />
+    <street name="龙泉街道" code="340403008" />
+    <street name="泉山街道" code="340403009" />
+    <street name="舜耕镇" code="340403100" />
+    <street name="安成镇" code="340403101" />
+    <street name="曹庵镇" code="340403102" />
+    <street name="三和乡" code="340403200" />
+    <street name="史院乡" code="340403201" />
+</county>
+<county name="谢家集" code="340404">
+    <street name="谢家集街道" code="340404001" />
+    <street name="蔡家岗街道" code="340404002" />
+    <street name="立新街道" code="340404003" />
+    <street name="谢三村街道" code="340404004" />
+    <street name="平山街道" code="340404005" />
+    <street name="望峰岗镇" code="340404100" />
+    <street name="李郢孜镇" code="340404101" />
+    <street name="唐山镇" code="340404102" />
+    <street name="杨公镇" code="340404103" />
+    <street name="孙庙乡" code="340404200" />
+    <street name="孤堆回族乡" code="340404201" />
+</county>
+<county name="八公山" code="340405">
+    <street name="新庄孜街道" code="340405001" />
+    <street name="土坝孜街道" code="340405002" />
+    <street name="毕家岗街道" code="340405003" />
+    <street name="八公山镇" code="340405100" />
+    <street name="山王镇" code="340405101" />
+    <street name="妙山林场" code="340405400" />
+</county>
+<county name="潘集" code="340406">
+    <street name="田集街道" code="340406001" />
+    <street name="高皇镇" code="340406100" />
+    <street name="平圩镇" code="340406101" />
+    <street name="泥河镇" code="340406102" />
+    <street name="潘集镇" code="340406103" />
+    <street name="芦集镇" code="340406104" />
+    <street name="架河镇" code="340406105" />
+    <street name="夹沟镇" code="340406106" />
+    <street name="祁集镇" code="340406107" />
+    <street name="古沟回族乡" code="340406202" />
+    <street name="贺疃乡" code="340406204" />
+</county>
+<county name="凤台" code="340421">
+    <street name="城关镇" code="340421100" />
+    <street name="新集镇" code="340421102" />
+    <street name="朱马店镇" code="340421103" />
+    <street name="岳张集镇" code="340421104" />
+    <street name="顾桥镇" code="340421105" />
+    <street name="毛集镇" code="340421106" />
+    <street name="夏集镇" code="340421107" />
+    <street name="桂集镇" code="340421108" />
+    <street name="焦岗湖镇" code="340421109" />
+    <street name="凤凰镇" code="340421110" />
+    <street name="杨村镇" code="340421111" />
+    <street name="李冲回族乡" code="340421201" />
+    <street name="刘集乡" code="340421202" />
+    <street name="古店乡" code="340421204" />
+    <street name="钱庙乡" code="340421205" />
+    <street name="尚塘乡" code="340421207" />
+    <street name="丁集乡" code="340421208" />
+    <street name="关店乡" code="340421209" />
+    <street name="大兴集乡" code="340421210" />
+</county>
+</city>
+</address>

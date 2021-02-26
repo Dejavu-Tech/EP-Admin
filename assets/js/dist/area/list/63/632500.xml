@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="海南藏族" code="632500">
+<county name="共和" code="632521">
+    <street name="恰卜恰镇" code="632521100" />
+    <street name="倒淌河镇" code="632521101" />
+    <street name="龙羊峡镇" code="632521102" />
+    <street name="塘格木镇" code="632521103" />
+    <street name="黑马河乡" code="632521200" />
+    <street name="石乃亥乡" code="632521201" />
+    <street name="沙珠玉乡" code="632521202" />
+    <street name="铁盖乡" code="632521203" />
+    <street name="廿地乡" code="632521204" />
+    <street name="切吉乡" code="632521205" />
+    <street name="江西沟乡" code="632521206" />
+    <street name="湖东种羊场" code="632521401" />
+    <street name="巴卡台农场" code="632521402" />
+    <street name="安置农场" code="632521403" />
+    <street name="铁卜加草改站" code="632521404" />
+</county>
+<county name="同德" code="632522">
+    <street name="尕巴松多镇" code="632522100" />
+    <street name="唐谷镇" code="632522101" />
+    <street name="巴沟乡" code="632522200" />
+    <street name="秀麻乡" code="632522201" />
+    <street name="河北乡" code="632522202" />
+    <street name="省牧草良种繁殖场" code="632522400" />
+</county>
+<county name="贵德" code="632523">
+    <street name="河阴镇" code="632523100" />
+    <street name="河西镇" code="632523101" />
+    <street name="拉西瓦镇" code="632523102" />
+    <street name="常牧镇" code="632523103" />
+    <street name="河东乡" code="632523200" />
+    <street name="新街回族乡" code="632523201" />
+    <street name="尕让乡" code="632523202" />
+</county>
+<county name="兴海" code="632524">
+    <street name="子科滩镇" code="632524100" />
+    <street name="河卡镇" code="632524101" />
+    <street name="曲什安镇" code="632524102" />
+    <street name="温泉乡" code="632524200" />
+    <street name="龙藏乡" code="632524201" />
+    <street name="中铁乡" code="632524202" />
+    <street name="唐乃亥乡" code="632524203" />
+    <street name="河卡种羊场" code="632524400" />
+</county>
+<county name="贵南" code="632525">
+    <street name="茫曲镇" code="632525100" />
+    <street name="过马营镇" code="632525101" />
+    <street name="森多镇" code="632525102" />
+    <street name="沙沟乡" code="632525200" />
+    <street name="茫拉乡" code="632525202" />
+    <street name="塔秀乡" code="632525203" />
+    <street name="贵南草业开发有限责任公司" code="632525400" />
+</county>
+</city>
+</address>

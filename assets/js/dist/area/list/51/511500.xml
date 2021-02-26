@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宜宾" code="511500">
+<county name="翠屏" code="511502">
+    <street name="北城街道" code="511502001" />
+    <street name="东城街道" code="511502002" />
+    <street name="南城街道" code="511502003" />
+    <street name="西城街道" code="511502004" />
+    <street name="南岸街道" code="511502005" />
+    <street name="西郊街道" code="511502006" />
+    <street name="安阜街道" code="511502007" />
+    <street name="白沙湾街道" code="511502008" />
+    <street name="赵场街道" code="511502009" />
+    <street name="象鼻街道" code="511502010" />
+    <street name="沙坪街道" code="511502011" />
+    <street name="南广镇" code="511502100" />
+    <street name="李庄镇" code="511502101" />
+    <street name="菜坝镇" code="511502102" />
+    <street name="金坪镇" code="511502104" />
+    <street name="高店镇" code="511502106" />
+    <street name="牟坪镇" code="511502108" />
+    <street name="李端镇" code="511502109" />
+    <street name="邱场镇" code="511502110" />
+    <street name="宗场镇" code="511502111" />
+    <street name="宋家乡" code="511502200" />
+    <street name="明威乡" code="511502201" />
+    <street name="凉姜乡" code="511502202" />
+    <street name="思坡乡" code="511502204" />
+</county>
+<county name="宜宾" code="511521">
+    <street name="柏溪镇" code="511521100" />
+    <street name="喜捷镇" code="511521101" />
+    <street name="观音镇" code="511521102" />
+    <street name="横江镇" code="511521103" />
+    <street name="永兴镇" code="511521104" />
+    <street name="白花镇" code="511521105" />
+    <street name="柳嘉镇" code="511521106" />
+    <street name="泥溪镇" code="511521107" />
+    <street name="蕨溪镇" code="511521108" />
+    <street name="商州镇" code="511521109" />
+    <street name="高场镇" code="511521110" />
+    <street name="安边镇" code="511521111" />
+    <street name="双龙镇" code="511521112" />
+    <street name="李场镇" code="511521113" />
+    <street name="合什镇" code="511521114" />
+    <street name="古罗镇" code="511521115" />
+    <street name="孔滩镇" code="511521116" />
+    <street name="复龙镇" code="511521117" />
+    <street name="普安镇" code="511521118" />
+    <street name="古柏乡" code="511521200" />
+    <street name="王场乡" code="511521201" />
+    <street name="双谊乡" code="511521202" />
+    <street name="隆兴乡" code="511521203" />
+    <street name="泥南乡" code="511521204" />
+    <street name="龙池乡" code="511521205" />
+    <street name="凤仪乡" code="511521209" />
+</county>
+<county name="南溪" code="511522">
+    <street name="南溪街道" code="511503001" />
+    <street name="罗龙街道" code="511503002" />
+    <street name="刘家镇" code="511503102" />
+    <street name="江南镇" code="511503103" />
+    <street name="大观镇" code="511503104" />
+    <street name="汪家镇" code="511503105" />
+    <street name="黄沙镇" code="511503106" />
+    <street name="仙临镇" code="511503107" />
+    <street name="长兴镇" code="511503108" />
+    <street name="裴石乡" code="511503200" />
+    <street name="马家乡" code="511503201" />
+    <street name="大坪乡" code="511503203" />
+    <street name="石鼓乡" code="511503204" />
+    <street name="林丰乡" code="511503205" />
+    <street name="留宾乡" code="511503206" />
+</county>
+<county name="江安" code="511523">
+    <street name="江安镇" code="511523100" />
+    <street name="红桥镇" code="511523101" />
+    <street name="桐梓镇" code="511523102" />
+    <street name="井口镇" code="511523103" />
+    <street name="怡乐镇" code="511523104" />
+    <street name="留耕镇" code="511523105" />
+    <street name="底蓬镇" code="511523106" />
+    <street name="五矿镇" code="511523108" />
+    <street name="迎安镇" code="511523109" />
+    <street name="夕佳山镇" code="511523110" />
+    <street name="水清镇" code="511523111" />
+    <street name="铁清镇" code="511523112" />
+    <street name="四面山镇" code="511523113" />
+    <street name="大井镇" code="511523114" />
+    <street name="阳春镇" code="511523115" />
+    <street name="大妙乡" code="511523200" />
+    <street name="蟠龙乡" code="511523203" />
+    <street name="仁和乡" code="511523205" />
+</county>
+<county name="长宁" code="511524">
+    <street name="长宁镇" code="511524100" />
+    <street name="梅硐镇" code="511524101" />
+    <street name="双河镇" code="511524102" />
+    <street name="硐底镇" code="511524103" />
+    <street name="花滩镇" code="511524104" />
+    <street name="竹海镇" code="511524105" />
+    <street name="老翁镇" code="511524106" />
+    <street name="古河镇" code="511524107" />
+    <street name="下长镇" code="511524108" />
+    <street name="龙头镇" code="511524110" />
+    <street name="铜锣乡" code="511524200" />
+    <street name="桃坪乡" code="511524201" />
+    <street name="铜鼓乡" code="511524203" />
+    <street name="井江乡" code="511524204" />
+    <street name="三元乡" code="511524205" />
+    <street name="开佛乡" code="511524206" />
+    <street name="富兴乡" code="511524207" />
+    <street name="梅白乡" code="511524208" />
+</county>
+<county name="高县" code="511525">
+    <street name="文江镇" code="511525100" />
+    <street name="庆符镇" code="511525101" />
+    <street name="沙河镇" code="511525102" />
+    <street name="嘉乐镇" code="511525103" />
+    <street name="大窝镇" code="511525104" />
+    <street name="罗场镇" code="511525105" />
+    <street name="蕉村镇" code="511525106" />
+    <street name="可久镇" code="511525107" />
+    <street name="来复镇" code="511525108" />
+    <street name="月江镇" code="511525109" />
+    <street name="胜天镇" code="511525110" />
+    <street name="复兴镇" code="511525111" />
+    <street name="趱滩乡" code="511525203" />
+    <street name="羊田乡" code="511525204" />
+    <street name="落润乡" code="511525205" />
+    <street name="潆溪乡" code="511525206" />
+    <street name="庆岭乡" code="511525207" />
+    <street name="双河乡" code="511525208" />
+    <street name="四烈乡" code="511525210" />
+</county>
+<county name="珙县" code="511526">
+    <street name="珙泉镇" code="511526100" />
+    <street name="巡场镇" code="511526101" />
+    <street name="孝儿镇" code="511526102" />
+    <street name="底洞镇" code="511526103" />
+    <street name="上罗镇" code="511526104" />
+    <street name="洛表镇" code="511526105" />
+    <street name="洛亥镇" code="511526106" />
+    <street name="王家镇" code="511526107" />
+    <street name="恒丰乡" code="511526200" />
+    <street name="沐滩乡" code="511526202" />
+    <street name="仁义乡" code="511526203" />
+    <street name="玉和苗族乡" code="511526205" />
+    <street name="下罗乡" code="511526207" />
+    <street name="罗渡苗族乡" code="511526209" />
+    <street name="曹营乡" code="511526210" />
+    <street name="石碑乡" code="511526211" />
+    <street name="观斗苗族乡" code="511526212" />
+</county>
+<county name="筠连" code="511527">
+    <street name="筠连镇" code="511527100" />
+    <street name="腾达镇" code="511527101" />
+    <street name="巡司镇" code="511527102" />
+    <street name="双腾镇" code="511527103" />
+    <street name="沐爱镇" code="511527104" />
+    <street name="维新镇" code="511527105" />
+    <street name="镇舟镇" code="511527107" />
+    <street name="蒿坝镇" code="511527108" />
+    <street name="大雪山镇" code="511527109" />
+    <street name="武德乡" code="511527200" />
+    <street name="塘坝乡" code="511527202" />
+    <street name="龙镇乡" code="511527203" />
+    <street name="孔雀乡" code="511527204" />
+    <street name="乐义乡" code="511527205" />
+    <street name="高坎乡" code="511527206" />
+    <street name="团林苗族乡" code="511527208" />
+    <street name="联合苗族乡" code="511527209" />
+    <street name="高坪苗族乡" code="511527210" />
+</county>
+<county name="兴文" code="511528">
+    <street name="古宋镇" code="511528100" />
+    <street name="僰王山镇" code="511528101" />
+    <street name="共乐镇" code="511528103" />
+    <street name="莲花镇" code="511528105" />
+    <street name="九丝城镇" code="511528107" />
+    <street name="石海镇" code="511528108" />
+    <street name="太平镇" code="511528109" />
+    <street name="周家镇" code="511528110" />
+    <street name="五星镇" code="511528111" />
+    <street name="大坝苗族乡" code="511528200" />
+    <street name="毓秀苗族乡" code="511528201" />
+    <street name="玉屏乡" code="511528202" />
+    <street name="大河苗族乡" code="511528205" />
+    <street name="麒麟苗族乡" code="511528206" />
+    <street name="仙峰苗族乡" code="511528207" />
+</county>
+<county name="屏山" code="511529">
+    <street name="锦屏镇" code="511529100" />
+    <street name="新市镇" code="511529101" />
+    <street name="中都镇" code="511529102" />
+    <street name="龙华镇" code="511529103" />
+    <street name="大乘镇" code="511529104" />
+    <street name="富荣镇" code="511529106" />
+    <street name="新安镇" code="511529107" />
+    <street name="书楼镇" code="511529109" />
+    <street name="屏山镇" code="511529110" />
+    <street name="鸭池乡" code="511529203" />
+    <street name="龙溪乡" code="511529204" />
+    <street name="太平乡" code="511529205" />
+    <street name="夏溪乡" code="511529208" />
+    <street name="屏边彝族乡" code="511529210" />
+    <street name="清平彝族乡" code="511529211" />
+</county>
+</city>
+</address>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="本溪" code="210500">
+<county name="平山" code="210502">
+    <street name="南地街道" code="210502001" />
+    <street name="工人街道" code="210502002" />
+    <street name="平山街道" code="210502003" />
+    <street name="东明街道" code="210502004" />
+    <street name="崔东街道" code="210502005" />
+    <street name="站前街道" code="210502007" />
+    <street name="千金街道" code="210502008" />
+    <street name="北台街道" code="210502010" />
+    <street name="桥头街道" code="210502011" />
+</county>
+<county name="溪湖" code="210503">
+    <street name="河东街道" code="210503001" />
+    <street name="河西街道" code="210503003" />
+    <street name="彩屯街道" code="210503005" />
+    <street name="竖井街道" code="210503006" />
+    <street name="彩北街道" code="210503007" />
+    <street name="东风街道" code="210503009" />
+    <street name="石桥子街道" code="210503010" />
+    <street name="日月岛街道" code="210503011" />
+    <street name="张其寨街道" code="210503012" />
+    <street name="火连寨街道" code="210503013" />
+</county>
+<county name="明山" code="210504">
+    <street name="金山街道" code="210504001" />
+    <street name="北地街道" code="210504002" />
+    <street name="高峪街道" code="210504004" />
+    <street name="明山街道" code="210504005" />
+    <street name="东兴街道" code="210504007" />
+    <street name="新明街道" code="210504008" />
+    <street name="牛心台街道" code="210504009" />
+    <street name="卧龙街道" code="210504010" />
+    <street name="高台子街道" code="210504011" />
+</county>
+<county name="南芬" code="210505">
+    <street name="南芬街道" code="210505001" />
+    <street name="铁山街道" code="210505002" />
+    <street name="郭家街道" code="210505003" />
+    <street name="思山岭街道" code="210505004" />
+    <street name="下马塘街道" code="210505005" />
+</county>
+<county name="本溪" code="210521">
+    <street name="观音阁街道" code="210521001" />
+    <street name="小市镇" code="210521100" />
+    <street name="草河掌镇" code="210521101" />
+    <street name="草河城镇" code="210521102" />
+    <street name="草河口镇" code="210521103" />
+    <street name="连山关镇" code="210521104" />
+    <street name="清河城镇" code="210521106" />
+    <street name="田师傅镇" code="210521109" />
+    <street name="南甸镇" code="210521110" />
+    <street name="碱厂镇" code="210521111" />
+    <street name="高官镇" code="210521112" />
+    <street name="东营房乡" code="210521202" />
+</county>
+<county name="桓仁" code="210522">
+    <street name="八卦城街道" code="210522001" />
+    <street name="桓仁镇" code="210522100" />
+    <street name="普乐堡镇" code="210522101" />
+    <street name="二棚甸子镇" code="210522102" />
+    <street name="沙尖子镇" code="210522103" />
+    <street name="五里甸子镇" code="210522104" />
+    <street name="八里甸子镇" code="210522108" />
+    <street name="华来镇" code="210522110" />
+    <street name="古城镇" code="210522111" />
+    <street name="雅河朝鲜族乡" code="210522201" />
+    <street name="向阳乡" code="210522202" />
+    <street name="黑沟乡" code="210522206" />
+    <street name="北甸子乡" code="210522208" />
+</county>
+</city>
+</address>

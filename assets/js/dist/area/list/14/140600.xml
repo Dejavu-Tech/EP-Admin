@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="朔州" code="140600">
+<county name="朔城" code="140602">
+    <street name="北城街道" code="140602001" />
+    <street name="南城街道" code="140602002" />
+    <street name="神头街道" code="140602003" />
+    <street name="北旺庄街道" code="140602004" />
+    <street name="神头镇" code="140602100" />
+    <street name="利民镇" code="140602101" />
+    <street name="下团堡乡" code="140602200" />
+    <street name="小平易乡" code="140602201" />
+    <street name="滋润乡" code="140602202" />
+    <street name="福善庄乡" code="140602203" />
+    <street name="南榆林乡" code="140602204" />
+    <street name="贾庄乡" code="140602205" />
+    <street name="沙塄河乡" code="140602206" />
+    <street name="窑子头乡" code="140602207" />
+    <street name="张蔡庄乡" code="140602208" />
+    <street name="朔州市开发区管委会" code="140602400" />
+</county>
+<county name="平鲁" code="140603">
+    <street name="井坪镇" code="140603100" />
+    <street name="凤凰城镇" code="140603101" />
+    <street name="白堂乡" code="140603200" />
+    <street name="陶村乡" code="140603201" />
+    <street name="下水头乡" code="140603202" />
+    <street name="双碾乡" code="140603203" />
+    <street name="阻虎乡" code="140603204" />
+    <street name="高石庄乡" code="140603205" />
+    <street name="西水界乡" code="140603206" />
+    <street name="下面高乡" code="140603207" />
+    <street name="下木角乡" code="140603208" />
+    <street name="向阳堡乡" code="140603209" />
+    <street name="榆岭乡" code="140603210" />
+</county>
+<county name="山阴" code="140621">
+    <street name="东城管理委员会" code="140621001" />
+    <street name="西城管理委员会" code="140621002" />
+    <street name="玉井镇" code="140621100" />
+    <street name="北周庄镇" code="140621101" />
+    <street name="古城镇" code="140621102" />
+    <street name="岱岳镇" code="140621103" />
+    <street name="吴马营乡" code="140621200" />
+    <street name="马营乡" code="140621201" />
+    <street name="下喇叭乡" code="140621202" />
+    <street name="合盛堡乡" code="140621203" />
+    <street name="安荣乡" code="140621205" />
+    <street name="薛圐圙乡" code="140621206" />
+    <street name="后所乡" code="140621207" />
+    <street name="张家庄乡" code="140621208" />
+    <street name="马营庄乡" code="140621209" />
+    <street name="山阴农牧场" code="140621400" />
+</county>
+<county name="应县" code="140622">
+    <street name="金城镇" code="140622100" />
+    <street name="南河种镇" code="140622101" />
+    <street name="下社镇" code="140622102" />
+    <street name="镇子梁乡" code="140622200" />
+    <street name="义井乡" code="140622201" />
+    <street name="藏寨乡" code="140622202" />
+    <street name="大黄巍乡" code="140622203" />
+    <street name="杏寨乡" code="140622204" />
+    <street name="下马峪乡" code="140622205" />
+    <street name="南泉乡" code="140622206" />
+    <street name="大临河乡" code="140622207" />
+    <street name="白马石乡" code="140622208" />
+</county>
+<county name="右玉" code="140623">
+    <street name="新城镇" code="140623100" />
+    <street name="右卫镇" code="140623101" />
+    <street name="威远镇" code="140623102" />
+    <street name="元堡子镇" code="140623103" />
+    <street name="牛心堡乡" code="140623200" />
+    <street name="白头里乡" code="140623201" />
+    <street name="高家堡乡" code="140623202" />
+    <street name="丁家窑乡" code="140623203" />
+    <street name="杨千河乡" code="140623204" />
+    <street name="李达窑乡" code="140623205" />
+</county>
+<county name="怀仁" code="140624">
+    <street name="云中镇" code="140624100" />
+    <street name="吴家窑镇" code="140624101" />
+    <street name="金沙滩镇" code="140624102" />
+    <street name="毛家皂镇" code="140624103" />
+    <street name="何家堡乡" code="140624200" />
+    <street name="新家园乡" code="140624201" />
+    <street name="亲和乡" code="140624202" />
+    <street name="海北头乡" code="140624203" />
+    <street name="马辛庄乡" code="140624204" />
+    <street name="河头乡" code="140624205" />
+    <street name="金沙滩农牧场" code="140624500" />
+    <street name="金沙滩林场" code="140624501" />
+</county>
+</city>
+</address>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="佛山" code="440600">
+<county name="禅城" code="440604">
+    <street name="石湾镇街道" code="440604010" />
+    <street name="张槎街道" code="440604011" />
+    <street name="祖庙街道" code="440604012" />
+    <street name="南庄镇" code="440604100" />
+</county>
+<county name="南海" code="440605">
+    <street name="桂城街道" code="440605011" />
+    <street name="九江镇" code="440605121" />
+    <street name="西樵镇" code="440605122" />
+    <street name="丹灶镇" code="440605123" />
+    <street name="狮山镇" code="440605124" />
+    <street name="大沥镇" code="440605125" />
+    <street name="里水镇" code="440605126" />
+</county>
+<county name="顺德" code="440606">
+    <street name="伦教街道" code="440606003" />
+    <street name="勒流街道" code="440606004" />
+    <street name="大良街道" code="440606005" />
+    <street name="容桂街道" code="440606006" />
+    <street name="陈村镇" code="440606101" />
+    <street name="北滘镇" code="440606102" />
+    <street name="乐从镇" code="440606103" />
+    <street name="龙江镇" code="440606104" />
+    <street name="杏坛镇" code="440606105" />
+    <street name="均安镇" code="440606106" />
+</county>
+<county name="三水" code="440607">
+    <street name="西南街道" code="440607001" />
+    <street name="云东海街道" code="440607004" />
+    <street name="大塘镇" code="440607101" />
+    <street name="乐平镇" code="440607103" />
+    <street name="白坭镇" code="440607104" />
+    <street name="芦苞镇" code="440607105" />
+    <street name="南山镇" code="440607106" />
+    <street name="省三水劳教所" code="440607400" />
+    <street name="省南丰劳教所" code="440607401" />
+    <street name="省女子劳教所" code="440607402" />
+    <street name="省第二戒毒劳教所" code="440607403" />
+    <street name="广州军区三水农场" code="440607404" />
+</county>
+<county name="高明" code="440608">
+    <street name="荷城街道" code="440608004" />
+    <street name="杨和镇" code="440608106" />
+    <street name="明城镇" code="440608107" />
+    <street name="更合镇" code="440608108" />
+    <street name="高明监狱" code="440608400" />
+    <street name="云勇林场" code="440608401" />
+    <street name="对川茶场" code="440608402" />
+    <street name="佛山监狱" code="440608403" />
+</county>
+</city>
+</address>

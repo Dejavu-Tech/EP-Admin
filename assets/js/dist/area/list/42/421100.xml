@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="黄冈" code="421100">
+<county name="黄州" code="421102">
+    <street name="赤壁街道" code="421102001" />
+    <street name="东湖街道" code="421102002" />
+    <street name="禹王街道" code="421102003" />
+    <street name="南湖街道" code="421102004" />
+    <street name="路口镇" code="421102100" />
+    <street name="堵城镇" code="421102101" />
+    <street name="陈策楼镇" code="421102102" />
+    <street name="陶店乡" code="421102200" />
+    <street name="火车站开发区" code="421102450" />
+    <street name="黄冈经济开发区" code="421102470" />
+</county>
+<county name="团风" code="421121">
+    <street name="团风镇" code="421121100" />
+    <street name="淋山河镇" code="421121101" />
+    <street name="方高坪镇" code="421121102" />
+    <street name="回龙山镇" code="421121103" />
+    <street name="马曹庙镇" code="421121104" />
+    <street name="上巴河镇" code="421121105" />
+    <street name="总路咀镇" code="421121106" />
+    <street name="但店镇" code="421121107" />
+    <street name="贾庙乡" code="421121200" />
+    <street name="杜皮乡" code="421121201" />
+    <street name="黄湖农场" code="421121400" />
+    <street name="金锣港农场" code="421121401" />
+</county>
+<county name="红安" code="421122">
+    <street name="城关镇" code="421122100" />
+    <street name="七里坪镇" code="421122101" />
+    <street name="华河镇" code="421122102" />
+    <street name="二程镇" code="421122103" />
+    <street name="上新集镇" code="421122104" />
+    <street name="高桥镇" code="421122105" />
+    <street name="觅儿镇" code="421122106" />
+    <street name="八里镇" code="421122107" />
+    <street name="太平桥镇" code="421122108" />
+    <street name="永河镇" code="421122109" />
+    <street name="杏花乡" code="421122200" />
+    <street name="火连畈茶场" code="421122500" />
+    <street name="天台山旅游开发管理处" code="421122501" />
+</county>
+<county name="罗田" code="421123">
+    <street name="凤山镇" code="421123100" />
+    <street name="骆驼坳镇" code="421123101" />
+    <street name="大河岸镇" code="421123102" />
+    <street name="九资河镇" code="421123103" />
+    <street name="胜利镇" code="421123104" />
+    <street name="河铺镇" code="421123105" />
+    <street name="三里畈镇" code="421123106" />
+    <street name="匡河镇" code="421123107" />
+    <street name="白莲河乡" code="421123200" />
+    <street name="白庙河乡" code="421123202" />
+    <street name="平湖乡" code="421123203" />
+    <street name="大崎乡" code="421123204" />
+    <street name="罗田县经济开发区" code="421123400" />
+    <street name="青苔关林场" code="421123500" />
+    <street name="天堂寨林场" code="421123501" />
+    <street name="薄刀峰林场" code="421123502" />
+    <street name="黄狮寨林场" code="421123503" />
+</county>
+<county name="英山" code="421124">
+    <street name="温泉镇" code="421124100" />
+    <street name="南河镇" code="421124101" />
+    <street name="红山镇" code="421124102" />
+    <street name="金家铺镇" code="421124103" />
+    <street name="石头咀镇" code="421124104" />
+    <street name="草盘地镇" code="421124105" />
+    <street name="雷家店镇" code="421124106" />
+    <street name="杨柳湾镇" code="421124107" />
+    <street name="方家咀乡" code="421124200" />
+    <street name="孔家坊乡" code="421124201" />
+    <street name="陶家河乡" code="421124202" />
+    <street name="桃花冲林场" code="421124400" />
+    <street name="吴家山林场" code="421124401" />
+    <street name="五峰山林场" code="421124402" />
+    <street name="英山县经济开发区" code="421124403" />
+</county>
+<county name="浠水" code="421125">
+    <street name="清泉镇" code="421125100" />
+    <street name="巴河镇" code="421125101" />
+    <street name="竹瓦镇" code="421125102" />
+    <street name="汪岗镇" code="421125103" />
+    <street name="团陂镇" code="421125104" />
+    <street name="关口镇" code="421125105" />
+    <street name="白莲镇" code="421125106" />
+    <street name="蔡河镇" code="421125107" />
+    <street name="洗马镇" code="421125108" />
+    <street name="丁司垱镇" code="421125109" />
+    <street name="散花镇" code="421125110" />
+    <street name="兰溪镇" code="421125111" />
+    <street name="绿杨乡" code="421125200" />
+    <street name="策湖养殖场" code="421125400" />
+    <street name="三角山林场" code="421125401" />
+    <street name="经济开发区镇" code="421125402" />
+</county>
+<county name="蕲春" code="421126">
+    <street name="漕河镇" code="421126100" />
+    <street name="赤东镇" code="421126101" />
+    <street name="蕲州镇" code="421126102" />
+    <street name="管窑镇" code="421126103" />
+    <street name="彭思镇" code="421126104" />
+    <street name="横车镇" code="421126105" />
+    <street name="株林镇" code="421126106" />
+    <street name="刘河镇" code="421126107" />
+    <street name="狮子镇" code="421126108" />
+    <street name="青石镇" code="421126109" />
+    <street name="张榜镇" code="421126110" />
+    <street name="大同镇" code="421126111" />
+    <street name="檀林镇" code="421126112" />
+    <street name="向桥乡" code="421126200" />
+    <street name="八里湖农场" code="421126450" />
+    <street name="李时珍医药工业园区管委会" code="421126451" />
+</county>
+<county name="黄梅" code="421127">
+    <street name="黄梅镇" code="421127100" />
+    <street name="孔垄镇" code="421127101" />
+    <street name="小池镇" code="421127102" />
+    <street name="下新镇" code="421127103" />
+    <street name="大河镇" code="421127104" />
+    <street name="停前镇" code="421127105" />
+    <street name="五祖镇" code="421127106" />
+    <street name="濯港镇" code="421127107" />
+    <street name="蔡山镇" code="421127108" />
+    <street name="新开镇" code="421127109" />
+    <street name="独山镇" code="421127110" />
+    <street name="分路镇" code="421127111" />
+    <street name="柳林乡" code="421127200" />
+    <street name="杉木乡" code="421127201" />
+    <street name="苦竹乡" code="421127202" />
+    <street name="刘佐乡" code="421127203" />
+    <street name="挪步园风景管理处" code="421127400" />
+    <street name="黄梅县农业开发总公司" code="421127401" />
+    <street name="黄梅县农科所" code="421127402" />
+    <street name="严家闸办事处" code="421127450" />
+    <street name="芦柴湖办事处" code="421127451" />
+    <street name="洋湖办事处" code="421127452" />
+    <street name="沙湖办事处" code="421127453" />
+    <street name="春港办事处" code="421127454" />
+    <street name="塞湖办事处" code="421127455" />
+    <street name="青泥湖办事处" code="421127456" />
+    <street name="湖北龙感湖工业园区" code="421127457" />
+</county>
+<county name="麻城" code="421181">
+    <street name="龙池办事处" code="421181001" />
+    <street name="鼓楼办事处" code="421181002" />
+    <street name="南湖办事处" code="421181003" />
+    <street name="中馆驿镇" code="421181100" />
+    <street name="宋埠镇" code="421181101" />
+    <street name="歧亭镇" code="421181102" />
+    <street name="白果镇" code="421181103" />
+    <street name="夫子河镇" code="421181104" />
+    <street name="阎家河镇" code="421181105" />
+    <street name="龟山镇" code="421181106" />
+    <street name="盐田河镇" code="421181107" />
+    <street name="张家畈镇" code="421181108" />
+    <street name="木子店镇" code="421181109" />
+    <street name="三河口镇" code="421181110" />
+    <street name="黄土岗镇" code="421181111" />
+    <street name="福田河镇" code="421181112" />
+    <street name="乘马岗镇" code="421181113" />
+    <street name="顺河镇" code="421181114" />
+    <street name="铁门岗乡" code="421181200" />
+    <street name="麻城浮桥河水库" code="421181400" />
+    <street name="宋埠良种场" code="421181401" />
+    <street name="麻城明山水库" code="421181402" />
+    <street name="麻城三河水库" code="421181403" />
+    <street name="狮子峰林场" code="421181404" />
+    <street name="麻城林店茶场" code="421181405" />
+    <street name="铁路生活区" code="421181470" />
+    <street name="湖北省麻城开发区" code="421181471" />
+    <street name="龟山风景区管理处" code="421181472" />
+    <street name="五脑山林场" code="421181500" />
+</county>
+<county name="武穴" code="421182">
+    <street name="武穴街道" code="421182001" />
+    <street name="刊江街道" code="421182002" />
+    <street name="田镇街道" code="421182003" />
+    <street name="万丈湖街道" code="421182004" />
+    <street name="梅川镇" code="421182100" />
+    <street name="余川镇" code="421182101" />
+    <street name="花桥镇" code="421182102" />
+    <street name="大金镇" code="421182103" />
+    <street name="石佛寺镇" code="421182104" />
+    <street name="四望镇" code="421182105" />
+    <street name="大法寺镇" code="421182106" />
+    <street name="龙坪镇" code="421182107" />
+</county>
+</city>
+</address>

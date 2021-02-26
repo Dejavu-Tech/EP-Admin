@@ -1,0 +1,75 @@
+/**=====================
+     45. Footer CSS Start
+==========================**/
+.footer-links{
+  text-align: $footer_link_align;
+  li{
+    display: inline-block;
+    padding-right: 15px;
+    a{
+      font-size: 12px;
+    }
+  }
+}
+footer{
+  background-color: $footer_bg_color;
+  padding: 15px;
+  bottom: 0;
+  left: 0;
+  a{
+    font-weight: 600;
+  }
+}
+.footer-dark{
+  background-color: $footer_dark_color;
+  .footer-copyright{
+    .footer-text{
+      p{
+        color: $white;
+      }
+    }
+  }
+  p{
+    color: $footer_dark__txt_color;
+  }
+  li{
+    a{
+      color: $footer_dark__txt_color;
+    }
+  }
+}
+.footer-fix{
+  position: fixed;
+  width: calc(100% - 255px);
+}
+.blockquote-footer{
+  margin-left: 0 !important;
+  width: auto !important;
+  box-shadow: none !important;
+}
+.page-wrapper{
+  .page-body-wrapper{
+    footer{
+
+      transition: .6s;
+      bottom: 0;
+      z-index: 9;
+      position: relative;
+      box-shadow: 19px 8px 16px 7px rgba($theme-default-color , 0.05);
+      p{
+        color: $black;
+        font-weight: 600;
+        i{
+          color: #e7474e;
+          text-shadow: 2px 2px 4px rgba(231, 71, 78, 0.5);
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+}
+/**=====================
+     45. Footer CSS Ends
+==========================**/
+

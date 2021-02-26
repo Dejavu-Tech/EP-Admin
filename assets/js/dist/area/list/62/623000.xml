@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="甘南" code="623000">
+<county name="合作" code="623001">
+    <street name="当周街道" code="623001001" />
+    <street name="伊合昂街道" code="623001002" />
+    <street name="坚木克尔街道" code="623001003" />
+    <street name="通钦街道" code="623001004" />
+    <street name="卡加曼乡" code="623001200" />
+    <street name="卡加道乡" code="623001201" />
+    <street name="佐盖多玛乡" code="623001202" />
+    <street name="佐盖曼玛乡" code="623001203" />
+    <street name="勒秀乡" code="623001204" />
+    <street name="那吾乡" code="623001205" />
+</county>
+<county name="临潭" code="623021">
+    <street name="城关镇" code="623021100" />
+    <street name="新城镇" code="623021101" />
+    <street name="冶力关镇" code="623021102" />
+    <street name="初布乡" code="623021200" />
+    <street name="古战回族乡" code="623021201" />
+    <street name="卓洛回族乡" code="623021202" />
+    <street name="长川回族乡" code="623021203" />
+    <street name="羊永乡" code="623021204" />
+    <street name="流顺乡" code="623021205" />
+    <street name="店子乡" code="623021206" />
+    <street name="洮滨乡" code="623021207" />
+    <street name="三岔乡" code="623021208" />
+    <street name="王旗乡" code="623021209" />
+    <street name="石门乡" code="623021210" />
+    <street name="羊沙乡" code="623021211" />
+    <street name="八角乡" code="623021212" />
+</county>
+<county name="卓尼" code="623022">
+    <street name="柳林镇" code="623022100" />
+    <street name="木耳镇" code="623022101" />
+    <street name="扎古录镇" code="623022102" />
+    <street name="纳浪乡" code="623022200" />
+    <street name="喀尔钦乡" code="623022201" />
+    <street name="刀告乡" code="623022202" />
+    <street name="尼巴乡" code="623022203" />
+    <street name="完冒乡" code="623022204" />
+    <street name="阿子塘乡" code="623022205" />
+    <street name="申藏乡" code="623022206" />
+    <street name="恰盖乡" code="623022207" />
+    <street name="康多乡" code="623022208" />
+    <street name="勺哇土族乡" code="623022209" />
+    <street name="洮砚乡" code="623022210" />
+    <street name="藏巴哇乡" code="623022211" />
+</county>
+<county name="舟曲" code="623023">
+    <street name="城关镇" code="623023100" />
+    <street name="大川镇" code="623023101" />
+    <street name="峰迭镇" code="623023102" />
+    <street name="曲瓦乡" code="623023200" />
+    <street name="巴藏乡" code="623023201" />
+    <street name="大峪乡" code="623023202" />
+    <street name="立节乡" code="623023203" />
+    <street name="憨班乡" code="623023204" />
+    <street name="坪定乡" code="623023205" />
+    <street name="江盘乡" code="623023206" />
+    <street name="东山乡" code="623023207" />
+    <street name="南峪乡" code="623023208" />
+    <street name="果耶乡" code="623023209" />
+    <street name="八楞乡" code="623023210" />
+    <street name="武坪乡" code="623023211" />
+    <street name="插岗乡" code="623023212" />
+    <street name="拱坝乡" code="623023213" />
+    <street name="曲告纳乡" code="623023214" />
+    <street name="博峪乡" code="623023215" />
+</county>
+<county name="迭部" code="623024">
+    <street name="电尕镇" code="623024100" />
+    <street name="益哇乡" code="623024200" />
+    <street name="卡坝乡" code="623024201" />
+    <street name="达拉乡" code="623024202" />
+    <street name="尼傲乡" code="623024203" />
+    <street name="旺藏乡" code="623024204" />
+    <street name="阿夏乡" code="623024205" />
+    <street name="多儿乡" code="623024206" />
+    <street name="桑坝乡" code="623024207" />
+    <street name="腊子口乡" code="623024208" />
+    <street name="洛大乡" code="623024209" />
+</county>
+<county name="玛曲" code="623025">
+    <street name="尼玛镇" code="623025100" />
+    <street name="欧拉乡" code="623025200" />
+    <street name="欧拉秀玛乡" code="623025201" />
+    <street name="阿万仓乡" code="623025202" />
+    <street name="木西合乡" code="623025203" />
+    <street name="齐哈玛乡" code="623025204" />
+    <street name="采日玛乡" code="623025205" />
+    <street name="曼日玛乡" code="623025206" />
+    <street name="河曲马场" code="623025400" />
+    <street name="大水军牧场" code="623025401" />
+    <street name="高原生物研究所" code="623025402" />
+</county>
+<county name="碌曲" code="623026">
+    <street name="郎木寺镇" code="623026100" />
+    <street name="玛艾镇" code="623026101" />
+    <street name="尕海乡" code="623026200" />
+    <street name="西仓乡" code="623026201" />
+    <street name="拉仁关乡" code="623026202" />
+    <street name="双岔乡" code="623026203" />
+    <street name="阿拉乡" code="623026204" />
+    <street name="李恰如种畜场" code="623026400" />
+    <street name="双岔林场" code="623026401" />
+</county>
+<county name="夏河" code="623027">
+    <street name="拉卜楞镇" code="623027100" />
+    <street name="王格尔塘镇" code="623027101" />
+    <street name="阿木去乎镇" code="623027102" />
+    <street name="桑科乡" code="623027200" />
+    <street name="甘加乡" code="623027201" />
+    <street name="达麦乡" code="623027202" />
+    <street name="麻当乡" code="623027203" />
+    <street name="曲奥乡" code="623027204" />
+    <street name="唐尕昂乡" code="623027205" />
+    <street name="扎油乡" code="623027206" />
+    <street name="博拉乡" code="623027207" />
+    <street name="吉仓乡" code="623027208" />
+    <street name="科才乡" code="623027209" />
+</county>
+</city>
+</address>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="南京" code="320100">
+<county name="玄武" code="320102">
+    <street name="梅园新村街道" code="320102002" />
+    <street name="新街口街道" code="320102003" />
+    <street name="玄武门街道" code="320102005" />
+    <street name="锁金村街道" code="320102007" />
+    <street name="红山街道" code="320102008" />
+    <street name="孝陵卫街道" code="320102009" />
+    <street name="玄武湖街道" code="320102010" />
+</county>
+<county name="秦淮" code="320104">
+    <street name="秦虹街道" code="320104001" />
+    <street name="夫子庙街道" code="320104002" />
+    <street name="红花街道" code="320104003" />
+    <street name="双塘街道" code="320104004" />
+    <street name="中华门街道" code="320104005" />
+    <street name="五老村街道" code="320104006" />
+    <street name="洪武路街道" code="320104007" />
+    <street name="大光路街道" code="320104008" />
+    <street name="瑞金路街道" code="320104009" />
+    <street name="月牙湖街道" code="320104010" />
+    <street name="光华路街道" code="320104011" />
+    <street name="朝天宫街道" code="320104012" />
+    <street name="夫管办" code="320104400" />
+</county>
+<county name="建邺" code="320105">
+    <street name="莫愁湖街道" code="320105001" />
+    <street name="沙洲街道" code="320105002" />
+    <street name="双闸街道" code="320105003" />
+    <street name="江心洲街道" code="320105004" />
+    <street name="兴隆街道" code="320105006" />
+    <street name="南苑街道" code="320105007" />
+    <street name="建邺区新城科技园" code="320105400" />
+    <street name="建邺区河西中央商务区" code="320105401" />
+    <street name="建邺区江东商业文化旅游中心区" code="320105402" />
+    <street name="中新南京生态科技岛" code="320105403" />
+</county>
+<county name="鼓楼" code="320106">
+    <street name="宁海路街道" code="320106001" />
+    <street name="华侨路街道" code="320106002" />
+    <street name="湖南路街道" code="320106003" />
+    <street name="中央门街道" code="320106004" />
+    <street name="挹江门街道" code="320106005" />
+    <street name="江东街道" code="320106006" />
+    <street name="凤凰街道" code="320106007" />
+    <street name="阅江楼街道" code="320106008" />
+    <street name="热河南路街道" code="320106009" />
+    <street name="幕府山街道" code="320106010" />
+    <street name="建宁路街道" code="320106011" />
+    <street name="宝塔桥街道" code="320106012" />
+    <street name="小市街道" code="320106013" />
+</county>
+<county name="浦口" code="320111">
+    <street name="泰山街道" code="320111001" />
+    <street name="顶山街道" code="320111002" />
+    <street name="沿江街道" code="320111003" />
+    <street name="江浦街道" code="320111004" />
+    <street name="桥林街道" code="320111005" />
+    <street name="汤泉街道" code="320111006" />
+    <street name="盘城街道" code="320111007" />
+    <street name="星甸街道" code="320111008" />
+    <street name="永宁街道" code="320111009" />
+    <street name="老山林场" code="320111400" />
+    <street name="汤泉农场" code="320111401" />
+    <street name="珍珠泉管委会" code="320111402" />
+    <street name="高新技术开发区" code="320111450" />
+</county>
+<county name="栖霞" code="320113">
+    <street name="尧化街道" code="320113001" />
+    <street name="马群街道" code="320113002" />
+    <street name="迈皋桥街道" code="320113003" />
+    <street name="燕子矶街道" code="320113004" />
+    <street name="栖霞街道" code="320113005" />
+    <street name="龙潭街道" code="320113006" />
+    <street name="仙林街道" code="320113007" />
+    <street name="八卦洲街道" code="320113009" />
+    <street name="西岗街道" code="320113010" />
+    <street name="龙潭监狱" code="320113400" />
+    <street name="栖霞经济开发区" code="320113401" />
+    <street name="南京龙潭物流园" code="320113402" />
+    <street name="南京市靖安三江口工业园" code="320113403" />
+    <street name="南京迈皋桥创业园" code="320113404" />
+    <street name="南京市马群科技园" code="320113405" />
+    <street name="南京仙林大学城" code="320113406" />
+    <street name="江苏生命科技创新园" code="320113407" />
+    <street name="江苏金箔文化产业园" code="320113408" />
+    <street name="南京大学科学园" code="320113409" />
+    <street name="南京紫东国际创意园" code="320113410" />
+    <street name="南京金港科技创业中心" code="320113411" />
+    <street name="新港环保科技园" code="320113412" />
+    <street name="南京经济技术开发区" code="320113450" />
+</county>
+<county name="雨花台" code="320114">
+    <street name="雨花街道" code="320114001" />
+    <street name="赛虹桥街道" code="320114002" />
+    <street name="西善桥街道" code="320114004" />
+    <street name="板桥街道" code="320114005" />
+    <street name="铁心桥街道" code="320114006" />
+    <street name="梅山街道" code="320114007" />
+    <street name="雨花经济开发区" code="320114400" />
+    <street name="板桥新城" code="320114401" />
+    <street name="中国（南京）软件谷" code="320114402" />
+</county>
+<county name="江宁" code="320115">
+    <street name="东山街道" code="320115001" />
+    <street name="秣陵街道" code="320115002" />
+    <street name="汤山街道" code="320115003" />
+    <street name="淳化街道" code="320115004" />
+    <street name="禄口街道" code="320115005" />
+    <street name="江宁街道" code="320115006" />
+    <street name="谷里街道" code="320115007" />
+    <street name="湖熟街道" code="320115008" />
+    <street name="横溪街道" code="320115009" />
+    <street name="麒麟街道" code="320115010" />
+    <street name="青龙山林场" code="320115401" />
+    <street name="江宁开发区" code="320115402" />
+    <street name="江宁滨江开发区" code="320115403" />
+    <street name="江宁高新技术产业园" code="320115404" />
+</county>
+<county name="六合" code="320116">
+    <street name="大厂街道" code="320116001" />
+    <street name="葛塘街道" code="320116004" />
+    <street name="长芦街道" code="320116005" />
+    <street name="雄州街道" code="320116006" />
+    <street name="龙池街道" code="320116007" />
+    <street name="程桥街道" code="320116008" />
+    <street name="金牛湖街道" code="320116009" />
+    <street name="横梁街道" code="320116010" />
+    <street name="龙袍街道" code="320116011" />
+    <street name="马鞍街道" code="320116012" />
+    <street name="冶山街道" code="320116101" />
+    <street name="竹镇镇" code="320116110" />
+    <street name="六合开发区" code="320116400" />
+    <street name="化工园区" code="320116450" />
+</county>
+<county name="溧水" code="320124">
+    <street name="永阳镇" code="320117100" />
+    <street name="白马镇" code="320117101" />
+    <street name="东屏镇" code="320117102" />
+    <street name="柘塘镇" code="320117103" />
+    <street name="石湫镇" code="320117104" />
+    <street name="洪蓝镇" code="320117105" />
+    <street name="晶桥镇" code="320117106" />
+    <street name="和凤镇" code="320117107" />
+    <street name="溧水开发区" code="320117400" />
+</county>
+<county name="高淳" code="320125">
+    <street name="淳溪镇" code="320118100" />
+    <street name="阳江镇" code="320118101" />
+    <street name="砖墙镇" code="320118102" />
+    <street name="古柏镇" code="320118103" />
+    <street name="漆桥镇" code="320118104" />
+    <street name="固城镇" code="320118105" />
+    <street name="东坝镇" code="320118106" />
+    <street name="桠溪镇" code="320118108" />
+    <street name="高淳县团结圩良种繁育场" code="320118400" />
+    <street name="高淳县茶叶实验场" code="320118401" />
+    <street name="高淳监狱" code="320118402" />
+    <street name="高淳县傅家坛林场" code="320118403" />
+</county>
+</city>
+</address>

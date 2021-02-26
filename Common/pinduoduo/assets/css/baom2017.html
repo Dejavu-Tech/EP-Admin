@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no" name="viewport">
+    <title>2017（第六届）泉州台历宝宝大赛活动报名</title>
+	<meta name="keywords" content="2017（第六届）泉州台历宝宝大赛活动报名"/>
+	<meta name="description" content="2017（第六届）泉州台历宝宝大赛活动报名"/>
+	
+    <base href="__MODULE__" />
+    <!-- css -->
+    <link rel="stylesheet" href="__PUBLIC__/style/style.css">
+    <!-- js -->
+	
+</head>
+<?php 
+require_once(dirname(dirname(dirname( dirname(dirname(dirname(__FILE__)))))).'/baby/jssdk.php'  );
+$jssdk = new JSSDK("wx4c63f7d6efe24004", "85524600c68d14b70acd49ed32af2d11");
+$signPackage = $jssdk->GetSignPackage();
+?>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script language="javascript">
+wx.config({
+    debug: false,
+    appId: '<?php echo $signPackage["appId"]; ?>',
+    timestamp: <?php echo $signPackage["timestamp"]; ?>,
+    nonceStr: '<?php echo $signPackage["nonceStr"]; ?>',
+    signature: '<?php echo $signPackage["signature"]; ?>',
+    jsApiList: [
+      'onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','hideMenuItems'
+    ]
+});
+
+wx.ready(function () {
+	wx.onMenuShareTimeline({
+		title: '2017（第六届）泉州台历宝宝大赛活动报名', // 分享标题
+		link: 'http://baby2015.mnw.cn/index.php?m=&c=Index&a=baom2017', // 分享链接
+		imgUrl: 'http://baby2015.mnw.cn/Public/img/top2017.jpg', // 分享图标
+		success: function () { 
+			// 用户确认分享后执行的回调函数
+		},
+		cancel: function () { 
+			// 用户取消分享后执行的回调函数
+		}
+	});
+	
+	wx.onMenuShareAppMessage({
+		title: '2017（第六届）泉州台历宝宝大赛活动报名', // 分享标题
+		desc: '2017（第六届）泉州台历宝宝大赛活动报名', // 分享描述
+		link: 'http://baby2015.mnw.cn/index.php?m=&c=Index&a=baom2017', // 分享链接
+		imgUrl: 'http://baby2015.mnw.cn/Public/img/top2017.jpg', // 分享图标
+		type: '', // 分享类型,music、video或link，不填默认为link
+		dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+		success: function () { 
+			// 用户确认分享后执行的回调函数
+		},
+		cancel: function () { 
+			// 用户取消分享后执行的回调函数
+		}
+	});
+	
+	//wx.hideOptionMenu();
+	wx.hideMenuItems({ 
+        menuList: ['menuItem:exposeArticle','menuItem:setFont','menuItem:copyUrl','menuItem:openWithQQBrowser','menuItem:openWithSafari','menuItem:share:email'] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3 
+    }); 
+});
+</script>
+	
+<body>
+    <div class="wrap">
+
+<link rel="stylesheet" href="__PUBLIC__/style/jquery.fileupload.css">
+<link rel="stylesheet" href="__PUBLIC__/style/jquery.fileupload-ui.css">
+<link rel="stylesheet" href="__PUBLIC__/style/bootstrap.min.css">
+
+<script src="__PUBLIC__/style/jquery-1.11.0.min.js"></script>
+<script src="__PUBLIC__/style/jquery.ui.widget.js"></script>
+<script src="__PUBLIC__/style/jquery.iframe-transport.js"></script>
+<script src="__PUBLIC__/style/jquery.fileupload.js"></script>
+<script src="__PUBLIC__/style/jquery.xdr-transport.js"></script>
+<style>
+p{margin-bottom:0px;}
+.main{padding: 20px 15px 0;}
+.main .item, .main .item-captcha .input-info {
+  margin-bottom: 10px;
+}
+a, button, input {
+  outline: 0;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.main .item {
+  position: relative;
+  width: 100%;
+}
+
+.main .item .txt-input {
+  width: 100%;
+  height: 44px;
+  line-height: normal;
+  padding: 0;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  background: #fff;
+  font-family: '\5fae\8f6f\96c5\9ed1';
+  font-size: 16px;
+  color: #252525;
+  -webkit-appearance: none;
+}
+
+
+.main .item-login-option:after, .main .item:after {
+  content: '\20';
+  clear: both;
+}
+.main .item:after {
+  display: block;
+}
+
+.main .btn-login {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  background: #f25454;
+  text-decoration: none;
+  line-height: 39px;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  border:none;
+}
+.main .item  .txt-sms-captcha {
+  float: left;
+  padding-left: 15px;
+}
+.main .btn-disabled {
+  background: #e2e2e2;
+  cursor: default;
+  color: #bdbdbd;
+}
+.item span{padding-right:8px;padding-left:8px;}
+</style>
+<p>
+	<img src="__PUBLIC__/img/top2017.jpg" width="100%" />
+</p>
+
+<div class="main">
+	<div><p></p><p></p></div>
+	<form action='{$suburl}' method="post" enctype="multipart/form-data">
+	<div class="fom1">
+		<div class="item">
+			<input class="txt-input txt-sms-captcha" id="babyname" name="babyname" type="text" autocomplete="off" placeholder="请输入宝贝姓名">
+		</div>
+		<div class="item">
+			<label><input type="radio" name="sex" class="inp-radio" value="1" checked /><span>男宝贝</span></label>
+			<label><input type="radio" name="sex" class="inp-radio" value="2" /><span>女宝贝</span></label>
+		</div>
+		<div class="item">
+			<input class="txt-input txt-sms-captcha" id="birthday" name="birthday" type="text" autocomplete="off" placeholder="请输入宝贝出生年月">
+		</div>
+		
+		<div class="item">
+			<input class="txt-input txt-sms-captcha" id="parname" name="parname" type="text" autocomplete="off" placeholder="请输入联系人姓名">
+		</div>
+		<div class="item">
+			<input class="txt-input txt-sms-captcha" id="mobile" name="mobile" type="tel" autocomplete="off" placeholder="请输入联系人电话">
+		</div>
+		<div class="item">
+			<input class="txt-input txt-sms-captcha" id="weixin" name="weixin"  autocomplete="off" placeholder="联系人微信号">
+		</div>
+		<div class="item">
+			<label><span>所在区域：</span></label>
+		</div>
+		<div class="item">
+			<select name="area" class="form-control">
+				<option value="鲤城">鲤城</option>
+				<option value="丰泽">丰泽</option>
+				<option value="晋江">晋江</option>
+				<option value="石狮">石狮</option>
+				<option value="洛江">洛江</option>
+				<option value="台投">台投</option>
+				<option value="南安">南安</option>
+				<option value="惠安">惠安</option>
+				<option value="泉港">泉港</option>
+				<option value="安溪">安溪</option>
+				<option value="永春">永春</option>
+				<option value="德化">德化</option>
+				<option value="其他">其他</option>
+			</select>
+		</div>
+		
+		<div class="item">
+			<label><span>参赛类别</span></label>
+		</div>
+		<div class="item">
+			<label><input type="radio" name="cid" value="1" checked /><span>0-3岁幼儿组</span></label>
+			<label><input type="radio" name="cid" value="2" /><span>4-12岁儿童组</span></label>
+		</div>
+		<div class="item" >
+			<p>幼儿组:0—3岁(2013年9月1日及之后出生)</p>
+			<p>儿童组:4—12岁(2004年9月1日-2013年8月31日出生) </p>
+		</div>
+		
+		<div class="item">
+			<p><span>上传图片：</span>
+			<span class="btn btn-success fileinput-button" style="width:113px;">
+				<i class="glyphicon glyphicon-plus"></i>
+				<span>上传图片...</span>
+				<input type="file" name="files" id="fileupload" class="fileupload ">
+			</span>
+			</p>
+		</div>
+		
+		<div class="item">
+			<p id="tip"></p>
+		</div>
+		<div class="item">
+			<p id="upload_img"></p>
+		</div>
+		<div class="item">
+			<p>照片仅需上传一张，要求清晰美观。如图片未上传成功，请将图片压缩到4M以下。</p>
+			<p>图片上传成功后，将会显示在页面上.如未报名成功，请与我们联系:</p>
+			
+			<p><strong>咨询热线：</strong>0595-28679111 </p>
+			
+		</div>
+	</div>
+	<div style="padding:20px;"><input class="sub btn-login" id="submit" type="submit" value="立即报名"/></div>
+	</form>
+	<p style="text-align:center;"><img src="__PUBLIC__/img/weixinqun.jpg" style="max-width:90%;" /></p>	
+	<p style="text-align:center;line-height:36px;">扫一扫添加客服微信，加入活动微信群<br/>以便通知后续事宜。</p>	
+	
+	<div class="bod">
+		<h3 style="color:#ff0000;"><br/></h3>
+		<div style="margin:0 auto;width:120px;"></div>
+		<p style="margin:20px 0;"><b></b></p>	
+	</div>
+</div>	
+<script>
+var site_url = 'http://{$siteurl}';
+var is_img = false;
+var is_sub = true;
+$(function(){
+	$('#fileupload').fileupload({
+		url:'{$uppicurl}',
+		dataType:'json',
+		success: function (data) {
+			var file = data.files;
+				var s_html = '';
+				s_html += '<div class="img_line">';
+				s_html += '		<img src="'+site_url+file.thumb_url+'" width="100" /></p>';
+				s_html += '	<input type="hidden" name="thumb_url" value="'+file.thumb_url+'" />';
+				s_html += '	<input type="hidden" name="image_url" value="./Uploads/'+file.savepath+file.savename+'" />';
+				s_html += '</div>';
+				$('#upload_img').html(s_html);
+				is_img = true;
+		},
+		fail: function (e, data) {
+			$('#tip').html('该照片上传失败，请重新上传一次。');
+		}
+	});
+	$('#fileupload').fileupload('option', {
+		progressall: function (e, data) {
+			var progress = parseInt(data.loaded / data.total * 100, 10);
+			//console.log(progress + '%');
+			$('#tip').html(progress+ '%');
+		}
+	});
+	
+	$("form").submit(function(){
+		$('#submit').val('提交中...');
+		if(!is_sub)
+		{
+			$('#submit').val('立即报名');
+			return false;
+		}
+		var self = $(this);
+		if(!is_img){
+			alert('请上传照片');
+			$('#submit').val('立即报名');
+			return false;
+		}
+		if($.trim($('#babyname').val()) == '')
+		{
+			alert('宝贝姓名不能为空！');
+			$('#submit').val('立即报名');
+			return false;
+		}		
+		
+		if($.trim($('#birthday').val()) == '')
+		{
+			alert('宝贝出生年月不能为空！');
+			$('#submit').val('立即报名');
+			return false;
+		}	
+		
+		if($.trim($('#parname').val()) == '')
+		{
+			alert('请输入联系人姓名');
+			$('#submit').val('立即报名');
+			return false;
+		}
+		if($.trim($('#mobile').val()) == '')
+		{
+			alert('联系方式不能为空！');
+			$('#submit').val('立即报名');
+			return false;
+		}
+		var mobile = $('#mobile').val();
+		if(!mobile.match('^1[3|5|8|7][0-9]{9}$')){ 
+		
+		alert("请输入正确的手机号码！");
+		$('#submit').val('立即报名');
+		return false; 
+		}
+		if($.trim($('#weixin').val()) == '')
+		{
+			alert('联系人微信号不能为空！');
+			$('#submit').val('立即报名');
+			return false;
+		}		
+		
+		$.post(self.attr("action"), self.serialize(), success, "json");
+		return false;
+
+		function success(data){
+			if(data.code == 0){
+				alert("报名成功，谢谢参与！");
+				is_sub = true;
+				$('#submit').val('报名成功');
+				//insrt_id
+				//window.location.href = '{$toupurl}';
+			} else {
+				alert(data.mes);
+				$('#submit').val('立即报名');
+				is_sub = true;
+			}
+		}
+	});
+	
+})
+</script>	
+       <div class="clear"></div>
+        <!-- footer -->
+    </div>
+</body>
+</html>

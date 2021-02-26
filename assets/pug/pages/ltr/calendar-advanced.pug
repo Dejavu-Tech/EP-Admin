@@ -1,0 +1,67 @@
+- var dragable_ui           = true;
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var calendar              = true;
+- var page_calendar         = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Calendar
+                                      span
+                                        | Advance
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Apps    
+                                      li.breadcrumb-item User
+                                      li.breadcrumb-item.active Calendar Advance
+                    // Container-fluid starts
+                    .container-fluid
+                      .calendar-wrap
+                        .row
+                          .col-sm-12
+                            .card
+                              .card-header
+                                h5 Dragging Event
+                              .card-body
+                                .basic-calendar
+                                  .row
+                                    .col-md-4.col-xl-3
+                                      #external-events.external-events.text-left
+                                        .fc-events-container
+                                          .fc-event(data-color='#7e37d8') All Day Event
+                                          .fc-event(data-color='#1ea6ec') Meeting
+                                          .fc-event(data-color='#22af47') Long Event
+                                          .fc-event(data-color='#007bff') Birthday party
+                                          .fc-event(data-color='#ff9f40') Party
+                                          .fc-event(data-color='#ff5370') Lunch
+                                          .fc-event(data-color='#536dfe') Conference Meeting
+                                          .fc-event(data-color='#fb6d9d') Happy Hour
+                                          h6.f-12.m-t-20 Drag and drop your event or click in the calendar
+                                          .checkbox.checkbox-primary
+                                            input#drop-remove(type='checkbox', checked='')
+                                            label(for='drop-remove') Remove After Drop
+                                    .col-md-8.col-xl-9
+                                      #fc-external-drag
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

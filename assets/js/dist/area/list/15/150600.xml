@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="鄂尔多斯" code="150600">
+<county name="东胜" code="150602">
+    <street name="交通街道" code="150602001" />
+    <street name="公园街道" code="150602002" />
+    <street name="林荫街道" code="150602003" />
+    <street name="建设街道" code="150602004" />
+    <street name="富兴街道" code="150602005" />
+    <street name="天骄街道" code="150602006" />
+    <street name="诃额伦街道" code="150602007" />
+    <street name="巴音门克街道" code="150602008" />
+    <street name="哈巴格希街道" code="150602009" />
+    <street name="幸福街道" code="150602010" />
+    <street name="纺织街道" code="150602011" />
+    <street name="兴盛街道" code="150602012" />
+    <street name="民族街道" code="150602013" />
+    <street name="青春山街道" code="150602014" />
+    <street name="滨河街道" code="150602015" />
+    <street name="泊尔江海子镇" code="150602100" />
+    <street name="罕台镇" code="150602101" />
+    <street name="铜川镇" code="150602102" />
+    <street name="鄂尔多斯市装备制造基地" code="150602400" />
+    <street name="东胜区轻纺工业园区" code="150602401" />
+    <street name="鄂尔多斯市康巴什产业园" code="150602402" />
+    <street name="鄂尔多斯市云计算产业园区" code="150602403" />
+    <street name="铜川汽车博览园" code="150602404" />
+</county>
+<county name="达拉特" code="150621">
+    <street name="工业街道" code="150621001" />
+    <street name="昭君街道" code="150621002" />
+    <street name="锡尼街道" code="150621003" />
+    <street name="白塔街道" code="150621004" />
+    <street name="西园街道" code="150621005" />
+    <street name="平原街道" code="150621006" />
+    <street name="树林召镇" code="150621100" />
+    <street name="吉格斯太镇" code="150621101" />
+    <street name="白泥井镇" code="150621102" />
+    <street name="王爱召镇" code="150621103" />
+    <street name="昭君镇" code="150621104" />
+    <street name="恩格贝镇" code="150621105" />
+    <street name="中和西镇" code="150621106" />
+    <street name="展旦召苏木乡" code="150621200" />
+    <street name="达拉特经济开发区" code="150621400" />
+    <street name="鄂尔多斯市生态示范区管理委员会" code="150621401" />
+</county>
+<county name="准格尔" code="150622">
+    <street name="兴隆街道" code="150622001" />
+    <street name="迎泽街道" code="150622002" />
+    <street name="蓝天街道" code="150622003" />
+    <street name="友谊街道" code="150622004" />
+    <street name="薛家湾镇" code="150622100" />
+    <street name="沙圪堵镇" code="150622101" />
+    <street name="大路镇" code="150622102" />
+    <street name="纳日松镇" code="150622103" />
+    <street name="龙口镇" code="150622104" />
+    <street name="准格尔召镇" code="150622105" />
+    <street name="暖水乡" code="150622200" />
+    <street name="十二连城乡" code="150622201" />
+    <street name="布尔陶亥苏木乡" code="150622202" />
+    <street name="准格尔经济开发区" code="150622400" />
+    <street name="大路煤化工基地" code="150622401" />
+</county>
+<county name="鄂托克前" code="150623">
+    <street name="敖勒召其镇" code="150623100" />
+    <street name="上海庙镇" code="150623101" />
+    <street name="城川镇" code="150623102" />
+    <street name="昂素镇" code="150623103" />
+    <street name="上海庙经济开发区" code="150623400" />
+</county>
+<county name="鄂托克" code="150624">
+    <street name="乌兰镇" code="150624100" />
+    <street name="棋盘井镇" code="150624101" />
+    <street name="蒙西镇" code="150624102" />
+    <street name="木凯淖尔镇" code="150624103" />
+    <street name="苏米图苏木乡" code="150624200" />
+    <street name="阿尔巴斯苏木乡" code="150624201" />
+    <street name="蒙西工业园区" code="150624403" />
+    <street name="棋盘井工业园区" code="150624404" />
+</county>
+<county name="杭锦" code="150625">
+    <street name="锡尼镇" code="150625100" />
+    <street name="巴拉贡镇" code="150625101" />
+    <street name="吉日嘎朗图镇" code="150625102" />
+    <street name="独贵特拉镇" code="150625103" />
+    <street name="呼和木独镇" code="150625104" />
+    <street name="伊和乌素苏木乡" code="150625200" />
+    <street name="杭锦旗独贵塔拉工业园区管理委员会" code="150625400" />
+    <street name="鄂尔多斯新能源产业示范区" code="150625401" />
+</county>
+<county name="乌审" code="150626">
+    <street name="嘎鲁图镇" code="150626100" />
+    <street name="乌审召镇" code="150626101" />
+    <street name="图克镇" code="150626102" />
+    <street name="乌兰陶勒盖镇" code="150626103" />
+    <street name="无定河镇" code="150626104" />
+    <street name="苏力德苏木乡" code="150626200" />
+    <street name="纳林河化工项目区" code="150626402" />
+    <street name="图克化工项目区" code="150626403" />
+    <street name="乌审召生态化工项目区" code="150626405" />
+    <street name="苏里格经济开发区" code="150626406" />
+</county>
+<county name="伊金霍洛" code="150627">
+    <street name="阿勒腾席热镇" code="150627100" />
+    <street name="札萨克镇" code="150627101" />
+    <street name="乌兰木伦镇" code="150627102" />
+    <street name="纳林陶亥镇" code="150627103" />
+    <street name="苏布尔嘎镇" code="150627104" />
+    <street name="红庆河镇" code="150627105" />
+    <street name="伊金霍洛镇" code="150627106" />
+    <street name="鄂尔多斯江苏工业园区" code="150627400" />
+    <street name="鄂尔多斯文化产业园区" code="150627402" />
+    <street name="鄂尔多斯圣圆煤化工基地" code="150627403" />
+    <street name="成吉思汗文化体育产业园" code="150627404" />
+    <street name="鄂尔多斯蒙古源流文化产业园区" code="150627405" />
+    <street name="伊金霍洛旗札萨克物流园区" code="150627406" />
+    <street name="鄂尔多斯空港物流园区" code="150627407" />
+</county>
+<county name="康巴什" code="150628">
+    <street name="哈巴格希街道" code="150628100" />
+	<street name="青春山街道" code="150628101" />
+	<street name="滨河街道" code="150628102" />
+	<street name="康新街道" code="150628103" />
+</county>
+</city>
+</address>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宣城" code="341800">
+<county name="宣州" code="341802">
+    <street name="西林街道" code="341802001" />
+    <street name="澄江街道" code="341802002" />
+    <street name="鳌峰街道" code="341802003" />
+    <street name="济川街道" code="341802004" />
+    <street name="敬亭山街道" code="341802005" />
+    <street name="双桥街道" code="341802006" />
+    <street name="飞彩街道" code="341802007" />
+    <street name="金坝街道" code="341802008" />
+    <street name="水阳镇" code="341802100" />
+    <street name="狸桥镇" code="341802101" />
+    <street name="沈村镇" code="341802102" />
+    <street name="古泉镇" code="341802103" />
+    <street name="洪林镇" code="341802104" />
+    <street name="寒亭镇" code="341802105" />
+    <street name="文昌镇" code="341802106" />
+    <street name="孙埠镇" code="341802107" />
+    <street name="向阳镇" code="341802108" />
+    <street name="杨柳镇" code="341802109" />
+    <street name="水东镇" code="341802110" />
+    <street name="新田镇" code="341802111" />
+    <street name="周王镇" code="341802112" />
+    <street name="溪口镇" code="341802113" />
+    <street name="朱桥乡" code="341802200" />
+    <street name="养贤乡" code="341802201" />
+    <street name="五星乡" code="341802202" />
+    <street name="黄渡乡" code="341802204" />
+</county>
+<county name="郎溪" code="341821">
+    <street name="建平镇" code="341821100" />
+    <street name="十字镇" code="341821101" />
+    <street name="新发镇" code="341821102" />
+    <street name="涛城镇" code="341821103" />
+    <street name="梅渚镇" code="341821105" />
+    <street name="毕桥镇" code="341821107" />
+    <street name="飞鲤镇" code="341821108" />
+    <street name="凌笪乡" code="341821200" />
+    <street name="姚村乡" code="341821202" />
+    <street name="郎溪经济开发区" code="341821400" />
+    <street name="安徽省国营十字铺茶场" code="341821500" />
+    <street name="上海市白茅岭监狱" code="341821501" />
+</county>
+<county name="广德" code="341822">
+    <street name="桃州镇" code="341822100" />
+    <street name="柏垫镇" code="341822101" />
+    <street name="誓节镇" code="341822102" />
+    <street name="邱村镇" code="341822103" />
+    <street name="新杭镇" code="341822104" />
+    <street name="卢村乡" code="341822200" />
+    <street name="东亭乡" code="341822201" />
+    <street name="杨滩乡" code="341822202" />
+    <street name="四合乡" code="341822203" />
+    <street name="祠山岗茶场" code="341822500" />
+</county>
+<county name="泾县" code="341823">
+    <street name="泾川镇" code="341823100" />
+    <street name="茂林镇" code="341823101" />
+    <street name="榔桥镇" code="341823102" />
+    <street name="桃花潭镇" code="341823103" />
+    <street name="琴溪镇" code="341823104" />
+    <street name="蔡村镇" code="341823105" />
+    <street name="云岭镇" code="341823106" />
+    <street name="黄村镇" code="341823107" />
+    <street name="丁家桥镇" code="341823108" />
+    <street name="汀溪乡" code="341823200" />
+    <street name="昌桥乡" code="341823201" />
+</county>
+<county name="绩溪" code="341824">
+    <street name="华阳镇" code="341824100" />
+    <street name="临溪镇" code="341824101" />
+    <street name="长安镇" code="341824102" />
+    <street name="上庄镇" code="341824103" />
+    <street name="扬溪镇" code="341824104" />
+    <street name="伏岭镇" code="341824105" />
+    <street name="金沙镇" code="341824106" />
+    <street name="瀛洲镇" code="341824107" />
+    <street name="板桥头乡" code="341824201" />
+    <street name="家朋乡" code="341824202" />
+    <street name="荆州乡" code="341824203" />
+    <street name="生态工业园区" code="341824400" />
+</county>
+<county name="旌德" code="341825">
+    <street name="旌阳镇" code="341825100" />
+    <street name="蔡家桥镇" code="341825101" />
+    <street name="三溪镇" code="341825102" />
+    <street name="庙首镇" code="341825103" />
+    <street name="白地镇" code="341825104" />
+    <street name="俞村镇" code="341825105" />
+    <street name="版书乡" code="341825200" />
+    <street name="云乐乡" code="341825202" />
+    <street name="兴隆乡" code="341825203" />
+    <street name="孙村乡" code="341825204" />
+</county>
+<county name="宁国" code="341881">
+    <street name="西津街道" code="341881001" />
+    <street name="南山街道" code="341881002" />
+    <street name="河沥街道" code="341881003" />
+    <street name="汪溪街道" code="341881004" />
+    <street name="竹峰街道" code="341881005" />
+    <street name="天湖街道" code="341881006" />
+    <street name="港口镇" code="341881100" />
+    <street name="梅林镇" code="341881101" />
+    <street name="中溪镇" code="341881102" />
+    <street name="宁墩镇" code="341881103" />
+    <street name="仙霞镇" code="341881104" />
+    <street name="甲路镇" code="341881105" />
+    <street name="胡乐镇" code="341881106" />
+    <street name="霞西镇" code="341881107" />
+    <street name="云梯畲族乡" code="341881200" />
+    <street name="南极乡" code="341881201" />
+    <street name="万家乡" code="341881202" />
+    <street name="青龙乡" code="341881203" />
+    <street name="方塘乡" code="341881204" />
+</county>
+</city>
+</address>

@@ -1,0 +1,116 @@
+<div class="form-group row">
+    <label class="col-lg control-label">用户</label>
+    <div class="col-sm-9 col-xs-12">
+        <img class="radius50" src="{$member['avatar']}" style='width:50px;height:50px;padding:1px;border:1px solid #ccc' />
+        {$member['username']}
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-lg control-label">OPENID</label>
+    <div class="col-sm-9 col-xs-12">
+        <div class="form-control-static js-clip text-primary" data-url='{$member['openid']}'>{$member['openid']}</div>
+</div>
+</div>
+<div class="form-group row">
+    <label class="col-lg control-label">会员等级</label>
+    <div class="col-sm-9 col-xs-12">
+
+        <select name='data[level_id]' class='form-control'>
+            <option value=''>普通会员</option>
+            <?php foreach( $level_list as $level ){ ?>
+            <option value='{$level['id']}' <?php if($member['level_id']==$level['id']){ ?>selected<?php } ?>>{$level['levelname']}</option>
+            <?php } ?>
+        </select>
+
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-lg control-label">会员分组</label>
+    <div class="col-sm-9 col-xs-12">
+        <select name='data[groupid]' class='form-control select2'  placeholder="无分组">
+			<option value='' <?php if(empty($group['id'])){ ?>selected<?php } ?>>默认分组</option>
+            <?php foreach( $group_list as $group ){ ?>
+            <option value='{$group['id']}' <?php if($group['id'] == $member['groupid'] ){ ?>selected<?php } ?>>{$group['groupname']}</option>
+            <?php } ?>
+        </select>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label class="col-lg control-label">真实姓名</label>
+    <div class="col-sm-9 col-xs-12">
+        {:tpl_form_field_editor(array('name'=>'data[realname]', 'value'=>$member['realname']))}
+    </div>
+</div>
+
+
+<div class="form-group row">
+    <label class="col-lg control-label">手机号</label>
+    <div class="col-sm-9 col-xs-12">
+        {:tpl_form_field_editor(array('name'=>'data[telephone]', 'value'=>$member['telephone']))}
+    </div>
+</div>
+
+
+
+<div class="form-group row">
+    <label class="col-lg control-label">积分</label>
+    <div class="col-sm-3">
+        <div class='form-control-static'>{$member['score']}
+            <a class="text-primary " data-toggle='ajaxModal' href="{:U('user/recharge', array('type'=>'score','id'=>$member['member_id']))}" style="padding-left: 5px;">充值</a>
+        </div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label class="col-lg control-label">余额</label>
+    <div class="col-sm-3">
+        <div class='form-control-static'>{$member['account_money']}
+            <a class="text-primary " data-toggle='ajaxModal' href="{:U('user/recharge', array('type'=>'account_money','id'=>$member['member_id']))}" style="padding-left: 5px;">充值</a>
+
+        </div>
+    </div>
+</div> <div class="form-group row">
+    <label class="col-lg control-label">注册时间</label>
+    <div class="col-sm-9 col-xs-12">
+        <div class='form-control-static'>{:date("Y-m-d H:i:s",$member['create_time'])}</div>
+    </div>
+</div>
+
+
+
+
+<div class="form-group row">
+    <label class="col-lg control-label">状态</label>
+    <div class="col-sm-9 col-xs-12">
+
+        <div class="radio radio-primary"><input type="radio" name="data[isblack]" value="1" <?php if($member['isblack']==1){ ?>checked<?php } ?>>禁用</div>
+        <div class="radio radio-primary" ><input type="radio" name="data[isblack]" value="0" <?php if($member['isblack']==0){ ?>checked<?php } ?>>启用</div>
+        <small>设置禁用后，此会员无法访问商城</small>
+
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-lg control-label">备注</label>
+    <div class="col-sm-9 col-xs-12">
+        <textarea name="data[content]" class='form-control' rows="5">{$member['content']}</textarea>
+    </div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".btn-maxcredit").unbind('click').click(function () {
+            var val = $(this).val();
+            if(val==1){
+                $(".maxcreditinput").css({'display':'inline-block'});
+            }else{
+                $(".maxcreditinput").css({'display':'none'});
+            }
+        });
+    })
+</script>

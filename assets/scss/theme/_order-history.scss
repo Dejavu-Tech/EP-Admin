@@ -1,0 +1,82 @@
+/**=====================
+     66. Order History CSS start
+==========================**/
+.order-history{
+  .title-orders{
+    font-weight: 600;
+    background-color: $light-body-bg-color;
+  }
+  table{
+    th,td{
+      text-align: center;
+      &:first-child{
+        text-align: left;
+      }
+    }
+    thead{
+      tr{
+        th{
+          vertical-align: middle;
+          border-top: none;
+          padding-top: 0;
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          vertical-align: middle;
+          .product-name{
+            a{
+              font-weight: 600;
+            }
+            .order-process{
+              font-size: 13px;
+              padding-left: 15px;
+              .order-process-circle{
+                position: relative;
+                &:before{
+                  position: absolute;
+                  content: '';
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 100%;
+                  background-color: $dark-gray;
+                  left: -15px;
+                  top: 4px;
+                }
+                &.shipped-order{
+                  &:before{
+                    background-color: $success-color;
+                  }
+                }
+                &.cancel-order{
+                  &:before{
+                    background-color: $danger-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:last-child{
+          td{
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1199px){
+ .order-history{
+   table{
+     width: 900px;
+     overflow: auto;
+   }
+ }
+
+}
+/**=====================
+     66. Order History CSS end
+==========================**/

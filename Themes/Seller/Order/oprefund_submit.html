@@ -1,0 +1,111 @@
+<form class="form-horizontal form-validate" action="{:U('order/oprefund_submit')}" method="post" enctype="multipart/form-data">
+	<input type='hidden' name='id' value='{$id}' />
+
+	<div class="modal-dialog modal-dialog-centered btn-showcase">
+		<div class="modal-content">
+            <div class="modal-header">
+		<h5 class="modal-title">维权处理</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="form-group row">
+                    <label class="col-xs-10 col-sm-3 col-md-3 control-label">处理方式</label>
+                    <div class="col-sm-9 col-xs-12">
+                        <p class="form-control-static">{$r_type[$order_refund['rtype']]}</p>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-xs-10 col-sm-3 col-md-3 control-label">处理结果</label>
+                    <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8">
+                        <!--<div class="radio radio-primary">-->
+                        <!--<input type='radio' value='0' name='refundstatus' <?php if($refund['status']==0){ ?>checked<?php } ?>>暂不处理-->
+                        <!--</label>-->
+
+
+                        <div class="radio radio-primary">
+                            <input type='radio' value='1' name='refundstatus'>驳回申请
+                        </label>
+
+
+
+
+                        <?php if(($order_refund['rtype'] == 0 || $order_refund['rtype'] == 1)){ ?>
+
+                            <div class="radio radio-primary">
+                                <input type='radio' value='3' name='refundstatus'>
+                                同意退款(<?php if($order_refund['rtype'] == 1){ ?>无需客户发货直接退款<?php }else{ ?>您已经收到客户寄出的快递<?php } ?>)
+                            </label>
+
+
+                        <?php } ?>
+
+                    </div>
+                </div>
+
+
+
+                <div class="form-group refund-group" style="display: none;">
+                    <label class="col-xs-10 col-sm-3 col-md-3 control-label">留言</label>
+                    <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8">
+                        <textarea class="form-control" name="message" ></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group refuse-group" style="display: none;">
+                    <label class="col-xs-10 col-sm-3 col-md-3 control-label">驳回原因</label>
+                    <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8">
+                        <textarea class="form-control" name="refundcontent" ></textarea>
+                    </div>
+                </div>
+
+
+
+    </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-order" type="submit">提交</button>
+                <button data-dismiss="modal" class="btn btn-pill btn-primary" type="button">取消</button>
+            </div>
+        </div>
+</form>
+<script language='javascript'>
+	$(function () {
+        $(":radio[name=refundstatus]").change(function () {
+            var refundstatus = $(this).val();
+
+            if (refundstatus == 1) {
+                $(".refuse-group").show();
+                $(".refund-group").hide();
+                $(".express-group").hide();
+                $(".help-group").hide();
+            }  else if (refundstatus == 3) {
+                $(".refuse-group").hide();
+                $(".refund-group").show();
+                $(".express-group").hide();
+                $(".help-group").hide();
+            } else if (refundstatus == 5) {
+                $(".refuse-group").hide();
+                $(".refund-group").hide();
+                $(".express-group").show();
+                $(".help-group").hide();
+            } else {
+                $(".refuse-group").hide();
+                $(".refund-group").hide();
+                $(".express-group").hide();
+                $(".help-group").hide();
+            }
+        });
+
+        $("select[name=rexpress]").val("{$refund['rexpress']}");
+
+        $("#rexpress").change(function () {
+            var obj = $(this);
+            var sel = obj.find("option:selected").attr("data-name");
+            $("#rexpresscom").val(sel);
+        });
+    })
+</script>

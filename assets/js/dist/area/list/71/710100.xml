@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="台北" code="710100">
+<county name="北投" code="710109">
+</county>
+<county name="大安" code="710105">
+</county>
+<county name="大同" code="710102">
+</county>
+<county name="南港" code="710111">
+</county>
+<county name="内湖" code="710110">
+</county>
+<county name="信义" code="710107">
+</county>
+<county name="士林" code="710108">
+</county>
+<county name="松山" code="710104">
+</county>
+<county name="万华" code="710106">
+</county>
+<county name="文山" code="710112">
+</county>
+<county name="中山" code="710103">
+</county>
+<county name="中正" code="710101">
+</county>
+</city>
+</address>

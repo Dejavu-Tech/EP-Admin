@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宁波" code="330200">
+<county name="海曙" code="330203">
+    <street name="南门街道" code="330203001" />
+    <street name="江厦街道" code="330203002" />
+    <street name="西门街道" code="330203003" />
+    <street name="月湖街道" code="330203004" />
+    <street name="鼓楼街道" code="330203005" />
+    <street name="白云街道" code="330203006" />
+    <street name="段塘街道" code="330203007" />
+    <street name="望春街道" code="330203008" />
+</county>
+<county name="江北" code="330205">
+    <street name="中马街道" code="330205001" />
+    <street name="白沙街道" code="330205002" />
+    <street name="孔浦街道" code="330205003" />
+    <street name="文教街道" code="330205004" />
+    <street name="甬江街道" code="330205005" />
+    <street name="庄桥街道" code="330205006" />
+    <street name="洪塘街道" code="330205007" />
+    <street name="慈城镇" code="330205103" />
+</county>
+<county name="北仑" code="330206">
+    <street name="大榭街道" code="330206001" />
+    <street name="新碶街道" code="330206002" />
+    <street name="小港街道" code="330206003" />
+    <street name="大碶街道" code="330206004" />
+    <street name="霞浦街道" code="330206005" />
+    <street name="柴桥街道" code="330206006" />
+    <street name="戚家山街道" code="330206007" />
+    <street name="白峰镇" code="330206105" />
+    <street name="春晓镇" code="330206107" />
+    <street name="梅山乡" code="330206201" />
+    <street name="保税区" code="330206401" />
+</county>
+<county name="镇海" code="330211">
+    <street name="招宝山街道" code="330211001" />
+    <street name="蛟川街道" code="330211002" />
+    <street name="骆驼街道" code="330211003" />
+    <street name="庄市街道" code="330211004" />
+    <street name="澥浦镇" code="330211100" />
+    <street name="九龙湖镇" code="330211101" />
+</county>
+<county name="鄞州" code="330212">
+    <street name="下应街道" code="330212001" />
+    <street name="钟公庙街道" code="330212002" />
+    <street name="石碶街道" code="330212003" />
+    <street name="梅墟街道" code="330212004" />
+    <street name="中河街道" code="330212005" />
+    <street name="首南街道" code="330212006" />
+    <street name="潘火街道" code="330212007" />
+    <street name="瞻岐镇" code="330212100" />
+    <street name="咸祥镇" code="330212101" />
+    <street name="塘溪镇" code="330212102" />
+    <street name="东钱湖镇" code="330212103" />
+    <street name="东吴镇" code="330212104" />
+    <street name="五乡镇" code="330212105" />
+    <street name="邱隘镇" code="330212106" />
+    <street name="云龙镇" code="330212108" />
+    <street name="横溪镇" code="330212109" />
+    <street name="姜山镇" code="330212110" />
+    <street name="高桥镇" code="330212113" />
+    <street name="横街镇" code="330212114" />
+    <street name="集士港镇" code="330212115" />
+    <street name="古林镇" code="330212116" />
+    <street name="洞桥镇" code="330212118" />
+    <street name="鄞江镇" code="330212119" />
+    <street name="章水镇" code="330212120" />
+    <street name="龙观乡" code="330212200" />
+    <street name="百丈街道" code="330212230" />
+    <street name="东胜街道" code="330212231" />
+    <street name="明楼街道" code="330212232" />
+    <street name="白鹤街道" code="330212233" />
+    <street name="东柳街道" code="330212234" />
+    <street name="东郊街道" code="330212235" />
+    <street name="福明街道" code="330212236" />
+    <street name="新明街道" code="330212237" />
+</county>
+<county name="象山" code="330225">
+    <street name="丹东街道" code="330225001" />
+    <street name="丹西街道" code="330225002" />
+    <street name="爵溪街道" code="330225003" />
+    <street name="石浦镇" code="330225101" />
+    <street name="西周镇" code="330225102" />
+    <street name="鹤浦镇" code="330225103" />
+    <street name="贤庠镇" code="330225104" />
+    <street name="墙头镇" code="330225105" />
+    <street name="泗洲头镇" code="330225106" />
+    <street name="定塘镇" code="330225107" />
+    <street name="涂茨镇" code="330225108" />
+    <street name="大徐镇" code="330225109" />
+    <street name="新桥镇" code="330225110" />
+    <street name="东陈乡" code="330225200" />
+    <street name="晓塘乡" code="330225201" />
+    <street name="黄避岙乡" code="330225202" />
+    <street name="茅洋乡" code="330225203" />
+    <street name="高塘岛乡" code="330225204" />
+</county>
+<county name="宁海" code="330226">
+    <street name="跃龙街道" code="330226001" />
+    <street name="桃源街道" code="330226002" />
+    <street name="梅林街道" code="330226003" />
+    <street name="桥头胡街道" code="330226004" />
+    <street name="长街镇" code="330226101" />
+    <street name="力洋镇" code="330226102" />
+    <street name="一市镇" code="330226104" />
+    <street name="岔路镇" code="330226105" />
+    <street name="前童镇" code="330226106" />
+    <street name="桑洲镇" code="330226107" />
+    <street name="黄坛镇" code="330226108" />
+    <street name="大佳何镇" code="330226109" />
+    <street name="强蛟镇" code="330226110" />
+    <street name="西店镇" code="330226111" />
+    <street name="深甽镇" code="330226112" />
+    <street name="胡陈乡" code="330226200" />
+    <street name="茶院乡" code="330226201" />
+    <street name="越溪乡" code="330226202" />
+</county>
+<county name="余姚" code="330281">
+    <street name="梨洲街道" code="330281001" />
+    <street name="凤山街道" code="330281002" />
+    <street name="兰江街道" code="330281003" />
+    <street name="阳明街道" code="330281004" />
+    <street name="低塘街道" code="330281005" />
+    <street name="朗霞街道" code="330281006" />
+    <street name="临山镇" code="330281100" />
+    <street name="黄家埠镇" code="330281101" />
+    <street name="小曹娥镇" code="330281102" />
+    <street name="泗门镇" code="330281103" />
+    <street name="马渚镇" code="330281106" />
+    <street name="牟山镇" code="330281108" />
+    <street name="丈亭镇" code="330281109" />
+    <street name="三七市镇" code="330281110" />
+    <street name="河姆渡镇" code="330281111" />
+    <street name="大隐镇" code="330281112" />
+    <street name="陆埠镇" code="330281113" />
+    <street name="梁弄镇" code="330281114" />
+    <street name="大岚镇" code="330281115" />
+    <street name="四明山镇" code="330281116" />
+    <street name="鹿亭乡" code="330281201" />
+</county>
+<county name="慈溪" code="330282">
+    <street name="宗汉街道" code="330282002" />
+    <street name="坎墩街道" code="330282003" />
+    <street name="浒山街道" code="330282004" />
+    <street name="白沙路街道" code="330282005" />
+    <street name="古塘街道" code="330282006" />
+    <street name="掌起镇" code="330282104" />
+    <street name="观海卫镇" code="330282107" />
+    <street name="附海镇" code="330282108" />
+    <street name="桥头镇" code="330282109" />
+    <street name="匡堰镇" code="330282110" />
+    <street name="逍林镇" code="330282111" />
+    <street name="新浦镇" code="330282112" />
+    <street name="胜山镇" code="330282113" />
+    <street name="横河镇" code="330282114" />
+    <street name="崇寿镇" code="330282116" />
+    <street name="庵东镇" code="330282118" />
+    <street name="长河镇" code="330282120" />
+    <street name="周巷镇" code="330282121" />
+    <street name="龙山镇" code="330282123" />
+    <street name="慈溪市农垦场" code="330282400" />
+    <street name="慈溪市林场" code="330282401" />
+    <street name="慈东工业区" code="330282402" />
+</county>
+<county name="奉化" code="330283">
+    <street name="锦屏街道" code="330283001" />
+    <street name="岳林街道" code="330283002" />
+    <street name="江口街道" code="330283003" />
+    <street name="西坞街道" code="330283004" />
+    <street name="萧王庙街道" code="330283005" />
+    <street name="溪口镇" code="330283100" />
+    <street name="尚田镇" code="330283103" />
+    <street name="莼湖镇" code="330283104" />
+    <street name="裘村镇" code="330283106" />
+    <street name="大堰镇" code="330283107" />
+    <street name="松岙镇" code="330283108" />
+</county>
+</city>
+</address>

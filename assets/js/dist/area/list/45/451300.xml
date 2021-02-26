@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="来宾" code="451300">
+<county name="兴宾" code="451302">
+    <street name="城东街道" code="451302001" />
+    <street name="城北街道" code="451302002" />
+    <street name="河西街道" code="451302003" />
+    <street name="八一街道" code="451302004" />
+    <street name="凤凰镇" code="451302101" />
+    <street name="良江镇" code="451302102" />
+    <street name="小平阳镇" code="451302103" />
+    <street name="迁江镇" code="451302104" />
+    <street name="石陵镇" code="451302105" />
+    <street name="平阳镇" code="451302106" />
+    <street name="蒙村镇" code="451302107" />
+    <street name="三五乡" code="451302201" />
+    <street name="五山乡" code="451302202" />
+    <street name="陶邓乡" code="451302203" />
+    <street name="桥巩乡" code="451302204" />
+    <street name="良塘乡" code="451302205" />
+    <street name="七洞乡" code="451302206" />
+    <street name="城厢乡" code="451302209" />
+    <street name="寺山乡" code="451302211" />
+    <street name="石牙乡" code="451302212" />
+    <street name="南泗乡" code="451302213" />
+    <street name="高安乡" code="451302214" />
+    <street name="大湾乡" code="451302215" />
+    <street name="正龙乡" code="451302216" />
+    <street name="红河农场" code="451302401" />
+    <street name="来华投资区" code="451302402" />
+</county>
+<county name="忻城" code="451321">
+    <street name="城关镇" code="451321100" />
+    <street name="大塘镇" code="451321101" />
+    <street name="思练镇" code="451321102" />
+    <street name="红渡镇" code="451321103" />
+    <street name="古蓬镇" code="451321104" />
+    <street name="马泗乡" code="451321201" />
+    <street name="欧洞乡" code="451321202" />
+    <street name="安东乡" code="451321203" />
+    <street name="果遂乡" code="451321204" />
+    <street name="新圩乡" code="451321205" />
+    <street name="遂意乡" code="451321206" />
+    <street name="北更乡" code="451321207" />
+</county>
+<county name="象州" code="451322">
+    <street name="象州镇" code="451322100" />
+    <street name="石龙镇" code="451322101" />
+    <street name="运江镇" code="451322102" />
+    <street name="寺村镇" code="451322103" />
+    <street name="中平镇" code="451322104" />
+    <street name="罗秀镇" code="451322105" />
+    <street name="大乐镇" code="451322106" />
+    <street name="马坪乡" code="451322200" />
+    <street name="妙皇乡" code="451322201" />
+    <street name="百丈乡" code="451322202" />
+    <street name="水晶乡" code="451322203" />
+</county>
+<county name="武宣" code="451323">
+    <street name="武宣镇" code="451323100" />
+    <street name="桐岭镇" code="451323101" />
+    <street name="通挽镇" code="451323102" />
+    <street name="东乡镇" code="451323103" />
+    <street name="三里镇" code="451323104" />
+    <street name="二塘镇" code="451323105" />
+    <street name="黄茆镇" code="451323106" />
+    <street name="禄新乡" code="451323201" />
+    <street name="思灵乡" code="451323202" />
+    <street name="金鸡乡" code="451323204" />
+    <street name="黔江农场" code="451323401" />
+</county>
+<county name="金秀" code="451324">
+    <street name="金秀镇" code="451324100" />
+    <street name="桐木镇" code="451324101" />
+    <street name="头排镇" code="451324102" />
+    <street name="三角乡" code="451324200" />
+    <street name="忠良乡" code="451324201" />
+    <street name="罗香乡" code="451324202" />
+    <street name="长垌乡" code="451324203" />
+    <street name="大樟乡" code="451324204" />
+    <street name="六巷乡" code="451324205" />
+    <street name="三江乡" code="451324207" />
+</county>
+<county name="合山" code="451381">
+    <street name="岭南镇" code="451381100" />
+    <street name="北泗乡" code="451381200" />
+    <street name="河里乡" code="451381201" />
+</county>
+</city>
+</address>

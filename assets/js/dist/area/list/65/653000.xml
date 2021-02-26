@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="克孜勒苏柯尔克孜" code="653000">
+<county name="阿图什" code="653001">
+    <street name="幸福路街道" code="653001001" />
+    <street name="光明路街道" code="653001002" />
+    <street name="上阿图什镇" code="653001100" />
+    <street name="松他克乡" code="653001200" />
+    <street name="阿扎克乡" code="653001201" />
+    <street name="阿湖乡" code="653001202" />
+    <street name="格达良乡" code="653001204" />
+    <street name="哈拉峻乡" code="653001205" />
+    <street name="吐古买提乡" code="653001206" />
+    <street name="兵团农三师红旗农场" code="653001500" />
+</county>
+<county name="阿克陶" code="653022">
+    <street name="阿克陶镇" code="653022100" />
+    <street name="奥依塔克镇" code="653022101" />
+    <street name="玉麦乡" code="653022200" />
+    <street name="皮拉勒乡" code="653022201" />
+    <street name="巴仁乡" code="653022202" />
+    <street name="喀热克其克乡" code="653022203" />
+    <street name="加马铁热克乡" code="653022204" />
+    <street name="木吉乡" code="653022205" />
+    <street name="布伦口乡" code="653022206" />
+    <street name="克孜勒陶乡" code="653022207" />
+    <street name="恰尔隆乡" code="653022208" />
+    <street name="库斯拉甫乡" code="653022209" />
+    <street name="塔尔塔吉克族乡" code="653022210" />
+    <street name="托尔塔依农场" code="653022400" />
+    <street name="阿克达拉牧场" code="653022401" />
+    <street name="原种场" code="653022402" />
+    <street name="克孜勒苏柯尔克孜自治州林场" code="653022403" />
+    <street name="苗圃" code="653022404" />
+</county>
+<county name="阿合奇" code="653023">
+    <street name="阿合奇镇" code="653023100" />
+    <street name="库兰萨日克乡" code="653023200" />
+    <street name="色帕巴依乡" code="653023201" />
+    <street name="苏木塔什乡" code="653023202" />
+    <street name="哈拉奇乡" code="653023203" />
+    <street name="哈拉布拉克乡" code="653023204" />
+</county>
+<county name="乌恰" code="653024">
+    <street name="乌恰镇" code="653024100" />
+    <street name="康苏镇" code="653024101" />
+    <street name="乌鲁克恰提乡" code="653024200" />
+    <street name="吾合沙鲁乡" code="653024201" />
+    <street name="膘尔托阔依乡" code="653024202" />
+    <street name="黑孜韦乡" code="653024203" />
+    <street name="托云乡" code="653024204" />
+    <street name="铁列克乡" code="653024205" />
+    <street name="巴音库鲁提乡" code="653024206" />
+    <street name="波斯坦铁列克乡" code="653024207" />
+    <street name="吉根乡" code="653024208" />
+    <street name="兵团托云牧场" code="653024501" />
+</county>
+</city>
+</address>

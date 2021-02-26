@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>index</title>
+</head>
+<body>
+<div class="layui-fluid">
+	<input type="hidden" id="order_ids" name="order_ids" value="{$order_ids}"/>
+	<div class="layui-row layui-col-space15">
+		<div class="layui-input-inline" style="text-align:center;">
+			<button class="layui-btn layui-btn-sm print_kdn_order"> 打印</button>
+			<button class="layui-btn layui-btn-sm cancel_btn"> 取消</button>
+		</div>
+		<div class="layui-col-md12">
+			<div class="layui-card" id="print_content" style="min-height: 580px;position:relative;">
+				<style>
+					.kdn_div{display:block;min-height: 580px;position:relative;}
+				</style>
+				<?php foreach( $kdn_list_info as $k=>$v ){ ?>
+				<div class="kdn_div">{$v.print_template}</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.PrintArea.min.js"></script>
+<script>
+	$(function(){
+		$('.print_kdn_order').click(function(){
+			var extraHead = '<meta charset="utf-8" />,<meta http-equiv="X-UA-Compatible" content="IE=edge"/>';
+			$("#print_content").css({
+				'height' : 'auto',
+				'position' : 'relative'
+			}).printArea();
+			var order_ids = $('#order_ids').val();
+			console.log(order_ids);
+			$.post("{:U('order/kdn_send')}", {ids:order_ids}, function(data){
+				console.log(data);
+			});
+			$('.unbtn_export').click();
+			layer.closeAll();
+		})
+
+		$('.cancel_btn').click(function(){
+			layer.closeAll();
+		})
+	})
+</script>
+</body>
+</html>
+
+

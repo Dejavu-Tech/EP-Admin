@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="红河" code="532500">
+<county name="个旧" code="532501">
+    <street name="城区街道" code="532501001" />
+    <street name="锡城镇" code="532501101" />
+    <street name="沙甸镇" code="532501102" />
+    <street name="鸡街镇" code="532501103" />
+    <street name="大屯镇" code="532501104" />
+    <street name="老厂镇" code="532501106" />
+    <street name="卡房镇" code="532501107" />
+    <street name="蔓耗镇" code="532501108" />
+    <street name="贾沙乡" code="532501202" />
+    <street name="保和乡" code="532501203" />
+</county>
+<county name="开远" code="532502">
+    <street name="乐白道街道" code="532502001" />
+    <street name="灵泉街道" code="532502002" />
+    <street name="中和营镇" code="532502101" />
+    <street name="小龙潭镇" code="532502102" />
+    <street name="大庄回族乡" code="532502201" />
+    <street name="羊街乡" code="532502202" />
+    <street name="碑格乡" code="532502203" />
+</county>
+<county name="蒙自" code="532522">
+    <street name="文澜镇" code="532503101" />
+    <street name="草坝镇" code="532503102" />
+    <street name="雨过铺镇" code="532503103" />
+    <street name="新安所镇" code="532503104" />
+    <street name="芷村镇" code="532503105" />
+    <street name="鸣鹫镇" code="532503106" />
+    <street name="冷泉镇" code="532503107" />
+    <street name="期路白苗族乡" code="532503201" />
+    <street name="老寨苗族乡" code="532503202" />
+    <street name="水田乡" code="532503203" />
+    <street name="西北勒乡" code="532503204" />
+</county>
+<county name="屏边" code="532523">
+    <street name="玉屏镇" code="532523101" />
+    <street name="新现乡" code="532523201" />
+    <street name="和平乡" code="532523202" />
+    <street name="白河乡" code="532523203" />
+    <street name="白云乡" code="532523204" />
+    <street name="新华乡" code="532523205" />
+    <street name="湾塘乡" code="532523206" />
+</county>
+<county name="建水" code="532524">
+    <street name="临安镇" code="532524101" />
+    <street name="官厅镇" code="532524102" />
+    <street name="西庄镇" code="532524103" />
+    <street name="青龙镇" code="532524104" />
+    <street name="南庄镇" code="532524105" />
+    <street name="岔科镇" code="532524106" />
+    <street name="曲江镇" code="532524107" />
+    <street name="面甸镇" code="532524108" />
+    <street name="普雄乡" code="532524201" />
+    <street name="李浩寨乡" code="532524202" />
+    <street name="坡头乡" code="532524203" />
+    <street name="盘江乡" code="532524204" />
+    <street name="利民乡" code="532524205" />
+    <street name="甸尾乡" code="532524206" />
+</county>
+<county name="石屏" code="532525">
+    <street name="异龙镇" code="532525101" />
+    <street name="宝秀镇" code="532525102" />
+    <street name="坝心镇" code="532525103" />
+    <street name="龙朋镇" code="532525104" />
+    <street name="龙武镇" code="532525105" />
+    <street name="哨冲镇" code="532525106" />
+    <street name="牛街镇" code="532525107" />
+    <street name="新城乡" code="532525201" />
+    <street name="大桥乡" code="532525202" />
+</county>
+<county name="弥勒" code="532526">
+    <street name="弥阳镇" code="532504101" />
+    <street name="新哨镇" code="532504102" />
+    <street name="虹溪镇" code="532504103" />
+    <street name="竹园镇" code="532504104" />
+    <street name="朋普镇" code="532504105" />
+    <street name="巡检司镇" code="532504106" />
+    <street name="西一镇" code="532504107" />
+    <street name="西二镇" code="532504108" />
+    <street name="西三镇" code="532504109" />
+    <street name="东山镇" code="532504110" />
+    <street name="五山乡" code="532504202" />
+    <street name="江边乡" code="532504203" />
+</county>
+<county name="泸西" code="532527">
+    <street name="中枢镇" code="532527101" />
+    <street name="金马镇" code="532527102" />
+    <street name="旧城镇" code="532527104" />
+    <street name="午街铺镇" code="532527106" />
+    <street name="白水镇" code="532527107" />
+    <street name="向阳乡" code="532527201" />
+    <street name="三塘乡" code="532527202" />
+    <street name="永宁乡" code="532527203" />
+</county>
+<county name="元阳" code="532528">
+    <street name="南沙镇" code="532528101" />
+    <street name="新街镇" code="532528102" />
+    <street name="牛角寨乡" code="532528202" />
+    <street name="沙拉托乡" code="532528203" />
+    <street name="嘎娘乡" code="532528204" />
+    <street name="上新城乡" code="532528205" />
+    <street name="小新街乡" code="532528206" />
+    <street name="逢春岭乡" code="532528207" />
+    <street name="大坪乡" code="532528208" />
+    <street name="攀枝花乡" code="532528209" />
+    <street name="黄茅岭乡" code="532528210" />
+    <street name="黄草岭乡" code="532528211" />
+    <street name="俄扎乡" code="532528212" />
+    <street name="马街乡" code="532528213" />
+</county>
+<county name="红河" code="532529">
+    <street name="迤萨镇" code="532529101" />
+    <street name="甲寅乡" code="532529201" />
+    <street name="宝华乡" code="532529202" />
+    <street name="洛恩乡" code="532529203" />
+    <street name="石头寨乡" code="532529204" />
+    <street name="阿扎河乡" code="532529205" />
+    <street name="乐育乡" code="532529206" />
+    <street name="浪堤乡" code="532529207" />
+    <street name="大羊街乡" code="532529208" />
+    <street name="车古乡" code="532529209" />
+    <street name="架车乡" code="532529210" />
+    <street name="垤玛乡" code="532529211" />
+    <street name="三村乡" code="532529212" />
+</county>
+<county name="金平" code="532530">
+    <street name="金河镇" code="532530101" />
+    <street name="金水河镇" code="532530102" />
+    <street name="铜厂乡" code="532530202" />
+    <street name="勐拉乡" code="532530203" />
+    <street name="老集寨乡" code="532530204" />
+    <street name="者米拉祜乡" code="532530205" />
+    <street name="阿得博乡" code="532530206" />
+    <street name="沙依坡乡" code="532530207" />
+    <street name="大寨乡" code="532530208" />
+    <street name="马鞍底乡" code="532530209" />
+    <street name="勐桥乡" code="532530210" />
+    <street name="营盘乡" code="532530211" />
+    <street name="老勐乡" code="532530212" />
+</county>
+<county name="绿春" code="532531">
+    <street name="大兴镇" code="532531101" />
+    <street name="戈奎乡" code="532531201" />
+    <street name="牛孔乡" code="532531202" />
+    <street name="大水沟乡" code="532531203" />
+    <street name="大黑山乡" code="532531204" />
+    <street name="半坡乡" code="532531205" />
+    <street name="骑马坝乡" code="532531206" />
+    <street name="三猛乡" code="532531207" />
+    <street name="平河乡" code="532531208" />
+</county>
+<county name="河口" code="532532">
+    <street name="河口镇" code="532532101" />
+    <street name="南溪镇" code="532532102" />
+    <street name="老范寨乡" code="532532201" />
+    <street name="桥头苗族壮族乡" code="532532202" />
+    <street name="瑶山乡" code="532532203" />
+    <street name="莲花滩乡" code="532532204" />
+</county>
+</city>
+</address>

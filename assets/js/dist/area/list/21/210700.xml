@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="锦州" code="210700">
+<county name="古塔" code="210702">
+    <street name="天安街道" code="210702001" />
+    <street name="石油街道" code="210702002" />
+    <street name="北街街道" code="210702003" />
+    <street name="敬业街道" code="210702004" />
+    <street name="保安街道" code="210702005" />
+    <street name="南街街道" code="210702006" />
+    <street name="饶阳街道" code="210702007" />
+    <street name="站前街道" code="210702008" />
+    <street name="士英街道" code="210702009" />
+    <street name="钟屯乡" code="210702200" />
+</county>
+<county name="凌河" code="210703">
+    <street name="正大街道" code="210703001" />
+    <street name="石桥子街道" code="210703002" />
+    <street name="龙江街道" code="210703003" />
+    <street name="榴花街道" code="210703004" />
+    <street name="铁新街道" code="210703005" />
+    <street name="凌安街道" code="210703006" />
+    <street name="菊园街道" code="210703007" />
+    <street name="康宁街道" code="210703008" />
+    <street name="锦铁街道" code="210703009" />
+    <street name="马家街道" code="210703010" />
+    <street name="紫荆街道" code="210703011" />
+    <street name="锦州北山农工商总公司" code="210703402" />
+</county>
+<county name="太和" code="210711">
+    <street name="太和街道" code="210711001" />
+    <street name="兴隆街道" code="210711002" />
+    <street name="汤河子街道" code="210711003" />
+    <street name="凌西街道" code="210711004" />
+    <street name="大薛街道" code="210711007" />
+    <street name="王家街道" code="210711070" />
+    <street name="天桥街道" code="210711071" />
+    <street name="杏山街道" code="210711072" />
+    <street name="凌南街道" code="210711080" />
+    <street name="娘娘宫镇" code="210711170" />
+    <street name="松山镇" code="210711180" />
+    <street name="女儿河乡" code="210711202" />
+    <street name="营盘乡" code="210711204" />
+    <street name="新民乡" code="210711205" />
+    <street name="锦州市果树农场" code="210711480" />
+</county>
+<county name="黑山" code="210726">
+    <street name="黑山街道" code="210726001" />
+    <street name="大虎山街道" code="210726002" />
+    <street name="芳山镇" code="210726101" />
+    <street name="白厂门镇" code="210726102" />
+    <street name="常兴镇" code="210726103" />
+    <street name="姜屯镇" code="210726104" />
+    <street name="励家镇" code="210726105" />
+    <street name="绕阳河镇" code="210726106" />
+    <street name="半拉门镇" code="210726107" />
+    <street name="无梁殿镇" code="210726108" />
+    <street name="胡家镇" code="210726109" />
+    <street name="新立屯镇" code="210726110" />
+    <street name="八道壕镇" code="210726111" />
+    <street name="四家子镇" code="210726113" />
+    <street name="新兴镇" code="210726114" />
+    <street name="太和镇" code="210726116" />
+    <street name="镇安镇" code="210726117" />
+    <street name="英城子乡" code="210726201" />
+    <street name="段家乡" code="210726209" />
+    <street name="大兴乡" code="210726210" />
+    <street name="薛屯乡" code="210726212" />
+    <street name="辽宁省锦州市小东种畜场" code="210726400" />
+</county>
+<county name="义县" code="210727">
+    <street name="义州街道" code="210727001" />
+    <street name="城关街道" code="210727002" />
+    <street name="刘龙台镇" code="210727101" />
+    <street name="七里河镇" code="210727102" />
+    <street name="大榆树堡镇" code="210727103" />
+    <street name="稍户营子镇" code="210727104" />
+    <street name="九道岭镇" code="210727105" />
+    <street name="高台子镇" code="210727106" />
+    <street name="瓦子峪镇" code="210727108" />
+    <street name="头台满族镇" code="210727109" />
+    <street name="前杨镇" code="210727110" />
+    <street name="头道河满族乡" code="210727202" />
+    <street name="地藏寺满族乡" code="210727203" />
+    <street name="留龙沟满族乡" code="210727204" />
+    <street name="大定堡满族乡" code="210727205" />
+    <street name="白庙子乡" code="210727207" />
+    <street name="聚粮屯满族乡" code="210727208" />
+    <street name="张家堡乡" code="210727209" />
+</county>
+<county name="凌海" code="210781">
+    <street name="大凌河街道" code="210781001" />
+    <street name="金城街道" code="210781002" />
+    <street name="石山镇" code="210781101" />
+    <street name="余积镇" code="210781102" />
+    <street name="双羊镇" code="210781103" />
+    <street name="班吉塔镇" code="210781104" />
+    <street name="沈家台镇" code="210781105" />
+    <street name="三台子镇" code="210781106" />
+    <street name="右卫满族镇" code="210781107" />
+    <street name="阎家镇" code="210781108" />
+    <street name="新庄子镇" code="210781109" />
+    <street name="翠岩镇" code="210781112" />
+    <street name="安屯镇" code="210781113" />
+    <street name="大业镇" code="210781114" />
+    <street name="西八千镇" code="210781115" />
+    <street name="建业乡" code="210781205" />
+    <street name="温滴楼满族乡" code="210781210" />
+    <street name="板石沟乡" code="210781212" />
+    <street name="白台子乡" code="210781214" />
+    <street name="谢屯乡" code="210781217" />
+    <street name="辽宁省金城原种场" code="210781401" />
+    <street name="大有农场" code="210781405" />
+</county>
+<county name="北镇" code="210782">
+    <street name="北镇街道" code="210782004" />
+    <street name="观音阁街道" code="210782005" />
+    <street name="大市镇" code="210782101" />
+    <street name="罗罗堡镇" code="210782102" />
+    <street name="常兴店镇" code="210782103" />
+    <street name="正安镇" code="210782104" />
+    <street name="闾阳镇" code="210782105" />
+    <street name="中安镇" code="210782106" />
+    <street name="廖屯镇" code="210782107" />
+    <street name="赵屯镇" code="210782109" />
+    <street name="青堆子镇" code="210782110" />
+    <street name="高山子镇" code="210782111" />
+    <street name="沟帮子镇" code="210782112" />
+    <street name="富屯乡" code="210782201" />
+    <street name="鲍家乡" code="210782203" />
+    <street name="大屯乡" code="210782206" />
+    <street name="吴家乡" code="210782208" />
+    <street name="柳家乡" code="210782209" />
+    <street name="广宁乡" code="210782211" />
+    <street name="辽宁省北镇市高山子监狱" code="210782402" />
+    <street name="新立农场" code="210782403" />
+</county>
+</city>
+</address>

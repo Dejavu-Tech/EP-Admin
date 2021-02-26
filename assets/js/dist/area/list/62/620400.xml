@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="白银" code="620400">
+<county name="白银" code="620402">
+    <street name="人民路街道" code="620402001" />
+    <street name="公园路街道" code="620402002" />
+    <street name="四龙路街道" code="620402003" />
+    <street name="工农路街道" code="620402004" />
+    <street name="纺织路街道" code="620402005" />
+    <street name="水川镇" code="620402100" />
+    <street name="四龙镇" code="620402101" />
+    <street name="王岘镇" code="620402102" />
+    <street name="强湾乡" code="620402201" />
+    <street name="武川乡" code="620402202" />
+</county>
+<county name="平川" code="620403">
+    <street name="长征街道" code="620403001" />
+    <street name="电力路街道" code="620403002" />
+    <street name="红会路街道" code="620403003" />
+    <street name="兴平路街道" code="620403004" />
+    <street name="王家山镇" code="620403100" />
+    <street name="水泉镇" code="620403101" />
+    <street name="共和镇" code="620403102" />
+    <street name="宝积乡" code="620403201" />
+    <street name="黄峤乡" code="620403202" />
+    <street name="种田乡" code="620403203" />
+    <street name="复兴乡" code="620403204" />
+</county>
+<county name="靖远" code="620421">
+    <street name="北湾镇" code="620421101" />
+    <street name="东湾镇" code="620421102" />
+    <street name="乌兰镇" code="620421103" />
+    <street name="平堡乡" code="620421200" />
+    <street name="糜滩乡" code="620421202" />
+    <street name="三滩乡" code="620421203" />
+    <street name="大芦乡" code="620421205" />
+    <street name="兴隆乡" code="620421206" />
+    <street name="双龙乡" code="620421207" />
+    <street name="石门乡" code="620421208" />
+    <street name="刘川乡" code="620421209" />
+    <street name="高湾乡" code="620421210" />
+    <street name="靖安乡" code="620421211" />
+    <street name="五合乡" code="620421212" />
+    <street name="东升乡" code="620421213" />
+    <street name="北滩乡" code="620421214" />
+    <street name="永新乡" code="620421215" />
+    <street name="若笠乡" code="620421216" />
+</county>
+<county name="会宁" code="620422">
+    <street name="会师镇" code="620422100" />
+    <street name="郭城驿镇" code="620422101" />
+    <street name="河畔镇" code="620422102" />
+    <street name="头寨子镇" code="620422103" />
+    <street name="太平店镇" code="620422104" />
+    <street name="甘沟驿镇" code="620422105" />
+    <street name="丁家沟乡" code="620422200" />
+    <street name="中川乡" code="620422201" />
+    <street name="新添堡回族乡" code="620422202" />
+    <street name="侯家川乡" code="620422203" />
+    <street name="党家岘乡" code="620422204" />
+    <street name="杨崖集乡" code="620422205" />
+    <street name="老君坡乡" code="620422207" />
+    <street name="翟家所乡" code="620422209" />
+    <street name="柴家门乡" code="620422211" />
+    <street name="八里湾乡" code="620422213" />
+    <street name="平头川乡" code="620422214" />
+    <street name="韩家集乡" code="620422215" />
+    <street name="大沟乡" code="620422217" />
+    <street name="四房吴乡" code="620422218" />
+    <street name="汉家岔乡" code="620422220" />
+    <street name="土门岘乡" code="620422221" />
+    <street name="新塬乡" code="620422222" />
+    <street name="刘家寨子乡" code="620422223" />
+    <street name="草滩乡" code="620422224" />
+    <street name="土高山乡" code="620422225" />
+    <street name="白草塬乡" code="620422226" />
+    <street name="新庄乡" code="620422227" />
+</county>
+<county name="景泰" code="620423">
+    <street name="一条山镇" code="620423100" />
+    <street name="芦阳镇" code="620423101" />
+    <street name="上沙沃镇" code="620423102" />
+    <street name="喜泉镇" code="620423103" />
+    <street name="草窝滩镇" code="620423104" />
+    <street name="红水镇" code="620423105" />
+    <street name="中泉乡" code="620423200" />
+    <street name="正路乡" code="620423201" />
+    <street name="寺滩乡" code="620423203" />
+    <street name="五佛乡" code="620423205" />
+    <street name="漫水滩乡" code="620423207" />
+    <street name="条山集团" code="620423400" />
+</county>
+</city>
+</address>

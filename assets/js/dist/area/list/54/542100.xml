@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="昌都" code="542100">
+<county name="卡若" code="542121">
+    <street name="城关镇" code="542121100" />
+    <street name="俄洛镇" code="542121101" />
+    <street name="卡若镇" code="542121102" />
+    <street name="芒达乡" code="542121200" />
+    <street name="沙贡乡" code="542121201" />
+    <street name="若巴乡" code="542121202" />
+    <street name="埃西乡" code="542121203" />
+    <street name="如意乡" code="542121204" />
+    <street name="日通乡" code="542121205" />
+    <street name="柴维乡" code="542121206" />
+    <street name="妥坝乡" code="542121207" />
+    <street name="嘎玛乡" code="542121208" />
+    <street name="面达乡" code="542121209" />
+    <street name="约巴乡" code="542121210" />
+    <street name="拉多乡" code="542121211" />
+</county>
+<county name="江达" code="542122">
+    <street name="江达镇" code="542122100" />
+    <street name="岗托镇" code="542122101" />
+    <street name="邓柯乡" code="542122200" />
+    <street name="岩比乡" code="542122201" />
+    <street name="卡贡乡" code="542122202" />
+    <street name="生达乡" code="542122203" />
+    <street name="娘西乡" code="542122204" />
+    <street name="字呷乡" code="542122205" />
+    <street name="青泥洞乡" code="542122206" />
+    <street name="汪布顶乡" code="542122207" />
+    <street name="德登乡" code="542122208" />
+    <street name="同普乡" code="542122209" />
+    <street name="波罗乡" code="542122210" />
+</county>
+<county name="贡觉" code="542123">
+    <street name="莫洛镇" code="542123100" />
+    <street name="敏都乡" code="542123200" />
+    <street name="则巴乡" code="542123201" />
+    <street name="罗麦乡" code="542123202" />
+    <street name="沙东乡" code="542123203" />
+    <street name="克日乡" code="542123204" />
+    <street name="木协乡" code="542123205" />
+    <street name="阿旺乡" code="542123206" />
+    <street name="拉妥乡" code="542123207" />
+    <street name="雄松乡" code="542123208" />
+    <street name="哈加乡" code="542123209" />
+    <street name="相皮乡" code="542123210" />
+</county>
+<county name="类乌齐" code="542124">
+    <street name="桑多镇" code="542124100" />
+    <street name="类乌齐镇" code="542124101" />
+    <street name="吉多乡" code="542124200" />
+    <street name="岗色乡" code="542124201" />
+    <street name="宾达乡" code="542124202" />
+    <street name="卡玛多乡" code="542124203" />
+    <street name="尚卡乡" code="542124204" />
+    <street name="伊日乡" code="542124205" />
+    <street name="甲桑卡乡" code="542124206" />
+    <street name="长毛岭乡" code="542124207" />
+</county>
+<county name="丁青" code="542125">
+    <street name="丁青镇" code="542125100" />
+    <street name="尺犊镇" code="542125101" />
+    <street name="木塔乡" code="542125200" />
+    <street name="布塔乡" code="542125201" />
+    <street name="巴达乡" code="542125202" />
+    <street name="甘岩乡" code="542125203" />
+    <street name="嘎塔乡" code="542125204" />
+    <street name="色扎乡" code="542125205" />
+    <street name="协雄乡" code="542125206" />
+    <street name="桑多乡" code="542125207" />
+    <street name="当堆乡" code="542125208" />
+    <street name="沙贡乡" code="542125209" />
+    <street name="觉恩乡" code="542125210" />
+</county>
+<county name="察雅" code="542126">
+    <street name="烟多镇" code="542126100" />
+    <street name="吉塘镇" code="542126101" />
+    <street name="香堆镇" code="542126102" />
+    <street name="宗沙乡" code="542126200" />
+    <street name="肯通乡" code="542126201" />
+    <street name="扩达乡" code="542126202" />
+    <street name="新卡乡" code="542126203" />
+    <street name="王卡乡" code="542126204" />
+    <street name="阿孜乡" code="542126205" />
+    <street name="巴日乡" code="542126206" />
+    <street name="荣周乡" code="542126207" />
+    <street name="卡贡乡" code="542126208" />
+    <street name="察拉乡" code="542126209" />
+</county>
+<county name="八宿" code="542127">
+    <street name="白玛镇" code="542127100" />
+    <street name="然乌镇" code="542127101" />
+    <street name="帮达镇" code="542127102" />
+    <street name="同卡镇" code="542127103" />
+    <street name="林卡乡" code="542127200" />
+    <street name="夏里乡" code="542127201" />
+    <street name="拥乡" code="542127202" />
+    <street name="瓦乡" code="542127203" />
+    <street name="吉达乡" code="542127204" />
+    <street name="卡瓦白庆乡" code="542127205" />
+    <street name="集中乡" code="542127206" />
+    <street name="益庆乡" code="542127207" />
+    <street name="拉根乡" code="542127208" />
+    <street name="郭庆乡" code="542127209" />
+</county>
+<county name="左贡" code="542128">
+    <street name="旺达镇" code="542128100" />
+    <street name="田妥镇" code="542128101" />
+    <street name="扎玉镇" code="542128102" />
+    <street name="东坝乡" code="542128200" />
+    <street name="中林卡乡" code="542128201" />
+    <street name="美玉乡" code="542128202" />
+    <street name="下林卡乡" code="542128203" />
+    <street name="碧土乡" code="542128204" />
+    <street name="仁果乡" code="542128205" />
+    <street name="绕金乡" code="542128206" />
+</county>
+<county name="芒康" code="542129">
+    <street name="嘎托镇" code="542129100" />
+    <street name="如美镇" code="542129101" />
+    <street name="曲孜卡乡" code="542129200" />
+    <street name="木许乡" code="542129201" />
+    <street name="纳西民族乡" code="542129202" />
+    <street name="朱巴龙乡" code="542129203" />
+    <street name="曲登乡" code="542129204" />
+    <street name="徐中乡" code="542129205" />
+    <street name="帮达乡" code="542129206" />
+    <street name="戈波乡" code="542129207" />
+    <street name="洛尼乡" code="542129208" />
+    <street name="措瓦乡" code="542129209" />
+    <street name="昂多乡" code="542129210" />
+    <street name="宗西乡" code="542129211" />
+    <street name="莽岭乡" code="542129212" />
+    <street name="索多西乡" code="542129213" />
+</county>
+<county name="洛隆" code="542132">
+    <street name="孜托镇" code="542132100" />
+    <street name="硕督镇" code="542132101" />
+    <street name="康沙镇" code="542132102" />
+    <street name="马利镇" code="542132103" />
+    <street name="玉西乡" code="542132200" />
+    <street name="新荣乡" code="542132201" />
+    <street name="达龙乡" code="542132202" />
+    <street name="腊久乡" code="542132203" />
+    <street name="俄西乡" code="542132204" />
+    <street name="中亦乡" code="542132205" />
+    <street name="白达乡" code="542132206" />
+</county>
+<county name="边坝" code="542133">
+    <street name="草卡镇" code="542133100" />
+    <street name="边坝镇" code="542133101" />
+    <street name="马武乡" code="542133200" />
+    <street name="热玉乡" code="542133201" />
+    <street name="尼木乡" code="542133202" />
+    <street name="沙丁乡" code="542133203" />
+    <street name="金岭乡" code="542133204" />
+    <street name="加贡乡" code="542133205" />
+    <street name="马秀乡" code="542133206" />
+    <street name="都瓦乡" code="542133207" />
+    <street name="拉孜乡" code="542133208" />
+</county>
+</city>
+</address>

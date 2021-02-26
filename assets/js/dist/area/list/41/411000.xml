@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="许昌" code="411000">
+<county name="魏都" code="411002">
+    <street name="西大街道" code="411002001" />
+    <street name="东大街道" code="411002002" />
+    <street name="西关街道" code="411002003" />
+    <street name="南关街道" code="411002004" />
+    <street name="北大街道" code="411002005" />
+    <street name="五一路街道" code="411002006" />
+    <street name="高桥营街道" code="411002007" />
+    <street name="丁庄街道" code="411002008" />
+    <street name="七里店街道" code="411002009" />
+    <street name="文峰街道" code="411002010" />
+    <street name="新兴街道" code="411002011" />
+    <street name="半截河街道" code="411002012" />
+    <street name="许昌经济开发区" code="411002560" />
+    <street name="东城区管委会" code="411002570" />
+</county>
+<county name="许昌" code="411023">
+    <street name="将官池镇" code="411023100" />
+    <street name="五女店镇" code="411023101" />
+    <street name="尚集镇" code="411023102" />
+    <street name="苏桥镇" code="411023103" />
+    <street name="蒋李集镇" code="411023104" />
+    <street name="张潘镇" code="411023105" />
+    <street name="灵井镇" code="411023106" />
+    <street name="陈曹乡" code="411023200" />
+    <street name="邓庄乡" code="411023201" />
+    <street name="小召乡" code="411023202" />
+    <street name="河街乡" code="411023203" />
+    <street name="桂村乡" code="411023204" />
+    <street name="椹涧乡" code="411023205" />
+    <street name="榆林乡" code="411023206" />
+    <street name="长村张乡" code="411023207" />
+    <street name="艾庄回族乡" code="411023208" />
+</county>
+<county name="鄢陵" code="411024">
+    <street name="安陵镇" code="411024100" />
+    <street name="马栏镇" code="411024101" />
+    <street name="柏梁镇" code="411024102" />
+    <street name="陈化店镇" code="411024103" />
+    <street name="望田镇" code="411024104" />
+    <street name="大马镇" code="411024105" />
+    <street name="陶城镇" code="411024106" />
+    <street name="张桥镇" code="411024107" />
+    <street name="南坞乡" code="411024201" />
+    <street name="只乐乡" code="411024203" />
+    <street name="彭店乡" code="411024205" />
+    <street name="马坊乡" code="411024206" />
+</county>
+<county name="襄城" code="411025">
+    <street name="城关镇" code="411025100" />
+    <street name="颍桥回族镇" code="411025101" />
+    <street name="麦岭镇" code="411025102" />
+    <street name="颍阳镇" code="411025103" />
+    <street name="王洛镇" code="411025104" />
+    <street name="紫云镇" code="411025105" />
+    <street name="库庄镇" code="411025106" />
+    <street name="十里铺镇" code="411025107" />
+    <street name="山头店镇" code="411025108" />
+    <street name="湛北乡" code="411025200" />
+    <street name="茨沟乡" code="411025202" />
+    <street name="丁营乡" code="411025203" />
+    <street name="姜庄乡" code="411025204" />
+    <street name="范湖乡" code="411025205" />
+    <street name="双庙乡" code="411025206" />
+    <street name="汾陈乡" code="411025207" />
+</county>
+<county name="禹州" code="411081">
+    <street name="颍川街道" code="411081001" />
+    <street name="夏都街道" code="411081002" />
+    <street name="韩城街道" code="411081003" />
+    <street name="钧台街道" code="411081004" />
+    <street name="火龙镇" code="411081100" />
+    <street name="顺店镇" code="411081101" />
+    <street name="方山镇" code="411081102" />
+    <street name="神垕镇" code="411081103" />
+    <street name="鸿畅镇" code="411081104" />
+    <street name="梁北镇" code="411081105" />
+    <street name="古城镇" code="411081106" />
+    <street name="无梁镇" code="411081107" />
+    <street name="文殊镇" code="411081108" />
+    <street name="鸠山镇" code="411081109" />
+    <street name="褚河镇" code="411081110" />
+    <street name="范坡镇" code="411081111" />
+    <street name="郭连镇" code="411081112" />
+    <street name="朱阁镇" code="411081113" />
+    <street name="浅井镇" code="411081114" />
+    <street name="方岗镇" code="411081115" />
+    <street name="花石镇" code="411081116" />
+    <street name="苌庄乡" code="411081201" />
+    <street name="磨街乡" code="411081204" />
+    <street name="张得乡" code="411081205" />
+    <street name="小吕乡" code="411081206" />
+    <street name="山货回族乡" code="411081210" />
+</county>
+<county name="长葛" code="411082">
+    <street name="建设路街道" code="411082001" />
+    <street name="长兴路街道" code="411082002" />
+    <street name="长社路街道" code="411082003" />
+    <street name="金桥路街道" code="411082004" />
+    <street name="和尚桥镇" code="411082100" />
+    <street name="坡胡镇" code="411082101" />
+    <street name="后河镇" code="411082102" />
+    <street name="石固镇" code="411082103" />
+    <street name="老城镇" code="411082104" />
+    <street name="南席镇" code="411082105" />
+    <street name="大周镇" code="411082106" />
+    <street name="董村镇" code="411082107" />
+    <street name="增福庙乡" code="411082200" />
+    <street name="官亭乡" code="411082201" />
+    <street name="石象乡" code="411082202" />
+    <street name="古桥乡" code="411082203" />
+</county>
+</city>
+</address>

@@ -1,0 +1,69 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var sweetalert2           = true;
+- var page_sweetalert2      = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | sweet
+                                      span
+                                        | Alert  
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Ui Elements
+                                      li.breadcrumb-item.active sweet Alert
+                    // Container-fluid starts                    
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Basic Examples
+                            .card-body.btn-showcase
+                              button.btn.btn-primary.sweet-1(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);") Basic
+                              button.btn.btn-primary.sweet-2(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-2']);") With Title alert
+                              button.btn.btn-success.sweet-3(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-3']);") Success alert
+                              button.btn.btn-info.sweet-4(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);") Info alert
+                              button.btn.btn-warning.sweet-5(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-5']);") Warning alert
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Advanced State
+                            .card-body.btn-showcase
+                              button.btn.btn-success.sweet-12(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-12']);") Success
+                              button.btn.btn-danger.sweet-11(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-11']);") Danger
+                              button.btn.btn-info.sweet-13(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-13']);") Information
+                              button.btn.btn-warning.sweet-10(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-10']);") Warning
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Alert State
+                            .card-body.btn-showcase
+                              button.btn.btn-success.sweet-8(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-8']);") Success
+                              button.btn.btn-danger.sweet-7(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-7']);") Danger
+                              button.btn.btn-info.sweet-9(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-9']);") Information
+                              button.btn.btn-warning.sweet-6(type='button', onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-6']);") Warning
+                   
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files   

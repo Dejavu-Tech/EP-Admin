@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宜昌" code="420500">
+<county name="西陵" code="420502">
+    <street name="西陵街道" code="420502001" />
+    <street name="学院街道" code="420502002" />
+    <street name="云集街道" code="420502003" />
+    <street name="西坝街道" code="420502004" />
+    <street name="葛洲坝街道" code="420502005" />
+    <street name="夜明珠街道" code="420502006" />
+    <street name="东苑街道" code="420502007" />
+    <street name="南苑街道" code="420502008" />
+    <street name="北苑街道" code="420502009" />
+    <street name="窑湾乡" code="420502201" />
+    <street name="峡口风景区" code="420502401" />
+</county>
+<county name="伍家岗" code="420503">
+    <street name="大公桥街道" code="420503001" />
+    <street name="万寿桥街道" code="420503002" />
+    <street name="宝塔河街道" code="420503003" />
+    <street name="伍家岗街道" code="420503004" />
+    <street name="伍家乡" code="420503201" />
+</county>
+<county name="点军" code="420504">
+    <street name="点军街道" code="420504001" />
+    <street name="艾家镇" code="420504101" />
+    <street name="桥边镇" code="420504102" />
+    <street name="联棚乡" code="420504201" />
+    <street name="土城乡" code="420504202" />
+</county>
+<county name="猇亭" code="420505">
+    <street name="古老背街道" code="420505001" />
+    <street name="虎牙街道" code="420505002" />
+    <street name="云池街道" code="420505003" />
+</county>
+<county name="夷陵" code="420506">
+    <street name="小溪塔街道" code="420506001" />
+    <street name="夷陵经济开发区办事处" code="420506002" />
+    <street name="樟村坪镇" code="420506101" />
+    <street name="雾渡河镇" code="420506102" />
+    <street name="分乡镇" code="420506103" />
+    <street name="太平溪镇" code="420506104" />
+    <street name="三斗坪镇" code="420506105" />
+    <street name="乐天溪镇" code="420506106" />
+    <street name="龙泉镇" code="420506107" />
+    <street name="鸦鹊岭镇" code="420506108" />
+    <street name="黄花镇" code="420506109" />
+    <street name="下堡坪乡" code="420506201" />
+    <street name="邓村乡" code="420506202" />
+    <street name="三峡坝区" code="420506401" />
+</county>
+<county name="远安" code="420525">
+    <street name="鸣凤镇" code="420525101" />
+    <street name="花林寺镇" code="420525102" />
+    <street name="旧县镇" code="420525103" />
+    <street name="洋坪镇" code="420525104" />
+    <street name="茅坪场镇" code="420525105" />
+    <street name="荷花镇" code="420525106" />
+    <street name="河口乡" code="420525201" />
+</county>
+<county name="兴山" code="420526">
+    <street name="古夫镇" code="420526101" />
+    <street name="昭君镇" code="420526102" />
+    <street name="峡口镇" code="420526103" />
+    <street name="南阳镇" code="420526104" />
+    <street name="黄粮镇" code="420526105" />
+    <street name="水月寺镇" code="420526106" />
+    <street name="高桥乡" code="420526201" />
+    <street name="榛子乡" code="420526202" />
+</county>
+<county name="秭归" code="420527">
+    <street name="茅坪镇" code="420527101" />
+    <street name="归州镇" code="420527102" />
+    <street name="屈原镇" code="420527103" />
+    <street name="沙镇溪镇" code="420527104" />
+    <street name="两河口镇" code="420527105" />
+    <street name="郭家坝镇" code="420527106" />
+    <street name="杨林桥镇" code="420527107" />
+    <street name="九畹溪镇" code="420527108" />
+    <street name="水田坝乡" code="420527201" />
+    <street name="泄滩乡" code="420527202" />
+    <street name="梅家河乡" code="420527203" />
+    <street name="磨坪乡" code="420527204" />
+</county>
+<county name="长阳" code="420528">
+    <street name="龙舟坪镇" code="420528101" />
+    <street name="高家堰镇" code="420528102" />
+    <street name="磨市镇" code="420528103" />
+    <street name="都镇湾镇" code="420528104" />
+    <street name="资丘镇" code="420528105" />
+    <street name="渔峡口镇" code="420528106" />
+    <street name="榔坪镇" code="420528107" />
+    <street name="贺家坪镇" code="420528108" />
+    <street name="大堰乡" code="420528201" />
+    <street name="鸭子口乡" code="420528202" />
+    <street name="火烧坪乡" code="420528203" />
+</county>
+<county name="五峰" code="420529">
+    <street name="五峰镇" code="420529101" />
+    <street name="长乐坪镇" code="420529102" />
+    <street name="渔洋关镇" code="420529103" />
+    <street name="仁和坪镇" code="420529104" />
+    <street name="湾潭镇" code="420529105" />
+    <street name="付家堰乡" code="420529201" />
+    <street name="牛庄乡" code="420529202" />
+    <street name="采花乡" code="420529203" />
+</county>
+<county name="宜都" code="420581">
+    <street name="陆城街道" code="420581001" />
+    <street name="红花套镇" code="420581100" />
+    <street name="高坝洲镇" code="420581101" />
+    <street name="聂家河镇" code="420581102" />
+    <street name="松木坪镇" code="420581103" />
+    <street name="枝城镇" code="420581104" />
+    <street name="姚家店镇" code="420581105" />
+    <street name="五眼泉镇" code="420581106" />
+    <street name="潘家湾土家族乡" code="420581200" />
+    <street name="王家畈乡" code="420581201" />
+    <street name="松宜矿区管理委员会" code="420581400" />
+</county>
+<county name="当阳" code="420582">
+    <street name="当阳市玉阳街道" code="420582001" />
+    <street name="当阳市坝陵街道" code="420582002" />
+    <street name="当阳市玉泉街道" code="420582003" />
+    <street name="当阳市两河镇" code="420582101" />
+    <street name="当阳市河溶镇" code="420582102" />
+    <street name="当阳市育溪镇" code="420582103" />
+    <street name="当阳市庙前镇" code="420582104" />
+    <street name="当阳市王店镇" code="420582105" />
+    <street name="当阳市半月镇" code="420582106" />
+    <street name="当阳市草埠湖镇" code="420582107" />
+</county>
+<county name="枝江" code="420583">
+    <street name="马家店街道" code="420583001" />
+    <street name="安福寺镇" code="420583101" />
+    <street name="白洋镇" code="420583102" />
+    <street name="顾家店镇" code="420583103" />
+    <street name="董市镇" code="420583104" />
+    <street name="仙女镇" code="420583105" />
+    <street name="问安镇" code="420583106" />
+    <street name="七星台镇" code="420583107" />
+    <street name="百里洲镇" code="420583108" />
+</county>
+</city>
+</address>

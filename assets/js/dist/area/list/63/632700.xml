@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="玉树" code="632700">
+<county name="玉树" code="632721">
+    <street name="结古镇" code="632701100" />
+    <street name="隆宝镇" code="632701101" />
+    <street name="下拉秀镇" code="632701102" />
+    <street name="仲达乡" code="632701200" />
+    <street name="巴塘乡" code="632701201" />
+    <street name="小苏莽乡" code="632701202" />
+    <street name="上拉秀乡" code="632701203" />
+    <street name="哈秀乡" code="632701204" />
+    <street name="安冲乡" code="632701205" />
+</county>
+<county name="杂多" code="632722">
+    <street name="萨呼腾镇" code="632722100" />
+    <street name="昂赛乡" code="632722200" />
+    <street name="结多乡" code="632722201" />
+    <street name="阿多乡" code="632722202" />
+    <street name="苏鲁乡" code="632722203" />
+    <street name="查旦乡" code="632722204" />
+    <street name="莫云乡" code="632722205" />
+    <street name="扎青乡" code="632722206" />
+</county>
+<county name="称多" code="632723">
+    <street name="称文镇" code="632723100" />
+    <street name="歇武镇" code="632723101" />
+    <street name="扎朵镇" code="632723102" />
+    <street name="清水河镇" code="632723103" />
+    <street name="珍秦镇" code="632723104" />
+    <street name="尕朵乡" code="632723200" />
+    <street name="拉布乡" code="632723201" />
+</county>
+<county name="治多" code="632724">
+    <street name="加吉博洛格镇" code="632724100" />
+    <street name="索加乡" code="632724200" />
+    <street name="扎河乡" code="632724201" />
+    <street name="多彩乡" code="632724202" />
+    <street name="治渠乡" code="632724203" />
+    <street name="立新乡" code="632724204" />
+</county>
+<county name="囊谦" code="632725">
+    <street name="香达镇" code="632725100" />
+    <street name="白扎乡" code="632725200" />
+    <street name="吉曲乡" code="632725201" />
+    <street name="娘拉乡" code="632725202" />
+    <street name="毛庄乡" code="632725203" />
+    <street name="觉拉乡" code="632725204" />
+    <street name="东坝乡" code="632725205" />
+    <street name="尕羊乡" code="632725206" />
+    <street name="吉尼赛乡" code="632725207" />
+    <street name="着晓乡" code="632725208" />
+</county>
+<county name="曲麻莱" code="632726">
+    <street name="约改镇" code="632726100" />
+    <street name="巴干乡" code="632726200" />
+    <street name="秋智乡" code="632726201" />
+    <street name="叶格乡" code="632726202" />
+    <street name="麻多乡" code="632726203" />
+    <street name="曲麻河乡" code="632726204" />
+</county>
+</city>
+</address>

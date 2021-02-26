@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阿拉尔" code="659002">
+<county name="阿拉尔" code="659002001">
+    <street name="幸福路街道" code="659002002" />
+    <street name="青松路街道" code="659002003" />
+    <street name="南口街道" code="659002004" />
+    <street name="托喀依乡" code="659002200" />
+    <street name="工业园区" code="659002402" />
+    <street name="兵团七团" code="659002500" />
+    <street name="兵团八团" code="659002501" />
+    <street name="兵团十团" code="659002503" />
+    <street name="兵团十一团" code="659002504" />
+    <street name="兵团十二团" code="659002505" />
+    <street name="兵团十三团" code="659002506" />
+    <street name="兵团十四团" code="659002507" />
+    <street name="兵团十六团" code="659002509" />
+    <street name="兵团第一师水利水电工程处" code="659002511" />
+    <street name="兵团第一师塔里木灌区水利管理处" code="659002512" />
+    <street name="阿拉尔农场" code="659002513" />
+    <street name="兵团第一师幸福农场" code="659002514" />
+    <street name="中心监狱" code="659002515" />
+</county>
+</city>
+</address>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="陇南" code="621200">
+<county name="武都" code="621202">
+    <street name="城关镇" code="621202100" />
+    <street name="安化镇" code="621202101" />
+    <street name="东江镇" code="621202102" />
+    <street name="两水镇" code="621202103" />
+    <street name="汉王镇" code="621202104" />
+    <street name="洛塘镇" code="621202105" />
+    <street name="角弓镇" code="621202106" />
+    <street name="马街镇" code="621202107" />
+    <street name="三河镇" code="621202108" />
+    <street name="甘泉镇" code="621202109" />
+    <street name="鱼龙镇" code="621202110" />
+    <street name="琵琶镇" code="621202111" />
+    <street name="城郊乡" code="621202200" />
+    <street name="坪垭藏族乡" code="621202201" />
+    <street name="蒲池乡" code="621202203" />
+    <street name="石门乡" code="621202204" />
+    <street name="汉林乡" code="621202207" />
+    <street name="柏林乡" code="621202208" />
+    <street name="马营乡" code="621202210" />
+    <street name="池坝乡" code="621202211" />
+    <street name="佛崖乡" code="621202213" />
+    <street name="黄坪乡" code="621202215" />
+    <street name="隆兴乡" code="621202217" />
+    <street name="龙坝乡" code="621202218" />
+    <street name="龙凤乡" code="621202219" />
+    <street name="桔柑乡" code="621202220" />
+    <street name="磨坝藏族乡" code="621202221" />
+    <street name="外纳乡" code="621202223" />
+    <street name="玉皇乡" code="621202225" />
+    <street name="郭河乡" code="621202226" />
+    <street name="枫相乡" code="621202229" />
+    <street name="三仓乡" code="621202230" />
+    <street name="五库乡" code="621202231" />
+    <street name="月照乡" code="621202233" />
+    <street name="五马乡" code="621202235" />
+    <street name="裕河乡" code="621202237" />
+</county>
+<county name="成县" code="621221">
+    <street name="城关镇" code="621221100" />
+    <street name="黄渚镇" code="621221101" />
+    <street name="红川镇" code="621221102" />
+    <street name="小川镇" code="621221103" />
+    <street name="纸坊镇" code="621221104" />
+    <street name="抛沙镇" code="621221105" />
+    <street name="店村镇" code="621221107" />
+    <street name="王磨镇" code="621221108" />
+    <street name="陈院镇" code="621221109" />
+    <street name="沙坝镇" code="621221110" />
+    <street name="黄陈镇" code="621221111" />
+    <street name="鸡峰镇" code="621221112" />
+    <street name="宋坪乡" code="621221203" />
+    <street name="二郎乡" code="621221206" />
+    <street name="苏元乡" code="621221209" />
+    <street name="索池乡" code="621221210" />
+    <street name="镡河乡" code="621221213" />
+</county>
+<county name="文县" code="621222">
+    <street name="城关镇" code="621222100" />
+    <street name="碧口镇" code="621222101" />
+    <street name="尚德镇" code="621222102" />
+    <street name="中寨镇" code="621222103" />
+    <street name="铁楼藏族乡" code="621222200" />
+    <street name="丹堡乡" code="621222203" />
+    <street name="刘家坪乡" code="621222205" />
+    <street name="玉垒乡" code="621222206" />
+    <street name="范坝乡" code="621222207" />
+    <street name="中庙乡" code="621222210" />
+    <street name="口头坝乡" code="621222211" />
+    <street name="尖山乡" code="621222212" />
+    <street name="临江乡" code="621222213" />
+    <street name="黎坪乡" code="621222214" />
+    <street name="舍书乡" code="621222215" />
+    <street name="天池乡" code="621222216" />
+    <street name="桥头乡" code="621222217" />
+    <street name="堡子坝乡" code="621222218" />
+    <street name="石坊乡" code="621222219" />
+    <street name="石鸡坝乡" code="621222220" />
+</county>
+<county name="宕昌" code="621223">
+    <street name="城关镇" code="621223100" />
+    <street name="哈达铺镇" code="621223101" />
+    <street name="理川镇" code="621223102" />
+    <street name="南阳镇" code="621223103" />
+    <street name="官亭镇" code="621223104" />
+    <street name="沙湾镇" code="621223105" />
+    <street name="阿坞乡" code="621223200" />
+    <street name="南河乡" code="621223204" />
+    <street name="八力乡" code="621223205" />
+    <street name="木耳乡" code="621223206" />
+    <street name="庞家乡" code="621223207" />
+    <street name="何家堡乡" code="621223209" />
+    <street name="贾河乡" code="621223211" />
+    <street name="将台乡" code="621223212" />
+    <street name="车拉乡" code="621223213" />
+    <street name="新城子藏族乡" code="621223214" />
+    <street name="临江乡" code="621223215" />
+    <street name="好梯乡" code="621223216" />
+    <street name="韩院乡" code="621223217" />
+    <street name="竹院乡" code="621223218" />
+    <street name="兴化乡" code="621223219" />
+    <street name="甘江头乡" code="621223220" />
+    <street name="新寨乡" code="621223223" />
+    <street name="狮子乡" code="621223224" />
+    <street name="两河口乡" code="621223225" />
+</county>
+<county name="康县" code="621224">
+    <street name="城关镇" code="621224100" />
+    <street name="平洛镇" code="621224101" />
+    <street name="大堡镇" code="621224102" />
+    <street name="岸门口镇" code="621224103" />
+    <street name="两河镇" code="621224104" />
+    <street name="长坝镇" code="621224105" />
+    <street name="云台镇" code="621224106" />
+    <street name="阳坝镇" code="621224107" />
+    <street name="望关乡" code="621224200" />
+    <street name="寺台乡" code="621224202" />
+    <street name="大南峪乡" code="621224203" />
+    <street name="迷坝乡" code="621224204" />
+    <street name="王坝乡" code="621224206" />
+    <street name="碾坝乡" code="621224207" />
+    <street name="豆坝乡" code="621224208" />
+    <street name="店子乡" code="621224209" />
+    <street name="豆坪乡" code="621224210" />
+    <street name="白杨乡" code="621224212" />
+    <street name="太石乡" code="621224214" />
+    <street name="铜钱乡" code="621224215" />
+    <street name="三河坝乡" code="621224218" />
+</county>
+<county name="西和" code="621225">
+    <street name="汉源镇" code="621225100" />
+    <street name="长道镇" code="621225101" />
+    <street name="何坝镇" code="621225102" />
+    <street name="姜席镇" code="621225103" />
+    <street name="石峡镇" code="621225104" />
+    <street name="洛峪镇" code="621225105" />
+    <street name="石堡乡" code="621225201" />
+    <street name="西峪乡" code="621225202" />
+    <street name="苏河乡" code="621225203" />
+    <street name="卢河乡" code="621225204" />
+    <street name="兴隆乡" code="621225205" />
+    <street name="稍峪乡" code="621225206" />
+    <street name="马元乡" code="621225207" />
+    <street name="晒经乡" code="621225208" />
+    <street name="十里乡" code="621225211" />
+    <street name="大桥乡" code="621225216" />
+    <street name="蒿林乡" code="621225217" />
+    <street name="太石河乡" code="621225218" />
+    <street name="六巷乡" code="621225220" />
+    <street name="西高山乡" code="621225221" />
+</county>
+<county name="礼县" code="621226">
+    <street name="城关镇" code="621226100" />
+    <street name="盐官镇" code="621226101" />
+    <street name="石桥镇" code="621226102" />
+    <street name="白河镇" code="621226103" />
+    <street name="宽川乡" code="621226200" />
+    <street name="永兴乡" code="621226201" />
+    <street name="祁山乡" code="621226202" />
+    <street name="马河乡" code="621226203" />
+    <street name="红河乡" code="621226204" />
+    <street name="永坪乡" code="621226208" />
+    <street name="固城乡" code="621226209" />
+    <street name="崖城乡" code="621226210" />
+    <street name="罗坝乡" code="621226211" />
+    <street name="湫山乡" code="621226212" />
+    <street name="洮坪乡" code="621226214" />
+    <street name="上坪乡" code="621226215" />
+    <street name="江口乡" code="621226218" />
+    <street name="雷王乡" code="621226219" />
+    <street name="龙林乡" code="621226220" />
+    <street name="中坝乡" code="621226221" />
+    <street name="白关乡" code="621226222" />
+    <street name="沙金乡" code="621226224" />
+    <street name="桥头乡" code="621226227" />
+    <street name="草坪乡" code="621226228" />
+    <street name="雷坝乡" code="621226229" />
+    <street name="王坝乡" code="621226230" />
+    <street name="肖良乡" code="621226231" />
+    <street name="三峪乡" code="621226232" />
+    <street name="滩坪乡" code="621226233" />
+</county>
+<county name="徽县" code="621227">
+    <street name="城关镇" code="621227100" />
+    <street name="伏家镇" code="621227101" />
+    <street name="江洛镇" code="621227102" />
+    <street name="泥阳镇" code="621227103" />
+    <street name="柳林镇" code="621227104" />
+    <street name="嘉陵镇" code="621227105" />
+    <street name="永宁镇" code="621227106" />
+    <street name="银杏树乡" code="621227201" />
+    <street name="水阳乡" code="621227202" />
+    <street name="栗川乡" code="621227203" />
+    <street name="麻沿河乡" code="621227205" />
+    <street name="高桥乡" code="621227206" />
+    <street name="榆树乡" code="621227208" />
+    <street name="大河店乡" code="621227210" />
+    <street name="虞关乡" code="621227211" />
+</county>
+<county name="两当" code="621228">
+    <street name="城关镇" code="621228100" />
+    <street name="站儿巷镇" code="621228101" />
+    <street name="西坡镇" code="621228102" />
+    <street name="杨店乡" code="621228200" />
+    <street name="左家乡" code="621228201" />
+    <street name="显龙乡" code="621228202" />
+    <street name="鱼池乡" code="621228203" />
+    <street name="兴化乡" code="621228204" />
+    <street name="张家乡" code="621228207" />
+    <street name="云屏乡" code="621228209" />
+    <street name="泰山乡" code="621228210" />
+    <street name="金洞乡" code="621228212" />
+</county>
+</city>
+</address>

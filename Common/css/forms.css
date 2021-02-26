@@ -1,0 +1,29 @@
+
+table
+  {
+  border-collapse:collapse;
+  }
+td,th{
+    font-family:"宋体";
+    font-size:12px;
+    height: 30px;
+    padding: 0 0 0 20px;
+}
+th{
+  font-size:18px;
+  font-weight:normal;
+}
+.td1{ width:50px;}
+
+
+.td2{ width:200px;}
+.td3{ width:100px;}
+.td4{ width:140px;}
+.td5{ width:130px;}
+.td6{ width:160px;}
+
+.num{ font-family:"Calibri";}
+ .a{
+   padding:0 0 0 0;
+  text-align: center
+}

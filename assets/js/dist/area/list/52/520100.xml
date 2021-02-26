@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="贵阳" code="520100">
+<county name="南明" code="520102">
+    <street name="后巢乡" code="520102200" />
+    <street name="云关乡" code="520102201" />
+    <street name="小碧布依族苗族乡" code="520102202" />
+    <street name="永乐乡" code="520102203" />
+    <street name="新华社区服务中心" code="520102400" />
+    <street name="西湖社区服务中心" code="520102401" />
+    <street name="水口寺社区服务中心" code="520102402" />
+    <street name="大南社区服务中心" code="520102403" />
+    <street name="中南社区服务中心" code="520102404" />
+    <street name="市府社区服务中心" code="520102405" />
+    <street name="河滨社区服务中心" code="520102406" />
+    <street name="遵义社区服务中心" code="520102407" />
+    <street name="兴关社区服务中心" code="520102408" />
+    <street name="沙冲社区服务中心" code="520102409" />
+    <street name="沙南社区服务中心" code="520102410" />
+    <street name="太慈社区服务中心" code="520102411" />
+    <street name="花果园社区服务中心" code="520102412" />
+    <street name="油榨社区服务中心" code="520102413" />
+    <street name="中曹司社区服务中心" code="520102414" />
+    <street name="二戈寨社区服务中心" code="520102415" />
+    <street name="见龙社区服务中心" code="520102416" />
+    <street name="龙洞社区服务中心" code="520102417" />
+</county>
+<county name="云岩" code="520103">
+    <street name="黔灵镇" code="520103100" />
+    <street name="中华社区服务中心" code="520103400" />
+    <street name="中环社区服务中心" code="520103401" />
+    <street name="中东社区服务中心" code="520103402" />
+    <street name="东山社区服务中心" code="520103403" />
+    <street name="延中社区服务中心" code="520103404" />
+    <street name="市西社区服务中心" code="520103405" />
+    <street name="威清社区服务中心" code="520103406" />
+    <street name="普陀社区服务中心" code="520103407" />
+    <street name="北京路社区服务中心" code="520103408" />
+    <street name="栖霞社区服务中心" code="520103409" />
+    <street name="黔东社区服务中心" code="520103410" />
+    <street name="宅吉社区服务中心" code="520103411" />
+    <street name="省府社区服务中心" code="520103412" />
+    <street name="金狮社区服务中心" code="520103413" />
+    <street name="中天社区服务中心" code="520103414" />
+    <street name="贵乌社区服务中心" code="520103415" />
+    <street name="头桥社区服务中心" code="520103416" />
+    <street name="金龙社区服务中心" code="520103417" />
+    <street name="圣泉社区服务中心" code="520103418" />
+    <street name="三桥社区服务中心" code="520103419" />
+    <street name="金关社区服务中心" code="520103420" />
+    <street name="蔡关社区服务中心" code="520103421" />
+    <street name="荷塘社区服务中心" code="520103422" />
+    <street name="普天社区服务中心" code="520103423" />
+    <street name="金鸭社区服务中心" code="520103424" />
+    <street name="金惠社区服务中心" code="520103425" />
+</county>
+<county name="花溪" code="520111">
+    <street name="青岩镇" code="520111101" />
+    <street name="石板镇" code="520111102" />
+    <street name="党武镇" code="520111103" />
+    <street name="麦坪镇" code="520111104" />
+    <street name="燕楼镇" code="520111105" />
+    <street name="孟关苗族布依族乡" code="520111201" />
+    <street name="湖潮苗族布依族乡" code="520111204" />
+    <street name="久安乡" code="520111205" />
+    <street name="高坡苗族乡" code="520111207" />
+    <street name="黔陶布依族苗族乡" code="520111208" />
+    <street name="马铃布依族苗族乡" code="520111209" />
+    <street name="羊艾农场" code="520111400" />
+    <street name="阳光社区服务中心" code="520111401" />
+    <street name="贵筑社区服务中心" code="520111402" />
+    <street name="溪北社区服务中心" code="520111403" />
+    <street name="清溪社区服务中心" code="520111404" />
+    <street name="明珠社区服务中心" code="520111405" />
+    <street name="兴隆社区服务中心" code="520111406" />
+    <street name="瑞华社区服务中心" code="520111407" />
+    <street name="清浦社区服务中心" code="520111408" />
+    <street name="黔江社区服务中心" code="520111409" />
+    <street name="平桥社区服务中心" code="520111410" />
+    <street name="航天社区服务中心" code="520111411" />
+    <street name="航空社区服务中心" code="520111412" />
+    <street name="金欣社区服务中心" code="520111413" />
+    <street name="黄河社区服务中心" code="520111414" />
+    <street name="三江社区服务中心" code="520111415" />
+    <street name="小孟社区服务中心" code="520111416" />
+    <street name="金竹社区服务中心" code="520111417" />
+    <street name="花孟社区服务中心" code="520111418" />
+</county>
+<county name="乌当" code="520112">
+    <street name="东风镇" code="520112101" />
+    <street name="水田镇" code="520112102" />
+    <street name="羊昌镇" code="520112103" />
+    <street name="下坝镇" code="520112105" />
+    <street name="新场镇" code="520112106" />
+    <street name="百宜镇" code="520112107" />
+    <street name="新堡布依族乡" code="520112203" />
+    <street name="偏坡布依族乡" code="520112206" />
+    <street name="贵阳市三江农场" code="520112400" />
+    <street name="顺新社区服务中心" code="520112401" />
+    <street name="新天社区服务中心" code="520112402" />
+    <street name="创新社区服务中心" code="520112403" />
+    <street name="振新社区服务中心" code="520112404" />
+    <street name="高新社区服务中心" code="520112405" />
+</county>
+<county name="白云" code="520113">
+    <street name="艳山红镇" code="520113100" />
+    <street name="麦架镇" code="520113101" />
+    <street name="沙文镇" code="520113102" />
+    <street name="都拉布依族乡" code="520113200" />
+    <street name="牛场布依族乡" code="520113201" />
+    <street name="红云社区服务中心" code="520113400" />
+    <street name="大山洞社区服务中心" code="520113401" />
+    <street name="艳山红社区服务中心" code="520113402" />
+    <street name="铝兴社区服务中心" code="520113403" />
+    <street name="白沙关社区服务中心" code="520113404" />
+    <street name="都新社区服务中心" code="520113405" />
+</county>
+<county name="开阳" code="520121">
+    <street name="城关镇" code="520121100" />
+    <street name="双流镇" code="520121101" />
+    <street name="金中镇" code="520121102" />
+    <street name="冯三镇" code="520121103" />
+    <street name="楠木渡镇" code="520121104" />
+    <street name="龙岗镇" code="520121105" />
+    <street name="永温镇" code="520121106" />
+    <street name="花梨镇" code="520121107" />
+    <street name="南龙乡" code="520121200" />
+    <street name="宅吉乡" code="520121202" />
+    <street name="龙水乡" code="520121204" />
+    <street name="米坪乡" code="520121205" />
+    <street name="禾丰乡" code="520121206" />
+    <street name="南江乡" code="520121207" />
+    <street name="高寨乡" code="520121208" />
+    <street name="毛云乡" code="520121209" />
+    <street name="紫兴社区服务中心" code="520121401" />
+    <street name="南山社区服务中心" code="520121402" />
+</county>
+<county name="息烽" code="520122">
+    <street name="永靖镇" code="520122100" />
+    <street name="温泉镇" code="520122101" />
+    <street name="九庄镇" code="520122102" />
+    <street name="小寨坝镇" code="520122103" />
+    <street name="西山镇" code="520122104" />
+    <street name="养龙司镇" code="520122105" />
+    <street name="石硐镇" code="520122106" />
+    <street name="青山苗族乡" code="520122200" />
+    <street name="鹿窝乡" code="520122204" />
+    <street name="流长乡" code="520122205" />
+    <street name="新华社区服务中心" code="520122400" />
+</county>
+<county name="修文" code="520123">
+    <street name="龙场镇" code="520123100" />
+    <street name="扎佐镇" code="520123101" />
+    <street name="久长镇" code="520123102" />
+    <street name="六广镇" code="520123103" />
+    <street name="六屯镇" code="520123104" />
+    <street name="洒坪镇" code="520123105" />
+    <street name="六桶镇" code="520123106" />
+    <street name="谷堡乡" code="520123200" />
+    <street name="小箐乡" code="520123202" />
+    <street name="大石布依族乡" code="520123204" />
+    <street name="龙岗社区服务中心" code="520123400" />
+</county>
+<county name="观山湖" code="520151">
+    <street name="金华镇" code="520115100" />
+    <street name="朱昌镇" code="520115101" />
+    <street name="百花湖乡" code="520115200" />
+    <street name="世纪城社区服务中心" code="520115400" />
+    <street name="金源社区服务中心" code="520115401" />
+    <street name="逸景社区服务中心" code="520115402" />
+    <street name="碧海社区服务中心" code="520115403" />
+    <street name="金麦社区服务中心" code="520115404" />
+    <street name="新世界社区服务中心" code="520115405" />
+    <street name="金华园社区服务中心" code="520115406" />
+    <street name="金岭社区服务中心" code="520115407" />
+</county>
+<county name="清镇" code="520181">
+    <street name="红枫湖镇" code="520181100" />
+    <street name="站街镇" code="520181101" />
+    <street name="卫城镇" code="520181102" />
+    <street name="新店镇" code="520181103" />
+    <street name="麦格苗族布依族乡" code="520181201" />
+    <street name="暗流乡" code="520181202" />
+    <street name="王庄布依族苗族乡" code="520181203" />
+    <street name="流长苗族乡" code="520181204" />
+    <street name="犁倭乡" code="520181205" />
+    <street name="新岭社区服务中心" code="520181400" />
+    <street name="红塔社区服务中心" code="520181401" />
+    <street name="巢凤社区服务中心" code="520181402" />
+    <street name="百花社区服务中心" code="520181403" />
+    <street name="红新社区服务中心" code="520181405" />
+</county>
+</city>
+</address>

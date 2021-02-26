@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="辽源" code="220400">
+<county name="龙山" code="220402">
+    <street name="向阳街道" code="220402001" />
+    <street name="辽源民营经济开发区（特殊街道）" code="220402070" />
+    <street name="寿山镇" code="220402100" />
+    <street name="县级直管村级单位（特殊镇）" code="220402198" />
+    <street name="工农乡" code="220402200" />
+</county>
+<county name="西安" code="220403">
+    <street name="灯塔镇" code="220403100" />
+    <street name="县级直管村级单位（特殊镇）" code="220403198" />
+</county>
+<county name="东丰" code="220421">
+    <street name="东丰镇" code="220421100" />
+    <street name="大阳镇" code="220421101" />
+    <street name="横道河镇" code="220421102" />
+    <street name="那丹伯镇" code="220421103" />
+    <street name="猴石镇" code="220421104" />
+    <street name="杨木林镇" code="220421105" />
+    <street name="小四平镇" code="220421106" />
+    <street name="黄河镇" code="220421107" />
+    <street name="拉拉河镇" code="220421108" />
+    <street name="沙河镇" code="220421109" />
+    <street name="南屯基镇" code="220421110" />
+    <street name="大兴镇" code="220421111" />
+    <street name="三合满族朝鲜族乡" code="220421200" />
+    <street name="二龙山乡" code="220421201" />
+</county>
+<county name="东辽" code="220422">
+    <street name="白泉镇" code="220422100" />
+    <street name="渭津镇" code="220422101" />
+    <street name="安石镇" code="220422102" />
+    <street name="辽河源镇" code="220422103" />
+    <street name="泉太镇" code="220422104" />
+    <street name="建安镇" code="220422105" />
+    <street name="安恕镇" code="220422106" />
+    <street name="平岗镇" code="220422107" />
+    <street name="云顶镇" code="220422108" />
+    <street name="凌云乡" code="220422200" />
+    <street name="甲山乡" code="220422201" />
+    <street name="足民乡" code="220422202" />
+    <street name="金洲乡" code="220422203" />
+</county>
+</city>
+</address>

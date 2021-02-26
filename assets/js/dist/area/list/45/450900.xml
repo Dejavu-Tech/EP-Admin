@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="玉林" code="450900">
+<county name="玉州" code="450902">
+    <street name="玉城街道" code="450902001" />
+    <street name="南江街道" code="450902002" />
+    <street name="城西街道" code="450902003" />
+    <street name="城北街道" code="450902004" />
+    <street name="名山街道" code="450902005" />
+    <street name="大塘镇" code="450902100" />
+    <street name="茂林镇" code="450902105" />
+    <street name="仁东镇" code="450902106" />
+    <street name="仁厚镇" code="450902113" />
+</county>
+<county name="福绵" code="450903">
+    <street name="福绵镇" code="450903107" />
+    <street name="成均镇" code="450903108" />
+    <street name="樟木镇" code="450903109" />
+    <street name="新桥镇" code="450903110" />
+    <street name="沙田镇" code="450903111" />
+    <street name="石和镇" code="450903112" />
+</county>
+<county name="容县" code="450921">
+    <street name="容州镇" code="450921100" />
+    <street name="杨梅镇" code="450921102" />
+    <street name="灵山镇" code="450921103" />
+    <street name="六王镇" code="450921104" />
+    <street name="黎村镇" code="450921105" />
+    <street name="杨村镇" code="450921106" />
+    <street name="县底镇" code="450921107" />
+    <street name="自良镇" code="450921108" />
+    <street name="松山镇" code="450921109" />
+    <street name="罗江镇" code="450921110" />
+    <street name="石头镇" code="450921111" />
+    <street name="石寨镇" code="450921112" />
+    <street name="十里镇" code="450921113" />
+    <street name="容西镇" code="450921114" />
+    <street name="浪水镇" code="450921115" />
+</county>
+<county name="陆川" code="450922">
+    <street name="温泉镇" code="450922101" />
+    <street name="米场镇" code="450922102" />
+    <street name="马坡镇" code="450922103" />
+    <street name="珊罗镇" code="450922104" />
+    <street name="平乐镇" code="450922105" />
+    <street name="沙坡镇" code="450922106" />
+    <street name="大桥镇" code="450922107" />
+    <street name="乌石镇" code="450922108" />
+    <street name="良田镇" code="450922109" />
+    <street name="清湖镇" code="450922110" />
+    <street name="古城镇" code="450922111" />
+    <street name="沙湖镇" code="450922112" />
+    <street name="横山镇" code="450922113" />
+    <street name="滩面镇" code="450922114" />
+</county>
+<county name="博白" code="450923">
+    <street name="博白镇" code="450923100" />
+    <street name="双凤镇" code="450923102" />
+    <street name="顿谷镇" code="450923105" />
+    <street name="水鸣镇" code="450923106" />
+    <street name="那林镇" code="450923107" />
+    <street name="江宁镇" code="450923108" />
+    <street name="三滩镇" code="450923109" />
+    <street name="黄凌镇" code="450923110" />
+    <street name="亚山镇" code="450923111" />
+    <street name="旺茂镇" code="450923112" />
+    <street name="东平镇" code="450923114" />
+    <street name="沙河镇" code="450923115" />
+    <street name="菱角镇" code="450923116" />
+    <street name="新田镇" code="450923117" />
+    <street name="凤山镇" code="450923118" />
+    <street name="宁潭镇" code="450923119" />
+    <street name="文地镇" code="450923120" />
+    <street name="英桥镇" code="450923121" />
+    <street name="那卜镇" code="450923122" />
+    <street name="大垌镇" code="450923123" />
+    <street name="沙陂镇" code="450923124" />
+    <street name="双旺镇" code="450923125" />
+    <street name="松旺镇" code="450923126" />
+    <street name="龙潭镇" code="450923127" />
+    <street name="大坝镇" code="450923128" />
+    <street name="永安镇" code="450923129" />
+    <street name="径口镇" code="450923130" />
+    <street name="浪平乡" code="450923201" />
+</county>
+<county name="兴业" code="450924">
+    <street name="石南镇" code="450924100" />
+    <street name="大平山镇" code="450924101" />
+    <street name="葵阳镇" code="450924102" />
+    <street name="城隍镇" code="450924103" />
+    <street name="山心镇" code="450924104" />
+    <street name="沙塘镇" code="450924105" />
+    <street name="蒲塘镇" code="450924106" />
+    <street name="北市镇" code="450924107" />
+    <street name="龙安镇" code="450924108" />
+    <street name="高峰镇" code="450924109" />
+    <street name="小平山镇" code="450924110" />
+    <street name="卖酒镇" code="450924111" />
+    <street name="洛阳镇" code="450924112" />
+</county>
+<county name="北流" code="450981">
+    <street name="陵城街道" code="450981001" />
+    <street name="城南街道" code="450981002" />
+    <street name="城北街道" code="450981003" />
+    <street name="北流镇" code="450981100" />
+    <street name="新荣镇" code="450981101" />
+    <street name="民安镇" code="450981102" />
+    <street name="山围镇" code="450981103" />
+    <street name="民乐镇" code="450981104" />
+    <street name="西垠镇" code="450981105" />
+    <street name="新圩镇" code="450981106" />
+    <street name="大里镇" code="450981107" />
+    <street name="塘岸镇" code="450981108" />
+    <street name="清水口镇" code="450981109" />
+    <street name="隆盛镇" code="450981110" />
+    <street name="大坡外镇" code="450981111" />
+    <street name="六麻镇" code="450981112" />
+    <street name="新丰镇" code="450981113" />
+    <street name="沙垌镇" code="450981114" />
+    <street name="平政镇" code="450981115" />
+    <street name="白马镇" code="450981116" />
+    <street name="大伦镇" code="450981117" />
+    <street name="扶新镇" code="450981118" />
+    <street name="六靖镇" code="450981119" />
+    <street name="石窝镇" code="450981120" />
+    <street name="清湾镇" code="450981121" />
+</county>
+</city>
+</address>

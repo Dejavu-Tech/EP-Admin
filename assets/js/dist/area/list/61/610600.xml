@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="延安" code="610600">
+<county name="宝塔" code="610602">
+    <street name="宝塔山街道" code="610602001" />
+    <street name="南市街道" code="610602002" />
+    <street name="凤凰山街道" code="610602003" />
+    <street name="桥沟镇" code="610602100" />
+    <street name="枣园镇" code="610602101" />
+    <street name="河庄坪镇" code="610602102" />
+    <street name="李渠镇" code="610602103" />
+    <street name="姚店镇" code="610602104" />
+    <street name="青化砭镇" code="610602105" />
+    <street name="蟠龙镇" code="610602106" />
+    <street name="柳林镇" code="610602107" />
+    <street name="南泥湾镇" code="610602108" />
+    <street name="临镇" code="610602109" />
+    <street name="甘谷驿镇" code="610602110" />
+    <street name="川口乡" code="610602200" />
+    <street name="冯庄乡" code="610602202" />
+    <street name="梁村乡" code="610602204" />
+    <street name="麻洞川乡" code="610602205" />
+    <street name="万花山乡" code="610602208" />
+</county>
+<county name="延长" code="610621">
+    <street name="七里村镇" code="610621100" />
+    <street name="黑家堡镇" code="610621101" />
+    <street name="郑庄镇" code="610621102" />
+    <street name="张家滩镇" code="610621103" />
+    <street name="交口镇" code="610621104" />
+    <street name="雷赤镇" code="610621106" />
+    <street name="罗子山镇" code="610621107" />
+    <street name="郭旗乡" code="610621200" />
+    <street name="安沟乡" code="610621202" />
+</county>
+<county name="延川" code="610622">
+    <street name="延川镇" code="610622100" />
+    <street name="永坪镇" code="610622101" />
+    <street name="延水关镇" code="610622102" />
+    <street name="文安驿镇" code="610622103" />
+    <street name="杨家圪台镇" code="610622104" />
+    <street name="贾家坪镇" code="610622105" />
+    <street name="禹居镇" code="610622106" />
+    <street name="关庄镇" code="610622107" />
+    <street name="马家河乡" code="610622203" />
+    <street name="土岗乡" code="610622205" />
+</county>
+<county name="子长" code="610623">
+    <street name="瓦窑堡镇" code="610623100" />
+    <street name="杨家园子镇" code="610623101" />
+    <street name="玉家湾镇" code="610623102" />
+    <street name="安定镇" code="610623103" />
+    <street name="马家砭镇" code="610623104" />
+    <street name="南沟岔镇" code="610623105" />
+    <street name="涧峪岔镇" code="610623106" />
+    <street name="李家岔镇" code="610623107" />
+    <street name="余家坪镇" code="610623108" />
+    <street name="史家畔乡" code="610623201" />
+</county>
+<county name="安塞" code="610624">
+    <street name="真武洞镇" code="610624100" />
+    <street name="砖窑湾镇" code="610624101" />
+    <street name="沿河湾镇" code="610624102" />
+    <street name="招安镇" code="610624103" />
+    <street name="化子坪镇" code="610624104" />
+    <street name="坪桥镇" code="610624105" />
+    <street name="建华镇" code="610624106" />
+    <street name="高桥镇" code="610624107" />
+    <street name="镰刀湾乡" code="610624203" />
+</county>
+<county name="志丹" code="610625">
+    <street name="保安镇" code="610625100" />
+    <street name="杏河镇" code="610625101" />
+    <street name="顺宁镇" code="610625102" />
+    <street name="旦八镇" code="610625103" />
+    <street name="金丁镇" code="610625104" />
+    <street name="永宁镇" code="610625105" />
+    <street name="义正镇" code="610625106" />
+    <street name="双河乡" code="610625200" />
+</county>
+<county name="吴起" code="610626">
+    <street name="吴起镇" code="610626100" />
+    <street name="铁边城镇" code="610626101" />
+    <street name="周湾镇" code="610626102" />
+    <street name="白豹镇" code="610626103" />
+    <street name="长官庙镇" code="610626104" />
+    <street name="长城镇" code="610626105" />
+    <street name="吴仓堡乡" code="610626200" />
+    <street name="庙沟乡" code="610626203" />
+    <street name="五谷城乡" code="610626205" />
+</county>
+<county name="甘泉" code="610627">
+    <street name="城关镇" code="610627100" />
+    <street name="下寺湾镇" code="610627101" />
+    <street name="道镇" code="610627102" />
+    <street name="桥镇乡" code="610627200" />
+    <street name="石门乡" code="610627201" />
+    <street name="劳山乡" code="610627203" />
+</county>
+<county name="富县" code="610628">
+    <street name="羊泉镇" code="610628101" />
+    <street name="张村驿镇" code="610628102" />
+    <street name="张家湾镇" code="610628103" />
+    <street name="直罗镇" code="610628104" />
+    <street name="茶坊镇" code="610628105" />
+    <street name="牛武镇" code="610628106" />
+    <street name="交道镇" code="610628107" />
+    <street name="吉子现镇" code="610628108" />
+    <street name="寺仙镇" code="610628109" />
+    <street name="北道德乡" code="610628204" />
+</county>
+<county name="洛川" code="610629">
+    <street name="凤栖镇" code="610629100" />
+    <street name="旧县镇" code="610629101" />
+    <street name="交口河镇" code="610629102" />
+    <street name="老庙镇" code="610629103" />
+    <street name="土基镇" code="610629104" />
+    <street name="石头镇" code="610629105" />
+    <street name="槐柏镇" code="610629106" />
+    <street name="菩堤乡" code="610629200" />
+    <street name="黄章乡" code="610629201" />
+    <street name="永乡" code="610629202" />
+    <street name="杨舒乡" code="610629204" />
+    <street name="朱牛乡" code="610629208" />
+</county>
+<county name="宜川" code="610630">
+    <street name="丹州镇" code="610630100" />
+    <street name="秋林镇" code="610630101" />
+    <street name="云岩镇" code="610630102" />
+    <street name="阁楼镇" code="610630103" />
+    <street name="集义镇" code="610630104" />
+    <street name="壶口镇" code="610630105" />
+    <street name="英旺乡" code="610630200" />
+    <street name="交里乡" code="610630201" />
+    <street name="牛家细乡" code="610630202" />
+</county>
+<county name="黄龙" code="610631">
+    <street name="石堡镇" code="610631100" />
+    <street name="白马滩镇" code="610631101" />
+    <street name="瓦子街镇" code="610631102" />
+    <street name="界头庙镇" code="610631106" />
+    <street name="三岔乡" code="610631200" />
+    <street name="圪台乡" code="610631205" />
+    <street name="崾先乡" code="610631206" />
+</county>
+<county name="黄陵" code="610632">
+    <street name="桥山镇" code="610632100" />
+    <street name="店头镇" code="610632101" />
+    <street name="隆坊镇" code="610632102" />
+    <street name="田庄镇" code="610632103" />
+    <street name="阿党镇" code="610632104" />
+    <street name="双龙镇" code="610632105" />
+    <street name="仓村乡" code="610632202" />
+</county>
+</city>
+</address>

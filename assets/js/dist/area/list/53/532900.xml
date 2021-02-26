@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="大理" code="532900">
+<county name="大理" code="532901">
+    <street name="大理创新工业园区天井办事处" code="532901001" />
+    <street name="大理创新工业园区满江办事处" code="532901002" />
+    <street name="下关镇" code="532901101" />
+    <street name="大理镇" code="532901102" />
+    <street name="大理创新工业园区凤仪镇" code="532901103" />
+    <street name="喜洲镇" code="532901104" />
+    <street name="海东镇" code="532901105" />
+    <street name="挖色镇" code="532901106" />
+    <street name="湾桥镇" code="532901107" />
+    <street name="银桥镇" code="532901108" />
+    <street name="双廊镇" code="532901109" />
+    <street name="上关镇" code="532901110" />
+    <street name="太邑彝族乡" code="532901201" />
+</county>
+<county name="漾濞" code="532922">
+    <street name="苍山西镇" code="532922101" />
+    <street name="漾江镇" code="532922102" />
+    <street name="平坡镇" code="532922103" />
+    <street name="富恒乡" code="532922201" />
+    <street name="太平乡" code="532922202" />
+    <street name="顺濞乡" code="532922203" />
+    <street name="瓦厂乡" code="532922204" />
+    <street name="龙潭乡" code="532922205" />
+    <street name="鸡街乡" code="532922206" />
+</county>
+<county name="祥云" code="532923">
+    <street name="祥城镇" code="532923101" />
+    <street name="沙龙镇" code="532923102" />
+    <street name="云南驿镇" code="532923103" />
+    <street name="下庄镇" code="532923104" />
+    <street name="普棚镇" code="532923105" />
+    <street name="刘厂镇" code="532923106" />
+    <street name="禾甸镇" code="532923107" />
+    <street name="米甸镇" code="532923108" />
+    <street name="鹿鸣乡" code="532923201" />
+    <street name="东山彝族乡" code="532923202" />
+</county>
+<county name="宾川" code="532924">
+    <street name="金牛镇" code="532924101" />
+    <street name="宾居镇" code="532924102" />
+    <street name="州城镇" code="532924103" />
+    <street name="大营镇" code="532924104" />
+    <street name="鸡足山镇" code="532924105" />
+    <street name="力角镇" code="532924106" />
+    <street name="平川镇" code="532924107" />
+    <street name="乔甸镇" code="532924108" />
+    <street name="钟英傈僳族彝族乡" code="532924201" />
+    <street name="拉乌彝族乡" code="532924202" />
+</county>
+<county name="弥渡" code="532925">
+    <street name="弥城镇" code="532925101" />
+    <street name="红岩镇" code="532925102" />
+    <street name="新街镇" code="532925103" />
+    <street name="寅街镇" code="532925104" />
+    <street name="苴力镇" code="532925105" />
+    <street name="密祉乡" code="532925202" />
+    <street name="德苴乡" code="532925203" />
+    <street name="牛街彝族乡" code="532925204" />
+</county>
+<county name="南涧" code="532926">
+    <street name="南涧镇" code="532926101" />
+    <street name="小湾东镇" code="532926102" />
+    <street name="公郎镇" code="532926103" />
+    <street name="宝华镇" code="532926104" />
+    <street name="无量山镇" code="532926105" />
+    <street name="拥翠乡" code="532926201" />
+    <street name="乐秋乡" code="532926202" />
+    <street name="碧溪乡" code="532926203" />
+</county>
+<county name="巍山" code="532927">
+    <street name="南诏镇" code="532927101" />
+    <street name="庙街镇" code="532927102" />
+    <street name="大仓镇" code="532927103" />
+    <street name="永建镇" code="532927104" />
+    <street name="巍宝山乡" code="532927201" />
+    <street name="马鞍山乡" code="532927202" />
+    <street name="紫金乡" code="532927203" />
+    <street name="五印乡" code="532927204" />
+    <street name="牛街乡" code="532927205" />
+    <street name="青华乡" code="532927206" />
+</county>
+<county name="永平" code="532928">
+    <street name="博南镇" code="532928101" />
+    <street name="杉阳镇" code="532928102" />
+    <street name="龙街镇" code="532928103" />
+    <street name="龙门乡" code="532928201" />
+    <street name="北斗彝族乡" code="532928202" />
+    <street name="厂街彝族乡" code="532928203" />
+    <street name="水泄彝族乡" code="532928204" />
+</county>
+<county name="云龙" code="532929">
+    <street name="诺邓镇" code="532929101" />
+    <street name="功果桥镇" code="532929102" />
+    <street name="漕涧镇" code="532929103" />
+    <street name="白石镇" code="532929104" />
+    <street name="宝丰乡" code="532929201" />
+    <street name="关坪乡" code="532929202" />
+    <street name="团结彝族乡" code="532929203" />
+    <street name="长新乡" code="532929204" />
+    <street name="检槽乡" code="532929205" />
+    <street name="苗尾傈僳族乡" code="532929206" />
+    <street name="民建乡" code="532929207" />
+</county>
+<county name="洱源" code="532930">
+    <street name="茈碧湖镇" code="532930101" />
+    <street name="邓川镇" code="532930102" />
+    <street name="右所镇" code="532930103" />
+    <street name="三营镇" code="532930104" />
+    <street name="凤羽镇" code="532930105" />
+    <street name="乔后镇" code="532930106" />
+    <street name="牛街乡" code="532930201" />
+    <street name="炼铁乡" code="532930202" />
+    <street name="西山乡" code="532930203" />
+</county>
+<county name="剑川" code="532931">
+    <street name="金华镇" code="532931101" />
+    <street name="老君山镇" code="532931102" />
+    <street name="甸南镇" code="532931103" />
+    <street name="沙溪镇" code="532931104" />
+    <street name="马登镇" code="532931105" />
+    <street name="羊岑乡" code="532931201" />
+    <street name="弥沙乡" code="532931202" />
+    <street name="象图乡" code="532931203" />
+</county>
+<county name="鹤庆" code="532932">
+    <street name="云鹤镇" code="532932101" />
+    <street name="辛屯镇" code="532932102" />
+    <street name="松桂镇" code="532932103" />
+    <street name="黄坪镇" code="532932104" />
+    <street name="草海镇" code="532932105" />
+    <street name="西邑镇" code="532932106" />
+    <street name="龙开口镇" code="532932107" />
+    <street name="金墩乡" code="532932201" />
+    <street name="六合彝族乡" code="532932203" />
+</county>
+</city>
+</address>

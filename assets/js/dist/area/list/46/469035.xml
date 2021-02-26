@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="保亭" code="469035">
+<county name="保亭" code="469035001">
+    <street name="保城镇" code="469029100" />
+    <street name="什玲镇" code="469029101" />
+    <street name="加茂镇" code="469029102" />
+    <street name="响水镇" code="469029103" />
+    <street name="新政镇" code="469029104" />
+    <street name="三道镇" code="469029105" />
+    <street name="六弓乡" code="469029200" />
+    <street name="南林乡" code="469029201" />
+    <street name="毛感乡" code="469029202" />
+    <street name="国营新星农场" code="469029401" />
+    <street name="海南保亭热带作物研究所" code="469029402" />
+    <street name="国营金江农场" code="469029403" />
+    <street name="国营三道农场" code="469029405" />
+</county>
+</city>
+</address>

@@ -1,0 +1,112 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var chartist              = true;
+- var page_chartist         = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Chartist
+                                      span
+                                        | Chart
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Charts
+                                      li.breadcrumb-item.active Chartist Chart
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Advanced SMIL Animations
+                            .card-body
+                              .ct-6.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 SVG Path animation
+                            .card-body
+                              .ct-7.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Animating a Donut with Svg.animate
+                            .card-body
+                              .ct-8.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Bi-polar Line chart with area only
+                            .card-body
+                              .ct-5.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Line chart with area
+                            .card-body
+                              .ct-4.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Bi-polar bar chart
+                            .card-body
+                              .ct-9.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Stacked bar chart
+                            .card-body
+                              .ct-10.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Horizontal bar chart
+                            .card-body
+                              .ct-11.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Extreme responsive configuration
+                            .card-body
+                              .ct-12.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Simple line chart
+                            .card-body
+                              .ct-1.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Holes in data
+                            .card-body
+                              .ct-2.flot-chart-container
+                        .col-xl-6.col-md-12.col-sm-12.box-col-12
+                          .card
+                            .card-header
+                              h5 Filled holes in data
+                            .card-body
+                              .ct-3.flot-chart-container
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

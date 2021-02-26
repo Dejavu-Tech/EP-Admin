@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宝鸡" code="610300">
+<county name="渭滨" code="610302">
+    <street name="金陵街道" code="610302001" />
+    <street name="经二路街道" code="610302002" />
+    <street name="清姜街道" code="610302003" />
+    <street name="姜谭街道" code="610302004" />
+    <street name="桥南街道" code="610302005" />
+    <street name="马营镇" code="610302100" />
+    <street name="石鼓镇" code="610302101" />
+    <street name="神农镇" code="610302102" />
+    <street name="高家镇" code="610302103" />
+    <street name="八鱼镇" code="610302104" />
+</county>
+<county name="金台" code="610303">
+    <street name="中山东路街道" code="610303001" />
+    <street name="西关街道" code="610303002" />
+    <street name="中山西路街道" code="610303003" />
+    <street name="群众路街道" code="610303004" />
+    <street name="东风路街道" code="610303006" />
+    <street name="十里铺街道" code="610303007" />
+    <street name="卧龙寺街道" code="610303008" />
+    <street name="陈仓镇" code="610303100" />
+    <street name="蟠龙镇" code="610303101" />
+    <street name="金河镇" code="610303102" />
+    <street name="硖石镇" code="610303103" />
+</county>
+<county name="陈仓" code="610304">
+    <street name="虢镇街道" code="610304001" />
+    <street name="东关街道" code="610304002" />
+    <street name="千渭街道" code="610304003" />
+    <street name="阳平镇" code="610304101" />
+    <street name="千河镇" code="610304102" />
+    <street name="磻溪镇" code="610304103" />
+    <street name="天王镇" code="610304104" />
+    <street name="慕仪镇" code="610304105" />
+    <street name="周原镇" code="610304106" />
+    <street name="贾村镇" code="610304107" />
+    <street name="县功镇" code="610304109" />
+    <street name="新街镇" code="610304110" />
+    <street name="坪头镇" code="610304111" />
+    <street name="香泉镇" code="610304112" />
+    <street name="赤沙镇" code="610304113" />
+    <street name="拓石镇" code="610304114" />
+    <street name="凤阁岭镇" code="610304115" />
+    <street name="钓渭镇" code="610304116" />
+</county>
+<county name="凤翔" code="610322">
+    <street name="城关镇" code="610322100" />
+    <street name="虢王镇" code="610322101" />
+    <street name="彪角镇" code="610322102" />
+    <street name="横水镇" code="610322103" />
+    <street name="田家庄镇" code="610322104" />
+    <street name="糜杆桥镇" code="610322105" />
+    <street name="南指挥镇" code="610322107" />
+    <street name="陈村镇" code="610322108" />
+    <street name="长青镇" code="610322109" />
+    <street name="柳林镇" code="610322110" />
+    <street name="姚家沟镇" code="610322111" />
+    <street name="范家寨镇" code="610322112" />
+</county>
+<county name="岐山" code="610323">
+    <street name="凤鸣镇" code="610323100" />
+    <street name="蔡家坡镇" code="610323101" />
+    <street name="益店镇" code="610323103" />
+    <street name="蒲村镇" code="610323104" />
+    <street name="祝家庄镇" code="610323105" />
+    <street name="青化镇" code="610323106" />
+    <street name="枣林镇" code="610323107" />
+    <street name="雍川镇" code="610323108" />
+    <street name="故郡镇" code="610323111" />
+    <street name="京当镇" code="610323112" />
+</county>
+<county name="扶风" code="610324">
+    <street name="城关镇" code="610324100" />
+    <street name="天度镇" code="610324101" />
+    <street name="午井镇" code="610324102" />
+    <street name="绛帐镇" code="610324103" />
+    <street name="段家镇" code="610324104" />
+    <street name="杏林镇" code="610324105" />
+    <street name="召公镇" code="610324106" />
+    <street name="法门镇" code="610324107" />
+</county>
+<county name="眉县" code="610326">
+    <street name="首善镇" code="610326100" />
+    <street name="横渠镇" code="610326101" />
+    <street name="槐芽镇" code="610326102" />
+    <street name="汤峪镇" code="610326103" />
+    <street name="常兴镇" code="610326104" />
+    <street name="金渠镇" code="610326105" />
+    <street name="营头镇" code="610326106" />
+    <street name="齐镇" code="610326107" />
+    <street name="陕西省太白山旅游区" code="610326400" />
+    <street name="红河谷森林公园" code="610326401" />
+</county>
+<county name="陇县" code="610327">
+    <street name="城关镇" code="610327100" />
+    <street name="东风镇" code="610327101" />
+    <street name="八渡镇" code="610327102" />
+    <street name="东南镇" code="610327104" />
+    <street name="温水镇" code="610327106" />
+    <street name="天成镇" code="610327107" />
+    <street name="曹家湾镇" code="610327108" />
+    <street name="固关镇" code="610327109" />
+    <street name="火烧寨镇" code="610327110" />
+    <street name="李家河镇" code="610327111" />
+    <street name="河北镇" code="610327112" />
+    <street name="新集川镇" code="610327113" />
+</county>
+<county name="千阳" code="610328">
+    <street name="城关镇" code="610328100" />
+    <street name="崔家头镇" code="610328101" />
+    <street name="南寨镇" code="610328102" />
+    <street name="张家塬镇" code="610328103" />
+    <street name="水沟镇" code="610328104" />
+    <street name="草碧镇" code="610328105" />
+    <street name="柿沟镇" code="610328106" />
+    <street name="高崖镇" code="610328107" />
+</county>
+<county name="麟游" code="610329">
+    <street name="九成宫镇" code="610329100" />
+    <street name="崔木镇" code="610329101" />
+    <street name="招贤镇" code="610329102" />
+    <street name="两亭镇" code="610329103" />
+    <street name="常丰镇" code="610329105" />
+    <street name="丈八镇" code="610329106" />
+    <street name="酒房镇" code="610329107" />
+</county>
+<county name="凤县" code="610330">
+    <street name="双石铺镇" code="610330100" />
+    <street name="凤州镇" code="610330101" />
+    <street name="黄牛铺镇" code="610330102" />
+    <street name="红花铺镇" code="610330103" />
+    <street name="河口镇" code="610330104" />
+    <street name="唐藏镇" code="610330105" />
+    <street name="平木镇" code="610330106" />
+    <street name="坪坎镇" code="610330107" />
+    <street name="留凤关镇" code="610330110" />
+    <street name="马头滩林业局" code="610330400" />
+    <street name="辛家山林业场" code="610330401" />
+</county>
+<county name="太白" code="610331">
+    <street name="咀头镇" code="610331100" />
+    <street name="桃川镇" code="610331101" />
+    <street name="鹦鸽镇" code="610331102" />
+    <street name="靖口镇" code="610331103" />
+    <street name="太白河镇" code="610331104" />
+    <street name="黄柏塬镇" code="610331105" />
+    <street name="王家堎镇" code="610331106" />
+</county>
+</city>
+</address>

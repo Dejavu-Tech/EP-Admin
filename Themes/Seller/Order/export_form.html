@@ -1,0 +1,142 @@
+<style>
+.move_item{width:18%;}
+</style>
+<form action="{:U('order/order')}" method="post" id="export_form" class="form-horizontal form-search " role="form">
+
+<input type="hidden" name="controller" value="order.order" />
+<?php
+	foreach($post_data as $key => $val){
+?>
+<input type="hidden" name="{$key}" value="{$val}" />
+<?php } ?>
+<div class="layui-fluid">
+	<div class="row layui-col-space15">
+		<div class="layui-col-md12">
+			<div class="layui-card">
+				<div class="layui-card-header">拖动排序</div>
+				<div class="layui-card-body multi-img-details">
+						<?php foreach( $columns as $key => $val ){ ?>
+						<label class="move_item">
+							<input type="checkbox" lay-skin="primary" name="order_index" value="{$val['field']}" class="item_input" <?php if($val['is_check'] ==1 ){ ?>checked<?php } ?>  /><?php echo $val['title']; ?>
+						</label>
+						<?php } ?>
+				</div>
+			</div>
+		</div>
+
+		<div class='row'>
+					<div class="layui-col-sm-12">
+						<div class="modal-footer" style="text-align: left">
+							<button type="submit" class="btn btn-primary btn-order" id="sub_orderexport" name="cancelsend" value="yes">确认导出</button>
+							<input type="hidden" name="modify_explode_arr" id="modify_explode_arr" value="" />
+						</div>
+
+					</div>
+				</div>
+	</div>
+</div>
+</form>
+
+<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+
+<script src="/assets/js/jquery-ui.min.js"></script>
+<script>
+
+$(function(){
+
+
+	$('#sub_orderexport').click(function(){
+
+		var load_arr = [];
+		$('.item_input').each(function(){
+			console.log( $(this).val() );
+
+			if( $(this).is(':checked') ) {
+				// do something
+				load_arr.push( $(this).val() );
+			}
+		})
+
+		if( load_arr.length <= 0 )
+		{
+			alert('请选择导出项');
+			return false;
+		}
+
+		var load_arr_str = load_arr.join(',');
+
+		$('#modify_explode_arr').val(load_arr_str);
+		layer.closeAll();
+		$('#export_form').submit();
+
+		return false;
+	})
+})
+</script>
+<script>
+    $(function () {
+        // 拖拽时开始滚动的间距
+        var scrollingSensitivity = 20
+        // 拖拽时滚动速度
+        let scrollingSpeed = 20
+        // 拖拽前的父级节点
+        let dragBeforeParentNode = null
+        // 初始化拖拽函数
+        $('.multi-img-details').sortable({
+            // 自适应placeholder的大小
+            forceHelperSize: true,
+            // 拖拽时的鼠标形状
+            cursor: '-webkit-grabbing',
+            // 拖拽的父级节点(该节点一定要注意，配置错误会导致当前屏幕外的元素没法自动滚动拖拽，两列之间拖拽的滚动也会出问题)
+            appendTo: '.layui-form-item',
+            // 拖拽时的倾斜度
+            rotate: '5deg',
+            // 延迟时间(毫秒)，避免和click同时操作时出现的冲突
+            delay: 0,
+
+            // 拖拽到边框出现滚动的间距，
+            scrollSensitivity: scrollingSensitivity,
+            // 应用于拖拽空白区域的样式
+            placeholder: 'portlet-placeholder ui-state-highlight',
+            // 允许拖拽预留空白区域
+            forcePlaceholderSize: false,
+            // 多个列表之间的拖拽的dom元素
+            connectWith: '.multi-img-details',
+            // 鼠标到区域则填充
+            tolerance: "pointer",
+            // 可以拖拽的项
+            items: '.move_item',
+            // 填充动画
+            revert: 0,
+            // 拖拽结束函数
+            stop: (e, ui) => {
+                // 当前拽入的元素
+                let item = $(ui.item)
+                // 当前拽入元素的下标
+                let index = item.index()
+                let kid = ''
+                // xxxx 这里面可以操作数据更新
+            },
+            // 开始拖拽时的函数
+            start: (e, ui) => {
+                // 拖拽前的父级节点
+                dragBeforeParentNode = ui.item[0].parentNode
+                // 让placeholder和源高度一致
+                ui.helper.addClass('item').width(110)
+                // xxxx  这里可以记录一些拖拽前的元素属性
+            },
+            // 处理两列滚动条问题
+            sort: function (event, ui) {
+                var scrollContainer = ui.placeholder[0].parentNode
+                // 设置拽入的列表的滚动位置
+                var overflowOffset = $(scrollContainer).offset()
+                if ((overflowOffset.top + scrollContainer.offsetHeight) - event.pageY <
+                    scrollingSensitivity) {
+                    scrollContainer.scrollTop = scrollContainer.scrollTop + scrollingSpeed
+                } else if (event.pageY - overflowOffset.top < scrollingSensitivity) {
+                    scrollContainer.scrollTop = scrollContainer.scrollTop - scrollingSpeed
+                }
+            }
+        }).disableSelection()
+    })
+</script>

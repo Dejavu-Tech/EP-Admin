@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="黄山" code="341000">
+<county name="屯溪" code="341002">
+    <street name="昱东街道" code="341002001" />
+    <street name="昱中街道" code="341002002" />
+    <street name="昱西街道" code="341002003" />
+    <street name="老街街道" code="341002004" />
+    <street name="屯光镇" code="341002100" />
+    <street name="阳湖镇" code="341002101" />
+    <street name="黎阳镇" code="341002102" />
+    <street name="新潭镇" code="341002103" />
+    <street name="奕棋镇" code="341002104" />
+</county>
+<county name="黄山" code="341003">
+    <street name="甘棠镇" code="341003100" />
+    <street name="仙源镇" code="341003101" />
+    <street name="汤口镇" code="341003102" />
+    <street name="谭家桥镇" code="341003103" />
+    <street name="太平湖镇" code="341003104" />
+    <street name="焦村镇" code="341003105" />
+    <street name="耿城镇" code="341003106" />
+    <street name="三口镇" code="341003107" />
+    <street name="乌石镇" code="341003108" />
+    <street name="新明乡" code="341003200" />
+    <street name="龙门乡" code="341003201" />
+    <street name="新华乡" code="341003203" />
+    <street name="新丰乡" code="341003204" />
+    <street name="永丰乡" code="341003205" />
+    <street name="黄山风景区" code="341003400" />
+</county>
+<county name="徽州" code="341004">
+    <street name="徽州街道" code="341004001" />
+    <street name="岩寺镇" code="341004100" />
+    <street name="西溪南镇" code="341004101" />
+    <street name="潜口镇" code="341004102" />
+    <street name="呈坎镇" code="341004103" />
+    <street name="洽舍乡" code="341004200" />
+    <street name="杨村乡" code="341004201" />
+    <street name="富溪乡" code="341004202" />
+</county>
+<county name="歙县" code="341021">
+    <street name="徽城镇" code="341021100" />
+    <street name="深渡镇" code="341021101" />
+    <street name="北岸镇" code="341021102" />
+    <street name="富堨镇" code="341021103" />
+    <street name="郑村镇" code="341021104" />
+    <street name="桂林镇" code="341021105" />
+    <street name="许村镇" code="341021106" />
+    <street name="溪头镇" code="341021107" />
+    <street name="杞梓里镇" code="341021108" />
+    <street name="霞坑镇" code="341021109" />
+    <street name="岔口镇" code="341021110" />
+    <street name="街口镇" code="341021111" />
+    <street name="王村镇" code="341021112" />
+    <street name="坑口乡" code="341021200" />
+    <street name="雄村乡" code="341021201" />
+    <street name="上丰乡" code="341021202" />
+    <street name="昌溪乡" code="341021203" />
+    <street name="武阳乡" code="341021204" />
+    <street name="三阳乡" code="341021205" />
+    <street name="金川乡" code="341021206" />
+    <street name="小川乡" code="341021207" />
+    <street name="新溪口乡" code="341021208" />
+    <street name="璜田乡" code="341021209" />
+    <street name="长陔乡" code="341021210" />
+    <street name="森村乡" code="341021211" />
+    <street name="绍濂乡" code="341021212" />
+    <street name="石门乡" code="341021213" />
+    <street name="狮石乡" code="341021214" />
+    <street name="歙县经济开发区" code="341021400" />
+</county>
+<county name="休宁" code="341022">
+    <street name="海阳镇" code="341022100" />
+    <street name="齐云山镇" code="341022101" />
+    <street name="万安镇" code="341022102" />
+    <street name="五城镇" code="341022103" />
+    <street name="东临溪镇" code="341022104" />
+    <street name="兰田镇" code="341022105" />
+    <street name="溪口镇" code="341022106" />
+    <street name="流口镇" code="341022107" />
+    <street name="汪村镇" code="341022108" />
+    <street name="商山镇" code="341022109" />
+    <street name="山斗乡" code="341022201" />
+    <street name="岭南乡" code="341022202" />
+    <street name="渭桥乡" code="341022203" />
+    <street name="板桥乡" code="341022204" />
+    <street name="陈霞乡" code="341022205" />
+    <street name="鹤城乡" code="341022206" />
+    <street name="源芳乡" code="341022207" />
+    <street name="榆村乡" code="341022208" />
+    <street name="龙田乡" code="341022209" />
+    <street name="璜尖乡" code="341022210" />
+    <street name="白际乡" code="341022211" />
+</county>
+<county name="黟县" code="341023">
+    <street name="碧阳镇" code="341023100" />
+    <street name="宏村镇" code="341023101" />
+    <street name="渔亭镇" code="341023102" />
+    <street name="西递镇" code="341023103" />
+    <street name="柯村乡" code="341023200" />
+    <street name="美溪乡" code="341023201" />
+    <street name="宏潭乡" code="341023202" />
+    <street name="洪星乡" code="341023203" />
+</county>
+<county name="祁门" code="341024">
+    <street name="祁山镇" code="341024100" />
+    <street name="小路口镇" code="341024101" />
+    <street name="金字牌镇" code="341024102" />
+    <street name="平里镇" code="341024103" />
+    <street name="历口镇" code="341024104" />
+    <street name="闪里镇" code="341024105" />
+    <street name="安凌镇" code="341024106" />
+    <street name="凫峰镇" code="341024107" />
+    <street name="大坦乡" code="341024200" />
+    <street name="柏溪乡" code="341024202" />
+    <street name="塔坊乡" code="341024203" />
+    <street name="祁红乡" code="341024204" />
+    <street name="溶口乡" code="341024205" />
+    <street name="芦溪乡" code="341024206" />
+    <street name="渚口乡" code="341024207" />
+    <street name="古溪乡" code="341024208" />
+    <street name="新安乡" code="341024209" />
+    <street name="箬坑乡" code="341024210" />
+</county>
+</city>
+</address>

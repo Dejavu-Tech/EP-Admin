@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="滨州" code="371600">
+<county name="滨城" code="371602">
+    <street name="市中街道" code="371602001" />
+    <street name="市西街道" code="371602002" />
+    <street name="北镇街道" code="371602003" />
+    <street name="市东街道" code="371602004" />
+    <street name="彭李街道" code="371602005" />
+    <street name="小营街道" code="371602007" />
+    <street name="滨北街道" code="371602008" />
+    <street name="梁才街道" code="371602009" />
+    <street name="杜店街道" code="371602010" />
+    <street name="沙河街道" code="371602011" />
+    <street name="里则街道" code="371602012" />
+    <street name="青田街道" code="371602013" />
+    <street name="三河湖镇" code="371602105" />
+    <street name="杨柳雪镇" code="371602106" />
+    <street name="秦皇台乡" code="371602203" />
+</county>
+<county name="惠民" code="371621">
+    <street name="孙武街道" code="371621001" />
+    <street name="武定府街道" code="371621002" />
+    <street name="何坊街道" code="371621003" />
+    <street name="石庙镇" code="371621101" />
+    <street name="桑落墅镇" code="371621102" />
+    <street name="淄角镇" code="371621103" />
+    <street name="胡集镇" code="371621104" />
+    <street name="李庄镇" code="371621105" />
+    <street name="麻店镇" code="371621107" />
+    <street name="魏集镇" code="371621108" />
+    <street name="清河镇" code="371621109" />
+    <street name="姜楼镇" code="371621111" />
+    <street name="辛店镇" code="371621113" />
+    <street name="大年陈镇" code="371621114" />
+    <street name="皂户李镇" code="371621115" />
+</county>
+<county name="阳信" code="371622">
+    <street name="信城街道" code="371622001" />
+    <street name="金阳街道" code="371622002" />
+    <street name="商店镇" code="371622101" />
+    <street name="温店镇" code="371622102" />
+    <street name="河流镇" code="371622103" />
+    <street name="翟王镇" code="371622104" />
+    <street name="流坡坞镇" code="371622105" />
+    <street name="水落坡镇" code="371622106" />
+    <street name="劳店镇" code="371622107" />
+    <street name="洋湖乡" code="371622204" />
+</county>
+<county name="无棣" code="371623">
+    <street name="棣丰街道" code="371623001" />
+    <street name="海丰街道" code="371623002" />
+    <street name="水湾镇" code="371623101" />
+    <street name="碣石山镇" code="371623102" />
+    <street name="小泊头镇" code="371623103" />
+    <street name="埕口镇" code="371623104" />
+    <street name="马山子镇" code="371623105" />
+    <street name="车王镇" code="371623106" />
+    <street name="柳堡镇" code="371623107" />
+    <street name="佘家镇" code="371623108" />
+    <street name="信阳镇" code="371623109" />
+    <street name="西小王乡" code="371623203" />
+</county>
+<county name="沾化" code="371624">
+    <street name="富国街道" code="371624001" />
+    <street name="富源街道" code="371624002" />
+    <street name="下洼镇" code="371624101" />
+    <street name="古城镇" code="371624102" />
+    <street name="冯家镇" code="371624103" />
+    <street name="泊头镇" code="371624104" />
+    <street name="大高镇" code="371624105" />
+    <street name="黄升镇" code="371624106" />
+    <street name="滨海镇" code="371624107" />
+    <street name="下河乡" code="371624203" />
+    <street name="利国乡" code="371624204" />
+    <street name="海防办事处乡" code="371624205" />
+</county>
+<county name="博兴" code="371625">
+    <street name="城东街道" code="371625001" />
+    <street name="锦秋街道" code="371625002" />
+    <street name="博昌街道" code="371625003" />
+    <street name="曹王镇" code="371625101" />
+    <street name="兴福镇" code="371625102" />
+    <street name="陈户镇" code="371625103" />
+    <street name="湖滨镇" code="371625104" />
+    <street name="店子镇" code="371625106" />
+    <street name="吕艺镇" code="371625107" />
+    <street name="纯化镇" code="371625108" />
+    <street name="庞家镇" code="371625109" />
+    <street name="乔庄镇" code="371625110" />
+</county>
+<county name="邹平" code="371626">
+    <street name="黛溪街道" code="371626001" />
+    <street name="黄山街道" code="371626002" />
+    <street name="高新街道" code="371626003" />
+    <street name="好生街道" code="371626004" />
+    <street name="西董街道" code="371626005" />
+    <street name="长山镇" code="371626101" />
+    <street name="魏桥镇" code="371626102" />
+    <street name="临池镇" code="371626105" />
+    <street name="焦桥镇" code="371626108" />
+    <street name="韩店镇" code="371626109" />
+    <street name="孙镇镇" code="371626110" />
+    <street name="九户镇" code="371626111" />
+    <street name="青阳镇" code="371626112" />
+    <street name="明集镇" code="371626113" />
+    <street name="台子镇" code="371626114" />
+    <street name="码头镇" code="371626115" />
+</county>
+</city>
+</address>

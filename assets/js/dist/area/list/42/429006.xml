@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="天门" code="429006">
+<county name="天门" code="429006001">
+    <street name="侨乡街道开发区" code="429006002" />
+    <street name="杨林街道" code="429006003" />
+    <street name="多宝镇" code="429006100" />
+    <street name="拖市镇" code="429006101" />
+    <street name="张港镇" code="429006102" />
+    <street name="蒋场镇" code="429006103" />
+    <street name="汪场镇" code="429006104" />
+    <street name="渔薪镇" code="429006105" />
+    <street name="黄潭镇" code="429006106" />
+    <street name="岳口镇" code="429006107" />
+    <street name="横林镇" code="429006108" />
+    <street name="彭市镇" code="429006109" />
+    <street name="麻洋镇" code="429006110" />
+    <street name="多祥镇" code="429006111" />
+    <street name="干驿镇" code="429006112" />
+    <street name="马湾镇" code="429006113" />
+    <street name="卢市镇" code="429006114" />
+    <street name="小板镇" code="429006115" />
+    <street name="九真镇" code="429006116" />
+    <street name="皂市镇" code="429006118" />
+    <street name="胡市镇" code="429006119" />
+    <street name="石河镇" code="429006120" />
+    <street name="佛子山镇" code="429006121" />
+    <street name="净潭乡" code="429006201" />
+    <street name="蒋湖农场" code="429006450" />
+    <street name="白茅湖农场" code="429006451" />
+    <street name="沉湖管委会" code="429006452" />
+</county>
+</city>
+</address>

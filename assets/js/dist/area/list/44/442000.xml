@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="中山" code="442000">
+<county name="中山" code="442000001">
+    <street name="石岐区街道" code="442001001" />
+    <street name="东区街道" code="442001002" />
+    <street name="火炬开发区街道" code="442001003" />
+    <street name="西区街道" code="442001004" />
+    <street name="南区街道" code="442001005" />
+    <street name="五桂山街道" code="442001006" />
+    <street name="小榄镇" code="442001100" />
+    <street name="黄圃镇" code="442001101" />
+    <street name="民众镇" code="442001102" />
+    <street name="东凤镇" code="442001103" />
+    <street name="东升镇" code="442001104" />
+    <street name="古镇镇" code="442001105" />
+    <street name="沙溪镇" code="442001106" />
+    <street name="坦洲镇" code="442001107" />
+    <street name="港口镇" code="442001108" />
+    <street name="三角镇" code="442001109" />
+    <street name="横栏镇" code="442001110" />
+    <street name="南头镇" code="442001111" />
+    <street name="阜沙镇" code="442001112" />
+    <street name="南朗镇" code="442001113" />
+    <street name="三乡镇" code="442001114" />
+    <street name="板芙镇" code="442001115" />
+    <street name="大涌镇" code="442001116" />
+    <street name="神湾镇" code="442001117" />
+</county>
+</city>
+</address>

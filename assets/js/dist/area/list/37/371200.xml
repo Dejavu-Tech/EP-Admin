@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="莱芜" code="371200">
+<county name="莱城" code="371202">
+    <street name="凤城街道" code="371202001" />
+    <street name="张家洼街道" code="371202002" />
+    <street name="高庄街道" code="371202003" />
+    <street name="鹏泉街道" code="371202004" />
+    <street name="口镇" code="371202100" />
+    <street name="羊里镇" code="371202101" />
+    <street name="方下镇" code="371202102" />
+    <street name="牛泉镇" code="371202103" />
+    <street name="苗山镇" code="371202105" />
+    <street name="雪野镇" code="371202106" />
+    <street name="大王庄镇" code="371202107" />
+    <street name="寨里镇" code="371202108" />
+    <street name="杨庄镇" code="371202109" />
+    <street name="茶业口镇" code="371202110" />
+    <street name="和庄镇" code="371202111" />
+</county>
+<county name="钢城" code="371203">
+    <street name="艾山街道" code="371203001" />
+    <street name="里辛街道" code="371203002" />
+    <street name="汶源街道" code="371203003" />
+    <street name="颜庄镇" code="371203100" />
+    <street name="辛庄镇" code="371203103" />
+</county>
+</city>
+</address>

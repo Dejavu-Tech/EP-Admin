@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="大连" code="210200">
+<county name="中山" code="210202">
+    <street name="海军广场街道" code="210202001" />
+    <street name="桂林街道" code="210202003" />
+    <street name="人民路街道" code="210202005" />
+    <street name="青泥洼桥街道" code="210202008" />
+    <street name="昆明街道" code="210202009" />
+    <street name="葵英街道" code="210202010" />
+    <street name="桃源街道" code="210202011" />
+    <street name="老虎滩街道" code="210202012" />
+</county>
+<county name="西岗" code="210203">
+    <street name="香炉礁街道" code="210203001" />
+    <street name="站北街道" code="210203002" />
+    <street name="日新街道" code="210203004" />
+    <street name="北京街道" code="210203005" />
+    <street name="八一路街道" code="210203010" />
+    <street name="人民广场街道" code="210203011" />
+    <street name="白云街道" code="210203013" />
+</county>
+<county name="沙河口" code="210204">
+    <street name="中山公园街道" code="210204002" />
+    <street name="白山路街道" code="210204004" />
+    <street name="兴工街道" code="210204005" />
+    <street name="春柳街道" code="210204006" />
+    <street name="马栏街道" code="210204008" />
+    <street name="南沙河口街道" code="210204009" />
+    <street name="黑石礁街道" code="210204010" />
+    <street name="李家街道" code="210204011" />
+    <street name="星海湾街道" code="210204017" />
+</county>
+<county name="甘井子" code="210211">
+    <street name="周水子街道" code="210211001" />
+    <street name="椒金山街道" code="210211002" />
+    <street name="甘井子街道" code="210211004" />
+    <street name="南关岭街道" code="210211006" />
+    <street name="泡崖街道" code="210211007" />
+    <street name="中华路街道" code="210211008" />
+    <street name="兴华街道" code="210211009" />
+    <street name="机场街道" code="210211010" />
+    <street name="辛寨子街道" code="210211014" />
+    <street name="红旗街道" code="210211015" />
+    <street name="凌水街道" code="210211016" />
+    <street name="大连湾街道" code="210211017" />
+    <street name="泉水街道" code="210211018" />
+    <street name="革镇堡街道" code="210211019" />
+    <street name="营城子街道" code="210211020" />
+    <street name="大连华侨果树农场" code="210211400" />
+</county>
+<county name="旅顺口" code="210212">
+    <street name="登峰街道" code="210212001" />
+    <street name="市场街道" code="210212002" />
+    <street name="得胜街道" code="210212003" />
+    <street name="光荣街道" code="210212004" />
+    <street name="水师营街道" code="210212005" />
+    <street name="龙王塘街道" code="210212006" />
+    <street name="铁山街道" code="210212007" />
+    <street name="双岛湾街道" code="210212009" />
+    <street name="三涧堡街道" code="210212010" />
+    <street name="长城街道" code="210212011" />
+    <street name="龙头街道" code="210212012" />
+    <street name="北海街道" code="210212013" />
+    <street name="旅顺经济开发区" code="210212400" />
+    <street name="大连奶牛场" code="210212401" />
+    <street name="龙头分园" code="210212402" />
+</county>
+<county name="金州" code="210213">
+    <street name="拥政街道" code="210213001" />
+    <street name="友谊街道" code="210213002" />
+    <street name="光明街道" code="210213003" />
+    <street name="马桥子街道" code="210213004" />
+    <street name="海青岛街道" code="210213005" />
+    <street name="大孤山街道" code="210213006" />
+    <street name="中长街道" code="210213007" />
+    <street name="站前街道" code="210213008" />
+    <street name="先进街道" code="210213009" />
+    <street name="董家沟街道" code="210213011" />
+    <street name="金石滩街道" code="210213012" />
+    <street name="湾里街道" code="210213013" />
+    <street name="二十里堡街道" code="210213014" />
+    <street name="亮甲店街道" code="210213016" />
+    <street name="登沙河街道" code="210213017" />
+    <street name="大魏家街道" code="210213019" />
+    <street name="杏树街道" code="210213020" />
+    <street name="七顶山街道" code="210213021" />
+    <street name="华家街道" code="210213022" />
+    <street name="向应街道" code="210213023" />
+    <street name="大李家街道" code="210213024" />
+    <street name="得胜街道" code="210213025" />
+    <street name="大窑湾街道" code="210213026" />
+</county>
+<county name="长海" code="210224">
+    <street name="大长山岛镇" code="210224100" />
+    <street name="獐子岛镇" code="210224101" />
+    <street name="小长山乡" code="210224201" />
+    <street name="广鹿乡" code="210224202" />
+    <street name="海洋乡" code="210224203" />
+</county>
+<county name="瓦房店" code="210281">
+    <street name="新华办事处" code="210281001" />
+    <street name="文兰办事处" code="210281002" />
+    <street name="岭东办事处" code="210281003" />
+    <street name="共济办事处" code="210281004" />
+    <street name="铁东办事处" code="210281005" />
+    <street name="祝华办事处" code="210281006" />
+    <street name="岗店办事处" code="210281007" />
+    <street name="太阳街道" code="210281008" />
+    <street name="长兴岛办事处" code="210281009" />
+    <street name="九龙办事处" code="210281010" />
+    <street name="交流岛街道" code="210281011" />
+    <street name="复州城镇" code="210281101" />
+    <street name="松树镇" code="210281103" />
+    <street name="得利寺镇" code="210281105" />
+    <street name="万家岭镇" code="210281106" />
+    <street name="许屯镇" code="210281107" />
+    <street name="永宁镇" code="210281108" />
+    <street name="谢屯镇" code="210281109" />
+    <street name="老虎屯镇" code="210281112" />
+    <street name="红沿河镇" code="210281113" />
+    <street name="李官镇" code="210281115" />
+    <street name="仙浴湾镇" code="210281116" />
+    <street name="元台镇" code="210281117" />
+    <street name="瓦窝镇" code="210281118" />
+    <street name="赵屯乡" code="210281201" />
+    <street name="土城乡" code="210281203" />
+    <street name="阎店乡" code="210281204" />
+    <street name="西杨乡" code="210281205" />
+    <street name="驼山乡" code="210281206" />
+    <street name="三台满族乡" code="210281208" />
+    <street name="泡崖乡" code="210281210" />
+    <street name="杨家满族乡" code="210281212" />
+</county>
+<county name="普兰店" code="210282">
+    <street name="丰荣街道" code="210282001" />
+    <street name="铁西街道" code="210282002" />
+    <street name="太平街道" code="210282003" />
+    <street name="南山街道" code="210282004" />
+    <street name="皮口街道" code="210282005" />
+    <street name="城子坦街道" code="210282006" />
+    <street name="大刘家街道" code="210282007" />
+    <street name="杨树房街道" code="210282008" />
+    <street name="大谭街道" code="210282009" />
+    <street name="唐家房街道" code="210282010" />
+    <street name="莲山街道" code="210282011" />
+    <street name="炮台街道" code="210282012" />
+    <street name="复州湾街道" code="210282013" />
+    <street name="石河街道" code="210282014" />
+    <street name="三十里堡街道" code="210282015" />
+    <street name="双塔镇" code="210282106" />
+    <street name="安波镇" code="210282107" />
+    <street name="四平镇" code="210282108" />
+    <street name="沙包镇" code="210282109" />
+    <street name="星台镇" code="210282117" />
+    <street name="墨盘乡" code="210282206" />
+    <street name="同益乡" code="210282208" />
+    <street name="乐甲满族乡" code="210282209" />
+</county>
+<county name="庄河" code="210283">
+    <street name="城关街道" code="210283001" />
+    <street name="新华街道" code="210283002" />
+    <street name="兴达街道" code="210283003" />
+    <street name="昌盛街道" code="210283004" />
+    <street name="明阳街道" code="210283005" />
+    <street name="青堆镇" code="210283101" />
+    <street name="徐岭镇" code="210283102" />
+    <street name="黑岛镇" code="210283104" />
+    <street name="栗子房镇" code="210283105" />
+    <street name="大营镇" code="210283107" />
+    <street name="塔岭镇" code="210283108" />
+    <street name="仙人洞镇" code="210283109" />
+    <street name="蓉花山镇" code="210283110" />
+    <street name="长岭镇" code="210283111" />
+    <street name="荷花山镇" code="210283112" />
+    <street name="城山镇" code="210283113" />
+    <street name="光明山镇" code="210283114" />
+    <street name="大郑镇" code="210283115" />
+    <street name="吴炉镇" code="210283118" />
+    <street name="王家镇" code="210283120" />
+    <street name="鞍子山乡" code="210283204" />
+    <street name="太平岭满族乡" code="210283208" />
+    <street name="步云山乡" code="210283209" />
+    <street name="桂云花满族乡" code="210283211" />
+    <street name="兰店乡" code="210283214" />
+    <street name="石城乡" code="210283216" />
+</county>
+</city>
+</address>

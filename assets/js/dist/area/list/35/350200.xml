@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="厦门" code="350200">
+<county name="思明" code="350203">
+    <street name="厦港街道" code="350203001" />
+    <street name="中华街道" code="350203003" />
+    <street name="滨海街道" code="350203005" />
+    <street name="鹭江街道" code="350203006" />
+    <street name="开元街道" code="350203007" />
+    <street name="梧村街道" code="350203008" />
+    <street name="筼筜街道" code="350203009" />
+    <street name="莲前街道" code="350203010" />
+    <street name="嘉莲街道" code="350203011" />
+    <street name="鼓浪屿街道" code="350203012" />
+</county>
+<county name="海沧" code="350205">
+    <street name="海沧街道" code="350205001" />
+    <street name="新阳街道" code="350205002" />
+    <street name="东孚镇" code="350205103" />
+    <street name="第一农场" code="350205401" />
+    <street name="海沧农场" code="350205402" />
+    <street name="天竺山林场" code="350205403" />
+    <street name="厦门海沧保税港区" code="350205407" />
+</county>
+<county name="湖里" code="350206">
+    <street name="湖里街道" code="350206001" />
+    <street name="殿前街道" code="350206002" />
+    <street name="禾山街道" code="350206003" />
+    <street name="江头街道" code="350206004" />
+    <street name="金山街道" code="350206005" />
+    <street name="火炬高技术开发区" code="350206405" />
+    <street name="象屿保税区" code="350206406" />
+</county>
+<county name="集美" code="350211">
+    <street name="集美街道" code="350211001" />
+    <street name="侨英街道" code="350211002" />
+    <street name="杏林街道" code="350211003" />
+    <street name="杏滨街道" code="350211004" />
+    <street name="灌口镇" code="350211102" />
+    <street name="后溪镇" code="350211103" />
+    <street name="第二农场" code="350211401" />
+    <street name="省天马种猪场" code="350211402" />
+    <street name="天马华侨农场" code="350211403" />
+    <street name="坂头防护林场" code="350211404" />
+</county>
+<county name="同安" code="350212">
+    <street name="大同街道" code="350212001" />
+    <street name="祥平街道" code="350212002" />
+    <street name="莲花镇" code="350212105" />
+    <street name="新民镇" code="350212106" />
+    <street name="洪塘镇" code="350212107" />
+    <street name="西柯镇" code="350212108" />
+    <street name="汀溪镇" code="350212109" />
+    <street name="五显镇" code="350212110" />
+    <street name="凤南农场" code="350212401" />
+    <street name="白沙仑农场" code="350212402" />
+    <street name="竹坝华侨农场" code="350212403" />
+</county>
+<county name="翔安" code="350213">
+    <street name="大嶝街道" code="350213001" />
+    <street name="马巷镇" code="350213102" />
+    <street name="新圩镇" code="350213103" />
+    <street name="新店镇" code="350213104" />
+    <street name="内厝镇" code="350213111" />
+    <street name="大帽山农场" code="350213404" />
+</county>
+</city>
+</address>

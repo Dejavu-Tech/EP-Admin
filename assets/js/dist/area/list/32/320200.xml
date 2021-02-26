@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="无锡" code="320200">
+<county name="崇安" code="320202">
+    <street name="崇安寺街道" code="320202001" />
+    <street name="通江街道" code="320202002" />
+    <street name="广瑞路街道" code="320202003" />
+    <street name="上马墩街道" code="320202004" />
+    <street name="江海街道" code="320202005" />
+    <street name="广益街道" code="320202006" />
+</county>
+<county name="南长" code="320203">
+    <street name="迎龙桥街道" code="320203001" />
+    <street name="南禅寺街道" code="320203002" />
+    <street name="清名桥街道" code="320203003" />
+    <street name="金星街道" code="320203004" />
+    <street name="金匮街道" code="320203005" />
+    <street name="扬名街道" code="320203006" />
+</county>
+<county name="北塘" code="320204">
+    <street name="黄巷街道" code="320204001" />
+    <street name="山北街道" code="320204002" />
+    <street name="北大街街道" code="320204003" />
+    <street name="惠山街道" code="320204004" />
+</county>
+<county name="锡山" code="320205">
+    <street name="东亭街道" code="320205001" />
+    <street name="安镇街道" code="320205002" />
+    <street name="东北塘街道" code="320205003" />
+    <street name="羊尖镇" code="320205102" />
+    <street name="鹅湖镇" code="320205103" />
+    <street name="锡北镇" code="320205105" />
+    <street name="东港镇" code="320205106" />
+    <street name="无锡锡山开发区" code="320205400" />
+</county>
+<county name="惠山" code="320206">
+    <street name="堰桥街道" code="320206001" />
+    <street name="长安街道" code="320206002" />
+    <street name="钱桥街道" code="320206003" />
+    <street name="前洲街道" code="320206004" />
+    <street name="玉祁街道" code="320206005" />
+    <street name="洛社镇" code="320206102" />
+    <street name="阳山镇" code="320206103" />
+    <street name="无锡惠山经济开发区" code="320206400" />
+</county>
+<county name="滨湖" code="320211">
+    <street name="河埒街道" code="320211001" />
+    <street name="荣巷街道" code="320211002" />
+    <street name="蠡园街道" code="320211003" />
+    <street name="蠡湖街道" code="320211004" />
+    <street name="华庄街道" code="320211006" />
+    <street name="太湖街道" code="320211007" />
+    <street name="雪浪街道" code="320211008" />
+    <street name="马山街道" code="320211009" />
+    <street name="旺庄街道" code="320211050" />
+    <street name="硕放街道" code="320211051" />
+    <street name="江溪街道" code="320211052" />
+    <street name="新安街道" code="320211053" />
+    <street name="梅村街道" code="320211054" />
+    <street name="鸿山街道" code="320211055" />
+    <street name="胡埭镇" code="320211101" />
+    <street name="无锡新加坡工业园" code="320211450" />
+    <street name="无锡高新技术产业开发区" code="320211451" />
+    <street name="无锡高新区综合保税区" code="320211452" />
+    <street name="无锡太湖国际科技园" code="320211453" />
+</county>
+<county name="江阴" code="320281">
+    <street name="澄江街道" code="320281001" />
+    <street name="南闸街道" code="320281004" />
+    <street name="云亭街道" code="320281005" />
+    <street name="临港街道" code="320281006" />
+    <street name="璜土镇" code="320281100" />
+    <street name="月城镇" code="320281102" />
+    <street name="青阳镇" code="320281103" />
+    <street name="徐霞客镇" code="320281104" />
+    <street name="华士镇" code="320281107" />
+    <street name="周庄镇" code="320281108" />
+    <street name="新桥镇" code="320281109" />
+    <street name="长泾镇" code="320281110" />
+    <street name="顾山镇" code="320281111" />
+    <street name="祝塘镇" code="320281112" />
+    <street name="江阴高新技术产业开发区" code="320281400" />
+    <street name="江苏江阴—靖江工业园区" code="320281403" />
+    <street name="临港经济开发区" code="320281404" />
+</county>
+<county name="宜兴" code="320282">
+    <street name="宜城街道" code="320282001" />
+    <street name="屺亭街道" code="320282002" />
+    <street name="新庄街道" code="320282003" />
+    <street name="新街街道" code="320282004" />
+    <street name="张渚镇" code="320282100" />
+    <street name="西渚镇" code="320282101" />
+    <street name="太华镇" code="320282102" />
+    <street name="徐舍镇" code="320282103" />
+    <street name="官林镇" code="320282104" />
+    <street name="杨巷镇" code="320282105" />
+    <street name="新建镇" code="320282106" />
+    <street name="和桥镇" code="320282107" />
+    <street name="高塍镇" code="320282108" />
+    <street name="万石镇" code="320282109" />
+    <street name="周铁镇" code="320282110" />
+    <street name="芳桥街道" code="320282111" />
+    <street name="丁蜀镇" code="320282112" />
+    <street name="湖父镇" code="320282113" />
+    <street name="环科园" code="320282400" />
+    <street name="宜兴经济开发区" code="320282401" />
+</county>
+</city>
+</address>

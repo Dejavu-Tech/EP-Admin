@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="黔南" code="522700">
+<county name="都匀" code="522701">
+    <street name="广惠街道" code="522701001" />
+    <street name="文峰街道" code="522701002" />
+    <street name="小围寨办事处" code="522701004" />
+    <street name="沙包堡办事处" code="522701005" />
+    <street name="杨柳街镇" code="522701100" />
+    <street name="甘塘镇" code="522701101" />
+    <street name="洛邦镇" code="522701102" />
+    <street name="坝固镇" code="522701103" />
+    <street name="大坪镇" code="522701104" />
+    <street name="王司镇" code="522701105" />
+    <street name="墨冲镇" code="522701106" />
+    <street name="平浪镇" code="522701107" />
+    <street name="凯口镇" code="522701108" />
+    <street name="江洲镇" code="522701109" />
+    <street name="奉合水族乡" code="522701200" />
+    <street name="阳和水族乡" code="522701201" />
+    <street name="基场水族乡" code="522701202" />
+    <street name="良亩乡" code="522701203" />
+    <street name="河阳乡" code="522701204" />
+    <street name="沙寨乡" code="522701205" />
+    <street name="石龙乡" code="522701206" />
+    <street name="摆忙乡" code="522701207" />
+</county>
+<county name="福泉" code="522702">
+    <street name="金山办事处" code="522702001" />
+    <street name="马场坪办事处" code="522702002" />
+    <street name="城厢镇" code="522702100" />
+    <street name="黄丝镇" code="522702101" />
+    <street name="凤山镇" code="522702102" />
+    <street name="陆坪镇" code="522702103" />
+    <street name="地松镇" code="522702104" />
+    <street name="龙昌镇" code="522702105" />
+    <street name="牛场镇" code="522702106" />
+    <street name="道坪镇" code="522702107" />
+    <street name="高坪镇" code="522702108" />
+    <street name="兴隆乡" code="522702200" />
+    <street name="藜山乡" code="522702201" />
+    <street name="岔河乡" code="522702202" />
+    <street name="仙桥乡" code="522702203" />
+    <street name="高石乡" code="522702204" />
+    <street name="谷汪乡" code="522702205" />
+</county>
+<county name="荔波" code="522722">
+    <street name="玉屏街道" code="522722001" />
+    <street name="朝阳镇" code="522722101" />
+    <street name="茂兰镇" code="522722102" />
+    <street name="立化镇" code="522722103" />
+    <street name="甲良镇" code="522722104" />
+    <street name="佳荣镇" code="522722105" />
+    <street name="播尧镇" code="522722106" />
+    <street name="小七孔镇" code="522722107" />
+    <street name="永康乡" code="522722200" />
+    <street name="水尧乡" code="522722201" />
+    <street name="水利乡" code="522722202" />
+    <street name="瑶山乡" code="522722203" />
+    <street name="捞村乡" code="522722204" />
+    <street name="翁昂乡" code="522722205" />
+    <street name="瑶麓乡" code="522722207" />
+    <street name="洞塘乡" code="522722208" />
+    <street name="方村乡" code="522722209" />
+</county>
+<county name="贵定" code="522723">
+    <street name="城关镇" code="522723100" />
+    <street name="德新镇" code="522723101" />
+    <street name="新巴镇" code="522723102" />
+    <street name="盘江镇" code="522723103" />
+    <street name="沿山镇" code="522723104" />
+    <street name="旧治镇" code="522723105" />
+    <street name="昌明镇" code="522723106" />
+    <street name="云雾镇" code="522723107" />
+    <street name="新铺乡" code="522723200" />
+    <street name="落北河乡" code="522723201" />
+    <street name="马场河乡" code="522723202" />
+    <street name="定东乡" code="522723203" />
+    <street name="定南乡" code="522723204" />
+    <street name="巩固乡" code="522723205" />
+    <street name="都六乡" code="522723206" />
+    <street name="岩下乡" code="522723207" />
+    <street name="猴场堡乡" code="522723208" />
+    <street name="抱管乡" code="522723209" />
+    <street name="铁厂乡" code="522723210" />
+    <street name="窑上乡" code="522723211" />
+</county>
+<county name="瓮安" code="522725">
+    <street name="雍阳街道" code="522725001" />
+    <street name="瓮水街道" code="522725002" />
+    <street name="平定营镇" code="522725101" />
+    <street name="中坪镇" code="522725103" />
+    <street name="建中镇" code="522725104" />
+    <street name="永和镇" code="522725105" />
+    <street name="珠藏镇" code="522725106" />
+    <street name="玉山镇" code="522725107" />
+    <street name="天文镇" code="522725108" />
+    <street name="银盏镇" code="522725109" />
+    <street name="猴场镇" code="522725110" />
+    <street name="江界河镇" code="522725111" />
+    <street name="岚关乡" code="522725205" />
+</county>
+<county name="独山" code="522726">
+    <street name="百泉镇" code="522726108" />
+    <street name="影山镇" code="522726109" />
+    <street name="基长镇" code="522726110" />
+    <street name="下司镇" code="522726111" />
+    <street name="麻尾镇" code="522726112" />
+    <street name="麻万镇" code="522726113" />
+    <street name="上司镇" code="522726114" />
+    <street name="玉水镇" code="522726115" />
+</county>
+<county name="平塘" code="522727">
+    <street name="平湖镇" code="522727100" />
+    <street name="牙舟镇" code="522727101" />
+    <street name="通州镇" code="522727102" />
+    <street name="大塘镇" code="522727103" />
+    <street name="克度镇" code="522727104" />
+    <street name="塘边镇" code="522727105" />
+    <street name="摆茹镇" code="522727106" />
+    <street name="者密镇" code="522727107" />
+    <street name="四寨镇" code="522727108" />
+    <street name="掌布镇" code="522727109" />
+    <street name="苗二河乡" code="522727200" />
+    <street name="卡蒲毛南族乡" code="522727201" />
+    <street name="白龙乡" code="522727202" />
+    <street name="甘寨乡" code="522727203" />
+    <street name="卡罗乡" code="522727204" />
+    <street name="谷硐乡" code="522727205" />
+    <street name="鼠场乡" code="522727206" />
+    <street name="新塘乡" code="522727207" />
+    <street name="西凉乡" code="522727209" />
+</county>
+<county name="罗甸" code="522728">
+    <street name="龙坪镇" code="522728100" />
+    <street name="边阳镇" code="522728101" />
+    <street name="逢亭镇" code="522728102" />
+    <street name="沫阳镇" code="522728103" />
+    <street name="茂井镇" code="522728104" />
+    <street name="罗悃镇" code="522728105" />
+    <street name="红水河镇" code="522728106" />
+    <street name="板庚乡" code="522728200" />
+    <street name="云干乡" code="522728201" />
+    <street name="八总乡" code="522728202" />
+    <street name="栗木乡" code="522728203" />
+    <street name="罗沙乡" code="522728204" />
+    <street name="交砚乡" code="522728205" />
+    <street name="董王乡" code="522728206" />
+    <street name="木引乡" code="522728207" />
+    <street name="纳坪乡" code="522728208" />
+    <street name="董当乡" code="522728209" />
+    <street name="董架乡" code="522728210" />
+    <street name="平岩乡" code="522728211" />
+    <street name="凤亭乡" code="522728212" />
+    <street name="大亭乡" code="522728213" />
+    <street name="班仁乡" code="522728214" />
+    <street name="罗苏乡" code="522728215" />
+    <street name="罗暮乡" code="522728216" />
+    <street name="沟亭乡" code="522728217" />
+    <street name="罗妥乡" code="522728218" />
+</county>
+<county name="长顺" code="522729">
+    <street name="长寨镇" code="522729100" />
+    <street name="广顺镇" code="522729101" />
+    <street name="威远镇" code="522729102" />
+    <street name="摆所镇" code="522729103" />
+    <street name="代化镇" code="522729104" />
+    <street name="白云山镇" code="522729105" />
+    <street name="鼓扬镇" code="522729106" />
+    <street name="马路乡" code="522729200" />
+    <street name="凯佐乡" code="522729201" />
+    <street name="摆塘乡" code="522729202" />
+    <street name="种获乡" code="522729203" />
+    <street name="新寨乡" code="522729204" />
+    <street name="营盘乡" code="522729205" />
+    <street name="中坝乡" code="522729206" />
+    <street name="睦化乡" code="522729207" />
+    <street name="交麻乡" code="522729208" />
+    <street name="敦操乡" code="522729209" />
+</county>
+<county name="龙里" code="522730">
+    <street name="龙山镇" code="522730100" />
+    <street name="三元镇" code="522730101" />
+    <street name="醒狮镇" code="522730102" />
+    <street name="谷脚镇" code="522730103" />
+    <street name="羊场镇" code="522730104" />
+    <street name="洗马镇" code="522730105" />
+    <street name="草原乡" code="522730200" />
+    <street name="麻芝乡" code="522730201" />
+    <street name="水场乡" code="522730202" />
+    <street name="湾寨乡" code="522730203" />
+    <street name="摆省乡" code="522730204" />
+    <street name="巴江乡" code="522730205" />
+    <street name="谷龙乡" code="522730206" />
+    <street name="哪嗙乡" code="522730207" />
+</county>
+<county name="惠水" code="522731">
+    <street name="和平镇" code="522731100" />
+    <street name="高镇镇" code="522731101" />
+    <street name="三都镇" code="522731102" />
+    <street name="摆金镇" code="522731103" />
+    <street name="雅水镇" code="522731104" />
+    <street name="断杉镇" code="522731105" />
+    <street name="芦山镇" code="522731106" />
+    <street name="王佑镇" code="522731107" />
+    <street name="长田乡" code="522731200" />
+    <street name="摆榜乡" code="522731201" />
+    <street name="斗底乡" code="522731202" />
+    <street name="甲烈乡" code="522731203" />
+    <street name="岗度乡" code="522731204" />
+    <street name="宁旺乡" code="522731205" />
+    <street name="鸭绒乡" code="522731206" />
+    <street name="太阳乡" code="522731207" />
+    <street name="羡塘乡" code="522731208" />
+    <street name="甲戎乡" code="522731209" />
+    <street name="抵季乡" code="522731210" />
+    <street name="大龙乡" code="522731211" />
+    <street name="大坝乡" code="522731212" />
+    <street name="抵麻乡" code="522731213" />
+    <street name="长安乡" code="522731214" />
+    <street name="打引乡" code="522731215" />
+    <street name="好花红乡" code="522731216" />
+</county>
+<county name="三都" code="522732">
+    <street name="三合镇" code="522732100" />
+    <street name="大河镇" code="522732101" />
+    <street name="合江镇" code="522732102" />
+    <street name="丰乐镇" code="522732103" />
+    <street name="普安镇" code="522732104" />
+    <street name="都江镇" code="522732105" />
+    <street name="中和镇" code="522732106" />
+    <street name="周覃镇" code="522732107" />
+    <street name="廷牌镇" code="522732108" />
+    <street name="九阡镇" code="522732109" />
+    <street name="交梨乡" code="522732200" />
+    <street name="拉揽乡" code="522732201" />
+    <street name="打鱼乡" code="522732202" />
+    <street name="坝街乡" code="522732203" />
+    <street name="羊福乡" code="522732204" />
+    <street name="巫不乡" code="522732205" />
+    <street name="水龙乡" code="522732206" />
+    <street name="塘州乡" code="522732207" />
+    <street name="三洞乡" code="522732208" />
+    <street name="恒丰乡" code="522732209" />
+    <street name="扬拱乡" code="522732210" />
+</county>
+</city>
+</address>

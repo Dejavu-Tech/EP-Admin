@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="武汉" code="420100">
+<county name="江岸" code="420102">
+    <street name="大智街办事处" code="420102002" />
+    <street name="一元街办事处" code="420102003" />
+    <street name="车站街办事处" code="420102004" />
+    <street name="四唯街办事处" code="420102005" />
+    <street name="永清街办事处" code="420102006" />
+    <street name="西马街办事处" code="420102007" />
+    <street name="球场街办事处" code="420102008" />
+    <street name="劳动街办事处" code="420102009" />
+    <street name="二七街办事处" code="420102010" />
+    <street name="新村街办事处" code="420102011" />
+    <street name="丹水池街办事处" code="420102012" />
+    <street name="台北街办事处" code="420102014" />
+    <street name="花桥街办事处" code="420102015" />
+    <street name="谌家矶街办事处" code="420102016" />
+    <street name="后湖街办事处" code="420102017" />
+    <street name="塔子湖街办事处" code="420102018" />
+    <street name="百步亭花园" code="420102400" />
+</county>
+<county name="江汉" code="420103">
+    <street name="民族街办事处" code="420103001" />
+    <street name="花楼街办事处" code="420103002" />
+    <street name="水塔街办事处" code="420103003" />
+    <street name="民权街办事处" code="420103004" />
+    <street name="满春街办事处" code="420103005" />
+    <street name="民意街办事处" code="420103006" />
+    <street name="新华街办事处" code="420103007" />
+    <street name="万松街办事处" code="420103008" />
+    <street name="唐家墩街办事处" code="420103009" />
+    <street name="北湖街办事处" code="420103010" />
+    <street name="前进街办事处" code="420103011" />
+    <street name="常青街办事处" code="420103012" />
+    <street name="汉兴街办事处" code="420103013" />
+    <street name="江汉经济开发区" code="420103400" />
+</county>
+<county name="硚口" code="420104">
+    <street name="古田街道" code="420104001" />
+    <street name="韩家墩街道" code="420104002" />
+    <street name="宗关街道" code="420104003" />
+    <street name="汉水桥街道" code="420104004" />
+    <street name="宝丰街道" code="420104005" />
+    <street name="荣华街道" code="420104006" />
+    <street name="汉中街道" code="420104008" />
+    <street name="汉正街道" code="420104009" />
+    <street name="六角亭街道" code="420104010" />
+    <street name="长丰街道" code="420104011" />
+    <street name="易家街道" code="420104012" />
+</county>
+<county name="汉阳" code="420105">
+    <street name="翠微街办事处" code="420105001" />
+    <street name="建桥街办事处" code="420105002" />
+    <street name="月湖街办事处" code="420105003" />
+    <street name="晴川街办事处" code="420105004" />
+    <street name="鹦鹉街办事处" code="420105005" />
+    <street name="洲头街办事处" code="420105006" />
+    <street name="五里墩街办事处" code="420105007" />
+    <street name="琴断口街办事处" code="420105008" />
+    <street name="江汉二桥街道" code="420105009" />
+    <street name="永丰街办事处" code="420105010" />
+    <street name="江堤街办事处" code="420105011" />
+    <street name="四新地区管委会" code="420105012" />
+</county>
+<county name="武昌" code="420106">
+    <street name="积玉桥街办事处" code="420106001" />
+    <street name="杨园街办事处" code="420106002" />
+    <street name="徐家棚街办事处" code="420106003" />
+    <street name="粮道街办事处" code="420106005" />
+    <street name="中华路街办事处" code="420106006" />
+    <street name="黄鹤楼街办事处" code="420106007" />
+    <street name="紫阳街办事处" code="420106008" />
+    <street name="白沙洲街办事处" code="420106009" />
+    <street name="首义路街办事处" code="420106010" />
+    <street name="中南路街办事处" code="420106011" />
+    <street name="水果湖街办事处" code="420106012" />
+    <street name="珞珈山街办事处" code="420106013" />
+    <street name="石洞街办事处" code="420106014" />
+    <street name="南湖街办事处" code="420106015" />
+    <street name="东湖风景区街道（武昌）" code="420106092" />
+</county>
+<county name="青山" code="420107">
+    <street name="红卫路街道" code="420107001" />
+    <street name="冶金街道" code="420107002" />
+    <street name="新沟桥街道" code="420107003" />
+    <street name="红钢城街道" code="420107004" />
+    <street name="工人村街道" code="420107005" />
+    <street name="青山镇街道" code="420107006" />
+    <street name="厂前街道" code="420107007" />
+    <street name="武东街道" code="420107008" />
+    <street name="白玉山街道" code="420107009" />
+    <street name="钢花村街道" code="420107010" />
+    <street name="武钢集团公司" code="420107400" />
+    <street name="中国一冶有限责任公司" code="420107401" />
+    <street name="武钢实业公司" code="420107402" />
+    <street name="中国一冶集体企业管理处" code="420107403" />
+    <street name="开发区" code="420107404" />
+    <street name="钢都花园管理委员会" code="420107405" />
+    <street name="北湖工业园管理办公室" code="420107406" />
+</county>
+<county name="洪山" code="420111">
+    <street name="珞南街道" code="420111001" />
+    <street name="关山街道" code="420111002" />
+    <street name="狮子山街道" code="420111003" />
+    <street name="张家湾街道" code="420111004" />
+    <street name="梨园街道" code="420111005" />
+    <street name="卓刀泉街道" code="420111006" />
+    <street name="洪山街道" code="420111007" />
+    <street name="和平街道" code="420111008" />
+    <street name="青菱街道" code="420111009" />
+    <street name="八吉府街办事处" code="420111061" />
+    <street name="关东街道" code="420111080" />
+    <street name="花山街道" code="420111081" />
+    <street name="左岭街道" code="420111082" />
+    <street name="九峰街道" code="420111083" />
+    <street name="东湖风景区街道（洪山）" code="420111092" />
+    <street name="天兴乡" code="420111205" />
+    <street name="清谭湖办事处" code="420111460" />
+</county>
+<county name="东西湖" code="420112">
+    <street name="吴家山街道" code="420112001" />
+    <street name="柏泉办事处街道" code="420112002" />
+    <street name="将军路街道" code="420112004" />
+    <street name="慈惠街道" code="420112005" />
+    <street name="走马岭街道" code="420112006" />
+    <street name="径河街道" code="420112007" />
+    <street name="长青街道" code="420112008" />
+    <street name="辛安渡办事处街道" code="420112011" />
+    <street name="东山办事处街道" code="420112012" />
+    <street name="常青花园新区街道管理委员会" code="420112013" />
+    <street name="新沟镇街道" code="420112014" />
+    <street name="金银湖街道" code="420112015" />
+    <street name="产业管理处" code="420112400" />
+    <street name="保税物流管理处" code="420112401" />
+    <street name="海峡两岸科技产业管理处" code="420112402" />
+    <street name="食品工业管理处" code="420112403" />
+    <street name="临空经济管理处" code="420112404" />
+</county>
+<county name="汉南" code="420113">
+    <street name="纱帽街道" code="420113001" />
+    <street name="邓南街道" code="420113002" />
+    <street name="东荆街道" code="420113003" />
+    <street name="湘口街道" code="420113004" />
+</county>
+<county name="蔡甸" code="420114">
+    <street name="蔡甸街道" code="420114001" />
+    <street name="奓山街道" code="420114002" />
+    <street name="永安街道" code="420114003" />
+    <street name="侏儒街道" code="420114004" />
+    <street name="大集街道" code="420114005" />
+    <street name="张湾街道" code="420114006" />
+    <street name="沌口街办事处" code="420114070" />
+    <street name="军山街道" code="420114071" />
+    <street name="沌阳街道" code="420114072" />
+    <street name="索河镇" code="420114100" />
+    <street name="玉贤镇" code="420114101" />
+    <street name="消泗乡" code="420114200" />
+    <street name="桐湖办事处" code="420114400" />
+    <street name="洪北管委会" code="420114401" />
+    <street name="蔡甸经济开发区沌口办事处" code="420114402" />
+    <street name="武汉常福工业示范园管理委员会" code="420114403" />
+    <street name="武汉市蔡甸区后官湖生态宜居新城管理委员会" code="420114404" />
+    <street name="蔡甸经济开发区凤凰山事处" code="420114405" />
+    <street name="成功现代都市农业发展区管理委员会" code="420114406" />
+</county>
+<county name="江夏" code="420115">
+    <street name="纸坊街道" code="420115001" />
+    <street name="金口街道" code="420115002" />
+    <street name="乌龙泉街道" code="420115003" />
+    <street name="郑店街道" code="420115005" />
+    <street name="五里界街道" code="420115007" />
+    <street name="金水办事处" code="420115008" />
+    <street name="安山街道" code="420115009" />
+    <street name="山坡街道" code="420115010" />
+    <street name="法泗街道" code="420115014" />
+    <street name="湖泗街道" code="420115015" />
+    <street name="舒安街道" code="420115016" />
+    <street name="佛祖岭街道" code="420115086" />
+    <street name="豹澥街道" code="420115087" />
+    <street name="流芳街道" code="420115088" />
+    <street name="滨湖街道" code="420115089" />
+    <street name="江夏区经济开发区庙山办事处" code="420115401" />
+    <street name="江夏区经济开发区藏龙岛办事处" code="420115402" />
+    <street name="江夏区经济开发区大桥新区办事处" code="420115403" />
+    <street name="江夏区经济开发区梁子湖风景区" code="420115404" />
+    <street name="金港新区办事处" code="420115405" />
+</county>
+<county name="黄陂" code="420116">
+    <street name="前川街道" code="420116001" />
+    <street name="祁家湾街道" code="420116002" />
+    <street name="横店街道" code="420116003" />
+    <street name="罗汉寺街道" code="420116004" />
+    <street name="滠口街道" code="420116005" />
+    <street name="六指店街道" code="420116006" />
+    <street name="天河街道" code="420116007" />
+    <street name="王家河街道" code="420116008" />
+    <street name="长轩岭街道" code="420116009" />
+    <street name="李集街道" code="420116010" />
+    <street name="姚集街道" code="420116011" />
+    <street name="蔡榨街道" code="420116012" />
+    <street name="武湖街道" code="420116013" />
+    <street name="三里桥街道" code="420116014" />
+    <street name="蔡店街道" code="420116015" />
+    <street name="木兰乡" code="420116201" />
+    <street name="木兰山风景区" code="420116401" />
+    <street name="大潭原种场" code="420116402" />
+    <street name="盘龙城经济开发区" code="420116403" />
+    <street name="汉口北商贸物流枢纽区管委会" code="420116404" />
+</county>
+<county name="新洲" code="420117">
+    <street name="邾城街道" code="420117001" />
+    <street name="阳逻街道" code="420117002" />
+    <street name="仓埠街道" code="420117003" />
+    <street name="汪集街道" code="420117004" />
+    <street name="李集街道" code="420117005" />
+    <street name="三店街道" code="420117006" />
+    <street name="潘塘街道" code="420117007" />
+    <street name="旧街街道" code="420117008" />
+    <street name="双柳街道" code="420117009" />
+    <street name="涨渡湖街道" code="420117010" />
+    <street name="辛冲镇" code="420117100" />
+    <street name="徐古镇" code="420117101" />
+    <street name="凤凰镇" code="420117102" />
+    <street name="道观河风景旅游管理处" code="420117400" />
+    <street name="阳逻开发区" code="420117405" />
+    <street name="新洲原种场" code="420117406" />
+</county>
+</city>
+</address>

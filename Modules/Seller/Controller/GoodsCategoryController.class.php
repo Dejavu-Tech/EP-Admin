@@ -1,0 +1,211 @@
+<?php
+/**
+ * eaterplanet 商城系统
+ *
+ * ==========================================================================
+ * @link      http://www.ch871.com/
+ * @copyright Copyright (c) 2019-2021 ch871.com.
+ * @license   http://www.ch871.com/license.html License
+ * ==========================================================================
+ *
+ * @author    Albert.Z
+ *
+ */
+namespace Seller\Controller;
+
+class GoodsCategoryController extends CommonController{
+
+	protected function _initialize(){
+		parent::_initialize();
+			$this->breadcrumb1='商品管理';
+			$this->breadcrumb2='商品分类';
+	}
+
+	public function index(){
+
+		$sql='SELECT id,pid,name,logo FROM '
+		.C('DB_PREFIX').'goods_category';
+
+		$cate = M()->query($sql);
+
+		foreach($cate as $key => $val)
+		{
+		    $val['name'] = $val['name'].'( id = '.$val['id'].' )';
+		    $cate[$key] = $val;
+		}
+
+		$list =list_to_tree($cate);
+
+		//$this->list=json_encode($list);
+		$this->list = $list;
+		$this->display();
+	}
+	function add(){
+
+		if(IS_POST){
+
+		    $d = array();
+			$d['name']=I('name');
+			$d['pid']=I('id');
+			$d['sort_order']=I('sort_order');
+			$d['c_sort_order']=I('c_sort_order');
+
+			$d['is_search'] = I('is_search');
+			$d['is_hot'] = I('is_hot');
+			$d['is_haitao'] = I('is_haitao');
+			$d['logo'] = I('image');
+
+
+			$id=M('goods_category')->add($d);
+			if($id){
+
+				$data['name'] =$d['name'];
+				$data['id']=$id;
+				$this->ajaxReturn($data);
+
+				die();
+			}else{
+
+				die();
+			}
+		}
+
+	}
+
+		function edit(){
+		if(IS_POST){
+
+			$d['id']=I('id');
+			$d['name']=I('name');
+			$d['sort_order']=I('sort_order');
+			$d['c_sort_order']=I('c_sort_order');
+			$d['logo'] = I('image');
+			$d['is_search'] = I('is_search');
+			$d['is_hot'] = I('is_hot');
+			$d['is_haitao'] = I('is_haitao');
+
+			$category=M('goods_category')->find($d['id']);
+
+			$r=M('goods_category')->save($d);
+
+			if($r){
+
+				$data['success']='修改成功';
+				$data['name']=$d['name'];
+				$this->ajaxReturn($data);
+
+				die();
+			}else{
+
+				$data['err']='修改失败';
+
+				$this->ajaxReturn($data);
+
+				die();
+			}
+		}
+	}
+
+	function get_info(){
+		if(IS_POST){
+			$id=I('id');
+			$d=M('goods_category')->find($id);
+
+			$data['name']=$d['name'];
+			$data['logo']=$d['logo'];
+			$data['is_search'] = $d['is_search'];
+			$data['is_hot']=$d['is_hot'];
+			$data['is_haitao']=$d['is_haitao'];
+			$data['c_sort_order']=$d['c_sort_order'];
+
+			if(!empty($d['logo']))
+			{
+			    $data['thumb_image'] = resize($d['logo'], 100, 100);
+			}else {
+			    $data['thumb_image'] = '';
+			}
+
+			$data['sort_order']=$d['sort_order'];
+
+			$this->ajaxReturn($data);
+		}
+	}
+	function del(){
+		if(IS_POST){
+			$id=I('post.id');
+
+			if(M('goods_category')->where('pid='.$id)->find()){
+				$data['err']='请先删除子节点！！';
+				$this->ajaxReturn($data);
+				die;
+			}
+
+			$res1 = M('goods_to_category')->where(array('class_id1'=>$id))->select();
+
+			if(!empty($res1))
+			{
+				//goods"
+				foreach($res1 as $val)
+				{
+					M('goods')->where( array('goods_id' => $val['goods_id']) )->save( array('status' => 0) );
+				}
+			}
+
+			$res2 = M('goods_to_category')->where(array('class_id2'=>$id))->select();
+			if(!empty($res2))
+			{
+				foreach($res2 as $val)
+				{
+					M('goods')->where( array('goods_id' => $val['goods_id']) )->save( array('status' => 0) );
+				}
+			}
+			$res3 = M('goods_to_category')->where(array('class_id3'=>$id))->select();
+			if(!empty($res3))
+			{
+				foreach($res3 as $val)
+				{
+					M('goods')->where( array('goods_id' => $val['goods_id']) )->save( array('status' => 0) );
+				}
+			}
+
+			if( !empty($res1) || !empty($res2) || !empty($res3)){
+				//$data['err']='请先删除该分类下商品！！';
+				//$this->ajaxReturn($data);
+				//die;
+			}
+
+			if(M('goods_category')->where('id='.$id)->delete()){
+				$data['success']='删除成功';
+				$this->ajaxReturn($data);
+				die();
+			}
+		}
+	}
+
+	function autocomplete(){
+		$json = array();
+
+		$filter_name=I('filter_name');
+
+		if (isset($filter_name)) {
+			$sql='SELECT id,name FROM '.c('DB_PREFIX')."goods_category where name LIKE'%".$filter_name."%' LIMIT 0,20";
+		}else{
+			$sql='SELECT id,name FROM '.c('DB_PREFIX')."goods_category LIMIT 0,20";
+
+		}
+			$results = M('goods_category')->query($sql);
+
+		foreach ($results as $result) {
+			$json[] = array(
+				'category_id' => $result['id'],
+				'name'        => strip_tags(html_entity_decode($result['name'], ENT_QUOTES, 'UTF-8'))
+			);
+		}
+
+		$this->ajaxReturn($json);
+	}
+
+
+
+}
+?>

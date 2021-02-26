@@ -1,0 +1,247 @@
+/**=====================
+     33. Pricing CSS Start
+==========================**/
+.pricing-content{
+  margin-bottom: -30px;
+  div{
+    margin-bottom: 30px;
+    .pricing-simple, .pricing-block{
+      margin-bottom: 0 !important;
+    }
+    .pricing-simple {
+      .btn-block {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 1rem 1.75rem;
+      }
+    }
+  }
+
+}
+.pricing-content-ribbons{
+  > div {
+    margin-bottom: 30px;
+    .pricing-block{
+      margin-bottom: 0;
+      path{
+        fill: $primary-color;
+      }
+    }
+  }
+}
+.pricing-card-design-2{
+  .pricing-block{
+    .pricing-inner{
+      ul{
+        margin-bottom: 30px;
+        li{
+          border-bottom: 1px solid $light-body-bg-color;
+        }
+      }
+    }
+  }
+}
+.pricing-card-design-3 {
+  margin-bottom: -30px;
+  .row {
+    > div {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.pricing-block {
+  box-shadow: 0 0 10px 5px rgba(68, 102, 242, 0.05);
+      border-radius: 30px;
+    overflow: hidden;
+  &.bg-primary{
+    .pricing-inner{
+      .btn-primary{
+        background-color: darken($primary-color, 10%) !important;
+        border-color: darken($primary-color, 10%) !important;
+      }
+    }
+  }
+  svg {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: -1px;
+  }
+  .pricing-inner {
+    padding: 30px 0 30px;
+    ul {
+      padding: 0;
+      margin-bottom: 9px;
+      li {
+        h6{
+          line-height: 45px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    h3 {
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+  }
+}
+.pricing-simple{
+  box-shadow: 0 0 10px 5px rgba(68, 102, 242, 0.05);
+  overflow: hidden;
+  .card-body{
+    border-bottom: none;
+    h3{
+      position: relative;
+      margin-bottom: 38px;
+      &:before{
+        position: absolute;
+        content: '';
+        width: 80px;
+        height: 1px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        background-color: $light-text;
+      }
+    }
+    h1{
+      font-size: 80px;
+      line-height: 0.9;
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1199px){
+  .pricing-block{
+    .ribbon-vertical-left {
+      left: 3px;
+      top: 0px;
+    }
+    .ribbon-bookmark{
+      top: 0;
+      left: -1px;
+    }
+    .ribbon-clip-right{
+      top: 0;
+    }
+  }
+}
+@media only screen and (max-width: 1199px){
+  .pricing-block{
+    .pricing-inner{
+      h3 {
+        font-size: 20px;
+      }
+      ul{
+        li{
+          h6{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .pricing-block {
+    .pricing-inner {
+      padding: 20px 0 20px;
+      ul, h3 {
+        margin-bottom: 1px;
+      }
+    }
+  }
+  .pricing-simple{
+    .card-body{
+      h1 {
+        margin-bottom: 20px;
+      }
+      h3 {
+        margin-bottom: 28px;
+      }
+    }
+  }
+  .pricing-card-design-2 {
+    .pricing-block{
+      .pricing-inner{
+        ul {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pricing-content-ribbons{
+    div {
+      .pricing-block{
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+  .pricing-content{
+    margin-bottom: -20px;
+    div{
+      margin-bottom: 20px;
+    }
+  }
+  .pricing-card-design-3 {
+    margin-bottom: -20px;
+    .row {
+      >div  {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .pricing-block {
+    .pricing-inner {
+      padding: 15px 0 15px;
+      h3{
+        font-size: 28px;
+      }
+      ul{
+        li{
+          h6{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px){
+  .pricing-content{
+    div{
+      .pricing-simple {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .pricing-simple{
+    .card-body{
+      h1 {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .pricing-block {
+    .pricing-inner {
+      padding: 15px 0 15px;
+    }
+  }
+  .pricing-card-design-2 {
+    .pricing-block{
+      .pricing-inner{
+        ul {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+/**=====================
+    33. Pricing CSS Ends
+==========================**/

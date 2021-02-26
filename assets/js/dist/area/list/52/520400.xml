@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="安顺" code="520400">
+<county name="西秀" code="520402">
+    <street name="南街街道" code="520402001" />
+    <street name="东街街道" code="520402002" />
+    <street name="西街街道" code="520402003" />
+    <street name="北街街道" code="520402004" />
+    <street name="东关街道" code="520402005" />
+    <street name="华西街道" code="520402006" />
+    <street name="西航街道" code="520402007" />
+    <street name="宋旗镇" code="520402100" />
+    <street name="幺铺镇" code="520402101" />
+    <street name="宁谷镇" code="520402102" />
+    <street name="龙宫镇" code="520402103" />
+    <street name="双堡镇" code="520402104" />
+    <street name="大西桥镇" code="520402105" />
+    <street name="七眼桥镇" code="520402106" />
+    <street name="蔡官镇" code="520402107" />
+    <street name="轿子山镇" code="520402108" />
+    <street name="旧州镇" code="520402109" />
+    <street name="新场布依族苗族乡" code="520402200" />
+    <street name="岩腊苗族布依族乡" code="520402201" />
+    <street name="鸡场布依族苗族乡" code="520402202" />
+    <street name="杨武布依族苗族乡" code="520402203" />
+    <street name="东屯乡" code="520402204" />
+    <street name="黄腊布依族苗族乡" code="520402205" />
+    <street name="刘官乡" code="520402206" />
+</county>
+<county name="平坝" code="520421">
+    <street name="安平街道" code="520421001" />
+    <street name="鼓楼街道" code="520421002" />
+    <street name="白云镇" code="520421101" />
+    <street name="高峰镇" code="520421102" />
+    <street name="天龙镇" code="520421103" />
+    <street name="夏云镇" code="520421104" />
+    <street name="马场镇" code="520421105" />
+    <street name="乐平镇" code="520421106" />
+    <street name="齐伯镇" code="520421107" />
+    <street name="十字回族苗族乡" code="520421202" />
+    <street name="羊昌布依族苗族乡" code="520421203" />
+</county>
+<county name="普定" code="520422">
+    <street name="城关镇" code="520422100" />
+    <street name="马官镇" code="520422101" />
+    <street name="化处镇" code="520422102" />
+    <street name="马场镇" code="520422103" />
+    <street name="白岩镇" code="520422104" />
+    <street name="龙场乡" code="520422200" />
+    <street name="鸡场坡乡" code="520422201" />
+    <street name="坪上苗族彝族布依族乡" code="520422202" />
+    <street name="补郎苗族乡" code="520422203" />
+    <street name="猴场苗族仡佬族乡" code="520422204" />
+    <street name="猫洞苗族仡佬族乡" code="520422205" />
+</county>
+<county name="镇宁" code="520423">
+    <street name="城关镇" code="520423100" />
+    <street name="丁旗镇" code="520423101" />
+    <street name="黄果树镇" code="520423102" />
+    <street name="江龙镇" code="520423103" />
+    <street name="大山镇" code="520423104" />
+    <street name="马厂镇" code="520423105" />
+    <street name="六马镇" code="520423106" />
+    <street name="良田镇" code="520423107" />
+    <street name="扁担山乡" code="520423201" />
+    <street name="募役乡" code="520423202" />
+    <street name="沙子乡" code="520423204" />
+    <street name="朵卜陇乡" code="520423205" />
+    <street name="革利乡" code="520423206" />
+    <street name="本寨乡" code="520423207" />
+    <street name="简嘎乡" code="520423210" />
+    <street name="打帮乡" code="520423211" />
+</county>
+<county name="关岭" code="520424">
+    <street name="关索街道" code="520424001" />
+    <street name="顶云街道" code="520424002" />
+    <street name="花江镇" code="520424101" />
+    <street name="永宁镇" code="520424102" />
+    <street name="岗乌镇" code="520424103" />
+    <street name="上关镇" code="520424104" />
+    <street name="坡贡镇" code="520424105" />
+    <street name="断桥镇" code="520424106" />
+    <street name="白水镇" code="520424107" />
+    <street name="新铺镇" code="520424108" />
+    <street name="沙营镇" code="520424109" />
+    <street name="八德乡" code="520424200" />
+    <street name="普利乡" code="520424202" />
+    <street name="板贵乡" code="520424203" />
+</county>
+<county name="紫云" code="520425">
+    <street name="松山镇" code="520425100" />
+    <street name="水塘镇" code="520425101" />
+    <street name="猴场镇" code="520425102" />
+    <street name="猫营镇" code="520425103" />
+    <street name="板当镇" code="520425104" />
+    <street name="白石岩乡" code="520425200" />
+    <street name="宗地乡" code="520425201" />
+    <street name="大营乡" code="520425202" />
+    <street name="四大寨乡" code="520425203" />
+    <street name="坝羊乡" code="520425204" />
+    <street name="火花乡" code="520425205" />
+    <street name="达帮乡" code="520425206" />
+</county>
+</city>
+</address>

@@ -1,0 +1,603 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+    <title><?php echo $shoname_name; ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+    <meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+    <meta name="author" content="Dejavu871.Tech.">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=2.2.0">
+</head>
+
+<body>
+<div id="LAY_app">
+    <div class="page-wrapper">
+        <!--右侧信息-->
+        <div class="right-sidebar" id="right_side_bar">
+            <div class="container p-0" style="z-index: 30001">
+                <div class="content-panel-close">
+                    <i class="os-icon os-icon-close"></i>
+                </div>
+                <div class="modal-header p-l-20 p-r-20">
+                    <div class="col-sm-8 p-0">
+                        <h6 class="modal-title font-weight-bold">版本信息</h6>
+                    </div>
+                </div>
+                <!--------------------
+                START - Support Agents
+                -------------------->
+                <div class="card-body btn-showcase">
+                    <div class="btn btn-light" href="#">当前版本：DEJAVU EP Menager 吃货星球v4.0.1</div><div class="btn btn-light">基于框架：Bootstrap-v4.3</div>
+                </div>
+                <div class="modal-header p-l-20 p-r-20">
+                    <div class="col-sm-8 p-0">
+                        <h6 class="modal-title font-weight-bold">联系授权</h6>
+                    </div>
+                </div>
+                <div class="p-l-30 p-r-30">
+                    <div class="card-body btn-showcase">
+                        <ul>
+                            <h6>
+                                <strong>Arthur：Albert.Z</strong>
+                            </h6>
+                        </ul>
+                        <div class="pt-btn">
+                            <a class="btn btn-primary" href="https://github.com/zhrrobert/dejavu">Git项目仓库</a>
+                        </div>
+                        <div class="pt-btn">
+                            <a class="btn btn-primary" href="http://wpa.qq.com/msgrd?v=3&amp;uin=142997&amp;site=qq&amp;menu=yes">QQ: 142997</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-header p-l-20 p-r-20">
+                    <div class="col-sm-8 p-0">
+                        <h6 class="modal-title font-weight-bold">版权所有</h6>
+                    </div>
+                </div>
+                <div class="p-l-30 p-r-30">
+                    <div class="users-list-w">
+                        <h6>
+                            DEJAVU EP Menager
+                        </h6>
+                        <div>
+                            <h6>吃货星球©商城APP、微信小程序、支付宝小程序、商城后台管理系统，受国家计算机软件著作权保护，必须联系作者授权才可获得源文件使用权。不得恶意分享产品源代码、二次转售等，违者将承担相应的法律责任。</h6>
+                        </div>
+                        <img src="https://image.ch871.com/companyx.png" width="40px" style="width:40px;margin:0px 10px 0px 0px;color:#ccd9e8 " align="left">
+                        Copyright © 2020 Dejavu Technology (YN) Co., Ltd. <a class="btn btn-primary btn-sm" href="https://www.dejavu871.com" style="margin-top: 10px">dejavu871.com</a>
+                    </div>
+                </div>
+                <!--------------------
+                END - Team Members
+                -------------------->
+            </div>
+        </div>
+        <!--头部区域begin-->
+        <div class="page-main-header" >
+            <div class="main-header-right" style="height: 75px;">
+                <div class="main-header-left text-center">
+                    <div class="logo-wrapper" style="margin-top: 8px"><i class="ep ep-logo"></i></div>
+                </div>
+                <div class="mobile-sidebar">
+                    <div class="media-body text-right switch-sm">
+                        <label class="switch ml-3"><i class="font-primary" id="sidebar-toggle" data-feather="align-center"></i></label>
+                    </div>
+                </div>
+                <div class="vertical-mobile-sidebar"><i class="fa fa-bars sidebar-bar">               </i></div>
+                <div class="nav-right col pull-right right-menu">
+                    <ul class="nav-menus">
+                        <li>
+                        </li>
+                        <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
+                        <li class="onhover-dropdown"><img class="img-fluid img-shadow-warning" src="/assets/images/color-picker.png" alt="">
+                            <ul class="onhover-show-div notification-dropdown">
+                                <li class="gradient-primary p-b-0">
+                                    <h5>版面颜色</h5>
+                                </li>
+                                <li>
+                                    <div class="tab-pane fade active show" id="c-pills-profile" role="tabpanel" aria-labelledby="c-pills-profile-tab">
+                                        <h6 class="m-b-20">浅色版面</h6>
+                                        <ul class="layout-grid customizer-color">
+                                            <li class="color-eplayout" data-attr="color-1" data-primary="#7e37d8" data-secondary="#fe80b2" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #7e37d8;"></div>
+                                            </li>
+                                            <li class="color-eplayout" data-attr="color-2" data-primary="#0288d1" data-secondary="#26c6da" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #0288d1;"></div>
+                                            </li>
+                                            <li class="color-eplayout" data-attr="color-3" data-primary="#8e24aa" data-secondary="#ff6e40" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #8e24aa;"></div>
+                                            </li>
+                                            <li class="color-eplayout" data-attr="color-4" data-primary="#4c2fbf" data-secondary="#2e9de4" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #4c2fbf;"></div>
+                                            </li>
+                                            <li class="color-eplayout" data-attr="color-5" data-primary="#7c4dff" data-secondary="#7b1fa2" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #7c4dff;"></div>
+                                            </li>
+                                            <li class="color-eplayout" data-attr="color-6" data-primary="#3949ab" data-secondary="#4fc3f7" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #3949ab;"></div>
+                                            </li>
+                                        </ul>
+                                        <h6 class="m-t-40 m-b-20">深色版面</h6>
+                                        <ul class="layout-grid customizer-color dark">
+                                            <li class="color-eplayout2" data-attr="color-1" data-primary="#7e37d8" data-secondary="#fe80b2" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #7e37d8;"></div>
+                                            </li>
+                                            <li class="color-eplayout2" data-attr="color-2" data-primary="#0288d1" data-secondary="#26c6da" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #0288d1;"></div>
+                                            </li>
+                                            <li class="color-eplayout2" data-attr="color-3" data-primary="#8e24aa" data-secondary="#ff6e40" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #8e24aa;"></div>
+                                            </li>
+                                            <li class="color-eplayout2" data-attr="color-4" data-primary="#4c2fbf" data-secondary="#2e9de4" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #4c2fbf;"></div>
+                                            </li>
+                                            <li class="color-eplayout2" data-attr="color-5" data-primary="#7c4dff" data-secondary="#7b1fa2" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #7c4dff;"></div>
+                                            </li>
+                                            <li class="color-eplayout2" data-attr="color-6" data-primary="#3949ab" data-secondary="#4fc3f7" style="height: 32px!important;width: 32px!important;padding: 2px!important;">
+                                                <div style="background-color: #3949ab;"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="onhover-dropdown"><img class="img-fluid img-shadow-warning" src="/assets/images/customize.png" alt="">
+                            <ul class="onhover-show-div notification-dropdown">
+                                <li class="gradient-primary p-b-0">
+                                    <h5>样式选择</h5>
+                                </li>
+                                <li>
+                                    <div class="tab-pane fade active show " id="c-pills-home" role="tabpanel" aria-labelledby="c-pills-home-tab">
+                                        <ul class="main-layout layout-grid eplayout">
+                                            <li data-attr="ltr" style="padding: 0!important;">
+                                                <div class="header bg-light"></div>
+                                                <div class="eplayout-body">
+                                                    <div class="bg-light eplayout-sidebar"></div>
+                                                    <div class="eplayout-sidebody">
+                                                        <span class="badge bg-dark">左侧布局</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-attr="rtl" style="padding: 0!important;margin-top: 17px">
+                                                <div class="header bg-light"></div>
+                                                <div class="eplayout-body">
+                                                    <div class="eplayout-sidebody">
+                                                        <span class="badge bg-dark">右侧布局</span>
+                                                    </div>
+                                                    <div class="bg-light eplayout-sidebarr"></div>
+                                                </div>
+                                            </li>
+
+                                            </li>
+                                            <li data-attr="ltr" class="box-layout" style="padding: 0!important;margin-top: 17px">
+                                                <div class="header bg-light"></div>
+                                                <div class="eplayout-body">
+
+                                                    <div class="bg-light eplayout-sidebar"></div>
+                                                    <div class="eplayout-sidebody">
+                                                        <span class="badge bg-dark">盒子布局</span>
+                                                    </div>
+                                                    <div class="bg-light eplayout-sidebarr"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="neworder1" class="onhover-dropdown"><img class="img-fluid img-shadow-warning" src="/assets/images/dashboard/chat.png" alt="">
+                            <ul  class="onhover-show-div notification-dropdown">
+                                <li class="gradient-primary">
+                                    <h5 class="f-w-700">订单消息</h5><span>您有<span id="notice"><?php echo ($order_count); ?></span>个新的订单</span>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="notification-icons bg-success mr-3"><i class="mt-0" data-feather="thumbs-up"></i></div>
+                                        <a href="javascript:void(0)" data-href="<?php echo U('order/index');?>">
+                                            <div class="media-body">
+                                                <h6>订单中心</h6>
+                                                <p class="mb-0">快去看看吧</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <?php if (!defined('ROLE') || ROLE != 'agenter' ) { ?>
+                                <?php if($is_can_update == 1){ ?>
+
+                                <?php } ?>
+                                <?php } ?>
+                            </ul>
+                        </li>
+                        <li id="orderdistribution1" class="onhover-dropdown"><img class="img-fluid img-shadow-warning" src="/assets/images/dashboard/notification.png" alt="">
+                            <ul  class="onhover-show-div notification-dropdown">
+                                <li class="gradient-primary">
+                                    <h5 class="f-w-700">配送员消息</h5><span>您有<span id="distributionnotice"></span>个新的配送信息</span>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="notification-icons bg-success mr-3"><i class="mt-0" data-feather="thumbs-up"></i></div>
+                                        <a href="javascript:void(0)">
+                                            <div class="media-body">
+                                                <h6>配送中心</h6>
+                                                <p class="mb-0">快去看看吧</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="right_side_toggle" href="#"><img class="img-fluid img-shadow-success" src="/assets/images/dashboard/like.png" alt=""></a></li>
+                        <li class="onhover-dropdown"> <span class="media user-header"><img class="img-fluid" src="/assets/images/dashboard/user.png" alt=""></span>
+                            <ul class="onhover-show-div profile-dropdown">
+                                <li class="gradient-primary">
+                                    <h5 class="f-w-600 mb-0">
+                                        <?php
+ if (defined('ROLE') && ROLE == 'agenter' ) { $agent_auth = session('agent_auth'); echo $agent_auth['shopname']; }else{ echo D('Home/Front')->get_config_by_name('shoname'); } ?>
+                                        <?php echo ($_GPC['s_uname']); ?>
+                                    </h5>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="notification-icons mr-3"><i data-feather="settings"> </i></div>
+                                        <a href="<?php echo U('Public/logout');?>">退出</a>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
+                </div>
+                <script id="result-template" type="text/x-handlebars-template">
+                    <div class="ProfileCard u-cf">
+                        <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
+                        <div class="ProfileCard-details">
+                            <div class="ProfileCard-realName">{{name}}</div>
+                        </div>
+                    </div>
+                </script>
+                <script id="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
+
+
+
+            </div>
+        </div>
+
+        <!--头部区域end-->
+        <!--左侧导航区域begin--->
+        <div class="page-body-wrapper">
+            <div class="iconsidebar-menu">
+                <div class="sidebar">
+                    <ul class="iconMenu-bar custom-scrollbar" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+
+                        <?php $sysmenus = D('Seller/menu')->getMenu(true); ?>
+                        <?php
+ $i =0; foreach($sysmenus['menu'] as $key => $menu){ ?>
+                        <li id="sdsd"  class="wb-nav layui-nav-item <?php if($i ==0){ ?>layui-nav-itemed<?php } ?>" pinyin="<?php echo $key; ?>">
+                            <a class="bar-icons" href="javascript:;" <?php if( empty($menu['route']) ){ ?>lay-href="<?php echo U($menu['route']);?>"<?php } ?> lay-tips="<?php echo ($menu['text']); ?>"  lay-direction="2">
+                            <i class="icofont icofont-<?php echo ($menu['icon']); ?>"></i>
+                            <h6><span><?php echo ($menu['text']); ?></span></h6>
+                            </a>
+                            <ul class="iconbar-mainmenu custom-scrollbar">
+                                <?php if(!empty($menu['items'])){ ?>
+                                <?php foreach($menu['items'] as $sub_menu){ ?>
+
+                                <li data-name="<?php echo ($sub_menu['title']); ?>" class="iconbar-header sub-header active">
+                                    <a  href="javascript:;" <?php if( !empty($sub_menu['route']) ){ ?>lay-href="<?php echo U($sub_menu['route']);?>"<?php } ?>><?php echo ($sub_menu['title']); ?></a>
+                                </li>
+
+                                <?php if( !empty($sub_menu['items']) ){ ?>
+                                <li class="third-menu active">
+                                    <?php foreach($sub_menu['items'] as $third_sub_menu){ ?>
+                                    <ul data-name="list" ><a lay-href="<?php echo U($third_sub_menu['route']);?>"><?php echo ($third_sub_menu['title']); ?></a></ul>
+                                    <?php } ?>
+                                </li>
+                                <?php } ?>
+                                <?php } ?>
+                                <?php } ?>
+                            </ul>
+                        </li>
+                        <?php $i++; } ?>
+                    </ul>
+                </div>
+            </div>
+            <!--左侧导航区域end--->
+            <div class="welcome-popup modal fade" id="loadModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <div class="modal-body">
+                            <div class="modal-header"></div>
+                            <div class="contain p-30">
+                                <div class="text-center">
+                                    <h3>欢迎体验吃货星球电商后台系统DEMO</h3>
+                                    <p>v2.4.6test</p>
+                                    <button class="btn btn-primary btn-lg txt-white" type="button" data-dismiss="modal" aria-label="Close">开始</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--内容体begin-->
+            <div class="page-body custom-scrollbar" id="LAY_app_body">
+                <?php if( empty($perm_url) || $perm_url == '/' ){ ?>
+                <iframe src="<?php echo U('index/analys', array('ok' => 1)); ?>" frameborder="0" class="layadmin-iframe"></iframe>
+                <?php }else{ ?>
+                <iframe src="<?php echo U( $perm_url, array('ok' => 1)); ?>" frameborder="0" class="layadmin-iframe"></iframe>
+                <?php } ?>
+            </div>
+            <!--内容体end-->
+        </div>
+    </div>
+</div>
+
+<!-- latest jquery-->
+<script src="/assets/js/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap js-->
+<script src="/assets/js/bootstrap/popper.min.js"></script>
+<script src="/assets/js/bootstrap/bootstrap.js"></script>
+<!-- feather icon js-->
+<script src="/assets/js/icons/feather-icon/feather.min.js"></script>
+<script src="/assets/js/icons/feather-icon/feather-icon.js"></script>
+<!-- Sidebar jquery-->
+<script src="/assets/js/sidebar-menu.js"></script>
+<script src="/assets/js/config.js"></script>
+<!-- Plugins JS start-->
+<script src="/assets/js/typeahead/handlebars.js"></script>
+<script src="/assets/js/typeahead/typeahead.bundle.js"></script>
+<script src="/assets/js/typeahead/typeahead.custom.js"></script>
+<script src="/assets/js/typeahead-search/handlebars.js"></script>
+<script src="/assets/js/typeahead-search/typeahead-custom.js"></script>
+<script src="/assets/js/chart/apex-chart/stock-prices.js"></script>
+<script src="/assets/js/prism/prism.min.js"></script>
+<script src="/assets/js/clipboard/clipboard.min.js"></script>
+<script src="/assets/js/counter/jquery.waypoints.min.js"></script>
+<script src="/assets/js/counter/jquery.counterup.min.js"></script>
+<script src="/assets/js/counter/counter-custom.js"></script>
+<script src="/assets/js/custom-card/custom-card.js"></script>
+<script src="/assets/js/notify/bootstrap-notify.min.js"></script>
+
+<script src="/assets/js/notify/index.js"></script>
+<script src="/assets/js/datepicker/date-picker/datepicker.js"></script>
+<script src="/assets/js/datepicker/date-picker/datepicker.en.js"></script>
+<script src="/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+<script src="/assets/js/chat-menu.js"></script>
+<!-- Plugins JS Ends-->
+<!-- Theme js-->
+<script src="/assets/js/theme-customizer/customizer1.js"></script>
+<!-- login js-->
+<script src="/assets/js/script.js"></script>
+<!-- Plugin used-->
+<script src="/layuiadmin/layui/layui1.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+<script>
+	layui.config({
+	base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+	index: 'lib/index' //主入口模块
+	}).use('index');
+
+
+</script>
+<audio id="musicClick" src="/assets/ep/mp3/click.mp3" preload="auto"></audio>
+<script>
+    $(function() {
+        $("#sdsd").trigger("click");//触发button的click事件
+    });
+//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+var layer = layui.layer;
+var $;
+
+var par_index = 0;
+
+var cur_open_div;
+var form;
+
+layui.use(['jquery', 'layer','form'], function(){
+  $ = layui.$;
+
+	setInterval( function() {
+		order_distribution();
+	},3000);
+	function order_distribution() {
+		$.ajax({
+			url:"<?php echo U('index/order_distribution');?>",
+			type:'get',
+			data:{},
+			dataType:'json',
+			success:function(ret){
+				if(ret.no_send > 0)
+				{
+					$('#orderdistribution').show();
+					$("#distributionnotice").html(ret.no_send);
+				}else{
+					$("#orderdistribution").hide();
+					$("#distributionnotice").html(0);
+				}
+			}
+		})
+	}
+
+	setInterval( function() {
+		$.getJSON("<?php echo "index.php?s=/Cron/index"; ?>");
+	},10000);
+	var i = 0;
+	var y = 0
+	setInterval(notice,10000);
+	function notice() {
+		$.ajax({
+			 url:"<?php echo U('index/order_count');?>",
+			 type:'get',
+			 data:{},
+			 dataType:'json',
+			 success:function(ret){
+
+			  if(ret.resultCode == 200 && ret.data > 0 && ret.voice_notice == 1)
+			  {
+				  if(i<3){
+					$('#neworder').show();
+					$("#notice").html(ret.data);
+					$("#musicClick")[0].play();
+					i++;
+					y = ret.data ;
+				  }else{
+					$('#neworder').show();
+					$("#notice").html(ret.data);
+
+					if( y < ret.data ){
+					    i = 0;
+					}
+
+				  }
+                  var url = "";
+                  if(ret.order_type == 'pintuan'){
+                    url = "<?php echo U('group/orderlist'); ?>";
+                    $('#neworder').find('a').attr('data-href',url);
+                  }else if(ret.order_type == 'integral'){
+                    url = "<?php echo U('points/order'); ?>";
+                    $('#neworder').find('a').attr('data-href',url);
+                  }
+
+			  }else{
+				$("#neworder").hide();
+				$("#notice").html(0);
+				i = 0;
+
+			  }
+			 }
+		})
+	}
+
+
+
+    $('.layui-nav-item a').click(function(){
+        var url = $(this).attr('lay-href');
+
+        if( url == undefined )
+        {
+            var s_index = $(this).parent().index();
+            par_index = s_index;
+            $('.iconbar-mainmenu').eq(s_index).addClass('active').siblings().removeClass('active');
+            var s_u =  $('.iconbar-mainmenu').eq(s_index).children('li');
+            $('.iconbar-mainmenu li a').removeClass('active');
+            if( !$(s_u).children('a:first').hasClass('active')  )
+            {
+                $(s_u).children('a:first').addClass('active').siblings().removeClass('active');
+
+            }
+            if( !$(s_u).children('a').hasClass('active')  )
+            {
+                $(s_u).children('a').removeClass('active');
+
+            }
+            var s_url = $(s_u).children('a').attr('lay-href');
+
+            $('.layadmin-iframe').attr('src', s_url);
+
+        }else{
+            var s_index = $(this).parent().parent().index();
+            par_index = s_index;
+
+            console.log(12);
+        }
+    })
+
+	$('#neworder1 a').click(function(event){
+		var s_url = $(this).attr('data-href');
+		$('.layadmin-iframe').attr('src', s_url);
+	})
+
+	$('.iconbar-mainmenu li a').click(function(event){
+		var s_url = $(this).attr('lay-href');
+
+		$('.layadmin-iframe').attr('src', s_url);
+
+	})
+	$('#update_urlevent').click(function(event){
+		var s_url = $(this).attr('lay-href');
+
+		$('.layadmin-iframe').attr('src', s_url);
+
+	})
+	$('.iconbar-header a').click(function(event){
+        $('.iconbar-header a').removeClass('active')
+        $(this).addClass('active');
+
+
+
+		var s_url = $(this).children('a').attr('lay-href');
+
+		$('.layadmin-iframe').attr('src', s_url);
+
+		event.stopPropagation();
+	})
+    $('.third-menu a').click(function(event){
+        $('.third-menu a').removeClass('active')
+        $(this).addClass('active');
+
+
+
+        var s_url = $(this).children('a').attr('lay-href');
+
+        $('.layadmin-iframe').attr('src', s_url);
+
+        event.stopPropagation();
+    })
+
+
+})
+
+    $(function(){
+    $('.right-sidebar').click(function(e){
+        $('.right-sidebar').addClass('show');
+
+        e.stopPropagation();
+        $(document).one('click',function(){
+            $('.right-sidebar').removeClass('show');
+        })
+    })
+
+    $('.right-sidebar').click(function(e){
+        e.stopPropagation();
+    })
+    })
+</script>
+
+
+</body>
+</html>

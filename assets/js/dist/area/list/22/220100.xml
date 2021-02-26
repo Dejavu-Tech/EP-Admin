@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="长春" code="220100">
+<county name="南关" code="220102">
+    <street name="南岭街道" code="220102001" />
+    <street name="自强街道" code="220102002" />
+    <street name="民康街道" code="220102003" />
+    <street name="新春街道" code="220102004" />
+    <street name="长通街道" code="220102005" />
+    <street name="全安街道" code="220102006" />
+    <street name="曙光街道" code="220102007" />
+    <street name="永吉街道" code="220102008" />
+    <street name="桃源街道" code="220102009" />
+    <street name="鸿城街道" code="220102010" />
+    <street name="明珠街道" code="220102011" />
+    <street name="富裕街道" code="220102012" />
+    <street name="临河街道" code="220102070" />
+    <street name="永兴街道" code="220102071" />
+    <street name="净月街道" code="220102072" />
+    <street name="新立城镇" code="220102170" />
+    <street name="新湖镇" code="220102171" />
+    <street name="玉潭镇" code="220102172" />
+    <street name="幸福乡" code="220102200" />
+</county>
+<county name="宽城" code="220103">
+    <street name="新发街道" code="220103001" />
+    <street name="站前街道" code="220103002" />
+    <street name="南广街道" code="220103003" />
+    <street name="东广街道" code="220103004" />
+    <street name="群英街道" code="220103005" />
+    <street name="兴业街道" code="220103006" />
+    <street name="凯旋街道" code="220103007" />
+    <street name="团山街道" code="220103008" />
+    <street name="柳影街道" code="220103009" />
+    <street name="欣园街道" code="220103010" />
+    <street name="兰家镇" code="220103100" />
+    <street name="米沙子镇" code="220103101" />
+    <street name="万宝镇" code="220103102" />
+    <street name="兴隆山镇" code="220103170" />
+    <street name="合隆镇" code="220103171" />
+    <street name="奋进乡" code="220103200" />
+</county>
+<county name="朝阳" code="220104">
+    <street name="前进街道" code="220104001" />
+    <street name="桂林街道" code="220104002" />
+    <street name="南湖街道" code="220104003" />
+    <street name="永昌街道" code="220104004" />
+    <street name="重庆街道" code="220104005" />
+    <street name="清和街道" code="220104006" />
+    <street name="红旗街道" code="220104007" />
+    <street name="湖西街道" code="220104008" />
+    <street name="富锋街道" code="220104009" />
+    <street name="硅谷街道办事处（长春高新技术产业开发区）（国家级）" code="220104070" />
+    <street name="乐山镇" code="220104100" />
+    <street name="永春镇" code="220104101" />
+    <street name="双德乡" code="220104270" />
+</county>
+<county name="二道" code="220105">
+    <street name="东盛街道" code="220105001" />
+    <street name="吉林街道" code="220105002" />
+    <street name="荣光街道" code="220105003" />
+    <street name="东站街道" code="220105004" />
+    <street name="远达街道" code="220105005" />
+    <street name="八里堡街道" code="220105006" />
+    <street name="长青街道" code="220105007" />
+    <street name="东方广场街道办事处（长春经济技术开发区）（国家级）" code="220105070" />
+    <street name="英俊镇" code="220105100" />
+    <street name="劝农山镇（长春莲花山生态旅游度假区省级）" code="220105173" />
+    <street name="泉眼镇" code="220105174" />
+    <street name="四家乡（长春莲花山生态旅游度假区省级）" code="220105270" />
+</county>
+<county name="绿园" code="220106">
+    <street name="正阳街道" code="220106001" />
+    <street name="春城街道" code="220106003" />
+    <street name="青年街道" code="220106005" />
+    <street name="林园街道" code="220106010" />
+    <street name="同心街道" code="220106011" />
+    <street name="锦程街道" code="220106070" />
+    <street name="东风街道" code="220106071" />
+    <street name="合心镇" code="220106100" />
+    <street name="西新镇" code="220106101" />
+    <street name="城西镇" code="220106102" />
+    <street name="长春汽车产业开发区（省级）（特殊乡镇）" code="220106170" />
+    <street name="绿园经济开发区" code="220106400" />
+</county>
+<county name="双阳" code="220112">
+    <street name="云山街道" code="220112001" />
+    <street name="平湖街道" code="220112002" />
+    <street name="奢岭街道" code="220112003" />
+    <street name="山河街道" code="220112004" />
+    <street name="齐家镇" code="220112100" />
+    <street name="太平镇" code="220112101" />
+    <street name="鹿乡镇" code="220112102" />
+    <street name="双营子回族乡（梅花鹿产业经济开发区）（省级）" code="220112270" />
+</county>
+<county name="农安" code="220122">
+    <street name="农安镇" code="220122100" />
+    <street name="伏龙泉镇" code="220122101" />
+    <street name="哈拉海镇" code="220122102" />
+    <street name="靠山镇" code="220122103" />
+    <street name="开安镇" code="220122104" />
+    <street name="烧锅镇" code="220122105" />
+    <street name="高家店镇" code="220122106" />
+    <street name="华家镇" code="220122107" />
+    <street name="三盛玉镇" code="220122108" />
+    <street name="巴吉垒镇" code="220122109" />
+    <street name="三岗镇" code="220122110" />
+    <street name="前岗乡" code="220122200" />
+    <street name="龙王乡" code="220122201" />
+    <street name="万顺乡" code="220122203" />
+    <street name="杨树林乡" code="220122204" />
+    <street name="永安乡" code="220122205" />
+    <street name="青山口乡" code="220122206" />
+    <street name="黄鱼圈乡" code="220122207" />
+    <street name="新农乡" code="220122208" />
+    <street name="万金塔乡" code="220122209" />
+    <street name="小城子乡" code="220122210" />
+    <street name="洼中高农场" code="220122400" />
+</county>
+<county name="九台" code="220181">
+    <street name="龙嘉镇" code="220105170" />
+    <street name="卡伦湖镇" code="220105171" />
+    <street name="东湖镇" code="220105172" />
+    <street name="九台街道" code="220181001" />
+    <street name="营城街道" code="220181002" />
+    <street name="九郊街道" code="220181003" />
+    <street name="西营城街道" code="220181004" />
+    <street name="沐石河镇" code="220181100" />
+    <street name="城子街镇" code="220181101" />
+    <street name="其塔木镇" code="220181102" />
+    <street name="上河湾镇" code="220181103" />
+    <street name="土们岭镇" code="220181105" />
+    <street name="苇子沟镇" code="220181106" />
+    <street name="兴隆镇" code="220181107" />
+    <street name="纪家镇" code="220181108" />
+    <street name="波泥河镇" code="220181109" />
+    <street name="胡家回族乡" code="220181200" />
+    <street name="莽卡满族乡" code="220181201" />
+</county>
+<county name="榆树" code="220182">
+    <street name="华昌街道" code="220182001" />
+    <street name="正阳街道" code="220182002" />
+    <street name="培英街道" code="220182003" />
+    <street name="城郊街道" code="220182004" />
+    <street name="五棵树镇" code="220182100" />
+    <street name="弓棚镇" code="220182101" />
+    <street name="闵家镇" code="220182102" />
+    <street name="大坡镇" code="220182103" />
+    <street name="黑林镇" code="220182104" />
+    <street name="土桥镇" code="220182105" />
+    <street name="新立镇" code="220182106" />
+    <street name="大岭镇" code="220182107" />
+    <street name="于家镇" code="220182108" />
+    <street name="泗河镇" code="220182109" />
+    <street name="八号镇" code="220182110" />
+    <street name="刘家镇" code="220182111" />
+    <street name="秀水镇" code="220182112" />
+    <street name="保寿镇" code="220182113" />
+    <street name="新庄镇" code="220182114" />
+    <street name="育民乡" code="220182200" />
+    <street name="红星乡" code="220182201" />
+    <street name="太安乡" code="220182202" />
+    <street name="先峰乡" code="220182203" />
+    <street name="青山乡" code="220182204" />
+    <street name="延和朝鲜族乡" code="220182205" />
+    <street name="恩育乡" code="220182206" />
+    <street name="城发乡" code="220182207" />
+    <street name="环城乡" code="220182208" />
+</county>
+<county name="德惠" code="220183">
+    <street name="胜利街道" code="220183001" />
+    <street name="建设街道" code="220183002" />
+    <street name="惠发街道" code="220183003" />
+    <street name="夏家店街道" code="220183004" />
+    <street name="大青嘴镇" code="220183100" />
+    <street name="郭家镇" code="220183101" />
+    <street name="松花江镇" code="220183102" />
+    <street name="达家沟镇" code="220183103" />
+    <street name="大房身镇" code="220183104" />
+    <street name="岔路口镇" code="220183105" />
+    <street name="朱城子镇" code="220183106" />
+    <street name="布海镇" code="220183107" />
+    <street name="天台镇" code="220183108" />
+    <street name="菜园子镇" code="220183109" />
+    <street name="同太乡" code="220183200" />
+    <street name="边岗乡" code="220183201" />
+    <street name="五台乡" code="220183202" />
+    <street name="朝阳乡" code="220183203" />
+</county>
+</city>
+</address>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="襄阳" code="420600">
+<county name="襄城" code="420602">
+    <street name="王府街道" code="420602001" />
+    <street name="昭明街道" code="420602002" />
+    <street name="庞公街道" code="420602003" />
+    <street name="檀溪街道" code="420602004" />
+    <street name="隆中街道" code="420602005" />
+    <street name="余家湖街道" code="420602006" />
+    <street name="欧庙镇" code="420602100" />
+    <street name="卧龙镇" code="420602101" />
+    <street name="尹集乡" code="420602200" />
+</county>
+<county name="樊城" code="420606">
+    <street name="汉江街道" code="420606001" />
+    <street name="王寨街道" code="420606002" />
+    <street name="中原街道" code="420606003" />
+    <street name="定中门街道" code="420606004" />
+    <street name="清河口街道" code="420606005" />
+    <street name="屏襄门街道" code="420606006" />
+    <street name="米公街道" code="420606007" />
+    <street name="柿铺街道" code="420606008" />
+    <street name="高新区紫贞街道" code="420606070" />
+    <street name="高新区七里河街道" code="420606071" />
+    <street name="高新区东风办事处" code="420606072" />
+    <street name="牛首镇" code="420606100" />
+    <street name="太平店镇" code="420606101" />
+    <street name="高新区团山镇" code="420606170" />
+    <street name="高新区米庄镇" code="420606171" />
+    <street name="经济开发区" code="420606400" />
+    <street name="鱼梁洲开发区" code="420606480" />
+    <street name="高新区汽车工业园" code="420606570" />
+    <street name="高新区高新技术产业园" code="420606571" />
+    <street name="高新区高新技术创业服务中心" code="420606572" />
+</county>
+<county name="襄州" code="420607">
+    <street name="张湾办事处" code="420607001" />
+    <street name="刘集办事处" code="420607002" />
+    <street name="龙王镇" code="420607100" />
+    <street name="石桥镇" code="420607101" />
+    <street name="黄集镇" code="420607102" />
+    <street name="伙牌镇" code="420607103" />
+    <street name="古驿镇" code="420607104" />
+    <street name="朱集镇" code="420607105" />
+    <street name="程河镇" code="420607106" />
+    <street name="双沟镇" code="420607107" />
+    <street name="张家集镇" code="420607108" />
+    <street name="黄龙镇" code="420607109" />
+    <street name="峪山镇" code="420607110" />
+    <street name="东津镇" code="420607111" />
+    <street name="襄阳区经济技术开发区" code="420607401" />
+    <street name="襄北农场" code="420607500" />
+    <street name="深圳工业园" code="420607570" />
+</county>
+<county name="南漳" code="420624">
+    <street name="城关镇" code="420624100" />
+    <street name="武安镇" code="420624101" />
+    <street name="九集镇" code="420624102" />
+    <street name="李庙镇" code="420624103" />
+    <street name="长坪镇" code="420624104" />
+    <street name="薛坪镇" code="420624105" />
+    <street name="板桥镇" code="420624106" />
+    <street name="巡检镇" code="420624107" />
+    <street name="东巩镇" code="420624108" />
+    <street name="肖堰镇" code="420624109" />
+    <street name="清河管理区" code="420624500" />
+</county>
+<county name="谷城" code="420625">
+    <street name="城关镇" code="420625100" />
+    <street name="石花镇" code="420625101" />
+    <street name="盛康镇" code="420625102" />
+    <street name="庙滩镇" code="420625103" />
+    <street name="五山镇" code="420625104" />
+    <street name="茨河镇" code="420625105" />
+    <street name="南河镇" code="420625106" />
+    <street name="紫金镇" code="420625107" />
+    <street name="冷集镇" code="420625108" />
+    <street name="赵湾乡" code="420625200" />
+    <street name="薤山林场" code="420625500" />
+</county>
+<county name="保康" code="420626">
+    <street name="城关镇" code="420626100" />
+    <street name="黄堡镇" code="420626101" />
+    <street name="后坪镇" code="420626102" />
+    <street name="龙坪镇" code="420626103" />
+    <street name="店垭镇" code="420626104" />
+    <street name="马良镇" code="420626105" />
+    <street name="歇马镇" code="420626106" />
+    <street name="马桥镇" code="420626107" />
+    <street name="寺坪镇" code="420626108" />
+    <street name="过渡湾镇" code="420626109" />
+    <street name="两峪乡" code="420626200" />
+    <street name="湖北保康经济开发区管理委员会" code="420626400" />
+</county>
+<county name="老河口" code="420682">
+    <street name="光化街道" code="420682001" />
+    <street name="酂阳街道" code="420682002" />
+    <street name="孟楼镇" code="420682100" />
+    <street name="竹林桥镇" code="420682101" />
+    <street name="薛集镇" code="420682102" />
+    <street name="张集镇" code="420682103" />
+    <street name="仙人渡镇" code="420682104" />
+    <street name="洪山嘴镇" code="420682105" />
+    <street name="李楼镇" code="420682106" />
+    <street name="袁冲乡" code="420682200" />
+    <street name="蔬菜原种场" code="420682501" />
+    <street name="百花山林场" code="420682502" />
+    <street name="林茂山林场" code="420682503" />
+    <street name="二房营原种场" code="420682504" />
+</county>
+<county name="枣阳" code="420683">
+    <street name="北城街道" code="420683001" />
+    <street name="南城街道" code="420683002" />
+    <street name="环城街道" code="420683003" />
+    <street name="琚湾镇" code="420683100" />
+    <street name="七方镇" code="420683101" />
+    <street name="杨当镇" code="420683102" />
+    <street name="太平镇" code="420683103" />
+    <street name="新市镇" code="420683104" />
+    <street name="鹿头镇" code="420683105" />
+    <street name="刘升镇" code="420683106" />
+    <street name="兴隆镇" code="420683107" />
+    <street name="王城镇" code="420683108" />
+    <street name="吴店镇" code="420683109" />
+    <street name="熊集镇" code="420683110" />
+    <street name="平林镇" code="420683111" />
+    <street name="枣阳经济开发区" code="420683402" />
+    <street name="随阳农场" code="420683500" />
+    <street name="车河农场" code="420683501" />
+</county>
+<county name="宜城" code="420684">
+    <street name="鄢城街道" code="420684001" />
+    <street name="南营街道" code="420684002" />
+    <street name="郑集镇" code="420684102" />
+    <street name="小河镇" code="420684103" />
+    <street name="刘猴镇" code="420684104" />
+    <street name="孔湾镇" code="420684105" />
+    <street name="流水镇" code="420684106" />
+    <street name="板桥镇" code="420684107" />
+    <street name="王集镇" code="420684108" />
+    <street name="雷河镇" code="420684109" />
+    <street name="襄南监狱" code="420684400" />
+    <street name="劳教所" code="420684401" />
+    <street name="大雁工业园区" code="420684450" />
+    <street name="宜城经济开发区" code="420684452" />
+</county>
+</city>
+</address>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="伊春" code="230700">
+<county name="伊春" code="230702">
+    <street name="旭日街道" code="230702001" />
+    <street name="红升街道" code="230702004" />
+    <street name="前进街道" code="230702006" />
+    <street name="朝阳街道" code="230702007" />
+    <street name="东升街道" code="230702008" />
+</county>
+<county name="南岔" code="230703">
+    <street name="西水街道" code="230703002" />
+    <street name="联合街道" code="230703004" />
+    <street name="东升街道" code="230703005" />
+    <street name="晨明镇" code="230703101" />
+    <street name="浩良河镇" code="230703102" />
+    <street name="迎春乡" code="230703200" />
+    <street name="三岔河林场" code="230703400" />
+    <street name="四合营林场" code="230703401" />
+    <street name="亮子河林场" code="230703402" />
+    <street name="石头河林场" code="230703403" />
+    <street name="岩石经营所" code="230703405" />
+    <street name="奋斗经营所" code="230703406" />
+    <street name="桦阳经营所" code="230703407" />
+    <street name="浩良河经营所" code="230703408" />
+    <street name="太平经营所" code="230703409" />
+    <street name="南岔经营所" code="230703410" />
+    <street name="威岭经营所" code="230703411" />
+    <street name="松青经营所" code="230703413" />
+    <street name="柳树经营所" code="230703414" />
+    <street name="浩良河化肥厂" code="230703579" />
+</county>
+<county name="友好" code="230704">
+    <street name="友好街道" code="230704001" />
+    <street name="双子河街道" code="230704003" />
+    <street name="铁林街道" code="230704004" />
+    <street name="三合经营所" code="230704400" />
+    <street name="松园林场" code="230704401" />
+    <street name="中心经营所" code="230704402" />
+    <street name="永青经营所" code="230704403" />
+    <street name="碧云经营所" code="230704404" />
+    <street name="友谊经营所" code="230704405" />
+    <street name="青杨经营所" code="230704406" />
+    <street name="岭峰林场" code="230704407" />
+    <street name="奋斗林场" code="230704408" />
+    <street name="东卡林场" code="230704409" />
+    <street name="鸡爪河林场" code="230704410" />
+    <street name="绿源林场" code="230704411" />
+    <street name="广川经营所" code="230704412" />
+    <street name="朝阳经营所" code="230704413" />
+</county>
+<county name="西林" code="230705">
+    <street name="西林街道" code="230705001" />
+    <street name="新兴街道" code="230705003" />
+    <street name="苔青街道" code="230705005" />
+</county>
+<county name="翠峦" code="230706">
+    <street name="向阳街道" code="230706001" />
+    <street name="曙光街道" code="230706002" />
+    <street name="解放经营所" code="230706400" />
+    <street name="昆仑气林场" code="230706401" />
+    <street name="开源河林场" code="230706402" />
+    <street name="么河经营所" code="230706403" />
+    <street name="冲锋经营所" code="230706404" />
+    <street name="翠峦河经营所" code="230706405" />
+    <street name="抚育河经营所" code="230706406" />
+    <street name="尖山河经营所" code="230706407" />
+</county>
+<county name="新青" code="230707">
+    <street name="新青街道" code="230707001" />
+    <street name="兴安街道" code="230707003" />
+    <street name="红林经营所" code="230707400" />
+    <street name="松林林场" code="230707401" />
+    <street name="泉林林场" code="230707402" />
+    <street name="水源林场" code="230707404" />
+    <street name="笑山林场" code="230707405" />
+    <street name="汤林林场" code="230707406" />
+    <street name="桦林经营所" code="230707407" />
+    <street name="青林林场" code="230707408" />
+    <street name="结源林场" code="230707409" />
+    <street name="北沟林场" code="230707410" />
+    <street name="南沟林场" code="230707411" />
+    <street name="乌拉嘎经营所" code="230707412" />
+    <street name="柳树河林场" code="230707413" />
+    <street name="北影林场" code="230707414" />
+</county>
+<county name="美溪" code="230708">
+    <street name="美溪街道" code="230708001" />
+    <street name="大西林林场" code="230708400" />
+    <street name="五道库经营所" code="230708401" />
+    <street name="缓岭经营所" code="230708402" />
+    <street name="对青山经营所" code="230708403" />
+    <street name="群峦经营所" code="230708404" />
+    <street name="兰新经营所" code="230708405" />
+    <street name="顺利河林场" code="230708406" />
+    <street name="松岭经营所" code="230708407" />
+    <street name="青山口林场" code="230708408" />
+    <street name="金沙河林场" code="230708409" />
+    <street name="桦皮羌子林场" code="230708410" />
+    <street name="碧仓库林场" code="230708411" />
+    <street name="三股流经营所" code="230708412" />
+    <street name="卧龙河林场" code="230708413" />
+</county>
+<county name="金山屯" code="230709">
+    <street name="奋斗街道" code="230709002" />
+    <street name="金山街道" code="230709003" />
+    <street name="白山林场" code="230709401" />
+    <street name="丰岭林场" code="230709402" />
+    <street name="丰林林场" code="230709403" />
+    <street name="丰沟经营所" code="230709404" />
+    <street name="丰茂林场" code="230709405" />
+    <street name="横山经营所" code="230709406" />
+    <street name="丰丽林场" code="230709407" />
+    <street name="大昆仑经营所" code="230709408" />
+    <street name="小昆仑林场" code="230709409" />
+    <street name="育林经营所" code="230709410" />
+</county>
+<county name="五营" code="230710">
+    <street name="五营街道" code="230710001" />
+    <street name="五星街道" code="230710011" />
+    <street name="翠北林场" code="230710400" />
+    <street name="前丰林场" code="230710401" />
+    <street name="永丰经营所" code="230710402" />
+    <street name="平原经营所" code="230710403" />
+    <street name="丽丰经营所" code="230710404" />
+    <street name="杨树河经营所" code="230710405" />
+    <street name="平山经营所" code="230710406" />
+    <street name="丽林经营所" code="230710407" />
+</county>
+<county name="乌马河" code="230711">
+    <street name="乌马河街道" code="230711001" />
+    <street name="伊敏林场" code="230711400" />
+    <street name="伊东经营所" code="230711401" />
+    <street name="东方红农场" code="230711402" />
+    <street name="翠岭经营所" code="230711403" />
+    <street name="河北经营所" code="230711404" />
+    <street name="青山林场" code="230711405" />
+    <street name="育苗经营所" code="230711406" />
+    <street name="安全经营所" code="230711407" />
+    <street name="伊青经营所" code="230711408" />
+    <street name="前进经营所" code="230711409" />
+    <street name="西岭林场" code="230711410" />
+    <street name="伊林经营所" code="230711411" />
+</county>
+<county name="汤旺河" code="230712">
+    <street name="河南街道" code="230712001" />
+    <street name="河北街道" code="230712002" />
+    <street name="日新林场" code="230712400" />
+    <street name="石林林场" code="230712401" />
+    <street name="东升林场" code="230712402" />
+    <street name="二龙山林场" code="230712403" />
+    <street name="高峰林场" code="230712404" />
+    <street name="二清河林场" code="230712405" />
+    <street name="守虎山林场" code="230712406" />
+    <street name="泉石林场" code="230712407" />
+    <street name="峻岭林场" code="230712408" />
+    <street name="育林经营所" code="230712409" />
+    <street name="团结经营所" code="230712410" />
+    <street name="磨石山经营所" code="230712411" />
+    <street name="中心苗卜" code="230712412" />
+    <street name="克林经营所" code="230712413" />
+</county>
+<county name="带岭" code="230713">
+    <street name="带岭街道" code="230713001" />
+    <street name="大青川林场" code="230713400" />
+    <street name="东方红林场" code="230713401" />
+    <street name="秀水林场" code="230713402" />
+    <street name="永翠林场" code="230713403" />
+    <street name="明月林场" code="230713404" />
+    <street name="红光林场" code="230713405" />
+    <street name="秋沙鸭自然保护区" code="230713406" />
+    <street name="北列林场" code="230713407" />
+    <street name="南列林场" code="230713408" />
+    <street name="寒月林场" code="230713409" />
+    <street name="环山林场" code="230713410" />
+    <street name="凉水自然保护区" code="230713411" />
+</county>
+<county name="乌伊岭" code="230714">
+    <street name="乌伊岭街道" code="230714001" />
+    <street name="上游林场" code="230714400" />
+    <street name="美峰林场" code="230714401" />
+    <street name="美林林场" code="230714402" />
+    <street name="建新林场" code="230714403" />
+    <street name="移山林场" code="230714404" />
+    <street name="林海林场" code="230714405" />
+    <street name="桔源经营所" code="230714406" />
+    <street name="东克林林场" code="230714407" />
+    <street name="福民林场" code="230714408" />
+    <street name="阿廷河林场" code="230714409" />
+    <street name="永胜经营所" code="230714410" />
+    <street name="前卫林场" code="230714411" />
+</county>
+<county name="红星" code="230715">
+    <street name="红星街道" code="230715001" />
+    <street name="清水河经营所" code="230715400" />
+    <street name="五星河经营所" code="230715401" />
+    <street name="汤洪岭林场" code="230715402" />
+    <street name="汤北林场" code="230715403" />
+    <street name="霍吉河林场" code="230715404" />
+    <street name="二杨经营所" code="230715405" />
+    <street name="三杨林场" code="230715406" />
+    <street name="汤南林场" code="230715407" />
+    <street name="共青经营所" code="230715408" />
+    <street name="库斯特林场" code="230715409" />
+    <street name="二皮河经营所" code="230715410" />
+</county>
+<county name="上甘岭" code="230716">
+    <street name="红山街道" code="230716001" />
+    <street name="山峰林场" code="230716400" />
+    <street name="阳光林场" code="230716401" />
+    <street name="新风林场" code="230716402" />
+    <street name="卫国林场" code="230716403" />
+    <street name="查山经营所" code="230716404" />
+    <street name="长青经营所" code="230716405" />
+    <street name="青山农场" code="230716406" />
+    <street name="溪水经营所" code="230716407" />
+    <street name="蔚兰经营所" code="230716408" />
+    <street name="永绪经营所" code="230716409" />
+    <street name="美林经营所" code="230716410" />
+    <street name="红山经营所" code="230716411" />
+</county>
+<county name="嘉荫" code="230722">
+    <street name="朝阳镇" code="230722100" />
+    <street name="乌云镇" code="230722101" />
+    <street name="乌拉嘎镇" code="230722102" />
+    <street name="常胜乡" code="230722200" />
+    <street name="向阳乡" code="230722201" />
+    <street name="沪嘉乡" code="230722202" />
+    <street name="红光乡" code="230722203" />
+    <street name="保兴乡" code="230722204" />
+    <street name="青山乡" code="230722205" />
+    <street name="太平林场" code="230722400" />
+    <street name="清河林场" code="230722402" />
+    <street name="马连林场" code="230722404" />
+    <street name="嘉荫农场" code="230722500" />
+</county>
+<county name="铁力" code="230781">
+    <street name="铁力镇" code="230781100" />
+    <street name="双丰镇" code="230781101" />
+    <street name="桃山镇" code="230781102" />
+    <street name="朗乡镇" code="230781104" />
+    <street name="年丰乡" code="230781200" />
+    <street name="工农乡" code="230781201" />
+    <street name="王杨乡" code="230781202" />
+    <street name="铁力林业局" code="230781400" />
+    <street name="双丰林业局" code="230781401" />
+    <street name="桃山林业局" code="230781402" />
+    <street name="朗乡林业局" code="230781403" />
+    <street name="铁力农场" code="230781500" />
+</county>
+</city>
+</address>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="淄博" code="370300">
+<county name="淄川" code="370302">
+    <street name="般阳路街道" code="370302001" />
+    <street name="松龄路街道" code="370302002" />
+    <street name="钟楼街道" code="370302004" />
+    <street name="将军路街道" code="370302005" />
+    <street name="昆仑镇" code="370302102" />
+    <street name="岭子镇" code="370302104" />
+    <street name="西河镇" code="370302111" />
+    <street name="龙泉镇" code="370302112" />
+    <street name="寨里镇" code="370302113" />
+    <street name="罗村镇" code="370302114" />
+    <street name="洪山镇" code="370302115" />
+    <street name="双杨镇" code="370302116" />
+    <street name="太河镇" code="370302117" />
+</county>
+<county name="张店" code="370303">
+    <street name="车站街道" code="370303001" />
+    <street name="公园街道" code="370303002" />
+    <street name="杏园街道" code="370303003" />
+    <street name="和平街道" code="370303004" />
+    <street name="科苑街道" code="370303005" />
+    <street name="体育场街道" code="370303006" />
+    <street name="四宝山街道" code="370303008" />
+    <street name="马尚镇" code="370303100" />
+    <street name="南定镇" code="370303101" />
+    <street name="沣水镇" code="370303102" />
+    <street name="傅家镇" code="370303104" />
+    <street name="中埠镇" code="370303105" />
+    <street name="房镇镇" code="370303107" />
+</county>
+<county name="博山" code="370304">
+    <street name="城东街道" code="370304001" />
+    <street name="城西街道" code="370304002" />
+    <street name="山头街道" code="370304004" />
+    <street name="域城镇" code="370304102" />
+    <street name="白塔镇" code="370304103" />
+    <street name="八陡镇" code="370304106" />
+    <street name="石马镇" code="370304108" />
+    <street name="源泉镇" code="370304111" />
+    <street name="池上镇" code="370304112" />
+    <street name="博山镇" code="370304113" />
+</county>
+<county name="临淄" code="370305">
+    <street name="闻韶街道" code="370305001" />
+    <street name="雪宫街道" code="370305002" />
+    <street name="辛店街道" code="370305003" />
+    <street name="稷下街道" code="370305004" />
+    <street name="齐陵街道" code="370305005" />
+    <street name="齐都镇" code="370305100" />
+    <street name="皇城镇" code="370305102" />
+    <street name="敬仲镇" code="370305103" />
+    <street name="朱台镇" code="370305104" />
+    <street name="金岭镇" code="370305107" />
+    <street name="凤凰镇" code="370305109" />
+    <street name="金山镇" code="370305111" />
+</county>
+<county name="周村" code="370306">
+    <street name="丝绸路街道" code="370306001" />
+    <street name="大街街道" code="370306002" />
+    <street name="青年路街道" code="370306003" />
+    <street name="永安街道" code="370306004" />
+    <street name="城北路街道" code="370306005" />
+    <street name="北郊镇" code="370306100" />
+    <street name="南郊镇" code="370306101" />
+    <street name="王村镇" code="370306102" />
+    <street name="萌水镇" code="370306103" />
+    <street name="商家镇" code="370306104" />
+</county>
+<county name="桓台" code="370321">
+    <street name="索镇街道" code="370321001" />
+    <street name="少海街道" code="370321002" />
+    <street name="起凤镇" code="370321101" />
+    <street name="田庄镇" code="370321103" />
+    <street name="荆家镇" code="370321104" />
+    <street name="马桥镇" code="370321105" />
+    <street name="新城镇" code="370321107" />
+    <street name="唐山镇" code="370321109" />
+    <street name="果里镇" code="370321110" />
+</county>
+<county name="高青" code="370322">
+    <street name="田镇街道" code="370322001" />
+    <street name="芦湖街道" code="370322002" />
+    <street name="青城镇" code="370322101" />
+    <street name="高城镇" code="370322102" />
+    <street name="黑里寨镇" code="370322103" />
+    <street name="唐坊镇" code="370322104" />
+    <street name="常家镇" code="370322105" />
+    <street name="花沟镇" code="370322106" />
+    <street name="木李镇" code="370322108" />
+</county>
+<county name="沂源" code="370323">
+    <street name="历山街道" code="370323001" />
+    <street name="南麻镇" code="370323100" />
+    <street name="鲁村镇" code="370323102" />
+    <street name="东里镇" code="370323103" />
+    <street name="悦庄镇" code="370323104" />
+    <street name="西里镇" code="370323105" />
+    <street name="大张庄镇" code="370323106" />
+    <street name="中庄镇" code="370323107" />
+    <street name="张家坡镇" code="370323108" />
+    <street name="燕崖镇" code="370323109" />
+    <street name="石桥镇" code="370323110" />
+    <street name="南鲁山镇" code="370323111" />
+</county>
+</city>
+</address>

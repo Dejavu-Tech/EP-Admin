@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="鹤岗" code="230400">
+<county name="向阳" code="230402">
+    <street name="北山街道" code="230402001" />
+    <street name="红军街道" code="230402002" />
+    <street name="光明街道" code="230402003" />
+    <street name="胜利街道" code="230402004" />
+    <street name="南翼街道" code="230402005" />
+</county>
+<county name="工农" code="230403">
+    <street name="育才街道" code="230403001" />
+    <street name="红旗街道" code="230403002" />
+    <street name="新南街道" code="230403003" />
+    <street name="湖滨街道" code="230403004" />
+    <street name="解放街道" code="230403005" />
+    <street name="团结街道" code="230403006" />
+</county>
+<county name="南山" code="230404">
+    <street name="铁西街道" code="230404001" />
+    <street name="铁东街道" code="230404002" />
+    <street name="六号街道" code="230404003" />
+    <street name="大陆街道" code="230404004" />
+    <street name="富力街道" code="230404005" />
+    <street name="麓林山街道" code="230404006" />
+</county>
+<county name="兴安" code="230405">
+    <street name="兴安路街道" code="230405001" />
+    <street name="兴建路街道" code="230405002" />
+    <street name="兴长路街道" code="230405003" />
+    <street name="峻德路街道" code="230405004" />
+    <street name="河东路街道" code="230405005" />
+    <street name="光宇街道" code="230405006" />
+    <street name="红旗镇" code="230405100" />
+</county>
+<county name="东山" code="230406">
+    <street name="工人村街道" code="230406001" />
+    <street name="新一街道" code="230406002" />
+    <street name="三街街道" code="230406003" />
+    <street name="东山街道" code="230406004" />
+    <street name="蔬园乡街道" code="230406005" />
+    <street name="新华镇" code="230406100" />
+    <street name="蔬园乡" code="230406201" />
+    <street name="东方红乡" code="230406202" />
+    <street name="鹤岗市林业局" code="230406400" />
+    <street name="新华农场" code="230406500" />
+</county>
+<county name="兴山" code="230407">
+    <street name="岭北街道" code="230407001" />
+    <street name="岭南街道" code="230407002" />
+    <street name="沟北街道" code="230407003" />
+    <street name="沟南街道" code="230407004" />
+</county>
+<county name="萝北" code="230421">
+    <street name="凤翔镇" code="230421100" />
+    <street name="鹤北镇" code="230421101" />
+    <street name="名山镇" code="230421102" />
+    <street name="团结镇" code="230421103" />
+    <street name="肇兴镇" code="230421104" />
+    <street name="云山镇" code="230421105" />
+    <street name="东明朝鲜族乡" code="230421200" />
+    <street name="太平沟乡" code="230421203" />
+    <street name="萝北县林业局" code="230421400" />
+    <street name="鹤北林业局" code="230421401" />
+    <street name="宝泉岭管理局局直" code="230421500" />
+    <street name="江滨农场" code="230421501" />
+    <street name="军川农场" code="230421502" />
+    <street name="名山农场" code="230421503" />
+    <street name="延军农场" code="230421504" />
+    <street name="共青农场" code="230421505" />
+    <street name="宝泉岭农场" code="230421506" />
+    <street name="萝北县农业局" code="230421580" />
+</county>
+<county name="绥滨" code="230422">
+    <street name="绥滨镇" code="230422100" />
+    <street name="绥东镇" code="230422101" />
+    <street name="忠仁镇" code="230422102" />
+    <street name="连生乡" code="230422200" />
+    <street name="北岗乡" code="230422201" />
+    <street name="富强乡" code="230422202" />
+    <street name="北山乡" code="230422203" />
+    <street name="福兴乡" code="230422204" />
+    <street name="新富乡" code="230422205" />
+    <street name="绥滨西林场" code="230422400" />
+    <street name="国营中兴边防林场" code="230422401" />
+    <street name="忠仁镇良种场" code="230422480" />
+    <street name="绥东镇种畜场" code="230422481" />
+    <street name="二九０农场" code="230422500" />
+    <street name="绥滨农场" code="230422501" />
+    <street name="普阳农场" code="230422503" />
+</county>
+</city>
+</address>

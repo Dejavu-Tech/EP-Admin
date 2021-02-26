@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="呼伦贝尔" code="150700">
+<county name="海拉尔" code="150702">
+    <street name="正阳办事处" code="150702001" />
+    <street name="健康街道" code="150702002" />
+    <street name="靠山街道" code="150702003" />
+    <street name="胜利街道" code="150702004" />
+    <street name="呼伦街道" code="150702005" />
+    <street name="建设街道" code="150702007" />
+    <street name="哈克镇" code="150702100" />
+    <street name="奋斗镇" code="150702101" />
+</county>
+<county name="扎赉诺尔" code="150703">
+    <street name="第三街道" code="150703001" />
+    <street name="第一街道" code="150703002" />
+    <street name="第二街道" code="150703003" />
+    <street name="第四街道" code="150703004" />
+    <street name="第五街道" code="150703005" />
+    <street name="灵泉街道" code="150703006" />
+</county>
+<county name="阿荣" code="150721">
+    <street name="那吉镇" code="150721100" />
+    <street name="六合镇" code="150721101" />
+    <street name="亚东镇" code="150721102" />
+    <street name="霍尔奇镇" code="150721103" />
+    <street name="向阳峪镇" code="150721104" />
+    <street name="三岔河镇" code="150721105" />
+    <street name="复兴镇" code="150721106" />
+    <street name="得力其鄂温克民族乡" code="150721200" />
+    <street name="查巴奇鄂温克民族乡" code="150721201" />
+    <street name="音河达斡尔鄂温克民族乡" code="150721202" />
+    <street name="新发朝鲜民族乡" code="150721203" />
+    <street name="那吉屯农场" code="150721400" />
+    <street name="格尼河农场" code="150721401" />
+    <street name="阿荣旗林业局" code="150721402" />
+</county>
+<county name="莫力达瓦" code="150722">
+    <street name="尼尔基镇" code="150722100" />
+    <street name="红彦镇" code="150722101" />
+    <street name="宝山镇" code="150722102" />
+    <street name="哈达阳镇" code="150722103" />
+    <street name="阿尔拉镇" code="150722104" />
+    <street name="汉古尔河镇" code="150722105" />
+    <street name="西瓦尔图镇" code="150722106" />
+    <street name="腾克镇" code="150722108" />
+    <street name="奎勒河镇" code="150722109" />
+    <street name="塔温敖宝镇" code="150722110" />
+    <street name="巴彦鄂温克民族乡" code="150722200" />
+    <street name="库如奇乡" code="150722201" />
+    <street name="杜拉尔鄂温克民族乡" code="150722203" />
+    <street name="国营甘河农场" code="150722400" />
+    <street name="国营巴彦农场" code="150722401" />
+    <street name="国营欧肯河农场" code="150722402" />
+    <street name="国营东方红农场" code="150722403" />
+</county>
+<county name="鄂伦春" code="150723">
+    <street name="阿里河镇" code="150723100" />
+    <street name="大杨树镇" code="150723101" />
+    <street name="甘河镇" code="150723102" />
+    <street name="吉文镇" code="150723103" />
+    <street name="诺敏镇" code="150723104" />
+    <street name="乌鲁布铁镇" code="150723105" />
+    <street name="宜里镇" code="150723106" />
+    <street name="克一河镇" code="150723107" />
+    <street name="古里乡" code="150723200" />
+    <street name="托扎敏乡" code="150723201" />
+    <street name="大兴安岭管理局诺敏河农场" code="150723400" />
+    <street name="大兴安岭农场宜里农场" code="150723401" />
+    <street name="大兴安岭农场管理局扎赉河农场" code="150723402" />
+    <street name="大兴安岭农场管理局古里农场" code="150723403" />
+    <street name="加格达奇区" code="150723404" />
+    <street name="松岭地区" code="150723405" />
+    <street name="大杨树林业局" code="150723406" />
+    <street name="甘河林业局" code="150723407" />
+    <street name="克一河林业局" code="150723408" />
+    <street name="吉文林业局" code="150723409" />
+    <street name="阿里河林业局" code="150723410" />
+    <street name="大兴安岭农工商联合公司" code="150723411" />
+    <street name="大兴安岭农场管理局东方红农场" code="150723412" />
+    <street name="大兴安岭农场管理局欧肯河农场" code="150723413" />
+    <street name="大兴安岭林管局毕拉河林业局" code="150723414" />
+    <street name="大兴安岭林管局伊图里河林业局" code="150723415" />
+    <street name="大兴安岭林管局库都尔林业局" code="150723416" />
+    <street name="大兴安岭林管局乌尔其汗林业局" code="150723417" />
+</county>
+<county name="鄂温克" code="150724">
+    <street name="巴彦托海镇" code="150724100" />
+    <street name="大雁镇" code="150724110" />
+    <street name="伊敏河镇" code="150724111" />
+    <street name="红花尔基镇" code="150724112" />
+    <street name="巴彦查岗苏木" code="150724210" />
+    <street name="锡尼河西苏木" code="150724211" />
+    <street name="锡尼河东苏木" code="150724212" />
+    <street name="巴彦塔拉达斡尔民族乡" code="150724213" />
+    <street name="伊敏苏木" code="150724214" />
+    <street name="辉苏木" code="150724215" />
+    <street name="巴彦托海经济开发区" code="150724400" />
+    <street name="伊敏河高载能工业园区" code="150724401" />
+    <street name="大雁马铃薯高新技术示范园区" code="150724402" />
+    <street name="呼伦贝尔新城区" code="150724403" />
+</county>
+<county name="陈巴尔虎" code="150725">
+    <street name="陈旗巴彦库仁镇" code="150725100" />
+    <street name="陈旗宝日希勒镇" code="150725101" />
+    <street name="陈旗呼和诺尔镇" code="150725102" />
+    <street name="陈旗西乌珠尔苏木" code="150725200" />
+    <street name="陈旗鄂温克民族苏木" code="150725201" />
+    <street name="陈旗东乌珠尔苏木" code="150725202" />
+    <street name="陈旗巴彦哈达苏木" code="150725203" />
+    <street name="陈巴尔虎旗国营哈图达牧场" code="150725501" />
+    <street name="陈旗国营浩特陶海农牧场" code="150725502" />
+    <street name="陈旗国营特泥河牧场" code="150725503" />
+</county>
+<county name="新巴尔虎左" code="150726">
+    <street name="嵯岗镇" code="150726101" />
+    <street name="阿木古郎镇" code="150726102" />
+    <street name="新宝力格苏木乡" code="150726202" />
+    <street name="乌布尔宝力格苏木乡" code="150726203" />
+    <street name="罕达盖苏木" code="150726204" />
+    <street name="吉布胡郎图苏木" code="150726205" />
+    <street name="甘珠尔苏木" code="150726206" />
+    <street name="嵯岗双娃牧场" code="150726400" />
+</county>
+<county name="新巴尔虎右" code="150727">
+    <street name="阿拉坦额莫勒镇" code="150727100" />
+    <street name="阿日哈沙特镇" code="150727101" />
+    <street name="呼伦镇" code="150727102" />
+    <street name="贝尔苏木" code="150727200" />
+    <street name="克尔伦苏木" code="150727201" />
+    <street name="达赉苏木" code="150727202" />
+    <street name="宝格德乌拉苏木" code="150727203" />
+    <street name="敖尔金牧场" code="150727500" />
+</county>
+<county name="满洲里" code="150781">
+    <street name="东山街道" code="150781001" />
+    <street name="道南街道" code="150781002" />
+    <street name="道北街道" code="150781003" />
+    <street name="兴华街道" code="150781004" />
+    <street name="新开河街道" code="150781011" />
+    <street name="满洲里市互市贸易区" code="150781400" />
+    <street name="满洲里市经济合作区" code="150781401" />
+    <street name="满洲里市东湖区" code="150781402" />
+    <street name="满洲里市扎煤公司" code="150781403" />
+    <street name="扎赉诺尔矿区" code="150781404" />
+    <street name="满洲里市工业园区" code="150781405" />
+</county>
+<county name="牙克石" code="150782">
+    <street name="胜利街道" code="150782001" />
+    <street name="红旗街道" code="150782002" />
+    <street name="新工街道" code="150782003" />
+    <street name="永兴街道" code="150782004" />
+    <street name="建设街道" code="150782005" />
+    <street name="暖泉街道" code="150782006" />
+    <street name="东兴街道" code="150782007" />
+    <street name="免渡河镇" code="150782100" />
+    <street name="博克图镇" code="150782101" />
+    <street name="绰河源镇" code="150782102" />
+    <street name="乌尔其汉镇" code="150782103" />
+    <street name="库都尔镇" code="150782104" />
+    <street name="图里河镇" code="150782105" />
+    <street name="乌奴耳镇" code="150782106" />
+    <street name="塔尔气镇" code="150782107" />
+    <street name="伊图里河镇" code="150782108" />
+    <street name="莫拐农场" code="150782400" />
+    <street name="牙克石农场" code="150782401" />
+    <street name="免渡河农场" code="150782402" />
+</county>
+<county name="扎兰屯" code="150783">
+    <street name="兴华街道" code="150783001" />
+    <street name="正阳街道" code="150783002" />
+    <street name="繁荣街道" code="150783003" />
+    <street name="向阳街道" code="150783004" />
+    <street name="高台子街道" code="150783005" />
+    <street name="铁东街道" code="150783006" />
+    <street name="河西街道" code="150783007" />
+    <street name="磨菇气镇" code="150783100" />
+    <street name="卧牛河镇" code="150783102" />
+    <street name="成吉思汗镇" code="150783103" />
+    <street name="大河湾镇" code="150783104" />
+    <street name="浩饶山镇" code="150783105" />
+    <street name="柴河镇" code="150783106" />
+    <street name="中和镇" code="150783107" />
+    <street name="哈多河镇" code="150783108" />
+    <street name="达斡尔民族乡" code="150783200" />
+    <street name="鄂伦春民族乡" code="150783201" />
+    <street name="萨马街鄂温克民族乡" code="150783202" />
+    <street name="洼堤乡" code="150783203" />
+    <street name="大河湾农场" code="150783400" />
+    <street name="绰尔河农场" code="150783401" />
+    <street name="扎兰屯马场" code="150783402" />
+    <street name="成吉思汗牧场" code="150783403" />
+    <street name="公安部后勤供应处农场" code="150783404" />
+    <street name="南木林业局" code="150783405" />
+    <street name="柴河林业局" code="150783406" />
+    <street name="扎兰屯市林业局" code="150783407" />
+    <street name="市原种场" code="150783408" />
+</county>
+<county name="额尔古纳" code="150784">
+    <street name="拉布达林街道" code="150784001" />
+    <street name="上库力街道" code="150784002" />
+    <street name="黑山头镇" code="150784101" />
+    <street name="莫尔道嘎镇" code="150784103" />
+    <street name="恩和哈达镇" code="150784104" />
+    <street name="三河回族乡" code="150784200" />
+    <street name="恩和俄罗斯族民族乡" code="150784210" />
+    <street name="蒙兀室韦苏木" code="150784211" />
+    <street name="奇乾乡" code="150784212" />
+    <street name="海拉尔农垦集团有限公司拉布大林农场分公司" code="150784400" />
+    <street name="三河金騋农牧有限责任公司" code="150784401" />
+    <street name="海拉尔农垦集团有限责任公司上库力农场分公司" code="150784402" />
+    <street name="海拉尔农垦集团有限责任公司苏沁牧场分公司" code="150784403" />
+</county>
+<county name="根河" code="150785">
+    <street name="河东街道" code="150785001" />
+    <street name="河西街道" code="150785002" />
+    <street name="森工街道" code="150785003" />
+    <street name="金河镇" code="150785101" />
+    <street name="阿龙山镇" code="150785102" />
+    <street name="满归镇" code="150785103" />
+    <street name="得耳布尔镇" code="150785104" />
+    <street name="敖鲁古雅乡" code="150785200" />
+</county>
+</city>
+</address>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="北海" code="450500">
+<county name="海城" code="450502">
+    <street name="中街街道" code="450502001" />
+    <street name="东街街道" code="450502002" />
+    <street name="西街街道" code="450502003" />
+    <street name="海角街道" code="450502004" />
+    <street name="地角街道" code="450502005" />
+    <street name="高德街道" code="450502006" />
+    <street name="驿马街道" code="450502007" />
+    <street name="涠洲镇" code="450502100" />
+</county>
+<county name="银海" code="450503">
+    <street name="福成镇" code="450503100" />
+    <street name="银滩镇" code="450503101" />
+    <street name="平阳镇" code="450503102" />
+    <street name="侨港镇" code="450503103" />
+</county>
+<county name="铁山港" code="450512">
+    <street name="南康镇" code="450512100" />
+    <street name="营盘镇" code="450512101" />
+    <street name="兴港镇" code="450512102" />
+</county>
+<county name="合浦" code="450521">
+    <street name="廉州镇" code="450521100" />
+    <street name="党江镇" code="450521101" />
+    <street name="西场镇" code="450521102" />
+    <street name="沙岗镇" code="450521103" />
+    <street name="乌家镇" code="450521104" />
+    <street name="闸口镇" code="450521105" />
+    <street name="公馆镇" code="450521106" />
+    <street name="白沙镇" code="450521107" />
+    <street name="山口镇" code="450521108" />
+    <street name="沙田镇" code="450521109" />
+    <street name="石湾镇" code="450521110" />
+    <street name="石康镇" code="450521111" />
+    <street name="常乐镇" code="450521112" />
+    <street name="曲樟乡" code="450521200" />
+    <street name="星岛湖乡" code="450521201" />
+</county>
+</city>
+</address>

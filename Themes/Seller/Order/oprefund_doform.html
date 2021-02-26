@@ -1,0 +1,36 @@
+<div class="modal-dialog modal-dialog-centered btn-showcase">
+    <div class="modal-content">
+        <form class="form-horizontal form-validate" action="{:U('order/oprefund_doform')}" method="post" enctype="multipart/form-data">
+            <input type='hidden' name='ref_id' value='{$ref_id}' />
+            <div class="modal-header">
+                <h5 class="modal-title">平台审核</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <textarea style="height:150px;" class="form-control" name="remarkrefund"  placeholder="审核备注" >{$item['remarkrefund']}</textarea>
+                <label class="m-t-15"><input type="checkbox" name="is_forbidden" value="1" />禁止再次发起</label>
+            </div>
+            <div class="modal-footer">
+
+                <input type="hidden" id="sb_type" name="cansub" value="1" />
+
+                <button class="btn btn-primary btn-order" type="submit" data-value="1" name="cansub">同意</button>
+                <button class="btn btn-secondary btn-order" type="submit" data-value="2" name="ref_sub" >拒绝</button>
+                <!--<button data-dismiss="modal" class="btn btn-pill btn-primary" type="button">取消</button>-->
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    //没有选中时间段不能导出
+    $(function () {
+        $('.btn').click(function () {
+            var e = $(this).attr('data-value');
+
+           $('#sb_type').val(e);
+
+        })
+    })
+</script>
+

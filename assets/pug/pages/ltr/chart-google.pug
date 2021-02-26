@@ -1,0 +1,134 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var googlechart           = true;
+- var page_googlechart      = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Google
+                                      span
+                                        | Chart
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Charts
+                                      li.breadcrumb-item.active Google Chart
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Pie Chart 
+                                span.digits 1
+                            .card-body.chart-block.p-0
+                              #pie-chart1.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Pie Chart 
+                                span.digits 2
+                            .card-body.chart-block.p-0
+                              #pie-chart2.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Pie Chart 
+                                span.digits 3
+                            .card-body.chart-block.p-0
+                              #pie-chart3.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Pie Chart 
+                                span.digits 4
+                            .card-body.chart-block.p-0
+                              #pie-chart4.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Area Chart 
+                                span.digits 1
+                            .card-body.chart-block.p-0
+                              #area-chart1.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Area Chart 
+                                span.digits 2
+                            .card-body.chart-block.p-0
+                              #area-chart2.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Column Chart 
+                                span.digits 1
+                            .card-body.chart-block
+                              #column-chart1.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5
+                                | Column Chart 
+                                span.digits 2
+                            .card-body.chart-block
+                              #column-chart2.chart-overflow
+                        .col-sm-12.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5 Gantt Chart
+                            .card-body.chart-block
+                              #gantt_chart.chart-overflow
+                        .col-sm-12.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5 Line Chart
+                            .card-body.chart-block
+                              #line-chart.chart-overflow
+                        .col-sm-12.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5 Combo Chart
+                            .card-body.chart-block.p-0
+                              #combo-chart.chart-overflow
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5 bar-chart2
+                            .card-body.chart-block
+                              #bar-chart2
+                        .col-sm-12.col-xl-6.box-col-12.xl-100
+                          .card
+                            .card-header
+                              h5 word tree
+                            .card-body.chart-block
+                              #wordtree_basic.word-tree
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

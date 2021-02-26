@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="武威" code="620600">
+<county name="凉州" code="620602">
+    <street name="东大街街道" code="620602001" />
+    <street name="西大街街道" code="620602002" />
+    <street name="东关街街道" code="620602003" />
+    <street name="西关街街道" code="620602004" />
+    <street name="火车站街街道" code="620602005" />
+    <street name="地质新村街街道" code="620602006" />
+    <street name="荣华街街道" code="620602007" />
+    <street name="黄羊河街道" code="620602008" />
+    <street name="黄羊镇" code="620602100" />
+    <street name="武南镇" code="620602101" />
+    <street name="清源镇" code="620602102" />
+    <street name="永昌镇" code="620602103" />
+    <street name="双城镇" code="620602104" />
+    <street name="丰乐镇" code="620602105" />
+    <street name="高坝镇" code="620602106" />
+    <street name="金羊镇" code="620602107" />
+    <street name="和平镇" code="620602108" />
+    <street name="羊下坝镇" code="620602109" />
+    <street name="中坝镇" code="620602110" />
+    <street name="永丰镇" code="620602111" />
+    <street name="古城镇" code="620602112" />
+    <street name="张义镇" code="620602113" />
+    <street name="发放镇" code="620602114" />
+    <street name="西营镇" code="620602115" />
+    <street name="四坝镇" code="620602116" />
+    <street name="洪祥镇" code="620602117" />
+    <street name="谢河镇" code="620602118" />
+    <street name="五和乡" code="620602200" />
+    <street name="韩佐乡" code="620602201" />
+    <street name="松树乡" code="620602202" />
+    <street name="大柳乡" code="620602203" />
+    <street name="长城乡" code="620602204" />
+    <street name="金沙乡" code="620602205" />
+    <street name="柏树乡" code="620602206" />
+    <street name="金塔乡" code="620602207" />
+    <street name="下双乡" code="620602208" />
+    <street name="九墩乡" code="620602209" />
+    <street name="怀安乡" code="620602210" />
+    <street name="金山乡" code="620602211" />
+    <street name="清水乡" code="620602212" />
+    <street name="吴家井乡" code="620602213" />
+    <street name="新华乡" code="620602214" />
+    <street name="康宁乡" code="620602215" />
+    <street name="东河乡" code="620602216" />
+    <street name="河东乡" code="620602217" />
+    <street name="九墩滩指挥部" code="620602400" />
+</county>
+<county name="民勤" code="620621">
+    <street name="三雷镇" code="620621100" />
+    <street name="东坝镇" code="620621101" />
+    <street name="泉山镇" code="620621102" />
+    <street name="西渠镇" code="620621103" />
+    <street name="东湖镇" code="620621104" />
+    <street name="红沙岗镇" code="620621105" />
+    <street name="昌宁乡" code="620621200" />
+    <street name="蔡旗乡" code="620621201" />
+    <street name="重兴乡" code="620621202" />
+    <street name="薛百乡" code="620621203" />
+    <street name="大坝乡" code="620621204" />
+    <street name="苏武乡" code="620621205" />
+    <street name="夹河乡" code="620621206" />
+    <street name="大滩乡" code="620621207" />
+    <street name="双茨科乡" code="620621208" />
+    <street name="红沙梁乡" code="620621209" />
+    <street name="收成乡" code="620621210" />
+    <street name="南湖乡" code="620621211" />
+</county>
+<county name="古浪" code="620622">
+    <street name="古浪镇" code="620622100" />
+    <street name="泗水镇" code="620622101" />
+    <street name="土门镇" code="620622102" />
+    <street name="大靖镇" code="620622103" />
+    <street name="裴家营镇" code="620622104" />
+    <street name="海子滩镇" code="620622105" />
+    <street name="定宁镇" code="620622106" />
+    <street name="黄羊川镇" code="620622107" />
+    <street name="黑松驿镇" code="620622108" />
+    <street name="永丰滩乡" code="620622200" />
+    <street name="黄花滩乡" code="620622201" />
+    <street name="西靖乡" code="620622202" />
+    <street name="民权乡" code="620622203" />
+    <street name="直滩乡" code="620622204" />
+    <street name="新堡乡" code="620622205" />
+    <street name="干城乡" code="620622206" />
+    <street name="横梁乡" code="620622207" />
+    <street name="十八里堡乡" code="620622208" />
+    <street name="古丰乡" code="620622209" />
+</county>
+<county name="天祝" code="620623">
+    <street name="华藏寺镇" code="620623100" />
+    <street name="打柴沟镇" code="620623101" />
+    <street name="安远镇" code="620623102" />
+    <street name="炭山岭镇" code="620623103" />
+    <street name="哈溪镇" code="620623104" />
+    <street name="赛什斯镇" code="620623105" />
+    <street name="石门镇" code="620623106" />
+    <street name="松山镇" code="620623107" />
+    <street name="天堂镇" code="620623108" />
+    <street name="东坪乡" code="620623201" />
+    <street name="赛拉隆乡" code="620623202" />
+    <street name="东大滩乡" code="620623203" />
+    <street name="抓喜秀龙乡" code="620623204" />
+    <street name="西大滩乡" code="620623205" />
+    <street name="朵什乡" code="620623206" />
+    <street name="大红沟乡" code="620623207" />
+    <street name="毛藏乡" code="620623208" />
+    <street name="祁连乡" code="620623209" />
+    <street name="旦马乡" code="620623210" />
+    <street name="天祝煤电公司" code="620623400" />
+    <street name="天祝建材厂" code="620623401" />
+</county>
+</city>
+</address>

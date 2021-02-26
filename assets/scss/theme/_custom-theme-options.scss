@@ -1,0 +1,4721 @@
+/**=====================
+   59. theme layout CSS Start
+==========================**/
+//Sidebar color scss
+$color1 : #405365;
+$color2 : #1C1D1E;
+$color3 : #0c0c3c;
+$color4 : #0747a6;
+$color5 : #4d3096;
+@each $bg-name, $bg-color in (color1, $color1),
+(color2, $color2) ,
+(color3, $color3),
+(color4, $color4),
+(color5, $color5),
+(light, $light-color),
+(dark, #2f3c4e){
+    .bg-#{$bg-name}{
+        background-color:$bg-color ;
+    }
+}
+$i:1;
+@while $i<=6 {
+    .bg-pattern#{$i}{
+        background-image: url(../images/sidebar-pattern/#{$i}.png);
+        background-color: #2f3c4e;
+    }
+    .bg-img#{$i}{
+        background-image: url(../images/sidebar-image/#{$i}.jpg);
+    }
+    $i:$i+1;
+}
+.page-wrapper {
+    .page-body-wrapper {
+        .page-sidebar{
+            @each $sidebar-name, $sidebar-color in (color1, $color1),
+            (color2, $color2) ,
+            (color3, $color3),
+            (color4, $color4),
+            (color5, $color5),
+            (light, $light-color),
+            (dark, #2f3c4e){
+                &.#{$sidebar-name}-sidebar{
+                    background-color: $sidebar-color;
+                    .sidebar-menu {
+                        > li {
+                            > a {
+                                &:hover {
+                                    color: $white;
+                                }
+                            }
+                        }
+                        .sidebar-submenu {
+                            > li{
+                                > a{
+                                    &:hover,&.active{
+                                        color: $white;
+                                    }
+                                }
+                                &.active {
+                                    > a{
+                                        &.active{
+                                            color: $white;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                    @if($sidebar-name == light){
+                        .sidebar-user {
+                            h6{
+                                color: $primary-color;
+                            }
+                            p{
+                                color:  $theme-body-font-color
+                            }
+                        }
+                        .sidebar-menu {
+                            > li {
+                                > a {
+                                    color: $theme-body-font-color;
+                                    &:hover {
+                                        color: $primary-color;
+                                    }
+                                }
+                            }
+                            .sidebar-submenu {
+                                > li{
+                                    > a{
+                                        color: $theme-body-font-color;
+                                        &:hover,&.active{
+                                            color: $primary-color;
+                                        }
+                                    }
+                                    &.active {
+                                        > a{
+                                            &.active{
+                                                color: $primary-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            $i:1;
+            @while $i<=6 {
+                &.sidebar-pattern#{$i}{
+                    background-image: url(../images/sidebar-pattern/#{$i}.png);
+                    background-color: #2f3c4e !important;
+                }
+                &.sidebar-img#{$i}{
+                    background-image: url(../images/sidebar-image/#{$i}.jpg);
+                }
+                $i:$i+1;
+            }
+        }
+    }
+}
+//Sidebar settings
+.page-wrapper {
+    .page-body-wrapper {
+        .page-sidebar{
+            .sidebar-header {
+                transition: all 0.3s ease;
+            }
+        }
+        &.sidebar-icon {
+            .page-sidebar {
+                &.light-sidebar {
+                    .sidebar-menu {
+                        li {
+                            &:hover {
+                                .single-header {
+                                    background-color: $light-color !important;
+                                }
+                                .sidebar-submenu {
+                                    background-color: $light-color !important;
+                                }
+                            }
+                            a:hover + ul {
+                                background-color: $light-color !important;
+                            }
+                            ul {
+                                li{
+                                    &:hover {
+                                        .sidebar-submenu {
+                                            background-color: $light-color !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.color1-sidebar {
+                    .sidebar-menu {
+                        li {
+                            &:hover {
+                                .single-header {
+                                    background-color: $color1 !important;
+                                }
+                                .sidebar-submenu {
+                                    background-color: $color1 !important;
+                                }
+                            }
+                            a:hover + ul {
+                                background-color: $color1 !important;
+                            }
+                            ul {
+                                li{
+                                    &:hover {
+                                        .sidebar-submenu {
+                                            background-color: $color1 !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.color2-sidebar {
+                    .sidebar-menu {
+                        li {
+                            &:hover {
+                                .single-header {
+                                    background-color: $color2 !important;
+                                }
+                                .sidebar-submenu {
+                                    background-color: $color2 !important;
+                                }
+                            }
+                            a:hover + ul {
+                                background-color: $color2 !important;
+                            }
+                            ul {
+                                li{
+                                    &:hover {
+                                        .sidebar-submenu {
+                                            background-color: $color2 !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.color3-sidebar {
+                    .sidebar-menu {
+                        li {
+                            &:hover {
+                                .single-header {
+                                    background-color: $color3 !important;
+                                }
+                                .sidebar-submenu {
+                                    background-color: $color3 !important;
+                                }
+                            }
+                            a:hover + ul {
+                                background-color: $color3 !important;
+                            }
+                            ul {
+                                li{
+                                    &:hover {
+                                        .sidebar-submenu {
+                                            background-color: $color3 !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.color4-sidebar {
+                    .sidebar-menu {
+                        li {
+                            &:hover {
+                                .single-header {
+                                    background-color: $color4 !important;
+                                }
+                                .sidebar-submenu {
+                                    background-color: $color4 !important;
+                                }
+                            }
+                            a:hover + ul {
+                                background-color: $color4 !important;
+                            }
+                            ul {
+                                li{
+                                    &:hover {
+                                        .sidebar-submenu {
+                                            background-color: $color4 !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.color5-sidebar {
+                    .sidebar-menu {
+                        li {
+                            &:hover {
+                                .single-header {
+                                    background-color: $color5 !important;
+                                }
+                                .sidebar-submenu {
+                                    background-color: $color5 !important;
+                                }
+                            }
+                            a:hover + ul {
+                                background-color: $color5 !important;
+                            }
+                            ul {
+                                li{
+                                    &:hover {
+                                        .sidebar-submenu {
+                                            background-color: $color5 !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Dark layout
+body {
+    &.light-only{
+        .page-wrapper{
+            .page-body-wrapper{
+                .page-sidebar{
+                    background-color: $white;
+                    .sidebar-user {
+                        h6{
+                            color: $primary-color;
+                        }
+                        p{
+                            color:  $theme-body-font-color
+                        }
+                    }
+                    .sidebar-menu {
+                        > li {
+                            > a {
+                                color: $theme-body-font-color;
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                        .sidebar-submenu {
+                            > li{
+                                > a{
+                                    color: $theme-body-font-color;
+                                    &:hover,&.active{
+                                        color: $primary-color;
+                                    }
+                                }
+                                &.active {
+                                    > a{
+                                        &.active{
+                                            color: $primary-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .sidebar {
+                        &:hover {
+                            &.custom-scrollbar {
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: rgba(0, 0, 0, 0.15);
+                                }
+                            }
+                        }
+                    }
+                }
+                .page-body {
+                    background-color: $light-color;
+                }
+            }
+        }
+    }
+
+    &.dark-only {
+        color: $dark-all-font-color;
+        background-color: $dark-body-background;
+        .page-link {
+            background-color: $dark-card-background;
+            border-color: $dark-border-color;
+        }
+        .close {
+            color: $dark-small-font-color;
+        }
+        .dataTables_paginate {
+            border: 1px solid $dark-border-color;
+            color: $dark-all-font-color;
+            .paginate_button {
+                color: $dark-all-font-color !important;
+                &.current,
+                &:active{
+                    border-color: $primary-color;
+                }
+            }
+            .paginate_button.disabled {
+                color: $dark-small-font-color !important;
+                &:hover, :active {
+                    color: $dark-small-font-color !important;
+                }
+            }
+        }
+        .nav-material.nav-tabs {
+            border-bottom: 1px solid $dark-border-color;
+            .nav-item {
+                .nav-link{
+                    color: $dark-all-font-color;
+                }
+            }
+            .nav-link{
+                &.active,
+                &:focus,
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        .checkbox {
+            label {
+                &::before {
+                    background: $dark-body-background;
+                    border-color: $dark-border-color;
+                }
+            }
+        }
+        .cont, .sub-cont {
+            background: $dark-card-background;
+        }
+        .page-item.disabled {
+            .page-link {
+                background-color: $dark-card-background;
+                border-color: $dark-border-color;
+            }
+        }
+        .page-wrapper .page-body-wrapper .iconsidebar-menu .iconMenu-bar .iconbar-mainmenu li.active a.active{
+                color: $white;
+                font-weight: 700;
+        }
+        .activity-table .activity-details h6 {
+            color: $light-color;
+        }
+        .activity-table .light-text {
+            color: rgba(255, 255, 255, 0.3);
+
+        }
+        .apexcharts-tooltip {
+            &.light {
+                border: 1px solid $dark-border-color;
+                background: $dark-body-background;
+            }
+            .apexcharts-tooltip-title {
+                background: $dark-card-background;
+                border-bottom: 1px solid $dark-border-color;
+            }
+        }
+        .default-chart {
+            .apex-widgets {
+                #area-widget-chart, #area-widget-chart-2, #area-widget-chart-3, #area-widget-chart-4  {
+                    .apexcharts-tooltip {
+                        &.light {
+                            border: 1px solid #e3e3e3;
+                        }
+                    }
+                }
+            }
+        }
+        .area-range-apex {
+            .apexcharts-tooltip {
+                &.light {
+                    border: 1px solid #e3e3e3;
+                }
+            }
+        }
+        .card{
+            &.card-bg{
+                background-color: #181a2d !important;
+                .card-header{
+                    background-color: transparent;
+                }
+            }
+            .card-header{
+                border-bottom: 1px solid $dark-border-color;
+                background-color: $dark-card-background;
+                &.no-border{
+                    border-bottom: none;
+                }
+            }
+        }
+        .setting-dot{
+            .setting-bg{
+                background-color: $secondary-color;
+            }
+        }
+        .bookmark.pull-right {
+            border: 1px solid $dark-border-color;
+        }
+        .card{
+            .card-header{
+                h5{
+                    background: unset;
+                    -webkit-text-fill-color: $white;
+                }
+            }
+        }
+        .timeline-circle{
+            .media{
+                .timeline-background{
+                    .timeline-dot-success{
+                        background: $dark-body-background;
+                    }
+                    .timeline-dot-primary{
+                        background: $dark-body-background;
+                    }
+                    .timeline-dot-warning{
+                        background: $dark-body-background;
+                    }
+                    .timeline-dot-secondary{
+                        background: $dark-body-background;
+                    }
+                    .timeline-dot-info{
+                        background: $dark-body-background;
+                    }
+                }
+                p,span{
+                    color:$dark-all-font-color;
+                }
+            }
+        }
+        .add-post {
+            form {
+                textarea {
+                    background-color: $dark-body-background;
+                    border-color: $dark-border-color;
+                }
+            }
+        }
+        // peity chart
+        .peity-charts {
+            svg {
+                filter: drop-shadow(12px 12px 7px rgba($dark-body-background,0.3));
+            }
+            .donut, .pie {
+                ~ svg {
+                    path {
+                        &:nth-child(even) {
+                            fill: $dark-body-background;
+                        }
+                    }
+                }
+            }
+        }
+        .data-attributes {
+            span {
+                ~ svg {
+                    path {
+                        &:last-child {
+                            fill: $dark-body-background;
+                        }
+                    }
+                }
+            }
+        }
+        // google chart
+        #area-chart1, #area-chart2, #combo-chart {
+            svg {
+                g {
+                    g {
+                        g {
+                            rect[height="1"] {
+                                fill: $dark-border-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // apex chart
+        #basic-apex, #basic-bar, #column-chart, #chart-bubble, #candlestick, #stepline, #annotationchart, #mixedchart {
+            svg {
+                .apexcharts-grid {
+                    line {
+                        stroke : $dark-border-color ;
+                    }
+                }
+            }
+        }
+        #radarchart {
+            .apexcharts-radar-series {
+                polygon {
+                    stroke: $dark-border-color;
+                    &:nth-child(even) {
+                        fill: $dark-card-background;
+                    }
+                }
+                line {
+                    stroke: $dark-border-color;
+                }
+            }
+        }
+        // mega options
+        .mega-inline, .mega-horizontal, .mega-vertical {
+            .card  {
+                border-color: $dark-border-color;
+            }
+        }
+        // image cropper
+        .img-cropper {
+            .docs-options {
+                .dropdown-menu {
+                    .form-check-label {
+                        color: $dark-all-font-color;
+                    }
+                    >li {
+                        &:hover {
+                            background-color: $dark-card-background;
+                        }
+                    }
+                }
+            }
+        }
+        // general widget
+        .general-widget {
+            .table {
+                tr {
+                    td {
+                        border-bottom: 1px solid $dark-border-color;
+                    }
+                }
+            }
+        }
+        // cypto dashboard css start
+        .btc-buy-sell {
+            .btc-amount {
+                span {
+                    color: $dark-all-font-color;
+                }
+            }
+        }
+        .crypto-graph-card{
+            .media{
+                .bitcoin-graph-content{
+                    span{
+                        color: $dark-all-font-color;
+                    }
+                }
+            }
+        }
+        .crypto-table-market{
+            table{
+                thead{
+                    tr{
+                        th{
+                            background-color: #2a3849;
+                        }
+                    }
+                }
+            }
+        }
+         // cypto dashboard css end
+        .apex-chart-container{
+            .apexcharts-legend{
+                .apexcharts-legend-series{
+                    span{
+                        color: $dark-all-font-color !important;
+                    }
+                }
+            }
+        }
+        .apexcharts-canvas{
+            svg{
+                .apexcharts-title-text{
+                    fill: $white;
+                }
+                .apexcharts-subtitle-text{
+                    fill: $white;
+                }
+                .apexcharts-yaxis{
+                    .apexcharts-yaxis-texts-g{
+                        .apexcharts-yaxis-label{
+                            fill: $white;
+                        }
+                    }
+
+                }
+                .apexcharts-xaxis{
+                    .apexcharts-xaxis-texts-g{
+                        .apexcharts-xaxis-label{
+                            fill: $white;
+                        }
+                    }
+
+                }
+                .apexcharts-legend-series{
+                    span{
+                        color: $dark-all-font-color !important;
+                    }
+                }
+                .apexcharts-datalabels-group{
+                    .apexcharts-datalabel-label{
+                        fill: $white;
+                    }
+                    .apexcharts-datalabel-value{
+                        fill: $white;
+                    }
+                }
+            }
+        }
+        .Typeahead-menu {
+            background-color: $dark-body-background;
+            .ProfileCard {
+                &:hover {
+                    background-color: $dark-card-background;
+                    color: $dark-all-font-color;
+                }
+            }
+        }
+        // ecommerce dashboard css start
+        .ecommerce-widget {
+            border: 1px solid $dark-border-color;
+        }
+        #area-spaline {
+            svg {
+                .apexcharts-grid {
+                    line {
+                        stroke: $dark-border-color !important;
+                    }
+                }
+                .apexcharts-inner {
+                    defs {
+                        linearGradient {
+                           stop[stop-opacity="1"] {
+                             stop-color: $dark-card-background !important;
+                           }
+                        }
+                    }
+                }
+            }
+        }
+        // ecommerce dashboard css end
+        .bookmark {
+            ul {
+                li {
+                    .search-form {
+                        .form-control-search {
+                            input {
+                                background-color: $dark-body-background;
+                                border: 1px solid $dark-border-color;
+                                color: $dark-all-font-color;
+                            }
+                            &:before {
+                                background: $dark-border-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .cart {
+            .qty-box {
+                .input-group {
+                    .btn {
+                        background-color: $dark-border-color !important;
+                        border-color: $dark-border-color !important;
+                    }
+                }
+            }
+        }
+        .checkout{
+            .checkout-details {
+                background-color: $dark-body-background;
+                border: 1px solid $dark-border-color;
+                padding: 40px;
+            }
+        }
+        .order-box {
+            .title-box{
+                color: #bfc2c6;
+                border-bottom: 1px solid $dark-border-color;
+            }
+            .qty {
+                li{
+                    color: #bfc2c6;
+                    span{
+                        color: #bfc2c6;
+                    }
+                }
+                border-bottom: 1px solid $dark-border-color;
+            }
+            .sub-total {
+                li{
+                    color: #bfc2c6;
+                }
+            }
+            .total {
+                li{
+                    color: #bfc2c6;
+                }
+            }
+        }
+        .shopping-checkout-option{
+            .checkbox_animated{
+                &:after{
+                    border: 2px solid $dark-border-color;
+                }
+            }
+        }
+        .animate-chk{
+            .radio_animated{
+                &:after{
+                    border: 2px solid $dark-border-color;
+                }
+            }
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: rgba(41, 50, 64, 0.52);
+        }
+        .card {
+            .card-header {
+                .card-header-right {
+                    background-color: $dark-card-background;
+                }
+            }
+        }
+        .product-box {
+            .product-img {
+                .product-hover {
+                    ul {
+                        li {
+                            .btn {
+                                color: $dark-small-font-color;
+                            }
+                            &:hover {
+                                .btn {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .radio_animated, .checkbox_animated{
+            &:after {
+                background: $dark-body-background;
+                border: 2px solid $dark-body-background;
+            }
+        }
+        .slider-product {
+            border-top: 1px solid $dark-border-color;
+            border-bottom: 1px solid $dark-border-color;
+        }
+        .square-product-setting {
+            .icon-grid {
+                background-color: $dark-card-background;
+                svg {
+                    color: $dark-all-font-color;
+                }
+            }
+        }
+        .bitcoin-form{
+            .bitcoin-form-dropdown{
+                .onhover-dropdown {
+                    .btn {
+                        background-color: $dark-border-color;
+                        color: $dark-all-font-color;
+                    }
+                    .onhover-show-div{
+                        background-color: $dark-body-background;
+                        box-shadow: 0 0 2px 2px $dark-body-background;
+                    }
+                }
+            }
+            .form-row{
+                .input-group{
+                    .input-group-prepend{
+                        .input-group-text{
+                            border: 1px solid $dark-border-color;
+                        }
+                    }
+                }
+            }
+        }
+        .active-order-table, .market-table {
+            table{
+                thead{
+                    tr{
+                        th {
+                            border-top: none !important;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            border-bottom: 1px solid $dark-border-color;
+                        }
+                        &:last-child{
+                            td{
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pricing-card-design-2{
+            .pricing-block{
+                .pricing-inner{
+                    ul {
+                        li {
+                            border-bottom: 1px solid $dark-border-color;
+                        }
+                    }
+                }
+            }
+        }
+        .flot-chart-container{
+            .legend{
+                .table{
+                    tbody{
+                        background-color: $dark-card-background;
+                        color: $white;
+                        .legendLabel{
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .google-visualization-tooltip{
+            text{
+                fill: rgba(0, 0, 0, 0.7) !important;
+            }
+        }
+        .nav-dark ,.nav-pills.nav-dark{
+            .nav-link{
+                color: $white;
+            }
+        }
+        .loader-wrapper {
+            background-color: $dark-body-background ;
+            .loader {
+                background-color: $dark-body-background !important;
+            }
+        }
+        .page-wrapper {
+            /* Main Header start */
+            .page-body-wrapper{
+                .page-sidebar{
+                    .main-header-left{
+                        box-shadow: 0 0 18px 3px rgba(42, 50, 61, 1);
+                    }
+                }
+            }
+            .page-main-header {
+                background-color: $dark-body-background;
+                .main-header-right {
+                    .mobile-sidebar{
+                        .switch{
+                            background-color: $dark-body-background;
+                            svg{
+                                color: $white !important;
+                            }
+                        }
+                    }
+                    background-color: $dark-card-background;
+                    box-shadow: 0 0 18px 3px rgba(42, 50, 61, 1);
+                    li {
+                        i {
+                            color: $light-color;
+                        }
+                    }
+                    .nav-right {
+                        .flip-card{
+                            .flip-card-inner{
+                                .front, .back {
+                                    background-color: $dark-body-background;
+                                    .flip-back-content {
+                                        input {
+                                            background-color: $dark-card-background;
+                                            border-color: $dark-border-color;
+                                            color: $white;
+                                            &::placeholder {
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                                .back {
+                                    li {
+                                        &:last-child {
+                                            border-top: 1px solid $dark-border-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .bookmark-dropdown{
+                            li{
+                                &:last-child{
+                                    border-top: 1px solid $light-all-font-color;
+                                }
+                            }
+                            .flip-btn{
+                                color: $white;
+                            }
+                        }
+                        .nav-menus{
+                           .droplet-dropdown{
+                            li{
+                                .row{
+                                    .droplet-main{
+                                        &:nth-child(3n){
+                                            border-right: none;
+                                        }
+                                        border-right: 1px solid $light-all-font-color;
+                                        border-bottom: 1px solid $light-all-font-color;
+                                    }
+                                }
+                            }
+                        }
+                        }
+                    > ul{
+                        > li{
+                            &:before{
+                                background-color: $light-all-font-color;
+                            }
+                            svg{
+                                stroke: $white;
+                            }
+                        }
+                    }
+                    .nav-menus {
+                        li {
+                            .media {
+                                .media-body {
+                                    .txt-dark {
+                                        color: $dark-all-font-color !important;
+                                    }
+                                }
+                            }
+                            .onhover-show-div {
+                                background-color: $dark-body-background;
+                                box-shadow: 0 0 2px 2px $dark-card-background;
+                                &:before {
+                                    border-bottom: 7px solid $dark-body-background;
+                                }
+                                &:after {
+                                    border-bottom: 7px solid $dark-body-background;
+                                }
+                            }
+                            .notification-dropdown.onhover-show-div {
+                                li {
+                                    span {
+                                        color: $dark-small-font-color;
+                                    }
+                                }
+                                .bg-light {
+                                    background-color: #282e38 !important;
+                                    color: $dark-all-font-color !important;
+                                }
+                            }
+                            .language-dropdown {
+                                li {
+                                    a {
+                                        color: $dark-all-font-color;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    .profile-dropdown {
+                        li {
+                            a {
+                                color: $dark-all-font-color;
+                                svg{
+                                    path, line, circle{
+                                        color: $dark-all-font-color !important;
+                                    }
+                                }
+                                &:hover{
+                                    color: $primary-color;
+                                    svg{
+                                        line, path, circle{
+                                            color: $primary-color !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .search-form {
+                        input {
+                            color: $dark-all-font-color;
+                            &::placeholder {
+                                color: rgba($primary-color,0.5);
+                            }
+                        }
+                    }
+                    > ul {
+                        > li {
+                            .media {
+                                .media-body {
+                                    .txt-dark {
+                                        color: $dark-all-font-color !important;
+                                    }
+                                }
+                            }
+                            .onhover-show-div {
+                                background-color: $dark-body-background;
+                                box-shadow: 0 0 2px 2px $dark-card-background;
+                                &:before {
+                                    border-bottom: 7px solid $dark-body-background;
+                                }
+                                &:after {
+                                    border-bottom: 7px solid $dark-body-background;
+                                }
+                            }
+                            .notification-dropdown.onhover-show-div {
+                                li {
+                                    span {
+                                        color: $dark-small-font-color;
+                                    }
+                                }
+                            }
+                            .language-dropdown {
+                                li {
+                                    a {
+                                        color: $dark-all-font-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .mega-menu-header{
+                    .vertical-menu-main{
+                        .main-nav{
+                            .main-menu{
+                                li{
+                                    background-color: $dark-card-background;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .main-header-left {
+                background-color: $dark-card-background;
+                .logo-wrapper {
+                    a {
+                        .image-dark {
+                            display: none;
+                        }
+                        .image-light{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            @media only screen and (max-width: 991px){
+                .main-header-right{
+                    .nav-right {
+                        > ul{
+                            background-color: $dark-card-background;
+                            box-shadow: 0 2px 2px 2px $dark-border-color;
+                            border-top: 1px solid $dark-border-color;
+                        }
+                    }
+                }
+            }
+            @media only screen and (max-width: 575px){
+                .nav-right{
+                    > ul {
+                        .search-form {
+                            .form-control-plaintext{
+                                background-color: $dark-body-background;
+                                border: 1px solid $dark-border-color;
+                                color: $dark-all-font-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-sidebar{
+            background-color: $dark-body-background;
+            box-shadow: 0 0 11px rgba(69, 110, 243, 0.13);
+            .modal-header{
+                border-bottom: 1px solid $dark-border-color;
+            }
+            .friend-list-search {
+                background-color: $dark-card-background;
+                input{
+                    background-color: $dark-body-background;
+                    border: 1px solid $dark-border-color;
+                }
+            }
+        }
+            /* Main Header ends */
+            .page-body-wrapper {
+                .iconsidebar-menu{
+                    .sidebar{
+                        .iconMenu-bar{
+                            background-color: $dark-card-background;
+                            box-shadow: inset -2px 0px 2px 0px #4c5564;
+                            .bar-icons{
+                                border: none;
+                            }
+                            .iconbar-mainmenu{
+                                background-color: $dark-card-background;
+                                box-shadow: none;
+                                .iconbar-header{
+                                    background-color: $dark-card-background;
+                                    color: $white;
+                                }
+                                li{
+                                    a{
+                                        color: $dark-all-font-color;
+                                    }
+                                }
+                            }
+                            li{
+                                a{
+                                    i{
+                                        color: $dark-all-font-color;
+                                    }
+                                    span{
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                /* sidebar start */
+                &.sidebar-icon {
+                    .page-sidebar{
+                        .sidebar-menu {
+                            .sidebar-header{
+                                > i {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            li{
+                                background-color: $dark-card-background;
+                                &:hover{
+                                    .single-header,
+                                    .sidebar-submenu{
+                                        background-color: $dark-card-background;
+                                    }
+                                }
+                                a:hover + ul{
+                                    background-color: $dark-card-background;
+                                }
+                            }
+                        }
+                        .sidebar-user{
+                            box-shadow: 3px 2px 7px -1px rgb(41, 50, 64);
+                        }
+                    }
+                }
+                .page-sidebar {
+                    &.native-image-bg {
+                        background-blend-mode: overlay;
+                        background-color: #17191d;
+                    }
+                    &.navigation-bordered {
+                        .sidebar-header {
+                            border-bottom: 1px solid rgba(241, 241, 241, 0.15);
+                        }
+                    }
+                    background: $dark-card-background;
+                    .sidebar-user {
+                        background-color: $dark-card-background;
+                        box-shadow: 3px 2px 8px -1px rgba(255, 255, 255, 0.13);
+                        h6 {
+                            color: $dark-all-font-color;
+                        }
+                        p {
+                            color: $white;
+                        }
+                    }
+                    .sidebar-menu {
+                        .sidebar-title {
+                            color: $primary-color;
+                            border-bottom: 1px solid rgba(241, 241, 241, 0.35);
+                        }
+                        >
+                        li {
+                            > a {
+                                color: $dark-all-font-color;
+                                &.active {
+                                    color: $primary-color;
+                                }
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                            .label {
+                                margin-top: 3px;
+                                margin-right: 5px;
+                            }
+                            &:hover > a {
+                                @extend %common;
+                                color: $dark-all-font-color;
+                            }
+                        }
+                        li {
+                            &.sidebar-header {
+                                color: $warning-color;
+                            }
+
+                        }
+                        a {
+                            color: $light-color;
+                        }
+                    }
+                    .sidebar-widget {
+                        border-top: 1px solid $dark-border-color;
+                        .sidebar-widget-top {
+                            i {
+                                background-color: $dark-card-background;
+                            }
+                        }
+                        .sidebar-widget-bottom {
+                            background-color: $dark-body-background;
+                        }
+                    }
+                }
+                /* sidebar end */
+
+                /* body start*/
+                .page-body{
+                    .header-small {
+                        color: $dark-small-font-color;
+                    }
+                    .statistics{
+                        p {
+                            color: $dark-small-font-color;
+                        }
+                    }
+                    .ecommerce-icons{
+                        div{
+                            span{
+                                color: $dark-small-font-color;
+                            }
+                        }
+                    }
+                    .progress-media{
+                        .media{
+                            .media-body {
+                                span {
+                                    color: $dark-small-font-color;
+                                }
+                            }
+                        }
+                        .progress-change{
+                            span {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                    }
+                    .notifiaction-media{
+                        .media{
+                            .media-body{
+                                .circle-left {
+                                    border: 5px solid #334154;
+                                }
+                            }
+                        }
+                    }
+                    .upcoming-event {
+                        .upcoming-innner {
+                            border-bottom: 1px solid $dark-border-color;
+                            &:last-child{
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                    .number-widgets{
+                        .media{
+                            .media-body{
+                                h6 {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                        }
+                    }
+                    .activity{
+                        .media {
+                            .gradient-round{
+                                &.gradient-line-1,
+                                &.small-line,
+                                &.medium-line{
+                                    &:after {
+                                        background-color: $dark-border-color;
+                                    }
+                                }
+                            }
+                            .media-body{
+                                h6{
+                                    span{
+                                        color: $dark-small-font-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .card.custom-card {
+                        .card-header{
+                            border-bottom : none !important;
+                        }
+                    }
+                }
+                .custom-card .card-header img {
+                    background-color: $black;
+                    opacity: 0.8;
+                }
+                .page-header {
+                    .row {
+                        h2 {
+                            color: $white;
+                            span{
+                                color: $white;
+                            }
+                        }
+                        h6{
+                            color: $dark-small-font-color;
+                        }
+                        .breadcrumb{
+                            .breadcrumb-item{
+                                color: $white;
+                                a{
+                                    color: $white;
+                                    background-color: $dark-card-background;
+                                }
+                            }
+                        }
+                        .breadcrumb-right{
+                            .breadcrumb{
+                                .breadcrumb-item{
+                                    &:before{
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .page-body {
+                    background-color: $dark-body-background;
+                    .card-g-primary{
+                        .card-header{
+                            background-color: $primary-color !important;
+                            border-bottom: $white !important;
+                        }
+                    }
+                    .card-g-secondary{
+                        .card-header{
+                            background-color: $secondary-color !important;
+                            border-bottom: $white !important;
+                        }
+                    }
+                    .card-g-success{
+                        .card-header{
+                            background-color: $success-color !important;
+                            border-bottom: $white !important;
+                        }
+                    }
+                    .card-g-info{
+                        .card-header{
+                            background-color: $info-color !important;
+                            border-bottom: $white !important;
+                        }
+                    }
+                    .card-g-warning{
+                        .card-header{
+                            background-color: $warning-color !important;
+                            border-bottom: $white !important;
+                        }
+                    }
+                    .card-g-danger{
+                        .card-header{
+                            background-color: $danger-color !important;
+                            border-bottom: $white !important;
+                        }
+                    }
+                    .card {
+                        background-color: $dark-card-background;
+                        box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
+                        .chart-block{
+                            #bar-chart2{
+                                svg {
+                                    > rect {
+                                        fill: $dark-card-background;
+                                    }
+                                    > g {
+                                        text[y="343.05"], text[x="110"], text[x="123"] {
+                                            fill: $dark-all-font-color;
+                                        }
+                                    }
+                                    g {
+                                        g {
+                                            g {
+                                                rect[width="1"] {
+                                                    fill: $dark-border-color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .word-tree{
+                                svg {
+                                    > g {
+                                        > rect {
+                                            fill: $dark-card-background;
+                                        }
+                                        > text{
+                                            fill: $dark-all-font-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .card-header {
+
+                            .buttons-right{
+                                .right-header-dropdown.onhover-show-div {
+                                    background-color: $dark-body-background;
+                                    box-shadow: 0 0 2px 2px $dark-body-background;
+                                    a{
+                                        color: $dark-all-font-color;
+                                    }
+                                }
+                            }
+                            &.card-header-border{
+                                .right-header{
+                                    span{
+                                        &:first-child {
+                                            color: $dark-small-font-color;
+                                        }
+                                    }
+                                    .right-header-dropdown.onhover-show-div {
+                                        background-color: $dark-body-background;
+                                        box-shadow: 0 0 2px 2px $dark-body-background;
+                                        a{
+                                            color: $dark-all-font-color;
+                                        }
+                                    }
+                                }
+                            }
+                            > span {
+                                color: $dark-all-font-color;
+                            }
+                            h1, h2, h3, h4, h5, h6 {
+                                color: $dark-all-font-color;
+                            }
+                            .card-header-right {
+                                i {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                        }
+                        .alert-dark {
+                            color: $dark-small-font-color;
+                            a {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                        .alert-light.outline, .alert-light.outline-2x, .alert-light.inverse {
+                            color: $dark-all-font-color;
+                        }
+                        #animation-box {
+                            .animate-widget {
+                                p {
+                                    color: $dark-small-font-color !important;
+                                }
+                            }
+                        }
+                        .grid-item {
+                            img {
+                                background-color: $dark-card-background;
+                                border: 1px solid $dark-border-color;
+                            }
+                        }
+                        .line {
+                            color: $dark-all-font-color;
+                        }
+                        .table {
+                            th, td {
+                                color: $dark-all-font-color;
+                            }
+                            thead {
+                                th {
+                                    border-bottom: 2px solid $dark-border-color;
+                                }
+                                .border-bottom-primary {
+                                    th{
+                                        border-bottom: 1px solid $primary-color;
+                                    }
+                                }
+                            }
+                            .table-primary, .table-secondary, .table-success, .table-info, .table-warning, .table-light, .table-danger {
+                                th, td {
+                                    color: $sidebar-submenu-font-color;
+                                }
+                            }
+                            .bg-primary, .bg-secondary, .bg-success, .bg-info, .bg-warning, .bg-danger {
+                                color: $white;
+                            }
+                            .bg-light {
+                                color: $black;
+                            }
+                            .thead-light {
+                                th {
+                                    color: $black;
+                                }
+                            }
+                            .double, .dotted, .dashed {
+                                border-color: $dark-border-color;
+                            }
+                            tbody {
+                                .border-bottom-primary{
+                                    th, td{
+                                        border-bottom: 1px solid $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                        .table-responsive{
+                            .table{
+                                th,td{
+                                    border-top: 1px solid $dark-border-color;
+                                }
+                            }
+                        }
+                        .table[class*='bg-']{
+                            th, td{
+                                color: $white;
+                            }
+                        }
+                        .table-striped {
+                            tbody {
+                                tr {
+                                    &:nth-of-type(odd) {
+                                        background-color:rgba(0, 0, 0, 0.05);
+                                        &:hover {
+                                            th, td {
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .table-bordered {
+                            td, th {
+                                border-color: $dark-border-color;
+                            }
+                        }
+                        .table-inverse{
+                            tbody {
+                                tr{
+                                    &:nth-of-type(odd){
+                                        &:hover {
+                                            td{
+                                                color: $dark-all-font-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .table-border-vertical {
+                            tr, th, td {
+                                border-right: 1px solid $dark-border-color;
+                            }
+                        }
+                        .table-styling{
+                            thead, tbody{
+                                th, td{
+                                    color: $white;
+                                }
+                            }
+                        }
+                        .card-footer {
+                            background-color: $dark-card-background;
+                            border-top: 1px solid $dark-border-color;
+                        }
+                        .switch {
+                            .switch-state {
+                                background-color: $dark-body-background;
+                            }
+                            input {
+                                &:checked {
+                                    + .switch-state {
+                                        background-color: $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                        .bg-white {
+                            background-color: $dark-card-background !important;
+                        }
+                        .b-l-light {
+                            border-left: 1px solid $dark-border-color !important;
+                        }
+                        .ct-grid {
+                            stroke: $dark-small-font-color;
+                        }
+                        .ct-label {
+                            color: $dark-small-font-color;
+                        }
+                        hr {
+                            border-top: 1px solid $dark-border-color;
+                        }
+                        .text-muted {
+                            color: $sidebar-submenu-font-color !important;
+                        }
+                        .calender-widget {
+                            .cal-date {
+                                background-color: $dark-card-background;
+                                border: 1px solid $dark-border-color;
+                            }
+                        }
+                        .contact-form {
+                            .theme-form {
+                                border: 1px solid $dark-border-color;
+                                .form-icon {
+                                    background-color: $dark-card-background;
+                                    border: 1px solid $dark-border-color;
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                        }
+                        .btn-outline-light, .btn-outline-dark {
+                            color: $white !important;
+                        }
+                        .btn-outline-light {
+                            &:hover {
+                                color: $black !important;
+                            }
+                        }
+                        .border-right {
+                            border-right: 1px solid $dark-border-color !important;
+                        }
+                        .flot-chart-placeholder {
+                            .flot-text {
+                                color: $dark-all-font-color !important;
+                            }
+                            svg {
+                                text {
+                                    fill: $dark-all-font-color;
+                                }
+                            }
+                        }
+                        .chart-overflow {
+                            &#gantt_chart{
+                                svg{
+                                    g{
+                                        rect{
+                                            &:first-child{
+                                                fill: $dark-body-background;
+                                            }
+                                        }
+                                        g {
+                                            rect {
+                                                ~ text {
+                                                    fill: $dark-all-font-color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                rect {
+                                    &:nth-child(6){
+                                        fill: $dark-body-background;
+                                    }
+                                }
+                            }
+
+                            &#line-chart,&#column-chart1,&#column-chart2{
+                                rect {
+                                    fill: $dark-card-background;
+                                }
+                                svg {
+                                    g {
+                                        line[x1="37.5"], line[y1="75.5"] {
+                                            stroke: $dark-border-color;
+                                        }
+                                    }
+                                }
+                            }
+                            svg {
+                                > rect {
+                                    fill: $dark-card-background;
+                                }
+                                > g {
+                                    >g{
+                                        >g{
+                                            text{
+                                                fill: rgb(177, 177, 178);
+                                            }
+                                        }
+                                    }
+                                    > text {
+                                        fill: $dark-all-font-color;
+                                    }
+                                }
+                                g {
+                                    line[x1="22.5"] {
+                                        stroke: $dark-border-color;
+                                    }
+                                }
+                            }
+                        }
+                        .radial-bar {
+                            &:after {
+                                background-color: $dark-card-background;
+                                color: $dark-all-font-color;
+                            }
+                        }
+                        .bar-chart-widget {
+                            .bottom-content {
+                                .num {
+                                    color: $dark-all-font-color;
+                                    .color-bottom {
+                                        color: $dark-all-font-color;
+                                    }
+                                }
+                            }
+                        }
+                        .b-r-light {
+                            border-right: 1px solid $dark-border-color !important;
+                        }
+                        .chart-container {
+                            .live-products, .turnover, .monthly, .uses {
+                                .ct-labels {
+                                    .ct-label {
+                                        color: $white;
+                                    }
+                                }
+                                .ct-grid {
+                                    stroke: $white;
+                                }
+                            }
+                            #browser-uses-chart, #website-visiter-chart {
+                                svg {
+                                    text {
+                                        fill: $dark-all-font-color;
+                                    }
+                                }
+                            }
+                        }
+                        .status-details {
+                            h4 {
+                                color: $dark-all-font-color;
+                                span {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            span {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                        .clipboaard-container {
+                            .form-control {
+                                background-color: $dark-body-background;
+                                color: $dark-small-font-color;
+                                border: 1px solid $dark-border-color;
+                            }
+                        }
+                        .img-thumbnail {
+                            background-color: $dark-body-background;
+                            border: 1px solid $dark-border-color;
+                        }
+                        .dataTables_wrapper {
+                            &.no-footer {
+                                .dataTables_scrollBody {
+                                    border-bottom: 1px solid $dark-border-color;
+                                }
+                            }
+                            .dataTables_length {
+                                select {
+                                    background-color: $dark-body-background;
+                                    color: $dark-all-font-color;
+                                    border: 1px solid $dark-border-color;
+                                }
+                            }
+                            .dataTables_length,
+                            .dataTables_filter,
+                            .dataTables_info,
+                            .dataTables_processing,
+                            .dataTables_paginate {
+                                color: $dark-all-font-color;
+                            }
+                            .dataTables_paginate{
+                                border: 1px solid $dark-border-color;
+                            }
+                            .dataTables_filter {
+                                input[type="search"] {
+                                    background-color: $dark-body-background;
+                                    border: 1px solid $dark-border-color;
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            table.dataTable.display, table.dataTable.order-column.stripe {
+                                tbody {
+                                    tr {
+                                        background-color: $dark-card-background;
+                                        &:hover {
+                                            > .sorting_1 {
+                                                background-color: $dark-card-background;
+                                            }
+                                        }
+                                    }
+                                    tr.odd {
+                                        background-color: $dark-body-background;
+                                        > .sorting_1 {
+                                            background-color: $dark-card-background;
+                                        }
+                                    }
+                                    tr.even {
+                                        > .sorting_1 {
+                                            background-color: $dark-body-background;
+                                        }
+                                    }
+                                }
+                            }
+                            table.dataTable {
+                                border: 1px solid $dark-border-color;
+                                thead {
+                                    th, td {
+                                        border-bottom: 2px solid $dark-border-color;
+                                    }
+                                }
+                                input, select {
+                                    background-color: $dark-body-background;
+                                    color: $dark-all-font-color;
+                                    border: 1px solid $dark-border-color;
+                                }
+                                tbody {
+                                    tr {
+                                        background-color: $dark-card-background;
+                                    }
+                                    td.select-checkbox, th.select-checkbox {
+                                        &:before {
+                                            border: 1px solid $dark-small-font-color;
+                                        }
+                                    }
+                                }
+                            }
+                            .table-striped {
+                                tbody {
+                                    tr {
+                                        &:nth-of-type(odd) {
+                                            background-color: $dark-body-background;
+                                        }
+                                    }
+                                }
+                            }
+                            .dataTables_paginate {
+                                .paginate_button {
+                                    color: $dark-all-font-color !important;
+                                    &.current,
+                                    &:active{
+                                        border-color: $primary-color;
+                                    }
+                                }
+                                .paginate_button.disabled {
+                                    color: $dark-small-font-color !important;
+                                    &:hover, :active {
+                                        color: $dark-small-font-color !important;
+                                    }
+                                }
+                            }
+                            table.dataTable.row-border, table.dataTable.display {
+                                tbody {
+                                    th, td {
+                                        border-top: 1px solid $dark-border-color;
+                                    }
+                                }
+
+                            }
+                            table.dataTable.display, table.dataTable.order-column.hover {
+                                tbody {
+                                    tr.even {
+                                        &:hover {
+                                            > .sorting_1 {
+                                                background-color: darken($dark-card-background, 2%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            table.dataTable.hover, table.dataTable.display {
+                                tbody {
+                                    tr {
+                                        &:hover {
+                                            background-color: $dark-card-background;
+                                        }
+                                    }
+                                }
+                            }
+                            table.dataTable.cell-border {
+                                th, td {
+                                    border-top: 1px solid $dark-border-color;
+                                    border-right: 1px solid $dark-border-color;
+                                    &:first-child {
+                                        border-left: 1px solid $dark-border-color;
+                                    }
+                                }
+                            }
+                            table.dataTable.order-column, table.dataTable.display {
+                                tbody {
+                                    tr {
+                                        > .sorting_1,
+                                        > .sorting_2,
+                                        > .sorting_3 {
+                                            background-color: $dark-body-background;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        #example-style-3_wrapper {
+                            #example-style-3 {
+                                tfoot {
+                                    border-top: 2px solid $dark-border-color;
+                                }
+                            }
+                        }
+                        .page-item.disabled {
+                            .page-link {
+                                background-color: $dark-card-background;
+                                border-color: $dark-border-color;
+                            }
+                        }
+                        .page-link {
+                            color: $dark-all-font-color;
+                            background-color: $dark-card-background;
+                            border-color: $dark-border-color;
+                        }
+                        .page-item {
+                            &:hover{
+                                .page-link{
+                                    background-color: $dark-body-background;
+                                }
+                            }
+                        }
+                        .page-item.active {
+                            .page-link {
+                                background-color: $dark-body-background;
+                            }
+                        }
+                        $page-name:theme,
+                        primary,
+                        secondary,
+                        success,
+                        danger,
+                        info,
+                        dark,
+                        warning;
+                        $page-color:$primary-color,
+                        $primary-color,
+                        $secondary-color,
+                        $success-color,
+                        $danger-color,
+                        $info-color,
+                        $dark-color,
+                        $warning-color;
+                        @each $var in $page-name {
+                        $i: index($page-name, $var);
+                        .pagination-#{$var}{
+                            .page-item{
+                            .page-link{
+                                color: nth($page-color, $i);
+                            }
+                            &.active{
+                                .page-link{
+                                color: $white;
+                                background-color:  nth($page-color, $i);
+                                border-color:  nth($page-color, $i);
+                                }
+                            }
+                            }
+                        }
+                        }
+                        .ecommerce-widget {
+                            .icon {
+                                color: $dark-body-background;
+                            }
+                            .total-num {
+                                color: $dark-all-font-color;
+                                span {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            span {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                        .flot-chart-container-small {
+                            background-color: $dark-card-background;
+                            border-top: 1px solid $dark-border-color;
+                        }
+                        .product-table{
+                            #API-2_wrapper{
+                                #API-2{
+                                    tbody{
+                                        td{
+                                            span, p{
+                                                color: $dark-small-font-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            h6{
+                                color: $dark-small-font-color;
+                            }
+                        }
+                        .nav-material.nav-tabs {
+                            border-bottom: 1px solid $dark-border-color;
+                            .nav-item {
+                                .nav-link{
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            .nav-link{
+                                &.active,
+                                &:focus,
+                                &:hover{
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                        .br-theme-bars-1to10, .br-theme-bars-movie, .br-theme-bars-pill, .br-theme-bars-reversed, .br-theme-bars-horizontal{
+                            .br-widget{
+                                a{
+                                    background-color: rgba($primary-color,0.2);
+                                    &.br-active,
+                                    &.br-selected{
+                                        background-color: $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                        .br-theme-bars-square {
+                            .br-widget{
+                                a{
+                                    border: 2px solid rgba($primary-color,0.2);
+                                    background-color: $dark-card-background ;
+                                    color: $dark-all-font-color;
+                                    &.br-active,
+                                    &.br-selected{
+                                        border: 2px solid $primary-color;
+                                        color: $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                        .br-theme-fontawesome-stars, .br-theme-fontawesome-stars-o {
+                            .br-widget{
+                                a{
+                                    &:after{
+                                        color: rgba($primary-color,0.2);
+                                    }
+                                    &.br-selected,
+                                    &.br-active{
+                                        &:after{
+                                            color: $primary-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .scroll-demo{
+                            border: 1px solid $dark-border-color;
+                        }
+                        .search-form{
+                            input{
+                                border: 1px solid $dark-border-color;
+                                color: $dark-all-font-color;
+                                background-color: $dark-body-background;
+                            }
+                            .form-group{
+                                &:before {
+                                    background:$dark-card-background;
+                                }
+                            }
+                        }
+                        .cd-timeline-content{
+                            background-color: $dark-body-background;
+                            &::before{
+                                border-left: 7px solid $dark-body-background;
+                            }
+                        }
+                        .cd-timeline-block{
+                            &:nth-child(even) {
+                                .cd-timeline-content{
+                                    &::before {
+                                        border-right-color: $dark-body-background;
+                                        border-left: transparent;
+                                    }
+                                }
+                            }
+                        }
+                        .breadcrumb{
+                            background-color: $dark-body-background;
+                        }
+                        .user-status{
+                            table{
+                                td, th{
+                                    border-top: none !important;
+                                }
+                            }
+                        }
+                        #donut-color-chart-morris-daily, #donut-color-chart-morris, #browser-uses-chart, #website-visiter-chart{
+                            svg{
+                                opacity: 0.5;
+                            }
+                        }
+                    }
+                    .form-builder-header-1, .form-builder-2-header {
+                        background-color: $dark-body-background;
+                    }
+                    .form-builder {
+                        .nav-primary {
+                            .show {
+                                > .nav-link {
+                                    color: $white;
+                                }
+                            }
+                            .nav-link {
+                                color: $dark-all-font-color;
+                                &.active {
+                                    color: $white;
+                                }
+                            }
+                            .nav-pills.nav-primary {
+                                .show {
+                                    > .nav-link {
+                                        color: $white;
+                                    }
+                                }
+                                .nav-link {
+                                    color: $dark-all-font-color;
+                                    &.active {
+                                        color: $white;
+                                    }
+                                }
+                            }
+
+                        }
+                        .drag-box {
+                            fieldset {
+                                border: 1px solid $dark-border-color;
+                            }
+                        }
+                        .help-block {
+                            color: $dark-small-font-color;
+                        }
+                    }
+                    #viewhtml {
+                        .render {
+                            background-color: $dark-card-background;
+                            color: $dark-all-font-color;
+                            border-color: $dark-border-color;
+                        }
+                    }
+                    .form-builder-column {
+                        .drag-bx {
+                            border: 1px dotted $dark-border-color;
+                        }
+                    }
+                    .wizard-4 {
+                        ul.anchor {
+                            li {
+                                a.disabled {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                        }
+                    }
+                    .gallery-with-description {
+                        h4 {
+                            color: $dark-all-font-color;
+                        }
+                        a {
+                            > div {
+                                border: 1px solid $dark-border-color;
+                            }
+                        }
+                        p {
+                            color: $dark-small-font-color;
+                        }
+                    }
+                    .jsgrid-grid-header {
+                        background-color: $dark-card-background;
+                        border: 1px solid $dark-border-color;
+                    }
+                    .jsgrid-header-row, .jsgrid-filter-row {
+                        > .jsgrid-header-cell,
+                        > .jsgrid-cell {
+                            background: $dark-card-background;
+                            border: 1px solid $dark-border-color;
+                            input {
+                                background-color: $dark-body-background;
+                                border-color: $dark-border-color;
+                                color: $dark-all-font-color;
+                            }
+                        }
+                        select {
+                            background-color: $dark-body-background;
+                            border-color: $dark-border-color;
+                            color: $dark-all-font-color;
+                        }
+                    }
+                    .jsgrid-row {
+                        > .jsgrid-cell {
+                            background-color: $dark-card-background;
+                        }
+                    }
+                    .jsgrid-alt-row {
+                        > .jsgrid-cell {
+                            background-color: $dark-body-background;
+                        }
+                    }
+                    .jsgrid-cell, .jsgrid-grid-body {
+                        border: 1px solid $dark-border-color;
+                    }
+                    .jsgrid-selected-row {
+                        > .jsgrid-cell {
+                            background-color: $dark-card-background;
+                        }
+                    }
+                    .jsgrid {
+                        .jsgrid-pager {
+                            [class*="jsgrid-pager"] {
+                                border: 1px solid $dark-border-color;
+                            }
+                            .jsgrid-pager-page {
+                                a {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                        }
+
+                    }
+                    .jsgrid-pager-current-page {
+                        color: $dark-all-font-color;
+                        font-weight: 700;
+                    }
+                    .sub-title {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+                    .navs-icon {
+                        li {
+                            a {
+                                color: $dark-all-font-color;
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                        .separator{
+                            border: 1px solid $dark-border-color;
+                        }
+                    }
+                    .default-according{
+                        li{
+                            .text-muted{
+                                color: $dark-all-font-color!important;
+                            }
+                        }
+                    }
+                    .navs-icon.default-according.style-1 {
+                        li{
+                            button{
+                                &:hover
+                                {
+                                    color: $primary-color!important;
+                                }
+                            }
+                        }
+                    }
+                    .nav-list{
+                        .nav-list-disc{
+                            li{
+                                a{
+                                    color: $dark-all-font-color;
+                                }
+                                &:hover{
+                                    color: $primary-color;
+                                    a{
+                                        color: $primary-color;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                    .navs-dropdown{
+                        .onhover-show-div{
+                            background-color: $dark-body-background;
+                            box-shadow: 0 0 2px 2px $dark-border-color;
+                            .navs-icon{
+                                li{
+                                    a{
+                                        svg{
+                                            path, line, polyline, polygon, rect{
+                                                color: $dark-all-font-color !important;
+                                            }
+                                        }
+                                        &:hover{
+                                            svg{
+                                                path, line, polyline, polygon, rect{
+                                                    color: $primary-color !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .onhover-dropdown{
+                        &:hover {
+                            .onhover-show-div{
+                                &:before{
+                                    border-bottom: 7px solid $dark-body-background;
+                                }
+                            }
+                        }
+                    }
+                    .default-according {
+                        .card {
+                            box-shadow: 0px 0px 1px 1px rgb(55, 66, 82);
+                            .btn-link {
+                                color: $dark-all-font-color;
+                            }
+                            .card-body {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                    }
+                    .border {
+                        border: 1px solid $dark-border-color !important;
+                    }
+                    .blog-box {
+                        .blog-date {
+                            color: $dark-all-font-color;
+                        }
+                        .blog-details, .blog-details-main {
+                            .blog-social {
+                                li {
+                                    color: $dark-small-font-color;
+                                    border-right: 1px solid $dark-border-color;
+                                    &:first-child {
+                                        border-right: 1px solid $dark-border-color;
+                                    }
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+                                }
+                            }
+                            p {
+                                color: $dark-all-font-color;
+                            }
+                            .single-blog-content-top {
+                                border-top: 1px solid $dark-border-color;
+                                p {
+                                    color: $dark-small-font-color;
+                                }
+                            }
+                        }
+                    }
+                    .comment-box {
+                        .media {
+                            h6 {
+                                span {
+                                    color: $dark-small-font-color;
+                                }
+                            }
+                            img {
+                                border: 1px solid $dark-border-color;
+                            }
+                        }
+                        p {
+                            color: $dark-small-font-color;
+                        }
+                        .comment-social {
+                            li {
+                                color: $dark-small-font-color;
+                                &:first-child {
+                                    border-right: 1px solid $dark-border-color;
+                                }
+                            }
+                        }
+                        hr{
+                            border-top: 1px solid $dark-border-color;
+                        }
+                    }
+                    .table-hover {
+                        tbody {
+                            tr {
+                                &:hover {
+                                    background-color: $dark-body-background;
+                                    td, th {
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ul.the-icons {
+                        li {
+                            border: 1px dotted $dark-border-color;
+                            color: $sidebar-submenu-font-color;
+                            display: inline-block;
+                            padding: 10px;
+                            &:hover {
+                                background: $black;
+                                box-shadow: 0 0 3px $dark-card-background;
+                            }
+                            em{
+                                display: none;
+                            }
+                        }
+                    }
+                    .button-builder-wrap {
+                        .box {
+                            background-color: $dark-card-background;
+                            border: 1px solid $dark-border-color;
+                        }
+                        .button-preview {
+                            h2 {
+                                color: $dark-all-font-color;
+                            }
+                        }
+                        pre.well {
+                            background-color: $dark-card-background !important;
+                        }
+                    }
+                    .crm-activity {
+                        > li {
+                            + li {
+                                border-top: 1px solid $dark-border-color;
+                            }
+                            h6 {
+                                color: $dark-all-font-color;
+                            }
+                        }
+                        ul.dates {
+                            li {
+                                color: $dark-small-font-color;
+                                + li {
+                                    border-left: 1px solid $dark-border-color;
+                                }
+                            }
+                        }
+                    }
+                    #donut-color-chart-morris, #donut-color-chart-morris-daily {
+                        svg {
+                            text {
+                                fill: $dark-all-font-color;
+                            }
+                        }
+                    }
+                    .custom-card {
+                        .card-profile {
+                            img {
+                                background-color: $dark-card-background;
+                            }
+                        }
+                        .profile-details {
+                            h6 {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                        .card-social {
+                            li {
+                                a {
+                                    color: $dark-small-font-color;
+                                }
+                            }
+                        }
+                        .card-footer {
+                            > div {
+                                h6 {
+                                    color: $dark-small-font-color;
+                                }
+                                + div {
+                                    border-left: 1px solid $dark-border-color;
+                                }
+                            }
+
+                        }
+                    }
+                    .form-control {
+                        background-color: $dark-body-background;
+                        color: $dark-all-font-color;
+                        border: 1px solid $dark-border-color !important;
+                    }
+                    .checkbox, .radio {
+                        label {
+                            &::before {
+                                background-color: $dark-body-background;
+                                border: 1px solid $dark-border-color;
+                                color: $dark-all-font-color;
+                            }
+                        }
+                    }
+                    .dropdown-basic {
+                        .dropdown {
+                            .dropdown-content {
+                                background-color: $dark-body-background;
+                                a {
+                                    color: $dark-all-font-color;
+                                    &:hover {
+                                        background-color: $dark-card-background;
+                                    }
+                                }
+                                .dropdown-divider {
+                                    border: 1px solid $dark-border-color;
+                                }
+                            }
+                        }
+                    }
+                    .dropup-basic {
+                        .dropup {
+                            .dropup-content {
+                                background-color: $dark-body-background;
+                                a {
+                                    color: $dark-all-font-color;
+                                    &:hover,
+                                    &.active {
+                                        background-color: $dark-card-background;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .dropzone.dz-clickable {
+                        .dz-message {
+                            h6 {
+                                color: $dark-all-font-color;
+                            }
+                            span {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                    }
+                    .dropzone {
+                        .dz-preview {
+                            background-color: $dark-body-background;
+                            .dz-details {
+                                background-color: $dark-card-background;
+                            }
+                        }
+                    }
+                    .browser-widget {
+                        .media-body {
+                            column-rule: 1px solid $dark-border-color;
+                            h4 {
+                                color: $dark-all-font-color;
+                                span {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            span {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                    }
+                    .email-wrap {
+                        .email-app-sidebar {
+                            .media {
+                                img {
+                                    border: 2px solid $dark-body-background;
+                                }
+                            }
+                            .main-menu {
+                                > li {
+                                    a {
+                                        color: $dark-all-font-color;
+                                        &:hover {
+                                            background-color: $dark-body-background;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .email-right-aside {
+                            .email-body {
+                                .inbox {
+                                    .media.active {
+                                        background-color: $dark-body-background;
+                                    }
+                                }
+                            }
+                        }
+                        .media-body {
+                            h6 {
+                                color: $dark-all-font-color;
+                                small {
+                                    color: $dark-small-font-color;
+                                    span {
+                                        color: $dark-small-font-color;
+                                    }
+                                }
+                            }
+                            p {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                        .email-top {
+                            border-bottom: 1px solid $dark-border-color;
+                        }
+                        p {
+                            color: $dark-small-font-color;
+                        }
+                        .email-content {
+                            .email-top {
+                                .user-emailid:after {
+                                    border: 1px solid $dark-border-color;
+                                }
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        background-color: $dark-body-background;
+                        border: 1px solid $dark-border-color;
+                        a {
+                            color: $dark-all-font-color;
+                            &:hover {
+                                background-color: $dark-card-background;
+                            }
+                        }
+                    }
+                    .icon-lists {
+                        div {
+                            i {
+                                color: $dark-small-font-color;
+                            }
+                            &:hover {
+                                background-color: $dark-body-background;
+                            }
+                        }
+                    }
+                    .widget-joins {
+                        .media {
+                            .media-body {
+                                > span {
+                                    color: $dark-small-font-color;
+                                }
+                            }
+                            .details {
+                                border-left: 1px solid $dark-border-color;
+                            }
+                        }
+                        &:before,
+                        &:after {
+                            background-color: $dark-border-color;
+                        }
+                    }
+                    .redial-social-widget {
+                        i {
+                            background-color: $dark-card-background;
+                        }
+                    }
+                    .social-widget-card {
+                        h5, h4 {
+                            color: $dark-all-font-color;
+                        }
+                        span {
+                            color: $dark-small-font-color;
+                        }
+                    }
+                    .b-b-light {
+                        border-bottom: 1px solid $dark-border-color !important;
+                    }
+                    .b-r-dark {
+                        border-right: 1px solid $white !important;
+                    }
+                    .testimonial {
+                        i {
+                            color: $dark-border-color;
+                        }
+                        p {
+                            color: $dark-all-font-color;
+                        }
+                        h5 {
+                            color: $dark-all-font-color;
+                        }
+                        span {
+                            color: $dark-small-font-color;
+                        }
+                    }
+                    .grid-showcase {
+                        span {
+                            background-color: $dark-card-background;
+                            border: 1px solid $dark-border-color;
+                        }
+                    }
+                    .border-style {
+                        .card {
+                            border: 1px solid $dark-border-color;
+                        }
+                    }
+                    .offer-style {
+                        .card {
+                            border: 1px dashed $dark-border-color;
+                        }
+                    }
+                    .page-builder {
+                        .btn-grid{
+                            background-color: $dark-card-background;
+                            color: $dark-small-font-color !important;
+                            border-right: 1px solid $dark-border-color;
+                        }
+                        .ge-mainControls {
+                            .ge-addRowGroup {
+                                .ge-row-icon {
+                                    .column{
+                                        border-left: 3px solid $dark-card-background;
+                                    }
+                                }
+                            }
+                        }
+                        .btn-code, .btn-screen{
+                            color: $dark-small-font-color;
+                            border-right: 1px solid $dark-border-color;
+                        }
+                        .ge-canvas.ge-editing {
+                            .row{
+                                background-color: $dark-body-background;
+                            }
+                            .column{
+                                border: 1px solid $dark-border-color;
+                                background-color: $dark-card-background;
+                            }
+                            .ge-tools-drawer{
+                                .ge-details{
+                                    input{
+                                        background-color: $dark-body-background;
+                                        border-color: $dark-border-color;
+                                        color: $dark-small-font-color;
+                                    }
+                                    .btn-group{
+                                        a{
+                                            color: $dark-small-font-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .ge-content-type-ckeditor{
+                            color: $dark-all-font-color;
+                        }
+                    }
+                    .search-page {
+                        .info-block{
+                            + .info-block{
+                                border-top: 1px solid $dark-border-color;
+                            }
+                        }
+                        ul {
+                            &.search-info {
+                                li {
+                                    +li {
+                                        border-left: 1px solid $dark-border-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .card-absolute{
+                        .bg-primary, .bg-secondary{
+                            h5{
+                                color: $white;
+                            }
+                        }
+                    }
+                    .timeline-small{
+                        .media{
+                            .timeline-round{
+                                &.timeline-line-1,
+                                &.small-line,
+                                &.medium-line{
+                                    &:after {
+                                        background-color: $dark-border-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    /* body end*/
+                }
+                footer {
+                    p{
+                        color: $dark-all-font-color;
+                    }
+                    border-top: 1px solid $dark-body-background;
+                    background-color: $dark-card-background;
+                    background-image: none;
+                }
+                .custom-select, .custom-file-label {
+                    background: $dark-body-background;
+                    color: $dark-all-font-color;
+                }
+                .footer-fix{
+                    background-color: $dark-card-background;
+                    border-top: 1px solid $dark-border-color;
+                }
+            }
+            .dt-button-info {
+                background-color: $dark-card-background;
+                border: 1px solid $dark-small-font-color;
+                h2 {
+                    background-color: $dark-card-background;
+                }
+            }
+            .chat-box {
+                .about {
+                    .name {
+                        color: $dark-all-font-color;
+                    }
+                }
+                .chat-menu {
+                    border-left: 1px solid $dark-border-color;
+                    .nav-tabs {
+                        border-bottom: 1px solid $dark-border-color;
+                        .nav-item {
+                            .nav-link {
+                                &.active {
+                                    color: $dark-all-font-color !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .user-profile {
+                        .image {
+                            .icon-wrapper {
+                                background-color: $dark-card-background;
+                                box-shadow: 1px 1px 3px 1px $dark-body-background;
+                            }
+                            .avatar{
+                                img{
+                                    border: 5px solid $dark-border-color;
+                                }
+                            }
+                        }
+                        .social-media {
+                            a {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                        .follow {
+                            span {
+                                color: $dark-small-font-color;
+                            }
+                            .follow-num {
+                                color: $dark-all-font-color;
+                            }
+                        }
+                    }
+                }
+                .status {
+                    color: $dark-small-font-color;
+                    p {
+                        color: $dark-all-font-color !important;
+                    }
+                }
+                .chat-right-aside {
+                    .chat {
+                        .chat-header {
+                            border-bottom: 1px solid $dark-border-color;
+                            .chat-menu-icons {
+                                li {
+                                    a {
+                                        i {
+                                            color: $dark-small-font-color;
+                                        }
+                                    }
+                                }
+                            }
+                            img{
+                                box-shadow: 1px 1px 4px 1px $dark-body-background;
+                            }
+                        }
+                        .chat-msg-box {
+                            .my-message {
+                                border: 1px solid $dark-border-color
+                            }
+                            .message {
+                                color: $dark-all-font-color;
+                            }
+                            .other-message {
+                                background-color: $dark-body-background;
+                            }
+                        }
+                        .chat-message {
+                            background-color: $dark-card-background;
+                            border-top: 1px solid $dark-border-color;
+                            .input-group {
+                                .form-control {
+                                    background-color: $dark-card-background;
+                                }
+                            }
+                        }
+                    }
+                }
+                .chat-history {
+                    .call-icons {
+                        ul {
+                            li {
+                                border: 1px solid $dark-border-color;
+                                a {
+                                    color: $dark-small-font-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .bitcoin-chat{
+                    .chat{
+                        .chat-msg-box{
+                            .message{
+                                &.my-message {
+                                    background-color: #1c222b;
+                                    .chat-user-img {
+                                        border: 2px solid $dark-body-background;
+                                    }
+                                }
+                                &.other-message {
+                                    .chat-user-img {
+                                        border: 2px solid $dark-body-background;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            pre {
+                background-color: $dark-body-background;
+                color: $dark-all-font-color;
+            }
+            .scorlled {
+                background-color: $dark-body-background;
+            }
+            .input-group-air {
+                box-shadow: 0 3px 20px 0 $dark-border-color;
+            }
+            .input-group-solid {
+                .input-group-text, .form-control {
+                    background: $dark-body-background;
+                    border: 1px solid $dark-border-color;
+                    color: $dark-all-font-color;
+                }
+            }
+            .semilight-bg-color, .header-bg-color {
+                background-color: $white;
+            }
+            .list-group-item {
+                background-color: $dark-card-background;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: $dark-all-font-color;
+                &.active {
+                    background-color: $primary-color;
+                    border-color: $primary-color;
+                    color: $white;
+                }
+                &:hover,
+                &:focus {
+                    z-index: 1;
+                    text-decoration: none;
+                }
+            }
+            .list-group-item-action {
+                &:hover:not(.active),
+                &:focus {
+                    background-color: $dark-body-background;
+                }
+            }
+            .list-group-flush {
+                .list-group-item {
+                    border-left: 0;
+                    border-right: 0;
+                    border-radius: 0;
+                }
+            }
+            .list-group-item-primary {
+                color: #004085;
+                background-color: #b8daff;
+            }
+            .list-group-item-secondary {
+                color: #383d41;
+                background-color: #d6d8db;
+            }
+            .list-group-item-success {
+                color: #155724;
+                background-color: #c3e6cb;
+            }
+            .list-group-item-danger {
+                color: #721c24;
+                background-color: #f5c6cb;
+            }
+            .list-group-item-warning {
+                color: #856404;
+                background-color: #ffeeba;
+            }
+            .list-group-item-info {
+                color: #0c5460;
+                background-color: #bee5eb;
+            }
+            .list-group-item-light {
+                color: #818182;
+                background-color: #fdfdfe;
+            }
+            .list-group-item-dark {
+                color: #1b1e21;
+                background-color: #c6c8ca;
+            }
+            .auth-bg {
+                background-blend-mode: overlay;
+                background-color: rgba(54, 64, 74, 0.9);
+                .authentication-box {
+                    .card {
+                        background-color: $dark-card-background;
+                        .theme-form {
+                            .form-group {
+                                input {
+                                    color: $dark-all-font-color;
+                                    background-color: $dark-body-background;
+                                    border: 1px solid $dark-border-color;
+                                }
+                                label {
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            .checkbox {
+                                label {
+                                    color: $dark-all-font-color;
+                                    &::before {
+                                        background-color: $dark-body-background;
+                                        border: 1px solid $dark-border-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    h3, h4, h6{
+                        color: $white;
+                    }
+                }
+            }
+            .auth-bg-video {
+                background-blend-mode: overlay;
+                background-color: rgba(54, 64, 74, 0.7);
+                .authentication-box {
+                    h4, h3 {
+                        color: $white;
+                    }
+                    h6 {
+                        color: $dark-small-font-color;
+                    }
+                    .card {
+                        background-color: $dark-card-background;
+                        .theme-form {
+                            .form-group {
+                                input[type=text],
+                                input[type=password] {
+                                    background-color: $dark-body-background;
+                                    border: 1px solid $dark-border-color;
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                            .checkbox {
+                                label {
+                                    &::before {
+                                        background-color: $dark-body-background;
+                                        border: 1px solid $dark-border-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .error-wrapper {
+                .maintenance-icons {
+                    li {
+                        i {
+                            color: $dark-border-color;
+                        }
+                        &:nth-child(3) {
+                            i {
+                                color: $dark-border-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .modal-content {
+                background-color: $dark-card-background;
+                .modal-header {
+                    border-bottom: 1px solid $dark-border-color;
+                    .close {
+                        color: $dark-border-color;
+                    }
+                }
+                .modal-footer {
+                    border-top: 1px solid $dark-border-color;
+                }
+            }
+            .comingsoon {
+                background-blend-mode: overlay;
+                background-color: rgba(54, 64, 74, 0.9);
+                .comingsoon-inner {
+                    h5 {
+                        color: $dark-all-font-color;
+                    }
+                    .countdown {
+                        border-top: 1px solid $dark-border-color;
+                        border-bottom: 1px solid $dark-border-color;
+                        .title {
+                            color: $dark-all-font-color;
+                        }
+                    }
+                    .coming-soon-bottom-link {
+                        a {
+                            color: $dark-all-font-color;
+                        }
+                    }
+                }
+            }
+            .theme-form {
+                .login-divider{
+                    border-top: 1px solid $dark-border-color;
+                    &:before {
+                        background: $dark-card-background;
+                        color: $dark-all-font-color;
+                    }
+                }
+            }
+            .authentication-main {
+                background-color: $dark-body-background;
+                .auth-innerright {
+                    .reset-password-box {
+                        .card {
+                            background-color: $dark-card-background;
+                        }
+                        .reset-password-link {
+                            color: $dark-small-font-color;
+                        }
+                        .theme-form {
+                            .form-group {
+                                label {
+                                    color: $dark-small-font-color;
+                                }
+                                .form-control {
+                                    background-color: $dark-body-background;
+                                    color: $dark-all-font-color;
+                                    border-color: $dark-border-color;
+                                }
+                            }
+                            .opt-box {
+                                background-color: $dark-border-color;
+                            }
+                        }
+
+                    }
+                    .authentication-box {
+                        h4 {
+                            color: $dark-all-font-color;
+                        }
+                        h6 {
+                            color: $dark-small-font-color;
+                        }
+                        h3{
+                            color: $dark-all-font-color;
+                        }
+                        .card {
+                            background-color: $dark-card-background;
+                            .theme-form {
+                                .form-group {
+                                    input[type=text],
+                                    input[type=password] {
+                                        background-color: $dark-body-background;
+                                        border: 1px solid $dark-border-color;
+                                        color: $dark-all-font-color;
+                                    }
+                                }
+                                .checkbox {
+                                    label {
+                                        &::before {
+                                            background-color: $dark-body-background;
+                                            border: 1px solid $dark-border-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .vertical-menu-main{
+                background-color: $dark-card-background;
+            }
+            .pixelstrap {
+                a{
+                    color: $dark-all-font-color;
+                    &:focus,
+                    &:active,
+                    &:hover{
+                        color: $dark-all-font-color;
+                    }
+                }
+                > {
+                    li {
+                        > a.highlighted{
+                            &:before
+                            {
+                                background-color: $dark-card-background;
+                            }
+                            &:after
+                            {
+                                background-color: $dark-border-color;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (min-width: 1200px){
+                .pixelstrap{
+                    ul {
+                        background: $dark-body-background;
+                        border: 1px solid $dark-border-color;
+                        a{
+                            &:hover,
+                            &:focus,
+                            &:active,
+                            &.highlighted{
+                                color: $primary-color;
+                            }
+                            &.current{
+                                background-color: $dark-body-background;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .mega-menu {
+                .title{
+                    color: $dark-all-font-color;
+                    border-bottom: 1px solid $dark-border-color;
+                }
+                .galleria-list{
+                    .galleria{
+                        > div {
+                            .username{
+                                color: $dark-all-font-color;
+                                small{
+                                    color: $dark-small-font-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .list-unstyled{
+                    div{
+                        a{
+                            &:hover{
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .default-according {
+                .card {
+                    background-color: $dark-card-background;
+                    .btn-link{
+                        background-color: $dark-card-background;
+                        border: 1px solid $dark-card-background;
+                        color: $white;
+                    }
+                    .text-muted{
+                        color: $dark-small-font-color !important;
+                    }
+                }
+                .bg-primary{
+                    .btn-link{
+                        background-color: $primary-color;
+                        border: 1px solid $primary-color;
+                    }
+                }
+                .bg-secondary{
+                    .btn-link{
+                        background-color: $secondary-color;
+                        border: 1px solid $secondary-color;
+                    }
+                }
+            }
+            .collapse{
+                .card-body{
+                    background-color: $dark-card-background;
+                }
+            }
+            @media screen and (max-width: 1660px){
+                .chat-box{
+                    .chat-history{
+                        .call-icons{
+                            ul{
+                                li{
+                                    border: 1px solid $dark-border-color;
+                                }
+                            }
+                        }
+                        .total-time{
+                            h2{
+                                color: $dark-all-font-color;
+                            }
+                        }
+                    }
+                }
+                .caller-img{
+                    img{
+                        opacity: 0.7;
+                    }
+                }
+                .chat-box {
+                    .chat-history {
+                        .call-content {
+                            >div{
+                                background-color: rgba(0, 0, 0, 0.75);
+                                background-blend-mode: overlay;
+                            }
+                        }
+                    }
+                }
+            }
+            @media only screen and (max-width: 1199px){
+                .sm{
+                    background-color: $dark-card-background;
+                    border: 1px solid $dark-border-color;
+                }
+                .pixelstrap{
+                    .mobile-back{
+                        border-bottom: 1px solid $dark-border-color;
+                    }
+                    ul{
+                        li{
+                            border-top: 1px solid $dark-border-color;
+                        }
+                        a{
+                            background: $dark-card-background;
+                            &:hover,
+                            &:focus,
+                            &:active{
+                                background: $dark-card-background;
+                            }
+                        }
+                    }
+                }
+                .chat-menu {
+                    border-top: 1px solid $dark-border-color;
+                    background-color: $dark-card-background;
+                }
+                .error-wrapper{
+                    .maintenance-icons{
+                        li{
+                            i{
+                                color: $dark-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .pixelstrap{
+                ul{
+                    background: $dark-card-background;
+                }
+            }
+            @media only screen and (max-width: 575px){
+                .user-profile {
+                    .hovercard {
+                        .info {
+                            .user-designation {
+                                border-top: 1px solid $dark-border-color;
+                                border-bottom: 1px solid $dark-border-color;
+                            }
+                        }
+                    }
+                }
+                .widget-joins {
+                    .border-after-xs {
+                        &:after {
+
+                            background-color: $dark-border-color;
+                        }
+                    }
+                }
+            }
+        }
+        .lg-backdrop {
+            background-color: $dark-body-background;
+        }
+        .lg-outer {
+            .lg-thumb-outer {
+                background-color: $dark-card-background;
+            }
+        }
+        .drag {
+            background-color: $dark-card-background;
+            form {
+                background: $dark-card-background;
+                box-shadow: 0 0 30px $dark-border-color;
+                border: 1px dotted $dark-border-color;
+                input {
+                    background-color: $dark-body-background;
+                    border: 1px solid $dark-border-color;
+                    color: $dark-all-font-color;
+                }
+                .help-block {
+                    text-transform: capitalize;
+                    color: $dark-small-font-color;
+                }
+            }
+        }
+        .draggable {
+            input {
+                background-color: $dark-body-background;
+                color: $dark-all-font-color;
+                border: 1px solid $dark-border-color;
+            }
+            p {
+                color: $dark-small-font-color;
+            }
+            select {
+                background-color: $dark-body-background;
+                color: $dark-all-font-color;
+                border: 1px solid $dark-border-color;
+            }
+            .radio, .checkbox {
+                label {
+                    &::before {
+                        background-color: $dark-body-background;
+                        border: 1px solid $dark-border-color;
+                    }
+                }
+            }
+        }
+        .select2-container--default{
+            .select2-selection--multiple, .select2-selection--single{
+                background-color: $dark-body-background;
+                border: 1px solid $dark-border-color !important;
+            }
+            .select2-search--inline{
+                .select2-search__field{
+                    color: $dark-all-font-color;
+                }
+            }
+            .select2-selection--single{
+                .select2-selection__rendered{
+                    color: $dark-all-font-color;
+                }
+            }
+            .select2-search--dropdown {
+                .select2-search__field{
+                    background-color: $dark-body-background;
+                    border: 1px solid $dark-border-color;
+                    color: $dark-all-font-color;
+                }
+            }
+        }
+        .select2-dropdown{
+            background-color: $dark-body-background;
+            border: 1px solid $dark-border-color;
+        }
+        .select2-drpdwn {
+            .form-control-primary {
+                border-color: $primary-color !important;
+                color: $primary-color !important;
+            }
+            .form-control-secondary {
+                border-color: $secondary-color !important;
+                color: $secondary-color !important;
+            }
+            .form-control-success {
+                border-color: $success-color !important;
+                color: $success-color !important;
+            }
+            .form-control-info {
+                border-color: $info-color !important;
+                color: $info-color !important;
+            }
+            .form-control-warning {
+                border-color: $warning-color !important;
+                color: $warning-color !important;
+            }
+            .form-control-danger {
+                border-color: $danger-color !important;
+                color: $danger-color !important;
+            }
+            .form-control-inverse {
+                border-color: $white !important;
+                color: $white !important;
+            }
+            .form-control-primary-fill{
+                background-color: $primary-color !important;
+                color: $white !important;
+            }
+            .form-control-secondary-fill{
+                background-color: $secondary-color !important;
+                color: $white !important;
+            }
+            .form-control-success-fill{
+                background-color: $success-color !important;
+                color: $white !important;
+            }
+            .form-control-info-fill{
+                background-color: $info-color !important;
+                color: $white !important;
+            }
+            .form-control-warning-fill{
+                background-color: $warning-color !important;
+                color: $white !important;
+            }
+            .form-control-danger-fill{
+                background-color: $danger-color !important;
+                color: $white !important;
+            }
+            .form-control-inverse-fill{
+                background-color: $white !important;
+                color: $black !important;
+            }
+        }
+        .select2-container--default.select2-container--disabled{
+            .select2-selection--single{
+                background-color: $dark-border-color;
+            }
+        }
+        .theme-form {
+            .form-group {
+                select.form-control:not([size]):not([multiple]) {
+                    background-color: $dark-body-background;
+                    color: $dark-all-font-color;
+                    border-color: $dark-border-color;
+                }
+                input[type=text], input[type=email], input[type=search],
+                input[type=password], input[type=number], input[type=tel], input[type=date], input[type=datetime-local], input[type=time], input[type=datetime-local], input[type=month], input[type=week],
+                input[type=url], input[type=file], select {
+                    border-color: $dark-border-color;
+                    background-color: $dark-body-background;
+                    color: $dark-all-font-color;
+                    &::-webkit-input-placeholder {
+                        color: $dark-small-font-color;
+                    }
+                }
+                .form-control {
+                    background-color: $dark-body-background;
+                    color: $dark-all-font-color;
+                }
+                textarea {
+                    border-color: $dark-border-color;
+                    background-color: $dark-body-background;
+                }
+            }
+            .form-divider{
+                border-top: 1px solid $dark-border-color;
+                &::before{
+                    background: $dark-card-background;
+                    color: $dark-all-font-color;
+                }
+            }
+        }
+        .CodeMirror{
+            background: $dark-card-background;
+            border: 1px solid $dark-border-color;
+            color: $dark-all-font-color;
+            .CodeMirror-code{
+                pre{
+                    background: $dark-card-background;
+                }
+            }
+        }
+        .editor-toolbar{
+            border-top: 1px solid $dark-border-color;
+            border-left: 1px solid $dark-border-color;
+            border-right: 1px solid $dark-border-color;
+            a{
+                color: $dark-all-font-color !important;
+                &:hover,
+                &.active{
+                    background: $dark-border-color;
+                }
+            }
+            i.separator{
+                border-left: 1px solid $dark-small-font-color;
+                border-right: 1px solid $dark-small-font-color;
+            }
+        }
+        .editor-toolbar.disabled-for-preview {
+            a{
+                &:not(.no-disable){
+                    background: $dark-border-color;
+                }
+            }
+        }
+        .editor-preview {
+            background-color: $dark-card-background;
+        }
+        .editor-toolbar.fullscreen, .editor-preview-side{
+            background: $dark-card-background;
+            border: 1px solid $dark-small-font-color;
+        }
+        .editor-toolbar {
+            &.fullscreen {
+                &:before, &:after {
+                    background: linear-gradient(to right, $dark-card-background 0, $dark-card-background 100%);
+                }
+            }
+        }
+        .u-step{
+            background: rgba($primary-color, 0.2);
+            &.active,
+            &.current{
+                background: $primary-color;
+                color: $white;
+            }
+        }
+        .u-step-title, .u-pearl-title{
+            color: $dark-all-font-color;
+        }
+        .u-step-number{
+            background-color: $dark-card-background;
+        }
+        .u-pearl{
+            &:before{
+                background-color: $dark-border-color;
+            }
+        }
+        .u-pearl-number, .u-pearl-icon{
+            background: $dark-body-background;
+            border: 2px solid $dark-body-background;
+        }
+        .u-pearl.disabled {
+            .u-pearl-icon, .u-pearl-number{
+                background: $dark-border-color;
+                border: 2px solid $dark-border-color;
+            }
+            &:after {
+                background-color: #334053;
+            }
+        }
+        .u-pearl.error{
+            &:after{
+                background-color: $dark-body-background;
+            }
+        }
+        .note-editor.note-frame{
+            border-color: $dark-border-color;
+            .note-editing-area {
+                .note-editable{
+                    background-color: $dark-card-background;
+                    color: $dark-all-font-color;
+                }
+            }
+        }
+        .swal-modal{
+            background-color: $dark-card-background;
+            .swal-title{
+                color: $dark-all-font-color;
+            }
+            .swal-text{
+                color: $dark-small-font-color;
+            }
+            .swal-content__input{
+                background-color: $dark-body-background;
+                color: $dark-all-font-color;
+            }
+            .swal-icon--success {
+                &:before, &:after {
+                    background: $dark-card-background;
+                }
+            }
+            .swal-icon--success__hide-corners {
+                background-color: $dark-card-background;
+            }
+        }
+        .nav-tabs{
+            border-bottom: 1px solid $dark-border-color;
+            .nav-link{
+                &.active{
+                    background-color: $dark-card-background;
+                    color: $dark-all-font-color;
+                    border-color: $dark-border-color $dark-border-color $dark-card-background;
+                }
+                &:hover,
+                &:focus{
+                    border-color: $dark-border-color $dark-border-color $dark-border-color;
+                }
+            }
+            .nav-item.show{
+                .nav-link{
+                    background-color: $dark-card-background;
+                    color: $dark-all-font-color;
+                    border-color: $dark-border-color $dark-border-color $dark-card-background;
+                }
+            }
+        }
+        .nav-tabs.nav-bottom {
+            .nav-item {
+                .nav-link{
+                    &.active,
+                    &.focus,
+                    &.hover{
+                        border-color: $dark-card-background $dark-border-color $dark-border-color;
+                    }
+                }
+            }
+        }
+        .nav-material.nav-left, .nav-material.nav-right {
+            .nav-link{
+                color: $dark-all-font-color;
+                &.active{
+                    color: $primary-color;
+                }
+            }
+            .show {
+                > .nav-link{
+                    color: $primary-color;
+                }
+            }
+        }
+        .nav-material.nav-left.nav-secondary {
+            .nav-link {
+                &.active,
+                &:focus,
+                &:hover{
+                    border-left-color: $secondary-color;
+                    color: $secondary-color !important;
+                }
+            }
+            .show > .nav-link {
+                border-left-color: $secondary-color;
+                color: $secondary-color !important;
+            }
+            .nav-item.show{
+                color: $secondary-color !important;
+                border-left-color: $secondary-color;
+            }
+        }
+        .nav-material.nav-left.nav-success{
+            .nav-link {
+                &.active,
+                &:focus,
+                &:hover{
+                    color: $success-color !important;
+                }
+            }
+            .show > .nav-link {
+                border-left-color: $success-color;
+                color: $success-color !important;
+            }
+            .nav-item.show{
+                color: $success-color !important;
+                border-left-color: $success-color;
+            }
+        }
+        .nav-material.nav-right.nav-info{
+            .nav-link {
+                &.active,
+                &:focus,
+                &:hover{
+                    color: $info-color !important;
+                }
+            }
+            .show > .nav-link {
+                border-left-color: $info-color;
+                color: $info-color !important;
+            }
+            .nav-item.show{
+                color: $info-color !important;
+                border-left-color: $info-color;
+            }
+        }
+        .nav-material.nav-secondary {
+            .nav-link{
+                &.active,
+                &:focus,
+                &:hover{
+                    color: $secondary-color !important;
+                }
+            }
+            .nav-item{
+                &.show{
+                    color: $secondary-color !important;
+                }
+            }
+        }
+        .nav-material.nav-success {
+            .nav-link{
+                &.active,
+                &:focus,
+                &:hover{
+                    color: $success-color !important;
+                }
+            }
+            .nav-item{
+                &.show{
+                    color: $success-color !important;
+                }
+            }
+        }
+        .dropdown-divider{
+            border-top: 1px solid $dark-border-color;
+        }
+        .icon-hover-bottom {
+            background-color: $dark-card-background;
+            box-shadow: 0px 0px 1px 1px $dark-border-color;
+            .icon-title {
+                color: $dark-all-font-color;
+            }
+            span {
+                color: $dark-small-font-color;
+            }
+            .form-group {
+                input {
+                    background-color: $dark-body-background;
+                    color: $dark-all-font-color;
+                    border: 1px solid $dark-border-color;
+                }
+            }
+            .icon-first {
+                i {
+                    color: $dark-small-font-color;
+                }
+            }
+        }
+        code {
+            background-color: #d8ecff;
+            border-radius: 2px;
+        }
+        #cd-timeline{
+            &::before {
+                background: $dark-border-color;
+            }
+        }
+        .timeliny{
+            border-top: 1px solid $dark-border-color;
+            border-bottom: 1px solid $dark-border-color;
+            &::before{
+                background-color: $white;
+            }
+            .timeliny-dot{
+                background-color: $dark-card-background;
+                border: 1px solid $white;
+                &::before {
+                    color: $dark-all-font-color;
+                }
+            }
+            .timeliny-timeline{
+                .timeliny-timeblock{
+                    &.active{
+                        .timeliny-dot{
+                            &::before{
+                                color: $dark-all-font-color;
+                            }
+                        }
+                    }
+                    &:not(.inactive):not(.active){
+                        .timeliny-dot{
+                            &:hover {
+                                background-color: $white;
+                                &::before{
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                        }
+                    }
+                    .timeliny-dot{
+                        &:hover{
+                            &::after{
+                                background-color: $dark-card-background;
+                                border: 1px solid $dark-border-color;
+                                color: $dark-all-font-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .todo{
+            .todo-list-wrapper{
+                #todo-list{
+                    li {
+                        .task-container{
+                            background: $dark-card-background;
+                            border-bottom: 1px solid $dark-border-color;
+                            .task-label{
+                                color: $dark-all-font-color;
+                            }
+                            &:hover{
+                                h4{
+                                    color: $white;
+                                }
+                            }
+                            .task-action-btn{
+                                .action-box{
+                                    &:hover:not(.active) {
+                                        background: $dark-card-background;
+                                        border: 1px solid $dark-border-color;
+                                    }
+                                }
+                            }
+                        }
+                        &.completed{
+                            .task-container{
+                                .task-label{
+                                    color: $primary-color;
+                                }
+                                .complete-btn{
+                                    &:hover{
+                                        border: 1px solid $success-color !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .todo-list-footer {
+                    .new-task-wrapper{
+                        textarea{
+                            background-color: $dark-card-background;
+                            border: 1px solid $dark-border-color;
+                            color: $dark-all-font-color;
+                        }
+                    }
+                }
+
+            }
+        }
+        .user-profile {
+            .ttl-info {
+                h6 {
+                    color: $dark-small-font-color;
+                }
+                span {
+                    color: $dark-all-font-color;
+                }
+            }
+            .hovercard {
+                .info {
+                    .title {
+                        a{
+                            color: $dark-all-font-color;
+                        }
+                    }
+                }
+                .user-image{
+                    .avatar{
+                        img{
+                            border: 10px solid $dark-card-background;
+                        }
+                    }
+                    .icon-wrapper{
+                        background-color: $dark-card-background;
+                    }
+                }
+                .tabs-scoial{
+                    border-bottom: none !important;
+                }
+            }
+            .follow {
+                .follow-num{
+                    color: $dark-all-font-color;
+                }
+            }
+            .profile-img-style{
+                .user-name{
+                    color: $dark-all-font-color;
+                }
+                p{
+                    color: $dark-small-font-color;
+                }
+            }
+        }
+        .introjs-helperLayer{
+            background-color: rgba(54,64,74,0.9);
+            border: rgba(255,255,255,0.5);
+        }
+        .jstree-default {
+            .jstree-node, .jstree-icon{
+                color: #455869 !important;
+            }
+            .jstree-anchor{
+                color: $dark-small-font-color;
+            }
+            .jstree-clicked{
+                color: $white;
+                background-color: transparent;
+            }
+            .jstree-hovered{
+                background-color: $dark-body-background;
+                border: 1px solid $dark-border-color;
+            }
+        }
+        span.twitter-typeahead{
+            .tt-menu{
+                background-color: $dark-body-background;
+                color: $dark-all-font-color;
+            }
+            .tt-suggestion{
+                color: $dark-all-font-color;
+                &:hover,
+                &:focus{
+                    background-color: $dark-card-background;
+                }
+            }
+        }
+        .typography{
+            small{
+                color: $dark-all-font-color;
+            }
+        }
+        .blockquote-footer{
+            color: $dark-small-font-color;
+        }
+        .code-box-copy{
+            pre{
+                background-color: $dark-body-background;
+                code{
+                    background-color: $dark-body-background;
+                }
+            }
+            pre[class*="language-"]{
+                border: 1px solid $dark-border-color;
+            }
+            .code-box-copy__btn{
+                background-color: $dark-body-background;
+                border: 1px solid $dark-border-color;
+                color:$white;
+            }
+            code[class*=language-], pre[class*=language-]{
+                text-shadow: 0px 1px $black;
+                ::selection{
+                    text-shadow: none;
+                    background: $dark-card-background;
+                }
+            }
+        }
+        table.fixedHeader-floating{
+            background-color: $dark-body-background;
+        }
+        .dt-button-info{
+            background-color: $dark-card-background;
+            border: 1px solid $dark-border-color;
+            h2{
+                background-color: $dark-card-background;
+                border-bottom: 1px solid $dark-border-color;
+            }
+        }
+        #keytable_wrapper, #column-selector_wrapper, #auto-fill_wrapper, #custom-button_wrapper, #class-button_wrapper, #keyboard-btn_wrapper, #multilevel-btn_wrapper, #pagelength-btn_wrapper, #basic-colreorder_wrapper, #state-saving_wrapper, #real-time_wrapper, #basic-fixed-header_wrapper, #fixed-header-footer_wrapper, #export-button_wrapper, #excel-cust-bolder_wrapper, #cust-json_wrapper, #basic-key-table_wrapper, #focus-cell_wrapper, #responsive_wrapper, #new-cons_wrapper, #show-hidden-row_wrapper, #basic-row-reorder_wrapper, #full-row_wrapper, #rest-column_wrapper{
+            .dataTables_paginate{
+                border: none;
+            }
+        }
+        #example-style-8_wrapper{
+            table.dataTable.stripe, table.dataTable.display{
+                tbody {
+                    tr.odd{
+                        background-color: $dark-body-background;
+                    }
+                }
+            }
+        }
+        .error-wrapper{
+            background-color: rgba(54, 64, 74, 0.8);
+            .sub-content{
+                color: $dark-all-font-color;
+            }
+            &.maintenance-bg {
+                background-color: rgba($black, 0.85);
+            }
+        }
+        .b-light{
+            border:1px solid $dark-border-color !important;
+        }
+        .modal-content{
+            .close {
+                color: $dark-small-font-color;
+            }
+            background-color: $dark-card-background;
+            .modal-header {
+                border-bottom: 1px solid $dark-border-color;
+                .close {
+                    color: $dark-small-font-color;
+                }
+            }
+            .modal-footer {
+                border-top: 1px solid $dark-border-color;
+            }
+            .ui-front{
+                .form-control{
+                    background-color: $dark-card-background;
+                    color: $dark-all-font-color;
+                    border: 1px solid $dark-border-color;
+                }
+            }
+        }
+        .stepwizard {
+            .stepwizard-row{
+                &:before{
+                    background-color: $dark-small-font-color;
+                }
+            }
+        }
+        .modal{
+            .theme-close{
+                background-color: $dark-card-background !important;
+                color: $dark-all-font-color;
+            }
+        }
+        .modal-content{
+            .theme-close{
+                background-color: $dark-card-background !important;
+                color: $dark-all-font-color;
+            }
+        }
+        .token.atrule, .token.attr-value, .token.keyword {
+            color: $info-color;
+        }
+        .token{
+            &.boolean, &.constant, &.deleted, &.number, &.property, &.symbol, &.tag{
+                color: $danger-color;
+            }
+        }
+        .loader-box{
+            &.card-loader{
+                background-color: $dark-card-background;
+            }
+        }
+        .my-gallery{
+            &.gallery-with-description{
+                img {
+                    border: 1px solid $dark-border-color !important;
+                    border-bottom: none !important;
+                }
+            }
+        }
+        @each $var in $alert-name {
+            $i: index($alert-name, $var);
+            .alert-#{$var}.inverse{
+                color: $dark-all-font-color;
+            }
+        }
+        .alert-theme{
+            span{
+                + span{
+                    + span{
+                        border: 1px solid $primary-color;
+                        background-color: $dark-body-background;
+                        border-radius: 4px;
+                    }
+                }
+            }
+            i{
+                background-color: $primary-color;
+                color: $white;
+                padding: 20px;
+                margin-right: 20px !important;
+            }
+        }
+        .user-card {
+            .user-deatils{
+                h6 {
+                    color: $dark-small-font-color;
+                }
+            }
+            .card-footer{
+                > div{
+                    &:first-child {
+                        border-right: 1px solid $dark-border-color;
+                    }
+                }
+                .user-footer{
+                    h6 {
+                        color: $dark-small-font-color;
+                    }
+                    svg{
+                        path, rect {
+                            color: $dark-small-font-color;
+                        }
+                    }
+                }
+            }
+        }
+        .selling-update {
+            border: 2px solid $dark-border-color;
+        }
+        .invest-dropdown {
+            .right-header-dropdown{
+                &.onhover-show-div {
+                    background-color: $dark-body-background;
+                    box-shadow: 0 0 2px 2px $dark-body-background;
+                    a{
+                        color: $dark-all-font-color;
+                    }
+                }
+            }
+        }
+        .select2-drpdwn-project{
+            .form-control{
+                background-color: $dark-card-background !important;
+                border-top: none !important;
+                border-left: none !important;
+                border-right: none !important;
+            }
+        }
+        .order-history{
+            table{
+                tr{
+                    td, th{
+                        border-top: none !important;
+                    }
+                }
+            }
+            .title-orders {
+                background-color: $dark-body-background;
+            }
+        }
+        .navigation-option{
+            ul{
+                li {
+                    a {
+                        color: $dark-all-font-color;
+                    }
+                    &:hover{
+                        background-color: $dark-body-background;
+                    }
+                }
+            }
+        }
+        .product-box {
+            .product-details {
+                h6 {
+                    color: $dark-all-font-color;
+                }
+                span {
+                    color: $dark-small-font-color;
+                }
+            }
+            .product-img {
+                .product-hover {
+                    ul {
+                        li{
+                            background-color: $dark-card-background;
+                            &:hover{
+                                background-color: $black;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .browse{
+            .browse-articles{
+                ul{
+                    li{
+                        a {
+                            color: $dark-all-font-color;
+                        }
+                        &:hover{
+                            background-color: $dark-body-background;
+                        }
+                    }
+                }
+            }
+        }
+        @each $btn-name, $btn-color in (primary, $primary-color),
+        (secondary, $secondary-color) ,
+        (success, $success-color),
+        (danger, $danger-color),
+        (info, $info-color),
+        (light, $light-color),
+        (dark, $dark-color),
+        (warning, $warning-color) {
+            .radio-#{$btn-name}{
+                input[type="radio"]
+                {
+                    & + label{
+                        &::before{
+                            border-color: $btn-color !important;
+                        }
+                        &::after{
+                            background-color: $btn-color;
+                        }
+                    }
+                    &:checked{
+                        & + label{
+                            &::before{
+                                border-color: $btn-color !important;
+                            }
+                            &::after{
+                                background-color: $btn-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @each $btn-name, $btn-color in (primary, $primary-color),
+        (secondary, $secondary-color) ,
+        (success, $success-color),
+        (danger, $danger-color),
+        (info, $info-color),
+        (light, $light-color),
+        (dark, $dark-color),
+        (warning, $warning-color) {
+            .checkbox-#{$btn-name}{
+                label{
+                    &::before{
+                        border-color:$btn-color !important;
+                    }
+                }
+
+            }
+        }
+
+        @each $btn-name, $btn-color in   (primary, $primary-color),
+        (secondary, $secondary-color) ,
+        (success, $success-color),
+        (danger, $danger-color),
+        (info, $info-color),
+        (light, $light-color),
+        (dark, $dark-color),
+        (warning, $warning-color) {
+            .checkbox-solid-#{$btn-name} {
+                label {
+                    &:before {
+                        background-color: $btn-color !important;
+                        border-color: $btn-color !important;
+                        color: $white !important;
+                    }
+                }
+                input[type="checkbox"] {
+                    &:checked {
+                        & + label {
+                            &::before {
+                                background-color: $btn-color !important;
+                                border-color: $btn-color !important;
+                                color: $white !important;
+                            }
+                            &::after {
+                                color: $white !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .bootstrap-datetimepicker-widget{
+            ul{
+                li{
+                    color: $dark-all-font-color;
+                    border-bottom: 1px solid $dark-border-color;
+                }
+            }
+            tr{
+                th,td{
+                    &:hover{
+                        background-color: $dark-card-background;
+                    }
+                    span{
+                        &:hover{
+                            background-color: $dark-card-background;
+                        }
+                    }
+                    &.prev,
+                    &.next{
+                        &:hover{
+                            background-color: $dark-card-background;
+                        }
+                    }
+                }
+                &:first-child{
+                    th{
+                        &:hover{
+                            background-color: $dark-card-background;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-transparent {
+            color: $dark-all-font-color;
+        }
+        #cal-basic {
+            .fc-toolbar {
+                .fc-left, .fc-right {
+                    .fc-next-button {
+                        .fc-icon-right-single-arrow {
+                            &:after {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                    }
+                    .fc-prev-button {
+                        .fc-icon-left-single-arrow {
+                            &:after {
+                                color: $dark-small-font-color;
+                            }
+                        }
+                    }
+                }
+                .fc-left {
+                    .fc-button-group{
+                        .fc-month-button{
+                            color: $white !important;
+                        }
+                    }
+                }
+            }
+        }
+        .fc-button-group {
+            .fc-basicWeek-button, .fc-basicDay-button, .fc-agendaWeek-button, .fc-agendaDay-button {
+                color: $black !important;
+            }
+            .fc-month-button {
+                color: $white !important;
+            }
+        }
+        #cal-agenda-view {
+            .fc-toolbar {
+                .fc-right {
+                    .fc-button-group {
+                        .fc-month-button, .btn-light {
+                            color: $black !important;
+                        }
+                        .fc-agendaWeek-button {
+                            color: $white !important;
+                            &:hover {
+                                color: $black !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .calendar-wrap {
+            .fc-unthemed {
+                th, .fc-row, td {
+                    border-color: $dark-border-color;
+                }
+            }
+        }
+        .basic-calendar, #cal-bg-events, #cal-event-colors {
+            .fc-toolbar {
+                .fc-right {
+                    .fc-button-group {
+                        .fc-basicWeek-button , .btn-light {
+                            color: $black !important;
+                        }
+                        .fc-month-button {
+                            color: $white !important;
+                            &:hover {
+                                color: $black !important;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .categories{
+            ul{
+                li{
+                    a {
+                        color: $dark-small-font-color;
+                    }
+                    &:hover{
+                        background-color: $dark-body-background;
+                    }
+                }
+            }
+        }
+        .main{
+            .langChoice {
+                background: $dark-body-background;
+                color: $white;
+                border: 1px solid $dark-border-color;
+            }
+        }
+        .socialprofile {
+            .likes-profile {
+                h5 {
+                    span {
+                        color: $dark-all-font-color;
+                    }
+                }
+            }
+            span {
+                color: $dark-small-font-color;
+            }
+        }
+        .social-status {
+            .media {
+                .media-body {
+                    span {
+                        + span {
+                            color: $dark-small-font-color;
+                        }
+                    }
+                    p, .light-span{
+                        color: $dark-small-font-color;
+                    }
+                }
+            }
+            form {
+                .form-group {
+                    .form-control-plaintext {
+                        border: 1px solid $dark-border-color;
+                    }
+                }
+            }
+        }
+        .filter-cards-view, .timeline-content {
+            p {
+                color: $dark-small-font-color;
+            }
+            .comment-number {
+                i {
+                    color: $dark-small-font-color;
+                }
+            }
+            .comments-box {
+                .input-group {
+                    .form-control{
+                        border: none !important;
+                    }
+                    .input-group-append {
+                        background-color: $dark-body-background;
+                    }
+                }
+            }
+        }
+        .social-chat {
+            .media-body {
+                border: 1px solid $dark-border-color;
+                &:after{
+                    border-right: 7px solid $dark-card-background;
+                }
+            }
+            span {
+                span {
+                    color: $dark-small-font-color;
+                }
+            }
+        }
+        .details-about {
+            .your-details {
+                p {
+                    color: $dark-small-font-color;
+                }
+            }
+        }
+        .activity-log {
+            .my-activity {
+                p {
+                    color: $dark-small-font-color;
+                }
+            }
+        }
+        .bookmark {
+            ul {
+                li {
+                    a {
+                        color: $dark-all-font-color;
+                    }
+                }
+            }
+        }
+    }
+    &.sidebar-dark{
+        .page-wrapper .page-body-wrapper .iconsidebar-menu .iconMenu-bar .iconbar-mainmenu li.active a.active {
+    color: #fff;
+    font-weight: 700;
+}
+        .page-body-wrapper{
+            .iconsidebar-menu{
+                .sidebar{
+                    .iconMenu-bar{
+                        background-color: $dark-card-background;
+                        box-shadow: inset -2px 0px 2px 0px #4c5564;
+                        .bar-icons{
+                            border: none;
+                        }
+                        .iconbar-mainmenu{
+                            background-color: $dark-card-background;
+                            box-shadow: none;
+                            .iconbar-header{
+                                background-color: $dark-card-background;
+                                color: $white;
+                            }
+                            li{
+                                a{
+                                    color: $dark-all-font-color;
+                                }
+                            }
+                        }
+                        li{
+                            a{
+                                i{
+                                    color: $dark-all-font-color;
+                                }
+                                span{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**=====================
+   59. theme layout CSS ends
+==========================**/

@@ -1,0 +1,200 @@
+.fui-danmu {
+    height: 1.6rem;
+    max-width: 14rem;
+    border-radius: 0.8rem;
+    position: fixed;
+    top: 3rem;
+    left: 1rem;
+    z-index: 999;
+    padding: 0.15rem;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.65rem;
+    color: #fff;
+    overflow: hidden;
+    display: none;
+}
+.diy-fixedsearch ~ .fui-danmu {
+    top: 5rem;
+}
+.fui-danmu.show{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.fui-danmu:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: -1;
+    opacity: 0.7;
+}
+.fui-danmu .thumb {
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 2;
+}
+.fui-danmu.style2 {
+    border-radius: 0.2rem;
+}
+.fui-danmu.style2 .thumb {
+    border-radius: 0.2rem;
+}
+.fui-danmu .text {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-left: 0.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 2;
+}
+.fui-danmu .time {
+    max-width: 4rem;
+    text-align: right;
+    padding: 0 0.2rem;
+    font-size: 0.65rem;
+    z-index: 2;
+}
+.fui-startadv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index:  10000;
+}
+.fui-startadv:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+.fui-startadv .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+}
+.fui-startadv.small-bot .inner,
+.fui-startadv.small-top .inner {
+    width: 80%;
+    height: 70%;
+    position: relative;
+    margin: 14% auto 0;
+}
+.fui-startadv.small-top .inner {
+    margin: 22% auto 0;
+}
+.fui-startadv .inner img {
+    width: 100%;
+    height: 100%;
+}
+.fui-startadv.default .inner .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10002;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 1rem;
+}
+
+.fui-startadv.small-bot .inner .close,
+.fui-startadv.small-top .inner .close {
+    width: 100%;
+    height: 4.5rem;
+    position: absolute;
+    bottom: -4.5rem;
+}
+.fui-startadv.small-top .inner .close {
+    top: -3rem;
+    height: 3rem;
+    bottom: 0;
+}
+.fui-startadv.small-bot .inner .close:before,
+.fui-startadv.small-top .inner .close:before {
+    position: absolute;
+    height: 2.1rem;
+    content: "";
+    width: 1px;
+    background: #fff;
+    left: 50%;
+    margin-left: -0.5px;
+    display: none;
+}
+.fui-startadv.small-top .inner .close:before {
+    left: auto;
+    right: 0.9rem;
+    bottom: 0;
+    height: 1.2rem;
+}
+
+.fui-startadv.small-bot .inner .close .close-btn,
+.fui-startadv.small-top .inner .close .close-btn {
+    height: 2.4rem;
+    width: 2.4rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.25rem;
+}
+.fui-startadv.small-top .inner .close .close-btn {
+    height: 1.8rem;
+    width: 1.8rem;
+    top: 0;
+    left: auto;
+    right: 0;
+}
+.fui-startadv.small-bot .inner .close .close-btn:before,
+.fui-startadv.small-top .inner .close .close-btn:before {
+    height: 2.4rem;
+    width: 2.4rem;
+    position: absolute;
+    content: "×";
+    color: #fff;
+    line-height: 1.9rem;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 100;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    left: -1px;
+    top: -1px;
+}
+.fui-startadv.small-top .inner .close .close-btn:before {
+    height: 1.8rem;
+    width: 1.8rem;
+    line-height: 1.5rem;
+    font-size: 2.1rem;
+}
+.fui-startadv .fui-swipe {
+    height: 100%;
+}
+.fui-startadv .fui-swipe-page {
+    bottom: 0.5rem;
+}
+.fui-startadv .fui-swipe-bullet {
+    background: #fff;
+    margin: 0 3px;
+    border-radius: 10px;
+}

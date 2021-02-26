@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="呼和浩特" code="150100">
+<county name="新城" code="150102">
+    <street name="海拉尔东路街道" code="150102001" />
+    <street name="锡林路街道" code="150102002" />
+    <street name="中山东路街道" code="150102003" />
+    <street name="东街街道" code="150102004" />
+    <street name="西街街道" code="150102005" />
+    <street name="东风路街道" code="150102006" />
+    <street name="迎新路街道" code="150102007" />
+    <street name="成吉思汗大街街道" code="150102008" />
+    <street name="保合少镇" code="150102101" />
+    <street name="新城区鸿盛高科技园区" code="150102400" />
+</county>
+<county name="回民" code="150103">
+    <street name="新华西路办事处" code="150103001" />
+    <street name="中山西路办事处" code="150103002" />
+    <street name="光明路办事处" code="150103003" />
+    <street name="海拉尔西路办事处" code="150103004" />
+    <street name="环河街办事处" code="150103005" />
+    <street name="通道街办事处" code="150103006" />
+    <street name="钢铁路办事处" code="150103007" />
+    <street name="攸攸板镇" code="150103100" />
+</county>
+<county name="玉泉" code="150104">
+    <street name="小召前街办事处" code="150104001" />
+    <street name="兴隆巷办事处" code="150104002" />
+    <street name="长和廊办事处" code="150104003" />
+    <street name="石东路办事处" code="150104004" />
+    <street name="大南街办事处" code="150104005" />
+    <street name="鄂尔多斯路办事处" code="150104006" />
+    <street name="西菜园办事处" code="150104007" />
+    <street name="昭君路办事处" code="150104008" />
+    <street name="小黑河镇" code="150104100" />
+    <street name="裕隆工业园区" code="150104400" />
+</county>
+<county name="赛罕" code="150105">
+    <street name="人民路街道" code="150105001" />
+    <street name="大学西路街道" code="150105002" />
+    <street name="乌兰察布东路街道" code="150105003" />
+    <street name="大学东路街道" code="150105004" />
+    <street name="中专路街道" code="150105005" />
+    <street name="昭乌达路街道" code="150105006" />
+    <street name="巴彦街道" code="150105007" />
+    <street name="敕勒川路街道" code="150105008" />
+    <street name="榆林镇" code="150105101" />
+    <street name="黄合少镇" code="150105103" />
+    <street name="金河镇" code="150105104" />
+    <street name="金桥经济技术开发区" code="150105400" />
+    <street name="呼和浩特市如意开发区" code="150105401" />
+    <street name="呼和浩特留学人员创业园" code="150105402" />
+</county>
+<county name="土默特左" code="150121">
+    <street name="察素齐镇" code="150121100" />
+    <street name="毕克齐镇" code="150121101" />
+    <street name="善岱镇" code="150121102" />
+    <street name="台阁牧镇" code="150121103" />
+    <street name="白庙子镇" code="150121104" />
+    <street name="沙尔沁镇" code="150121105" />
+    <street name="敕勒川镇" code="150121106" />
+    <street name="北什轴乡" code="150121207" />
+    <street name="塔布赛乡" code="150121208" />
+    <street name="呼和浩特经济技术开发区金川区" code="150121400" />
+    <street name="呼和浩特金山经济技术开发区" code="150121401" />
+    <street name="呼和浩特如意开发区南区" code="150121402" />
+    <street name="呼和浩特出口加工区" code="150121403" />
+</county>
+<county name="托克托" code="150122">
+    <street name="双河镇" code="150122100" />
+    <street name="新营子镇" code="150122101" />
+    <street name="五申镇" code="150122102" />
+    <street name="伍什家镇" code="150122103" />
+    <street name="古城镇" code="150122104" />
+    <street name="托县工业园区" code="150122400" />
+</county>
+<county name="和林格尔" code="150123">
+    <street name="城关镇" code="150123100" />
+    <street name="盛乐镇" code="150123101" />
+    <street name="新店子镇" code="150123102" />
+    <street name="舍必崖乡" code="150123203" />
+    <street name="大红城乡" code="150123205" />
+    <street name="羊群沟乡" code="150123206" />
+    <street name="黑老夭乡" code="150123207" />
+    <street name="巧什营乡" code="150123208" />
+    <street name="盛乐经济工业园区" code="150123400" />
+</county>
+<county name="清水河" code="150124">
+    <street name="城关镇" code="150124100" />
+    <street name="宏河镇" code="150124101" />
+    <street name="喇嘛湾镇" code="150124102" />
+    <street name="窑沟乡" code="150124200" />
+    <street name="北堡乡" code="150124201" />
+    <street name="韮菜庄乡" code="150124202" />
+    <street name="五良太乡" code="150124203" />
+    <street name="单台子乡" code="150124204" />
+</county>
+<county name="武川" code="150125">
+    <street name="可镇" code="150125100" />
+    <street name="哈乐镇" code="150125101" />
+    <street name="西乌兰不浪镇" code="150125102" />
+    <street name="大青山乡" code="150125200" />
+    <street name="上秃亥乡" code="150125205" />
+    <street name="德胜沟乡" code="150125207" />
+    <street name="二份子乡" code="150125211" />
+    <street name="哈拉合少乡" code="150125213" />
+    <street name="耗赖山乡" code="150125214" />
+    <street name="内蒙古武川经济开发区" code="150125402" />
+    <street name="武川金三角开发区" code="150125403" />
+</county>
+</city>
+</address>

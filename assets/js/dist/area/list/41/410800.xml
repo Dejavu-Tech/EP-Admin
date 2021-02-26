@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="焦作" code="410800">
+<county name="解放" code="410802">
+    <street name="民生街道" code="410802001" />
+    <street name="民主街道" code="410802002" />
+    <street name="新华街道" code="410802003" />
+    <street name="焦西街道" code="410802004" />
+    <street name="焦南街道" code="410802005" />
+    <street name="焦北街道" code="410802006" />
+    <street name="七百间街道" code="410802007" />
+    <street name="上白作街道" code="410802008" />
+    <street name="王褚街道" code="410802009" />
+</county>
+<county name="中站" code="410803">
+    <street name="李封街道" code="410803001" />
+    <street name="王封街道" code="410803002" />
+    <street name="朱村街道" code="410803003" />
+    <street name="冯封街道" code="410803004" />
+    <street name="龙洞街道" code="410803005" />
+    <street name="月山街道" code="410803006" />
+    <street name="丹河街道" code="410803007" />
+    <street name="许衡街道" code="410803008" />
+    <street name="府城街道" code="410803009" />
+    <street name="龙翔街道" code="410803010" />
+</county>
+<county name="马村" code="410804">
+    <street name="马村街道" code="410804001" />
+    <street name="北山街道" code="410804002" />
+    <street name="冯营街道" code="410804003" />
+    <street name="九里山街道" code="410804004" />
+    <street name="待王街道" code="410804005" />
+    <street name="安阳城街道" code="410804006" />
+    <street name="演马街道" code="410804007" />
+</county>
+<county name="山阳" code="410811">
+    <street name="东方红街道" code="410811001" />
+    <street name="焦东街道" code="410811002" />
+    <street name="百间房街道" code="410811003" />
+    <street name="太行街道" code="410811004" />
+    <street name="艺新街道" code="410811005" />
+    <street name="光亚街道" code="410811006" />
+    <street name="定和街道" code="410811007" />
+    <street name="中星街道" code="410811008" />
+    <street name="新城街道" code="410811009" />
+    <street name="李万街道" code="410811060" />
+    <street name="文苑街道" code="410811061" />
+    <street name="文昌街道" code="410811062" />
+    <street name="阳庙镇" code="410811100" />
+    <street name="宁郭镇" code="410811101" />
+    <street name="苏家作乡" code="410811203" />
+</county>
+<county name="修武" code="410821">
+    <street name="城关镇" code="410821100" />
+    <street name="七贤镇" code="410821101" />
+    <street name="郇封镇" code="410821102" />
+    <street name="高村乡" code="410821202" />
+    <street name="周庄乡" code="410821203" />
+    <street name="五里源乡" code="410821204" />
+    <street name="岸上乡" code="410821205" />
+    <street name="西村乡" code="410821206" />
+    <street name="小营工贸区" code="410821400" />
+</county>
+<county name="博爱" code="410822">
+    <street name="博爱县清化镇" code="410822100" />
+    <street name="博爱县柏山镇" code="410822101" />
+    <street name="博爱县月山镇" code="410822102" />
+    <street name="博爱县许良镇" code="410822103" />
+    <street name="博爱县磨头镇" code="410822105" />
+    <street name="博爱县孝敬镇" code="410822106" />
+    <street name="博爱县寨豁乡" code="410822200" />
+    <street name="博爱县金城乡" code="410822203" />
+    <street name="国营博爱农场" code="410822400" />
+</county>
+<county name="武陟" code="410823">
+    <street name="木城街道" code="410823001" />
+    <street name="龙源街道" code="410823002" />
+    <street name="龙泉街道" code="410823003" />
+    <street name="木栾街道" code="410823004" />
+    <street name="詹店镇" code="410823101" />
+    <street name="西陶镇" code="410823102" />
+    <street name="谢旗营镇" code="410823103" />
+    <street name="大封镇" code="410823104" />
+    <street name="嘉应观乡" code="410823200" />
+    <street name="乔庙乡" code="410823201" />
+    <street name="圪当店乡" code="410823202" />
+    <street name="三阳乡" code="410823203" />
+    <street name="小董乡" code="410823204" />
+    <street name="大虹桥乡" code="410823205" />
+    <street name="北郭乡" code="410823206" />
+    <street name="武陟宁郭农场" code="410823598" />
+</county>
+<county name="温县" code="410825">
+    <street name="温泉镇" code="410825100" />
+    <street name="祥云镇" code="410825101" />
+    <street name="番田镇" code="410825102" />
+    <street name="黄庄镇" code="410825104" />
+    <street name="武德镇" code="410825105" />
+    <street name="赵堡镇" code="410825106" />
+    <street name="南张羌镇" code="410825107" />
+    <street name="岳村乡" code="410825200" />
+    <street name="招贤乡" code="410825201" />
+    <street name="北冷乡" code="410825203" />
+    <street name="国营温县农场" code="410825400" />
+</county>
+<county name="沁阳" code="410882">
+    <street name="覃怀街道" code="410882001" />
+    <street name="怀庆街道" code="410882002" />
+    <street name="太行街道" code="410882003" />
+    <street name="沁园街道" code="410882004" />
+    <street name="崇义镇" code="410882100" />
+    <street name="西向镇" code="410882101" />
+    <street name="西万镇" code="410882102" />
+    <street name="柏香镇" code="410882103" />
+    <street name="山王庄镇" code="410882104" />
+    <street name="紫陵镇" code="410882105" />
+    <street name="常平乡" code="410882200" />
+    <street name="王召乡" code="410882201" />
+    <street name="王曲乡" code="410882202" />
+</county>
+<county name="孟州" code="410883">
+    <street name="大定街道" code="410883001" />
+    <street name="会昌街道" code="410883002" />
+    <street name="河雍街道" code="410883003" />
+    <street name="河阳街道" code="410883004" />
+    <street name="化工镇" code="410883100" />
+    <street name="南庄镇" code="410883101" />
+    <street name="城伯镇" code="410883102" />
+    <street name="谷旦镇" code="410883103" />
+    <street name="赵和镇" code="410883104" />
+    <street name="西虢镇" code="410883105" />
+    <street name="槐树乡" code="410883201" />
+</county>
+</city>
+</address>

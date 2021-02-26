@@ -1,0 +1,97 @@
+- var prism                 = true;
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var vertical_menu         = true;
+- var drilldown             = true;
+- var megamenu              = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Mega
+                                      span
+                                        | menu
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Perk UI    
+                                      li.breadcrumb-item Menu Options
+                                      li.breadcrumb-item.active Mega Menu
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card.alert.alert-primary(role='alert')
+                            h4.alert-heading Tip!
+                            p
+                              | When you want to set the mega menu vertically, than use this Page Layout and you will easily be able to set the
+                              | mega menu.
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 How to use it?
+                              .card-header-right
+                                ul.list-unstyled.card-option
+                                  li
+                                    i.icofont.icofont-simple-left
+                                  li
+                                    i.view-html.fa.fa-code
+                                  li
+                                    i.icofont.icofont-maximize.full-card
+                                  li
+                                    i.icofont.icofont-minus.minimize-card
+                                  li
+                                    i.icofont.icofont-refresh.reload-card
+                                  li
+                                    i.icofont.icofont-error.close-card
+                            .card-body
+                              h5 Step 1
+                              p Include vertical-menu.js, vertical-menu.css, megamenu.js
+                              h5 Step 2
+                              p
+                                | If we want to drilldown pattern add in mega menu portion you have to include also jquery.drilldown.js
+                              h5 Step 3
+                              p
+                                | Copy html code of vertical-menu-main according to your requirement in this layout.
+                              h5 Step 4
+                              p.mb-0 Finally, you can change the content according to your need.
+                              .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head', title='Copy')
+                                  i.icofont.icofont-copy-alt
+                                pre
+                                  code.language-html#example-head
+                                            | &lt;!-- Cod Box Copy begin --&gt;
+                                            | &lt;div class=&quot;card-body&quot;&gt;
+                                            | &lt;h5&gt;Step 1&lt;/h5&gt;
+                                            | &lt;p&gt;Include vertical-menu.js, vertical-menu.css, megamenu.js&lt;/p&gt;
+                                            | &lt;h5&gt;Step 2&lt;/h5&gt;
+                                            | &lt;p&gt;If we want to drilldown pattern add in mega menu portion you have to include also jquery.drilldown.js&lt;/p&gt;
+                                            | &lt;h5&gt;Step 3&lt;/h5&gt;
+                                            | &lt;p&gt;Copy html code of vertical-menu-main according to your requirement in this layout.&lt;/p&gt;
+                                            | &lt;h5&gt;Step 4&lt;/h5&gt;
+                                            | &lt;p&gt;Finally, you can change the content according to your need.&lt;/p&gt;
+                                            | &lt;/div&gt;
+                                            | &lt;!-- Cod Box Copy end --&gt;
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

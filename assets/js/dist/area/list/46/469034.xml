@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="陵水" code="469034">
+<county name="陵水" code="469034001">
+    <street name="椰林镇" code="469028100" />
+    <street name="光坡镇" code="469028101" />
+    <street name="三才镇" code="469028102" />
+    <street name="英州镇" code="469028103" />
+    <street name="隆广镇" code="469028104" />
+    <street name="文罗镇" code="469028105" />
+    <street name="本号镇" code="469028106" />
+    <street name="新村镇" code="469028107" />
+    <street name="黎安镇" code="469028108" />
+    <street name="提蒙乡" code="469028200" />
+    <street name="群英乡" code="469028201" />
+    <street name="国营岭门农场" code="469028400" />
+    <street name="国营南平农场" code="469028401" />
+    <street name="国营吊罗山林业公司" code="469028500" />
+</county>
+</city>
+</address>

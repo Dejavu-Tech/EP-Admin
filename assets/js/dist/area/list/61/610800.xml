@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="榆林" code="610800">
+<county name="榆阳" code="610802">
+    <street name="鼓楼街道" code="610802001" />
+    <street name="青山路街道" code="610802002" />
+    <street name="上郡路街道" code="610802003" />
+    <street name="新明楼街道" code="610802004" />
+    <street name="驼峰路街道" code="610802005" />
+    <street name="崇文路街道" code="610802006" />
+    <street name="航宇路街道" code="610802007" />
+    <street name="鱼河镇" code="610802100" />
+    <street name="上盐湾镇" code="610802101" />
+    <street name="镇川镇" code="610802102" />
+    <street name="清泉镇" code="610802103" />
+    <street name="麻黄梁镇" code="610802105" />
+    <street name="牛家梁镇" code="610802106" />
+    <street name="金鸡滩镇" code="610802107" />
+    <street name="马合镇" code="610802108" />
+    <street name="巴拉素镇" code="610802109" />
+    <street name="榆阳镇" code="610802110" />
+    <street name="鱼河峁镇" code="610802111" />
+    <street name="青云镇" code="610802112" />
+    <street name="古塔镇" code="610802113" />
+    <street name="大河塔镇" code="610802114" />
+    <street name="孟家湾乡" code="610802205" />
+    <street name="小壕兔乡" code="610802206" />
+    <street name="岔河则乡" code="610802207" />
+    <street name="补浪河乡" code="610802208" />
+    <street name="红石桥乡" code="610802209" />
+    <street name="小纪汗乡" code="610802210" />
+    <street name="芹河乡" code="610802211" />
+</county>
+<county name="神木" code="610821">
+    <street name="神木镇" code="610821100" />
+    <street name="高家堡镇" code="610821101" />
+    <street name="店塔镇" code="610821102" />
+    <street name="孙家岔镇" code="610821103" />
+    <street name="大柳塔镇" code="610821104" />
+    <street name="花石崖镇" code="610821105" />
+    <street name="中鸡镇" code="610821106" />
+    <street name="贺家川镇" code="610821107" />
+    <street name="尔林兔镇" code="610821108" />
+    <street name="万镇" code="610821109" />
+    <street name="大保当镇" code="610821110" />
+    <street name="马镇" code="610821111" />
+    <street name="栏杆堡镇" code="610821112" />
+    <street name="沙峁镇" code="610821113" />
+    <street name="锦界镇" code="610821114" />
+</county>
+<county name="府谷" code="610822">
+    <street name="府谷镇" code="610822100" />
+    <street name="黄甫镇" code="610822101" />
+    <street name="麻镇" code="610822102" />
+    <street name="哈镇" code="610822103" />
+    <street name="庙沟门镇" code="610822104" />
+    <street name="新民镇" code="610822105" />
+    <street name="孤山镇" code="610822106" />
+    <street name="清水镇" code="610822107" />
+    <street name="大昌汗镇" code="610822108" />
+    <street name="古城镇" code="610822109" />
+    <street name="三道沟镇" code="610822110" />
+    <street name="老高川镇" code="610822111" />
+    <street name="武家庄镇" code="610822112" />
+    <street name="木瓜镇" code="610822113" />
+    <street name="田家寨镇" code="610822114" />
+</county>
+<county name="横山" code="610823">
+    <street name="横山镇" code="610823100" />
+    <street name="石湾镇" code="610823101" />
+    <street name="高镇" code="610823102" />
+    <street name="武镇" code="610823103" />
+    <street name="党岔镇" code="610823104" />
+    <street name="响水镇" code="610823105" />
+    <street name="波罗镇" code="610823106" />
+    <street name="殿市镇" code="610823107" />
+    <street name="塔湾镇" code="610823108" />
+    <street name="赵石畔镇" code="610823109" />
+    <street name="魏家楼镇" code="610823110" />
+    <street name="韩岔镇" code="610823111" />
+    <street name="白界乡" code="610823203" />
+    <street name="雷龙湾乡" code="610823207" />
+</county>
+<county name="靖边" code="610824">
+    <street name="张家畔镇" code="610824100" />
+    <street name="东坑镇" code="610824101" />
+    <street name="青阳岔镇" code="610824102" />
+    <street name="宁条梁镇" code="610824103" />
+    <street name="周河镇" code="610824104" />
+    <street name="红墩界镇" code="610824105" />
+    <street name="杨桥畔镇" code="610824106" />
+    <street name="王渠则镇" code="610824107" />
+    <street name="中山涧镇" code="610824108" />
+    <street name="杨米涧镇" code="610824109" />
+    <street name="天赐湾镇" code="610824110" />
+    <street name="龙洲乡" code="610824200" />
+    <street name="海则滩乡" code="610824201" />
+    <street name="黄蒿界乡" code="610824202" />
+    <street name="席麻湾乡" code="610824203" />
+    <street name="小河乡" code="610824206" />
+    <street name="镇靖乡" code="610824212" />
+</county>
+<county name="定边" code="610825">
+    <street name="定边镇" code="610825100" />
+    <street name="贺圈镇" code="610825101" />
+    <street name="红柳沟镇" code="610825102" />
+    <street name="砖井镇" code="610825103" />
+    <street name="白泥井镇" code="610825104" />
+    <street name="安边镇" code="610825105" />
+    <street name="堆子梁镇" code="610825106" />
+    <street name="白湾子镇" code="610825107" />
+    <street name="姬塬镇" code="610825108" />
+    <street name="杨井镇" code="610825109" />
+    <street name="新安边镇" code="610825110" />
+    <street name="张崾先镇" code="610825111" />
+    <street name="樊学镇" code="610825112" />
+    <street name="盐场堡镇" code="610825113" />
+    <street name="郝滩镇" code="610825114" />
+    <street name="石洞沟乡" code="610825202" />
+    <street name="油房庄乡" code="610825204" />
+    <street name="纪畔乡" code="610825205" />
+    <street name="冯地坑乡" code="610825207" />
+    <street name="学庄乡" code="610825210" />
+</county>
+<county name="绥德" code="610826">
+    <street name="名州镇" code="610826100" />
+    <street name="薛家峁镇" code="610826101" />
+    <street name="崔家湾镇" code="610826102" />
+    <street name="定仙墕镇" code="610826103" />
+    <street name="枣林坪镇" code="610826104" />
+    <street name="义合镇" code="610826105" />
+    <street name="吉镇" code="610826106" />
+    <street name="薛家河镇" code="610826107" />
+    <street name="四十铺镇" code="610826108" />
+    <street name="石家湾镇" code="610826109" />
+    <street name="田庄镇" code="610826110" />
+    <street name="中角镇" code="610826111" />
+    <street name="白家硷乡" code="610826201" />
+    <street name="韭园沟乡" code="610826206" />
+    <street name="满堂川乡" code="610826207" />
+    <street name="张家砭乡" code="610826208" />
+</county>
+<county name="米脂" code="610827">
+    <street name="银州镇" code="610827100" />
+    <street name="桃镇" code="610827101" />
+    <street name="龙镇" code="610827102" />
+    <street name="杨家沟镇" code="610827103" />
+    <street name="杜家石沟镇" code="610827104" />
+    <street name="沙家店镇" code="610827105" />
+    <street name="印斗镇" code="610827106" />
+    <street name="郭兴庄镇" code="610827107" />
+    <street name="桥河岔乡" code="610827201" />
+    <street name="十里铺乡" code="610827204" />
+</county>
+<county name="佳县" code="610828">
+    <street name="佳芦镇" code="610828100" />
+    <street name="坑镇" code="610828101" />
+    <street name="店镇" code="610828102" />
+    <street name="乌镇" code="610828103" />
+    <street name="金明寺镇" code="610828104" />
+    <street name="通镇" code="610828105" />
+    <street name="王家砭镇" code="610828106" />
+    <street name="方塌镇" code="610828107" />
+    <street name="朱家坬镇" code="610828108" />
+    <street name="螅镇" code="610828109" />
+    <street name="朱官寨镇" code="610828110" />
+    <street name="刘国具乡" code="610828200" />
+    <street name="木头峪乡" code="610828202" />
+    <street name="大佛寺乡" code="610828204" />
+    <street name="康家港乡" code="610828205" />
+    <street name="上高寨乡" code="610828206" />
+</county>
+<county name="吴堡" code="610829">
+    <street name="宋家川镇" code="610829100" />
+    <street name="辛家沟镇" code="610829101" />
+    <street name="郭家沟镇" code="610829102" />
+    <street name="寇家塬镇" code="610829103" />
+    <street name="岔上镇" code="610829104" />
+    <street name="张家山镇" code="610829105" />
+</county>
+<county name="清涧" code="610830">
+    <street name="宽州镇" code="610830100" />
+    <street name="石咀驿镇" code="610830101" />
+    <street name="折家坪镇" code="610830102" />
+    <street name="玉家河镇" code="610830103" />
+    <street name="高杰村镇" code="610830104" />
+    <street name="李家塔镇" code="610830105" />
+    <street name="店则沟镇" code="610830106" />
+    <street name="解家沟镇" code="610830107" />
+    <street name="下廿里铺乡" code="610830202" />
+    <street name="双庙河乡" code="610830203" />
+    <street name="老舍窠乡" code="610830204" />
+    <street name="石盘乡" code="610830206" />
+</county>
+<county name="子洲" code="610831">
+    <street name="双湖峪镇" code="610831100" />
+    <street name="何家集镇" code="610831101" />
+    <street name="老君殿镇" code="610831102" />
+    <street name="裴家湾镇" code="610831103" />
+    <street name="苗家坪镇" code="610831104" />
+    <street name="三川口镇" code="610831105" />
+    <street name="马蹄沟镇" code="610831106" />
+    <street name="周家硷镇" code="610831107" />
+    <street name="电市镇" code="610831108" />
+    <street name="砖庙镇" code="610831109" />
+    <street name="淮宁湾镇" code="610831110" />
+    <street name="驼耳巷乡" code="610831200" />
+    <street name="马岔乡" code="610831204" />
+    <street name="槐树岔乡" code="610831205" />
+</county>
+</city>
+</address>

@@ -1,0 +1,155 @@
+// Page Header Start
+- var status = (sidebar_open ? 'open' : (megamenu ? 'mega-menu-header' : ''));
+- var header_status = (vertical_menu ? 'd-none' : '');
+
+
+.page-main-header(class=status)
+                .main-header-right
+                    .main-header-left.text-center
+                        .logo-wrapper
+                            a(href='index.html')
+                                img(src='../assets/images/logo/logo.png', alt='')
+                    .mobile-sidebar(class=header_status)
+                        .media-body.text-right.switch-sm
+                            label.switch.ml-3
+                                i#sidebar-toggle.font-primary( data-feather="align-center")
+                    .vertical-mobile-sidebar
+                        i.fa.fa-bars.sidebar-bar                
+                    .nav-right.col.pull-right.right-menu
+                        if megamenu
+                            include megamenu
+                        ul.nav-menus
+                            li
+                                form(action='#', method='get').form-inline.search-form
+                                    .form-group
+                                        .Typeahead.Typeahead--twitterUsers
+                                          .u-posRelative
+                                            input#demo-input.Typeahead-input.form-control-plaintext(type='text', name='q', placeholder='Search Your Product...')
+                                            .spinner-border.Typeahead-spinner(role='status')
+                                                span.sr-only Loading...
+                                            span.d-sm-none.mobile-search
+                                                i(data-feather='search')
+                                          .Typeahead-menu
+                            li
+                                a.text-dark(href='#!', onclick='javascript:toggleFullScreen()')
+                                    i(data-feather='maximize')
+                            li.onhover-dropdown
+                                img.img-fluid.img-shadow-warning(src='../assets/images/dashboard/bookmark.png', alt='')
+                                .onhover-show-div.bookmark-flip
+                                    .flip-card
+                                        .flip-card-inner
+                                            .front
+                                                ul.droplet-dropdown.bookmark-dropdown
+                                                        li.gradient-primary.text-center
+                                                            h5.f-w-700 Bookmark
+                                                            span Bookmark Icon With Grid
+                                                        li
+                                                            .row
+                                                                .col-4.text-center
+                                                                    i(data-feather='file-text')
+                                                                .col-4.text-center
+                                                                    i(data-feather='activity')
+                                                                .col-4.text-center
+                                                                    i(data-feather='users')
+                                                                .col-4.text-center
+                                                                    i(data-feather='clipboard')
+                                                                .col-4.text-center
+                                                                    i(data-feather='anchor')
+                                                                .col-4.text-center
+                                                                    i(data-feather='settings')
+                                                        li.text-center
+                                                            button.flip-btn#flip-btn Add New Bookmark
+                                            .back
+                                                ul
+                                                    li
+                                                        .droplet-dropdown.bookmark-dropdown.flip-back-content
+                                                            input(type='text' placeholder='search...')
+                                                    li
+                                                        button.d-block.flip-back#flip-back
+                                                            | Back
+
+                            li.onhover-dropdown
+                                img.img-fluid.img-shadow-secondary(src='../assets/images/dashboard/like.png', alt='')
+                                ul.onhover-show-div.droplet-dropdown
+                                    li.gradient-primary.text-center
+                                        h5.f-w-700 Grid Dashboard
+                                        span Easy Grid inside dropdown
+                                    li
+                                        .row
+                                            .col-sm-4.col-6.droplet-main
+                                                i(data-feather='file-text')
+                                                span.d-block Content
+                                            .col-sm-4.col-6.droplet-main
+                                                i(data-feather='activity')
+                                                span.d-block Activity
+                                            .col-sm-4.col-6.droplet-main
+                                                i(data-feather='users')
+                                                span.d-block Contacts
+                                            .col-sm-4.col-6.droplet-main
+                                                i(data-feather='clipboard')
+                                                span.d-block Reports
+                                            .col-sm-4.col-6.droplet-main
+                                                i(data-feather='anchor')
+                                                span.d-block Automation
+                                            .col-sm-4.col-6.droplet-main
+                                                i(data-feather='settings')
+                                                span.d-block Settings
+                                    li.text-center
+                                        button.btn.btn-primary.btn-air-primary Follows Up
+                            li.onhover-dropdown
+                                img.img-fluid.img-shadow-warning(src='../assets/images/dashboard/notification.png', alt='')
+                                ul.onhover-show-div.notification-dropdown
+                                    li.gradient-primary
+                                        h5.f-w-700 Notifications
+                                        span You have 6 unread messages
+                                    li
+                                        .media
+                                            .notification-icons.bg-success.mr-3
+                                                i.mt-0(data-feather='thumbs-up')
+                                            .media-body
+                                                h6 Someone Likes Your Posts
+                                                p.mb-0  2 Hours Ago
+                                    li.pt-0
+                                        .media
+                                            .notification-icons.bg-info.mr-3
+                                                i.mt-0(data-feather='message-circle')
+                                            .media-body
+                                                h6 3 New Comments
+                                                p.mb-0  1 Hours Ago
+                                    li.bg-light.txt-dark
+                                        a(href='#') All 
+                                        |  notification
+                            li
+                                a.right_side_toggle(href='#')
+                                    img.img-fluid.img-shadow-success(src='../assets/images/dashboard/chat.png', alt='')
+                            li.onhover-dropdown  
+                                span.media.user-header
+                                    img.img-fluid(src='../assets/images/dashboard/user.png', alt='')
+                                ul.onhover-show-div.profile-dropdown
+                                  li.gradient-primary
+                                        h5.f-w-600.mb-0 Elana Saint
+                                        span Web Designer
+                                  li
+                                    i(data-feather='user') 
+                                    | Profile
+                                  li
+                                    i(data-feather='message-square') 
+                                    | Inbox
+                                  li
+                                    i(data-feather='file-text') 
+                                    | Taskboard
+                                  li
+                                    i(data-feather='settings') 
+                                    | Settings            
+                        .d-lg-none.mobile-toggle.pull-right
+                            i(data-feather='more-horizontal')
+                    script#result-template(type='text/x-handlebars-template').
+                        <div class="ProfileCard u-cf">                        
+                        <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
+                        <div class="ProfileCard-details">
+                        <div class="ProfileCard-realName">{{name}}</div>
+                        </div>
+                        </div>
+                    script#empty-template(type='text/x-handlebars-template').
+                        <div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>
+// Page Header Ends                              

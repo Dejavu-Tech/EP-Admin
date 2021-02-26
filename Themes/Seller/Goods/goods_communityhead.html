@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+	<title><?php echo $shoname_name; ?></title>
+	<link rel="shortcut icon" href="" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="author" content="Dejavu871.Tech.">
+	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- Font Awesome-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<!-- ico-font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+	<!-- Themify icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
+	<!-- Flag icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
+	<!-- Feather icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+	<!-- Plugins css start-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
+	<!-- Plugins css Ends-->
+	<!-- Bootstrap css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+	<!-- App css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
+	<!-- Responsive css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+	<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+	<!--[if lt IE 9]>
+	<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+	<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+
+	<script type="text/javascript">
+		window.sysinfo = {
+		<?php if(!empty($_W['uniacid'])){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
+
+		<?php if(!empty($_W['acid'])){ ?>'acid': '{$_W['acid']}',<?php } ?>
+
+		<?php if(!empty($_W['openid'])){ ?>'openid': '{$_W['openid']}',<?php } ?>
+
+		<?php if(!empty($_W['uid'])){ ?>'uid': '{$_W['uid']}',<?php } ?>
+
+		'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
+
+		'siteroot': '{$_W['siteroot']}',
+				'siteurl': '{$_W['siteurl']}',
+				'attachurl': '{$_W['attachurl']}',
+				'attachurl_local': '{$_W['attachurl_local']}',
+				'attachurl_remote': '{$_W['attachurl_remote']}',
+				'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
+		'cookie' : {'pre': ''},
+		'account' : {:json_encode($_W['account'])},
+		};
+	</script>
+
+	<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
+	<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+	<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
+	<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+
+</head>
+<body class="custom-scrollbar" >
+
+<table id="demo" lay-filter="test"></table>
+
+<div class="page-wrapper custom-scrollbar">
+	<div class="page-body-wrapper">
+		<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+			<div class="container-fluid">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-lg-6 main-header">
+							<h6 class="mb-0">当前位置 </h6>
+							<h2>商品可售团长<span>列表</span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-body">
+								<form action="" method="get" class="form-horizontal form-search layui-form" role="form">
+									<input type="hidden" name="c" value="goods" />
+									<input type="hidden" name="a" value="goods_head" />
+									<input type="hidden" name="id" value="{$goods_info.id}" />
+
+									<div class="form-row m-b-20">
+										<div class="p-r-5">
+											<input type="text" class="form-control" name='keyword' value="{$_GPC['keyword']}" placeholder="团长昵称/姓名/电话/小区名称">
+										</div>
+										<div class="p-r-5">
+											<button class="btn btn-primary"  type="submit"> 搜索</button>
+										</div>
+									</div>
+								</form>
+								<form action="" class="form theme-form layui-form" lay-filter="example" method="post" >
+									<div class="dataTables_wrapper no-footer">
+										<div class="page-table-header m-b-20 m-l-0 row">
+											<div class="btn-group m-r-20 ">
+												<button class="btn btn-pill btn-primary btn-sm allBtn"  type="button"  data-href="{:U('goods/all_goods_head', array('goods_id'=>$goods_info['id'], 'ok' => 1))}" data-confirm="确定所有的团长可售卖该商品吗？">
+													所有团长可售
+												</button>
+											</div>
+											<h6 class="m-t-5">
+												可售商品：<span style="color:#428bca">{$goods_info.goodsname}</span>
+											</h6>
+										</div>
+										<div class="table-responsive">
+											<table class="display dataTable text-center" lay-even lay-skin="line" lay-size="lg">
+												<thead>
+												<tr>
+													<th>
+														<div class="checkbox checkbox-primary m-l-10" >
+															<input type='checkbox' name="checkall" lay-skin="primary" lay-filter="checkboxall" style="display: none" />
+														</div>
+													</th>
+													<th>团长昵称</th>
+													<th>团长名称</th>
+													<th>团长电话</th>
+													<th>小区名称</th>
+													<th>小区地址</th>
+													<th>操作</th>
+												</tr>
+												</thead>
+												<tbody>
+												<?php foreach( $list as  $row  ){ ?>
+												<tr>
+													<td>
+														<div class="checkbox checkbox-primary m-l-10" >
+															<input type='checkbox' name="item_checkbox" lay-skin="primary" value="{$row['id']}" style="display: none"/>
+														</div>
+													</td>
+													<td><img class="img-40" src="{$row['avatar']}" style='border-radius:50%;border:1px solid #efefef;' />&nbsp;{$row['username']}</td>
+													<td>{$row['head_name']}</td>
+													<td>{$row['head_mobile']}</td>
+													<td>{$row['community_name']}</td>
+													<td>{$row['address']}</td>
+													<td style="text-align: center;">
+														<a href="javascript:void(0)" class='btn btn-pill btn-primary btn-sm cancelBtn' data-href="{:U('goods/cancel_goods_head', array('id' => $row['hg_id'],'goods_id'=>$goods_info['id'], 'ok' => 1))}" data-confirm="取消售卖后，该商品将不属于该团长，确定取消售卖吗？">
+															取消售卖
+														</a>
+													</td>
+												</tr>
+												<?php } ?>
+												</tbody>
+
+											</table>
+										</div>
+										{$pager}
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 footer-copyright">
+						<p class="mb-0">Copyright © 2019-2021 Dejavu.Tech. All rights reserved.</p>
+					</div>
+					<div class="col-md-6">
+						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+
+
+
+<script src="/layuiadmin/layui/layui1.js"></script>
+
+<script src="/assets/js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap js-->
+
+<!-- Sidebar jquery-->
+<script src="/assets/js/sidebar-menu.js"></script>
+
+<!-- feather icon js-->
+
+<!-- Plugins JS start-->
+
+<script src="/assets/js/chat-menu.js"></script>
+<!-- Plugins JS Ends-->
+<!-- Theme js-->
+<script src="/assets/js/script.js"></script>
+
+<!-- Theme js-->
+<script src="/assets/js/theme-customizer/customizer1.js"></script>
+<script>
+	layui.config({
+		base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+</script>
+
+<script>
+//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+var layer = layui.layer;
+var $;
+
+layui.use(['jquery', 'layer','form'], function(){
+  $ = layui.$;
+  var form = layui.form;
+
+	$('.cancelBtn').click(function(){
+		var s_url = $(this).attr('data-href');
+		layer.confirm($(this).attr('data-confirm'), function(index){
+			$.ajax({
+				url:s_url,
+				type:'post',
+				dataType:'json',
+				success:function(info){
+
+					if(info.status == 0)
+					{
+						layer.msg(info.result.message,{icon: 1,time: 2000});
+					}else if(info.status == 1){
+						layer.msg('操作成功',{time: 1000,
+							end:function(){
+								location.href = info.result.url;
+							}
+						});
+					}
+				}
+			})
+		});
+	});
+
+	$('.allBtn').click(function(){
+		var s_url = $(this).attr('data-href');
+		layer.confirm($(this).attr('data-confirm'), function(index){
+			$.ajax({
+				url:s_url,
+				type:'post',
+				dataType:'json',
+				success:function(info){
+
+					if(info.status == 0)
+					{
+						layer.msg(info.result.message,{icon: 1,time: 2000});
+					}else if(info.status == 1){
+						layer.msg('操作成功',{time: 1000,
+							end:function(){
+								location.href = info.result.url;
+							}
+						});
+					}
+				}
+			})
+		});
+	});
+
+	form.on('checkbox(checkboxall)', function(data){
+
+		if(data.elem.checked)
+		{
+			$("input[name=item_checkbox]").each(function() {
+				$(this).prop("checked", true);
+			});
+			$("input[name=checkall]").each(function() {
+				$(this).prop("checked", true);
+			});
+
+		}else{
+			$("input[name=item_checkbox]").each(function() {
+				$(this).prop("checked", false);
+			});
+			$("input[name=checkall]").each(function() {
+				$(this).prop("checked", false);
+			});
+		}
+
+		form.render('checkbox');
+	});
+})
+
+
+
+</script>
+</body>

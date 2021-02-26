@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="成都" code="510100">
+<county name="锦江" code="510104">
+    <street name="督院街街道" code="510104020" />
+    <street name="盐市口街道" code="510104021" />
+    <street name="春熙路街道" code="510104022" />
+    <street name="书院街街道" code="510104023" />
+    <street name="合江亭街道" code="510104024" />
+    <street name="水井坊街道" code="510104025" />
+    <street name="牛市口街道" code="510104026" />
+    <street name="龙舟路街道" code="510104027" />
+    <street name="双桂路街道" code="510104028" />
+    <street name="莲新街道" code="510104029" />
+    <street name="沙河街道" code="510104030" />
+    <street name="东光街道" code="510104031" />
+    <street name="狮子山街道" code="510104032" />
+    <street name="成龙路街道" code="510104035" />
+    <street name="柳江街道" code="510104036" />
+    <street name="三圣街道" code="510104037" />
+</county>
+<county name="青羊" code="510105">
+    <street name="太升路街道" code="510105001" />
+    <street name="草市街街道" code="510105002" />
+    <street name="西御河街道" code="510105003" />
+    <street name="汪家拐街道" code="510105004" />
+    <street name="少城街道" code="510105005" />
+    <street name="新华西路街道" code="510105006" />
+    <street name="草堂街道" code="510105007" />
+    <street name="府南街道" code="510105008" />
+    <street name="光华街道" code="510105009" />
+    <street name="东坡街道" code="510105010" />
+    <street name="金沙街道" code="510105011" />
+    <street name="黄田坝街道" code="510105012" />
+    <street name="苏坡街道" code="510105013" />
+    <street name="文家街道" code="510105014" />
+</county>
+<county name="金牛" code="510106">
+    <street name="西安路街道" code="510106024" />
+    <street name="西华街道" code="510106025" />
+    <street name="人民北路街道" code="510106026" />
+    <street name="荷花池街道" code="510106027" />
+    <street name="驷马桥街道" code="510106030" />
+    <street name="茶店子街道" code="510106031" />
+    <street name="抚琴街道" code="510106032" />
+    <street name="九里堤街道" code="510106035" />
+    <street name="五块石街道" code="510106036" />
+    <street name="黄忠街道" code="510106037" />
+    <street name="营门口街道" code="510106038" />
+    <street name="金泉街道" code="510106040" />
+    <street name="沙河源街道" code="510106041" />
+    <street name="天回镇街道" code="510106042" />
+    <street name="凤凰山街道" code="510106043" />
+</county>
+<county name="武侯" code="510107">
+    <street name="浆洗街街道" code="510107001" />
+    <street name="望江路街道" code="510107004" />
+    <street name="玉林街道" code="510107005" />
+    <street name="跳伞塔街道" code="510107006" />
+    <street name="火车南站街道" code="510107007" />
+    <street name="双楠街道" code="510107008" />
+    <street name="晋阳街道" code="510107009" />
+    <street name="红牌楼街道" code="510107010" />
+    <street name="簇桥街道" code="510107011" />
+    <street name="机投桥街道" code="510107012" />
+    <street name="金花桥街道" code="510107013" />
+    <street name="簇锦街道" code="510107014" />
+    <street name="华兴街道" code="510107015" />
+    <street name="芳草街道" code="510107061" />
+    <street name="肖家河街道" code="510107062" />
+    <street name="石羊场街道" code="510107063" />
+    <street name="桂溪街道" code="510107064" />
+</county>
+<county name="成华" code="510108">
+    <street name="猛追湾街道" code="510108002" />
+    <street name="双桥子街道" code="510108004" />
+    <street name="建设路街道" code="510108005" />
+    <street name="府青路街道" code="510108006" />
+    <street name="二仙桥街道" code="510108007" />
+    <street name="跳蹬河街道" code="510108008" />
+    <street name="新鸿路街道" code="510108009" />
+    <street name="双水碾街道" code="510108010" />
+    <street name="万年场街道" code="510108011" />
+    <street name="桃蹊路街道" code="510108012" />
+    <street name="圣灯街道" code="510108013" />
+    <street name="保和街道" code="510108014" />
+    <street name="青龙街道" code="510108015" />
+    <street name="龙潭街道" code="510108016" />
+</county>
+<county name="龙泉驿" code="510112">
+    <street name="龙泉街道" code="510112001" />
+    <street name="大面街道" code="510112002" />
+    <street name="十陵街道" code="510112003" />
+    <street name="同安街道" code="510112004" />
+    <street name="洛带镇" code="510112102" />
+    <street name="西河镇" code="510112104" />
+    <street name="洪安镇" code="510112108" />
+    <street name="柏合镇" code="510112109" />
+    <street name="茶店镇" code="510112110" />
+    <street name="黄土镇" code="510112111" />
+    <street name="山泉镇" code="510112115" />
+    <street name="万兴乡" code="510112200" />
+</county>
+<county name="青白江" code="510113">
+    <street name="红阳街道" code="510113001" />
+    <street name="大弯街道" code="510113002" />
+    <street name="弥牟镇" code="510113102" />
+    <street name="大同镇" code="510113103" />
+    <street name="城厢镇" code="510113104" />
+    <street name="祥福镇" code="510113105" />
+    <street name="姚渡镇" code="510113106" />
+    <street name="清泉镇" code="510113108" />
+    <street name="龙王镇" code="510113110" />
+    <street name="福洪乡" code="510113202" />
+    <street name="人和乡" code="510113203" />
+</county>
+<county name="新都" code="510114">
+    <street name="大丰街道" code="510114001" />
+    <street name="三河街道" code="510114003" />
+    <street name="新都镇" code="510114100" />
+    <street name="石板滩镇" code="510114102" />
+    <street name="新繁镇" code="510114103" />
+    <street name="新民镇" code="510114104" />
+    <street name="泰兴镇" code="510114106" />
+    <street name="斑竹园镇" code="510114108" />
+    <street name="清流镇" code="510114109" />
+    <street name="马家镇" code="510114111" />
+    <street name="龙桥镇" code="510114112" />
+    <street name="木兰镇" code="510114114" />
+    <street name="军屯镇" code="510114116" />
+</county>
+<county name="温江" code="510115">
+    <street name="柳城街道" code="510115001" />
+    <street name="公平街道" code="510115002" />
+    <street name="涌泉街道" code="510115003" />
+    <street name="天府街道" code="510115004" />
+    <street name="和盛镇" code="510115101" />
+    <street name="永盛镇" code="510115102" />
+    <street name="金马镇" code="510115103" />
+    <street name="永宁镇" code="510115104" />
+    <street name="万春镇" code="510115105" />
+    <street name="寿安镇" code="510115106" />
+</county>
+<county name="金堂" code="510121">
+    <street name="赵镇街道" code="510121001" />
+    <street name="三星镇" code="510121101" />
+    <street name="清江镇" code="510121102" />
+    <street name="官仓镇" code="510121103" />
+    <street name="淮口镇" code="510121104" />
+    <street name="白果镇" code="510121105" />
+    <street name="五凤镇" code="510121106" />
+    <street name="高板镇" code="510121108" />
+    <street name="三溪镇" code="510121109" />
+    <street name="福兴镇" code="510121110" />
+    <street name="金龙镇" code="510121111" />
+    <street name="赵家镇" code="510121112" />
+    <street name="竹篙镇" code="510121113" />
+    <street name="广兴镇" code="510121114" />
+    <street name="隆盛镇" code="510121115" />
+    <street name="转龙镇" code="510121116" />
+    <street name="土桥镇" code="510121117" />
+    <street name="云合镇" code="510121118" />
+    <street name="又新镇" code="510121119" />
+    <street name="栖贤乡" code="510121200" />
+    <street name="平桥乡" code="510121203" />
+</county>
+<county name="双流" code="510122">
+    <street name="东升街道" code="510122001" />
+    <street name="西航港街道" code="510122002" />
+    <street name="华阳镇街道" code="510122003" />
+    <street name="中和街道" code="510122004" />
+    <street name="九江街道" code="510122005" />
+    <street name="黄甲街道" code="510122006" />
+    <street name="公兴街道" code="510122007" />
+    <street name="太平镇" code="510122101" />
+    <street name="永兴镇" code="510122102" />
+    <street name="籍田镇" code="510122106" />
+    <street name="正兴镇" code="510122107" />
+    <street name="彭镇" code="510122108" />
+    <street name="大林镇" code="510122109" />
+    <street name="煎茶镇" code="510122110" />
+    <street name="黄龙溪镇" code="510122111" />
+    <street name="永安镇" code="510122112" />
+    <street name="黄水镇" code="510122115" />
+    <street name="金桥镇" code="510122116" />
+    <street name="胜利镇" code="510122119" />
+    <street name="新兴镇" code="510122120" />
+    <street name="兴隆镇" code="510122121" />
+    <street name="万安镇" code="510122122" />
+    <street name="白沙镇" code="510122123" />
+    <street name="三星镇" code="510122124" />
+    <street name="合江镇" code="510122125" />
+</county>
+<county name="郫县" code="510124">
+    <street name="郫筒街道" code="510124001" />
+    <street name="合作街道" code="510124019" />
+    <street name="团结镇" code="510124101" />
+    <street name="犀浦镇" code="510124102" />
+    <street name="花园镇" code="510124103" />
+    <street name="唐昌镇" code="510124104" />
+    <street name="安德镇" code="510124105" />
+    <street name="三道堰镇" code="510124106" />
+    <street name="安靖镇" code="510124107" />
+    <street name="红光镇" code="510124108" />
+    <street name="新民场镇" code="510124110" />
+    <street name="德源镇" code="510124112" />
+    <street name="友爱镇" code="510124115" />
+    <street name="古城镇" code="510124117" />
+    <street name="唐元镇" code="510124118" />
+</county>
+<county name="大邑" code="510129">
+    <street name="晋原镇" code="510129100" />
+    <street name="王泗镇" code="510129101" />
+    <street name="新场镇" code="510129103" />
+    <street name="悦来镇" code="510129104" />
+    <street name="安仁镇" code="510129105" />
+    <street name="出江镇" code="510129106" />
+    <street name="花水湾镇" code="510129107" />
+    <street name="西岭镇" code="510129108" />
+    <street name="斜源镇" code="510129109" />
+    <street name="董场镇" code="510129110" />
+    <street name="韩场镇" code="510129111" />
+    <street name="三岔镇" code="510129112" />
+    <street name="上安镇" code="510129113" />
+    <street name="苏家镇" code="510129114" />
+    <street name="青霞镇" code="510129115" />
+    <street name="沙渠镇" code="510129116" />
+    <street name="蔡场镇" code="510129118" />
+    <street name="雾山乡" code="510129202" />
+    <street name="金星乡" code="510129203" />
+    <street name="鹤鸣乡" code="510129205" />
+</county>
+<county name="蒲江" code="510131">
+    <street name="鹤山镇" code="510131100" />
+    <street name="大塘镇" code="510131101" />
+    <street name="寿安镇" code="510131102" />
+    <street name="朝阳湖镇" code="510131103" />
+    <street name="西来镇" code="510131104" />
+    <street name="大兴镇" code="510131105" />
+    <street name="甘溪镇" code="510131106" />
+    <street name="成佳镇" code="510131107" />
+    <street name="复兴乡" code="510131200" />
+    <street name="光明乡" code="510131201" />
+    <street name="白云乡" code="510131202" />
+    <street name="长秋乡" code="510131203" />
+</county>
+<county name="新津" code="510132">
+    <street name="五津镇" code="510132100" />
+    <street name="花桥镇" code="510132101" />
+    <street name="花源镇" code="510132102" />
+    <street name="金华镇" code="510132103" />
+    <street name="普兴镇" code="510132104" />
+    <street name="兴义镇" code="510132105" />
+    <street name="新平镇" code="510132106" />
+    <street name="方兴镇" code="510132107" />
+    <street name="安西镇" code="510132108" />
+    <street name="永商镇" code="510132109" />
+    <street name="邓双镇" code="510132110" />
+    <street name="文井乡" code="510132202" />
+</county>
+<county name="都江堰" code="510181">
+    <street name="滨江街道" code="510181001" />
+    <street name="灌口镇" code="510181100" />
+    <street name="幸福镇" code="510181101" />
+    <street name="蒲阳镇" code="510181102" />
+    <street name="聚源镇" code="510181103" />
+    <street name="崇义镇" code="510181104" />
+    <street name="天马镇" code="510181105" />
+    <street name="石羊镇" code="510181106" />
+    <street name="柳街镇" code="510181107" />
+    <street name="玉堂镇" code="510181108" />
+    <street name="中兴镇" code="510181109" />
+    <street name="青城山镇" code="510181110" />
+    <street name="龙池镇" code="510181111" />
+    <street name="胥家镇" code="510181112" />
+    <street name="安龙镇" code="510181113" />
+    <street name="大观镇" code="510181114" />
+    <street name="紫坪铺镇" code="510181115" />
+    <street name="翠月湖镇" code="510181116" />
+    <street name="向峨乡" code="510181202" />
+    <street name="虹口乡" code="510181211" />
+</county>
+<county name="彭州" code="510182">
+    <street name="天彭镇" code="510182100" />
+    <street name="龙门山镇" code="510182101" />
+    <street name="新兴镇" code="510182102" />
+    <street name="丽春镇" code="510182103" />
+    <street name="九尺镇" code="510182104" />
+    <street name="蒙阳镇" code="510182105" />
+    <street name="通济镇" code="510182106" />
+    <street name="丹景山镇" code="510182107" />
+    <street name="隆丰镇" code="510182108" />
+    <street name="敖平镇" code="510182109" />
+    <street name="磁峰镇" code="510182110" />
+    <street name="桂花镇" code="510182111" />
+    <street name="军乐镇" code="510182113" />
+    <street name="三界镇" code="510182114" />
+    <street name="小渔洞镇" code="510182116" />
+    <street name="红岩镇" code="510182118" />
+    <street name="升平镇" code="510182120" />
+    <street name="白鹿镇" code="510182121" />
+    <street name="葛仙山镇" code="510182123" />
+    <street name="致和镇" code="510182126" />
+</county>
+<county name="邛崃" code="510183">
+    <street name="临邛镇" code="510183100" />
+    <street name="羊安镇" code="510183101" />
+    <street name="牟礼镇" code="510183102" />
+    <street name="桑园镇" code="510183103" />
+    <street name="平乐镇" code="510183104" />
+    <street name="夹关镇" code="510183105" />
+    <street name="火井镇" code="510183106" />
+    <street name="水口镇" code="510183107" />
+    <street name="固驿镇" code="510183108" />
+    <street name="冉义镇" code="510183109" />
+    <street name="回龙镇" code="510183110" />
+    <street name="高埂镇" code="510183111" />
+    <street name="前进镇" code="510183112" />
+    <street name="高何镇" code="510183113" />
+    <street name="临济镇" code="510183115" />
+    <street name="卧龙镇" code="510183116" />
+    <street name="天台山镇" code="510183118" />
+    <street name="宝林镇" code="510183120" />
+    <street name="茶园乡" code="510183201" />
+    <street name="道佐乡" code="510183206" />
+    <street name="油榨乡" code="510183209" />
+    <street name="南宝乡" code="510183211" />
+    <street name="大同乡" code="510183212" />
+    <street name="孔明乡" code="510183214" />
+</county>
+<county name="崇州" code="510184">
+    <street name="崇阳街道" code="510184001" />
+    <street name="三江镇" code="510184101" />
+    <street name="江源镇" code="510184102" />
+    <street name="羊马镇" code="510184103" />
+    <street name="廖家镇" code="510184104" />
+    <street name="元通镇" code="510184105" />
+    <street name="观胜镇" code="510184106" />
+    <street name="怀远镇" code="510184107" />
+    <street name="三郎镇" code="510184108" />
+    <street name="街子镇" code="510184109" />
+    <street name="文井江镇" code="510184110" />
+    <street name="王场镇" code="510184111" />
+    <street name="白头镇" code="510184112" />
+    <street name="道明镇" code="510184113" />
+    <street name="隆兴镇" code="510184114" />
+    <street name="大划镇" code="510184116" />
+    <street name="崇平镇" code="510184117" />
+    <street name="梓潼镇" code="510184118" />
+    <street name="桤泉镇" code="510184119" />
+    <street name="锦江乡" code="510184201" />
+    <street name="公议乡" code="510184202" />
+    <street name="鸡冠山乡" code="510184206" />
+    <street name="济协乡" code="510184208" />
+    <street name="燎原乡" code="510184209" />
+    <street name="集贤乡" code="510184211" />
+</county>
+</city>
+</address>

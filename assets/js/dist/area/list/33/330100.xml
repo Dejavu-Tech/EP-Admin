@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="杭州" code="330100">
+<county name="上城" code="330102">
+    <street name="清波街道" code="330102001" />
+    <street name="湖滨街道" code="330102003" />
+    <street name="小营街道" code="330102004" />
+    <street name="南星街道" code="330102008" />
+    <street name="紫阳街道" code="330102009" />
+    <street name="望江街道" code="330102010" />
+</county>
+<county name="下城" code="330103">
+    <street name="长庆街道" code="330103001" />
+    <street name="武林街道" code="330103002" />
+    <street name="天水街道" code="330103003" />
+    <street name="潮鸣街道" code="330103005" />
+    <street name="朝晖街道" code="330103006" />
+    <street name="文晖街道" code="330103007" />
+    <street name="东新街道" code="330103008" />
+    <street name="石桥街道" code="330103009" />
+</county>
+<county name="江干" code="330104">
+    <street name="凯旋街道" code="330104005" />
+    <street name="采荷街道" code="330104006" />
+    <street name="闸弄口街道" code="330104007" />
+    <street name="四季青街道" code="330104008" />
+    <street name="白杨街道" code="330104009" />
+    <street name="下沙街道" code="330104010" />
+    <street name="彭埠镇" code="330104102" />
+    <street name="笕桥镇" code="330104103" />
+    <street name="丁桥镇" code="330104104" />
+    <street name="九堡镇" code="330104105" />
+</county>
+<county name="拱墅" code="330105">
+    <street name="米市巷街道" code="330105001" />
+    <street name="湖墅街道" code="330105002" />
+    <street name="小河街道" code="330105003" />
+    <street name="和睦街道" code="330105004" />
+    <street name="拱宸桥街道" code="330105005" />
+    <street name="大关街道" code="330105007" />
+    <street name="上塘街道" code="330105008" />
+    <street name="祥符街道" code="330105009" />
+    <street name="康桥街道" code="330105010" />
+    <street name="半山街道" code="330105011" />
+</county>
+<county name="西湖" code="330106">
+    <street name="北山街道" code="330106002" />
+    <street name="西溪街道" code="330106004" />
+    <street name="翠苑街道" code="330106005" />
+    <street name="古荡街道" code="330106007" />
+    <street name="西湖街道" code="330106008" />
+    <street name="留下街道" code="330106009" />
+    <street name="转塘街道" code="330106010" />
+    <street name="蒋村街道" code="330106011" />
+    <street name="灵隐街道" code="330106012" />
+    <street name="文新街道" code="330106013" />
+    <street name="三墩镇" code="330106109" />
+    <street name="双浦镇" code="330106110" />
+</county>
+<county name="滨江" code="330108">
+    <street name="西兴街道" code="330108001" />
+    <street name="长河街道" code="330108002" />
+    <street name="浦沿街道" code="330108003" />
+</county>
+<county name="萧山" code="330109">
+    <street name="城厢街道" code="330109001" />
+    <street name="北干街道" code="330109002" />
+    <street name="蜀山街道" code="330109003" />
+    <street name="新塘街道" code="330109004" />
+    <street name="靖江街道" code="330109005" />
+    <street name="南阳街道" code="330109006" />
+    <street name="义蓬街道" code="330109007" />
+    <street name="河庄街道" code="330109008" />
+    <street name="新湾街道" code="330109009" />
+    <street name="临江街道" code="330109010" />
+    <street name="前进街道" code="330109011" />
+    <street name="楼塔镇" code="330109100" />
+    <street name="河上镇" code="330109101" />
+    <street name="戴村镇" code="330109102" />
+    <street name="浦阳镇" code="330109103" />
+    <street name="进化镇" code="330109104" />
+    <street name="临浦镇" code="330109105" />
+    <street name="义桥镇" code="330109106" />
+    <street name="所前镇" code="330109107" />
+    <street name="衙前镇" code="330109108" />
+    <street name="闻堰镇" code="330109109" />
+    <street name="宁围镇" code="330109110" />
+    <street name="新街镇" code="330109111" />
+    <street name="瓜沥镇" code="330109113" />
+    <street name="益农镇" code="330109115" />
+    <street name="党湾镇" code="330109120" />
+    <street name="萧山经济技术开发区" code="330109401" />
+    <street name="萧山商业城" code="330109403" />
+    <street name="围垦区" code="330109501" />
+    <street name="萧山空港经济区" code="330109502" />
+    <street name="红山农场" code="330109503" />
+</county>
+<county name="余杭" code="330110">
+    <street name="临平街道" code="330110001" />
+    <street name="南苑街道" code="330110002" />
+    <street name="东湖街道" code="330110003" />
+    <street name="星桥街道" code="330110004" />
+    <street name="五常街道" code="330110005" />
+    <street name="乔司街道" code="330110006" />
+    <street name="运河街道" code="330110007" />
+    <street name="崇贤街道" code="330110008" />
+    <street name="仁和街道" code="330110009" />
+    <street name="良渚街道" code="330110010" />
+    <street name="闲林街道" code="330110011" />
+    <street name="仓前街道" code="330110012" />
+    <street name="余杭街道" code="330110013" />
+    <street name="中泰街道" code="330110014" />
+    <street name="塘栖镇" code="330110102" />
+    <street name="径山镇" code="330110109" />
+    <street name="瓶窑镇" code="330110110" />
+    <street name="鸬鸟镇" code="330110111" />
+    <street name="百丈镇" code="330110112" />
+    <street name="黄湖镇" code="330110113" />
+</county>
+<county name="桐庐" code="330122">
+    <street name="旧县街道" code="330122002" />
+    <street name="桐君街道" code="330122003" />
+    <street name="城南街道" code="330122004" />
+    <street name="凤川街道" code="330122005" />
+    <street name="富春江镇" code="330122101" />
+    <street name="横村镇" code="330122102" />
+    <street name="分水镇" code="330122109" />
+    <street name="瑶琳镇" code="330122110" />
+    <street name="百江镇" code="330122112" />
+    <street name="江南镇" code="330122113" />
+    <street name="莪山畲族乡" code="330122201" />
+    <street name="钟山乡" code="330122202" />
+    <street name="新合乡" code="330122204" />
+    <street name="合村乡" code="330122210" />
+</county>
+<county name="淳安" code="330127">
+    <street name="千岛湖镇" code="330127100" />
+    <street name="文昌镇" code="330127101" />
+    <street name="石林镇" code="330127102" />
+    <street name="临岐镇" code="330127103" />
+    <street name="威坪镇" code="330127104" />
+    <street name="姜家镇" code="330127106" />
+    <street name="梓桐镇" code="330127107" />
+    <street name="汾口镇" code="330127108" />
+    <street name="中洲镇" code="330127109" />
+    <street name="大墅镇" code="330127110" />
+    <street name="枫树岭镇" code="330127111" />
+    <street name="里商乡" code="330127200" />
+    <street name="金峰乡" code="330127201" />
+    <street name="富文乡" code="330127202" />
+    <street name="左口乡" code="330127203" />
+    <street name="屏门乡" code="330127205" />
+    <street name="瑶山乡" code="330127206" />
+    <street name="王阜乡" code="330127208" />
+    <street name="宋村乡" code="330127210" />
+    <street name="鸠坑乡" code="330127211" />
+    <street name="浪川乡" code="330127212" />
+    <street name="界首乡" code="330127214" />
+    <street name="安阳乡" code="330127216" />
+</county>
+<county name="建德" code="330182">
+    <street name="新安江街道" code="330182001" />
+    <street name="洋溪街道" code="330182002" />
+    <street name="更楼街道" code="330182003" />
+    <street name="莲花镇" code="330182101" />
+    <street name="乾潭镇" code="330182102" />
+    <street name="梅城镇" code="330182104" />
+    <street name="杨村桥镇" code="330182105" />
+    <street name="下涯镇" code="330182106" />
+    <street name="大洋镇" code="330182107" />
+    <street name="三都镇" code="330182108" />
+    <street name="寿昌镇" code="330182109" />
+    <street name="航头镇" code="330182110" />
+    <street name="大慈岩镇" code="330182111" />
+    <street name="大同镇" code="330182112" />
+    <street name="李家镇" code="330182113" />
+    <street name="钦堂乡" code="330182202" />
+</county>
+<county name="富阳" code="330183">
+    <street name="富春街道" code="330183001" />
+    <street name="春江街道" code="330183002" />
+    <street name="鹿山街道" code="330183004" />
+    <street name="东洲街道" code="330183005" />
+    <street name="银湖街道" code="330183006" />
+    <street name="万市镇" code="330183100" />
+    <street name="洞桥镇" code="330183101" />
+    <street name="渌渚镇" code="330183103" />
+    <street name="永昌镇" code="330183105" />
+    <street name="里山镇" code="330183108" />
+    <street name="常绿镇" code="330183109" />
+    <street name="场口镇" code="330183110" />
+    <street name="常安镇" code="330183111" />
+    <street name="龙门镇" code="330183112" />
+    <street name="新登镇" code="330183115" />
+    <street name="胥口镇" code="330183116" />
+    <street name="大源镇" code="330183117" />
+    <street name="灵桥镇" code="330183118" />
+    <street name="新桐乡" code="330183200" />
+    <street name="上官乡" code="330183201" />
+    <street name="环山乡" code="330183204" />
+    <street name="湖源乡" code="330183205" />
+    <street name="春建乡" code="330183206" />
+    <street name="渔山乡" code="330183207" />
+</county>
+<county name="临安" code="330185">
+    <street name="玲珑街道" code="330185002" />
+    <street name="锦南街道" code="330185005" />
+    <street name="锦城街道" code="330185006" />
+    <street name="锦北街道" code="330185007" />
+    <street name="青山湖街道" code="330185008" />
+    <street name="高虹镇" code="330185102" />
+    <street name="太湖源镇" code="330185103" />
+    <street name="於潜镇" code="330185104" />
+    <street name="太阳镇" code="330185106" />
+    <street name="潜川镇" code="330185107" />
+    <street name="昌化镇" code="330185108" />
+    <street name="河桥镇" code="330185109" />
+    <street name="湍口镇" code="330185111" />
+    <street name="清凉峰镇" code="330185112" />
+    <street name="岛石镇" code="330185113" />
+    <street name="板桥镇" code="330185115" />
+    <street name="天目山镇" code="330185116" />
+    <street name="龙岗镇" code="330185117" />
+</county>
+</city>
+</address>

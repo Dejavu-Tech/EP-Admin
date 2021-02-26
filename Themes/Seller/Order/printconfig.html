@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+	<title><?php echo $shoname_name; ?></title>
+	<link rel="shortcut icon" href="" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="author" content="Dejavu871.Tech.">
+	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- Font Awesome-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<!-- ico-font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+	<!-- Themify icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
+	<!-- Flag icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
+	<!-- Feather icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+	<!-- Plugins css start-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
+	<!-- Plugins css Ends-->
+	<!-- Bootstrap css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+	<!-- App css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
+	<!-- Responsive css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+
+<script type="text/javascript">
+		window.sysinfo = {
+		<?php if(!empty($_W['uniacid'])){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
+
+		<?php if(!empty($_W['acid'])){ ?>'acid': '{$_W['acid']}',<?php } ?>
+
+		<?php if(!empty($_W['openid'])){ ?>'openid': '{$_W['openid']}',<?php } ?>
+
+		<?php if(!empty($_W['uid'])){ ?>'uid': '{$_W['uid']}',<?php } ?>
+
+		'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
+
+		'siteroot': '{$_W['siteroot']}',
+				'siteurl': '{$_W['siteurl']}',
+				'attachurl': '{$_W['attachurl']}',
+				'attachurl_local': '{$_W['attachurl_local']}',
+				'attachurl_remote': '{$_W['attachurl_remote']}',
+				'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
+		'cookie' : {'pre': ''},
+		'account' : {:json_encode($_W['account'])},
+		};
+</script>
+
+<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+
+   <link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+</head>
+<body class="custom-scrollbar" >
+
+<div class="page-wrapper custom-scrollbar">
+<div class="page-body-wrapper">
+<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+					<div class="container-fluid">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-lg-6 main-header">
+							<h6 class="mb-0">当前位置 </h6>
+							<h2><span>商户打印机设置</span></h2>
+</div>
+</div>
+</div>
+</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
+								<div class="card-body">
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">小票打印：</label>
+					<div class="col-sm-10">
+						<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+
+							<div class='radio radio-primary'><input type='radio' name='data[open_feier_print{$supper_info['id']}]' value='1' <?php if($data['open_feier_print'.$supper_info['id']]=='1'){ ?>checked<?php } ?> onclick="$('#feier_print').show();$('#yilianyun_print').hide();" title="开启飞蛾打印机" /> </div>
+							<div class='radio radio-primary'><input type='radio' name='data[open_feier_print{$supper_info['id']}]' value='2' <?php if($data['open_feier_print'.$supper_info['id']]=='2'){ ?>checked<?php } ?> onclick="$('#yilianyun_print').show();$('#feier_print').hide();" title="开启易联云打印机" /> </div>
+
+							<div class='radio radio-primary'><input type='radio' name='data[open_feier_print{$supper_info['id']}]' value='0' <?php if(empty($data['open_feier_print'.$supper_info['id']])){ ?>checked<?php } ?>  onclick="$('#feier_print').hide();$('#yilianyun_print').hide();" title="关闭" /> </div>
+							<small>开启后，系统将自动打印新订单</small>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row" id="feier_print" style="<?php if( empty($data['open_feier_print'.$supper_info['id']]) || $data['open_feier_print'.$supper_info['id']] ==2 ){ ?>display:none;<?php } ?>">
+					<label class="col-sm-2 col-form-label"></label>
+					<div class="col-sm-10">
+						<div class="input-group fixsingle-input-group">
+							<div class="input-group-addon"><b>sn:</b></div>
+							<input type="text" name="data[feier_print_sn{$supper_info['id']}]" class="form-control" value="<?php echo $data['feier_print_sn'.$supper_info['id']]; ?>" />
+							<div class="input-group-addon"><b>key:</b></div>
+							<input type="text" name="data[feier_print_key{$supper_info['id']}]" class="form-control" value="<?php echo $data['feier_print_key'.$supper_info['id']]; ?>" />
+							<div class="input-group-addon"><b>打印联数：</b></div>
+							<input type="text" name="data[feier_print_lian{$supper_info['id']}]" class="form-control" value="<?php echo $data['feier_print_lian'.$supper_info['id']]; ?>" />
+
+						</div>
+						<small>支持飞鹅打印机 (sn,key在机子底部)，打印联数最小为1</small>
+					</div>
+				</div>
+				<div class="form-group row" id="yilianyun_print" style="<?php if( empty($data['open_feier_print'.$supper_info['id']]) || $data['open_feier_print'.$supper_info['id']] == 1 ){ ?>display:none;<?php } ?>">
+					<label class="col-sm-2 col-form-label"></label>
+					<div class="col-sm-10">
+
+						<div class="input-group fixsingle-input-group">
+							<div class="input-group-addon"><b>应用id:</b></div>
+							<input type="text" name="data[yilian_client_id{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_client_id'.$supper_info['id']]; ?>" />
+							<div class="input-group-addon"><b>应用密钥:</b></div>
+							<input type="text" name="data[yilian_client_key{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_client_key'.$supper_info['id']]; ?>" />
+						</div>
+						<div class="input-group fixsingle-input-group">
+							<div class="input-group-addon"><b>打印机终端号:</b></div>
+							<input type="text" name="data[yilian_machine_code{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_machine_code'.$supper_info['id']]; ?>" />
+							<div class="input-group-addon"><b>终端密钥:</b></div>
+							<input type="text" name="data[yilian_msign{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_msign'.$supper_info['id']]; ?>" />
+							 <div class="input-group-addon"><b>打印联数：</b></div>
+							<input type="text" name="data[yilian_print_lian{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_print_lian'.$supper_info['id']]; ?>" />
+						 </div>
+						<small>支持易联云K4、K5、K6打印机 (打印机终端号,终端密钥在机子底部,开发者中心应用类型选择： 自有型应用)，没有开发者账号<a href="https://dev.yilianyun.net/" target="_blank">请点击申请</a></small>
+
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label"> </label>
+					<div class="col-sm-10">
+						<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-primary"  />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+					</div>
+				</div>
+			</form>
+		</div>
+</div>
+</div>
+
+<script src="/layuiadmin/layui/layui1.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap js-->
+
+<!-- Sidebar jquery-->
+<script src="/assets/js/sidebar-menu.js"></script>
+
+<!-- feather icon js-->
+
+<!-- Plugins JS start-->
+
+<script src="/assets/js/chat-menu.js"></script>
+<!-- Plugins JS Ends-->
+<!-- Theme js-->
+<script src="/assets/js/script.js"></script>
+
+<!-- Theme js-->
+<script src="/assets/js/theme-customizer/customizer1.js"></script>
+
+<script>
+	layui.config({
+		base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+</script>
+
+<script>
+//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+var layer = layui.layer;
+var $;
+
+var cur_open_div;
+
+layui.use(['jquery', 'layer','form'], function(){
+  $ = layui.$;
+  var form = layui.form;
+
+	form.on('radio(linktype)', function(data){
+		if (data.value == 2) {
+			$('#typeGroup').show();
+		} else {
+			$('#typeGroup').hide();
+		}
+	});
+
+
+	$('#chose_link').click(function(){
+		cur_open_div = $(this).attr('data-input');
+		$.post("{:U('util/selecturl', array('ok' => 1))}", {}, function(shtml){
+		 layer.open({
+			type: 1,
+			area: '700px',
+			content: shtml //注意，如果str是object，那么需要字符拼接。
+		  });
+		});
+	})
+
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+
+	 $.ajax({
+		url: data.form.action,
+		type: data.form.method,
+		data: data.field,
+		dataType:'json',
+		success: function (info) {
+
+			if(info.status == 0)
+			{
+				layer.msg(info.result.message,{icon: 1,time: 2000});
+			}else if(info.status == 1){
+				var go_url = location.href;
+				if( info.result.hasOwnProperty("url") )
+				{
+					go_url = info.result.url;
+				}
+
+				layer.msg('操作成功',{time: 1000,
+					end:function(){
+						location.href = info.result.url;
+					}
+				});
+			}
+		}
+	});
+
+    return false;
+  });
+})
+
+</script>
+
+
+<script>
+
+$(function(){
+$('#radPickupDateTip input[type=radio]').click(function(){
+	var s_val = $(this).val();
+	if(s_val == 1)
+	{
+		$('#txtPickupDateTip').show();
+	}else{
+		$('#txtPickupDateTip').hide();
+	}
+ })
+
+
+ $('#redis_server input[type=radio]').click(function(){
+	var s_val = $(this).val();
+	if(s_val == 1)
+	{
+		$('#redis_div').css('display','block');
+	}else{
+		$('#redis_div').css('display', 'none');
+	}
+ })
+
+ })
+</script>
+</body>

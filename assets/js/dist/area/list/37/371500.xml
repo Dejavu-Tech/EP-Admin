@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="聊城" code="371500">
+<county name="东昌府" code="371502">
+    <street name="古楼街道" code="371502001" />
+    <street name="柳园街道" code="371502002" />
+    <street name="新区街道" code="371502003" />
+    <street name="湖西街道" code="371502004" />
+    <street name="道口铺街道" code="371502005" />
+    <street name="阎寺街道" code="371502006" />
+    <street name="凤凰街道" code="371502007" />
+    <street name="北城街道" code="371502008" />
+    <street name="东城街道" code="371502009" />
+    <street name="蒋官屯街道" code="371502010" />
+    <street name="侯营镇" code="371502100" />
+    <street name="沙镇镇" code="371502101" />
+    <street name="堂邑镇" code="371502102" />
+    <street name="梁水镇" code="371502103" />
+    <street name="斗虎屯镇" code="371502104" />
+    <street name="郑家镇" code="371502105" />
+    <street name="张炉集镇" code="371502106" />
+    <street name="于集镇" code="371502107" />
+    <street name="许营镇" code="371502108" />
+    <street name="朱老庄镇" code="371502109" />
+    <street name="顾官屯镇" code="371502110" />
+    <street name="广平乡" code="371502202" />
+    <street name="韩集乡" code="371502203" />
+    <street name="香江管委会" code="371502400" />
+</county>
+<county name="阳谷" code="371521">
+    <street name="博济桥街道" code="371521001" />
+    <street name="侨润街道" code="371521002" />
+    <street name="狮子楼街道" code="371521003" />
+    <street name="阎楼镇" code="371521101" />
+    <street name="阿城镇" code="371521103" />
+    <street name="七级镇" code="371521104" />
+    <street name="安乐镇" code="371521105" />
+    <street name="定水镇" code="371521106" />
+    <street name="石佛镇" code="371521107" />
+    <street name="李台镇" code="371521108" />
+    <street name="寿张镇" code="371521109" />
+    <street name="十五里园镇" code="371521111" />
+    <street name="张秋镇" code="371521112" />
+    <street name="郭店屯镇" code="371521113" />
+    <street name="西湖镇" code="371521114" />
+    <street name="大布乡" code="371521203" />
+    <street name="高庙王乡" code="371521206" />
+    <street name="金斗营乡" code="371521207" />
+</county>
+<county name="莘县" code="371522">
+    <street name="燕塔街道" code="371522001" />
+    <street name="莘亭街道" code="371522002" />
+    <street name="莘州街道" code="371522003" />
+    <street name="东鲁街道" code="371522004" />
+    <street name="张鲁镇" code="371522101" />
+    <street name="朝城镇" code="371522102" />
+    <street name="观城镇" code="371522103" />
+    <street name="古城镇" code="371522104" />
+    <street name="大张家镇" code="371522105" />
+    <street name="古云镇" code="371522106" />
+    <street name="十八里铺镇" code="371522107" />
+    <street name="燕店镇" code="371522109" />
+    <street name="董杜庄镇" code="371522110" />
+    <street name="王奉镇" code="371522111" />
+    <street name="樱桃园镇" code="371522112" />
+    <street name="河店镇" code="371522113" />
+    <street name="妹冢镇" code="371522114" />
+    <street name="魏庄镇" code="371522115" />
+    <street name="张寨镇" code="371522116" />
+    <street name="大王寨镇" code="371522117" />
+    <street name="徐庄镇" code="371522118" />
+    <street name="王庄集镇" code="371522119" />
+    <street name="俎店乡" code="371522207" />
+    <street name="柿子园乡" code="371522214" />
+</county>
+<county name="茌平" code="371523">
+    <street name="振兴街道" code="371523001" />
+    <street name="信发街道" code="371523002" />
+    <street name="温陈街道" code="371523003" />
+    <street name="乐平铺镇" code="371523101" />
+    <street name="冯官屯镇" code="371523102" />
+    <street name="菜屯镇" code="371523103" />
+    <street name="博平镇" code="371523104" />
+    <street name="杜郎口镇" code="371523105" />
+    <street name="韩屯镇" code="371523106" />
+    <street name="胡屯镇" code="371523107" />
+    <street name="肖庄镇" code="371523108" />
+    <street name="贾寨镇" code="371523109" />
+    <street name="洪官屯镇" code="371523110" />
+    <street name="杨官屯乡" code="371523208" />
+</county>
+<county name="东阿" code="371524">
+    <street name="铜城街道" code="371524001" />
+    <street name="新城街道" code="371524002" />
+    <street name="刘集镇" code="371524101" />
+    <street name="牛角店镇" code="371524102" />
+    <street name="大桥镇" code="371524103" />
+    <street name="高集镇" code="371524104" />
+    <street name="姜楼镇" code="371524105" />
+    <street name="姚寨镇" code="371524107" />
+    <street name="鱼山镇" code="371524108" />
+    <street name="陈集乡" code="371524205" />
+</county>
+<county name="冠县" code="371525">
+    <street name="清泉街道" code="371525001" />
+    <street name="崇文街道" code="371525002" />
+    <street name="烟庄街道" code="371525003" />
+    <street name="贾镇" code="371525101" />
+    <street name="桑阿镇" code="371525102" />
+    <street name="柳林镇" code="371525103" />
+    <street name="清水镇" code="371525104" />
+    <street name="东古城镇" code="371525105" />
+    <street name="北馆陶镇" code="371525106" />
+    <street name="店子镇" code="371525107" />
+    <street name="斜店乡" code="371525200" />
+    <street name="梁堂乡" code="371525201" />
+    <street name="定远寨乡" code="371525202" />
+    <street name="辛集乡" code="371525203" />
+    <street name="范寨乡" code="371525204" />
+    <street name="甘官屯乡" code="371525205" />
+    <street name="兰沃乡" code="371525206" />
+    <street name="万善乡" code="371525209" />
+</county>
+<county name="高唐" code="371526">
+    <street name="鱼邱湖街道" code="371526001" />
+    <street name="汇鑫街道" code="371526002" />
+    <street name="人和街道" code="371526003" />
+    <street name="梁村镇" code="371526101" />
+    <street name="尹集镇" code="371526102" />
+    <street name="清平镇" code="371526103" />
+    <street name="固河镇" code="371526104" />
+    <street name="三十里铺镇" code="371526105" />
+    <street name="琉璃寺镇" code="371526106" />
+    <street name="赵寨子镇" code="371526107" />
+    <street name="姜店镇" code="371526108" />
+    <street name="杨屯镇" code="371526109" />
+</county>
+<county name="临清" code="371581">
+    <street name="青年路街道" code="371581001" />
+    <street name="新华路街道" code="371581002" />
+    <street name="先锋路街道" code="371581003" />
+    <street name="大辛庄街道" code="371581004" />
+    <street name="松林镇" code="371581101" />
+    <street name="老赵庄镇" code="371581102" />
+    <street name="康庄镇" code="371581103" />
+    <street name="魏湾镇" code="371581104" />
+    <street name="刘垓子镇" code="371581105" />
+    <street name="八岔路镇" code="371581107" />
+    <street name="潘庄镇" code="371581108" />
+    <street name="烟店镇" code="371581109" />
+    <street name="唐园镇" code="371581110" />
+    <street name="金郝庄镇" code="371581111" />
+    <street name="戴湾镇" code="371581112" />
+    <street name="尚店镇" code="371581113" />
+</county>
+</city>
+</address>

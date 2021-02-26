@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="荆州" code="421000">
+<county name="沙市" code="421002">
+    <street name="中山街道" code="421002001" />
+    <street name="崇文街道" code="421002002" />
+    <street name="解放街道" code="421002003" />
+    <street name="胜利街道" code="421002004" />
+    <street name="朝阳街道" code="421002005" />
+    <street name="联合街道" code="421002033" />
+    <street name="锣场镇" code="421002100" />
+    <street name="岑河镇" code="421002101" />
+    <street name="观音当镇" code="421002102" />
+    <street name="关沮镇" code="421002103" />
+    <street name="立新乡" code="421002200" />
+    <street name="岑河原种场" code="421002500" />
+    <street name="沙市农场" code="421002571" />
+</county>
+<county name="荆州" code="421003">
+    <street name="西城街道" code="421003001" />
+    <street name="东城街道" code="421003002" />
+    <street name="城南街道" code="421003003" />
+    <street name="纪南镇" code="421003100" />
+    <street name="川店镇" code="421003101" />
+    <street name="马山镇" code="421003102" />
+    <street name="八岭山镇" code="421003103" />
+    <street name="李埠镇" code="421003104" />
+    <street name="弥市镇" code="421003105" />
+    <street name="郢城镇" code="421003106" />
+    <street name="太湖港管理区" code="421003450" />
+    <street name="菱角湖管理区" code="421003451" />
+</county>
+<county name="公安" code="421022">
+    <street name="埠河镇" code="421022100" />
+    <street name="斗湖堤镇" code="421022101" />
+    <street name="夹竹园镇" code="421022102" />
+    <street name="闸口镇" code="421022103" />
+    <street name="杨家厂镇" code="421022104" />
+    <street name="麻豪口镇" code="421022105" />
+    <street name="藕池镇" code="421022106" />
+    <street name="黄山头镇" code="421022107" />
+    <street name="孟家溪镇" code="421022108" />
+    <street name="南平镇" code="421022109" />
+    <street name="章庄铺镇" code="421022110" />
+    <street name="狮子口镇" code="421022111" />
+    <street name="斑竹垱镇" code="421022112" />
+    <street name="毛家港镇" code="421022113" />
+    <street name="甘家厂乡" code="421022200" />
+    <street name="章田寺乡" code="421022201" />
+</county>
+<county name="监利" code="421023">
+    <street name="容城镇" code="421023100" />
+    <street name="朱河镇" code="421023101" />
+    <street name="新沟镇" code="421023102" />
+    <street name="龚场镇" code="421023103" />
+    <street name="周老嘴镇" code="421023104" />
+    <street name="黄歇口镇" code="421023105" />
+    <street name="汪桥镇" code="421023106" />
+    <street name="程集镇" code="421023107" />
+    <street name="分盐镇" code="421023108" />
+    <street name="毛市镇" code="421023109" />
+    <street name="福田寺镇" code="421023110" />
+    <street name="上车湾镇" code="421023111" />
+    <street name="汴河镇" code="421023112" />
+    <street name="尺八镇" code="421023113" />
+    <street name="白螺镇" code="421023114" />
+    <street name="网市镇" code="421023115" />
+    <street name="三洲镇" code="421023116" />
+    <street name="桥市镇" code="421023117" />
+    <street name="红城乡" code="421023200" />
+    <street name="棋盘乡" code="421023201" />
+    <street name="柘木乡" code="421023202" />
+    <street name="人民大垸农场管理区" code="421023450" />
+    <street name="荒湖农场管理区" code="421023451" />
+</county>
+<county name="江陵" code="421024">
+    <street name="资市镇" code="421024100" />
+    <street name="滩桥镇" code="421024101" />
+    <street name="熊河镇" code="421024102" />
+    <street name="白马寺镇" code="421024103" />
+    <street name="沙岗镇" code="421024104" />
+    <street name="普济镇" code="421024105" />
+    <street name="郝穴镇" code="421024106" />
+    <street name="马家寨乡" code="421024200" />
+    <street name="秦市乡" code="421024201" />
+    <street name="江北监狱" code="421024450" />
+    <street name="江陵县工业园区" code="421024451" />
+    <street name="三湖管理区" code="421024500" />
+    <street name="六合垸管理区" code="421024501" />
+</county>
+<county name="石首" code="421081">
+    <street name="绣林街道" code="421081001" />
+    <street name="笔架山街道" code="421081002" />
+    <street name="新厂镇" code="421081100" />
+    <street name="横沟市镇" code="421081101" />
+    <street name="大垸镇" code="421081102" />
+    <street name="小河口镇" code="421081103" />
+    <street name="桃花山镇" code="421081104" />
+    <street name="调关镇" code="421081105" />
+    <street name="东升镇" code="421081106" />
+    <street name="高基庙镇" code="421081107" />
+    <street name="南口镇" code="421081108" />
+    <street name="高陵镇" code="421081109" />
+    <street name="团山寺镇" code="421081110" />
+    <street name="久合垸乡" code="421081200" />
+    <street name="天鹅洲开发区" code="421081500" />
+</county>
+<county name="洪湖" code="421083">
+    <street name="新堤街道" code="421083001" />
+    <street name="滨湖街道" code="421083002" />
+    <street name="螺山镇" code="421083100" />
+    <street name="乌林镇" code="421083101" />
+    <street name="龙口镇" code="421083102" />
+    <street name="燕窝镇" code="421083103" />
+    <street name="新滩镇" code="421083104" />
+    <street name="峰口镇" code="421083105" />
+    <street name="曹市镇" code="421083106" />
+    <street name="府场镇" code="421083107" />
+    <street name="戴家场镇" code="421083108" />
+    <street name="瞿家湾镇" code="421083109" />
+    <street name="沙口镇" code="421083110" />
+    <street name="万全镇" code="421083111" />
+    <street name="汊河镇" code="421083112" />
+    <street name="黄家口镇" code="421083113" />
+    <street name="老湾乡" code="421083200" />
+    <street name="小港管理区" code="421083450" />
+    <street name="大同湖管理区" code="421083451" />
+    <street name="大沙湖管理区" code="421083452" />
+</county>
+<county name="松滋" code="421087">
+    <street name="新江口镇" code="421087100" />
+    <street name="南海镇" code="421087101" />
+    <street name="八宝镇" code="421087102" />
+    <street name="宛市镇" code="421087103" />
+    <street name="老城镇" code="421087104" />
+    <street name="陈店镇" code="421087105" />
+    <street name="王家桥镇" code="421087106" />
+    <street name="斯家场镇" code="421087107" />
+    <street name="杨林市镇" code="421087108" />
+    <street name="纸厂河镇" code="421087109" />
+    <street name="街河市镇" code="421087110" />
+    <street name="危水镇" code="421087111" />
+    <street name="刘家场镇" code="421087112" />
+    <street name="沙道观镇" code="421087113" />
+    <street name="万家乡" code="421087200" />
+    <street name="卸甲坪土家族乡" code="421087201" />
+</county>
+</city>
+</address>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="铜陵" code="340700">
+<county name="铜官山" code="340702">
+    <street name="铜官山区虚镇" code="340702198" />
+</county>
+<county name="狮子山" code="340703">
+    <street name="东郊办事处" code="340703005" />
+    <street name="西湖镇" code="340703100" />
+    <street name="狮子山区虚镇" code="340703198" />
+    <street name="铜陵市经济开发区" code="340703400" />
+</county>
+<county name="郊区" code="340711">
+    <street name="桥南办事处" code="340711001" />
+    <street name="安矿办事处" code="340711002" />
+    <street name="铜山镇" code="340711100" />
+    <street name="大通镇" code="340711101" />
+    <street name="灰河乡" code="340711200" />
+    <street name="两矿一公司专管办" code="340711400" />
+    <street name="大桥经济开发区" code="340711401" />
+    <street name="普济圩农场" code="340711402" />
+</county>
+<county name="铜陵" code="340721">
+    <street name="五松镇" code="340721100" />
+    <street name="顺安镇" code="340721101" />
+    <street name="钟鸣镇" code="340721102" />
+    <street name="天门镇" code="340721103" />
+    <street name="老洲乡" code="340721200" />
+    <street name="东联乡" code="340721201" />
+    <street name="西联乡" code="340721202" />
+    <street name="胥坝乡" code="340721203" />
+    <street name="循环经济园" code="340721400" />
+    <street name="金桥工业园" code="340721401" />
+</county>
+</city>
+</address>

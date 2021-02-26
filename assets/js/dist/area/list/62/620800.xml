@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="平凉" code="620800">
+<county name="崆峒" code="620802">
+    <street name="东关街道" code="620802001" />
+    <street name="中街街道" code="620802002" />
+    <street name="西郊街道" code="620802003" />
+    <street name="四十里铺镇" code="620802100" />
+    <street name="崆峒镇" code="620802101" />
+    <street name="白水镇" code="620802102" />
+    <street name="草峰镇" code="620802103" />
+    <street name="安国乡" code="620802200" />
+    <street name="柳湖乡" code="620802201" />
+    <street name="花所乡" code="620802202" />
+    <street name="索罗乡" code="620802203" />
+    <street name="香莲乡" code="620802204" />
+    <street name="西阳乡" code="620802205" />
+    <street name="大秦乡" code="620802206" />
+    <street name="白庙乡" code="620802207" />
+    <street name="寨河乡" code="620802208" />
+    <street name="大寨乡" code="620802209" />
+    <street name="上杨乡" code="620802210" />
+    <street name="麻武乡" code="620802211" />
+    <street name="峡门乡" code="620802212" />
+    <street name="平凉市崆峒区西郊经济开发区管理委员会" code="620802498" />
+    <street name="甘肃平凉工业园区管理委员会" code="620802499" />
+</county>
+<county name="泾川" code="620821">
+    <street name="街道" code="620821001" />
+    <street name="城关镇" code="620821100" />
+    <street name="玉都镇" code="620821101" />
+    <street name="高平镇" code="620821102" />
+    <street name="荔堡镇" code="620821103" />
+    <street name="王村镇" code="620821104" />
+    <street name="窑店镇" code="620821105" />
+    <street name="汭丰乡" code="620821200" />
+    <street name="罗汉洞乡" code="620821201" />
+    <street name="泾明乡" code="620821202" />
+    <street name="红河乡" code="620821203" />
+    <street name="飞云乡" code="620821204" />
+    <street name="太平乡" code="620821205" />
+    <street name="丰台乡" code="620821206" />
+    <street name="党原乡" code="620821207" />
+    <street name="温泉经济开发区" code="620821400" />
+    <street name="张老寺农场" code="620821500" />
+</county>
+<county name="灵台" code="620822">
+    <street name="街道" code="620822001" />
+    <street name="中台镇" code="620822100" />
+    <street name="邵寨镇" code="620822101" />
+    <street name="独店镇" code="620822102" />
+    <street name="什字镇" code="620822103" />
+    <street name="朝那镇" code="620822104" />
+    <street name="新开乡" code="620822201" />
+    <street name="西屯乡" code="620822202" />
+    <street name="上良乡" code="620822203" />
+    <street name="梁原乡" code="620822204" />
+    <street name="龙门乡" code="620822205" />
+    <street name="星火乡" code="620822206" />
+    <street name="百里乡" code="620822207" />
+    <street name="蒲窝乡" code="620822208" />
+    <street name="万宝川农场" code="620822400" />
+</county>
+<county name="崇信" code="620823">
+    <street name="锦屏街道" code="620823001" />
+    <street name="锦屏镇" code="620823100" />
+    <street name="新窑镇" code="620823101" />
+    <street name="柏树乡" code="620823200" />
+    <street name="黄寨乡" code="620823201" />
+    <street name="黄花乡" code="620823202" />
+    <street name="木林乡" code="620823203" />
+    <street name="崇信县新窑工业园区管理委员会" code="620823400" />
+    <street name="五举农场" code="620823401" />
+    <street name="崇信县铜城工业园区管理委员会" code="620823402" />
+</county>
+<county name="华亭" code="620824">
+    <street name="东华街道" code="620824001" />
+    <street name="东华镇" code="620824100" />
+    <street name="安口镇" code="620824101" />
+    <street name="西华镇" code="620824102" />
+    <street name="马峡镇" code="620824103" />
+    <street name="策底镇" code="620824104" />
+    <street name="上关乡" code="620824200" />
+    <street name="神峪乡" code="620824201" />
+    <street name="山寨乡" code="620824202" />
+    <street name="河西乡" code="620824203" />
+    <street name="砚峡乡" code="620824204" />
+    <street name="石堡子开发区管委会" code="620824400" />
+</county>
+<county name="庄浪" code="620825">
+    <street name="水洛街道" code="620825001" />
+    <street name="水洛镇" code="620825100" />
+    <street name="南湖镇" code="620825101" />
+    <street name="朱店镇" code="620825102" />
+    <street name="万泉镇" code="620825103" />
+    <street name="韩店镇" code="620825104" />
+    <street name="岳堡乡" code="620825200" />
+    <street name="杨河乡" code="620825201" />
+    <street name="赵墩乡" code="620825202" />
+    <street name="柳梁乡" code="620825203" />
+    <street name="卧龙乡" code="620825205" />
+    <street name="大庄乡" code="620825207" />
+    <street name="阳川乡" code="620825208" />
+    <street name="良邑乡" code="620825211" />
+    <street name="通化乡" code="620825213" />
+    <street name="永宁乡" code="620825214" />
+    <street name="郑河乡" code="620825215" />
+    <street name="南坪乡" code="620825217" />
+    <street name="盘安乡" code="620825219" />
+</county>
+<county name="静宁" code="620826">
+    <street name="城区街道" code="620826001" />
+    <street name="城关镇" code="620826100" />
+    <street name="威戎镇" code="620826101" />
+    <street name="界石铺镇" code="620826102" />
+    <street name="八里镇" code="620826103" />
+    <street name="李店镇" code="620826104" />
+    <street name="城川乡" code="620826200" />
+    <street name="司桥乡" code="620826201" />
+    <street name="曹务乡" code="620826202" />
+    <street name="古城乡" code="620826203" />
+    <street name="双岘乡" code="620826204" />
+    <street name="雷大乡" code="620826205" />
+    <street name="余湾乡" code="620826206" />
+    <street name="仁大乡" code="620826207" />
+    <street name="贾河乡" code="620826208" />
+    <street name="深沟乡" code="620826209" />
+    <street name="治平乡" code="620826210" />
+    <street name="新店乡" code="620826211" />
+    <street name="甘沟乡" code="620826212" />
+    <street name="四河乡" code="620826213" />
+    <street name="红寺乡" code="620826214" />
+    <street name="细巷乡" code="620826215" />
+    <street name="三合乡" code="620826216" />
+    <street name="原安乡" code="620826217" />
+    <street name="灵芝乡" code="620826218" />
+</county>
+</city>
+</address>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="扬州" code="321000">
+<county name="广陵" code="321002">
+    <street name="东关街道" code="321002001" />
+    <street name="汶河街道" code="321002002" />
+    <street name="文峰街道" code="321002003" />
+    <street name="曲江街道" code="321002004" />
+    <street name="杭集镇" code="321002101" />
+    <street name="李典镇" code="321002102" />
+    <street name="沙头镇" code="321002103" />
+    <street name="头桥镇" code="321002104" />
+    <street name="泰安镇" code="321002105" />
+    <street name="湾头镇" code="321002106" />
+    <street name="汤汪乡" code="321002200" />
+    <street name="产业园" code="321002400" />
+</county>
+<county name="邗江" code="321003">
+    <street name="邗上街道" code="321003001" />
+    <street name="蒋王街道" code="321003002" />
+    <street name="汊河街道" code="321003003" />
+    <street name="双桥街道" code="321003005" />
+    <street name="梅岭街道" code="321003006" />
+    <street name="甘泉街道" code="321003007" />
+    <street name="扬子津街道" code="321003050" />
+    <street name="文汇街道" code="321003051" />
+    <street name="瘦西湖街道" code="321003052" />
+    <street name="新城西区新盛街道" code="321003053" />
+    <street name="公道镇" code="321003100" />
+    <street name="方巷镇" code="321003101" />
+    <street name="槐泗镇" code="321003102" />
+    <street name="瓜洲镇" code="321003103" />
+    <street name="杨寿镇" code="321003108" />
+    <street name="杨庙镇" code="321003110" />
+    <street name="西湖镇" code="321003111" />
+    <street name="施桥镇" code="321003150" />
+    <street name="八里镇" code="321003151" />
+    <street name="朴席镇" code="321003152" />
+    <street name="双桥乡" code="321003201" />
+    <street name="平山乡" code="321003350" />
+    <street name="城北乡" code="321003351" />
+    <street name="江苏省扬州高新技术产业开发区" code="321003401" />
+    <street name="维扬经济开发区" code="321003402" />
+    <street name="物流园区" code="321003403" />
+</county>
+<county name="宝应" code="321023">
+    <street name="安宜镇" code="321023100" />
+    <street name="氾水镇" code="321023101" />
+    <street name="夏集镇" code="321023102" />
+    <street name="柳堡镇" code="321023103" />
+    <street name="射阳湖镇" code="321023104" />
+    <street name="广洋湖镇" code="321023105" />
+    <street name="鲁垛镇" code="321023106" />
+    <street name="小官庄镇" code="321023107" />
+    <street name="望直港镇" code="321023108" />
+    <street name="曹甸镇" code="321023109" />
+    <street name="西安丰镇" code="321023110" />
+    <street name="山阳镇" code="321023111" />
+    <street name="黄塍镇" code="321023112" />
+    <street name="泾河镇" code="321023113" />
+    <street name="开发区管委会" code="321023400" />
+</county>
+<county name="仪征" code="321081">
+    <street name="真州镇" code="321081100" />
+    <street name="新集镇" code="321081103" />
+    <street name="新城镇" code="321081104" />
+    <street name="马集镇" code="321081105" />
+    <street name="刘集镇" code="321081106" />
+    <street name="陈集镇" code="321081107" />
+    <street name="大仪镇" code="321081108" />
+    <street name="月塘镇" code="321081109" />
+    <street name="青山镇" code="321081150" />
+    <street name="原种场" code="321081401" />
+    <street name="蚕种场" code="321081402" />
+    <street name="园艺试验场" code="321081403" />
+    <street name="水产试验场" code="321081404" />
+    <street name="捺山茶场" code="321081405" />
+    <street name="汽车工业园" code="321081407" />
+    <street name="十二圩办事处" code="321081408" />
+    <street name="铜山办事处" code="321081409" />
+    <street name="开发区" code="321081410" />
+    <street name="化学工业园区" code="321081454" />
+</county>
+<county name="高邮" code="321084">
+    <street name="高邮街道" code="321084001" />
+    <street name="龙虬镇" code="321084101" />
+    <street name="车逻镇" code="321084103" />
+    <street name="汤庄镇" code="321084106" />
+    <street name="卸甲镇" code="321084107" />
+    <street name="三垛镇" code="321084108" />
+    <street name="甘垛镇" code="321084109" />
+    <street name="界首镇" code="321084112" />
+    <street name="周山镇" code="321084113" />
+    <street name="临泽镇" code="321084115" />
+    <street name="送桥镇" code="321084116" />
+    <street name="菱塘回族乡" code="321084200" />
+    <street name="城南经济新区" code="321084401" />
+    <street name="经济开发区（马棚街道）" code="321084406" />
+    <street name="菱塘光电科技园" code="321084451" />
+</county>
+<county name="江都" code="321088">
+    <street name="仙女镇" code="321012100" />
+    <street name="小纪镇" code="321012101" />
+    <street name="武坚镇" code="321012103" />
+    <street name="樊川镇" code="321012106" />
+    <street name="真武镇" code="321012108" />
+    <street name="宜陵镇" code="321012109" />
+    <street name="丁沟镇" code="321012110" />
+    <street name="郭村镇" code="321012112" />
+    <street name="邵伯镇" code="321012114" />
+    <street name="丁伙镇" code="321012116" />
+    <street name="大桥镇" code="321012118" />
+    <street name="吴桥镇" code="321012119" />
+    <street name="浦头镇" code="321012120" />
+    <street name="立新农场" code="321012400" />
+</county>
+</city>
+</address>

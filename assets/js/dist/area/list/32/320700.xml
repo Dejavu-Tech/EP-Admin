@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="连云港" code="320700">
+<county name="连云" code="320703">
+    <street name="墟沟街道" code="320703001" />
+    <street name="连云街道" code="320703003" />
+    <street name="云山街道" code="320703004" />
+    <street name="板桥街道" code="320703005" />
+    <street name="连岛街道" code="320703006" />
+    <street name="徐圩街道" code="320703007" />
+    <street name="海州湾街道" code="320703008" />
+    <street name="宿城街道" code="320703009" />
+    <street name="高公岛街道" code="320703010" />
+    <street name="中云街道" code="320703050" />
+    <street name="猴嘴街道" code="320703051" />
+    <street name="朝阳街道" code="320703052" />
+    <street name="前三岛乡" code="320703203" />
+    <street name="连云港碱厂" code="320703400" />
+    <street name="东辛农场" code="320703401" />
+    <street name="青口盐场" code="320703450" />
+</county>
+<county name="新浦" code="320705">
+    <street name="浦东街道" code="320705001" />
+    <street name="浦西街道" code="320705002" />
+    <street name="新东街道" code="320705003" />
+    <street name="新南街道" code="320705004" />
+    <street name="路南街道" code="320705005" />
+    <street name="新海街道" code="320705006" />
+    <street name="南城街道" code="320705007" />
+    <street name="花果山街道" code="320705008" />
+    <street name="云台街道" code="320705009" />
+    <street name="浦南镇" code="320705101" />
+    <street name="云台农场" code="320705400" />
+    <street name="南云台林场" code="320705401" />
+    <street name="岗埠农场" code="320705402" />
+    <street name="新浦经济开发区" code="320705403" />
+</county>
+<county name="海州" code="320706">
+    <street name="海州街道" code="320706001" />
+    <street name="幸福路街道" code="320706002" />
+    <street name="朐阳街道" code="320706003" />
+    <street name="洪门街道" code="320706004" />
+    <street name="宁海街道" code="320706005" />
+    <street name="新坝镇" code="320706100" />
+    <street name="锦屏镇" code="320706101" />
+    <street name="板浦镇" code="320706102" />
+    <street name="海州经济开发区" code="320706400" />
+</county>
+<county name="赣榆" code="320721">
+    <street name="青口镇" code="320721100" />
+    <street name="柘汪镇" code="320721101" />
+    <street name="石桥镇" code="320721102" />
+    <street name="金山镇" code="320721103" />
+    <street name="黑林镇" code="320721104" />
+    <street name="厉庄镇" code="320721105" />
+    <street name="海头镇" code="320721106" />
+    <street name="塔山镇" code="320721107" />
+    <street name="赣马镇" code="320721108" />
+    <street name="班庄镇" code="320721109" />
+    <street name="城头镇" code="320721110" />
+    <street name="城西镇" code="320721112" />
+    <street name="宋庄镇" code="320721114" />
+    <street name="沙河镇" code="320721115" />
+    <street name="墩尚镇" code="320721116" />
+    <street name="沙河子园艺场" code="320721400" />
+    <street name="赣榆海洋经济开发区" code="320721402" />
+    <street name="赣榆经济开发区" code="320721403" />
+</county>
+<county name="东海" code="320722">
+    <street name="牛山街道" code="320722001" />
+    <street name="石榴街道" code="320722002" />
+    <street name="白塔埠镇" code="320722101" />
+    <street name="黄川镇" code="320722103" />
+    <street name="石梁河镇" code="320722104" />
+    <street name="青湖镇" code="320722105" />
+    <street name="温泉镇" code="320722107" />
+    <street name="双店镇" code="320722108" />
+    <street name="桃林镇" code="320722109" />
+    <street name="洪庄镇" code="320722110" />
+    <street name="安峰镇" code="320722111" />
+    <street name="房山镇" code="320722112" />
+    <street name="平明镇" code="320722113" />
+    <street name="驼峰乡" code="320722200" />
+    <street name="李埝乡" code="320722203" />
+    <street name="山左口乡" code="320722204" />
+    <street name="石湖乡" code="320722205" />
+    <street name="曲阳乡" code="320722206" />
+    <street name="张湾乡" code="320722207" />
+    <street name="江苏东海经济开发区" code="320722401" />
+</county>
+<county name="灌云" code="320723">
+    <street name="伊山镇" code="320723100" />
+    <street name="杨集镇" code="320723102" />
+    <street name="燕尾港镇" code="320723103" />
+    <street name="同兴镇" code="320723104" />
+    <street name="四队镇" code="320723105" />
+    <street name="圩丰镇" code="320723106" />
+    <street name="龙苴镇" code="320723107" />
+    <street name="下车镇" code="320723108" />
+    <street name="图河乡" code="320723203" />
+    <street name="东王集乡" code="320723207" />
+    <street name="侍庄乡" code="320723208" />
+    <street name="小伊乡" code="320723209" />
+    <street name="南岗乡" code="320723212" />
+    <street name="五图河农场" code="320723401" />
+    <street name="灌西盐场" code="320723402" />
+    <street name="灌云经济开发区" code="320723403" />
+    <street name="灌云临港产业区" code="320723404" />
+</county>
+<county name="灌南" code="320724">
+    <street name="新安镇" code="320724100" />
+    <street name="堆沟港镇" code="320724101" />
+    <street name="田楼镇" code="320724102" />
+    <street name="北陈集镇" code="320724103" />
+    <street name="张店镇" code="320724104" />
+    <street name="三口镇" code="320724105" />
+    <street name="孟兴庄镇" code="320724106" />
+    <street name="汤沟镇" code="320724107" />
+    <street name="百禄镇" code="320724108" />
+    <street name="新集镇" code="320724109" />
+    <street name="李集乡" code="320724204" />
+</county>
+</city>
+</address>

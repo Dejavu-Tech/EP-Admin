@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="鞍山" code="210300">
+<county name="铁东" code="210302">
+    <street name="长甸街道" code="210302001" />
+    <street name="解放街道" code="210302002" />
+    <street name="山南街道" code="210302003" />
+    <street name="园林街道" code="210302004" />
+    <street name="胜利街道" code="210302005" />
+    <street name="站前街道" code="210302006" />
+    <street name="钢城街道" code="210302007" />
+    <street name="和平街道" code="210302008" />
+    <street name="对炉街道" code="210302009" />
+    <street name="东长甸街道" code="210302010" />
+    <street name="湖南街道" code="210302011" />
+    <street name="常青街道" code="210302012" />
+    <street name="新兴街道" code="210302013" />
+    <street name="旧堡街道" code="210302014" />
+    <street name="大孤山街道" code="210302015" />
+    <street name="温泉街道" code="210302016" />
+    <street name="玉佛山风景区管理委员会" code="210302400" />
+</county>
+<county name="铁西" code="210303">
+    <street name="启明街道" code="210303001" />
+    <street name="繁荣街道" code="210303002" />
+    <street name="八家子街道" code="210303003" />
+    <street name="兴盛街道" code="210303004" />
+    <street name="共和街道" code="210303005" />
+    <street name="永乐街道" code="210303006" />
+    <street name="北陶官街道" code="210303007" />
+    <street name="南华街道" code="210303008" />
+    <street name="大陆街道" code="210303009" />
+    <street name="新陶官街道" code="210303010" />
+    <street name="新城街道" code="210303011" />
+    <street name="永发街道" code="210303012" />
+    <street name="宁远街道" code="210303013" />
+    <street name="达道湾街道" code="210303014" />
+</county>
+<county name="立山" code="210304">
+    <street name="友好街道" code="210304001" />
+    <street name="双山街道" code="210304004" />
+    <street name="立山街道" code="210304006" />
+    <street name="曙光街道" code="210304008" />
+    <street name="灵山街道" code="210304009" />
+    <street name="深南街道" code="210304013" />
+    <street name="深北街道" code="210304014" />
+    <street name="沙河街道" code="210304015" />
+    <street name="滨河街道" code="210304016" />
+    <street name="千山街道" code="210304017" />
+    <street name="红旗街道" code="210304018" />
+    <street name="齐大山街道" code="210304019" />
+    <street name="汪峪街道" code="210304020" />
+</county>
+<county name="千山" code="210311">
+    <street name="对桩石街道" code="210311005" />
+    <street name="汤岗子街道" code="210311006" />
+    <street name="东鞍山街道" code="210311007" />
+    <street name="唐家房镇" code="210311102" />
+    <street name="大屯镇" code="210311103" />
+    <street name="甘泉镇" code="210311104" />
+    <street name="汤岗子牧场" code="210311405" />
+</county>
+<county name="台安" code="210321">
+    <street name="八角台街道" code="210321001" />
+    <street name="台东街道" code="210321002" />
+    <street name="台南街道" code="210321003" />
+    <street name="台北街道" code="210321004" />
+    <street name="西佛镇" code="210321101" />
+    <street name="新开河镇" code="210321102" />
+    <street name="黄沙坨镇" code="210321103" />
+    <street name="高力房镇" code="210321104" />
+    <street name="桑林镇" code="210321105" />
+    <street name="富家镇" code="210321106" />
+    <street name="达牛镇" code="210321107" />
+    <street name="台安县韭菜台镇" code="210321109" />
+    <street name="新台镇" code="210321110" />
+    <street name="桓洞镇" code="210321111" />
+    <street name="新华农场" code="210321400" />
+    <street name="洪家农牧场" code="210321401" />
+    <street name="西平林场" code="210321402" />
+</county>
+<county name="岫岩" code="210323">
+    <street name="阜昌街道" code="210323001" />
+    <street name="大宁街道" code="210323002" />
+    <street name="兴隆街道" code="210323003" />
+    <street name="雅河街道" code="210323004" />
+    <street name="仙人咀街道" code="210323005" />
+    <street name="三家子镇" code="210323101" />
+    <street name="石庙子镇" code="210323102" />
+    <street name="黄花甸镇" code="210323103" />
+    <street name="大营子镇" code="210323104" />
+    <street name="苏子沟镇" code="210323105" />
+    <street name="偏岭镇" code="210323106" />
+    <street name="哈达碑镇" code="210323107" />
+    <street name="新甸镇" code="210323108" />
+    <street name="洋河镇" code="210323109" />
+    <street name="杨家堡镇" code="210323111" />
+    <street name="清凉山镇" code="210323112" />
+    <street name="石灰窑镇" code="210323113" />
+    <street name="前营子镇" code="210323114" />
+    <street name="龙潭镇" code="210323115" />
+    <street name="牧牛镇" code="210323116" />
+    <street name="药山镇" code="210323117" />
+    <street name="大房身镇" code="210323118" />
+    <street name="朝阳镇" code="210323119" />
+    <street name="红旗营子乡" code="210323206" />
+    <street name="岭沟乡" code="210323211" />
+    <street name="哨子河乡" code="210323212" />
+</county>
+<county name="海城" code="210381">
+    <street name="海州街道" code="210381001" />
+    <street name="兴海街道" code="210381002" />
+    <street name="响堂街道" code="210381003" />
+    <street name="东四街道" code="210381004" />
+    <street name="验军街道" code="210381005" />
+    <street name="温泉街道" code="210381006" />
+    <street name="孤山镇" code="210381101" />
+    <street name="岔沟镇" code="210381102" />
+    <street name="接文镇" code="210381103" />
+    <street name="析木镇" code="210381104" />
+    <street name="马风镇" code="210381105" />
+    <street name="牌楼镇" code="210381107" />
+    <street name="八里镇" code="210381108" />
+    <street name="毛祁镇" code="210381109" />
+    <street name="英落镇" code="210381110" />
+    <street name="感王镇" code="210381111" />
+    <street name="西柳镇" code="210381112" />
+    <street name="中小镇" code="210381113" />
+    <street name="王石镇" code="210381114" />
+    <street name="南台镇" code="210381115" />
+    <street name="腾鳌镇" code="210381118" />
+    <street name="耿庄镇" code="210381121" />
+    <street name="牛庄镇" code="210381123" />
+    <street name="西四镇" code="210381124" />
+    <street name="望台镇" code="210381125" />
+    <street name="温香镇" code="210381126" />
+    <street name="高坨镇" code="210381127" />
+</county>
+</city>
+</address>

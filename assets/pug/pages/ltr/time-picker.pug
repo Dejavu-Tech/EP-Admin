@@ -1,0 +1,83 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var time_picker           = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Time
+                                      span
+                                        | Picker
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Forms
+                                      li.breadcrumb-item Form Widgets
+                                      li.breadcrumb-item.active Time Picker
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-md-6
+                          .card
+                            .card-header
+                              h5 Default:
+                            .card-body
+                              form.theme-form
+                                .form-group.mb-0
+                                  .input-group.clockpicker
+                                    input.form-control(type='text', value='09:30')
+                                    span.input-group-addon
+                                      span.glyphicon.glyphicon-time
+                        .col-md-6
+                          .card
+                            .card-header
+                              h5 Align the arrow to top, auto close:
+                            .card-body
+                              form.theme-form
+                                .form-group.mb-0
+                                  .input-group.clockpicker.pull-center(data-placement='left', data-align='top', data-autoclose='true')
+                                    input.form-control(type='text', value='13:14')
+                                    span.input-group-addon
+                                      span.glyphicon.glyphicon-time
+                        .col-md-6
+                          .card
+                            .card-header
+                              h5 Set options in javascript, instead of data-* :
+                            .card-body
+                              form.theme-form
+                                .form-group.mb-0
+                                  .input-group.clockpicker(data-placement='top', data-align='left', data-donetext='Done')
+                                    input.form-control(type='text', value='18:00')
+                                    span.input-group-addon
+                                      span.glyphicon.glyphicon-time
+                        .col-md-6
+                          .card
+                            .card-header
+                              h5 Set default value, input without addon:
+                            .card-body
+                              .clearfix
+                                form.theme-form
+                                  .form-group.mb-0
+                                    input#single-input.form-control(type='text', value='', placeholder='Addon')
+
+                    // Container-fluid ends                    
+                include ../../components/footer
+        include ../../components/footer-files

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="丹东" code="210600">
+<county name="元宝" code="210602">
+    <street name="六道口街道" code="210602001" />
+    <street name="七道街道" code="210602002" />
+    <street name="八道街道" code="210602003" />
+    <street name="九道街道" code="210602004" />
+    <street name="广济街道" code="210602005" />
+    <street name="兴东街道" code="210602006" />
+    <street name="金山镇" code="210602101" />
+</county>
+<county name="振兴" code="210603">
+    <street name="头道桥街道" code="210603001" />
+    <street name="站前街道" code="210603002" />
+    <street name="临江街道" code="210603003" />
+    <street name="六道沟街道" code="210603004" />
+    <street name="帽盔山街道" code="210603005" />
+    <street name="纤维街道" code="210603006" />
+    <street name="永昌街道" code="210603007" />
+    <street name="花园街道" code="210603008" />
+    <street name="江海街道" code="210603009" />
+    <street name="西城街道" code="210603010" />
+    <street name="浪头镇" code="210603101" />
+    <street name="安民镇" code="210603102" />
+    <street name="汤池镇" code="210603103" />
+</county>
+<county name="振安" code="210604">
+    <street name="鸭绿江街道" code="210604001" />
+    <street name="金矿街道" code="210604003" />
+    <street name="珍珠街道" code="210604004" />
+    <street name="太平湾街道" code="210604005" />
+    <street name="同兴镇" code="210604102" />
+    <street name="五龙背镇" code="210604104" />
+    <street name="楼房镇" code="210604105" />
+    <street name="九连城镇" code="210604106" />
+    <street name="汤山城镇" code="210604107" />
+</county>
+<county name="宽甸" code="210624">
+    <street name="宽甸镇" code="210624100" />
+    <street name="灌水镇" code="210624101" />
+    <street name="硼海镇" code="210624102" />
+    <street name="红石镇" code="210624103" />
+    <street name="毛甸子镇" code="210624104" />
+    <street name="长甸镇" code="210624105" />
+    <street name="永甸镇" code="210624106" />
+    <street name="太平哨镇" code="210624108" />
+    <street name="青山沟镇" code="210624109" />
+    <street name="牛毛坞镇" code="210624110" />
+    <street name="大川头镇" code="210624111" />
+    <street name="青椅山镇" code="210624112" />
+    <street name="杨木川镇" code="210624113" />
+    <street name="虎山镇" code="210624114" />
+    <street name="振江镇" code="210624115" />
+    <street name="步达远镇" code="210624116" />
+    <street name="大西岔镇" code="210624117" />
+    <street name="八河川镇" code="210624118" />
+    <street name="双山子镇" code="210624119" />
+    <street name="石湖沟乡" code="210624201" />
+    <street name="古楼子乡" code="210624206" />
+    <street name="下露河朝鲜族乡" code="210624212" />
+</county>
+<county name="东港" code="210681">
+    <street name="大东街道" code="210681001" />
+    <street name="新兴街道" code="210681002" />
+    <street name="新城街道" code="210681003" />
+    <street name="孤山镇" code="210681101" />
+    <street name="前阳镇" code="210681104" />
+    <street name="长安镇" code="210681105" />
+    <street name="十字街镇" code="210681106" />
+    <street name="长山镇" code="210681107" />
+    <street name="北井子镇" code="210681108" />
+    <street name="椅圈镇" code="210681109" />
+    <street name="黄土坎镇" code="210681110" />
+    <street name="马家店镇" code="210681113" />
+    <street name="龙王庙镇" code="210681114" />
+    <street name="小甸子镇" code="210681115" />
+    <street name="菩萨庙镇" code="210681117" />
+    <street name="黑沟镇" code="210681118" />
+    <street name="新农镇" code="210681119" />
+    <street name="合隆满族乡" code="210681206" />
+    <street name="示范农场" code="210681401" />
+    <street name="黄土坎农场" code="210681402" />
+    <street name="海洋红农场" code="210681403" />
+    <street name="兴隆农场" code="210681404" />
+    <street name="五四农场" code="210681405" />
+</county>
+<county name="凤城" code="210682">
+    <street name="凤凰城街道" code="210682001" />
+    <street name="凤山街道" code="210682002" />
+    <street name="草河街道" code="210682003" />
+    <street name="宝山镇" code="210682101" />
+    <street name="白旗镇" code="210682102" />
+    <street name="沙里寨镇" code="210682103" />
+    <street name="红旗镇" code="210682104" />
+    <street name="蓝旗镇" code="210682105" />
+    <street name="边门镇" code="210682107" />
+    <street name="东汤镇" code="210682110" />
+    <street name="石城镇" code="210682111" />
+    <street name="大兴镇" code="210682112" />
+    <street name="爱阳镇" code="210682113" />
+    <street name="赛马镇" code="210682114" />
+    <street name="弟兄山镇" code="210682115" />
+    <street name="鸡冠山镇" code="210682116" />
+    <street name="刘家河镇" code="210682117" />
+    <street name="通远堡镇" code="210682118" />
+    <street name="四门子镇" code="210682119" />
+    <street name="青城子镇" code="210682120" />
+    <street name="大堡蒙古族乡" code="210682200" />
+</county>
+</city>
+</address>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="佳木斯" code="230800">
+<county name="向阳" code="230803">
+    <street name="西林街道" code="230803001" />
+    <street name="保卫街道" code="230803002" />
+    <street name="桥南街道" code="230803003" />
+    <street name="西南岗街道" code="230803004" />
+    <street name="建设街道" code="230803005" />
+    <street name="长安街道" code="230803006" />
+    <street name="向阳区（镇）直辖地域" code="230803198" />
+</county>
+<county name="前进" code="230804">
+    <street name="前进区（镇）直辖" code="230804198" />
+    <street name="前进区农垦" code="230804579" />
+</county>
+<county name="东风" code="230805">
+    <street name="晓云街道" code="230805001" />
+    <street name="佳东街道" code="230805002" />
+    <street name="造纸街道" code="230805003" />
+    <street name="佳南街道" code="230805004" />
+    <street name="建国街道" code="230805005" />
+    <street name="建国镇" code="230805100" />
+    <street name="松江乡" code="230805200" />
+    <street name="东风区农垦" code="230805579" />
+</county>
+<county name="郊区" code="230811">
+    <street name="佳西街道" code="230811001" />
+    <street name="友谊街道" code="230811002" />
+    <street name="大来镇" code="230811101" />
+    <street name="敖其镇" code="230811102" />
+    <street name="望江镇" code="230811103" />
+    <street name="长发镇" code="230811104" />
+    <street name="莲江口镇" code="230811105" />
+    <street name="长青乡" code="230811200" />
+    <street name="沿江乡" code="230811201" />
+    <street name="西格木乡" code="230811202" />
+    <street name="平安乡" code="230811208" />
+    <street name="四丰乡" code="230811210" />
+    <street name="群胜乡" code="230811211" />
+    <street name="莲江口监狱" code="230811480" />
+    <street name="郊区农垦" code="230811579" />
+</county>
+<county name="桦南" code="230822">
+    <street name="驼腰子镇" code="230822103" />
+    <street name="石头河子镇" code="230822104" />
+    <street name="桦南镇" code="230822106" />
+    <street name="土龙山镇" code="230822107" />
+    <street name="孟家岗镇" code="230822108" />
+    <street name="闫家镇" code="230822109" />
+    <street name="金沙乡" code="230822205" />
+    <street name="梨树乡" code="230822213" />
+    <street name="明义乡" code="230822214" />
+    <street name="大八浪乡" code="230822215" />
+    <street name="桦南林业局" code="230822400" />
+    <street name="曙光农场" code="230822500" />
+    <street name="桦南种畜场" code="230822580" />
+</county>
+<county name="桦川" code="230826">
+    <street name="横头山镇" code="230826101" />
+    <street name="苏家店镇" code="230826103" />
+    <street name="悦来镇" code="230826104" />
+    <street name="新城镇" code="230826105" />
+    <street name="四马架镇" code="230826106" />
+    <street name="东河乡" code="230826201" />
+    <street name="梨丰乡" code="230826202" />
+    <street name="创业乡" code="230826205" />
+    <street name="星火乡" code="230826207" />
+    <street name="江川农场" code="230826500" />
+    <street name="宝山农场" code="230826501" />
+</county>
+<county name="汤原" code="230828">
+    <street name="香兰镇" code="230828101" />
+    <street name="鹤立镇" code="230828102" />
+    <street name="竹帘镇" code="230828103" />
+    <street name="汤原镇" code="230828104" />
+    <street name="汤旺乡" code="230828201" />
+    <street name="胜利乡" code="230828203" />
+    <street name="吉祥乡" code="230828208" />
+    <street name="振兴乡" code="230828209" />
+    <street name="太平川乡" code="230828210" />
+    <street name="永发乡" code="230828211" />
+    <street name="鹤立林业局" code="230828400" />
+    <street name="香兰监狱" code="230828480" />
+    <street name="汤原农场" code="230828500" />
+    <street name="梧桐河农场" code="230828501" />
+</county>
+<county name="抚远" code="230833">
+    <street name="抚远镇" code="230833100" />
+    <street name="寒葱沟镇" code="230833101" />
+    <street name="浓桥镇" code="230833102" />
+    <street name="乌苏镇" code="230833103" />
+    <street name="通江乡" code="230833200" />
+    <street name="浓江乡" code="230833201" />
+    <street name="海青乡" code="230833202" />
+    <street name="别拉洪乡" code="230833203" />
+    <street name="鸭南乡" code="230833204" />
+    <street name="前哨农场" code="230833500" />
+    <street name="前锋农场" code="230833501" />
+    <street name="二道河农场" code="230833502" />
+</county>
+<county name="同江" code="230881">
+    <street name="同江市城市管理委员会" code="230881001" />
+    <street name="同江镇" code="230881100" />
+    <street name="乐业镇" code="230881101" />
+    <street name="三村镇" code="230881102" />
+    <street name="临江镇" code="230881103" />
+    <street name="向阳镇" code="230881104" />
+    <street name="青河乡" code="230881203" />
+    <street name="街津口乡" code="230881204" />
+    <street name="八岔乡" code="230881205" />
+    <street name="金川乡" code="230881206" />
+    <street name="银川乡" code="230881207" />
+    <street name="街津口林场" code="230881400" />
+    <street name="鸭北林场" code="230881401" />
+    <street name="勤得利农场" code="230881500" />
+    <street name="青龙山农场" code="230881501" />
+    <street name="前进农场" code="230881502" />
+    <street name="洪河农场" code="230881503" />
+    <street name="鸭绿河农场" code="230881504" />
+    <street name="浓江农场" code="230881505" />
+    <street name="良种场" code="230881580" />
+    <street name="畜牧场" code="230881581" />
+    <street name="知青农场" code="230881582" />
+</county>
+<county name="富锦" code="230882">
+    <street name="城东街道" code="230882001" />
+    <street name="城关社区建设委员会" code="230882002" />
+    <street name="城西街道" code="230882003" />
+    <street name="长安镇" code="230882103" />
+    <street name="砚山镇" code="230882106" />
+    <street name="头林镇" code="230882107" />
+    <street name="兴隆岗镇" code="230882108" />
+    <street name="宏胜镇" code="230882109" />
+    <street name="向阳川镇" code="230882110" />
+    <street name="二龙山镇" code="230882111" />
+    <street name="上街基镇" code="230882112" />
+    <street name="锦山镇" code="230882113" />
+    <street name="大榆树镇" code="230882114" />
+    <street name="石砬山林场" code="230882400" />
+    <street name="东风岗林场" code="230882401" />
+    <street name="太东林场" code="230882402" />
+    <street name="工农林场" code="230882403" />
+    <street name="富锦市国营原种场" code="230882404" />
+    <street name="富锦市国营果树示范场" code="230882405" />
+    <street name="富锦市科研所" code="230882406" />
+    <street name="工业园区" code="230882407" />
+    <street name="建三江管理局局直" code="230882500" />
+    <street name="七星农场" code="230882501" />
+    <street name="大兴农场" code="230882502" />
+    <street name="创业农场" code="230882503" />
+    <street name="种猪场" code="230882580" />
+    <street name="种畜场" code="230882581" />
+</county>
+</city>
+</address>

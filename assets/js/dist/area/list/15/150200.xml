@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="包头" code="150200">
+<county name="东河" code="150202">
+    <street name="和平街道" code="150202001" />
+    <street name="财神庙街道" code="150202002" />
+    <street name="西脑包街道" code="150202003" />
+    <street name="南门外街道" code="150202004" />
+    <street name="南圪洞街道" code="150202005" />
+    <street name="东站街道" code="150202006" />
+    <street name="回民街道" code="150202007" />
+    <street name="二里半街道" code="150202008" />
+    <street name="河东街道" code="150202009" />
+    <street name="铁西街道" code="150202010" />
+    <street name="东兴街道" code="150202011" />
+    <street name="杨圪楞街道" code="150202012" />
+    <street name="河东镇" code="150202100" />
+    <street name="沙尔沁镇" code="150202101" />
+    <street name="铝业工业园区" code="150202400" />
+</county>
+<county name="昆都仑" code="150203">
+    <street name="少先路街道" code="150203001" />
+    <street name="沼潭街道" code="150203003" />
+    <street name="林荫路街道" code="150203004" />
+    <street name="友谊大街街道" code="150203005" />
+    <street name="阿尔丁大街街道" code="150203006" />
+    <street name="团结大街街道" code="150203007" />
+    <street name="鞍山道街道" code="150203008" />
+    <street name="前进道街道" code="150203009" />
+    <street name="市府东路街道" code="150203010" />
+    <street name="白云路街道" code="150203011" />
+    <street name="黄河西路街道" code="150203012" />
+    <street name="昆工路街道" code="150203013" />
+    <street name="昆北街道" code="150203014" />
+    <street name="昆河镇" code="150203100" />
+    <street name="卜尔汉图镇" code="150203102" />
+    <street name="包钢厂区办事处" code="150203400" />
+</county>
+<county name="青山" code="150204">
+    <street name="先锋道街道" code="150204001" />
+    <street name="幸福路街道" code="150204002" />
+    <street name="万青路街道" code="150204003" />
+    <street name="富强路街道" code="150204004" />
+    <street name="科学路街道" code="150204005" />
+    <street name="青山路街道" code="150204006" />
+    <street name="自由路街道" code="150204007" />
+    <street name="乌素图街道" code="150204008" />
+    <street name="稀土路街道" code="150204010" />
+    <street name="青福镇" code="150204100" />
+    <street name="兴胜镇" code="150204101" />
+    <street name="万水泉镇" code="150204102" />
+    <street name="包头市装备制造产业园区" code="150204401" />
+    <street name="民馨路街道" code="150204402" />
+</county>
+<county name="石拐" code="150205">
+    <street name="石拐街道" code="150205001" />
+    <street name="大发街道" code="150205002" />
+    <street name="大磁街道" code="150205003" />
+    <street name="五当沟街道" code="150205004" />
+    <street name="白狐沟街道" code="150205005" />
+    <street name="大德恒办事处" code="150205006" />
+    <street name="五当召镇" code="150205101" />
+    <street name="吉忽伦图苏木" code="150205202" />
+    <street name="工业园区管理委员会" code="150205400" />
+</county>
+<county name="白云矿区" code="150206">
+    <street name="矿山路街道" code="150206001" />
+    <street name="通阳道街道" code="150206002" />
+</county>
+<county name="九原" code="150207">
+    <street name="沙河街道" code="150207001" />
+    <street name="赛汗街道" code="150207002" />
+    <street name="萨如拉街道" code="150207003" />
+    <street name="白音席勒街道" code="150207004" />
+    <street name="麻池镇" code="150207103" />
+    <street name="哈林格尔镇" code="150207105" />
+    <street name="哈业胡同镇" code="150207110" />
+    <street name="阿嘎如泰苏木乡" code="150207202" />
+</county>
+<county name="土默特右" code="150221">
+    <street name="萨拉齐镇" code="150221104" />
+    <street name="双龙镇" code="150221105" />
+    <street name="美岱召镇" code="150221106" />
+    <street name="沟门镇" code="150221107" />
+    <street name="将军尧镇" code="150221108" />
+    <street name="海子乡" code="150221213" />
+    <street name="明沙淖乡" code="150221214" />
+    <street name="苏波盖乡" code="150221215" />
+    <street name="九峰山生态管理委员会" code="150221500" />
+</county>
+<county name="固阳" code="150222">
+    <street name="金山镇" code="150222102" />
+    <street name="西斗铺镇" code="150222103" />
+    <street name="下湿壕镇" code="150222104" />
+    <street name="银号镇" code="150222105" />
+    <street name="怀朔镇" code="150222106" />
+    <street name="兴顺西镇" code="150222107" />
+</county>
+<county name="达尔罕茂明安联合" code="150223">
+    <street name="满都拉镇" code="150223102" />
+    <street name="希拉穆仁镇" code="150223103" />
+    <street name="百灵庙镇" code="150223104" />
+    <street name="石宝镇" code="150223105" />
+    <street name="乌克忽洞镇" code="150223106" />
+    <street name="明安镇" code="150223107" />
+    <street name="巴音花镇" code="150223108" />
+    <street name="达尔罕苏木乡" code="150223213" />
+    <street name="查干哈达苏木" code="150223214" />
+    <street name="巴音敖包苏木" code="150223215" />
+    <street name="西河乡" code="150223216" />
+    <street name="小文公乡" code="150223217" />
+</county>
+</city>
+</address>

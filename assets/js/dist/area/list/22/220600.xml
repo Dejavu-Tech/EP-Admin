@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="白山" code="220600">
+<county name="浑江" code="220602">
+    <street name="新建街道" code="220602001" />
+    <street name="通沟街道" code="220602002" />
+    <street name="东兴街道" code="220602003" />
+    <street name="红旗街道" code="220602004" />
+    <street name="城南街道" code="220602005" />
+    <street name="江北街道" code="220602006" />
+    <street name="河口街道" code="220602007" />
+    <street name="板石街道" code="220602008" />
+    <street name="七道江镇" code="220602100" />
+    <street name="六道江镇" code="220602101" />
+    <street name="红土崖镇" code="220602102" />
+    <street name="三道沟镇" code="220602103" />
+</county>
+<county name="抚松" code="220621">
+    <street name="抚松镇" code="220621100" />
+    <street name="松江河镇" code="220621101" />
+    <street name="泉阳镇" code="220621102" />
+    <street name="露水河镇" code="220621103" />
+    <street name="仙人桥镇" code="220621104" />
+    <street name="万良镇" code="220621105" />
+    <street name="新屯子镇" code="220621106" />
+    <street name="东岗镇" code="220621107" />
+    <street name="漫江镇" code="220621108" />
+    <street name="北岗镇" code="220621109" />
+    <street name="兴参镇" code="220621110" />
+    <street name="长白山保护开发区管委会池西区（特殊乡镇）" code="220621120" />
+    <street name="长白山保护开发区管委会池南区（特殊乡镇）" code="220621121" />
+    <street name="兴隆乡" code="220621200" />
+    <street name="抽水乡" code="220621201" />
+    <street name="沿江乡" code="220621202" />
+    <street name="抚松工业集中区" code="220621407" />
+</county>
+<county name="靖宇" code="220622">
+    <street name="靖宇镇" code="220622100" />
+    <street name="三道湖镇" code="220622101" />
+    <street name="龙泉镇" code="220622102" />
+    <street name="那尔轰镇" code="220622103" />
+    <street name="花园口镇" code="220622104" />
+    <street name="景山镇" code="220622105" />
+    <street name="赤松镇" code="220622106" />
+    <street name="蒙江乡" code="220622201" />
+</county>
+<county name="长白" code="220623">
+    <street name="长白镇" code="220623100" />
+    <street name="八道沟镇" code="220623101" />
+    <street name="十四道沟镇" code="220623102" />
+    <street name="马鹿沟镇" code="220623103" />
+    <street name="宝泉山镇" code="220623104" />
+    <street name="新房子镇" code="220623105" />
+    <street name="金华乡" code="220623200" />
+    <street name="十二道沟乡" code="220623201" />
+</county>
+<county name="江源" code="220625">
+    <street name="孙家堡子街道" code="220605001" />
+    <street name="江源街道" code="220605002" />
+    <street name="正岔街道" code="220605003" />
+    <street name="城墙街道" code="220605004" />
+    <street name="湾沟镇" code="220605102" />
+    <street name="松树镇" code="220605103" />
+    <street name="砟子镇" code="220605104" />
+    <street name="石人镇" code="220605105" />
+    <street name="大阳岔镇" code="220605106" />
+    <street name="大石人镇" code="220605107" />
+</county>
+<county name="临江" code="220681">
+    <street name="建国街道" code="220681001" />
+    <street name="新市街道" code="220681002" />
+    <street name="兴隆街道" code="220681003" />
+    <street name="大湖街道" code="220681004" />
+    <street name="森工街道" code="220681005" />
+    <street name="大栗子街道" code="220681006" />
+    <street name="桦树镇" code="220681100" />
+    <street name="六道沟镇" code="220681101" />
+    <street name="苇沙河镇" code="220681102" />
+    <street name="花山镇" code="220681103" />
+    <street name="闹枝镇" code="220681104" />
+    <street name="四道沟镇" code="220681105" />
+    <street name="蚂蚁河乡" code="220681200" />
+    <street name="临江经济开发区" code="220681400" />
+    <street name="临江硅藻土工业集中区" code="220681401" />
+</county>
+</city>
+</address>

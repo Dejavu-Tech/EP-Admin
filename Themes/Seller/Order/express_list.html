@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<style>
+	.move_item{width:18%;}
+</style>
+<form action="{:U('order/kdniao_order')}" method="post" id="export_form" class="form-horizontal form-search " role="form">
+	<input type="hidden" name="controller" value="order/print_order" />
+	<input type="hidden" name="c" value="order" />
+	<input type="hidden" name="a" value="kdniao_order" />
+	<input type="hidden" name="order_id" value="{$order_id}" id="order_id"/>
+	<input type="hidden" name="print_type" value="{$type}" id="print_type"/>
+	<div class="layui-fluid">
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-md12">
+				<div class="layui-card">
+					<div class="layui-card-header">选择快递</div>
+					<div class="layui-card-body multi-img-details">
+						<?php foreach( $express_list as $k=>$v ){ ?>
+						<label class="move_item">
+							<input type="radio" lay-skin="primary" name="express_code" value="<?php echo $v['simplecode']; ?>" class="item_input" /><?php echo $v['name']; ?>
+						</label>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+			<div class='layui-row'>
+				<div class="layui-col-sm-12">
+					<div class="modal-footer" style="text-align: left">
+						<button type="submit" class="btn btn-primary btn-order" id="sub_orderexport" name="cancelsend" value="yes">确认打印</button>
+						<input type="hidden" name="modify_explode_arr" id="modify_explode_arr" value="" />
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+
+<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+
+<script src="/assets/js/jquery-ui.min.js"></script>
+<script>
+	$(function(){
+		$('#sub_orderexport').click(function(){
+			var order_id = $("#order_id").val();
+			var print_type = $("#print_type").val();
+			var express_code = $("input[name='express_code']:checked").val();
+			if(typeof(express_code) == "undefined" || express_code == ""){
+				layer.msg("请选择快递公司",{icon: 2,time: 2000});
+				return false;
+			}
+			if(print_type != 'one'){
+				layer.closeAll();
+				$('#kdn_print_content').html("打印中");
+				$.ajax({
+					url: "{:U('order/kdniao_print_orders')}",
+					type:'post',
+					dataType:'json',
+					data:{print_type:print_type,order_id:order_id,express_code:express_code},
+					success:function(info){
+						layer.closeAll();
+						$.post("{:U('order/kdn_orders_info')}", {order_ids:info.order_ids}, function(shtml){
+							layer.open({
+								title: "快递面单",
+								type: 1,
+								area: ['450px', '700px'],
+								content: shtml
+							});
+						});
+					}
+				})
+			}else{
+				$.ajax({
+					url: "{:U('order/kdniao_order')}",
+					type:'post',
+					dataType:'json',
+					data:{order_id:order_id,express_code:express_code},
+					success:function(info){
+						console.log(info);
+						if(info.status == 0)
+						{
+							/*layer.msg('打印面单成功',{time: 1000,
+								end:function(){
+									layer.closeAll();
+								}
+							});*/
+							layer.closeAll();
+							$.post("{:U('order/kdn_info')}", {order_id:order_id}, function(shtml){
+								layer.open({
+									title: "快递面单",
+									type: 1,
+									area: ['450px', '700px'],
+									content: shtml
+								});
+							});
+						}else if(info.status == 1){
+							layer.msg(info.message,{icon: 2,time: 2000});
+						}else if(info.status == 2){
+							kdniao_set();
+						}else if(info.status == 3){
+							kdniao_sender_set(info.message);
+						}
+					}
+				})
+			}
+			return false;
+		})
+	})
+
+	function kdniao_set(){
+		var html = '暂未设置快递对应的<span style="color:#428bca;">客户账号</span>或者<span style="color:#428bca;">客户密码</span>，请先<br/>到后台<span style="color:#428bca;">设置</span>——<span style="color:#428bca;">物流设置</span>——<span style="color:#428bca;">快递方式设置</span>，设置好参数后，再进行打印面单操作';
+		layer.confirm(html, {
+			btn: ['去设置','取消'] //按钮
+		}, function(){
+			window.location.href = "{:U('express/config')}";
+		}, function(){
+			layer.closeAll();
+		});
+	}
+
+	function kdniao_sender_set(message){
+		var html = '<span style="color:red;">'+message+'</span><br/>暂未设置快递鸟的<span style="color:#428bca;">寄件人信息</span>，请先<br/>到后台<span style="color:#428bca;">设置</span>——<span style="color:#428bca;">物流设置</span>——<span style="color:#428bca;">物流接口</span>，设置好寄件人参数后，再进行打印面单操作';
+		layer.confirm(html, {
+			btn: ['去设置','取消'] //按钮
+		}, function(){
+			window.location.href = "{:U('logistics/inface')}";
+		}, function(){
+			layer.closeAll();
+		});
+	}
+</script>
+</body>
+</html>
+
+

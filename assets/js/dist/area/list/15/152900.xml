@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阿拉善" code="152900">
+<county name="阿拉善左" code="152921">
+    <street name="温都尔勒图镇" code="152921102" />
+    <street name="乌斯太镇" code="152921104" />
+    <street name="巴润别立镇" code="152921105" />
+    <street name="巴彦浩特镇" code="152921110" />
+    <street name="嘉尔嘎勒赛汉镇" code="152921111" />
+    <street name="吉兰泰镇" code="152921112" />
+    <street name="宗别立镇" code="152921113" />
+    <street name="敖伦布拉格镇" code="152921114" />
+    <street name="腾格里额里斯镇" code="152921115" />
+    <street name="巴彦木仁苏木乡" code="152921203" />
+    <street name="乌力吉苏木乡" code="152921213" />
+    <street name="巴彦诺日公苏木乡" code="152921214" />
+    <street name="额尔克哈什哈苏木乡" code="152921215" />
+    <street name="银根苏木" code="152921216" />
+    <street name="超格图呼热苏木" code="152921217" />
+    <street name="阿拉善经济开发区" code="152921400" />
+    <street name="孪井滩生态移民示范区" code="152921401" />
+    <street name="巴彦浩特额鲁特街道" code="152921402" />
+    <street name="巴彦浩特南环路街道" code="152921403" />
+    <street name="巴彦浩特新华街道" code="152921404" />
+    <street name="巴彦浩特王府街道" code="152921405" />
+</county>
+<county name="阿拉善右" code="152922">
+    <street name="巴丹吉林镇" code="152922103" />
+    <street name="雅布赖镇" code="152922104" />
+    <street name="阿拉腾敖包镇" code="152922105" />
+    <street name="曼德拉苏木" code="152922211" />
+    <street name="阿拉腾朝格苏木" code="152922212" />
+    <street name="巴音高勒苏木" code="152922213" />
+    <street name="塔木素布拉格苏木" code="152922214" />
+</county>
+<county name="额济纳" code="152923">
+    <street name="达来呼布镇" code="152923100" />
+    <street name="额济纳旗东风镇" code="152923101" />
+    <street name="哈日布日格德音乌拉镇" code="152923102" />
+    <street name="额济纳旗赛汉陶来苏木" code="152923200" />
+    <street name="额济纳旗马鬃山苏木" code="152923201" />
+    <street name="额济纳旗苏泊淖尔苏木" code="152923202" />
+    <street name="巴彦陶来苏木" code="152923203" />
+    <street name="温图高勒苏木" code="152923204" />
+</county>
+</city>
+</address>

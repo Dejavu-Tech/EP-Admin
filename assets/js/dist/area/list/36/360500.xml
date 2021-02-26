@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="新余" code="360500">
+<county name="渝水" code="360502">
+    <street name="城南街道" code="360502001" />
+    <street name="城北街道" code="360502002" />
+    <street name="袁河街道" code="360502003" />
+    <street name="水北镇" code="360502100" />
+    <street name="下村镇" code="360502101" />
+    <street name="良山镇" code="360502102" />
+    <street name="罗坊镇" code="360502103" />
+    <street name="姚圩镇" code="360502104" />
+    <street name="珠珊镇" code="360502105" />
+    <street name="河下镇" code="360502170" />
+    <street name="观巢镇" code="360502180" />
+    <street name="欧里镇" code="360502181" />
+    <street name="水西镇" code="360502190" />
+    <street name="鹄山乡" code="360502200" />
+    <street name="人和乡" code="360502201" />
+    <street name="界水乡" code="360502202" />
+    <street name="南安乡" code="360502203" />
+    <street name="新溪乡" code="360502204" />
+    <street name="九龙山乡" code="360502271" />
+    <street name="新钢街道" code="360502400" />
+    <street name="仙来办事处" code="360502401" />
+</county>
+<county name="分宜" code="360521">
+    <street name="分宜镇" code="360521100" />
+    <street name="杨桥镇" code="360521101" />
+    <street name="湖泽镇" code="360521102" />
+    <street name="双林镇" code="360521103" />
+    <street name="钤山镇" code="360521104" />
+    <street name="洋江镇" code="360521105" />
+    <street name="凤阳乡" code="360521200" />
+    <street name="洞村乡" code="360521201" />
+    <street name="高岚乡" code="360521202" />
+    <street name="操场乡" code="360521203" />
+    <street name="分宜县工业园管理委员会" code="360521405" />
+    <street name="分宜县芳山林场" code="360521500" />
+    <street name="年珠林场" code="360521501" />
+    <street name="山下林场" code="360521502" />
+    <street name="上村林场" code="360521503" />
+    <street name="长埠林场" code="360521504" />
+    <street name="东坑林场" code="360521505" />
+    <street name="钤东办事处" code="360521506" />
+</county>
+</city>
+</address>

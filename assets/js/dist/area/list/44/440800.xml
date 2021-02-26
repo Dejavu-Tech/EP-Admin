@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="湛江" code="440800">
+<county name="赤坎" code="440802">
+    <street name="中华街道" code="440802001" />
+    <street name="寸金街道" code="440802002" />
+    <street name="民主街道" code="440802003" />
+    <street name="中山街道" code="440802004" />
+    <street name="沙湾街道" code="440802005" />
+    <street name="调顺街道" code="440802006" />
+    <street name="南桥街道" code="440802007" />
+    <street name="北桥街道" code="440802008" />
+	<street name="椹川大道" code="440802009" />
+    <street name="海滨大道" code="440802010" />
+    <street name="人民大道" code="440802011" />
+</county>
+<county name="霞山" code="440803">
+    <street name="解放街道" code="440803001" />
+    <street name="爱国街道" code="440803002" />
+    <street name="工农街道" code="440803003" />
+    <street name="友谊街道" code="440803004" />
+    <street name="新兴街道" code="440803005" />
+    <street name="海滨街道" code="440803006" />
+    <street name="建设街道" code="440803009" />
+    <street name="东新街道" code="440803010" />
+    <street name="新园街道" code="440803011" />
+    <street name="海头街道" code="440803012" />
+    <street name="泉庄街道" code="440803070" />
+    <street name="乐华街道" code="440803071" />
+</county>
+<county name="坡头" code="440804">
+    <street name="南调街道" code="440804001" />
+    <street name="麻斜街道" code="440804002" />
+    <street name="南三镇" code="440804100" />
+    <street name="坡头镇" code="440804101" />
+    <street name="乾塘镇" code="440804102" />
+    <street name="龙头镇" code="440804103" />
+    <street name="官渡镇" code="440804104" />
+    <street name="中国石油南海西部公司" code="440804400" />
+    <street name="湛江市坡头区官渡工业园" code="440804401" />
+</county>
+<county name="麻章" code="440811">
+    <street name="麻章镇" code="440811100" />
+    <street name="太平镇" code="440811101" />
+    <street name="湖光镇" code="440811102" />
+    <street name="东山镇" code="440811170" />
+    <street name="东简镇" code="440811171" />
+    <street name="民安镇" code="440811172" />
+    <street name="硇洲镇" code="440811173" />
+    <street name="湖光农场" code="440811450" />
+</county>
+<county name="遂溪" code="440823">
+    <street name="遂城镇" code="440823100" />
+    <street name="黄略镇" code="440823101" />
+    <street name="洋青镇" code="440823102" />
+    <street name="界炮镇" code="440823103" />
+    <street name="乐民镇" code="440823104" />
+    <street name="江洪镇" code="440823105" />
+    <street name="杨柑镇" code="440823106" />
+    <street name="城月镇" code="440823107" />
+    <street name="乌塘镇" code="440823108" />
+    <street name="建新镇" code="440823109" />
+    <street name="岭北镇" code="440823110" />
+    <street name="北坡镇" code="440823111" />
+    <street name="港门镇" code="440823112" />
+    <street name="草潭镇" code="440823113" />
+    <street name="河头镇" code="440823114" />
+    <street name="广前公司" code="440823450" />
+</county>
+<county name="徐闻" code="440825">
+    <street name="徐城街道" code="440825001" />
+    <street name="迈陈镇" code="440825102" />
+    <street name="海安镇" code="440825103" />
+    <street name="曲界镇" code="440825104" />
+    <street name="前山镇" code="440825105" />
+    <street name="西连镇" code="440825106" />
+    <street name="下桥镇" code="440825107" />
+    <street name="龙塘镇" code="440825108" />
+    <street name="下洋镇" code="440825109" />
+    <street name="锦和镇" code="440825110" />
+    <street name="和安镇" code="440825111" />
+    <street name="新寮镇" code="440825112" />
+    <street name="南山镇" code="440825113" />
+    <street name="城北乡" code="440825201" />
+    <street name="角尾乡" code="440825204" />
+    <street name="南华农场" code="440825451" />
+    <street name="五一农场" code="440825452" />
+    <street name="华海公司" code="440825453" />
+    <street name="友好农场" code="440825454" />
+    <street name="红星农场" code="440825455" />
+</county>
+<county name="廉江" code="440881">
+    <street name="罗州街道" code="440881001" />
+    <street name="城南街道" code="440881002" />
+    <street name="城北街道" code="440881003" />
+    <street name="石城镇" code="440881101" />
+    <street name="新民镇" code="440881102" />
+    <street name="吉水镇" code="440881103" />
+    <street name="河唇镇" code="440881104" />
+    <street name="石角镇" code="440881105" />
+    <street name="良垌镇" code="440881106" />
+    <street name="横山镇" code="440881107" />
+    <street name="安铺镇" code="440881108" />
+    <street name="营仔镇" code="440881109" />
+    <street name="青平镇" code="440881110" />
+    <street name="车板镇" code="440881111" />
+    <street name="高桥镇" code="440881112" />
+    <street name="石岭镇" code="440881113" />
+    <street name="雅塘镇" code="440881114" />
+    <street name="石颈镇" code="440881115" />
+    <street name="长山镇" code="440881116" />
+    <street name="塘蓬镇" code="440881117" />
+    <street name="和寮镇" code="440881118" />
+    <street name="九洲江开发区" code="440881401" />
+</county>
+<county name="雷州" code="440882">
+    <street name="雷城街道" code="440882001" />
+    <street name="西湖街道" code="440882002" />
+    <street name="新城街道" code="440882003" />
+    <street name="白沙镇" code="440882100" />
+    <street name="沈塘镇" code="440882101" />
+    <street name="客路镇" code="440882102" />
+    <street name="杨家镇" code="440882103" />
+    <street name="唐家镇" code="440882104" />
+    <street name="企水镇" code="440882105" />
+    <street name="纪家镇" code="440882106" />
+    <street name="松竹镇" code="440882107" />
+    <street name="南兴镇" code="440882108" />
+    <street name="雷高镇" code="440882109" />
+    <street name="东里镇" code="440882110" />
+    <street name="调风镇" code="440882111" />
+    <street name="龙门镇" code="440882112" />
+    <street name="英利镇" code="440882113" />
+    <street name="北和镇" code="440882114" />
+    <street name="乌石镇" code="440882115" />
+    <street name="覃斗镇" code="440882116" />
+    <street name="附城镇" code="440882117" />
+    <street name="湛江市奋勇经济区" code="440882450" />
+    <street name="广东省丰收糖业发展有限公司" code="440882451" />
+    <street name="广东省国营火炬农场" code="440882452" />
+    <street name="广东省国营幸福农场" code="440882453" />
+    <street name="湛江农垦东方红农场" code="440882454" />
+    <street name="湛江农垦金星农场" code="440882455" />
+</county>
+<county name="吴川" code="440883">
+    <street name="梅录街道" code="440883001" />
+    <street name="塘尾街道" code="440883002" />
+    <street name="大山江街道" code="440883003" />
+    <street name="博铺街道" code="440883004" />
+    <street name="海滨街道" code="440883005" />
+    <street name="浅水镇" code="440883100" />
+    <street name="长岐镇" code="440883101" />
+    <street name="覃巴镇" code="440883102" />
+    <street name="王村港镇" code="440883103" />
+    <street name="振文镇" code="440883104" />
+    <street name="樟铺镇" code="440883105" />
+    <street name="吴阳镇" code="440883106" />
+    <street name="塘缀镇" code="440883107" />
+    <street name="黄坡镇" code="440883109" />
+    <street name="兰石镇" code="440883111" />
+</county>
+<county name="经济技术开发区" code="440884">
+        <street name="泉庄街道" code="440884001" />
+        <street name="乐华街道" code="440884002" />
+</county>
+
+</city>
+</address>

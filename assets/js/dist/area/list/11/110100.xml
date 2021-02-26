@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="北京" code="110100">
+<county name="东城" code="110101">
+    <street name="东华门街道" code="110101001" />
+    <street name="景山街道" code="110101002" />
+    <street name="交道口街道" code="110101003" />
+    <street name="安定门街道" code="110101004" />
+    <street name="北新桥街道" code="110101005" />
+    <street name="东四街道" code="110101006" />
+    <street name="朝阳门街道" code="110101007" />
+    <street name="建国门街道" code="110101008" />
+    <street name="东直门街道" code="110101009" />
+    <street name="和平里街道" code="110101010" />
+    <street name="前门街道" code="110101011" />
+    <street name="崇文门外街道" code="110101012" />
+    <street name="东花市街道" code="110101013" />
+    <street name="龙潭街道" code="110101014" />
+    <street name="体育馆路街道" code="110101015" />
+    <street name="天坛街道" code="110101016" />
+    <street name="永定门外街道" code="110101017" />
+</county>
+<county name="西城" code="110102">
+    <street name="西长安街街道" code="110102001" />
+    <street name="新街口街道" code="110102003" />
+    <street name="月坛街道" code="110102007" />
+    <street name="展览路街道" code="110102009" />
+    <street name="德胜街道" code="110102010" />
+    <street name="金融街街道" code="110102011" />
+    <street name="什刹海街道" code="110102012" />
+    <street name="大栅栏街道" code="110102013" />
+    <street name="天桥街道" code="110102014" />
+    <street name="椿树街道" code="110102015" />
+    <street name="陶然亭街道" code="110102016" />
+    <street name="广安门内街道" code="110102017" />
+    <street name="牛街街道" code="110102018" />
+    <street name="白纸坊街道" code="110102019" />
+    <street name="广安门外街道" code="110102020" />
+</county>
+<county name="朝阳" code="110105">
+    <street name="建外街道" code="110105001" />
+    <street name="朝外街道" code="110105002" />
+    <street name="呼家楼街道" code="110105003" />
+    <street name="三里屯街道" code="110105004" />
+    <street name="左家庄街道" code="110105005" />
+    <street name="香河园街道" code="110105006" />
+    <street name="和平街街道" code="110105007" />
+    <street name="安贞街道" code="110105008" />
+    <street name="亚运村街道" code="110105009" />
+    <street name="小关街道" code="110105010" />
+    <street name="酒仙桥街道" code="110105011" />
+    <street name="麦子店街道" code="110105012" />
+    <street name="团结湖街道" code="110105013" />
+    <street name="六里屯街道" code="110105014" />
+    <street name="八里庄街道" code="110105015" />
+    <street name="双井街道" code="110105016" />
+    <street name="劲松街道" code="110105017" />
+    <street name="潘家园街道" code="110105018" />
+    <street name="垡头街道" code="110105019" />
+    <street name="南磨房" code="110105021" />
+    <street name="高碑店" code="110105022" />
+    <street name="将台" code="110105023" />
+    <street name="太阳宫" code="110105024" />
+    <street name="大屯街道" code="110105025" />
+    <street name="望京街道" code="110105026" />
+    <street name="小红门" code="110105027" />
+    <street name="十八里店" code="110105028" />
+    <street name="平房" code="110105029" />
+    <street name="东风" code="110105030" />
+    <street name="奥运村街道" code="110105031" />
+    <street name="来广营" code="110105032" />
+    <street name="常营" code="110105033" />
+    <street name="三间房" code="110105034" />
+    <street name="管庄" code="110105035" />
+    <street name="金盏" code="110105036" />
+    <street name="孙河" code="110105037" />
+    <street name="崔各庄" code="110105038" />
+    <street name="东坝" code="110105039" />
+    <street name="黑庄户" code="110105040" />
+    <street name="豆各庄" code="110105041" />
+    <street name="王四营" code="110105042" />
+    <street name="首都机场街道" code="110105043" />
+    <street name="望京开发街道" code="110105501" />
+</county>
+<county name="丰台" code="110106">
+    <street name="右安门街道" code="110106001" />
+    <street name="太平桥街道" code="110106002" />
+    <street name="西罗园街道" code="110106003" />
+    <street name="大红门街道" code="110106004" />
+    <street name="南苑街道" code="110106005" />
+    <street name="东高地街道" code="110106006" />
+    <street name="东铁匠营街道" code="110106007" />
+    <street name="卢沟桥街道" code="110106008" />
+    <street name="丰台街道" code="110106009" />
+    <street name="新村街道" code="110106010" />
+    <street name="长辛店街道" code="110106011" />
+    <street name="云岗街道" code="110106012" />
+    <street name="方庄" code="110106013" />
+    <street name="宛平城" code="110106014" />
+    <street name="马家堡街道" code="110106015" />
+    <street name="和义街道" code="110106016" />
+    <street name="卢沟桥" code="110106017" />
+    <street name="花乡" code="110106018" />
+    <street name="南苑" code="110106019" />
+    <street name="长辛店镇" code="110106100" />
+    <street name="王佐镇" code="110106101" />
+</county>
+<county name="石景山" code="110107">
+    <street name="八宝山街道" code="110107001" />
+    <street name="老山街道" code="110107002" />
+    <street name="八角街道" code="110107003" />
+    <street name="古城街道" code="110107004" />
+    <street name="苹果园街道" code="110107005" />
+    <street name="金顶街街道" code="110107006" />
+    <street name="广宁街道" code="110107009" />
+    <street name="五里坨街道" code="110107010" />
+    <street name="鲁谷街道" code="110107011" />
+</county>
+<county name="海淀" code="110108">
+    <street name="万寿路街道" code="110108001" />
+    <street name="永定路街道" code="110108002" />
+    <street name="羊坊店街道" code="110108003" />
+    <street name="甘家口街道" code="110108004" />
+    <street name="八里庄街道" code="110108005" />
+    <street name="紫竹院街道" code="110108006" />
+    <street name="北下关街道" code="110108007" />
+    <street name="北太平庄街道" code="110108008" />
+    <street name="学院路街道" code="110108010" />
+    <street name="中关村街道" code="110108011" />
+    <street name="海淀街道" code="110108012" />
+    <street name="青龙桥街道" code="110108013" />
+    <street name="清华园街道" code="110108014" />
+    <street name="燕园街道" code="110108015" />
+    <street name="香山街道" code="110108016" />
+    <street name="清河街道" code="110108017" />
+    <street name="花园路街道" code="110108018" />
+    <street name="西三旗街道" code="110108019" />
+    <street name="马连洼街道" code="110108020" />
+    <street name="田村路街道" code="110108021" />
+    <street name="上地街道" code="110108022" />
+    <street name="万柳" code="110108023" />
+    <street name="东升" code="110108024" />
+    <street name="曙光街道" code="110108025" />
+    <street name="温泉" code="110108026" />
+    <street name="四季青" code="110108027" />
+    <street name="西北旺" code="110108028" />
+    <street name="苏家坨" code="110108029" />
+    <street name="上庄" code="110108030" />
+</county>
+<county name="门头沟" code="110109">
+    <street name="大峪街道" code="110109001" />
+    <street name="城子街道" code="110109002" />
+    <street name="东辛房街道" code="110109003" />
+    <street name="大台街道" code="110109004" />
+    <street name="王平" code="110109005" />
+    <street name="永定" code="110109006" />
+    <street name="龙泉" code="110109007" />
+    <street name="潭柘寺镇" code="110109101" />
+    <street name="军庄镇" code="110109104" />
+    <street name="雁翅镇" code="110109105" />
+    <street name="斋堂镇" code="110109106" />
+    <street name="清水镇" code="110109107" />
+    <street name="妙峰山镇" code="110109108" />
+</county>
+<county name="房山" code="110111">
+    <street name="城关街道" code="110111001" />
+    <street name="新镇街道" code="110111002" />
+    <street name="向阳街道" code="110111004" />
+    <street name="东风街道" code="110111005" />
+    <street name="迎风街道" code="110111006" />
+    <street name="星城街道" code="110111007" />
+    <street name="良乡" code="110111008" />
+    <street name="周口店" code="110111009" />
+    <street name="琉璃河" code="110111010" />
+    <street name="拱辰街道" code="110111011" />
+    <street name="西潞街道" code="110111012" />
+    <street name="阎村镇" code="110111101" />
+    <street name="窦店镇" code="110111103" />
+    <street name="石楼镇" code="110111104" />
+    <street name="长阳镇" code="110111105" />
+    <street name="河北镇" code="110111107" />
+    <street name="长沟镇" code="110111108" />
+    <street name="大石窝镇" code="110111109" />
+    <street name="张坊镇" code="110111110" />
+    <street name="十渡镇" code="110111111" />
+    <street name="青龙湖镇" code="110111112" />
+    <street name="韩村河镇" code="110111115" />
+    <street name="霞云岭乡" code="110111208" />
+    <street name="南窖乡" code="110111209" />
+    <street name="佛子庄乡" code="110111210" />
+    <street name="大安山乡" code="110111211" />
+    <street name="史家营乡" code="110111212" />
+    <street name="蒲洼乡" code="110111213" />
+</county>
+<county name="通州" code="110112">
+    <street name="中仓街道" code="110112001" />
+    <street name="新华街道" code="110112002" />
+    <street name="北苑街道" code="110112003" />
+    <street name="玉桥街道" code="110112004" />
+    <street name="永顺" code="110112005" />
+    <street name="梨园" code="110112006" />
+    <street name="宋庄镇" code="110112104" />
+    <street name="张家湾镇" code="110112105" />
+    <street name="漷县镇" code="110112106" />
+    <street name="马驹桥镇" code="110112109" />
+    <street name="西集镇" code="110112110" />
+    <street name="台湖镇" code="110112114" />
+    <street name="永乐店镇" code="110112117" />
+    <street name="潞城镇" code="110112119" />
+    <street name="于家务回族乡" code="110112209" />
+</county>
+<county name="顺义" code="110113">
+    <street name="胜利街道" code="110113001" />
+    <street name="光明街道" code="110113002" />
+    <street name="仁和" code="110113003" />
+    <street name="后沙峪" code="110113004" />
+    <street name="天竺" code="110113005" />
+    <street name="杨镇" code="110113006" />
+    <street name="牛栏山" code="110113007" />
+    <street name="南法信" code="110113008" />
+    <street name="马坡" code="110113009" />
+    <street name="石园街道" code="110113010" />
+    <street name="空港街道" code="110113011" />
+    <street name="双丰街道" code="110113012" />
+    <street name="旺泉街道" code="110113013" />
+    <street name="高丽营镇" code="110113101" />
+    <street name="李桥镇" code="110113104" />
+    <street name="李遂镇" code="110113105" />
+    <street name="南彩镇" code="110113106" />
+    <street name="北务镇" code="110113108" />
+    <street name="大孙各庄镇" code="110113109" />
+    <street name="张镇" code="110113110" />
+    <street name="龙湾屯镇" code="110113111" />
+    <street name="木林镇" code="110113112" />
+    <street name="北小营镇" code="110113113" />
+    <street name="北石槽镇" code="110113115" />
+    <street name="赵全营镇" code="110113116" />
+</county>
+<county name="昌平" code="110114">
+    <street name="城北街道" code="110114001" />
+    <street name="南口" code="110114002" />
+    <street name="马池口" code="110114003" />
+    <street name="沙河" code="110114004" />
+    <street name="城南街道" code="110114005" />
+    <street name="回龙观" code="110114006" />
+    <street name="东小口" code="110114007" />
+    <street name="天通苑北街道" code="110114008" />
+    <street name="天通苑南街道" code="110114009" />
+    <street name="霍营街道" code="110114010" />
+    <street name="史各庄街道" code="110114011" />
+    <street name="龙泽园街道" code="110114012" />
+    <street name="阳坊镇" code="110114104" />
+    <street name="小汤山镇" code="110114110" />
+    <street name="南邵镇" code="110114111" />
+    <street name="崔村镇" code="110114112" />
+    <street name="百善镇" code="110114113" />
+    <street name="北七家镇" code="110114115" />
+    <street name="兴寿镇" code="110114116" />
+    <street name="流村镇" code="110114118" />
+    <street name="十三陵镇" code="110114119" />
+    <street name="延寿镇" code="110114120" />
+</county>
+<county name="大兴" code="110115">
+    <street name="兴丰街道" code="110115001" />
+    <street name="林校路街道" code="110115002" />
+    <street name="清源街道" code="110115003" />
+    <street name="亦庄" code="110115004" />
+    <street name="黄村" code="110115005" />
+    <street name="旧宫" code="110115006" />
+    <street name="西红门" code="110115007" />
+    <street name="瀛海" code="110115008" />
+    <street name="观音寺街道" code="110115009" />
+    <street name="天宫院街道" code="110115010" />
+    <street name="青云店镇" code="110115103" />
+    <street name="采育镇" code="110115104" />
+    <street name="安定镇" code="110115105" />
+    <street name="礼贤镇" code="110115106" />
+    <street name="榆垡镇" code="110115107" />
+    <street name="庞各庄镇" code="110115108" />
+    <street name="北臧村镇" code="110115109" />
+    <street name="魏善庄镇" code="110115110" />
+    <street name="长子营镇" code="110115111" />
+    <street name="北京经济技术开发区" code="110115403" />
+    <street name="中关村国家自主创新示范区大兴生物医药产业基地" code="110115404" />
+    <street name="国家新媒体产业基地" code="110115405" />
+</county>
+<county name="怀柔" code="110116">
+    <street name="泉河街道" code="110116001" />
+    <street name="龙山街道" code="110116002" />
+    <street name="怀柔" code="110116003" />
+    <street name="雁栖" code="110116004" />
+    <street name="庙城" code="110116005" />
+    <street name="北房镇" code="110116102" />
+    <street name="杨宋镇" code="110116103" />
+    <street name="桥梓镇" code="110116105" />
+    <street name="怀北镇" code="110116106" />
+    <street name="汤河口镇" code="110116107" />
+    <street name="渤海镇" code="110116108" />
+    <street name="九渡河镇" code="110116109" />
+    <street name="琉璃庙镇" code="110116110" />
+    <street name="宝山镇" code="110116111" />
+    <street name="长哨营满族乡" code="110116211" />
+    <street name="喇叭沟门满族乡" code="110116213" />
+    <street name="北京雁栖经济开发区" code="110116400" />
+</county>
+<county name="平谷" code="110117">
+    <street name="滨河街道" code="110117001" />
+    <street name="兴谷街道" code="110117002" />
+    <street name="渔阳" code="110117003" />
+    <street name="峪口" code="110117004" />
+    <street name="马坊" code="110117005" />
+    <street name="金海湖" code="110117006" />
+    <street name="东高村镇" code="110117101" />
+    <street name="山东庄镇" code="110117102" />
+    <street name="南独乐河镇" code="110117104" />
+    <street name="大华山镇" code="110117105" />
+    <street name="夏各庄镇" code="110117106" />
+    <street name="马昌营镇" code="110117108" />
+    <street name="王辛庄镇" code="110117110" />
+    <street name="大兴庄镇" code="110117111" />
+    <street name="刘家店镇" code="110117112" />
+    <street name="镇罗营镇" code="110117114" />
+    <street name="黄松峪乡" code="110117213" />
+    <street name="熊儿寨乡" code="110117214" />
+</county>
+<county name="密云" code="110228">
+    <street name="鼓楼街道" code="110228001" />
+    <street name="果园街道" code="110228002" />
+    <street name="檀营" code="110228003" />
+    <street name="密云镇" code="110228100" />
+    <street name="溪翁庄镇" code="110228101" />
+    <street name="西田各庄镇" code="110228102" />
+    <street name="十里堡镇" code="110228103" />
+    <street name="河南寨镇" code="110228104" />
+    <street name="巨各庄镇" code="110228105" />
+    <street name="穆家峪镇" code="110228106" />
+    <street name="太师屯镇" code="110228107" />
+    <street name="高岭镇" code="110228108" />
+    <street name="不老屯镇" code="110228109" />
+    <street name="冯家峪镇" code="110228110" />
+    <street name="古北口镇" code="110228111" />
+    <street name="大城子镇" code="110228112" />
+    <street name="东邵渠镇" code="110228113" />
+    <street name="北庄镇" code="110228114" />
+    <street name="新城子镇" code="110228115" />
+    <street name="石城镇" code="110228116" />
+    <street name="北京密云经济开发区" code="110228400" />
+</county>
+<county name="延庆" code="110229">
+    <street name="百泉街道" code="110229001" />
+    <street name="香水园街道" code="110229002" />
+    <street name="儒林街道" code="110229003" />
+    <street name="延庆镇" code="110229100" />
+    <street name="康庄镇" code="110229101" />
+    <street name="八达岭镇" code="110229102" />
+    <street name="永宁镇" code="110229103" />
+    <street name="旧县镇" code="110229104" />
+    <street name="张山营镇" code="110229105" />
+    <street name="四海镇" code="110229106" />
+    <street name="千家店镇" code="110229107" />
+    <street name="沈家营镇" code="110229108" />
+    <street name="大榆树镇" code="110229109" />
+    <street name="井庄镇" code="110229110" />
+    <street name="大庄科乡" code="110229207" />
+    <street name="刘斌堡乡" code="110229209" />
+    <street name="香营乡" code="110229210" />
+    <street name="珍珠泉乡" code="110229214" />
+</county>
+</city>
+</address>

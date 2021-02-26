@@ -1,0 +1,82 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var sparkline             = true;
+- var page_sparkline        = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Sparkline
+                                      span
+                                        | Chart
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Charts
+                                      li.breadcrumb-item.active Sparkline Chart
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-lg-6.col-md-6.col-sm-12
+                          .card
+                            .card-header
+                              h5 Mouse Speed Chart
+                            .card-body.chart-block
+                              .flot-chart-container
+                                #mouse-speed-chart-sparkline.flot-chart-placeholder
+                        .col-lg-6.col-md-6.col-sm-12
+                          .card
+                            .card-header
+                              h5 Simple Bar Charts
+                            .card-body.chart-block
+                              .flot-chart-container
+                                #custom-line-chart.flot-chart-placeholder
+                        .col-lg-6.col-md-6.col-sm-12
+                          .card
+                            .card-header
+                              h5 Line Chart
+                            .card-body.chart-block
+                              .flot-chart-container
+                                #line-chart-sparkline.flot-chart-placeholder.line-chart-sparkline
+                        .col-lg-6.col-md-6.col-sm-12
+                          .card
+                            .card-header
+                              h5 Simple Line Chart
+                            .card-body.chart-block
+                              .flot-chart-container
+                                #simple-line-chart-sparkline.flot-chart-placeholder
+                        .col-lg-6.col-md-6.col-sm-12
+                          .card
+                            .card-header
+                              h5 Bar Chart
+                            .card-body.chart-block
+                              .flot-chart-container
+                                #bar-chart-sparkline.flot-chart-placeholder
+                        .col-lg-6.col-md-6.col-sm-12
+                          .card
+                            .card-header
+                              h5 Pie chart
+                            .card-body.chart-block
+                              .flot-chart-container
+                                #pie-sparkline-chart.flot-chart-placeholder
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

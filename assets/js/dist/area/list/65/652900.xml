@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阿克苏" code="652900">
+<county name="阿克苏" code="652901">
+    <street name="栏杆街道" code="652901001" />
+    <street name="英巴扎街道" code="652901002" />
+    <street name="红桥街道" code="652901003" />
+    <street name="新城街道" code="652901004" />
+    <street name="南城街道" code="652901005" />
+    <street name="柯柯牙街道" code="652901006" />
+    <street name="喀勒塔勒镇" code="652901100" />
+    <street name="阿依库勒镇" code="652901101" />
+    <street name="依干其乡" code="652901200" />
+    <street name="拜什吐格曼乡" code="652901201" />
+    <street name="托普鲁克乡" code="652901202" />
+    <street name="库木巴希乡" code="652901203" />
+    <street name="良种场" code="652901400" />
+    <street name="红旗坡农场" code="652901401" />
+    <street name="实验林场" code="652901404" />
+    <street name="兵团一团" code="652901502" />
+    <street name="兵团二团" code="652901503" />
+    <street name="西工业园区管理委员会" code="652901505" />
+    <street name="兵团农一师沙井子水利管理处" code="652901506" />
+    <street name="纺织工业城" code="652901511" />
+    <street name="经济技术开发区" code="652901512" />
+    <street name="特色产业园区" code="652901513" />
+</county>
+<county name="温宿" code="652922">
+    <street name="温宿镇" code="652922100" />
+    <street name="吐木秀克镇" code="652922101" />
+    <street name="克孜勒镇" code="652922102" />
+    <street name="阿热勒镇" code="652922103" />
+    <street name="佳木镇" code="652922104" />
+    <street name="托乎拉乡" code="652922200" />
+    <street name="恰格拉克乡" code="652922202" />
+    <street name="依希来木其乡" code="652922204" />
+    <street name="古勒阿瓦提乡" code="652922206" />
+    <street name="博孜墩柯尔克孜族乡" code="652922207" />
+    <street name="水稻农场" code="652922400" />
+    <street name="青年农场" code="652922401" />
+    <street name="共青团农场" code="652922402" />
+    <street name="塔格拉克牧场" code="652922403" />
+    <street name="博孜墩牧场" code="652922404" />
+    <street name="萨瓦甫齐牧场" code="652922405" />
+    <street name="恰其力克牧场" code="652922406" />
+    <street name="佳木林场" code="652922407" />
+    <street name="木本粮油林场" code="652922408" />
+    <street name="清泉农场" code="652922411" />
+    <street name="水稻原种场" code="652922412" />
+    <street name="吉格代牧场" code="652922413" />
+    <street name="兵团五团" code="652922509" />
+    <street name="兵团六团" code="652922510" />
+</county>
+<county name="库车" code="652923">
+    <street name="热斯坦街道" code="652923001" />
+    <street name="萨克萨克街道" code="652923002" />
+    <street name="新城街道" code="652923003" />
+    <street name="东城街道" code="652923004" />
+    <street name="乌恰镇" code="652923101" />
+    <street name="阿拉哈格镇" code="652923102" />
+    <street name="齐满镇" code="652923103" />
+    <street name="墩阔坦镇" code="652923104" />
+    <street name="牙哈镇" code="652923105" />
+    <street name="乌尊镇" code="652923106" />
+    <street name="依西哈拉镇" code="652923107" />
+    <street name="雅克拉镇" code="652923108" />
+    <street name="玉奇吾斯塘乡" code="652923201" />
+    <street name="比西巴格乡" code="652923202" />
+    <street name="哈尼喀塔木乡" code="652923203" />
+    <street name="阿克吾斯塘乡" code="652923204" />
+    <street name="阿格乡" code="652923205" />
+    <street name="塔里木乡" code="652923206" />
+    <street name="水电二处" code="652923400" />
+    <street name="二八台农场" code="652923401" />
+    <street name="良种繁育场" code="652923402" />
+    <street name="库孜翁牧场" code="652923403" />
+    <street name="草湖牧场" code="652923404" />
+    <street name="库车种羊场" code="652923405" />
+    <street name="库车监狱" code="652923406" />
+    <street name="克其力克农场" code="652923407" />
+</county>
+<county name="沙雅" code="652924">
+    <street name="沙雅镇" code="652924100" />
+    <street name="托依堡勒迪镇" code="652924101" />
+    <street name="红旗镇" code="652924102" />
+    <street name="英买力镇" code="652924103" />
+    <street name="沙雅县哈德墩镇" code="652924104" />
+    <street name="古勒巴格镇" code="652924200" />
+    <street name="海楼乡" code="652924204" />
+    <street name="努尔巴格乡" code="652924205" />
+    <street name="塔里木乡" code="652924206" />
+    <street name="盖孜库木乡" code="652924207" />
+    <street name="央塔克协海尔乡" code="652924208" />
+    <street name="新垦农场" code="652924400" />
+    <street name="一牧场" code="652924401" />
+    <street name="二牧场" code="652924402" />
+    <street name="沙雅监狱" code="652924403" />
+    <street name="沙雅县工业集中区" code="652924404" />
+</county>
+<county name="新和" code="652925">
+    <street name="新和镇" code="652925100" />
+    <street name="尤鲁都斯巴格镇" code="652925101" />
+    <street name="依其艾日克乡" code="652925200" />
+    <street name="排先拜巴扎乡" code="652925201" />
+    <street name="塔什艾日克乡" code="652925202" />
+    <street name="渭干乡" code="652925203" />
+    <street name="玉奇喀特乡" code="652925204" />
+    <street name="塔木托格拉克乡" code="652925205" />
+    <street name="桑塔木农场" code="652925400" />
+    <street name="新和县工业园区" code="652925401" />
+</county>
+<county name="拜城" code="652926">
+    <street name="拜城镇" code="652926100" />
+    <street name="铁热克镇" code="652926101" />
+    <street name="察尔其镇" code="652926102" />
+    <street name="赛里木镇" code="652926103" />
+    <street name="黑英山乡" code="652926200" />
+    <street name="克孜尔乡" code="652926201" />
+    <street name="托克逊乡" code="652926203" />
+    <street name="亚吐尔乡" code="652926204" />
+    <street name="康其乡" code="652926205" />
+    <street name="布隆乡" code="652926206" />
+    <street name="米吉克乡" code="652926207" />
+    <street name="温巴什乡" code="652926208" />
+    <street name="大桥乡" code="652926209" />
+    <street name="老虎台乡" code="652926210" />
+    <street name="大宛其农场" code="652926400" />
+    <street name="种羊场" code="652926401" />
+</county>
+<county name="乌什" code="652927">
+    <street name="乌什镇" code="652927100" />
+    <street name="阿合雅镇" code="652927101" />
+    <street name="阿克托海乡" code="652927200" />
+    <street name="亚科瑞克乡" code="652927201" />
+    <street name="阿恰塔格乡" code="652927202" />
+    <street name="依麻木乡" code="652927204" />
+    <street name="英阿瓦提乡" code="652927205" />
+    <street name="亚曼苏柯尔克孜族乡" code="652927206" />
+    <street name="奥特贝希乡" code="652927207" />
+    <street name="兵团四团" code="652927500" />
+</county>
+<county name="阿瓦提" code="652928">
+    <street name="阿瓦提镇" code="652928100" />
+    <street name="乌鲁却勒镇" code="652928101" />
+    <street name="拜什艾日克镇" code="652928102" />
+    <street name="阿依巴格乡" code="652928200" />
+    <street name="塔木托格拉克乡" code="652928201" />
+    <street name="英艾日克乡" code="652928202" />
+    <street name="多浪乡" code="652928203" />
+    <street name="巴格托格拉克乡" code="652928204" />
+    <street name="天丰种业有限责任公司" code="652928400" />
+    <street name="新疆华孚恒丰有限责任公司" code="652928401" />
+    <street name="新疆鲁泰棉业有限责任公司" code="652928402" />
+    <street name="博斯坦牧场" code="652928404" />
+    <street name="阿克苏监狱" code="652928405" />
+    <street name="兵团三团" code="652928503" />
+</county>
+<county name="柯坪" code="652929">
+    <street name="柯坪镇" code="652929100" />
+    <street name="盖孜力克镇" code="652929200" />
+    <street name="玉尔其乡" code="652929201" />
+    <street name="阿恰勒乡" code="652929202" />
+    <street name="启浪乡" code="652929203" />
+</county>
+</city>
+</address>

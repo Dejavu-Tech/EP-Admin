@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="营口" code="210800">
+<county name="站前" code="210802">
+    <street name="八田地街道" code="210802001" />
+    <street name="建丰街道" code="210802002" />
+    <street name="建设街道" code="210802003" />
+    <street name="跃进街道" code="210802004" />
+    <street name="东风街道" code="210802005" />
+    <street name="新兴街道" code="210802006" />
+    <street name="新建街道" code="210802007" />
+    <street name="营口高新区站前区工业园" code="210802401" />
+</county>
+<county name="西市" code="210803">
+    <street name="胜利街道" code="210803001" />
+    <street name="清华街道" code="210803002" />
+    <street name="滨海街道" code="210803003" />
+    <street name="得胜街道" code="210803004" />
+    <street name="五台子街道" code="210803005" />
+    <street name="渔市街道" code="210803006" />
+    <street name="河北街道" code="210803007" />
+    <street name="沿海街道" code="210803008" />
+    <street name="营口高新技术产业开发区" code="210803400" />
+    <street name="辽宁（营口）沿海产业基地" code="210803401" />
+</county>
+<county name="鲅鱼圈" code="210804">
+    <street name="红海街道" code="210804001" />
+    <street name="海星街道" code="210804002" />
+    <street name="望海街道" code="210804003" />
+    <street name="海东街道" code="210804004" />
+    <street name="熊岳镇" code="210804100" />
+    <street name="芦屯镇" code="210804101" />
+    <street name="红旗满族镇" code="210804102" />
+</county>
+<county name="老边" code="210811">
+    <street name="老边街道" code="210811001" />
+    <street name="城东街道" code="210811002" />
+    <street name="路南镇" code="210811101" />
+    <street name="柳树镇" code="210811102" />
+    <street name="边城镇" code="210811103" />
+    <street name="营口市中小企业创业园区" code="210811400" />
+</county>
+<county name="盖州" code="210881">
+    <street name="鼓楼街道" code="210881001" />
+    <street name="西城街道" code="210881002" />
+    <street name="东城街道" code="210881003" />
+    <street name="太阳升街道" code="210881004" />
+    <street name="团山街道" code="210881005" />
+    <street name="西海街道" code="210881006" />
+    <street name="九垄地街道" code="210881007" />
+    <street name="归州街道" code="210881008" />
+    <street name="高屯镇" code="210881102" />
+    <street name="沙岗镇" code="210881105" />
+    <street name="九寨镇" code="210881109" />
+    <street name="万福镇" code="210881110" />
+    <street name="卧龙泉镇" code="210881111" />
+    <street name="青石岭镇" code="210881112" />
+    <street name="暖泉镇" code="210881113" />
+    <street name="榜式堡镇" code="210881116" />
+    <street name="团甸镇" code="210881117" />
+    <street name="双台镇" code="210881118" />
+    <street name="杨运镇" code="210881119" />
+    <street name="徐屯镇" code="210881120" />
+    <street name="什字街镇" code="210881121" />
+    <street name="矿洞沟镇" code="210881122" />
+    <street name="陈屯镇" code="210881123" />
+    <street name="梁屯镇" code="210881124" />
+    <street name="小石棚乡" code="210881216" />
+    <street name="果园乡" code="210881217" />
+    <street name="二台乡" code="210881218" />
+</county>
+<county name="大石桥" code="210882">
+    <street name="石桥街道" code="210882001" />
+    <street name="青花街道" code="210882002" />
+    <street name="金桥街道" code="210882003" />
+    <street name="钢都街道" code="210882004" />
+    <street name="南楼街道" code="210882005" />
+    <street name="水源镇" code="210882101" />
+    <street name="沟沿镇" code="210882102" />
+    <street name="石佛镇" code="210882103" />
+    <street name="高坎镇" code="210882104" />
+    <street name="旗口镇" code="210882105" />
+    <street name="虎庄镇" code="210882106" />
+    <street name="官屯镇" code="210882107" />
+    <street name="博洛铺镇" code="210882112" />
+    <street name="永安镇" code="210882113" />
+    <street name="汤池镇" code="210882114" />
+    <street name="建一镇" code="210882115" />
+    <street name="黄土岭镇" code="210882116" />
+    <street name="周家镇" code="210882117" />
+</county>
+</city>
+</address>

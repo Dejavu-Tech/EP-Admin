@@ -1,0 +1,164 @@
+
+<form class="form-horizontal form-validate" action="{:U('order/opchangeprice')}" method="post" enctype="multipart/form-data">
+	<input type='hidden' name='id' value='{$id}' />
+	<input type='hidden' id='changeprice-orderprice' value="{php echo $item['total']-$item['shipping_fare']}"/>
+	<input type='hidden' id='changeprice-dispatchprice' value="{$item['shipping_fare']}"/>
+	<div class="modal-dialog modal-dialog-centered btn-showcase"  style="width:800px;">
+		<div class="modal-content">
+            <div class="modal-header">
+		<h5 class="modal-title">订单改价</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+				<table class="table" style='table-layout:fixed'>
+					<tr>
+						<th>商品名称</th>
+						<th>单价</th>
+						<th>数量</th>
+						<th>小计</th>
+						<th>加价或减价</th>
+						<th></th>
+					</tr>
+					<tbody>
+						<?php foreach( $order_goods as $key $goods ){ ?>
+						<tr>
+							<td style='overflow:hidden;'>{$goods['name']}</td>
+							<td class='realprice'>{php echo number_format($goods['total']/$goods['quantity'],2)}</td>
+							<td>{$goods['quantity']}</td>
+							<td>
+								{$goods['total']}
+								<?php if($goods['total']!=$goods['oldprice']){ ?>
+								<label class='label label-danger'>改价</label>
+								<?php } ?>
+							</td>
+
+							<td valign="top" >
+								<input type='number' class='form-control changeprice_orderprice' name="changegoodsprice[{$goods['order_goods_id']}]"  /></td>
+
+							<?php if($key==0){ ?>
+							<td valign="top" rowspan='{php echo count($order_goods)}' style='vertical-align: top;' >
+								<input type='number' class='form-control' id='changeprice_dispatchprice' value="{$item['shipping_fare']}" name='changedispatchprice' />
+
+							</td>
+							<?php } ?>
+						</tr>
+						<?php } ?>
+
+						<tr>
+							<td colspan='2'></td>
+							<td colspan='' style='color:green'>应收款</td>
+							<td colspan='' style='color:green'>{php echo number_format($item['total'],2)}</td>
+							<td colspan='2'  style='color:red'>改价后价格不能小于0元</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+				<div class="form-group">
+
+					<div class="col-xs-12 col-sm-9 col-md-8 col-lg-8">
+						<div class="form-control-static">
+
+							<b>购买者信息</b>  {$province_info['name']}{$city_info['name']}{$area_info['name']}{$item['shipping_address']} {$item['shipping_name']} {$item['shipping_tel']}<br/>
+							<b>买家实付</b>： <span id='orderprice'>{php echo number_format( $item['total']-$item['shipping_fare'],2)}</span> + <span id='dispatchprice'>{$item['shipping_fare']}</span> <span id='changeprice'></span> = <span id='lastprice'>{$item['total']}</span><br/>
+							<b>买家实付</b> = 原价 + 运费 + 涨价或减价<br/><br/>
+
+						</div>
+					</div>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-order" type="submit" onclick="return mc_check()">提交</button>
+                <button data-dismiss="modal" class="btn btn-pill btn-primary" type="button">取消</button>
+            </div>
+        </div>
+</form>
+
+<script language='javascript'>
+	var order_price = 0;
+	var dispatch_price = 0;
+
+	mc_init();
+
+
+	function mc_init() {
+
+		order_price = parseFloat($('#changeprice-orderprice').val());
+		dispatch_price = parseFloat($('#changeprice-dispatchprice').val());
+		$('input', $('#ajaxModal')).blur(function () {
+			if($.isNumber($(this).val())){
+				mc_calc();
+			}
+		});
+
+	}
+
+	function mc_calc() {
+
+		var change_dispatchprice = parseFloat($('#changeprice_dispatchprice').val());
+		if(!$.isNumber($('#changeprice_dispatchprice').val())){
+			 change_dispatchprice = dispatch_price;
+		}
+		var dprice = change_dispatchprice;
+		if (dprice <= 0) {
+			dprice = 0;
+		}
+		$('#dispatchprice').html(dprice.toFixed(2));
+
+		var oprice = 0;
+		$('.changeprice_orderprice').each(function () {
+			var p = 0;
+			if ($.trim($(this).val()) != '') {
+				p = parseFloat($.trim($(this).val()));
+			}
+			oprice += p;
+		});
+		if(Math.abs(oprice)>0){
+			if (oprice < 0) {
+				$('#changeprice').css('color', 'red');
+				$('#changeprice').html( " - " + Math.abs(oprice));
+			} else {
+				$('#changeprice').css('color', 'green');
+				$('#changeprice').html( " + " + Math.abs(oprice));
+			}
+		}
+		var lastprice =  order_price + dprice + oprice;
+
+		$('#lastprice').html( lastprice.toFixed(2) );
+
+	}
+	function mc_check(){
+		var can = true;
+		var lastprice = 0;
+		 $('.changeprice_orderprice').each(function () {
+			 if( $.trim( $(this).val())==''){
+				 return true;
+			 }
+			var p = 0;
+			if ( !$.isNumber($(this).val())) {
+				$(this).select();
+				tip.msgbox.err('请输入数字!');
+				can =false;
+				return false;
+			}
+			var val  = parseFloat( $(this).val() );
+			if(val<=0 && Math.abs(val) > parseFloat( $(this).parent().prev().html())) {
+				$(this).select();
+				tip.msgbox.err('单个商品价格不能优惠到负数!');
+				can =false;
+				return false;
+			}
+			lastprice+=val;
+		});
+		var op = order_price + dispatch_price+ lastprice;
+		if( op <0){
+			tip.msgbox.err('订单价格不能小于0元!');
+			return false;
+		}
+		if(!can){
+			return false;
+		}
+		return true;
+	}
+</script>
+

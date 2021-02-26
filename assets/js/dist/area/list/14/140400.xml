@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="长治" code="140400">
+<county name="长治" code="140421">
+    <street name="韩店镇" code="140421100" />
+    <street name="苏店镇" code="140421101" />
+    <street name="荫城镇" code="140421102" />
+    <street name="西火镇" code="140421103" />
+    <street name="八义镇" code="140421104" />
+    <street name="贾掌镇" code="140421105" />
+    <street name="郝家庄乡" code="140421200" />
+    <street name="西池乡" code="140421201" />
+    <street name="北呈乡" code="140421202" />
+    <street name="东和乡" code="140421203" />
+    <street name="南宋乡" code="140421204" />
+    <street name="振兴新区" code="140421400" />
+    <street name="工业园区" code="140421406" />
+</county>
+<county name="襄垣" code="140423">
+    <street name="古韩镇" code="140423100" />
+    <street name="王桥镇" code="140423101" />
+    <street name="侯堡镇" code="140423102" />
+    <street name="夏店镇" code="140423103" />
+    <street name="虒亭镇" code="140423104" />
+    <street name="西营镇" code="140423105" />
+    <street name="王村镇" code="140423106" />
+    <street name="下良镇" code="140423107" />
+    <street name="善福乡" code="140423200" />
+    <street name="北底乡" code="140423201" />
+    <street name="上马乡" code="140423202" />
+    <street name="富阳工业园区" code="140423400" />
+    <street name="社区管理服务中心" code="140423401" />
+</county>
+<county name="屯留" code="140424">
+    <street name="麟绛镇" code="140424100" />
+    <street name="上村镇" code="140424101" />
+    <street name="渔泽镇" code="140424102" />
+    <street name="余吾镇" code="140424103" />
+    <street name="吾元镇" code="140424104" />
+    <street name="张店镇" code="140424105" />
+    <street name="丰宜镇" code="140424106" />
+    <street name="李高乡" code="140424200" />
+    <street name="路村乡" code="140424201" />
+    <street name="河神庙乡" code="140424202" />
+    <street name="西贾乡" code="140424203" />
+    <street name="西流寨开发区" code="140424400" />
+    <street name="康庄工业园区" code="140424401" />
+    <street name="上莲开发区" code="140424402" />
+</county>
+<county name="平顺" code="140425">
+    <street name="青羊镇" code="140425100" />
+    <street name="龙溪镇" code="140425101" />
+    <street name="石城镇" code="140425102" />
+    <street name="苗庄镇" code="140425103" />
+    <street name="杏城镇" code="140425104" />
+    <street name="西沟乡" code="140425200" />
+    <street name="东寺头乡" code="140425201" />
+    <street name="虹梯关乡" code="140425202" />
+    <street name="阳高乡" code="140425203" />
+    <street name="北耽车乡" code="140425204" />
+    <street name="中五井乡" code="140425205" />
+    <street name="北社乡" code="140425206" />
+</county>
+<county name="黎城" code="140426">
+    <street name="黎侯镇" code="140426100" />
+    <street name="东阳关镇" code="140426101" />
+    <street name="上遥镇" code="140426102" />
+    <street name="西井镇" code="140426103" />
+    <street name="黄崖洞镇" code="140426104" />
+    <street name="西仵乡" code="140426200" />
+    <street name="停河铺乡" code="140426201" />
+    <street name="程家山乡" code="140426202" />
+    <street name="洪井乡" code="140426203" />
+</county>
+<county name="壶关" code="140427">
+    <street name="龙泉镇" code="140427100" />
+    <street name="百尺镇" code="140427101" />
+    <street name="店上镇" code="140427102" />
+    <street name="晋庄镇" code="140427103" />
+    <street name="树掌镇" code="140427104" />
+    <street name="集店乡" code="140427200" />
+    <street name="黄山乡" code="140427201" />
+    <street name="东井岭乡" code="140427202" />
+    <street name="石坡乡" code="140427203" />
+    <street name="五龙山乡" code="140427204" />
+    <street name="鹅屋乡" code="140427205" />
+    <street name="桥上乡" code="140427206" />
+    <street name="常平经济开发区" code="140427400" />
+</county>
+<county name="长子" code="140428">
+    <street name="丹朱镇" code="140428100" />
+    <street name="鲍店镇" code="140428101" />
+    <street name="石哲镇" code="140428102" />
+    <street name="大堡头镇" code="140428103" />
+    <street name="慈林镇" code="140428104" />
+    <street name="色头镇" code="140428105" />
+    <street name="南漳镇" code="140428106" />
+    <street name="岚水乡" code="140428200" />
+    <street name="碾张乡" code="140428201" />
+    <street name="常张乡" code="140428202" />
+    <street name="南陈乡" code="140428203" />
+    <street name="宋村乡" code="140428204" />
+</county>
+<county name="武乡" code="140429">
+    <street name="丰州镇" code="140429100" />
+    <street name="洪水镇" code="140429101" />
+    <street name="蟠龙镇" code="140429102" />
+    <street name="监漳镇" code="140429103" />
+    <street name="故城镇" code="140429104" />
+    <street name="墨镫乡" code="140429200" />
+    <street name="韩北乡" code="140429201" />
+    <street name="大有乡" code="140429202" />
+    <street name="贾豁乡" code="140429203" />
+    <street name="故县乡" code="140429204" />
+    <street name="上司乡" code="140429205" />
+    <street name="石北乡" code="140429206" />
+    <street name="涌泉乡" code="140429207" />
+    <street name="分水岭乡" code="140429208" />
+</county>
+<county name="沁县" code="140430">
+    <street name="定昌镇" code="140430100" />
+    <street name="郭村镇" code="140430101" />
+    <street name="故县镇" code="140430102" />
+    <street name="新店镇" code="140430103" />
+    <street name="漳源镇" code="140430104" />
+    <street name="册村镇" code="140430105" />
+    <street name="段柳乡" code="140430200" />
+    <street name="松村乡" code="140430201" />
+    <street name="次村乡" code="140430202" />
+    <street name="牛寺乡" code="140430203" />
+    <street name="南里乡" code="140430204" />
+    <street name="南泉乡" code="140430205" />
+    <street name="杨安乡" code="140430206" />
+</county>
+<county name="沁源" code="140431">
+    <street name="沁河镇" code="140431100" />
+    <street name="郭道镇" code="140431101" />
+    <street name="灵空山镇" code="140431102" />
+    <street name="王和镇" code="140431103" />
+    <street name="李元镇" code="140431104" />
+    <street name="中峪乡" code="140431200" />
+    <street name="法中乡" code="140431201" />
+    <street name="交口乡" code="140431202" />
+    <street name="聪子峪乡" code="140431203" />
+    <street name="韩洪乡" code="140431204" />
+    <street name="官滩乡" code="140431205" />
+    <street name="景凤乡" code="140431206" />
+    <street name="赤石桥乡" code="140431207" />
+    <street name="王陶乡" code="140431208" />
+</county>
+<county name="潞城" code="140481">
+    <street name="潞华街道" code="140481001" />
+    <street name="成家川街道" code="140481002" />
+    <street name="店上镇" code="140481100" />
+    <street name="微子镇" code="140481101" />
+    <street name="辛安泉镇" code="140481102" />
+    <street name="翟店镇" code="140481103" />
+    <street name="合室乡" code="140481200" />
+    <street name="黄牛蹄乡" code="140481201" />
+    <street name="史回乡" code="140481202" />
+</county>
+<county name="城区" code="140482">
+    <street name="东街街道" code="140402001" />
+    <street name="西街街道" code="140402002" />
+    <street name="英雄南路街道" code="140402003" />
+    <street name="英雄中路街道" code="140402004" />
+    <street name="紫金街街道" code="140402005" />
+    <street name="太行东街街道" code="140402006" />
+    <street name="太行西街街道" code="140402007" />
+    <street name="延安南路街道" code="140402008" />
+    <street name="常青街道" code="140402009" />
+    <street name="五马街道" code="140402010" />
+    <street name="长治高新技术开发区" code="140402400" />
+</county>
+<county name="郊区" code="140483">
+    <street name="长北街道" code="140411001" />
+    <street name="故县街道" code="140411002" />
+    <street name="老顶山镇" code="140411100" />
+    <street name="堠北庄镇" code="140411101" />
+    <street name="大辛庄镇" code="140411102" />
+    <street name="马厂镇" code="140411103" />
+    <street name="黄碾镇" code="140411104" />
+    <street name="西白兔乡" code="140411200" />
+</county>
+</city>
+</address>

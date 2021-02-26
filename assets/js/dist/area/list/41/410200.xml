@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="开封" code="410200">
+<county name="龙亭" code="410202">
+    <street name="北书店街道" code="410202001" />
+    <street name="午朝门街道" code="410202002" />
+    <street name="大兴街道" code="410202003" />
+    <street name="北道门街道" code="410202005" />
+    <street name="北郊乡" code="410202201" />
+    <street name="柳园口乡" code="410202202" />
+</county>
+<county name="顺河回族" code="410203">
+    <street name="清平街道" code="410203001" />
+    <street name="铁塔街道" code="410203002" />
+    <street name="曹门街道" code="410203003" />
+    <street name="宋门街道" code="410203004" />
+    <street name="工业街道" code="410203005" />
+    <street name="苹果园街道" code="410203006" />
+    <street name="东郊乡" code="410203200" />
+    <street name="土柏岗乡" code="410203201" />
+</county>
+<county name="鼓楼" code="410204">
+    <street name="相国寺街道" code="410204001" />
+    <street name="新华街道" code="410204002" />
+    <street name="卧龙街道" code="410204003" />
+    <street name="州桥街道" code="410204004" />
+    <street name="西司门街道" code="410204005" />
+    <street name="南苑街道" code="410204006" />
+    <street name="五一街道" code="410204007" />
+    <street name="仙人庄街道" code="410204008" />
+</county>
+<county name="禹王台" code="410205">
+    <street name="三里堡街道" code="410205001" />
+    <street name="新门关街道" code="410205002" />
+    <street name="繁塔街道" code="410205003" />
+    <street name="官坊街道" code="410205004" />
+    <street name="菜市街道" code="410205005" />
+    <street name="南郊乡" code="410205200" />
+    <street name="汪屯乡" code="410205201" />
+</county>
+<county name="金明" code="410211">
+    <street name="城西街道" code="410211001" />
+    <street name="梁苑街道" code="410211002" />
+    <street name="杏花营镇" code="410211100" />
+    <street name="西郊乡" code="410211201" />
+    <street name="水稻乡" code="410211207" />
+    <street name="杏花营农场" code="410211400" />
+    <street name="河南开封经济开发区" code="410211560" />
+</county>
+<county name="杞县" code="410221">
+    <street name="城关镇" code="410221100" />
+    <street name="五里河镇" code="410221101" />
+    <street name="傅集镇" code="410221102" />
+    <street name="圉镇镇" code="410221103" />
+    <street name="高阳镇" code="410221104" />
+    <street name="葛岗镇" code="410221105" />
+    <street name="阳堌镇" code="410221106" />
+    <street name="邢口镇" code="410221107" />
+    <street name="裴村店乡" code="410221200" />
+    <street name="宗店乡" code="410221202" />
+    <street name="板木乡" code="410221203" />
+    <street name="竹林乡" code="410221204" />
+    <street name="官庄乡" code="410221205" />
+    <street name="湖岗乡" code="410221206" />
+    <street name="苏木乡" code="410221207" />
+    <street name="沙沃乡" code="410221208" />
+    <street name="平城乡" code="410221209" />
+    <street name="泥沟乡" code="410221210" />
+    <street name="柿园乡" code="410221211" />
+    <street name="西寨乡" code="410221212" />
+    <street name="城郊乡" code="410221213" />
+    <street name="工业园区" code="410221401" />
+</county>
+<county name="通许" code="410222">
+    <street name="城关镇" code="410222100" />
+    <street name="竖岗镇" code="410222101" />
+    <street name="玉皇庙镇" code="410222102" />
+    <street name="四所楼镇" code="410222103" />
+    <street name="朱砂镇" code="410222104" />
+    <street name="长智镇" code="410222105" />
+    <street name="冯庄乡" code="410222200" />
+    <street name="孙营乡" code="410222201" />
+    <street name="大岗李乡" code="410222202" />
+    <street name="邸阁乡" code="410222203" />
+    <street name="练城乡" code="410222204" />
+    <street name="厉庄乡" code="410222205" />
+</county>
+<county name="尉氏" code="410223">
+    <street name="城关镇" code="410223100" />
+    <street name="洧川镇" code="410223101" />
+    <street name="朱曲镇" code="410223102" />
+    <street name="蔡庄镇" code="410223103" />
+    <street name="永兴镇" code="410223104" />
+    <street name="张市镇" code="410223105" />
+    <street name="十八里镇" code="410223106" />
+    <street name="水坡镇" code="410223107" />
+    <street name="大营镇" code="410223108" />
+    <street name="邢庄乡" code="410223200" />
+    <street name="庄头乡" code="410223201" />
+    <street name="大马乡" code="410223203" />
+    <street name="岗李乡" code="410223204" />
+    <street name="门楼任乡" code="410223205" />
+    <street name="大桥乡" code="410223206" />
+    <street name="南曹乡" code="410223207" />
+    <street name="小陈乡" code="410223208" />
+</county>
+<county name="祥符" code="410224">
+    <street name="城关镇" code="410224100" />
+    <street name="陈留镇" code="410224101" />
+    <street name="仇楼镇" code="410224102" />
+    <street name="八里湾镇" code="410224103" />
+    <street name="曲兴镇" code="410224104" />
+    <street name="朱仙镇" code="410224106" />
+    <street name="半坡店乡" code="410224200" />
+    <street name="罗王乡" code="410224202" />
+    <street name="刘店乡" code="410224203" />
+    <street name="袁坊乡" code="410224204" />
+    <street name="杜良乡" code="410224205" />
+    <street name="兴隆乡" code="410224206" />
+    <street name="西姜寨乡" code="410224208" />
+    <street name="万隆乡" code="410224210" />
+    <street name="范村乡" code="410224211" />
+</county>
+<county name="兰考" code="410225">
+    <street name="城关镇" code="410225100" />
+    <street name="堌阳镇" code="410225101" />
+    <street name="南彰镇" code="410225102" />
+    <street name="张君墓镇" code="410225103" />
+    <street name="红庙镇" code="410225104" />
+    <street name="城关乡" code="410225200" />
+    <street name="三义寨乡" code="410225201" />
+    <street name="东坝头乡" code="410225202" />
+    <street name="爪营乡" code="410225203" />
+    <street name="谷营乡" code="410225204" />
+    <street name="小宋乡" code="410225205" />
+    <street name="孟寨乡" code="410225206" />
+    <street name="许河乡" code="410225207" />
+    <street name="葡萄架乡" code="410225208" />
+    <street name="阎楼乡" code="410225209" />
+    <street name="仪封乡" code="410225210" />
+    <street name="中原石油勘探三公司" code="410225400" />
+    <street name="仪封园艺场" code="410225401" />
+    <street name="造纸林场" code="410225402" />
+    <street name="柳林林场" code="410225403" />
+    <street name="西关农场" code="410225404" />
+    <street name="畜牧良种农场" code="410225405" />
+    <street name="固阳农科所" code="410225406" />
+</county>
+</city>
+</address>

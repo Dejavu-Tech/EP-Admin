@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="黑河" code="231100">
+<county name="爱辉" code="231102">
+    <street name="花园街道" code="231102001" />
+    <street name="兴安街道" code="231102002" />
+    <street name="海兰街道" code="231102003" />
+    <street name="西兴街道" code="231102004" />
+    <street name="西岗子镇" code="231102101" />
+    <street name="爱辉镇" code="231102102" />
+    <street name="罕达汽镇" code="231102103" />
+    <street name="幸福乡" code="231102200" />
+    <street name="四嘉子乡" code="231102201" />
+    <street name="坤河乡" code="231102202" />
+    <street name="上马厂乡" code="231102203" />
+    <street name="张地营子乡" code="231102204" />
+    <street name="西峰山乡" code="231102205" />
+    <street name="新生乡" code="231102206" />
+    <street name="二站乡" code="231102207" />
+    <street name="大平林场" code="231102407" />
+    <street name="七二七林场" code="231102408" />
+    <street name="望峰林场" code="231102409" />
+    <street name="卡伦山林场" code="231102410" />
+    <street name="胜山林场" code="231102411" />
+    <street name="二站林场" code="231102412" />
+    <street name="三站林场" code="231102413" />
+    <street name="大岭林场" code="231102414" />
+    <street name="桦皮窑林场" code="231102415" />
+    <street name="滨南林场" code="231102416" />
+    <street name="江防林场" code="231102417" />
+    <street name="河南屯林场" code="231102418" />
+    <street name="西岗子试验林场" code="231102421" />
+    <street name="大新屯储木场" code="231102425" />
+    <street name="宋集屯煤矿" code="231102480" />
+    <street name="西岗子煤矿" code="231102481" />
+    <street name="东方红煤矿" code="231102482" />
+    <street name="锦河农场" code="231102500" />
+    <street name="奶牛场" code="231102580" />
+    <street name="种畜场" code="231102581" />
+    <street name="第二良种场" code="231102582" />
+    <street name="第一良种场" code="231102583" />
+</county>
+<county name="嫩江" code="231121">
+    <street name="嫩江镇" code="231121100" />
+    <street name="伊拉哈镇" code="231121101" />
+    <street name="双山镇" code="231121102" />
+    <street name="多宝山镇" code="231121103" />
+    <street name="海江镇" code="231121104" />
+    <street name="前进镇" code="231121105" />
+    <street name="长福镇" code="231121106" />
+    <street name="科洛镇" code="231121107" />
+    <street name="临江乡" code="231121202" />
+    <street name="联兴乡" code="231121206" />
+    <street name="白云乡" code="231121207" />
+    <street name="塔溪乡" code="231121208" />
+    <street name="霍龙门乡" code="231121210" />
+    <street name="长江乡" code="231121211" />
+    <street name="多宝山铜矿" code="231121400" />
+    <street name="九三管理局局直" code="231121500" />
+    <street name="鹤山农场" code="231121501" />
+    <street name="大西江农场" code="231121502" />
+    <street name="尖山农场" code="231121503" />
+    <street name="荣军农场" code="231121504" />
+    <street name="红五月农场" code="231121505" />
+    <street name="七星泡农场" code="231121506" />
+    <street name="嫩江农场" code="231121507" />
+    <street name="山河农场" code="231121508" />
+    <street name="嫩北农场" code="231121509" />
+    <street name="建边农场" code="231121510" />
+    <street name="马铃薯原种繁殖场" code="231121581" />
+</county>
+<county name="逊克" code="231123">
+    <street name="奇克街道" code="231123001" />
+    <street name="奇克镇" code="231123100" />
+    <street name="逊河镇" code="231123101" />
+    <street name="干岔子乡" code="231123201" />
+    <street name="松树沟乡" code="231123202" />
+    <street name="车陆乡" code="231123203" />
+    <street name="新鄂乡" code="231123204" />
+    <street name="新兴乡" code="231123205" />
+    <street name="克林乡" code="231123206" />
+    <street name="宝山乡" code="231123207" />
+    <street name="道干林场" code="231123402" />
+    <street name="干岔子林场" code="231123403" />
+    <street name="新立林场" code="231123404" />
+    <street name="三间房林场" code="231123405" />
+    <street name="良种场" code="231123406" />
+    <street name="种畜场" code="231123407" />
+    <street name="逊克农场" code="231123500" />
+</county>
+<county name="孙吴" code="231124">
+    <street name="孙吴城区街道" code="231124001" />
+    <street name="孙吴镇" code="231124100" />
+    <street name="辰清镇" code="231124101" />
+    <street name="西兴乡" code="231124201" />
+    <street name="沿江满族乡" code="231124202" />
+    <street name="腰屯乡" code="231124203" />
+    <street name="卧牛河乡" code="231124204" />
+    <street name="群山乡" code="231124205" />
+    <street name="奋斗乡" code="231124206" />
+    <street name="红旗乡" code="231124207" />
+    <street name="正阳山乡" code="231124208" />
+    <street name="清溪乡" code="231124210" />
+    <street name="前进林场" code="231124402" />
+    <street name="大河口林场" code="231124403" />
+    <street name="正阳林场" code="231124404" />
+    <street name="平山林场" code="231124405" />
+    <street name="沿江林场" code="231124406" />
+    <street name="辰清林场" code="231124407" />
+    <street name="红旗林场" code="231124408" />
+    <street name="向阳林场" code="231124409" />
+    <street name="良种场" code="231124410" />
+    <street name="种畜场" code="231124411" />
+    <street name="红色边疆农场" code="231124500" />
+</county>
+<county name="北安" code="231181">
+    <street name="兆麟街道" code="231181001" />
+    <street name="和平街道" code="231181002" />
+    <street name="北岗街道" code="231181003" />
+    <street name="庆华街道" code="231181004" />
+    <street name="铁西街道" code="231181005" />
+    <street name="铁南街道" code="231181006" />
+    <street name="通北镇" code="231181101" />
+    <street name="赵光镇" code="231181102" />
+    <street name="海星镇" code="231181103" />
+    <street name="石泉镇" code="231181104" />
+    <street name="二井镇" code="231181105" />
+    <street name="城郊乡" code="231181200" />
+    <street name="东胜乡" code="231181201" />
+    <street name="杨家乡" code="231181203" />
+    <street name="主星乡" code="231181207" />
+    <street name="通北林业局" code="231181400" />
+    <street name="北安管理局局直" code="231181500" />
+    <street name="长水河农场" code="231181501" />
+    <street name="赵光农场" code="231181502" />
+    <street name="红星农场" code="231181503" />
+    <street name="建设农场" code="231181504" />
+</county>
+<county name="五大连池" code="231182">
+    <street name="青山街道" code="231182001" />
+    <street name="龙镇" code="231182101" />
+    <street name="和平镇" code="231182102" />
+    <street name="五大连池镇" code="231182103" />
+    <street name="双泉镇" code="231182104" />
+    <street name="新发镇" code="231182105" />
+    <street name="兴隆乡" code="231182202" />
+    <street name="建设乡" code="231182203" />
+    <street name="太平乡" code="231182205" />
+    <street name="团结乡" code="231182207" />
+    <street name="兴安乡" code="231182208" />
+    <street name="朝阳乡" code="231182210" />
+    <street name="元青山林场" code="231182406" />
+    <street name="三九六林场" code="231182407" />
+    <street name="小兴安林场" code="231182408" />
+    <street name="二龙山林场" code="231182409" />
+    <street name="朝阳林场" code="231182410" />
+    <street name="引龙河林场" code="231182411" />
+    <street name="焦得布林场" code="231182412" />
+    <street name="小孤山林场" code="231182414" />
+    <street name="药泉林场" code="231182415" />
+    <street name="沾河林业局" code="231182417" />
+    <street name="莲花管理委员会" code="231182418" />
+    <street name="二龙山蚕种场" code="231182427" />
+    <street name="畜牧场" code="231182429" />
+    <street name="第二良种场" code="231182430" />
+    <street name="花园劳教所" code="231182480" />
+    <street name="永丰监狱" code="231182481" />
+    <street name="华山监狱" code="231182482" />
+    <street name="凤凰山监狱" code="231182483" />
+    <street name="龙门农场" code="231182501" />
+    <street name="襄河农场" code="231182502" />
+    <street name="龙镇农场" code="231182503" />
+    <street name="二龙山农场" code="231182504" />
+    <street name="引龙河农场" code="231182505" />
+    <street name="尾山农场" code="231182506" />
+    <street name="格球山农场" code="231182507" />
+    <street name="五大连池农场" code="231182508" />
+</county>
+</city>
+</address>

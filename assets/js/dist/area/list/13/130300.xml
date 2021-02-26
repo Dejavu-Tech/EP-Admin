@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="秦皇岛" code="130300">
+<county name="海港" code="130302">
+    <street name="文化路街道" code="130302001" />
+    <street name="海滨路街道" code="130302002" />
+    <street name="北环路街道" code="130302003" />
+    <street name="建设大街街道" code="130302004" />
+    <street name="河东街道" code="130302005" />
+    <street name="西港路街道" code="130302006" />
+    <street name="燕山大街街道" code="130302007" />
+    <street name="港城大街街道" code="130302008" />
+    <street name="东环路街道" code="130302009" />
+    <street name="白塔岭街道" code="130302010" />
+    <street name="珠江道街道" code="130302011" />
+    <street name="黄河道街道" code="130302012" />
+    <street name="腾飞路街道" code="130302013" />
+    <street name="东港镇" code="130302100" />
+    <street name="海港镇" code="130302101" />
+    <street name="西港镇" code="130302102" />
+    <street name="海阳镇" code="130302103" />
+    <street name="北港镇" code="130302104" />
+    <street name="榆关管理处" code="130302400" />
+    <street name="牛头崖管理处" code="130302401" />
+    <street name="北部工业区" code="130302402" />
+    <street name="临港物流园区" code="130302403" />
+</county>
+<county name="山海关" code="130303">
+    <street name="南关街道" code="130303001" />
+    <street name="东街街道" code="130303002" />
+    <street name="西街街道" code="130303003" />
+    <street name="路南街道" code="130303004" />
+    <street name="船厂路街道" code="130303005" />
+    <street name="第一关镇" code="130303100" />
+    <street name="石河镇" code="130303101" />
+    <street name="孟姜镇" code="130303102" />
+    <street name="渤海乡" code="130303200" />
+</county>
+<county name="北戴河" code="130304">
+    <street name="西山街道" code="130304001" />
+    <street name="东山街道" code="130304002" />
+    <street name="海滨镇" code="130304100" />
+    <street name="戴河镇" code="130304101" />
+</county>
+<county name="青龙" code="130321">
+    <street name="青龙镇" code="130321100" />
+    <street name="祖山镇" code="130321101" />
+    <street name="木头凳镇" code="130321102" />
+    <street name="双山子镇" code="130321103" />
+    <street name="马圈子镇" code="130321104" />
+    <street name="肖营子镇" code="130321105" />
+    <street name="大巫岚镇" code="130321106" />
+    <street name="土门子镇" code="130321107" />
+    <street name="八道河镇" code="130321108" />
+    <street name="隔河头镇" code="130321109" />
+    <street name="娄杖子镇" code="130321110" />
+    <street name="凤凰山乡" code="130321200" />
+    <street name="龙王庙乡" code="130321201" />
+    <street name="三星口乡" code="130321202" />
+    <street name="干沟乡" code="130321203" />
+    <street name="大石岭乡" code="130321206" />
+    <street name="官场乡" code="130321208" />
+    <street name="茨榆山乡" code="130321209" />
+    <street name="平方子乡" code="130321210" />
+    <street name="安子岭乡" code="130321211" />
+    <street name="朱杖子乡" code="130321212" />
+    <street name="草碾乡" code="130321213" />
+    <street name="七道河乡" code="130321214" />
+    <street name="三拨子乡" code="130321217" />
+    <street name="凉水河乡" code="130321218" />
+</county>
+<county name="昌黎" code="130322">
+    <street name="昌黎镇" code="130322100" />
+    <street name="靖安镇" code="130322101" />
+    <street name="安山镇" code="130322102" />
+    <street name="龙家店镇" code="130322103" />
+    <street name="泥井镇" code="130322104" />
+    <street name="大蒲河镇" code="130322105" />
+    <street name="新集镇" code="130322106" />
+    <street name="刘台庄镇" code="130322107" />
+    <street name="茹荷镇" code="130322108" />
+    <street name="朱各庄镇" code="130322109" />
+    <street name="荒佃庄镇" code="130322110" />
+    <street name="团林乡" code="130322201" />
+    <street name="葛条港乡" code="130322202" />
+    <street name="马坨店乡" code="130322203" />
+    <street name="两山乡" code="130322206" />
+    <street name="十里铺乡" code="130322207" />
+    <street name="大蒲河管理处" code="130322400" />
+    <street name="团林管理处" code="130322401" />
+</county>
+<county name="抚宁" code="130323">
+    <street name="骊城街道" code="130323001" />
+    <street name="南戴河街道" code="130323002" />
+    <street name="抚宁镇" code="130323100" />
+    <street name="留守营镇" code="130323101" />
+    <street name="榆关镇" code="130323102" />
+    <street name="牛头崖镇" code="130323103" />
+    <street name="石门寨镇" code="130323104" />
+    <street name="台营镇" code="130323105" />
+    <street name="大新寨镇" code="130323106" />
+    <street name="驻操营镇" code="130323107" />
+    <street name="杜庄镇" code="130323108" />
+    <street name="茶棚乡" code="130323200" />
+    <street name="深河乡" code="130323202" />
+    <street name="留守营管理处" code="130323400" />
+</county>
+<county name="卢龙" code="130324">
+    <street name="卢龙镇" code="130324100" />
+    <street name="潘庄镇" code="130324101" />
+    <street name="燕河营镇" code="130324102" />
+    <street name="双望镇" code="130324103" />
+    <street name="刘田各庄镇" code="130324104" />
+    <street name="石门镇" code="130324105" />
+    <street name="木井镇" code="130324106" />
+    <street name="下寨乡" code="130324200" />
+    <street name="刘家营乡" code="130324201" />
+    <street name="陈官屯乡" code="130324202" />
+    <street name="印庄乡" code="130324203" />
+    <street name="蛤泊乡" code="130324204" />
+    <street name="河北卢龙经济开发区" code="130324400" />
+</county>
+</city>
+</address>

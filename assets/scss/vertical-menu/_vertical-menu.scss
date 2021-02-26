@@ -1,0 +1,816 @@
+// Generate rules to round the corners of the last collapsible item
+
+@mixin round_corner($amount, $chainable: 'ul > li:last-child > ', $level: 4, $chain_prefix: '> li:last-child > ', $chain: '', $selector: '') {
+  $chain: $chain_prefix;
+  $selector: $chain + 'a, ' + $chain + '*:not(ul) a, ' + $chain + 'ul';
+  @for $i from 1 through $level {
+    $chain: $chain + $chainable;
+    $selector: $selector + ',
+    ' + $chain + ' a, ' + $chain + '*:not(ul) a, ' + $chain + ' ul';
+  }
+  #{$selector} {
+    border-radius: 0 0 $amount $amount;
+  }
+  $chain: $chain_prefix;
+  $selector: $chain + 'a.highlighted, ' + $chain + '*:not(ul) a.highlighted';
+  @for $i from 1 through $level {
+    $chain: $chain + $chainable;
+    $selector: $selector + ',
+    ' + $chain + ' a.highlighted, ' + $chain + '*:not(ul) a.highlighted';
+  }
+  #{$selector} {
+    border-radius: 0;
+  }
+}
+@mixin sub_items($amount, $chainable: 'ul ', $level: 4, $chain: '') {
+  @for $i from 1 through $level {
+    $chain: $chain + $chainable;
+  }
+}
+%extend_1 {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  direction: ltr;
+  text-align: left;
+}
+.vertical{
+  .main-header-left{
+    display: block !important;
+  }
+  .page-body{
+    margin-left: 0 !important;
+  }
+  .page-main-header{
+    margin-left: 0 !important;
+    width: 100% !important;
+    .main-header-right{
+      .nav-right{
+        > ul {
+          > li{
+            &:first-child{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.sm {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 8;
+  @extend %extend_1;
+  ul {
+    @extend %extend_1;
+    display: none;
+  }
+  li {
+    @extend %extend_1;
+    position: relative;
+  }
+  > li {
+    > h1 {
+      margin: 0;
+      padding: 0;
+    }
+    > h2 {
+      margin: 0;
+      padding: 0;
+    }
+    > h3 {
+      margin: 0;
+      padding: 0;
+    }
+    > h4 {
+      margin: 0;
+      padding: 0;
+    }
+    > h5 {
+      margin: 0;
+      padding: 0;
+    }
+    > h6 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  a {
+    position: relative;
+    display: block;
+    &.disabled {
+      cursor: default;
+    }
+  }
+  * {
+    box-sizing: inherit;
+  }
+  *::before {
+    box-sizing: inherit;
+  }
+  *::after {
+    box-sizing: inherit;
+  }
+}
+.sm::after {
+  content: "";
+  display: block;
+  height: 0;
+  font: 0/0 serif;
+  clear: both;
+  overflow: hidden;
+}
+
+// -----------------------------------------------------------------------------------------------------------------
+// 1. Theme Quick Settings (Variables)
+// -----------------------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------
+// :: 1.1. Colors
+// ----------------------------------------------------------
+
+$theme-default: #975ee0 !default;
+$theme-default-dark:									darken($theme-default, 0%) !default;
+$theme-default-darker: #975ee0 !default;
+$theme-default-light:									lighten($theme-default, 5%) !default;
+$theme-deafult__white:										#fff !default;
+$theme-deafult__gray:											darken($theme-deafult__white, 34%) !default;
+$dark :	#333333;
+$theme-deafult__text-shadow:									rgba(0, 0, 0, 0.2) !default;
+$theme-deafult__box-shadow:									rgba(0, 0, 0, 0.08) !default;
+
+// ----------------------------------------------------------
+// :: 1.2. Breakpoints
+// ----------------------------------------------------------
+$theme-deafult__desktop-vp:									1200px !default;		// switch from collapsible to desktop
+
+// ----------------------------------------------------------
+// :: 1.3. Typography
+// ----------------------------------------------------------
+$theme-deafult__font-size-base:								18px !default;
+$theme-deafult__font-size-small:								14px !default;
+$theme-deafult__line-height:									23px !default;
+
+// ----------------------------------------------------------
+// :: 1.4. Borders
+// ----------------------------------------------------------
+$theme-deafult__border-width:									1px !default;
+$theme-deafult__border-radius-base:							8px !default;
+$theme-deafult__border-radius-small:							4px !default;
+
+// ----------------------------------------------------------
+// :: 1.5. Collapsible main menu
+// ----------------------------------------------------------
+// Menu box
+$theme-deafult__collapsible-bg:								transparent !default;
+$theme-deafult__collapsible-border-radius:					$theme-deafult__border-radius-base !default;
+$theme-deafult__collapsible-box-shadow:						0 1px 4px $theme-deafult__box-shadow !default;
+
+// Items
+$theme-deafult__collapsible-item-color:						$theme-deafult__white !default;
+$theme-deafult__collapsible-item-bg:							$theme-default !default;
+$theme-deafult__collapsible-item-current-color:				$theme-deafult__white !default;
+$theme-deafult__collapsible-item-current-bg:					$theme-default-darker !default;
+$theme-deafult__collapsible-item-disabled-color:				lighten($theme-default, 30%) !default;
+$theme-deafult__collapsible-item-padding-vertical:			15px !default;
+$theme-deafult__collapsible-item-padding-horizontal:			25px !default;
+
+// Toggle button (sub menu indicators)
+$theme-deafult__collapsible-toggle-bg:						rgba(0, 0, 0, 0.1) !default;
+
+// ----------------------------------------------------------
+// :: 1.6. Collapsible sub menus
+// ----------------------------------------------------------
+
+// Menu box
+$theme-deafult__collapsible-sub-bg:							$theme-deafult__white !default;
+
+// Items
+$theme-deafult__collapsible-sub-item-color:					$theme-default-dark !default;
+$theme-deafult__collapsible-sub-item-bg:						transparent !default;
+$theme-deafult__collapsible-sub-item-current-color:			$theme-deafult__white !default;
+$theme-deafult__collapsible-sub-item-current-bg:				$theme-default-darker !default;
+$theme-deafult__collapsible-sub-item-disabled-color:			darken($theme-deafult__white, 30%) !default;
+
+// Items separators
+$theme-deafult__collapsible-sub-separators-color:				rgba(0, 0, 0, 0.05) !default;
+
+// Items text indentation for deeper levels
+$theme-deafult__collapsible-sub-item-indentation:				8px !default;
+
+// ----------------------------------------------------------
+// :: 1.7. Desktop main menu
+// ----------------------------------------------------------
+
+// Items separators
+$theme-deafult__desktop-separators-size:						1px !default;
+$theme-deafult__desktop-separators-color:						darken($theme-default, 5%) !default;
+
+// Sub menu indicators
+$theme-deafult__desktop-arrow-size:							5px !default;		// border-width
+$theme-deafult__desktop-arrow-color:							$theme-default-light !default;
+
+// Vertical menu box
+$theme-deafult__desktop-vertical-box-shadow:					0 1px 4px $theme-deafult__box-shadow !default;
+
+// Vertical items
+$theme-deafult__desktop-vertical-item-padding-vertical:		9px !default;
+$theme-deafult__desktop-vertical-item-padding-horizontal:		23px !default;
+
+// ----------------------------------------------------------
+// :: 1.8. Desktop sub menus
+// ----------------------------------------------------------
+
+// Menu box
+$theme-deafult__desktop-sub-bg:								$theme-deafult__white !default;
+$theme-deafult__desktop-sub-border-color:						$theme-deafult__gray !default;
+$theme-deafult__desktop-sub-border-radius:					$theme-deafult__border-radius-small !default;
+$theme-deafult__desktop-sub-box-shadow:						0 5px 12px $theme-deafult__box-shadow !default;
+$theme-deafult__desktop-sub-padding-vertical:					7px !default;
+$theme-deafult__desktop-sub-padding-horizontal:				0 !default;
+
+// Items
+$theme-deafult__desktop-sub-item-color:						$theme-default-dark !default;
+$theme-deafult__desktop-sub-item-bg:							transparent !default;
+$theme-deafult__desktop-sub-item-hover-color:					$theme-deafult__white !default;
+$theme-deafult__desktop-sub-item-hover-bg:					$theme-default !default;
+$theme-deafult__desktop-sub-item-current-color:				$theme-deafult__white !default;
+$theme-deafult__desktop-sub-item-current-bg:					$theme-default-darker !default;
+$theme-deafult__desktop-sub-item-disabled-color:				darken($theme-deafult__white, 30%) !default;
+$theme-deafult__desktop-sub-item-padding-vertical:			9px !default;
+$theme-deafult__desktop-sub-item-padding-horizontal:			23px !default;
+
+// ----------------------------------------------------------
+// :: 2.1. Collapsible mode (mobile first)
+// ----------------------------------------------------------
+
+// calc item height and sub menus toggle button size
+$theme-deafult__item-height: $theme-deafult__line-height + $theme-deafult__collapsible-item-padding-vertical * 2;
+// set toggle button size to 80% of item height
+$theme-deafult__toggle-size: floor($theme-deafult__item-height * 0.8);
+$theme-deafult__toggle-spacing: floor($theme-deafult__item-height * 0.1);
+
+// Main menu box
+.pixelstrap {
+  .mobile-back {
+    padding: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+  }
+  a {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      padding: $theme-deafult__collapsible-item-padding-vertical $theme-deafult__collapsible-item-padding-horizontal;
+      padding-right: $theme-deafult__collapsible-item-padding-horizontal;
+      color: $dark;
+      line-height: $theme-deafult__line-height;
+      text-decoration: none;
+    }
+    &.disabled {
+      color: $theme-deafult__collapsible-item-disabled-color;
+    }
+    .sub-arrow {
+      position: absolute;
+      top: 50%;
+      margin-top: -(ceil($theme-deafult__toggle-size / 2));
+      left: auto;
+      right: $theme-deafult__toggle-spacing;
+      width: $theme-deafult__toggle-size;
+      height: $theme-deafult__toggle-size;
+      overflow: hidden;
+      font: bold #{$theme-deafult__font-size-small}/#{$theme-deafult__toggle-size} monospace !important;
+      text-align: center;
+      text-shadow: none;
+      border-radius: $theme-deafult__border-radius-small;
+    }
+    .sub-arrow::before {
+      content: '+';
+    }
+    &.highlighted .sub-arrow::before {
+      content: '-';
+    }
+  }
+  @include round_corner($theme-deafult__collapsible-border-radius);
+  // Sub menus box
+  ul {
+    background: $theme-deafult__collapsible-sub-bg;
+    ul {
+      background: rgba(65, 52, 90, 0.05);
+    }
+    a {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        background: $theme-deafult__collapsible-sub-item-bg;
+        color: $theme-deafult__collapsible-sub-item-color;
+        font-size: $theme-deafult__font-size-small;
+        text-shadow: none;
+      }
+      &.current {
+        background: lighten($theme-deafult__collapsible-sub-item-current-bg , 50%);
+        //color: $theme-deafult__collapsible-sub-item-current-color;
+      }
+      &.disabled {
+        color: $theme-deafult__collapsible-sub-item-disabled-color;
+      }
+    }
+    // Add indentation for sub menus text for deeper levels
+    @include sub_items($theme-deafult__collapsible-sub-item-indentation);
+
+    // Sub menus items separators
+    li {
+      border-top: 1px solid $theme-deafult__collapsible-sub-separators-color;
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.vertical-mobile-sidebar{
+  font-size: 18px;
+  position: absolute;
+  right: 480px;
+  top: 40px;
+}
+// ----------------------------------------------------------
+// :: 2.2. Desktop mode
+// ----------------------------------------------------------
+
+@media (min-width: $theme-deafult__desktop-vp) {
+  .page-wrapper{
+    .mega-menu-header{
+      .vertical-menu-main{
+        position: absolute;
+        width: auto;
+        top: 25px;
+        box-shadow: none;
+        right: 490px;
+      }
+    }
+    .page-main-header{
+      &.mega-menu-header
+      .main-header-right{
+        .nav-right{
+          > ul{
+            > li{
+              &:first-child {
+                width: 45%;
+                margin: 0 auto;
+                border-left: none;
+                margin-left: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Switch to desktop layout  */
+  .mobile-back,.vertical-mobile-sidebar{
+    display: none;
+  }
+  .pixelstrap {
+    ul{
+      >li{
+        >a{
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 1;
+          &:hover{
+            line-height: 1;
+          }
+        }
+      }
+    }
+    >li{
+      >a,> a:hover,> a:active{
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .pixelstrap ul{position:absolute!important;width:12em;}
+  .pixelstrap li{float:left;}
+  .pixelstrap.sm-rtl li{float:right;}
+  .pixelstrap ul li,.pixelstrap.sm-rtl ul li,.pixelstrap.sm-vertical li{float:none;}
+  .pixelstrap a{white-space:nowrap;}
+  .pixelstrap ul a,.pixelstrap.sm-vertical a{white-space:normal;}
+  .pixelstrap .sm-nowrap > li > a,.pixelstrap .sm-nowrap > li > :not(ul) a{white-space:nowrap;}
+  /* ...end */
+
+  // Main menu box
+  .pixelstrap {
+
+    .mobile-back {
+      padding: 20px;
+      font-size: 18px;
+      color: #222222;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom: 1px solid #efefef;
+      cursor: pointer;
+    }
+    ul{
+      &:not(.mega-menu){
+        >li{
+          &:hover{
+           a{
+            &:before{
+              background-color: $theme-default;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+        a{
+          &:before{
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            background-color: #807f7f;
+            border-radius: 100%;
+            left: 20px;
+            top: 16px;
+            transition: all 0.3s ease;
+          }
+          padding: 13px 35px;
+          &:hover,&:focus,&:active{
+            padding: 13px 35px;
+          }
+        }
+      }
+    }
+  }
+  a {
+    &.highlighted{
+      .sub-arrow::before {
+        content: "\f107";
+        font-family: FontAwesome;
+        position: absolute;
+      }
+    }
+    .sub-arrow {
+      position: absolute;
+      top: 23px;
+      margin-top: -17px;
+      right: 3px;
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      background: transparent;
+    }
+    .sub-arrow::before {
+      content: "\f107";
+      font-family: FontAwesome;
+      position: absolute;
+    }
+  }
+  ul {
+    padding: 13px $theme-deafult__desktop-sub-padding-horizontal;
+    background: $theme-deafult__desktop-sub-bg;
+    box-shadow: $theme-deafult__desktop-sub-box-shadow;
+    border: 1px solid #e9e9e9;
+    li{
+      a{
+        padding: 13px 35px;
+        &:hover,&:focus,&:active{
+          padding: 13px 35px;
+        }
+      }
+    }
+
+    ul {
+      border-radius: $theme-deafult__desktop-sub-border-radius !important;
+      background: $theme-deafult__desktop-sub-bg;
+    }
+    a {
+      color:#000000;
+      &:hover,
+      &:focus,
+      &:active,
+      &.highlighted {
+        border: 0 !important;
+        background: $theme-deafult__desktop-sub-item-bg;
+        color: $theme-deafult__desktop-sub-item-color;
+        border-radius: 0 !important;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.highlighted {
+        color: $theme-deafult__desktop-sub-item-hover-bg;
+        .sub-arrow {
+          top: 50%;
+          right: 15px;
+          border-style: none;
+          &:before{
+            content: "\f105";
+            line-height: 2.5;
+            right: 5px;
+            color: gray;
+          }
+        }
+      }
+      &.current {
+        color: $theme-deafult__desktop-sub-item-hover-bg
+      }
+      &.disabled {
+        color: $theme-deafult__desktop-sub-item-hover-bg
+      }
+      .sub-arrow {
+        top: 50%;
+        right: 15px;
+        border-style: none;
+        &:before{
+          content: "\f105";
+          line-height: 2.5;
+          right: 5px;
+          color: gray;
+        }
+      }
+    }
+    li {
+      border: 0;
+
+
+    }
+  }
+  .scroll-up,
+  .scroll-down {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    background: $theme-deafult__desktop-sub-bg;
+    height: 20px;
+  }
+  .scroll-up-arrow,
+  .scroll-down-arrow {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+      border-width: 8px; // tweak size of the arrow
+      border-style: dashed dashed solid dashed;
+      border-color: transparent transparent $theme-deafult__desktop-sub-item-color transparent;
+    }
+    .scroll-down-arrow {
+      top: 6px;
+      border-style: solid dashed dashed dashed;
+      border-color: $theme-deafult__desktop-sub-item-color transparent transparent transparent;
+    }
+    // Main menu box
+    &.sm-rtl {
+      &.sm-vertical {
+        a {
+          .sub-arrow {
+            right: auto;
+            left: 10px;
+            border-style: none;
+            border-color: transparent $theme-deafult__desktop-arrow-color transparent transparent;
+          }
+        }
+      }
+      > li {
+        &:first-child {
+
+        }
+        &:last-child {
+          border-left: 0;
+        }
+      }
+      ul {
+        a {
+          .sub-arrow {
+            right: auto;
+            left: 10px;
+            border-style: none;
+            border-color: transparent $theme-deafult__desktop-arrow-color transparent transparent;
+          }
+        }
+      }
+    }
+    // Main menu box
+    &.sm-vertical {
+      box-shadow: $theme-deafult__desktop-vertical-box-shadow;
+      a {
+        padding: $theme-deafult__desktop-vertical-item-padding-vertical $theme-deafult__desktop-vertical-item-padding-horizontal;
+        .sub-arrow {
+          top: 50%;
+          margin-top: -$theme-deafult__desktop-arrow-size;
+          bottom: auto;
+          left: auto;
+          margin-left: 0;
+          right: 10px;
+          border-style: dashed dashed dashed solid;
+          border-color: transparent transparent transparent $theme-deafult__desktop-arrow-color;
+        }
+      }
+      > li {
+        border-left: 0 !important;
+      }
+    }
+  }
+  // mega-menu-dropdown
+  .cd-dropdown-wrapper{
+    display: inline-block;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  .cd-dropdown {
+    position: absolute;
+    top: calc(100% - 2px);
+    height: auto;
+    width: auto;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    background-color: #fff;
+    color: #111433;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    -webkit-transition: opacity .3s 0s,visibility 0s .3s,-webkit-transform .3s 0s;
+    -moz-transition: opacity .3s 0s,visibility 0s .3s,-moz-transform .3s 0s;
+    transition: opacity .3s 0s,visibility 0s .3s,transform .3s 0s;
+    z-index: 1;
+    .cd-dropdown-content{
+      position: static;
+      height: auto;
+      width: 280px;
+      padding-top: 0;
+      overflow: visible;
+      .cd-dropdown-content .cd-secondary-dropdown.fade-out, .cd-dropdown-content .cd-dropdown-gallery.fade-out, .cd-dropdown-content .cd-dropdown-icons.fade-out {
+        -webkit-animation: cd-fade-out .2s;
+        -moz-animation: cd-fade-out .2s;
+        animation: cd-fade-out .2s;
+      }
+    }
+  }
+  .cd-dropdown.dropdown-is-active {
+    transform: translateY(0);
+  }
+  .cd-dropdown-content.is-hidden, .cd-dropdown-content div.is-hidden {
+    /* push the secondary dropdown items to the right */
+    transform: translateX(100%);
+  }
+
+  .cd-dropdown-content.move-out > div > a, .cd-dropdown-content div.move-out > div > a {
+    /* push the dropdown items to the left when secondary dropdown slides in */
+    transform: translateX(-100%);
+  }
+  @media only screen and (min-width: 1024px) {
+    .cd-dropdown {
+      position: absolute;
+      top: 100%;
+      /* reset style*/
+      height: auto;
+      width: auto;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(30px);
+      transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
+    }
+    .cd-dropdown.dropdown-is-active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;
+    }
+
+    .cd-dropdown-content {
+      /* reset mobile style */
+      position: static;
+      height: auto;
+      width: 280px;
+    }
+    .cd-dropdown-content .cd-secondary-dropdown, .cd-dropdown-content .cd-dropdown-gallery, .cd-dropdown-content .cd-dropdown-icons {
+      transform: translateX(0);
+      left: 100%;
+      height: auto;
+    }
+    .cd-dropdown-content .cd-secondary-dropdown.is-hidden, .cd-dropdown-content .cd-dropdown-gallery.is-hidden, .cd-dropdown-content .cd-dropdown-icons.is-hidden {
+      /* reset mobile style */
+      transform: translateX(0);
+    }
+    .cd-dropdown-content > .has-children > div {
+      visibility: hidden;
+    }
+    .cd-dropdown-content > .has-children:hover > div {
+      /* when hover over .cd-dropdown-content items - show subnavigation */
+      visibility: visible;
+    }
+    .cd-dropdown-content > .has-children:hover > .cd-secondary-dropdown > div > div {
+      /* if .cd-secondary-dropdown is visible - show also subnavigation */
+      visibility: visible;
+    }
+    .cd-dropdown-content .cd-secondary-dropdown {
+      overflow: hidden;
+      width: 550px;
+      padding-bottom: 65px;
+    }
+  }
+  .pixelstrap {
+    > li{
+      > a{
+        text-transform: uppercase;
+        &.highlighted{
+          &:before,&:after{
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            background-color: #fff;
+            bottom: -17px;
+            transform: rotate(45deg);
+            z-index: 11;
+          }
+          &:after{
+            height: 11px;
+            width: 11px;
+            background-color: #ebebeb;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px){
+  .page-main-header {
+    .mega-menu-header{
+      .sm{
+        right: -300px;
+        left: inherit;
+        li{
+          display: block;
+        }
+      }
+    }
+    .main-header-right{
+      .nav-right {
+        > ul{
+          > li{
+            &:first-child {
+              width: 40% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mega-menu{
+    .card-body{
+      padding-top: 0 !important;
+    }
+    .title {
+      margin-top: 20px;
+    }
+  }
+
+  .vertical-menu-main {
+    .pixelstrap{
+      .mega-menu {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+  .pixelstrap a, .pixelstrap a:hover, .pixelstrap a:focus, .pixelstrap a:active {
+    padding: 15px 25px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+  .pixelstrap a {
+    padding: 8px 25px !important;
+  }
+  .pixelstrap ul a, .pixelstrap ul a:hover, .pixelstrap ul a:focus, .pixelstrap ul a:active {
+    color: inherit;
+    font-size: 13px;
+  }
+
+}

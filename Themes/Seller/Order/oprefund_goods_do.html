@@ -1,0 +1,319 @@
+<div class="modal-dialog modal-dialog-centered btn-showcase">
+	<div class="modal-content">
+		<form class="form-horizontal form-validate" action="{:U('order/oprefund_goods_do')}" method="post" enctype="multipart/form-data">
+			<input type='hidden' name='id' value='{$id}' />
+			<input type='hidden' name='order_goods_id' value='{$order_goods_id}' />
+			<div class="modal-header">
+				<h5 class="modal-title">退款</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="table-responsive table-bordered">
+					<table class="display text-center" style="width:100%;">
+						<tr>
+							<th>商品标题</th>
+							<th>商品数量</th>
+							<th>商品价格</th>
+						</tr>
+						<tr>
+							<td>{$order_goods_info['name']}</td>
+							<td>{$total_quantity}个<?php if($has_refund_quantity > 0){ ?>(已退{$has_refund_quantity})<?php } ?></td>
+							<td>¥{:round($order_goods_info['price'] ,2)}</td>
+						</tr>
+					</table>
+
+				</div>
+				<div style="clear:both;"></div>
+
+
+
+				<p class="m-t-10"><label>退款数量：</label>可退{$total_quantity}个<?php if($has_refund_quantity > 0){ ?>(已退{$has_refund_quantity})<?php } ?></p>
+
+				<?php if($total_quantity > 0){ ?>
+				<p>
+					<label>
+						<label><input type="checkbox" id="ckall" value ="1" />全选</label>
+					</label>
+					<?php for( $i =0; $i < $total_quantity; $i++ ){ ?>
+					<label><input type="checkbox" class="ref_goods" value ="1" />{$order_goods_info['name']}</label>
+					<?php } ?>
+
+
+					<?php for( $i =0; $i < $has_refund_quantity; $i++ ){ ?>
+					<label><input type="checkbox" disabled /><font style="text-decoration:line-through;">{$order_goods_info['name']}(已退款)</font></label>
+					<?php } ?>
+				</p>
+				<?php } ?>
+
+				<?php
+						  $total = $free_tongji;//-$order_goods_info['voucher_credit']-$order_goods_info['fullreduction_money'];
+
+						  $score_for_money = $order_goods_info['score_for_money'];
+						  $free_tongji = $total;
+						  if($free_tongji < 0){
+							$free_tongji = 0;
+						  }
+
+						  $refund_one_money = round( $free_tongji/$total_quantity , 2);
+					?>
+				<?php if( !empty( $score_for_money ) && $score_for_money > 0 ){ ?>
+				<p><label class="w100">积分抵扣：</label>¥{$score_for_money}</p>
+				<?php } ?>
+				<p><label class="w100">最多退款：</label>¥{$free_tongji}</p>
+				<p class="lh30"  style="display:none;" >
+					<label class="w100">选中商品最多退款金额：</label>
+					<input type="text" style="padding:2px;height:25px;border: 1px solid #ccc;" name="refund_money2" id="refund_money2" placeholder="退款金额" value="0"  />
+				</p>
+				<p>
+					<label class="w100">退款金额：</label>
+					<input type="text" style="padding:2px;height:25px;border: 1px solid #ccc;" name="refund_money" id="refund_money" placeholder="退款金额" value="0"  />
+				</p>
+
+
+				<input type="hidden" id="is_has_refund_deliveryfree" name="is_has_refund_deliveryfree" value="<?php echo $is_has_refund_deliveryfree;?>"/>
+				<?php  if($is_has_refund_deliveryfree == 1){ ?>
+				<p class="line_p">
+					<label class="w100">配送费：</label>
+					<?php if($shipping_fare <= 0){ ?>
+					&nbsp;0
+					<?php }else{ ?>
+					<input type="checkbox" id="is_refund_shippingfare" name="is_refund_shippingfare" checked value ="1" />&nbsp;
+					<?php if( $delivery == 'express' ){ ?>
+					可退“快递配送费” ¥<?php echo $shipping_fare - $has_refund_quantity * round( 1/($total_quantity+$has_refund_quantity) * $shipping_fare,2); ?>,选中退配送费：¥ <input type="text" disabled="disabled" name="select_shipping_fare" id="select_shipping_fare" style="padding:2px;height:25px;border: 0px; background: #fff;width:100px;" value="0" />
+					<?php }else if( $delivery == 'localtown_delivery' ){ ?>
+					可退“同城配送费” ¥<?php echo $shipping_fare - $has_refund_quantity * round( 1/($total_quantity+$has_refund_quantity) * $shipping_fare,2); ?>,选中退配送费：¥ <input type="text" disabled="disabled" name="select_shipping_fare" id="select_shipping_fare" style="padding:2px;height:25px;border: 0px ; background: #fff;width:100px;" value="0" />
+					<?php }else if( $delivery == 'tuanz_send' ){ ?>
+					可退“团长配送费” ¥<?php echo $shipping_fare - $has_refund_quantity * round( 1/($total_quantity+$has_refund_quantity) * $shipping_fare,2); ?>,选中退配送费：¥ <input type="text" disabled="disabled" name="select_shipping_fare" id="select_shipping_fare" style="padding:2px;height:25px;border: 0px ; background: #fff;width:100px;" value="0" />
+					<?php } ?>
+					<?php } ?>
+				</p>
+				<?php }else{ ?>
+				<p class="line_p">
+					<label class="w100">配送费：&nbsp;&nbsp;&nbsp;&nbsp;后台设置不退配送费</label>
+				</p>
+				<?php } ?>
+				<p class="line_p">
+					<label class="w100">其他操作：</label>
+					<input type="checkbox" id="is_back_sellcount" checked name="is_back_sellcount" value ="1"  />&nbsp;
+					退库存以及减销量&nbsp;<input type="text" name="refund_quantity" id="refund_quantity" style="padding:2px;height:25px;border: 1px solid #ccc;width:100px;" value="0" />&nbsp;个(最多可退{$total_quantity}个)
+					<?php if( $use_score > 0 ){ ?>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<label>
+						<input type="checkbox" id="is_back_scorecount"  name="is_back_scorecount" value ="1"  />&nbsp;退<font id="refund_scorecount">{$use_score}</font>积分
+					</label>
+					<?php } ?>
+				</p>
+				<p style="line-height:26px;font-size:13px;">佣金：<span class="label label-success">{$commiss_state}</span></p>
+				<p style="margin-top:10px;line-height:16px;font-size:12px;color:#9e9696;">
+					备注：1.佣金指社区团购团长提成，团长分销提成，会员分销提成。<br/>
+					2.当佣金“未结算”，本页面操作会重新计算佣金金额，计算公式:商品退款金额占商品可退总金额比重*原来应结佣金<br/>
+					3.所退配送费计算公式=均摊，退款金额/全部商品金额*运费<br/>
+					<span style="color:red;">4.当佣金“已结算”，本页面操作不会影响已经结算的所有佣金。<br/></span>
+					<span style="color:red;">5.已结算后再发生任何退款，所有积分、社区团购团长提成、会员分销提成、团长分销提成、拼团佣金团提成、独立商户可提现，不会再扣除，不发生任何变化。<br/></span>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<input type="hidden" id="real_refund_quantity" name="real_refund_quantity" value="0" />
+				<button class="btn btn-primary btn-order" type="submit" id="ck_opgoodsrefund">提交</button>
+				<button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+var free_tongji = {$free_tongji};
+var shipping_fare = {$shipping_fare};
+var use_score = {$use_score};
+var total_quantity = {$total_quantity};
+var info_quantity = {$order_goods_info['quantity']};
+
+var has_refund_quantity = {$has_refund_quantity};
+var  refund_one_money = {$refund_one_money};
+$(function(){
+
+	$('.ref_goods').click(function(){
+		sum_refund_money_quantity();
+	})
+
+	$('#ck_opgoodsrefund').click(function(){
+
+		var loadingIndex = layer.load();
+		var ck_arr = [];
+
+		$('.ref_goods').each(function(){
+
+			if( $(this).is(':checked') ) {
+				ck_arr.push(1);
+			}
+		})
+
+		if(ck_arr.length <=0 )
+		{
+			layer.msg('请选择退款商品');
+			layer.close(loadingIndex);
+			return false;
+		}
+
+		if(  $('#is_back_sellcount').is(':checked') )
+		{
+			var refund_quantity = $('#refund_quantity').val();
+			refund_quantity = parseInt(refund_quantity);
+
+			if( ck_arr.length <  refund_quantity)
+			{
+				layer.msg('退库存以及销量数量不能大于选中商品数量');
+				layer.close(loadingIndex);
+				return false;
+			}
+			var refund_money = $('#refund_money').val();
+			var refund_money2 = $('#refund_money2').val();
+
+			if(   refund_money - refund_money2 > 0 )
+			{
+				layer.msg('退款金额大于选中商品最多退款金额');
+				layer.close(loadingIndex);
+				return false;
+			}
+		}
+
+		$('#real_refund_quantity').val( ck_arr.length );
+		layer.close(loadingIndex);
+
+	})
+
+	$('#ckall').click(function(){
+		var obj = $(this);
+
+		if( $(obj).is(':checked') )
+		{
+			$(".ref_goods").prop("checked", true);
+		}else{
+			$(".ref_goods").prop("checked", false);
+		}
+		sum_refund_money_quantity();
+	})
+
+	$('#is_refund_shippingfare').click(function(){
+		var ck_count = 0;
+		var ck_arr = [];
+
+		$('.ref_goods').each(function(){
+
+			if( $(this).is(':checked') ) {
+				ck_arr.push(1);
+			}
+		})
+
+		if(ck_arr.length <=0 )
+		{
+			layer.msg('请选择退款商品');
+			return false;
+		}
+
+		ck_count = ck_arr.length;
+
+
+		var refund_count = $('.ref_goods').length;
+		var refund_money_str = $('#refund_money').val();
+
+		var refund_money = parseFloat(refund_money_str);
+
+		if(refund_count > 0)
+		{
+			if($(this).is(':checked')) {
+
+				refund_money = refund_money + (shipping_fare / refund_count) * ck_count;
+
+			}else{
+				refund_money = refund_money - (shipping_fare/refund_count) * ck_count;
+			}
+
+			refund_money = Math.floor( refund_money * 100) / 100;
+
+		}else{
+
+			refund_money = 0;
+		}
+
+		//$('#refund_money').val(refund_money);
+	})
+
+})
+
+
+function sum_refund_money_quantity()
+{
+	var ck_arr = [];
+	var all_refund_count = $('.ref_goods').length;
+	$('.ref_goods').each(function(){
+
+		if( $(this).is(':checked') ) {
+			ck_arr.push(1);
+		}
+	})
+
+	var refund_count = ck_arr.length;
+
+	var can_refund_money =   (refund_count * (free_tongji/total_quantity) ).toFixed(2);
+
+	var can_refund_score = (refund_count * (use_score/info_quantity) ).toFixed(2);
+
+	console.log(can_refund_score);
+	var is_has_refund_deliveryfree = $('#is_has_refund_deliveryfree').val();
+
+	if( $('#is_refund_shippingfare').is(':checked') )
+	{
+		can_refund_money = can_refund_money + parseFloat(shipping_fare);
+
+
+		if( can_refund_money > free_tongji + shipping_fare )
+		{
+			can_refund_money = free_tongji + shipping_fare;
+		}
+
+	}else{
+		if(is_has_refund_deliveryfree == 0){
+			can_refund_money = can_refund_money;
+		}else{
+			can_refund_money = can_refund_money - (shipping_fare/all_refund_count) * refund_count;
+		}
+
+
+		if( can_refund_money > free_tongji )
+		{
+			can_refund_money = free_tongji;
+		}
+	}
+	/*can_refund_money = Math.floor(can_refund_money *100)/100;
+
+	can_refund_score = Math.floor(can_refund_score *100)/100;*/
+
+	can_refund_money = Math.floor(accMul(can_refund_money,100))/100;
+
+	can_refund_score = Math.floor(accMul(can_refund_score,100))/100;
+
+	can_refund_score = parseInt(can_refund_score);
+	if(refund_count == 0){
+		select_shipping_fare  = 0;
+	}else{
+		select_shipping_fare  = shipping_fare - (total_quantity + has_refund_quantity - refund_count) * ( 1/( total_quantity + has_refund_quantity) * shipping_fare).toFixed(2);
+	}
+
+	$('#refund_scorecount').html(can_refund_score);
+	$('#refund_money').val(can_refund_money);
+	$('#refund_money2').val(can_refund_money);
+	$('#refund_quantity').val(refund_count);
+	$('#select_shipping_fare').val(select_shipping_fare);
+
+
+}
+
+function accMul(num1,num2){
+	var m=0,s1=num1.toString(),s2=num2.toString();
+	try{m+=s1.split(".")[1].length}catch(e){};
+	try{m+=s2.split(".")[1].length}catch(e){};
+	return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m);
+}
+
+</script>

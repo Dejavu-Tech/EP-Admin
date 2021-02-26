@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="台州" code="331000">
+<county name="椒江" code="331002">
+    <street name="海门街道" code="331002001" />
+    <street name="白云街道" code="331002002" />
+    <street name="葭沚街道" code="331002003" />
+    <street name="洪家街道" code="331002004" />
+    <street name="三甲街道" code="331002005" />
+    <street name="下陈街道" code="331002006" />
+    <street name="前所街道" code="331002007" />
+    <street name="章安街道" code="331002008" />
+    <street name="大陈镇" code="331002101" />
+    <street name="椒江农场" code="331002400" />
+    <street name="滨海工业区" code="331002401" />
+    <street name="月湖新城" code="331002402" />
+</county>
+<county name="黄岩" code="331003">
+    <street name="东城街道" code="331003001" />
+    <street name="南城街道" code="331003002" />
+    <street name="西城街道" code="331003003" />
+    <street name="北城街道" code="331003004" />
+    <street name="新前街道" code="331003005" />
+    <street name="澄江街道" code="331003006" />
+    <street name="江口街道" code="331003007" />
+    <street name="高桥街道" code="331003008" />
+    <street name="宁溪镇" code="331003101" />
+    <street name="北洋镇" code="331003102" />
+    <street name="头陀镇" code="331003103" />
+    <street name="院桥镇" code="331003107" />
+    <street name="沙埠镇" code="331003108" />
+    <street name="屿头乡" code="331003200" />
+    <street name="上郑乡" code="331003201" />
+    <street name="富山乡" code="331003202" />
+    <street name="茅畲乡" code="331003203" />
+    <street name="上垟乡" code="331003204" />
+    <street name="平田乡" code="331003205" />
+</county>
+<county name="路桥" code="331004">
+    <street name="路南街道" code="331004001" />
+    <street name="路桥街道" code="331004002" />
+    <street name="路北街道" code="331004003" />
+    <street name="螺洋街道" code="331004004" />
+    <street name="桐屿街道" code="331004005" />
+    <street name="峰江街道" code="331004006" />
+    <street name="新桥镇" code="331004103" />
+    <street name="横街镇" code="331004104" />
+    <street name="金清镇" code="331004106" />
+    <street name="蓬街镇" code="331004107" />
+    <street name="滨海工业城" code="331004400" />
+    <street name="滨海新区" code="331004401" />
+</county>
+<county name="玉环" code="331021">
+    <street name="玉城街道" code="331021001" />
+    <street name="坎门街道" code="331021002" />
+    <street name="大麦屿街道" code="331021003" />
+    <street name="清港镇" code="331021101" />
+    <street name="楚门镇" code="331021102" />
+    <street name="干江镇" code="331021103" />
+    <street name="沙门镇" code="331021105" />
+    <street name="芦浦镇" code="331021106" />
+    <street name="龙溪乡" code="331021200" />
+    <street name="鸡山乡" code="331021201" />
+    <street name="海山乡" code="331021202" />
+</county>
+<county name="三门" code="331022">
+    <street name="海游镇" code="331022100" />
+    <street name="沙柳镇" code="331022101" />
+    <street name="珠岙镇" code="331022102" />
+    <street name="亭旁镇" code="331022103" />
+    <street name="六敖镇" code="331022104" />
+    <street name="健跳镇" code="331022105" />
+    <street name="横渡镇" code="331022106" />
+    <street name="浦坝港镇" code="331022107" />
+    <street name="花桥镇" code="331022108" />
+    <street name="小雄镇" code="331022109" />
+    <street name="高枧乡" code="331022200" />
+    <street name="沿赤乡" code="331022203" />
+    <street name="泗淋乡" code="331022204" />
+    <street name="蛇蟠乡" code="331022205" />
+</county>
+<county name="天台" code="331023">
+    <street name="赤城街道" code="331023001" />
+    <street name="始丰街道" code="331023002" />
+    <street name="福溪街道" code="331023003" />
+    <street name="白鹤镇" code="331023101" />
+    <street name="石梁镇" code="331023102" />
+    <street name="街头镇" code="331023104" />
+    <street name="平桥镇" code="331023105" />
+    <street name="坦头镇" code="331023106" />
+    <street name="三合镇" code="331023107" />
+    <street name="洪畴镇" code="331023108" />
+    <street name="三州乡" code="331023200" />
+    <street name="龙溪乡" code="331023203" />
+    <street name="雷峰乡" code="331023204" />
+    <street name="南屏乡" code="331023207" />
+    <street name="泳溪乡" code="331023209" />
+</county>
+<county name="仙居" code="331024">
+    <street name="安洲街道" code="331024001" />
+    <street name="南峰街道" code="331024002" />
+    <street name="福应街道" code="331024003" />
+    <street name="横溪镇" code="331024101" />
+    <street name="埠头镇" code="331024102" />
+    <street name="白塔镇" code="331024103" />
+    <street name="田市镇" code="331024104" />
+    <street name="官路镇" code="331024105" />
+    <street name="下各镇" code="331024106" />
+    <street name="朱溪镇" code="331024107" />
+    <street name="安岭乡" code="331024200" />
+    <street name="溪港乡" code="331024201" />
+    <street name="湫山乡" code="331024202" />
+    <street name="淡竹乡" code="331024203" />
+    <street name="皤滩乡" code="331024204" />
+    <street name="上张乡" code="331024205" />
+    <street name="步路乡" code="331024206" />
+    <street name="广度乡" code="331024207" />
+    <street name="大战乡" code="331024209" />
+    <street name="双庙乡" code="331024210" />
+</county>
+<county name="温岭" code="331081">
+    <street name="太平街道" code="331081001" />
+    <street name="城东街道" code="331081002" />
+    <street name="城西街道" code="331081003" />
+    <street name="城北街道" code="331081004" />
+    <street name="横峰街道" code="331081005" />
+    <street name="泽国镇" code="331081100" />
+    <street name="大溪镇" code="331081101" />
+    <street name="松门镇" code="331081102" />
+    <street name="箬横镇" code="331081103" />
+    <street name="新河镇" code="331081104" />
+    <street name="石塘镇" code="331081105" />
+    <street name="滨海镇" code="331081106" />
+    <street name="温峤镇" code="331081107" />
+    <street name="城南镇" code="331081108" />
+    <street name="石桥头镇" code="331081109" />
+    <street name="坞根镇" code="331081110" />
+    <street name="东部新区" code="331081400" />
+</county>
+<county name="临海" code="331082">
+    <street name="古城街道" code="331082001" />
+    <street name="大洋街道" code="331082002" />
+    <street name="江南街道" code="331082003" />
+    <street name="大田街道" code="331082004" />
+    <street name="邵家渡街道" code="331082005" />
+    <street name="汛桥镇" code="331082100" />
+    <street name="东塍镇" code="331082101" />
+    <street name="汇溪镇" code="331082103" />
+    <street name="小芝镇" code="331082104" />
+    <street name="河头镇" code="331082105" />
+    <street name="白水洋镇" code="331082106" />
+    <street name="括苍镇" code="331082107" />
+    <street name="永丰镇" code="331082108" />
+    <street name="尤溪镇" code="331082109" />
+    <street name="涌泉镇" code="331082110" />
+    <street name="沿江镇" code="331082111" />
+    <street name="杜桥镇" code="331082112" />
+    <street name="上盘镇" code="331082113" />
+    <street name="桃渚镇" code="331082114" />
+</county>
+</city>
+</address>

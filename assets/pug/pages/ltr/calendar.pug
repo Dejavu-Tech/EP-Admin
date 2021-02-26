@@ -1,0 +1,71 @@
+- var dragable_ui           = true;
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var calendar              = true;
+- var page_calendar         = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Calendar
+                                      span
+                                        | Basic
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Apps    
+                                      li.breadcrumb-item User
+                                      li.breadcrumb-item.active Calendar Basic
+                    // Container-fluid starts
+                    .container-fluid
+                      .calendar-wrap
+                        .row
+                          .col-sm-12
+                            .card
+                              .card-header
+                                h5 Basic
+                                span
+                                  | This is the basic example having navigation button to navigate next and previous months and today button. This basic example lists all the events on the calendar.
+                              .card-body
+                                .row
+                                  .col-md-12
+                                    #cal-basic
+                            .card
+                              .card-header
+                                h5 Basic Views
+                                span
+                                  | This is the basic example having navigation buttons as well as month, week and day views. In this example the option to change your view to a basicWeek or basicDay view. In the Basic Week or Basic Day View events are listed all together.
+                              .card-body
+                                .row
+                                  .col-md-12
+                                    #cal-basic-view
+                            .card
+                              .card-header
+                                h5 Agenda Views
+                                span
+                                  | The following example demonstrates agenda views and the defaultView option is set to agendaWeek.
+                              .card-body
+                                .row
+                                  .col-md-12
+                                    #cal-agenda-view
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

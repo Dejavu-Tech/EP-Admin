@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="牡丹江" code="231000">
+<county name="东安" code="231002">
+    <street name="新安街道" code="231002001" />
+    <street name="长安街道" code="231002002" />
+    <street name="七星街道" code="231002003" />
+    <street name="五星街道" code="231002004" />
+    <street name="兴隆街道" code="231002005" />
+</county>
+<county name="阳明" code="231003">
+    <street name="阳明街道" code="231003001" />
+    <street name="前进街道" code="231003002" />
+    <street name="新兴街道" code="231003003" />
+    <street name="桦林橡胶厂街道" code="231003004" />
+    <street name="铁岭镇" code="231003100" />
+    <street name="桦林镇" code="231003101" />
+    <street name="磨刀石镇" code="231003102" />
+    <street name="五林镇" code="231003103" />
+</county>
+<county name="爱民" code="231004">
+    <street name="向阳街道" code="231004001" />
+    <street name="黄花街道" code="231004002" />
+    <street name="铁北街道" code="231004003" />
+    <street name="新华街道" code="231004004" />
+    <street name="大庆街道" code="231004005" />
+    <street name="兴平街道" code="231004006" />
+    <street name="北山街道" code="231004007" />
+    <street name="三道关镇" code="231004100" />
+</county>
+<county name="西安" code="231005">
+    <street name="先锋街道" code="231005001" />
+    <street name="火炬街道" code="231005002" />
+    <street name="立新街道" code="231005003" />
+    <street name="牡丹街道" code="231005004" />
+    <street name="江滨街道" code="231005005" />
+    <street name="沿江街道" code="231005006" />
+    <street name="温春镇" code="231005100" />
+    <street name="海南朝鲜族乡" code="231005201" />
+</county>
+<county name="东宁" code="231024">
+    <street name="东宁镇" code="231024100" />
+    <street name="三岔口镇" code="231024101" />
+    <street name="大肚川镇" code="231024102" />
+    <street name="老黑山镇" code="231024103" />
+    <street name="道河镇" code="231024104" />
+    <street name="绥阳镇" code="231024105" />
+    <street name="绥阳林业局" code="231024400" />
+</county>
+<county name="林口" code="231025">
+    <street name="林口镇" code="231025100" />
+    <street name="古城镇" code="231025101" />
+    <street name="刁翎镇" code="231025102" />
+    <street name="朱家镇" code="231025104" />
+    <street name="柳树镇" code="231025105" />
+    <street name="三道通镇" code="231025106" />
+    <street name="龙爪镇" code="231025107" />
+    <street name="莲花镇" code="231025108" />
+    <street name="奎山乡" code="231025200" />
+    <street name="青山乡" code="231025201" />
+    <street name="建堂乡" code="231025202" />
+    <street name="林口林业局" code="231025400" />
+</county>
+<county name="绥芬河" code="231081">
+    <street name="绥芬河镇" code="231081100" />
+    <street name="阜宁镇" code="231081101" />
+</county>
+<county name="海林" code="231083">
+    <street name="海林镇" code="231083100" />
+    <street name="长汀镇" code="231083101" />
+    <street name="横道镇" code="231083102" />
+    <street name="山市镇" code="231083103" />
+    <street name="柴河镇" code="231083104" />
+    <street name="二道镇" code="231083105" />
+    <street name="新安朝鲜族镇" code="231083106" />
+    <street name="三道镇" code="231083107" />
+    <street name="牡林工程公司街道" code="231083400" />
+    <street name="柴河林机厂街道" code="231083401" />
+    <street name="大海林林业局" code="231083402" />
+    <street name="海林林业局" code="231083403" />
+    <street name="柴河林业局" code="231083404" />
+    <street name="海林农场" code="231083500" />
+    <street name="山市种奶牛场" code="231083501" />
+</county>
+<county name="宁安" code="231084">
+    <street name="城区街道" code="231084001" />
+    <street name="宁安镇" code="231084100" />
+    <street name="东京城镇" code="231084101" />
+    <street name="渤海镇" code="231084102" />
+    <street name="石岩镇" code="231084103" />
+    <street name="沙兰镇" code="231084104" />
+    <street name="海浪镇" code="231084105" />
+    <street name="兰岗镇" code="231084106" />
+    <street name="江南朝鲜族满族乡" code="231084202" />
+    <street name="卧龙朝鲜族乡" code="231084206" />
+    <street name="马河乡" code="231084208" />
+    <street name="镜泊乡" code="231084210" />
+    <street name="三陵乡" code="231084211" />
+    <street name="东京城林业局" code="231084400" />
+    <street name="宁安农场" code="231084500" />
+</county>
+<county name="穆棱" code="231085">
+    <street name="八面通镇" code="231085100" />
+    <street name="穆棱镇" code="231085101" />
+    <street name="下城子镇" code="231085102" />
+    <street name="马桥河镇" code="231085103" />
+    <street name="兴源镇" code="231085104" />
+    <street name="福录乡" code="231085200" />
+    <street name="河西乡" code="231085201" />
+    <street name="共和乡" code="231085202" />
+    <street name="八面通林业局" code="231085400" />
+    <street name="穆棱林业局" code="231085401" />
+</county>
+</city>
+</address>

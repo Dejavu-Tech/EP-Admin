@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="滁州" code="341100">
+<county name="琅琊" code="341102">
+    <street name="琅琊街道" code="341102001" />
+    <street name="东门街道" code="341102002" />
+    <street name="西门街道" code="341102003" />
+    <street name="南门街道" code="341102004" />
+    <street name="北门街道" code="341102005" />
+    <street name="清流街道" code="341102006" />
+    <street name="扬子街道" code="341102007" />
+    <street name="凤凰街道办事处（滁州市开发区）" code="341102008" />
+    <street name="城北新区办事处" code="341102009" />
+    <street name="西涧街道" code="341102010" />
+    <street name="安徽滁州琅琊经济开发区" code="341102400" />
+    <street name="滁州市经济技术开发区" code="341102401" />
+</county>
+<county name="南谯" code="341103">
+    <street name="大王街道" code="341103002" />
+    <street name="龙蟠街道" code="341103003" />
+    <street name="乌衣镇" code="341103100" />
+    <street name="沙河镇" code="341103101" />
+    <street name="章广镇" code="341103102" />
+    <street name="黄泥岗镇" code="341103103" />
+    <street name="珠龙镇" code="341103104" />
+    <street name="大柳镇" code="341103105" />
+    <street name="腰铺镇" code="341103106" />
+    <street name="施集镇" code="341103107" />
+    <street name="南谯工业园区" code="341103400" />
+</county>
+<county name="来安" code="341122">
+    <street name="新安镇" code="341122100" />
+    <street name="半塔镇" code="341122101" />
+    <street name="水口镇" code="341122102" />
+    <street name="汊河镇" code="341122103" />
+    <street name="大英镇" code="341122104" />
+    <street name="雷官镇" code="341122105" />
+    <street name="施官镇" code="341122106" />
+    <street name="舜山镇" code="341122107" />
+    <street name="三城乡" code="341122200" />
+    <street name="独山乡" code="341122201" />
+    <street name="张山乡" code="341122202" />
+    <street name="杨郢乡" code="341122203" />
+</county>
+<county name="全椒" code="341124">
+    <street name="襄河镇" code="341124100" />
+    <street name="古河镇" code="341124101" />
+    <street name="大墅镇" code="341124102" />
+    <street name="二郎口镇" code="341124103" />
+    <street name="武岗镇" code="341124104" />
+    <street name="马厂镇" code="341124105" />
+    <street name="石沛镇" code="341124106" />
+    <street name="十字镇" code="341124107" />
+    <street name="西王镇" code="341124108" />
+    <street name="六镇镇" code="341124109" />
+</county>
+<county name="定远" code="341125">
+    <street name="定城镇" code="341125100" />
+    <street name="炉桥镇" code="341125101" />
+    <street name="永康镇" code="341125102" />
+    <street name="吴圩镇" code="341125103" />
+    <street name="朱湾镇" code="341125104" />
+    <street name="张桥镇" code="341125105" />
+    <street name="藕塘镇" code="341125106" />
+    <street name="池河镇" code="341125107" />
+    <street name="连江镇" code="341125108" />
+    <street name="界牌集镇" code="341125109" />
+    <street name="仓镇" code="341125110" />
+    <street name="三和集镇" code="341125111" />
+    <street name="西卅店镇" code="341125112" />
+    <street name="桑涧镇" code="341125113" />
+    <street name="蒋集镇" code="341125114" />
+    <street name="大桥镇" code="341125115" />
+    <street name="严桥乡" code="341125200" />
+    <street name="拂晓乡" code="341125201" />
+    <street name="能仁乡" code="341125202" />
+    <street name="七里塘乡" code="341125203" />
+    <street name="二龙回族乡" code="341125204" />
+    <street name="范岗乡" code="341125205" />
+    <street name="定远县工业园区" code="341125400" />
+    <street name="定远盐化工业园" code="341125401" />
+    <street name="凌家湖农场" code="341125500" />
+</county>
+<county name="凤阳" code="341126">
+    <street name="府城镇" code="341126100" />
+    <street name="临淮镇" code="341126101" />
+    <street name="武店镇" code="341126102" />
+    <street name="西泉镇" code="341126103" />
+    <street name="官塘镇" code="341126104" />
+    <street name="刘府镇" code="341126105" />
+    <street name="大庙镇" code="341126106" />
+    <street name="殷涧镇" code="341126107" />
+    <street name="总铺镇" code="341126108" />
+    <street name="红心镇" code="341126109" />
+    <street name="板桥镇" code="341126110" />
+    <street name="大溪河镇" code="341126111" />
+    <street name="小溪河镇" code="341126112" />
+    <street name="枣巷镇" code="341126113" />
+    <street name="黄湾乡" code="341126201" />
+    <street name="凤阳县工业园区" code="341126400" />
+    <street name="安徽凤阳硅工业园区" code="341126401" />
+</county>
+<county name="天长" code="341181">
+    <street name="天长街道" code="341181001" />
+    <street name="铜城镇" code="341181100" />
+    <street name="汊涧镇" code="341181101" />
+    <street name="秦栏镇" code="341181102" />
+    <street name="大通镇" code="341181103" />
+    <street name="杨村镇" code="341181104" />
+    <street name="石梁镇" code="341181105" />
+    <street name="金集镇" code="341181106" />
+    <street name="永丰镇" code="341181107" />
+    <street name="仁和集镇" code="341181108" />
+    <street name="冶山镇" code="341181109" />
+    <street name="郑集镇" code="341181110" />
+    <street name="张铺镇" code="341181111" />
+    <street name="新街镇" code="341181112" />
+    <street name="万寿镇" code="341181113" />
+    <street name="城东新区" code="341181400" />
+    <street name="安徽省大圹圩农场" code="341181500" />
+</county>
+<county name="明光" code="341182">
+    <street name="明光街道" code="341182001" />
+    <street name="明东街道" code="341182002" />
+    <street name="明南街道" code="341182003" />
+    <street name="明西街道" code="341182004" />
+    <street name="张八岭镇" code="341182100" />
+    <street name="三界镇" code="341182101" />
+    <street name="管店镇" code="341182102" />
+    <street name="自来桥镇" code="341182103" />
+    <street name="涧溪镇" code="341182104" />
+    <street name="石坝镇" code="341182105" />
+    <street name="苏巷镇" code="341182106" />
+    <street name="桥头镇" code="341182107" />
+    <street name="女山湖镇" code="341182108" />
+    <street name="古沛镇" code="341182109" />
+    <street name="潘村镇" code="341182110" />
+    <street name="柳巷镇" code="341182111" />
+    <street name="泊岗乡" code="341182200" />
+</county>
+</city>
+</address>

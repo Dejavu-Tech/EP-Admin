@@ -1,0 +1,66 @@
+<div style='max-height:500px;overflow:auto;overflow-x:hidden;min-width:850px;'>
+	<div class="input-group row" style="margin:10px;">
+		<input type="text" placeholder="请输入名称进行搜索" id="select-url-kw" value="" class="form-control">
+		<div class="input-group-append" data-type="url"><span class="btn btn-primary select-btn">搜索5</span></div>
+	</div>
+<table class="display supplyquery" style="width:100%;">
+    <tbody>
+        <?php foreach( $need_data as $row ){ ?>
+        <tr>
+            <td>{$row['community_name']}</td>
+			<td>{$row['head_name']}</td>
+			<td>{$row['head_mobile']}</td>
+            <td>{$row['fullAddress']}</td>
+            <td style="white-space:nowrap;text-align: right;"><a href="javascript:;" class="choose_dan_head1" data-json='{:json_encode($row);}'>选择2</a></td>
+        </tr>
+        <?php } ?>
+        <?php if(count($need_data)<=0){ ?>
+        <tr>
+            <td colspan='4' align='center'>未找到可分配的小区</td>
+        </tr>
+        <?php } ?>
+    </tbody>
+</table>
+</div>
+<style>
+.supplyquery td{padding-left:5px;}
+</style>
+<script>
+var query_kwd = '{$kwd}';
+var query_url = "{:U('communityhead/lineheadquery', array('is_delivery' => 1 ))}";
+var can_next = true;
+$(".select-btn").click(function(){
+
+	query_kwd = $.trim($("#select-url-kw").val());
+
+
+	if(!can_next)
+	{
+		return false;
+	}
+	can_next = false;
+	$.ajax({
+		url:query_url,
+		type:'post',
+		dataType:'json',
+		data:{keyword:query_kwd,is_ajax:1},
+		success:function(ret){
+			if(ret.code == 0)
+			{
+				$('.supplyquery tbody').html(ret.html);
+			//	$('#pager_ajax').html(ret.pager);
+			}
+			can_next = true;
+		}
+	})
+});
+
+ $(document).undelegate(".choose_dan_head","click").delegate(".choose_dan_head","click",function(){
+	var json_obj = JSON.parse($(this).attr('data-json'));
+
+	$('#head_dan_name').val(json_obj.community_name);
+	$('#head_dan_id').val(json_obj.id);
+
+	layer.close(layer.index);
+});
+</script>

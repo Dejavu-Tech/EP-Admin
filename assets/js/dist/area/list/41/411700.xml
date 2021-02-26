@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="驻马店" code="411700">
+<county name="驿城" code="411702">
+    <street name="人民街道" code="411702001" />
+    <street name="东风街道" code="411702002" />
+    <street name="西园街道" code="411702003" />
+    <street name="新华街道" code="411702004" />
+    <street name="南海街道" code="411702005" />
+    <street name="老街街道" code="411702006" />
+    <street name="橡林街道" code="411702007" />
+    <street name="雪松街道" code="411702008" />
+    <street name="顺河街道" code="411702009" />
+    <street name="刘阁街道" code="411702010" />
+    <street name="香山街道" code="411702011" />
+    <street name="水屯镇" code="411702100" />
+    <street name="沙河店镇" code="411702101" />
+    <street name="板桥镇" code="411702102" />
+    <street name="诸市镇" code="411702103" />
+    <street name="蚁蜂镇" code="411702104" />
+    <street name="老河乡" code="411702201" />
+    <street name="朱古洞乡" code="411702204" />
+    <street name="胡庙乡" code="411702205" />
+    <street name="古城乡" code="411702206" />
+    <street name="关王庙乡" code="411702360" />
+    <street name="金河街道" code="411702560" />
+    <street name="金桥街道" code="411702561" />
+    <street name="金山街道" code="411702562" />
+    <street name="开源办事处" code="411702563" />
+</county>
+<county name="西平" code="411721">
+    <street name="柏城街道" code="411721001" />
+    <street name="柏亭街道" code="411721002" />
+    <street name="柏苑街道" code="411721003" />
+    <street name="五沟营镇" code="411721101" />
+    <street name="权寨镇" code="411721102" />
+    <street name="师灵镇" code="411721103" />
+    <street name="出山镇" code="411721104" />
+    <street name="盆尧镇" code="411721105" />
+    <street name="重渠乡" code="411721201" />
+    <street name="人和乡" code="411721203" />
+    <street name="宋集乡" code="411721204" />
+    <street name="谭店乡" code="411721205" />
+    <street name="吕店乡" code="411721206" />
+    <street name="芦庙乡" code="411721208" />
+    <street name="杨庄乡" code="411721209" />
+    <street name="专探乡" code="411721210" />
+    <street name="二郎乡" code="411721211" />
+    <street name="蔡寨回族乡" code="411721212" />
+    <street name="焦庄乡" code="411721213" />
+    <street name="老王坡农场" code="411721500" />
+    <street name="产业集聚区" code="411721501" />
+</county>
+<county name="上蔡" code="411722">
+    <street name="蔡都街道" code="411722001" />
+    <street name="芦岗街道" code="411722002" />
+    <street name="重阳街道" code="411722003" />
+    <street name="卧龙街道" code="411722004" />
+    <street name="黄埠镇" code="411722101" />
+    <street name="杨集镇" code="411722102" />
+    <street name="洙湖镇" code="411722103" />
+    <street name="党店镇" code="411722104" />
+    <street name="朱里镇" code="411722105" />
+    <street name="华陂镇" code="411722106" />
+    <street name="塔桥镇" code="411722107" />
+    <street name="东洪镇" code="411722108" />
+    <street name="邵店镇" code="411722109" />
+    <street name="大路李乡" code="411722201" />
+    <street name="无量寺乡" code="411722202" />
+    <street name="五龙乡" code="411722204" />
+    <street name="杨屯乡" code="411722205" />
+    <street name="和店乡" code="411722206" />
+    <street name="蔡沟乡" code="411722207" />
+    <street name="齐海乡" code="411722209" />
+    <street name="崇礼乡" code="411722210" />
+    <street name="韩寨乡" code="411722211" />
+    <street name="东岸乡" code="411722212" />
+    <street name="小岳寺乡" code="411722215" />
+    <street name="西洪乡" code="411722216" />
+    <street name="百尺乡" code="411722217" />
+</county>
+<county name="平舆" code="411723">
+    <street name="古槐街道" code="411723001" />
+    <street name="清河街道" code="411723002" />
+    <street name="东皇街道" code="411723003" />
+    <street name="杨埠镇" code="411723101" />
+    <street name="东和店镇" code="411723102" />
+    <street name="庙湾镇" code="411723103" />
+    <street name="射桥镇" code="411723104" />
+    <street name="西洋店镇" code="411723105" />
+    <street name="阳城镇" code="411723106" />
+    <street name="郭楼镇" code="411723107" />
+    <street name="李屯镇" code="411723108" />
+    <street name="万金店镇" code="411723109" />
+    <street name="高杨店镇" code="411723110" />
+    <street name="万冢镇" code="411723111" />
+    <street name="十字路乡" code="411723202" />
+    <street name="玉皇庙乡" code="411723205" />
+    <street name="老王岗乡" code="411723208" />
+    <street name="辛店乡" code="411723209" />
+    <street name="双庙乡" code="411723211" />
+</county>
+<county name="正阳" code="411724">
+    <street name="真阳镇" code="411724100" />
+    <street name="寒冻镇" code="411724101" />
+    <street name="汝南埠镇" code="411724102" />
+    <street name="铜钟镇" code="411724103" />
+    <street name="陡沟镇" code="411724104" />
+    <street name="熊寨镇" code="411724105" />
+    <street name="大林镇" code="411724106" />
+    <street name="永兴镇" code="411724107" />
+    <street name="慎水乡" code="411724200" />
+    <street name="傅寨乡" code="411724201" />
+    <street name="袁寨乡" code="411724202" />
+    <street name="新阮店乡" code="411724203" />
+    <street name="油坊店乡" code="411724204" />
+    <street name="雷寨乡" code="411724207" />
+    <street name="王勿桥乡" code="411724208" />
+    <street name="吕河乡" code="411724210" />
+    <street name="皮店乡" code="411724212" />
+    <street name="彭桥乡" code="411724213" />
+    <street name="兰青乡" code="411724214" />
+</county>
+<county name="确山" code="411725">
+    <street name="盘龙街道" code="411725100" />
+    <street name="竹沟镇" code="411725101" />
+    <street name="任店镇" code="411725102" />
+    <street name="新安店镇" code="411725103" />
+    <street name="留庄镇" code="411725104" />
+    <street name="刘店镇" code="411725105" />
+    <street name="瓦岗镇" code="411725107" />
+    <street name="双河镇" code="411725108" />
+    <street name="石滚河镇" code="411725109" />
+    <street name="李新店镇" code="411725110" />
+    <street name="三里河街道" code="411725200" />
+    <street name="普会寺乡" code="411725209" />
+</county>
+<county name="泌阳" code="411726">
+    <street name="花园街道" code="411726001" />
+    <street name="泌水街道" code="411726002" />
+    <street name="古城街道" code="411726003" />
+    <street name="羊册镇" code="411726102" />
+    <street name="马谷田镇" code="411726103" />
+    <street name="春水镇" code="411726105" />
+    <street name="官庄镇" code="411726106" />
+    <street name="赊湾镇" code="411726107" />
+    <street name="郭集镇" code="411726108" />
+    <street name="泰山庙镇" code="411726109" />
+    <street name="王店镇" code="411726110" />
+    <street name="高店乡" code="411726200" />
+    <street name="盘古乡" code="411726201" />
+    <street name="高邑乡" code="411726202" />
+    <street name="铜山乡" code="411726204" />
+    <street name="下碑寺乡" code="411726206" />
+    <street name="象河乡" code="411726207" />
+    <street name="付庄乡" code="411726208" />
+    <street name="贾楼乡" code="411726209" />
+    <street name="黄山口乡" code="411726210" />
+    <street name="杨家集乡" code="411726214" />
+    <street name="双庙街乡" code="411726215" />
+    <street name="工业园区管委会" code="411726400" />
+    <street name="石材开发区管委会" code="411726401" />
+</county>
+<county name="汝南" code="411727">
+    <street name="汝宁街道" code="411727001" />
+    <street name="三门闸街道" code="411727002" />
+    <street name="古塔街道" code="411727003" />
+    <street name="王岗镇" code="411727101" />
+    <street name="梁祝镇" code="411727102" />
+    <street name="和孝镇" code="411727103" />
+    <street name="老君庙镇" code="411727104" />
+    <street name="留盆镇" code="411727105" />
+    <street name="金铺镇" code="411727106" />
+    <street name="东官庄镇" code="411727107" />
+    <street name="常兴镇" code="411727108" />
+    <street name="罗店镇" code="411727109" />
+    <street name="韩庄镇" code="411727110" />
+    <street name="三桥镇" code="411727111" />
+    <street name="张楼镇" code="411727112" />
+    <street name="南余店乡" code="411727204" />
+    <street name="板店乡" code="411727212" />
+</county>
+<county name="遂平" code="411728">
+    <street name="瞿阳街道" code="411728001" />
+    <street name="车站街道" code="411728002" />
+    <street name="莲花湖街道" code="411728003" />
+    <street name="玉山镇" code="411728102" />
+    <street name="查岈山镇" code="411728103" />
+    <street name="石寨铺镇" code="411728104" />
+    <street name="和兴镇" code="411728105" />
+    <street name="沈寨镇" code="411728106" />
+    <street name="阳丰镇" code="411728107" />
+    <street name="常庄镇" code="411728108" />
+    <street name="花庄镇" code="411728109" />
+    <street name="槐树乡" code="411728204" />
+    <street name="文城乡" code="411728209" />
+    <street name="褚堂乡" code="411728211" />
+    <street name="工业园区" code="411728400" />
+    <street name="查岈山风景区" code="411728500" />
+    <street name="凤鸣谷风景区" code="411728501" />
+</county>
+<county name="新蔡" code="411729">
+    <street name="古吕街道" code="411729001" />
+    <street name="今是街道" code="411729002" />
+    <street name="月亮湾街道" code="411729003" />
+    <street name="砖店镇" code="411729101" />
+    <street name="陈店镇" code="411729102" />
+    <street name="佛阁寺镇" code="411729103" />
+    <street name="练村镇" code="411729104" />
+    <street name="棠村镇" code="411729105" />
+    <street name="韩集镇" code="411729106" />
+    <street name="龙口镇" code="411729107" />
+    <street name="李桥回族镇" code="411729108" />
+    <street name="黄楼镇" code="411729109" />
+    <street name="孙召镇" code="411729110" />
+    <street name="余店镇" code="411729111" />
+    <street name="河坞乡" code="411729204" />
+    <street name="关津乡" code="411729205" />
+    <street name="宋岗乡" code="411729206" />
+    <street name="顿岗乡" code="411729207" />
+    <street name="涧头乡" code="411729208" />
+    <street name="杨庄户乡" code="411729209" />
+    <street name="化庄乡" code="411729210" />
+    <street name="栎城乡" code="411729211" />
+    <street name="弥陀寺乡" code="411729213" />
+</county>
+</city>
+</address>

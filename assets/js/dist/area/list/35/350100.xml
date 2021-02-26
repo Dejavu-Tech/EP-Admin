@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="福州" code="350100">
+<county name="鼓楼" code="350102">
+    <street name="鼓东街道" code="350102001" />
+    <street name="鼓西街道" code="350102002" />
+    <street name="温泉街道" code="350102003" />
+    <street name="东街街道" code="350102004" />
+    <street name="南街街道" code="350102005" />
+    <street name="安泰街道" code="350102006" />
+    <street name="华大街道" code="350102007" />
+    <street name="水部街道" code="350102008" />
+    <street name="五凤街道" code="350102009" />
+    <street name="洪山镇" code="350102100" />
+</county>
+<county name="台江" code="350103">
+    <street name="瀛洲街道" code="350103001" />
+    <street name="后洲街道" code="350103002" />
+    <street name="义洲街道" code="350103003" />
+    <street name="新港街道" code="350103004" />
+    <street name="上海街道" code="350103005" />
+    <street name="苍霞街道" code="350103007" />
+    <street name="茶亭街道" code="350103009" />
+    <street name="洋中街道" code="350103010" />
+    <street name="鳌峰街道" code="350103011" />
+    <street name="宁化街道" code="350103012" />
+</county>
+<county name="仓山" code="350104">
+    <street name="仓前街道" code="350104001" />
+    <street name="东升街道" code="350104002" />
+    <street name="对湖街道" code="350104003" />
+    <street name="临江街道" code="350104004" />
+    <street name="三叉街街道" code="350104005" />
+    <street name="上渡街道" code="350104006" />
+    <street name="下渡街道" code="350104007" />
+    <street name="金山街道" code="350104008" />
+    <street name="仓山镇" code="350104100" />
+    <street name="城门镇" code="350104101" />
+    <street name="盖山镇" code="350104102" />
+    <street name="建新镇" code="350104103" />
+    <street name="螺洲镇" code="350104104" />
+    <street name="红星农场" code="350104400" />
+</county>
+<county name="马尾" code="350105">
+    <street name="罗星街道" code="350105001" />
+    <street name="马尾镇" code="350105100" />
+    <street name="亭江镇" code="350105101" />
+    <street name="琅岐镇" code="350105102" />
+</county>
+<county name="晋安" code="350111">
+    <street name="茶园街道" code="350111001" />
+    <street name="王庄街道" code="350111002" />
+    <street name="象园街道" code="350111003" />
+    <street name="鼓山镇" code="350111100" />
+    <street name="新店镇" code="350111101" />
+    <street name="岳峰镇" code="350111102" />
+    <street name="宦溪镇" code="350111103" />
+    <street name="寿山乡" code="350111201" />
+    <street name="日溪乡" code="350111202" />
+</county>
+<county name="闽侯" code="350121">
+    <street name="甘蔗街道" code="350121001" />
+    <street name="白沙镇" code="350121101" />
+    <street name="南屿镇" code="350121102" />
+    <street name="尚干镇" code="350121103" />
+    <street name="祥谦镇" code="350121104" />
+    <street name="青口镇" code="350121105" />
+    <street name="南通镇" code="350121106" />
+    <street name="上街镇" code="350121107" />
+    <street name="荆溪镇" code="350121108" />
+    <street name="竹岐乡" code="350121200" />
+    <street name="鸿尾乡" code="350121201" />
+    <street name="洋里乡" code="350121202" />
+    <street name="大湖乡" code="350121203" />
+    <street name="廷坪乡" code="350121204" />
+    <street name="小箬乡" code="350121206" />
+    <street name="江洋农场" code="350121400" />
+</county>
+<county name="连江" code="350122">
+    <street name="凤城镇" code="350122100" />
+    <street name="敖江镇" code="350122101" />
+    <street name="东岱镇" code="350122102" />
+    <street name="琯头镇" code="350122103" />
+    <street name="晓澳镇" code="350122104" />
+    <street name="东湖镇" code="350122105" />
+    <street name="丹阳镇" code="350122106" />
+    <street name="长龙镇" code="350122107" />
+    <street name="透堡镇" code="350122108" />
+    <street name="马鼻镇" code="350122109" />
+    <street name="官坂镇" code="350122110" />
+    <street name="筱埕镇" code="350122111" />
+    <street name="黄岐镇" code="350122112" />
+    <street name="苔菉镇" code="350122113" />
+    <street name="浦口镇" code="350122114" />
+    <street name="坑园镇" code="350122115" />
+    <street name="潘渡乡" code="350122200" />
+    <street name="江南乡" code="350122201" />
+    <street name="蓼沿乡" code="350122202" />
+    <street name="安凯乡" code="350122203" />
+    <street name="下宫乡" code="350122204" />
+    <street name="小沧畲族乡" code="350122205" />
+    <street name="马祖乡" code="350122400" />
+</county>
+<county name="罗源" code="350123">
+    <street name="凤山镇" code="350123100" />
+    <street name="松山镇" code="350123101" />
+    <street name="起步镇" code="350123102" />
+    <street name="中房镇" code="350123103" />
+    <street name="飞竹镇" code="350123104" />
+    <street name="鉴江镇" code="350123105" />
+    <street name="白塔乡" code="350123200" />
+    <street name="洪洋乡" code="350123201" />
+    <street name="西兰乡" code="350123202" />
+    <street name="霍口畲族乡" code="350123203" />
+    <street name="碧里乡" code="350123204" />
+    <street name="罗源湾" code="350123500" />
+</county>
+<county name="闽清" code="350124">
+    <street name="梅城镇" code="350124100" />
+    <street name="梅溪镇" code="350124101" />
+    <street name="白樟镇" code="350124102" />
+    <street name="金沙镇" code="350124103" />
+    <street name="白中镇" code="350124104" />
+    <street name="池园镇" code="350124105" />
+    <street name="坂东镇" code="350124106" />
+    <street name="塔庄镇" code="350124107" />
+    <street name="省璜镇" code="350124108" />
+    <street name="雄江镇" code="350124109" />
+    <street name="东桥镇" code="350124110" />
+    <street name="云龙乡" code="350124200" />
+    <street name="上莲乡" code="350124201" />
+    <street name="三溪乡" code="350124204" />
+    <street name="桔林乡" code="350124205" />
+    <street name="下祝乡" code="350124206" />
+</county>
+<county name="永泰" code="350125">
+    <street name="樟城镇" code="350125100" />
+    <street name="嵩口镇" code="350125101" />
+    <street name="梧桐镇" code="350125102" />
+    <street name="葛岭镇" code="350125103" />
+    <street name="城峰镇" code="350125104" />
+    <street name="清凉镇" code="350125105" />
+    <street name="长庆镇" code="350125106" />
+    <street name="同安镇" code="350125107" />
+    <street name="大洋镇" code="350125108" />
+    <street name="塘前乡" code="350125200" />
+    <street name="富泉乡" code="350125201" />
+    <street name="岭路乡" code="350125202" />
+    <street name="赤锡乡" code="350125203" />
+    <street name="洑口乡" code="350125204" />
+    <street name="盖洋乡" code="350125205" />
+    <street name="东洋乡" code="350125206" />
+    <street name="霞拔乡" code="350125207" />
+    <street name="盘谷乡" code="350125208" />
+    <street name="红星乡" code="350125209" />
+    <street name="白云乡" code="350125210" />
+    <street name="丹云乡" code="350125211" />
+</county>
+<county name="平潭" code="350128">
+    <street name="潭城镇" code="350128100" />
+    <street name="苏澳镇" code="350128101" />
+    <street name="流水镇" code="350128102" />
+    <street name="澳前镇" code="350128103" />
+    <street name="北厝镇" code="350128104" />
+    <street name="平原镇" code="350128105" />
+    <street name="敖东镇" code="350128106" />
+    <street name="白青乡" code="350128200" />
+    <street name="屿头乡" code="350128201" />
+    <street name="大练乡" code="350128202" />
+    <street name="芦洋乡" code="350128203" />
+    <street name="中楼乡" code="350128204" />
+    <street name="东庠乡" code="350128205" />
+    <street name="岚城乡" code="350128206" />
+    <street name="南海乡" code="350128207" />
+</county>
+<county name="福清" code="350181">
+    <street name="玉屏街道" code="350181002" />
+    <street name="龙山街道" code="350181003" />
+    <street name="龙江街道" code="350181004" />
+    <street name="宏路街道" code="350181005" />
+    <street name="石竹街道" code="350181006" />
+    <street name="音西街道" code="350181007" />
+    <street name="阳下街道" code="350181008" />
+    <street name="海口镇" code="350181103" />
+    <street name="城头镇" code="350181104" />
+    <street name="南岭镇" code="350181105" />
+    <street name="龙田镇" code="350181106" />
+    <street name="江镜镇" code="350181107" />
+    <street name="港头镇" code="350181108" />
+    <street name="高山镇" code="350181109" />
+    <street name="沙埔镇" code="350181110" />
+    <street name="三山镇" code="350181111" />
+    <street name="东瀚镇" code="350181112" />
+    <street name="渔溪镇" code="350181113" />
+    <street name="上迳镇" code="350181114" />
+    <street name="新厝镇" code="350181115" />
+    <street name="江阴镇" code="350181116" />
+    <street name="东张镇" code="350181117" />
+    <street name="镜洋镇" code="350181118" />
+    <street name="一都镇" code="350181119" />
+    <street name="江镜华侨" code="350181400" />
+    <street name="东阁华侨" code="350181401" />
+</county>
+<county name="长乐" code="350182">
+    <street name="吴航街道" code="350182001" />
+    <street name="航城街道" code="350182002" />
+    <street name="营前街道" code="350182003" />
+    <street name="漳港街道" code="350182004" />
+    <street name="首占镇" code="350182102" />
+    <street name="玉田镇" code="350182103" />
+    <street name="松下镇" code="350182104" />
+    <street name="江田镇" code="350182105" />
+    <street name="古槐镇" code="350182106" />
+    <street name="文武砂镇" code="350182107" />
+    <street name="鹤上镇" code="350182108" />
+    <street name="湖南镇" code="350182110" />
+    <street name="金峰镇" code="350182111" />
+    <street name="文岭镇" code="350182112" />
+    <street name="梅花镇" code="350182113" />
+    <street name="潭头镇" code="350182114" />
+    <street name="罗联乡" code="350182200" />
+    <street name="猴屿乡" code="350182201" />
+</county>
+</city>
+</address>

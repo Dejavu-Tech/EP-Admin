@@ -1,0 +1,395 @@
+/**=====================
+    58. Steps  CSS Start
+==========================**/
+.u-steps {
+  margin: 0;
+}
+.u-step {
+  position: relative;
+  padding: 12px 20px;
+  margin: 0;
+  font-size: inherit;
+  color: #a3afb7;
+  vertical-align: top;
+  background-color: $light-color;
+  border-radius: 0;
+}
+.u-step-icon {
+  float: left;
+  margin-right: .5em;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.u-step-number {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+  color: $white;
+  text-align: center;
+  background: #ced7da;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: $font-work-sans, $font-serif, "PingFang SC";
+  ~ .u-step-desc {
+    min-height: 40px;
+    margin-left: 50px;
+  }
+}
+.u-step-title {
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #526069;
+}
+
+.u-step-desc {
+  text-align: left;
+  p {
+    margin-bottom: 0;
+  }
+}
+.u-steps-vertical {
+  flex-direction: column;
+}
+.u-step {
+  &.active, &.current {
+    color: $white;
+    background-color: $primary-color;
+  }
+  &.active .u-step-title, &.current .u-step-title {
+    color: $white;
+  }
+  &.active .u-step-number, &.current .u-step-number {
+    color: $primary-color;
+    background-color: $white;
+  }
+  &.disabled {
+    color: $light-gray;
+    pointer-events: none;
+    cursor: auto;
+    .u-step-title {
+      color: $light-gray;
+    }
+    .u-step-number {
+      background-color: $light-gray;
+    }
+  }
+  &.error {
+    color: $white;
+    background-color: $danger-color;
+    .u-step-title {
+      color: $white;
+    }
+    .u-step-number {
+      color: $danger-color;
+      background-color: $white;
+    }
+  }
+  &.done {
+    color: $white;
+    background-color: $success-color;
+    .u-step-title {
+      color: $white;
+    }
+    .u-step-number {
+      color: $success-color;
+      background-color: $white;
+    }
+  }
+}
+
+.u-steps-lg {
+  .u-step {
+    font-size: 16px;
+  }
+  .u-step-icon, .u-step-title {
+    font-size: 22px;
+  }
+  .u-step-number {
+    width: 46px;
+    height: 46px;
+    font-size: 28px;
+    line-height: 46px;
+    ~ .u-step-desc {
+      min-height: 46px;
+      margin-left: 56px;
+    }
+  }
+}
+.u-steps-sm {
+  .u-step {
+    font-size: 12px;
+  }
+  .u-step-icon, .u-step-title {
+    font-size: 18px;
+  }
+  .u-step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30px;
+    ~ .u-step-desc {
+      min-height: 30px;
+      margin-left: 40px;
+    }
+  }
+}
+
+.u-steps-xs {
+  .u-step {
+    font-size: 10px;
+  }
+  .u-step-icon, .u-step-title {
+    font-size: 16px;
+  }
+  .u-step-number {
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    ~ .u-step-desc {
+      min-height: 24px;
+      margin-left: 34px;
+    }
+  }
+}
+
+.u-pearl {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  &:after {
+    position: absolute;
+    top: 18px;
+    z-index: 0;
+    width: 50%;
+    height: 4px;
+    content: "";
+    background-color: $light-color;
+  }
+  &:before {
+    position: absolute;
+    top: 18px;
+    z-index: 0;
+    width: 50%;
+    height: 4px;
+    content: "";
+    background-color: $light-color;
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+  &:first-child:before, &:last-child:after {
+    display: none !important;
+  }
+}
+
+.u-pearl-icon {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 32px;
+  color: $white;
+  text-align: center;
+  background: $light-gray;
+  border: 2px solid $light-gray;
+  border-radius: 50%;
+  i{
+    position: absolute;
+    top:7px;
+    left: 8px;
+  }
+  .icon-check{
+    left: 7px;
+  }
+}
+
+.u-pearl-number {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 32px;
+  color: $white;
+  text-align: center;
+  background: $light-gray;
+  border: 2px solid $light-gray;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.u-pearl-icon {
+  font-size: 18px;
+}
+
+.u-pearl-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  margin-top: .5em;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #526069;
+}
+
+.u-pearl {
+  &.active {
+    &:after, &:before {
+      background-color: $primary-color;
+    }
+  }
+  &.current {
+    &:after, &:before {
+      background-color: $primary-color !important;
+    }
+  }
+  &.active {
+    .u-pearl-icon, .u-pearl-number {
+      color: $primary-color;
+      background-color: $white;
+      border-color: $primary-color;
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  }
+  &.current {
+    .u-pearl-icon, .u-pearl-number {
+      color: $primary-color;
+      background-color: $white;
+      border-color: $primary-color;
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  }
+  &.disabled {
+    pointer-events: none;
+    cursor: auto;
+    &:after, &:before {
+      background-color: $light-color;
+    }
+    .u-pearl-icon, .u-pearl-number {
+      color: $white;
+      background-color: $light-gray;
+      border-color: $light-gray;
+    }
+  }
+  &.error {
+    &:before {
+      background-color: $primary-color;
+    }
+    &:after {
+      background-color: $light-color;
+    }
+    .u-pearl-icon, .u-pearl-number {
+      color: $danger-color;
+      background-color: $white;
+      border-color: $danger-color;
+    }
+  }
+  &.done {
+    &:after, &:before {
+      background-color: $primary-color !important;
+    }
+    .u-pearl-icon, .u-pearl-number {
+      color: $white;
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+}
+
+.u-pearls-lg {
+  .u-pearl {
+    &:after, &:before {
+      top: 20px;
+    }
+  }
+  .u-pearl-title {
+    font-size: 18px;
+  }
+  .u-pearl-icon, .u-pearl-number {
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+  }
+  .u-pearl-icon, .u-pearl-number {
+    font-size: 20px;
+  }
+}
+
+.u-pearls-sm {
+  .u-pearl {
+    &:after, &:before {
+      top: 16px;
+    }
+  }
+  .u-pearl-title {
+    font-size: 14px;
+  }
+  .u-pearl-icon {
+    width: 32px;
+    height: 32px;
+    line-height: 28px;
+  }
+  .u-pearl-number {
+    width: 32px;
+    height: 32px;
+    line-height: 28px;
+    font-size: 16px;
+  }
+  .u-pearl-icon {
+    font-size: 14px;
+  }
+}
+
+.u-pearls-xs {
+  .u-pearl {
+    &:after, &:before {
+      top: 12px;
+      height: 2px;
+    }
+  }
+  .u-pearl-title {
+    font-size: 12px;
+  }
+  .u-pearl-icon {
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+  }
+  .u-pearl-number {
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .u-pearl-icon {
+    font-size: 12px;
+  }
+}
+.u-pearl.current{
+  .u-pearl-icon{
+    i{
+      left: 6px;
+    }
+  }
+}
+/**=====================
+    58. Steps  CSS ends
+==========================**/

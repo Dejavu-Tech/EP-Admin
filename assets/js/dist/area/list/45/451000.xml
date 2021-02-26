@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="百色" code="451000">
+<county name="右江" code="451002">
+    <street name="百城街道" code="451002001" />
+    <street name="龙景街道" code="451002002" />
+    <street name="阳圩镇" code="451002101" />
+    <street name="四塘镇" code="451002102" />
+    <street name="龙川镇" code="451002103" />
+    <street name="永乐镇" code="451002104" />
+    <street name="汪甸瑶族乡" code="451002202" />
+    <street name="大楞乡" code="451002203" />
+    <street name="泮水乡" code="451002204" />
+</county>
+<county name="田阳" code="451021">
+    <street name="田州镇" code="451021100" />
+    <street name="那坡镇" code="451021101" />
+    <street name="坡洪镇" code="451021102" />
+    <street name="那满镇" code="451021103" />
+    <street name="百育镇" code="451021104" />
+    <street name="玉凤镇" code="451021105" />
+    <street name="头塘镇" code="451021106" />
+    <street name="五村镇" code="451021107" />
+    <street name="洞靖乡" code="451021202" />
+    <street name="巴别乡" code="451021204" />
+</county>
+<county name="田东" code="451022">
+    <street name="平马镇" code="451022100" />
+    <street name="祥周镇" code="451022101" />
+    <street name="林逢镇" code="451022103" />
+    <street name="思林镇" code="451022105" />
+    <street name="印茶镇" code="451022106" />
+    <street name="江城镇" code="451022107" />
+    <street name="朔良镇" code="451022108" />
+    <street name="义圩镇" code="451022109" />
+    <street name="那拔镇" code="451022110" />
+    <street name="作登瑶族乡" code="451022201" />
+</county>
+<county name="平果" code="451023">
+    <street name="马头镇" code="451023100" />
+    <street name="新安镇" code="451023101" />
+    <street name="果化镇" code="451023102" />
+    <street name="太平镇" code="451023103" />
+    <street name="坡造镇" code="451023104" />
+    <street name="四塘镇" code="451023105" />
+    <street name="旧城镇" code="451023106" />
+    <street name="榜圩镇" code="451023107" />
+    <street name="风梧镇" code="451023108" />
+    <street name="海城乡" code="451023200" />
+    <street name="黎明乡" code="451023202" />
+    <street name="同老乡" code="451023203" />
+    <street name="平果铝" code="451023450" />
+</county>
+<county name="德保" code="451024">
+    <street name="城关镇" code="451024100" />
+    <street name="足荣镇" code="451024101" />
+    <street name="隆桑镇" code="451024102" />
+    <street name="敬德镇" code="451024103" />
+    <street name="马隘镇" code="451024104" />
+    <street name="都安乡" code="451024200" />
+    <street name="那甲乡" code="451024202" />
+    <street name="荣华乡" code="451024203" />
+    <street name="燕峒乡" code="451024204" />
+    <street name="龙光乡" code="451024205" />
+    <street name="巴头乡" code="451024206" />
+    <street name="东凌乡" code="451024207" />
+    <street name="德保铝业" code="451024450" />
+</county>
+<county name="靖西" code="451025">
+    <street name="新靖镇" code="451025100" />
+    <street name="化峒镇" code="451025101" />
+    <street name="湖润镇" code="451025102" />
+    <street name="安德镇" code="451025103" />
+    <street name="龙临镇" code="451025104" />
+    <street name="渠洋镇" code="451025105" />
+    <street name="岳圩镇" code="451025106" />
+    <street name="龙邦镇" code="451025107" />
+    <street name="同德乡" code="451025200" />
+    <street name="壬庄乡" code="451025201" />
+    <street name="安宁乡" code="451025202" />
+    <street name="地州乡" code="451025203" />
+    <street name="禄峒乡" code="451025204" />
+    <street name="南坡乡" code="451025206" />
+    <street name="吞盘乡" code="451025207" />
+    <street name="果乐乡" code="451025209" />
+    <street name="新甲乡" code="451025211" />
+    <street name="武平乡" code="451025212" />
+    <street name="魁圩乡" code="451025215" />
+</county>
+<county name="那坡" code="451026">
+    <street name="城厢镇" code="451026100" />
+    <street name="平孟镇" code="451026101" />
+    <street name="坡荷乡" code="451026200" />
+    <street name="龙合乡" code="451026201" />
+    <street name="德隆乡" code="451026203" />
+    <street name="百合乡" code="451026204" />
+    <street name="百南乡" code="451026205" />
+    <street name="百省乡" code="451026207" />
+    <street name="百都乡" code="451026208" />
+</county>
+<county name="凌云" code="451027">
+    <street name="泗城镇" code="451027100" />
+    <street name="逻楼镇" code="451027101" />
+    <street name="加尤镇" code="451027102" />
+    <street name="下甲乡" code="451027200" />
+    <street name="伶站瑶族乡" code="451027201" />
+    <street name="朝里瑶族乡" code="451027202" />
+    <street name="沙里瑶族乡" code="451027203" />
+    <street name="玉洪瑶族乡" code="451027205" />
+</county>
+<county name="乐业" code="451028">
+    <street name="同乐镇" code="451028100" />
+    <street name="甘田镇" code="451028101" />
+    <street name="新化镇" code="451028102" />
+    <street name="花坪镇" code="451028103" />
+    <street name="逻沙乡" code="451028201" />
+    <street name="逻西乡" code="451028203" />
+    <street name="幼平乡" code="451028204" />
+    <street name="雅长乡" code="451028205" />
+</county>
+<county name="田林" code="451029">
+    <street name="乐里镇" code="451029100" />
+    <street name="旧州镇" code="451029101" />
+    <street name="定安镇" code="451029102" />
+    <street name="六隆镇" code="451029103" />
+    <street name="潞城瑶族乡" code="451029200" />
+    <street name="利周瑶族乡" code="451029201" />
+    <street name="平塘乡" code="451029202" />
+    <street name="浪平乡" code="451029203" />
+    <street name="八桂瑶族乡" code="451029204" />
+    <street name="八渡瑶族乡" code="451029205" />
+    <street name="那比乡" code="451029206" />
+    <street name="高龙乡" code="451029207" />
+    <street name="百乐乡" code="451029208" />
+    <street name="者苗乡" code="451029209" />
+</county>
+<county name="西林" code="451030">
+    <street name="八达镇" code="451030100" />
+    <street name="古障镇" code="451030101" />
+    <street name="那劳镇" code="451030102" />
+    <street name="马蚌乡" code="451030200" />
+    <street name="普合苗族乡" code="451030203" />
+    <street name="西平乡" code="451030204" />
+    <street name="那佐苗族乡" code="451030206" />
+    <street name="足别瑶族苗族乡" code="451030208" />
+</county>
+<county name="隆林" code="451031">
+    <street name="新州镇" code="451031100" />
+    <street name="桠杈镇" code="451031101" />
+    <street name="天生桥镇" code="451031102" />
+    <street name="平班镇" code="451031103" />
+    <street name="德峨镇" code="451031104" />
+    <street name="沙梨乡" code="451031200" />
+    <street name="隆或乡" code="451031201" />
+    <street name="者保乡" code="451031203" />
+    <street name="者浪乡" code="451031204" />
+    <street name="革步乡" code="451031205" />
+    <street name="金钟山乡" code="451031206" />
+    <street name="猪场乡" code="451031208" />
+    <street name="蛇场乡" code="451031210" />
+    <street name="克长乡" code="451031211" />
+    <street name="岩茶乡" code="451031213" />
+    <street name="介廷乡" code="451031215" />
+</county>
+</city>
+</address>

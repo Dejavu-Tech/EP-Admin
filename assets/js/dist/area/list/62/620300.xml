@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="金昌" code="620300">
+<county name="金川" code="620302">
+    <street name="滨河路街道" code="620302001" />
+    <street name="桂林路街道" code="620302002" />
+    <street name="北京路街道" code="620302003" />
+    <street name="金川路街道" code="620302004" />
+    <street name="新华路街道" code="620302005" />
+    <street name="广州路街道" code="620302006" />
+    <street name="宁远堡镇" code="620302100" />
+    <street name="双湾镇" code="620302101" />
+</county>
+<county name="永昌" code="620321">
+    <street name="城关镇" code="620321100" />
+    <street name="河西堡镇" code="620321101" />
+    <street name="新城子镇" code="620321102" />
+    <street name="朱王堡镇" code="620321103" />
+    <street name="东寨镇" code="620321104" />
+    <street name="水源镇" code="620321105" />
+    <street name="红山窑乡" code="620321200" />
+    <street name="焦家庄乡" code="620321201" />
+    <street name="六坝乡" code="620321202" />
+    <street name="南坝乡" code="620321203" />
+</county>
+</city>
+</address>

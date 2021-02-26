@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宁德" code="350900">
+<county name="蕉城" code="350902">
+    <street name="蕉南街道" code="350902001" />
+    <street name="蕉北街道" code="350902002" />
+    <street name="城南镇" code="350902100" />
+    <street name="漳湾镇" code="350902101" />
+    <street name="七都镇" code="350902102" />
+    <street name="八都镇" code="350902103" />
+    <street name="九都镇" code="350902104" />
+    <street name="霍童镇" code="350902105" />
+    <street name="赤溪镇" code="350902106" />
+    <street name="洋中镇" code="350902107" />
+    <street name="飞鸾镇" code="350902108" />
+    <street name="三都镇" code="350902109" />
+    <street name="金涵畲族乡" code="350902200" />
+    <street name="洪口乡" code="350902201" />
+    <street name="石后乡" code="350902202" />
+    <street name="虎贝乡" code="350902203" />
+    <street name="东侨开发区" code="350902500" />
+</county>
+<county name="霞浦" code="350921">
+    <street name="松城街道" code="350921001" />
+    <street name="松港街道" code="350921002" />
+    <street name="长春镇" code="350921101" />
+    <street name="牙城镇" code="350921102" />
+    <street name="溪南镇" code="350921103" />
+    <street name="沙江镇" code="350921104" />
+    <street name="下浒镇" code="350921105" />
+    <street name="三沙镇" code="350921106" />
+    <street name="盐田畲族乡" code="350921200" />
+    <street name="水门畲族乡" code="350921201" />
+    <street name="崇儒畲族乡" code="350921202" />
+    <street name="柏洋乡" code="350921203" />
+    <street name="北壁乡" code="350921204" />
+    <street name="海岛乡" code="350921205" />
+</county>
+<county name="古田" code="350922">
+    <street name="城东街道" code="350922001" />
+    <street name="城西街道" code="350922002" />
+    <street name="平湖镇" code="350922101" />
+    <street name="大桥镇" code="350922102" />
+    <street name="黄田镇" code="350922103" />
+    <street name="鹤塘镇" code="350922104" />
+    <street name="杉洋镇" code="350922105" />
+    <street name="凤都镇" code="350922106" />
+    <street name="水口镇" code="350922107" />
+    <street name="大甲镇" code="350922108" />
+    <street name="吉巷乡" code="350922201" />
+    <street name="泮洋乡" code="350922203" />
+    <street name="凤埔乡" code="350922204" />
+    <street name="卓洋乡" code="350922205" />
+</county>
+<county name="屏南" code="350923">
+    <street name="古峰镇" code="350923100" />
+    <street name="双溪镇" code="350923101" />
+    <street name="黛溪镇" code="350923102" />
+    <street name="长桥镇" code="350923103" />
+    <street name="屏城乡" code="350923200" />
+    <street name="棠口乡" code="350923201" />
+    <street name="甘棠乡" code="350923202" />
+    <street name="熙岭乡" code="350923203" />
+    <street name="路下乡" code="350923204" />
+    <street name="寿山乡" code="350923205" />
+    <street name="岭下乡" code="350923206" />
+</county>
+<county name="寿宁" code="350924">
+    <street name="鳌阳镇" code="350924100" />
+    <street name="斜滩镇" code="350924101" />
+    <street name="南阳镇" code="350924102" />
+    <street name="武曲镇" code="350924103" />
+    <street name="犀溪镇" code="350924104" />
+    <street name="大安乡" code="350924200" />
+    <street name="坑底乡" code="350924201" />
+    <street name="清源乡" code="350924202" />
+    <street name="竹管垅乡" code="350924203" />
+    <street name="芹洋乡" code="350924205" />
+    <street name="托溪乡" code="350924206" />
+    <street name="平溪乡" code="350924207" />
+    <street name="凤阳乡" code="350924208" />
+    <street name="下党乡" code="350924209" />
+</county>
+<county name="周宁" code="350925">
+    <street name="狮城镇" code="350925100" />
+    <street name="咸村镇" code="350925101" />
+    <street name="浦源镇" code="350925102" />
+    <street name="七步镇" code="350925103" />
+    <street name="李墩镇" code="350925104" />
+    <street name="纯池镇" code="350925105" />
+    <street name="泗桥乡" code="350925200" />
+    <street name="礼门乡" code="350925201" />
+    <street name="玛坑乡" code="350925202" />
+</county>
+<county name="柘荣" code="350926">
+    <street name="双城镇" code="350926100" />
+    <street name="富溪镇" code="350926101" />
+    <street name="城郊乡" code="350926200" />
+    <street name="乍洋乡" code="350926201" />
+    <street name="东源乡" code="350926202" />
+    <street name="黄柏乡" code="350926203" />
+    <street name="宅中乡" code="350926204" />
+    <street name="楮坪乡" code="350926205" />
+    <street name="英山乡" code="350926206" />
+</county>
+<county name="福安" code="350981">
+    <street name="城南街道" code="350981001" />
+    <street name="城北街道" code="350981002" />
+    <street name="阳头街道" code="350981003" />
+    <street name="罗江街道" code="350981004" />
+    <street name="赛岐镇" code="350981100" />
+    <street name="穆阳镇" code="350981101" />
+    <street name="上白石镇" code="350981102" />
+    <street name="潭头镇" code="350981103" />
+    <street name="社口镇" code="350981104" />
+    <street name="晓阳镇" code="350981105" />
+    <street name="溪潭镇" code="350981106" />
+    <street name="甘棠镇" code="350981107" />
+    <street name="下白石镇" code="350981108" />
+    <street name="溪尾镇" code="350981109" />
+    <street name="溪柄镇" code="350981110" />
+    <street name="湾坞镇" code="350981111" />
+    <street name="城阳镇" code="350981112" />
+    <street name="坂中畲族乡" code="350981201" />
+    <street name="范坑乡" code="350981202" />
+    <street name="穆云畲族乡" code="350981203" />
+    <street name="康厝畲族乡" code="350981204" />
+    <street name="松罗乡" code="350981206" />
+    <street name="福安畲族开发区" code="350981501" />
+    <street name="湾坞工业集中区" code="350981502" />
+</county>
+<county name="福鼎" code="350982">
+    <street name="桐山街道" code="350982001" />
+    <street name="桐城街道" code="350982002" />
+    <street name="山前街道" code="350982003" />
+    <street name="贯岭镇" code="350982100" />
+    <street name="前岐镇" code="350982101" />
+    <street name="沙埕镇" code="350982102" />
+    <street name="店下镇" code="350982103" />
+    <street name="太姥山镇" code="350982104" />
+    <street name="磻溪镇" code="350982105" />
+    <street name="白琳镇" code="350982106" />
+    <street name="点头镇" code="350982107" />
+    <street name="管阳镇" code="350982108" />
+    <street name="嵛山镇" code="350982109" />
+    <street name="硖门畲族乡" code="350982200" />
+    <street name="叠石乡" code="350982201" />
+    <street name="佳阳乡" code="350982202" />
+    <street name="龙安开发区" code="350982500" />
+</county>
+</city>
+</address>

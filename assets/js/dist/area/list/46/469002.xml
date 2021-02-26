@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="琼海" code="469002">
+<county name="琼海" code="469002001">
+    <street name="嘉积镇" code="469002100" />
+    <street name="万泉镇" code="469002101" />
+    <street name="石壁镇" code="469002102" />
+    <street name="中原镇" code="469002103" />
+    <street name="博鳌镇" code="469002104" />
+    <street name="阳江镇" code="469002105" />
+    <street name="龙江镇" code="469002106" />
+    <street name="潭门镇" code="469002107" />
+    <street name="塔洋镇" code="469002108" />
+    <street name="长坡镇" code="469002109" />
+    <street name="大路镇" code="469002110" />
+    <street name="会山镇" code="469002111" />
+    <street name="国营东太农场" code="469002400" />
+    <street name="国营东红农场" code="469002402" />
+    <street name="国营东升农场" code="469002403" />
+    <street name="彬村山华侨农场" code="469002500" />
+</county>
+</city>
+</address>

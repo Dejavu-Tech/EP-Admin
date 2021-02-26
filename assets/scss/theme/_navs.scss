@@ -1,0 +1,195 @@
+/**=====================
+     35. NAV CSS Start
+==========================**/
+.nav-list{
+	padding: 30px;
+	.nav-list-disc{
+		text-align: left;
+		color: $dark-gray;
+		li{
+			padding: 9px 0;
+			&:first-child{
+				padding-top: 0;
+			}
+			&:last-child{
+				padding-bottom: 0;
+			}
+			a{
+				color: $theme-body-font-color;
+				.fa{
+					width: 14px;
+					font-size: 16px;
+				}
+			}
+			&:hover{
+				color: $primary-color;
+				a{
+					color: $primary-color;
+				}
+			}
+		}
+
+	}
+	}
+.navs-icon{
+	padding: 30px;
+	svg{
+		width: 21px;
+		height: 21px;
+		margin-right: 10px;
+	}
+	.fa{
+		font-size: 16px;
+		margin-right: 10px;
+	}
+		li{
+			padding: 9px 0;
+			&:first-child{
+				padding-top: 0;
+			}
+			&:last-child{
+				padding-bottom: 0;
+			}
+			.text-muted{
+				color: $theme-body-font-color !important;
+			}
+			a{
+				display: flex;
+				align-items: center;
+			}
+			ul{
+				padding-top: 9px;
+				li{
+					line-height: 1;
+					&:first-child{
+						padding-top: 9px;
+					}
+					&:hover{
+						color: $primary-color;
+						a{
+							color: $primary-color;
+						}
+					}
+				}
+			}
+			a {
+				color: $theme-body-font-color;
+				&:hover{
+					color: $primary-color;
+				}
+				&.active{
+					color: $primary-color;
+				}
+				span{
+					font-family: $font-work-sans, $font-serif;
+				}
+			}
+			button{
+				&:hover{
+					a{
+						color: #FFf;
+					}
+				}
+
+			}
+		}
+	.main-section{
+		padding-top: 30px;
+	}
+	.separator{
+		border-bottom: 1px solid #dee2e6;
+		margin: 30px 0;
+		padding: 0;
+	}
+	.btn-link{
+		text-decoration: none;
+		line-height: 1;
+		padding: 0;
+		padding-bottom: 6px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+#accordionoc{
+	#collapseicon, #collapseicon1{
+           padding-top: 0px;
+	}
+	li{
+		button{
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+.navs-icon.default-according.style-1 {
+	li{
+		button{
+			position: relative;
+			&:hover
+			{
+				color: $primary-color!important;
+			}
+		}
+		button[aria-expanded="true"]{
+			&:before {
+				right: 2px;
+				top:6px;
+			}
+		}
+		button[aria-expanded="false"]:before {
+			right: 2px;
+			top:6px;
+		}
+	}
+}
+.navs-dropdown{
+	button{
+		margin-top: 30px;
+	}
+	.onhover-show-div{
+		width:250px;
+		border-radius: 4px;
+		box-shadow: 0 0 2px 2px $light-color;
+		button{
+			margin-top:0px;
+		}
+		.navs-icon{
+			li{
+				text-align: left;
+				a{
+					&:hover,
+					&.active{
+						svg{
+							path, line, polyline{
+								color: $primary-color !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.onhover-dropdown.navs-dropdown:hover .onhover-show-div:before{
+	right: 77px;
+	left: unset;
+}
+.onhover-dropdown.navs-dropdown:hover .onhover-show-div:after {
+	right: 77px;
+	left: unset;
+}
+.icon-lists{
+	font-family: $font-work-sans, $font-serif;
+}
+.pl-navs-inline{
+     padding-left: 30px!important;
+}
+.inline-nav{
+	li{
+		line-height: 1.3;
+	}
+}
+/**=====================
+     35. NAV CSS Ends
+==========================**/

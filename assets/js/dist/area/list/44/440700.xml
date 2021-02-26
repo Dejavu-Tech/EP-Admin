@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="江门" code="440700">
+<county name="蓬江" code="440703">
+    <street name="仓后街道" code="440703001" />
+    <street name="白沙街道" code="440703002" />
+    <street name="堤东街道" code="440703003" />
+    <street name="北街街道" code="440703004" />
+    <street name="潮连街道" code="440703005" />
+    <street name="环市街道" code="440703006" />
+    <street name="棠下镇" code="440703101" />
+    <street name="荷塘镇" code="440703102" />
+    <street name="杜阮镇" code="440703103" />
+</county>
+<county name="江海" code="440704">
+    <street name="江南街道" code="440704001" />
+    <street name="滘头街道" code="440704002" />
+    <street name="滘北街道" code="440704003" />
+    <street name="外海街道" code="440704004" />
+    <street name="礼乐街道" code="440704005" />
+</county>
+<county name="新会" code="440705">
+    <street name="会城街道" code="440705001" />
+    <street name="大泽镇" code="440705101" />
+    <street name="司前镇" code="440705102" />
+    <street name="罗坑镇" code="440705103" />
+    <street name="双水镇" code="440705104" />
+    <street name="崖门镇" code="440705105" />
+    <street name="沙堆镇" code="440705106" />
+    <street name="古井镇" code="440705107" />
+    <street name="三江镇" code="440705108" />
+    <street name="睦洲镇" code="440705109" />
+    <street name="大鳌镇" code="440705110" />
+    <street name="圭峰管理委员会" code="440705450" />
+    <street name="银湖湾管理委员会" code="440705451" />
+    <street name="新会经济开发区管理委员会" code="440705470" />
+</county>
+<county name="台山" code="440781">
+    <street name="台城街道" code="440781001" />
+    <street name="大江镇" code="440781100" />
+    <street name="水步镇" code="440781101" />
+    <street name="四九镇" code="440781102" />
+    <street name="白沙镇" code="440781103" />
+    <street name="三合镇" code="440781104" />
+    <street name="冲蒌镇" code="440781105" />
+    <street name="斗山镇" code="440781106" />
+    <street name="都斛镇" code="440781107" />
+    <street name="赤溪镇" code="440781108" />
+    <street name="端芬镇" code="440781109" />
+    <street name="广海镇" code="440781110" />
+    <street name="海宴镇" code="440781111" />
+    <street name="汶村镇" code="440781112" />
+    <street name="深井镇" code="440781113" />
+    <street name="北陡镇" code="440781114" />
+    <street name="川岛镇" code="440781115" />
+    <street name="华侨农场" code="440781401" />
+</county>
+<county name="开平" code="440783">
+    <street name="三埠街道" code="440783001" />
+    <street name="长沙街道" code="440783002" />
+    <street name="沙塘镇" code="440783103" />
+    <street name="苍城镇" code="440783104" />
+    <street name="龙胜镇" code="440783105" />
+    <street name="大沙镇" code="440783106" />
+    <street name="马冈镇" code="440783107" />
+    <street name="塘口镇" code="440783108" />
+    <street name="赤坎镇" code="440783109" />
+    <street name="百合镇" code="440783110" />
+    <street name="蚬冈镇" code="440783111" />
+    <street name="金鸡镇" code="440783112" />
+    <street name="月山镇" code="440783115" />
+    <street name="赤水镇" code="440783116" />
+    <street name="水口镇" code="440783117" />
+    <street name="翠山湖新区" code="440783400" />
+</county>
+<county name="鹤山" code="440784">
+    <street name="沙坪街道" code="440784001" />
+    <street name="龙口镇" code="440784101" />
+    <street name="雅瑶镇" code="440784102" />
+    <street name="古劳镇" code="440784103" />
+    <street name="桃源镇" code="440784104" />
+    <street name="鹤城镇" code="440784105" />
+    <street name="共和镇" code="440784106" />
+    <street name="址山镇" code="440784107" />
+    <street name="宅梧镇" code="440784108" />
+    <street name="双合镇" code="440784112" />
+    <street name="广东省江门监狱" code="440784401" />
+    <street name="江门市四堡林场" code="440784402" />
+</county>
+<county name="恩平" code="440785">
+    <street name="恩城街道" code="440785001" />
+    <street name="横陂镇" code="440785100" />
+    <street name="圣堂镇" code="440785101" />
+    <street name="良西镇" code="440785102" />
+    <street name="沙湖镇" code="440785103" />
+    <street name="牛江镇" code="440785104" />
+    <street name="君堂镇" code="440785105" />
+    <street name="大田镇" code="440785106" />
+    <street name="那吉镇" code="440785107" />
+    <street name="大槐镇" code="440785108" />
+    <street name="东成镇" code="440785109" />
+</county>
+</city>
+</address>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="怒江" code="533300">
+<county name="泸水" code="533321">
+    <street name="六库镇" code="533321101" />
+    <street name="鲁掌镇" code="533321102" />
+    <street name="片马镇" code="533321103" />
+    <street name="上江镇" code="533321104" />
+    <street name="老窝镇" code="533321105" />
+    <street name="大兴地镇" code="533321106" />
+    <street name="称杆乡" code="533321204" />
+    <street name="古登乡" code="533321205" />
+    <street name="洛本卓乡" code="533321206" />
+</county>
+<county name="福贡" code="533323">
+    <street name="上帕镇" code="533323101" />
+    <street name="匹河乡" code="533323201" />
+    <street name="子里甲乡" code="533323202" />
+    <street name="架科底乡" code="533323203" />
+    <street name="鹿马登乡" code="533323204" />
+    <street name="石月亮乡" code="533323205" />
+    <street name="马吉乡" code="533323206" />
+</county>
+<county name="贡山" code="533324">
+    <street name="茨开镇" code="533324101" />
+    <street name="丙中洛镇" code="533324102" />
+    <street name="捧当乡" code="533324202" />
+    <street name="普拉底乡" code="533324203" />
+    <street name="独龙江乡" code="533324204" />
+</county>
+<county name="兰坪" code="533325">
+    <street name="金顶镇" code="533325101" />
+    <street name="啦井镇" code="533325102" />
+    <street name="营盘镇" code="533325103" />
+    <street name="通甸镇" code="533325104" />
+    <street name="河西乡" code="533325201" />
+    <street name="中排乡" code="533325202" />
+    <street name="石登乡" code="533325203" />
+    <street name="兔峨乡" code="533325204" />
+</county>
+</city>
+</address>

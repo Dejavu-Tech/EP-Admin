@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="朝阳" code="211300">
+<county name="双塔" code="211302">
+    <street name="南塔街道" code="211302001" />
+    <street name="北塔街道" code="211302002" />
+    <street name="前进街道" code="211302003" />
+    <street name="凌河街道" code="211302004" />
+    <street name="光明街道" code="211302005" />
+    <street name="凌凤街道" code="211302006" />
+    <street name="龙山街道" code="211302007" />
+    <street name="站南街道" code="211302008" />
+    <street name="红旗街道" code="211302009" />
+    <street name="燕北街道" code="211302010" />
+    <street name="燕都街道" code="211302011" />
+    <street name="桃花吐镇" code="211302100" />
+    <street name="他拉皋镇" code="211302101" />
+    <street name="孙家湾镇" code="211302102" />
+    <street name="长宝营子乡" code="211302205" />
+</county>
+<county name="龙城" code="211303">
+    <street name="向阳街道" code="211303001" />
+    <street name="半拉山街道" code="211303002" />
+    <street name="马山街道" code="211303003" />
+    <street name="新华街道" code="211303004" />
+    <street name="海龙街道" code="211303005" />
+    <street name="开发区龙泉街道" code="211303070" />
+    <street name="七道泉子镇" code="211303101" />
+    <street name="西大营子镇" code="211303102" />
+    <street name="召都巴镇" code="211303103" />
+    <street name="大平房镇" code="211303105" />
+    <street name="联合镇" code="211303106" />
+    <street name="边杖子镇" code="211303107" />
+</county>
+<county name="朝阳" code="211321">
+    <street name="波罗赤镇" code="211321102" />
+    <street name="木头城子镇" code="211321103" />
+    <street name="二十家子镇" code="211321104" />
+    <street name="羊山镇" code="211321105" />
+    <street name="六家子镇" code="211321106" />
+    <street name="瓦房子镇" code="211321107" />
+    <street name="大庙镇" code="211321108" />
+    <street name="柳城镇" code="211321109" />
+    <street name="古山子镇" code="211321110" />
+    <street name="南双庙乡" code="211321204" />
+    <street name="西五家子乡" code="211321211" />
+    <street name="北沟门子乡" code="211321212" />
+    <street name="杨树湾乡" code="211321213" />
+    <street name="东大道乡" code="211321214" />
+    <street name="乌兰河硕蒙古族乡" code="211321215" />
+    <street name="台子乡" code="211321216" />
+    <street name="胜利乡" code="211321218" />
+    <street name="东大屯乡" code="211321220" />
+    <street name="松岭门蒙古族乡" code="211321221" />
+    <street name="根德营子乡" code="211321222" />
+    <street name="西营子乡" code="211321224" />
+    <street name="七道岭乡" code="211321225" />
+    <street name="北四家子乡" code="211321228" />
+    <street name="王营子乡" code="211321230" />
+    <street name="黑牛营子乡" code="211321231" />
+    <street name="尚志乡" code="211321232" />
+    <street name="长在营子乡" code="211321233" />
+    <street name="国营朝阳县贾家店农场" code="211321400" />
+</county>
+<county name="建平" code="211322">
+    <street name="叶柏寿街道" code="211322001" />
+    <street name="红山街道" code="211322002" />
+    <street name="铁南街道" code="211322003" />
+    <street name="万寿街道" code="211322004" />
+    <street name="富山街道" code="211322005" />
+    <street name="朱碌科镇" code="211322101" />
+    <street name="建平镇" code="211322102" />
+    <street name="黑水镇" code="211322103" />
+    <street name="喀喇沁镇" code="211322104" />
+    <street name="北二十家子镇" code="211322105" />
+    <street name="沙海镇" code="211322106" />
+    <street name="哈拉道口镇" code="211322108" />
+    <street name="榆树林子镇" code="211322109" />
+    <street name="老官地镇" code="211322110" />
+    <street name="深井镇" code="211322111" />
+    <street name="奎德素镇" code="211322112" />
+    <street name="小塘镇" code="211322113" />
+    <street name="马场镇" code="211322114" />
+    <street name="昌隆镇" code="211322115" />
+    <street name="张家营子镇" code="211322117" />
+    <street name="青峰山镇" code="211322118" />
+    <street name="青松岭乡" code="211322205" />
+    <street name="杨树岭乡" code="211322206" />
+    <street name="罗福沟乡" code="211322209" />
+    <street name="烧锅营子乡" code="211322211" />
+    <street name="太平庄乡" code="211322213" />
+    <street name="白山乡" code="211322214" />
+    <street name="三家蒙古族乡" code="211322218" />
+    <street name="义成功乡" code="211322220" />
+    <street name="八家国营农场" code="211322400" />
+    <street name="热水国营畜牧农场" code="211322401" />
+</county>
+<county name="喀左" code="211324">
+    <street name="大城子镇" code="211324100" />
+    <street name="南公营子镇" code="211324101" />
+    <street name="山嘴子镇" code="211324102" />
+    <street name="南哨镇" code="211324103" />
+    <street name="公营子镇" code="211324104" />
+    <street name="白塔子镇" code="211324105" />
+    <street name="中三家镇" code="211324106" />
+    <street name="老爷庙镇" code="211324107" />
+    <street name="六官营子镇" code="211324108" />
+    <street name="平房子镇" code="211324109" />
+    <street name="十二德堡镇" code="211324110" />
+    <street name="羊角沟镇" code="211324111" />
+    <street name="尤杖子乡" code="211324204" />
+    <street name="东哨乡" code="211324205" />
+    <street name="草场乡" code="211324207" />
+    <street name="坤都营子乡" code="211324210" />
+    <street name="大营子乡" code="211324211" />
+    <street name="兴隆庄乡" code="211324212" />
+    <street name="甘招乡" code="211324213" />
+    <street name="卧虎沟乡" code="211324214" />
+    <street name="水泉乡" code="211324215" />
+    <street name="国营官大海农场" code="211324400" />
+    <street name="冶金铸造工业园区" code="211324401" />
+</county>
+<county name="北票" code="211381">
+    <street name="城关街道" code="211381001" />
+    <street name="南山街道" code="211381002" />
+    <street name="冠山街道" code="211381003" />
+    <street name="桥北街道" code="211381004" />
+    <street name="三宝街道" code="211381005" />
+    <street name="台吉街道" code="211381006" />
+    <street name="双河街道" code="211381008" />
+    <street name="西官营镇" code="211381101" />
+    <street name="大板镇" code="211381102" />
+    <street name="上园镇" code="211381103" />
+    <street name="宝国老镇" code="211381104" />
+    <street name="黑城子镇" code="211381105" />
+    <street name="五间房镇" code="211381107" />
+    <street name="台吉镇" code="211381108" />
+    <street name="东官营镇" code="211381109" />
+    <street name="龙潭镇" code="211381110" />
+    <street name="北塔镇" code="211381111" />
+    <street name="长皋乡" code="211381201" />
+    <street name="常河营乡" code="211381202" />
+    <street name="小塔子乡" code="211381203" />
+    <street name="马友营蒙古族乡" code="211381204" />
+    <street name="蒙古营乡" code="211381205" />
+    <street name="泉巨永乡" code="211381206" />
+    <street name="大三家乡" code="211381207" />
+    <street name="哈尔脑乡" code="211381212" />
+    <street name="南八家子乡" code="211381213" />
+    <street name="章吉营乡" code="211381214" />
+    <street name="三宝营乡" code="211381215" />
+    <street name="巴图营乡" code="211381216" />
+    <street name="台吉营乡" code="211381218" />
+    <street name="娄家店乡" code="211381220" />
+    <street name="北四家乡" code="211381221" />
+    <street name="凉水河蒙古族乡" code="211381223" />
+    <street name="三宝乡" code="211381228" />
+    <street name="兴顺德国营农场" code="211381400" />
+    <street name="下府经济开发区" code="211381470" />
+    <street name="大黑山特别行政管理区" code="211381471" />
+</county>
+<county name="凌源" code="211382">
+    <street name="东城街道" code="211382001" />
+    <street name="北街街道" code="211382002" />
+    <street name="南街街道" code="211382003" />
+    <street name="凌北街道" code="211382004" />
+    <street name="热水汤街道" code="211382006" />
+    <street name="兴源街道" code="211382007" />
+    <street name="红山街道" code="211382008" />
+    <street name="城关街道" code="211382009" />
+    <street name="万元店镇" code="211382101" />
+    <street name="宋杖子镇" code="211382102" />
+    <street name="三十家子镇" code="211382103" />
+    <street name="杨杖子镇" code="211382104" />
+    <street name="刀尔登镇" code="211382105" />
+    <street name="松岭子镇" code="211382106" />
+    <street name="四官营子镇" code="211382107" />
+    <street name="沟门子镇" code="211382108" />
+    <street name="小城子镇" code="211382110" />
+    <street name="四合当镇" code="211382111" />
+    <street name="乌兰白镇" code="211382113" />
+    <street name="瓦房店镇" code="211382114" />
+    <street name="大王杖子乡" code="211382204" />
+    <street name="刘杖子乡" code="211382205" />
+    <street name="前进乡" code="211382206" />
+    <street name="大河北乡" code="211382207" />
+    <street name="三道河子乡" code="211382208" />
+    <street name="牛营子乡" code="211382209" />
+    <street name="北炉乡" code="211382210" />
+    <street name="三家子乡" code="211382217" />
+    <street name="佛爷洞乡" code="211382219" />
+    <street name="河坎子乡" code="211382220" />
+</county>
+</city>
+</address>

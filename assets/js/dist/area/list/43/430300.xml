@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="湘潭" code="430300">
+<county name="雨湖" code="430302">
+    <street name="雨湖路街道" code="430302001" />
+    <street name="城正街街道" code="430302002" />
+    <street name="平政路街道" code="430302003" />
+    <street name="云塘街道" code="430302004" />
+    <street name="广场街道" code="430302005" />
+    <street name="中山路街道" code="430302006" />
+    <street name="窑湾街道" code="430302007" />
+    <street name="羊牯塘街道" code="430302008" />
+    <street name="和平街道" code="430302009" />
+    <street name="鹤岭镇" code="430302100" />
+    <street name="楠竹山镇" code="430302101" />
+    <street name="姜畲镇" code="430302102" />
+    <street name="昭潭乡" code="430302200" />
+    <street name="护潭乡" code="430302201" />
+    <street name="长城乡" code="430302202" />
+    <street name="先锋乡" code="430302203" />
+    <street name="响水乡" code="430302204" />
+    <street name="响塘乡" code="430302205" />
+</county>
+<county name="岳塘" code="430304">
+    <street name="岳塘街道" code="430304001" />
+    <street name="东坪街道" code="430304002" />
+    <street name="中洲路街道" code="430304003" />
+    <street name="书院路街道" code="430304004" />
+    <street name="下摄司街道" code="430304005" />
+    <street name="建设路街道" code="430304006" />
+    <street name="滴水埠街道" code="430304007" />
+    <street name="五里堆街道" code="430304008" />
+    <street name="社建村街道" code="430304009" />
+    <street name="宝塔街道" code="430304010" />
+    <street name="板塘街道" code="430304011" />
+    <street name="双马街道" code="430304012" />
+    <street name="红旗街道" code="430304013" />
+    <street name="易家湾镇" code="430304100" />
+    <street name="霞城乡" code="430304200" />
+    <street name="荷塘乡" code="430304202" />
+    <street name="昭山乡" code="430304203" />
+</county>
+<county name="湘潭" code="430321">
+    <street name="易俗河镇" code="430321100" />
+    <street name="梅林桥镇" code="430321101" />
+    <street name="谭家山镇" code="430321102" />
+    <street name="中路铺镇" code="430321103" />
+    <street name="茶恩寺镇" code="430321104" />
+    <street name="河口镇" code="430321105" />
+    <street name="射埠镇" code="430321106" />
+    <street name="花石镇" code="430321107" />
+    <street name="青山桥镇" code="430321108" />
+    <street name="石鼓镇" code="430321109" />
+    <street name="云湖桥镇" code="430321111" />
+    <street name="石潭镇" code="430321112" />
+    <street name="杨嘉桥镇" code="430321113" />
+    <street name="乌石镇" code="430321114" />
+    <street name="白石镇" code="430321115" />
+    <street name="分水乡" code="430321202" />
+    <street name="排头乡" code="430321203" />
+    <street name="龙口乡" code="430321204" />
+    <street name="锦石乡" code="430321205" />
+</county>
+<county name="湘乡" code="430381">
+    <street name="望春门街道" code="430381001" />
+    <street name="新湘路街道" code="430381002" />
+    <street name="昆仑桥街道" code="430381003" />
+    <street name="东山街道" code="430381004" />
+    <street name="山枣镇" code="430381100" />
+    <street name="栗山镇" code="430381101" />
+    <street name="中沙镇" code="430381102" />
+    <street name="虞塘镇" code="430381103" />
+    <street name="潭市镇" code="430381104" />
+    <street name="棋梓镇" code="430381105" />
+    <street name="壶天镇" code="430381106" />
+    <street name="翻江镇" code="430381107" />
+    <street name="金石镇" code="430381108" />
+    <street name="白田镇" code="430381109" />
+    <street name="月山镇" code="430381110" />
+    <street name="泉塘镇" code="430381111" />
+    <street name="梅桥镇" code="430381112" />
+    <street name="毛田镇" code="430381113" />
+    <street name="龙洞镇" code="430381114" />
+    <street name="东郊乡" code="430381200" />
+    <street name="金薮乡" code="430381202" />
+    <street name="育塅乡" code="430381203" />
+</county>
+<county name="韶山" code="430382">
+    <street name="清溪镇" code="430382100" />
+    <street name="银田镇" code="430382101" />
+    <street name="如意镇" code="430382102" />
+    <street name="韶山乡" code="430382200" />
+    <street name="永义乡" code="430382201" />
+    <street name="杨林乡" code="430382203" />
+    <street name="大坪乡" code="430382204" />
+</county>
+</city>
+</address>

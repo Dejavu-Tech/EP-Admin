@@ -1,0 +1,176 @@
+- var tree                  = true;
+- var chat_menu             = true;
+- var pe7_icon              = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Tree
+                                      span
+                                        | View
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Ui Elements
+                                      li.breadcrumb-item.active Tree View
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12.col-xl-6
+                          .card
+                            .card-header
+                              h5 Basic Tree
+                            .card-body
+                              #basicTree
+                                ul
+                                  li
+                                    | Admin
+                                    ul
+                                      li(data-jstree='{"opened":true}')
+                                        | Assets
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Css
+                                          li(data-jstree='{"opened":true}')
+                                            | Plugins
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
+                                              li(data-jstree='{"type":"file"}') Plugin two
+                                      li(data-jstree='{"opened":true}')
+                                        | Email Template
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Email one
+                                          li(data-jstree='{"type":"file"}') Email two
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
+                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
+                                      li(data-jstree='{"opened":true}')
+                                        | User Interface
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Buttons
+                                          li(data-jstree='{"type":"file"}') Cards
+                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
+                                  li(data-jstree='{"type":"file"}') Frontend
+                        .col-sm-12.col-xl-6
+                          .card
+                            .card-header
+                              h5 Checkbox Tree
+                            .card-body
+                              #checkTree
+                                ul
+                                  li
+                                    | Admin
+                                    ul
+                                      li(data-jstree='{"opened":true}')
+                                        | Assets
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Css
+                                          li(data-jstree='{"opened":true}')
+                                            | Plugins
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
+                                              li(data-jstree='{"type":"file"}') Plugin two
+                                      li(data-jstree='{"opened":true}')
+                                        | Email Template
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Email one
+                                          li(data-jstree='{"type":"file"}') Email two
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
+                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
+                                      li(data-jstree='{"opened":true}')
+                                        | User Interface
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Buttons
+                                          li(data-jstree='{"type":"file"}') Cards
+                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
+                                  li(data-jstree='{"type":"file"}') Frontend
+                        .col-sm-12.col-xl-6
+                          .card
+                            .card-header
+                              h5 Drag Tree
+                            .card-body
+                              #dragTree
+                                ul
+                                  li
+                                    | Admin
+                                    ul
+                                      li(data-jstree='{"opened":true}')
+                                        | Assets
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Css
+                                          li(data-jstree='{"opened":true}')
+                                            | Plugins
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
+                                              li(data-jstree='{"type":"file"}') Plugin two
+                                      li(data-jstree='{"opened":true}')
+                                        | Email Template
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Email one
+                                          li(data-jstree='{"type":"file"}') Email two
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
+                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
+                                      li(data-jstree='{"opened":true}')
+                                        | User Interface
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Buttons
+                                          li(data-jstree='{"type":"file"}') Cards
+                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
+                                  li(data-jstree='{"type":"file"}') Frontend
+                        .col-sm-12.col-xl-6
+                          .card
+                            .card-header
+                              h5 Contextmenu Tree
+                            .card-body
+                              #contextmenu
+                                ul
+                                  li
+                                    | Admin
+                                    ul
+                                      li(data-jstree='{"opened":true}')
+                                        | Assets
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Css
+                                          li(data-jstree='{"opened":true}')
+                                            | Plugins
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
+                                              li(data-jstree='{"type":"file"}') Plugin two
+                                      li(data-jstree='{"opened":true}')
+                                        | Email Template
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Email one
+                                          li(data-jstree='{"type":"file"}') Email two
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
+                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
+                                      li(data-jstree='{"opened":true}')
+                                        | User Interface
+                                        ul
+                                          li(data-jstree='{"type":"file"}') Buttons
+                                          li(data-jstree='{"type":"file"}') Cards
+                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
+                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
+                                  li(data-jstree='{"type":"file"}') Frontend
+
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="邯郸" code="130400">
+<county name="邯山" code="130402">
+    <street name="火磨街道" code="130402001" />
+    <street name="陵园路街道" code="130402002" />
+    <street name="光明路街道" code="130402003" />
+    <street name="滏东街道" code="130402004" />
+    <street name="罗城头街道" code="130402005" />
+    <street name="渚河路街道" code="130402006" />
+    <street name="浴新南街道" code="130402007" />
+    <street name="农林路街道" code="130402008" />
+    <street name="贸东街道" code="130402009" />
+    <street name="贸西街道" code="130402010" />
+    <street name="马头镇" code="130402100" />
+    <street name="北张庄镇" code="130402101" />
+    <street name="马庄乡" code="130402200" />
+</county>
+<county name="丛台" code="130403">
+    <street name="丛台西街道" code="130403001" />
+    <street name="联纺西街道" code="130403002" />
+    <street name="联纺东街道" code="130403003" />
+    <street name="光明桥街道" code="130403004" />
+    <street name="丛台东街道" code="130403005" />
+    <street name="四季青街道" code="130403006" />
+    <street name="和平街道" code="130403007" />
+    <street name="中华街道" code="130403008" />
+    <street name="人民路街道" code="130403009" />
+    <street name="柳林桥街道" code="130403010" />
+    <street name="苏曹乡" code="130403200" />
+</county>
+<county name="复兴" code="130404">
+    <street name="胜利桥街道" code="130404001" />
+    <street name="百家村街道" code="130404002" />
+    <street name="铁路大院街道" code="130404003" />
+    <street name="化林路街道" code="130404004" />
+    <street name="庞村街道" code="130404005" />
+    <street name="二六七二街道" code="130404006" />
+    <street name="石化街道" code="130404007" />
+    <street name="彭家寨乡" code="130404200" />
+</county>
+<county name="峰峰矿" code="130406">
+    <street name="临水镇" code="130406100" />
+    <street name="峰峰镇" code="130406101" />
+    <street name="新坡镇" code="130406102" />
+    <street name="大社镇" code="130406103" />
+    <street name="和村镇" code="130406104" />
+    <street name="义井镇" code="130406105" />
+    <street name="彭城镇" code="130406106" />
+    <street name="界城镇" code="130406107" />
+    <street name="大峪镇" code="130406108" />
+</county>
+<county name="邯郸" code="130421">
+    <street name="尚璧镇" code="130421100" />
+    <street name="黄粱梦镇" code="130421101" />
+    <street name="河沙镇镇" code="130421102" />
+    <street name="户村镇" code="130421104" />
+    <street name="南堡乡" code="130421200" />
+    <street name="南吕固乡" code="130421201" />
+    <street name="兼庄乡" code="130421202" />
+    <street name="代召乡" code="130421203" />
+    <street name="康庄乡" code="130421204" />
+    <street name="三陵乡" code="130421205" />
+</county>
+<county name="临漳" code="130423">
+    <street name="临漳镇" code="130423100" />
+    <street name="南东坊镇" code="130423101" />
+    <street name="孙陶集镇" code="130423102" />
+    <street name="柳园镇" code="130423103" />
+    <street name="称勾集镇" code="130423104" />
+    <street name="狄邱乡" code="130423200" />
+    <street name="张村集乡" code="130423201" />
+    <street name="西羊羔乡" code="130423202" />
+    <street name="香菜营乡" code="130423203" />
+    <street name="杜村集乡" code="130423204" />
+    <street name="章里集乡" code="130423205" />
+    <street name="习文乡" code="130423206" />
+    <street name="砖寨营乡" code="130423207" />
+    <street name="柏鹤集乡" code="130423208" />
+</county>
+<county name="成安" code="130424">
+    <street name="成安镇" code="130424100" />
+    <street name="商城镇" code="130424101" />
+    <street name="漳河店镇" code="130424102" />
+    <street name="李家疃镇" code="130424103" />
+    <street name="辛义乡" code="130424200" />
+    <street name="柏寺营乡" code="130424201" />
+    <street name="道东堡乡" code="130424202" />
+    <street name="北乡义乡" code="130424203" />
+    <street name="长巷乡" code="130424204" />
+</county>
+<county name="大名" code="130425">
+    <street name="大名镇" code="130425100" />
+    <street name="杨桥镇" code="130425101" />
+    <street name="万堤镇" code="130425102" />
+    <street name="龙王庙镇" code="130425103" />
+    <street name="束馆镇" code="130425104" />
+    <street name="金滩镇" code="130425105" />
+    <street name="沙圪塔乡" code="130425200" />
+    <street name="王村乡" code="130425201" />
+    <street name="铺上乡" code="130425202" />
+    <street name="黄金堤乡" code="130425203" />
+    <street name="大街乡" code="130425204" />
+    <street name="旧治乡" code="130425205" />
+    <street name="西未庄乡" code="130425206" />
+    <street name="孙甘店乡" code="130425207" />
+    <street name="西付集乡" code="130425208" />
+    <street name="埝头乡" code="130425209" />
+    <street name="北峰乡" code="130425210" />
+    <street name="张铁集乡" code="130425211" />
+    <street name="红庙乡" code="130425212" />
+    <street name="营镇回族乡" code="130425213" />
+</county>
+<county name="涉县" code="130426">
+    <street name="平安街道" code="130426001" />
+    <street name="涉城镇" code="130426100" />
+    <street name="河南店镇" code="130426101" />
+    <street name="索堡镇" code="130426102" />
+    <street name="西戌镇" code="130426103" />
+    <street name="井店镇" code="130426104" />
+    <street name="更乐镇" code="130426105" />
+    <street name="固新镇" code="130426106" />
+    <street name="西达镇" code="130426107" />
+    <street name="偏城镇" code="130426108" />
+    <street name="神头乡" code="130426200" />
+    <street name="辽城乡" code="130426201" />
+    <street name="偏店乡" code="130426202" />
+    <street name="龙虎乡" code="130426203" />
+    <street name="木井乡" code="130426204" />
+    <street name="关防乡" code="130426205" />
+    <street name="合漳乡" code="130426206" />
+    <street name="鹿头乡" code="130426207" />
+</county>
+<county name="磁县" code="130427">
+    <street name="磁州镇" code="130427100" />
+    <street name="高臾镇" code="130427101" />
+    <street name="西光禄镇" code="130427102" />
+    <street name="讲武城镇" code="130427103" />
+    <street name="岳城镇" code="130427104" />
+    <street name="观台镇" code="130427105" />
+    <street name="林坛镇" code="130427106" />
+    <street name="白土镇" code="130427107" />
+    <street name="黄沙镇" code="130427108" />
+    <street name="路村营乡" code="130427200" />
+    <street name="西固义乡" code="130427201" />
+    <street name="辛庄营乡" code="130427202" />
+    <street name="花官营乡" code="130427203" />
+    <street name="时村营乡" code="130427204" />
+    <street name="南城乡" code="130427205" />
+    <street name="台城乡" code="130427206" />
+    <street name="陶泉乡" code="130427207" />
+    <street name="都党乡" code="130427208" />
+    <street name="北贾壁乡" code="130427209" />
+</county>
+<county name="肥乡" code="130428">
+    <street name="肥乡镇" code="130428100" />
+    <street name="天台山镇" code="130428101" />
+    <street name="大西韩乡" code="130428200" />
+    <street name="辛安镇乡" code="130428201" />
+    <street name="毛演堡乡" code="130428202" />
+    <street name="元固乡" code="130428203" />
+    <street name="屯庄营乡" code="130428204" />
+    <street name="东漳堡乡" code="130428205" />
+    <street name="旧店乡" code="130428206" />
+</county>
+<county name="永年" code="130429">
+    <street name="临洺关镇" code="130429100" />
+    <street name="大北汪镇" code="130429101" />
+    <street name="张西堡镇" code="130429102" />
+    <street name="广府镇" code="130429103" />
+    <street name="南沿村镇" code="130429104" />
+    <street name="永合会镇" code="130429105" />
+    <street name="西苏乡" code="130429200" />
+    <street name="界河店乡" code="130429201" />
+    <street name="刘营乡" code="130429202" />
+    <street name="刘汉乡" code="130429203" />
+    <street name="正西乡" code="130429204" />
+    <street name="讲武乡" code="130429205" />
+    <street name="曲陌乡" code="130429206" />
+    <street name="辛庄堡乡" code="130429207" />
+    <street name="小龙马乡" code="130429208" />
+    <street name="东杨庄乡" code="130429209" />
+    <street name="小西堡乡" code="130429210" />
+    <street name="西河庄乡" code="130429211" />
+    <street name="姚寨乡" code="130429212" />
+    <street name="西阳城乡" code="130429213" />
+</county>
+<county name="邱县" code="130430">
+    <street name="新马头镇" code="130430100" />
+    <street name="邱城镇" code="130430101" />
+    <street name="梁二庄镇" code="130430102" />
+    <street name="香城固镇" code="130430103" />
+    <street name="南辛店乡" code="130430201" />
+    <street name="古城营乡" code="130430203" />
+    <street name="陈村回族乡" code="130430204" />
+</county>
+<county name="鸡泽" code="130431">
+    <street name="鸡泽镇" code="130431100" />
+    <street name="小寨镇" code="130431101" />
+    <street name="双塔镇" code="130431102" />
+    <street name="浮图店乡" code="130431200" />
+    <street name="吴官营乡" code="130431201" />
+    <street name="风正乡" code="130431202" />
+    <street name="曹庄乡" code="130431203" />
+</county>
+<county name="广平" code="130432">
+    <street name="广平镇" code="130432100" />
+    <street name="平固店镇" code="130432101" />
+    <street name="胜营镇" code="130432102" />
+    <street name="十里铺乡" code="130432201" />
+    <street name="南韩村乡" code="130432202" />
+    <street name="南阳堡乡" code="130432203" />
+    <street name="东张孟乡" code="130432204" />
+</county>
+<county name="馆陶" code="130433">
+    <street name="馆陶镇" code="130433100" />
+    <street name="房寨镇" code="130433101" />
+    <street name="柴堡镇" code="130433102" />
+    <street name="魏僧寨镇" code="130433103" />
+    <street name="寿山寺乡" code="130433200" />
+    <street name="王桥乡" code="130433201" />
+    <street name="南徐村乡" code="130433202" />
+    <street name="路桥乡" code="130433203" />
+</county>
+<county name="魏县" code="130434">
+    <street name="魏城镇" code="130434100" />
+    <street name="德政镇" code="130434101" />
+    <street name="北皋镇" code="130434102" />
+    <street name="双井镇" code="130434103" />
+    <street name="牙里镇" code="130434104" />
+    <street name="车往镇" code="130434105" />
+    <street name="回隆镇" code="130434106" />
+    <street name="张二庄镇" code="130434107" />
+    <street name="东代固乡" code="130434200" />
+    <street name="棘针寨乡" code="130434201" />
+    <street name="沙口集乡" code="130434202" />
+    <street name="野胡拐乡" code="130434203" />
+    <street name="仕望集乡" code="130434204" />
+    <street name="前大磨乡" code="130434205" />
+    <street name="院堡乡" code="130434206" />
+    <street name="南双庙乡" code="130434207" />
+    <street name="大辛庄乡" code="130434208" />
+    <street name="大马村乡" code="130434209" />
+    <street name="边马乡" code="130434210" />
+    <street name="北台头乡" code="130434212" />
+    <street name="泊口乡" code="130434213" />
+</county>
+<county name="曲周" code="130435">
+    <street name="曲周镇" code="130435100" />
+    <street name="安寨镇" code="130435101" />
+    <street name="侯村镇" code="130435102" />
+    <street name="河南疃镇" code="130435103" />
+    <street name="第四疃镇" code="130435104" />
+    <street name="槐桥乡" code="130435200" />
+    <street name="南里岳乡" code="130435201" />
+    <street name="白寨乡" code="130435202" />
+    <street name="大河道乡" code="130435203" />
+    <street name="依庄乡" code="130435204" />
+</county>
+<county name="武安" code="130481">
+    <street name="武安镇" code="130481100" />
+    <street name="康二城镇" code="130481101" />
+    <street name="午汲镇" code="130481102" />
+    <street name="磁山镇" code="130481103" />
+    <street name="伯延镇" code="130481104" />
+    <street name="淑村镇" code="130481105" />
+    <street name="大同镇" code="130481106" />
+    <street name="邑城镇" code="130481107" />
+    <street name="矿山镇" code="130481108" />
+    <street name="贺进镇" code="130481109" />
+    <street name="阳邑镇" code="130481110" />
+    <street name="徘徊镇" code="130481111" />
+    <street name="冶陶镇" code="130481112" />
+    <street name="上团城乡" code="130481200" />
+    <street name="北安庄乡" code="130481201" />
+    <street name="北安乐乡" code="130481202" />
+    <street name="西土山乡" code="130481203" />
+    <street name="西寺庄乡" code="130481204" />
+    <street name="活水乡" code="130481205" />
+    <street name="石洞乡" code="130481206" />
+    <street name="管陶乡" code="130481207" />
+    <street name="马家庄乡" code="130481208" />
+</county>
+</city>
+</address>

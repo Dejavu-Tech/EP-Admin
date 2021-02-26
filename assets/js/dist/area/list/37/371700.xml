@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="菏泽" code="371700">
+<county name="牡丹" code="371702">
+    <street name="东城街道" code="371702001" />
+    <street name="西城街道" code="371702002" />
+    <street name="南城街道" code="371702003" />
+    <street name="北城街道" code="371702004" />
+    <street name="牡丹街道" code="371702005" />
+    <street name="丹阳街道" code="371702006" />
+    <street name="岳程街道" code="371702007" />
+    <street name="佃户屯街道" code="371702008" />
+    <street name="何楼街道" code="371702009" />
+    <street name="万福街道" code="371702010" />
+    <street name="沙土镇" code="371702100" />
+    <street name="吴店镇" code="371702101" />
+    <street name="王浩屯镇" code="371702102" />
+    <street name="黄堽镇" code="371702103" />
+    <street name="都司镇" code="371702104" />
+    <street name="高庄镇" code="371702105" />
+    <street name="小留镇" code="371702106" />
+    <street name="李村镇" code="371702107" />
+    <street name="马岭岗镇" code="371702108" />
+    <street name="安兴镇" code="371702109" />
+    <street name="大黄集镇" code="371702110" />
+    <street name="吕陵镇" code="371702111" />
+    <street name="胡集镇" code="371702112" />
+    <street name="皇镇乡" code="371702202" />
+</county>
+<county name="曹县" code="371721">
+    <street name="曹城街道" code="371721001" />
+    <street name="磐石街道" code="371721002" />
+    <street name="青菏街道" code="371721003" />
+    <street name="庄寨镇" code="371721101" />
+    <street name="普连集镇" code="371721102" />
+    <street name="青固集镇" code="371721103" />
+    <street name="桃源集镇" code="371721104" />
+    <street name="韩集镇" code="371721105" />
+    <street name="砖庙镇" code="371721106" />
+    <street name="古营集镇" code="371721107" />
+    <street name="魏湾镇" code="371721108" />
+    <street name="侯集回族镇" code="371721109" />
+    <street name="苏集镇" code="371721110" />
+    <street name="孙老家镇" code="371721111" />
+    <street name="阎店楼镇" code="371721112" />
+    <street name="梁堤头镇" code="371721113" />
+    <street name="安才楼镇" code="371721114" />
+    <street name="曹县邵庄镇" code="371721115" />
+    <street name="曹县王集镇" code="371721116" />
+    <street name="青岗集镇" code="371721117" />
+    <street name="郑庄镇" code="371721118" />
+    <street name="曹县倪集镇" code="371721119" />
+    <street name="曹县常乐集乡" code="371721201" />
+    <street name="曹县楼庄乡" code="371721203" />
+    <street name="曹县大集乡" code="371721206" />
+    <street name="曹县朱洪庙乡" code="371721207" />
+    <street name="曹县仵楼乡" code="371721208" />
+</county>
+<county name="单县" code="371722">
+    <street name="北城街道" code="371722001" />
+    <street name="南城街道" code="371722002" />
+    <street name="园艺街道" code="371722003" />
+    <street name="东城街道" code="371722004" />
+    <street name="郭村镇" code="371722101" />
+    <street name="黄岗镇" code="371722102" />
+    <street name="终兴镇" code="371722103" />
+    <street name="高韦庄镇" code="371722105" />
+    <street name="徐寨镇" code="371722106" />
+    <street name="蔡堂镇" code="371722107" />
+    <street name="朱集镇" code="371722108" />
+    <street name="李新庄镇" code="371722109" />
+    <street name="浮岗镇" code="371722110" />
+    <street name="莱河镇" code="371722111" />
+    <street name="时楼镇" code="371722112" />
+    <street name="杨楼镇" code="371722113" />
+    <street name="张集镇" code="371722114" />
+    <street name="龙王庙镇" code="371722115" />
+    <street name="谢集镇" code="371722116" />
+    <street name="李田楼镇" code="371722117" />
+    <street name="高老家乡" code="371722201" />
+    <street name="曹庄乡" code="371722202" />
+</county>
+<county name="成武" code="371723">
+    <street name="文亭街道" code="371723001" />
+    <street name="永昌街道" code="371723002" />
+    <street name="成武县大田集镇" code="371723101" />
+    <street name="成武县天宫庙镇" code="371723102" />
+    <street name="成武县汶上集镇" code="371723103" />
+    <street name="成武县南鲁集镇" code="371723104" />
+    <street name="成武县伯乐集镇" code="371723105" />
+    <street name="成武县苟村集镇" code="371723106" />
+    <street name="成武县白浮图镇" code="371723107" />
+    <street name="成武县孙寺镇" code="371723108" />
+    <street name="成武县九女集镇" code="371723109" />
+    <street name="成武县党集镇" code="371723110" />
+    <street name="成武县张楼镇" code="371723111" />
+</county>
+<county name="巨野" code="371724">
+    <street name="凤凰街道" code="371724001" />
+    <street name="永丰街道" code="371724002" />
+    <street name="龙固镇" code="371724101" />
+    <street name="大义镇" code="371724102" />
+    <street name="柳林镇" code="371724103" />
+    <street name="章缝镇" code="371724104" />
+    <street name="大谢集镇" code="371724105" />
+    <street name="独山镇" code="371724106" />
+    <street name="麒麟镇" code="371724107" />
+    <street name="核桃园镇" code="371724108" />
+    <street name="田庄镇" code="371724109" />
+    <street name="太平镇" code="371724110" />
+    <street name="万丰镇" code="371724111" />
+    <street name="陶庙镇" code="371724112" />
+    <street name="董官屯镇" code="371724113" />
+    <street name="田桥镇" code="371724114" />
+    <street name="营里镇" code="371724115" />
+</county>
+<county name="郓城" code="371725">
+    <street name="郓州街道" code="371725001" />
+    <street name="唐塔街道" code="371725002" />
+    <street name="黄安镇" code="371725101" />
+    <street name="杨庄集镇" code="371725102" />
+    <street name="侯咽集镇" code="371725103" />
+    <street name="武安镇" code="371725104" />
+    <street name="郭屯镇" code="371725105" />
+    <street name="丁里长镇" code="371725106" />
+    <street name="玉皇庙镇" code="371725107" />
+    <street name="程屯镇" code="371725108" />
+    <street name="随官屯镇" code="371725109" />
+    <street name="张营镇" code="371725110" />
+    <street name="潘渡镇" code="371725111" />
+    <street name="双桥镇" code="371725112" />
+    <street name="南赵楼镇" code="371725113" />
+    <street name="黄堆集镇" code="371725114" />
+    <street name="唐庙镇" code="371725115" />
+    <street name="黄集乡" code="371725205" />
+    <street name="李集乡" code="371725206" />
+    <street name="张鲁集乡" code="371725207" />
+    <street name="水堡乡" code="371725208" />
+    <street name="陈坡乡" code="371725209" />
+</county>
+<county name="鄄城" code="371726">
+    <street name="陈王街道" code="371726001" />
+    <street name="古泉街道" code="371726002" />
+    <street name="什集镇" code="371726101" />
+    <street name="红船镇" code="371726102" />
+    <street name="旧城镇" code="371726103" />
+    <street name="闫什镇" code="371726104" />
+    <street name="箕山镇" code="371726105" />
+    <street name="李进士堂镇" code="371726106" />
+    <street name="董口镇" code="371726107" />
+    <street name="临濮镇" code="371726108" />
+    <street name="彭楼镇" code="371726109" />
+    <street name="凤凰镇" code="371726110" />
+    <street name="郑营镇" code="371726111" />
+    <street name="大埝镇" code="371726112" />
+    <street name="引马镇" code="371726113" />
+    <street name="左营乡" code="371726200" />
+    <street name="富春乡" code="371726207" />
+</county>
+<county name="定陶" code="371727">
+    <street name="天中街道" code="371727001" />
+    <street name="滨河街道" code="371727002" />
+    <street name="陈集镇" code="371727101" />
+    <street name="冉固镇" code="371727102" />
+    <street name="张湾镇" code="371727103" />
+    <street name="黄店镇" code="371727104" />
+    <street name="孟海镇" code="371727105" />
+    <street name="马集镇" code="371727106" />
+    <street name="仿山镇" code="371727107" />
+    <street name="半堤镇" code="371727108" />
+    <street name="杜堂镇" code="371727109" />
+    <street name="南王店乡" code="371727202" />
+</county>
+<county name="东明" code="371728">
+    <street name="城关街道" code="371728001" />
+    <street name="鱼沃街道" code="371728002" />
+    <street name="东明集镇" code="371728101" />
+    <street name="刘楼镇" code="371728102" />
+    <street name="陆圈镇" code="371728103" />
+    <street name="马头镇" code="371728104" />
+    <street name="三春集镇" code="371728105" />
+    <street name="大屯镇" code="371728106" />
+    <street name="武胜桥镇" code="371728107" />
+    <street name="菜园集镇" code="371728108" />
+    <street name="沙窝镇" code="371728109" />
+    <street name="小井乡" code="371728202" />
+    <street name="长兴集乡" code="371728204" />
+    <street name="焦园乡" code="371728205" />
+</county>
+</city>
+</address>

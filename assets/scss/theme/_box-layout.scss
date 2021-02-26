@@ -1,0 +1,538 @@
+/**=====================
+   72. Box-layout CSS start
+==========================**/
+
+
+[main-theme-layout= "box-layout"] {
+  @media (min-width: 1280px) {
+    .email-wrap {
+      .email-right-aside {
+        .email-body {
+          border-top-right-radius: 40px;
+          border-bottom-right-radius: 40px;
+        }
+        .radius-left {
+          border-top-left-radius: 40px !important;
+          border-bottom-left-radius: 40px !important;
+        }
+      }
+    }
+    .page-wrapper{
+      .more-btn{
+        .btn-secondary{
+          display: none;
+        }
+      }
+      .page-body-wrapper{
+        .iconsidebar-menu{
+          .iconMenu-bar{
+            li{
+              position: unset;
+              &.open{
+               .iconbar-mainmenu{
+                animation: none !important;
+              }
+              .bar-icons{
+                &:before{
+                  display: none;
+                }
+              }
+            }
+            }
+            .iconbar-mainmenu{
+              position: absolute;
+              top: 0;
+              animation: none !important;
+            }
+          }
+          &.iconbar-mainmenu-close, &.iconbar-second-close {
+            .iconMenu-bar {
+              li {
+                &.open {
+                  .iconbar-mainmenu {
+                    display: none;
+                    transition: 0.5s;
+                    visibility: hidden;
+                  }
+                }
+              }
+            }
+          }
+          &.iconbar-second-close {
+            .iconMenu-bar {
+              display: none;
+              transition: 0.5s;
+              visibility: hidden;
+            }
+          }
+        }
+      }
+    }
+  .page-wrapper{
+    #batchDelete{
+      .jsgrid-grid-header{
+        .jsgrid-table{
+          tr{
+            th{
+              .btn{
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-group-showcase{
+      .btn-radio{
+        .btn-group{
+          .radio{
+            input[type="radio"] {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .alert{
+      &.inverse{
+        p{
+          max-width: 238px;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .page-main-header {
+      .main-header-right {
+        margin: 0;
+      }
+      .vertical-menu-main .mega-menu {
+        width: 1050px !important;
+        max-width: 1050px !important;
+        left: -80px !important;
+      }
+    }
+    .page-body-wrapper {
+      width: 1280px;
+      box-shadow: 1px 3px 25px rgba(0, 0, 0, 0.07);
+      .learning-comment{
+        margin-left: -14px !important;
+        float: left !important;
+      }
+      .todo {
+        .todo-list-wrapper{
+          #todo-list{
+            li{
+              .task-responsive {
+                min-width: 1087px;
+                overflow: auto;
+              }
+            }
+          }
+        }
+      }
+      .active-order-table{
+        max-width: 443px;
+        overflow: auto;
+        table{
+          tbody{
+            tr{
+              td{
+                p {
+                  width: 100px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .activity{
+        .media{
+          .gradient-round{
+            &.gradient-line-1{
+              &:after {
+                height: 57px;
+                bottom: -64px;
+              }
+            }
+            &.small-line{
+              &:after{
+                height: 36px;
+                bottom: -43px;
+              }
+            }
+            &.medium-line{
+              &:after{
+                height: 40px;
+                bottom: -48px;
+              }
+            }
+          }
+        }
+      }
+      margin: 0 auto;
+      footer {
+        margin: 0 auto;
+        right: 0;
+        padding-right: 15px;
+        margin-left: 300px;
+        z-index: 99;
+      }
+      .footer-fix{
+        margin-left: 567px;
+      }
+      .chat-box {
+        .chat-history {
+          .call-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 300px;
+            > div {
+              z-index: 8;
+              background-color: rgba(255, 255, 255, 0.75);
+              background-blend-mode: overlay;
+              width: 100%;
+              padding: 30px;
+              left: 15px;
+            }
+            button {
+              width: 40%;
+              font-size: 14px;
+              margin: 0 auto;
+            }
+          }
+          .call-icons {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            ul {
+              li {
+                border: 1px solid #717171;
+                width: 50px;
+                height: 50px;
+                padding: 8px;
+              }
+            }
+          }
+          .receiver-img {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            img {
+              width: 38%;
+            }
+          }
+          .total-time {
+            h2 {
+              font-size: 28px;
+              color: #717171;
+            }
+          }
+        }
+      }
+      canvas{
+        &#myLineCharts{
+          width: 100%;
+        }
+      }
+      .chat-right-aside {
+        flex: 0 0 60%;
+        max-width: 60%;
+        overflow: hidden;
+      }
+      .caller-img {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        left: 15px;
+        img {
+          opacity: 0.7;
+        }
+      }
+      .browser-widget{
+        img{
+          height: 65px;
+        }
+      }
+      .weather-widget-two{
+        .bottom-whetherinfo {
+          .whether-content{
+            top: 39px;
+          }
+        }
+      }
+      .custom-card {
+        .card-header{
+          img{
+            margin-top: -73px;
+          }
+        }
+        .card-profile {
+          img {
+            height: 130px;
+            top: -17px;
+          }
+        }
+      }
+      .select2{
+        width: 901.781px;
+      }
+  
+    }
+    .page-main-header {
+      max-width: 1280px;
+        // padding-left: 250px;
+        margin: 0 auto !important;
+        left: 0;
+        right: 0;
+        transition: $sidebar-transition;
+        &.open{
+          padding-left: 0;
+          transition: $sidebar-transition;
+        }
+      }
+      .page-builder {
+        .ge-canvas.ge-layout-desktop {
+          margin-top: 50px;
+        }
+        .ge-addRowGroup {
+          margin-bottom: 10px;
+        }
+      }
+      .pricing-wrapper-card {
+        padding: 50px 20px;
+      }
+      .card {
+        .blog-box {
+          &.blog-grid {
+            &.set-min-height {
+              min-height: 400px;
+            }
+          }
+        }
+      }
+      .flot-chart-placeholder {
+        &#donut-color-chart-morris-daily {
+          min-height: 430px;
+        }
+      }
+      .flot-chart-placeholder {
+        &#donut-color-chart-morris {
+          min-height: 430px;
+        }
+      }
+      .box-col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .box-col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .box-col-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+      .box-col-7 {
+        flex: 0 0 60%;
+        max-width: 60%;
+      }
+      .box-col-5 {
+        flex: 0 0 40%;
+        max-width: 40%;
+      }
+      .box-col-8 {
+        flex: 0 0 70%;
+        max-width: 70%;
+      }
+      .box-col-4 {
+        flex: 0 0 30%;
+        max-width: 30%;
+      }
+      .box-col-4a {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+      }
+      .chat-box {
+        .chat-right-aside {
+          .chat {
+            .chat-header {
+              .chat-menu-icons {
+                li {
+                  a {
+                    i {
+                      font-size: 19px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          flex: 0 0 100%;
+          max-width: calc(100% - 15px);
+          overflow: hidden;
+          &.bitcoin-chat{
+            max-width: 100%;
+          }
+        }
+        .toogle-bar {
+          display: inline-block;
+          margin-right: 0 !important;
+        }
+      }
+      .chat-menu {
+        right: 0;
+        border-top: 1px solid #ddd;
+        opacity: 0;
+        transform: translateY(-30px);
+        visibility: hidden;
+        top: 81px;
+        position: absolute;
+        z-index: 9;
+        background-color: #fff;
+        transition: all linear 0.3s;
+      }
+      .chat-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        transition: all linear 0.3s;
+        padding-bottom: 25px;
+      }
+      .ct-10.total-chart{
+        .ct-chart-bar{
+          .ct-series{
+            .ct-bar{
+              stroke-width: 23px !important;
+            }
+          }
+        }
+      }
+      .email-wrap {
+        .email-body {
+          .email-compose {
+            .cke_contents{
+              &.cke_reset{
+                max-height: 165px;
+              }
+            }
+          }
+        }
+        .email-right-aside{
+          .email-body {
+            .inbox{
+              height: 644px;
+            }
+          }
+        }
+        .email-content {
+          .email-top{
+            .user-emailid{
+              &:after{
+                right: -10px;
+              }
+            }
+          }
+        }
+      }
+      .todo {
+        .notification-popup{
+          right: 320px;
+        }
+      }
+      .touchspin{
+        padding: 0 10px;
+      }
+      .vertical-menu-main {
+        width: 1280px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        .mega-menu {
+          width: 1050px !important;
+          max-width: 1050px !important;
+          left: -320px !important;
+        }
+      }
+      .comingsoon {
+        video{
+          min-width: 67%;
+          width: 67%;
+        }
+      }
+      .auth-bg-effect {
+        .second-effect {
+          left: 55%;
+        }
+      }
+      .auth-bg-video{
+        video{
+          min-width: 67%;
+          width: 67%;
+        }
+      }
+    }
+    &.dark-only {
+      .chat-menu {
+        background-color: $dark-body-background;
+        border-top: 1px solid $dark-border-color;
+      }
+    }
+  }
+}
+.rtl{
+  .box-layout.page-wrapper{
+    .page-main-header {
+      max-width: 1280px;
+      padding-right: 250px;
+      padding-left: unset;
+      &.open{
+        max-width: 1280px;
+      }
+      .main-header-right{
+        .nav-right{
+          > ul{
+            > li{
+              &:first-child{
+                .search-form{
+                  .form-group{
+                    &:after {
+                      right: 22px;
+                      left: unset;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .page-body-wrapper {
+      footer {
+        margin-right: 566px;
+        margin-left: unset;
+        padding-left: 15px;
+        p{
+         i {
+           margin-right: 5px;
+           margin-left: unset;
+         }
+       }
+     }
+     .page-sidebar{
+      &.open {
+        ~ footer {
+          margin-right: 0;
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+}
+}
+/**=====================
+   72. Box-layout CSS ends
+==========================**/

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="芜湖" code="340200">
+<county name="镜湖" code="340202">
+    <street name="方村街道" code="340202012" />
+    <street name="张家山公共服务中心" code="340202401" />
+    <street name="赭麓公共服务中心" code="340202402" />
+    <street name="滨江公共服务中心" code="340202403" />
+    <street name="赭山公共服务中心" code="340202404" />
+    <street name="弋矶山公共服务中心" code="340202405" />
+    <street name="汀棠公共服务中心" code="340202406" />
+    <street name="天门山公共服务中心" code="340202407" />
+    <street name="大砻坊公共服务中心" code="340202408" />
+    <street name="镜湖新城公共服务中心" code="340202409" />
+    <street name="荆山公共服务中心" code="340202410" />
+</county>
+<county name="弋江" code="340203">
+    <street name="弋江桥街道" code="340203001" />
+    <street name="中山南路街道" code="340203002" />
+    <street name="利民路街道" code="340203003" />
+    <street name="马塘街道" code="340203004" />
+    <street name="瀂港街道" code="340203005" />
+    <street name="火龙街道" code="340203006" />
+    <street name="白马街道" code="340203007" />
+    <street name="南瑞社区公共服务委员会" code="340203098" />
+    <street name="芜湖高新技术产业开发区" code="340203400" />
+</county>
+<county name="鸠江" code="340207">
+    <street name="四褐山街道" code="340207001" />
+    <street name="裕溪口街道" code="340207002" />
+    <street name="官陡街道" code="340207003" />
+    <street name="湾里街道" code="340207004" />
+    <street name="清水街道" code="340207005" />
+    <street name="龙山街道" code="340207006" />
+    <street name="万春街道" code="340207007" />
+    <street name="沈巷镇" code="340207101" />
+    <street name="二坝镇" code="340207102" />
+    <street name="汤沟镇" code="340207103" />
+    <street name="芜湖经济技术开发区" code="340207400" />
+    <street name="安徽省江北产业集中区" code="340207401" />
+    <street name="安徽芜湖鸠江经济开发区" code="340207402" />
+</county>
+<county name="三山" code="340208">
+    <street name="三山街道" code="340208001" />
+    <street name="保定街道" code="340208002" />
+    <street name="龙湖街道" code="340208003" />
+    <street name="高安街道" code="340208004" />
+    <street name="峨桥镇" code="340208100" />
+    <street name="安徽芜湖三山经济开发区" code="340208400" />
+</county>
+<county name="芜湖" code="340221">
+    <street name="湾沚镇" code="340221100" />
+    <street name="六郎镇" code="340221101" />
+    <street name="陶辛镇" code="340221102" />
+    <street name="红杨镇" code="340221104" />
+    <street name="花桥镇" code="340221105" />
+    <street name="安徽新芜经济开发区" code="340221400" />
+</county>
+<county name="繁昌" code="340222">
+    <street name="繁阳镇" code="340222100" />
+    <street name="荻港镇" code="340222101" />
+    <street name="孙村镇" code="340222102" />
+    <street name="平铺镇" code="340222103" />
+    <street name="新港镇" code="340222104" />
+    <street name="峨山镇" code="340222105" />
+    <street name="横山公共服务中心" code="340222400" />
+</county>
+<county name="南陵" code="340223">
+    <street name="籍山镇" code="340223100" />
+    <street name="许镇镇" code="340223101" />
+    <street name="弋江镇" code="340223102" />
+    <street name="三里镇" code="340223103" />
+    <street name="何湾镇" code="340223104" />
+    <street name="工山镇" code="340223105" />
+    <street name="烟墩镇" code="340223106" />
+    <street name="家发镇" code="340223107" />
+    <street name="安徽南陵工业园区" code="340223400" />
+</county>
+<county name="无为" code="341422">
+    <street name="无城镇" code="340225100" />
+    <street name="襄安镇" code="340225101" />
+    <street name="陡沟镇" code="340225104" />
+    <street name="石涧镇" code="340225105" />
+    <street name="严桥镇" code="340225106" />
+    <street name="开城镇" code="340225107" />
+    <street name="蜀山镇" code="340225108" />
+    <street name="牛埠镇" code="340225109" />
+    <street name="刘渡镇" code="340225110" />
+    <street name="姚沟镇" code="340225111" />
+    <street name="泥汊镇" code="340225112" />
+    <street name="白茆镇" code="340225113" />
+    <street name="福渡镇" code="340225114" />
+    <street name="泉塘镇" code="340225115" />
+    <street name="赫店镇" code="340225116" />
+    <street name="红庙镇" code="340225117" />
+    <street name="高沟镇" code="340225118" />
+    <street name="鹤毛乡" code="340225200" />
+    <street name="十里墩乡" code="340225201" />
+    <street name="昆山乡" code="340225202" />
+    <street name="洪巷乡" code="340225203" />
+    <street name="安徽无为经济开发区" code="340225400" />
+</county>
+</city>
+</address>

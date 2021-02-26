@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="镇江" code="321100">
+<county name="京口" code="321102">
+    <street name="正东路街道" code="321102001" />
+    <street name="健康路街道" code="321102002" />
+    <street name="大市口街道" code="321102003" />
+    <street name="四牌楼街道" code="321102004" />
+    <street name="象山街道" code="321102005" />
+    <street name="谏壁街道" code="321102006" />
+    <street name="丁卯街道" code="321102050" />
+    <street name="大港街道" code="321102051" />
+    <street name="姚桥镇" code="321102150" />
+    <street name="大路镇" code="321102151" />
+    <street name="丁岗镇" code="321102152" />
+    <street name="京口工业园区" code="321102400" />
+    <street name="共青团农场" code="321102401" />
+</county>
+<county name="润州" code="321111">
+    <street name="宝塔路街道" code="321111001" />
+    <street name="和平路街道" code="321111002" />
+    <street name="金山街道" code="321111003" />
+    <street name="七里甸街道" code="321111004" />
+    <street name="蒋乔街道" code="321111005" />
+    <street name="官塘桥街道" code="321111006" />
+    <street name="韦岗街道" code="321111007" />
+    <street name="工业园区管委会" code="321111400" />
+    <street name="南山联合社区" code="321111450" />
+</county>
+<county name="丹徒" code="321112">
+    <street name="高资街道" code="321112001" />
+    <street name="高桥镇" code="321112100" />
+    <street name="辛丰镇" code="321112101" />
+    <street name="谷阳镇" code="321112102" />
+    <street name="上党镇" code="321112103" />
+    <street name="宝堰镇" code="321112104" />
+    <street name="世业镇" code="321112105" />
+    <street name="宜城街道" code="321112400" />
+    <street name="江心洲生态农业园区" code="321112401" />
+    <street name="荣炳盐资源区" code="321112402" />
+    <street name="高新园区管委会" code="321112403" />
+</county>
+<county name="丹阳" code="321181">
+    <street name="司徒镇" code="321181100" />
+    <street name="延陵镇" code="321181101" />
+    <street name="珥陵镇" code="321181102" />
+    <street name="导墅镇" code="321181103" />
+    <street name="皇塘镇" code="321181104" />
+    <street name="吕城镇" code="321181105" />
+    <street name="陵口镇" code="321181106" />
+    <street name="访仙镇" code="321181107" />
+    <street name="界牌镇" code="321181108" />
+    <street name="丹北镇" code="321181109" />
+    <street name="后巷镇" code="321181110" />
+    <street name="埤城镇" code="321181111" />
+    <street name="云阳镇" code="321181112" />
+    <street name="经济技术开发区" code="321181400" />
+</county>
+<county name="扬中" code="321182">
+    <street name="三茅街道" code="321182001" />
+    <street name="新坝镇" code="321182101" />
+    <street name="油坊镇" code="321182102" />
+    <street name="八桥镇" code="321182103" />
+    <street name="西来桥镇" code="321182104" />
+    <street name="经济开发区" code="321182400" />
+</county>
+<county name="句容" code="321183">
+    <street name="华阳镇" code="321183100" />
+    <street name="下蜀镇" code="321183102" />
+    <street name="白兔镇" code="321183103" />
+    <street name="边城镇" code="321183104" />
+    <street name="茅山镇" code="321183105" />
+    <street name="后白镇" code="321183106" />
+    <street name="郭庄镇" code="321183107" />
+    <street name="天王镇" code="321183108" />
+    <street name="宝华镇" code="321183109" />
+    <street name="开发区" code="321183400" />
+    <street name="茅山管委会" code="321183429" />
+    <street name="赤山湖管委会" code="321183430" />
+</county>
+</city>
+</address>

@@ -1,0 +1,57 @@
+/**=====================
+    47. Badge CSS start
+==========================**/
+.badge {
+  padding: $badge-padding;
+  &+.badge{
+  	margin-left: 5px;
+  }
+  svg{
+    width: $badge-svg-size;
+    height: 12px;
+  }
+}
+.btn{
+  .badge {
+    position: relative;
+    top: -1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+// flat badge loop css
+@each $flat-badge-name, $flat-badge-color in (primary, $primary-color),
+(secondary, $secondary-color) ,
+(success, $success-color),
+(danger, $danger-color),
+(info, $info-color),
+(dark, $dark-color),
+(warning, $warning-color) {
+  .flat-badge-#{$flat-badge-name}{
+    border-radius: 0;
+    background-color: $flat-badge-color;
+    box-shadow: -0.5px 4.33px 16px 0px rgba($flat-badge-color, 0.25);
+    color: $white !important;
+  }
+}
+
+// flat badge loop css
+@each $pill-badge-name, $pill-badge-color in (primary, $primary-color),
+(secondary, $secondary-color) ,
+(success, $success-color),
+(danger, $danger-color),
+(info, $info-color),
+(dark, $dark-color),
+(warning, $warning-color) {
+  .pill-badge-#{$pill-badge-name}{
+    background-color: $pill-badge-color;
+    box-shadow: -0.5px 4.33px 16px 0px rgba($pill-badge-color, 0.25);
+    color: $white;
+
+  }
+}
+
+/**=====================
+    47. Badge CSS Ends
+==========================**/

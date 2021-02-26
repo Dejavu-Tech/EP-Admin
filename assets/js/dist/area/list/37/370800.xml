@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="济宁" code="370800">
+<county name="市中" code="370802">
+    <street name="古槐街道" code="370802001" />
+    <street name="济阳街道" code="370802002" />
+    <street name="阜桥街道" code="370802003" />
+    <street name="越河街道" code="370802004" />
+    <street name="观音阁街道" code="370802006" />
+    <street name="南苑街道" code="370802008" />
+    <street name="安居街道" code="370802009" />
+    <street name="唐口街道" code="370802010" />
+    <street name="喻屯镇" code="370802102" />
+</county>
+<county name="任城" code="370811">
+    <street name="许庄街道" code="370811002" />
+    <street name="柳行街道" code="370811003" />
+    <street name="洸河街道" code="370811004" />
+    <street name="李营街道" code="370811005" />
+    <street name="南张街道" code="370811006" />
+    <street name="仙营街道" code="370811007" />
+    <street name="金城街道" code="370811008" />
+    <street name="廿里铺街道" code="370811009" />
+    <street name="接庄街道" code="370811010" />
+    <street name="长沟镇" code="370811102" />
+    <street name="石桥镇" code="370811109" />
+    <street name="济东物业服务中心" code="370811400" />
+</county>
+<county name="微山" code="370826">
+    <street name="夏镇街道" code="370826001" />
+    <street name="昭阳街道" code="370826002" />
+    <street name="傅村街道" code="370826003" />
+    <street name="韩庄镇" code="370826101" />
+    <street name="欢城镇" code="370826102" />
+    <street name="南阳镇" code="370826103" />
+    <street name="鲁桥镇" code="370826104" />
+    <street name="留庄镇" code="370826106" />
+    <street name="两城镇" code="370826107" />
+    <street name="马坡镇" code="370826108" />
+    <street name="赵庙镇" code="370826109" />
+    <street name="张楼镇" code="370826110" />
+    <street name="微山岛乡" code="370826200" />
+    <street name="高楼乡" code="370826206" />
+    <street name="西平乡" code="370826210" />
+</county>
+<county name="鱼台" code="370827">
+    <street name="谷亭街道" code="370827001" />
+    <street name="滨湖街道" code="370827002" />
+    <street name="清河镇" code="370827101" />
+    <street name="鱼城镇" code="370827102" />
+    <street name="王鲁镇" code="370827103" />
+    <street name="张黄镇" code="370827104" />
+    <street name="王庙镇" code="370827105" />
+    <street name="李阁镇" code="370827106" />
+    <street name="唐马镇" code="370827107" />
+    <street name="老砦镇" code="370827108" />
+    <street name="罗屯镇" code="370827109" />
+</county>
+<county name="金乡" code="370828">
+    <street name="金乡街道" code="370828001" />
+    <street name="高河街道" code="370828002" />
+    <street name="羊山镇" code="370828101" />
+    <street name="胡集镇" code="370828102" />
+    <street name="肖云镇" code="370828103" />
+    <street name="鸡黍镇" code="370828104" />
+    <street name="王丕镇" code="370828106" />
+    <street name="司马镇" code="370828107" />
+    <street name="鱼山镇" code="370828108" />
+    <street name="马庙镇" code="370828109" />
+    <street name="化雨镇" code="370828110" />
+    <street name="卜集镇" code="370828111" />
+    <street name="兴隆镇" code="370828112" />
+</county>
+<county name="嘉祥" code="370829">
+    <street name="嘉祥镇街道" code="370829001" />
+    <street name="纸坊镇" code="370829101" />
+    <street name="梁宝寺镇" code="370829102" />
+    <street name="卧龙山镇" code="370829103" />
+    <street name="疃里镇" code="370829104" />
+    <street name="马村镇" code="370829105" />
+    <street name="金屯镇" code="370829106" />
+    <street name="大张楼镇" code="370829107" />
+    <street name="马集镇" code="370829108" />
+    <street name="万张镇" code="370829109" />
+    <street name="孟姑集镇" code="370829110" />
+    <street name="老僧堂镇" code="370829111" />
+    <street name="仲山镇" code="370829112" />
+    <street name="黄垓乡" code="370829201" />
+    <street name="满硐乡" code="370829208" />
+    <street name="嘉祥经济开发区管理委员会" code="370829400" />
+</county>
+<county name="汶上" code="370830">
+    <street name="中都街道" code="370830001" />
+    <street name="汶上街道" code="370830002" />
+    <street name="南站镇" code="370830101" />
+    <street name="南旺镇" code="370830102" />
+    <street name="次丘镇" code="370830103" />
+    <street name="寅寺镇" code="370830104" />
+    <street name="郭楼镇" code="370830105" />
+    <street name="康驿镇" code="370830106" />
+    <street name="苑庄镇" code="370830107" />
+    <street name="义桥镇" code="370830108" />
+    <street name="郭仓镇" code="370830109" />
+    <street name="白石镇" code="370830110" />
+    <street name="杨店镇" code="370830111" />
+    <street name="刘楼镇" code="370830112" />
+    <street name="军屯乡" code="370830205" />
+</county>
+<county name="泗水" code="370831">
+    <street name="泗河街道" code="370831001" />
+    <street name="济河街道" code="370831002" />
+    <street name="泉林镇" code="370831101" />
+    <street name="星村镇" code="370831102" />
+    <street name="柘沟镇" code="370831103" />
+    <street name="金庄镇" code="370831104" />
+    <street name="苗馆镇" code="370831105" />
+    <street name="中册镇" code="370831106" />
+    <street name="杨柳镇" code="370831107" />
+    <street name="泗张镇" code="370831108" />
+    <street name="圣水峪镇" code="370831109" />
+    <street name="高峪镇" code="370831110" />
+    <street name="大黄沟乡" code="370831205" />
+</county>
+<county name="梁山" code="370832">
+    <street name="水泊街道" code="370832001" />
+    <street name="梁山街道" code="370832002" />
+    <street name="小路口镇" code="370832101" />
+    <street name="韩岗镇" code="370832102" />
+    <street name="拳铺镇" code="370832104" />
+    <street name="杨营镇" code="370832105" />
+    <street name="韩垓镇" code="370832106" />
+    <street name="馆驿镇" code="370832107" />
+    <street name="小安山镇" code="370832108" />
+    <street name="寿张集镇" code="370832109" />
+    <street name="黑虎庙镇" code="370832110" />
+    <street name="马营镇" code="370832111" />
+    <street name="赵堌堆乡" code="370832215" />
+    <street name="大路口乡" code="370832217" />
+    <street name="梁山经济开发区" code="370832400" />
+</county>
+<county name="曲阜" code="370881">
+    <street name="鲁城街道" code="370881001" />
+    <street name="书院街道" code="370881002" />
+    <street name="时庄街道" code="370881003" />
+    <street name="小雪街道" code="370881004" />
+    <street name="吴村镇" code="370881101" />
+    <street name="姚村镇" code="370881102" />
+    <street name="陵城镇" code="370881103" />
+    <street name="尼山镇" code="370881105" />
+    <street name="王庄镇" code="370881108" />
+    <street name="息陬镇" code="370881109" />
+    <street name="石门山镇" code="370881110" />
+    <street name="防山镇" code="370881111" />
+</county>
+<county name="兖州" code="370882">
+    <street name="鼓楼街道" code="370882001" />
+    <street name="龙桥街道" code="370882003" />
+    <street name="酒仙桥街道" code="370882006" />
+    <street name="王因街道" code="370882007" />
+    <street name="黄屯街道" code="370882008" />
+    <street name="大安镇" code="370882101" />
+    <street name="新驿镇" code="370882102" />
+    <street name="颜店镇" code="370882103" />
+    <street name="新兖镇" code="370882105" />
+    <street name="漕河镇" code="370882107" />
+    <street name="兴隆庄镇" code="370882110" />
+    <street name="小孟镇" code="370882111" />
+</county>
+<county name="邹城" code="370883">
+    <street name="钢山街道" code="370883001" />
+    <street name="千泉街道" code="370883002" />
+    <street name="凫山街道" code="370883003" />
+    <street name="香城镇" code="370883101" />
+    <street name="城前镇" code="370883102" />
+    <street name="大束镇" code="370883103" />
+    <street name="北宿镇" code="370883104" />
+    <street name="中心店镇" code="370883105" />
+    <street name="唐村镇" code="370883106" />
+    <street name="太平镇" code="370883107" />
+    <street name="石墙镇" code="370883109" />
+    <street name="峄山镇" code="370883110" />
+    <street name="看庄镇" code="370883111" />
+    <street name="张庄镇" code="370883112" />
+    <street name="田黄镇" code="370883113" />
+    <street name="郭里镇" code="370883114" />
+</county>
+</city>
+</address>

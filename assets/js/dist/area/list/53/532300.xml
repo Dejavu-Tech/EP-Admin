@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="楚雄" code="532300">
+<county name="楚雄" code="532301">
+    <street name="鹿城镇" code="532301101" />
+    <street name="东瓜镇" code="532301102" />
+    <street name="吕合镇" code="532301103" />
+    <street name="紫溪镇" code="532301104" />
+    <street name="东华镇" code="532301105" />
+    <street name="子午镇" code="532301106" />
+    <street name="苍岭镇" code="532301107" />
+    <street name="三街镇" code="532301108" />
+    <street name="八角镇" code="532301109" />
+    <street name="中山镇" code="532301110" />
+    <street name="新村镇" code="532301111" />
+    <street name="西舍路镇" code="532301112" />
+    <street name="树苴乡" code="532301201" />
+    <street name="大过口乡" code="532301202" />
+    <street name="大地基乡" code="532301203" />
+</county>
+<county name="双柏" code="532322">
+    <street name="妥甸镇" code="532322101" />
+    <street name="大庄镇" code="532322102" />
+    <street name="法脿镇" code="532322103" />
+    <street name="鄂嘉镇" code="532322104" />
+    <street name="大麦地镇" code="532322105" />
+    <street name="安龙堡乡" code="532322201" />
+    <street name="爱尼山乡" code="532322202" />
+    <street name="独田乡" code="532322203" />
+</county>
+<county name="牟定" code="532323">
+    <street name="共和镇" code="532323101" />
+    <street name="新桥镇" code="532323102" />
+    <street name="江坡镇" code="532323103" />
+    <street name="凤屯镇" code="532323104" />
+    <street name="蟠猫乡" code="532323201" />
+    <street name="戌街乡" code="532323202" />
+    <street name="安乐乡" code="532323203" />
+</county>
+<county name="南华" code="532324">
+    <street name="龙川镇" code="532324101" />
+    <street name="沙桥镇" code="532324102" />
+    <street name="五街镇" code="532324103" />
+    <street name="红土坡镇" code="532324104" />
+    <street name="马街镇" code="532324105" />
+    <street name="兔街镇" code="532324106" />
+    <street name="雨露白族自治乡" code="532324201" />
+    <street name="一街乡" code="532324202" />
+    <street name="罗武庄乡" code="532324203" />
+    <street name="五顶山乡" code="532324204" />
+</county>
+<county name="姚安" code="532325">
+    <street name="栋川镇" code="532325101" />
+    <street name="光禄镇" code="532325102" />
+    <street name="前场镇" code="532325103" />
+    <street name="弥兴镇" code="532325104" />
+    <street name="太平镇" code="532325105" />
+    <street name="适中乡" code="532325201" />
+    <street name="左门乡" code="532325202" />
+    <street name="官屯乡" code="532325203" />
+    <street name="大河口乡" code="532325204" />
+</county>
+<county name="大姚" code="532326">
+    <street name="金碧镇" code="532326101" />
+    <street name="石羊镇" code="532326102" />
+    <street name="六苴镇" code="532326103" />
+    <street name="龙街镇" code="532326104" />
+    <street name="新街镇" code="532326105" />
+    <street name="赵家店镇" code="532326106" />
+    <street name="三岔河镇" code="532326107" />
+    <street name="桂花镇" code="532326108" />
+    <street name="昙华乡" code="532326204" />
+    <street name="湾碧傣族傈僳族自治乡" code="532326206" />
+    <street name="铁锁乡" code="532326207" />
+    <street name="三台乡" code="532326208" />
+</county>
+<county name="永仁" code="532327">
+    <street name="永定镇" code="532327101" />
+    <street name="宜就镇" code="532327102" />
+    <street name="中和镇" code="532327103" />
+    <street name="莲池乡" code="532327201" />
+    <street name="维的乡" code="532327202" />
+    <street name="猛虎乡" code="532327203" />
+    <street name="永兴乡" code="532327204" />
+</county>
+<county name="元谋" code="532328">
+    <street name="元马镇" code="532328101" />
+    <street name="黄瓜园镇" code="532328103" />
+    <street name="羊街镇" code="532328104" />
+    <street name="老城乡" code="532328202" />
+    <street name="物茂乡" code="532328203" />
+    <street name="江边乡" code="532328204" />
+    <street name="新华乡" code="532328205" />
+    <street name="平田乡" code="532328206" />
+    <street name="凉山乡" code="532328209" />
+    <street name="姜驿乡" code="532328210" />
+</county>
+<county name="武定" code="532329">
+    <street name="狮山镇" code="532329101" />
+    <street name="高桥镇" code="532329102" />
+    <street name="猫街镇" code="532329103" />
+    <street name="插甸乡" code="532329201" />
+    <street name="田心乡" code="532329202" />
+    <street name="发窝乡" code="532329203" />
+    <street name="白路乡" code="532329204" />
+    <street name="万德乡" code="532329205" />
+    <street name="己衣乡" code="532329206" />
+    <street name="环州乡" code="532329207" />
+    <street name="东坡傣族自治乡" code="532329208" />
+</county>
+<county name="禄丰" code="532331">
+    <street name="金山镇" code="532331101" />
+    <street name="仁兴镇" code="532331102" />
+    <street name="碧城镇" code="532331103" />
+    <street name="勤丰镇" code="532331104" />
+    <street name="一平浪镇" code="532331105" />
+    <street name="广通镇" code="532331106" />
+    <street name="黑井镇" code="532331107" />
+    <street name="土官镇" code="532331108" />
+    <street name="彩云镇" code="532331109" />
+    <street name="和平镇" code="532331110" />
+    <street name="恐龙山镇" code="532331111" />
+    <street name="中村乡" code="532331201" />
+    <street name="高峰乡" code="532331203" />
+    <street name="妥安乡" code="532331204" />
+</county>
+</city>
+</address>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="日照" code="371100">
+<county name="东港" code="371102">
+    <street name="日照街道" code="371102001" />
+    <street name="石臼街道" code="371102002" />
+    <street name="奎山街道" code="371102003" />
+    <street name="秦楼街道" code="371102004" />
+    <street name="北京路街道" code="371102007" />
+    <street name="河山镇" code="371102100" />
+    <street name="两城镇" code="371102101" />
+    <street name="涛雒镇" code="371102102" />
+    <street name="西湖镇" code="371102106" />
+    <street name="陈疃镇" code="371102107" />
+    <street name="南湖镇" code="371102108" />
+    <street name="三庄镇" code="371102109" />
+    <street name="山海天旅游度假区临时工作委员会" code="371102400" />
+</county>
+<county name="岚山" code="371103">
+    <street name="岚山头街道" code="371103001" />
+    <street name="安东卫街道" code="371103002" />
+    <street name="碑廓镇" code="371103100" />
+    <street name="虎山镇" code="371103101" />
+    <street name="巨峰镇" code="371103102" />
+    <street name="高兴镇" code="371103103" />
+    <street name="后村镇" code="371103104" />
+    <street name="黄墩镇" code="371103105" />
+    <street name="前三岛乡" code="371103200" />
+</county>
+<county name="五莲" code="371121">
+    <street name="洪凝街道" code="371121001" />
+    <street name="街头镇" code="371121102" />
+    <street name="潮河镇" code="371121103" />
+    <street name="许孟镇" code="371121104" />
+    <street name="于里镇" code="371121105" />
+    <street name="汪湖镇" code="371121106" />
+    <street name="叩官镇" code="371121107" />
+    <street name="中至镇" code="371121108" />
+    <street name="高泽镇" code="371121109" />
+    <street name="松柏镇" code="371121110" />
+    <street name="石场乡" code="371121201" />
+    <street name="户部乡" code="371121202" />
+</county>
+<county name="莒县" code="371122">
+    <street name="城阳街道" code="371122001" />
+    <street name="招贤镇" code="371122102" />
+    <street name="阎庄镇" code="371122103" />
+    <street name="夏庄镇" code="371122104" />
+    <street name="刘官庄镇" code="371122105" />
+    <street name="峤山镇" code="371122106" />
+    <street name="小店镇" code="371122107" />
+    <street name="中楼镇" code="371122108" />
+    <street name="龙山镇" code="371122109" />
+    <street name="东莞镇" code="371122110" />
+    <street name="浮来山镇" code="371122111" />
+    <street name="陵阳镇" code="371122112" />
+    <street name="店子集镇" code="371122113" />
+    <street name="长岭镇" code="371122114" />
+    <street name="安庄镇" code="371122115" />
+    <street name="棋山镇" code="371122116" />
+    <street name="洛河镇" code="371122117" />
+    <street name="寨里河镇" code="371122118" />
+    <street name="桑园镇" code="371122119" />
+    <street name="果庄乡" code="371122204" />
+    <street name="库山乡" code="371122206" />
+    <street name="莒县经济开发区" code="371122400" />
+</county>
+</city>
+</address>

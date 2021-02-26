@@ -1,0 +1,47 @@
+- var sticky                = true;
+- var jquery_ui             = true;
+- var chat_menu             = true;
+- var pe7_icon              = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Sticky
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Ui Elements
+                                      li.breadcrumb-item.active Sticky
+                    // Container-fluid starts                    
+                    .container-fluid
+                      .row.sticky-header-main
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5
+                                | Sticky Note 
+                                a#add_new.btn.btn-primary.pull-right.m-l-10(href='javascript:;') Add New Note
+                            .card-body
+                              #board.sticky-note
+
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files   

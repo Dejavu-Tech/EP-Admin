@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="桂林" code="450300">
+<county name="秀峰" code="450302">
+    <street name="秀峰街道" code="450302001" />
+    <street name="丽君街道" code="450302002" />
+    <street name="甲山街道" code="450302003" />
+</county>
+<county name="叠彩" code="450303">
+    <street name="叠彩街道" code="450303001" />
+    <street name="北门街道" code="450303002" />
+    <street name="大河乡" code="450303200" />
+</county>
+<county name="象山" code="450304">
+    <street name="南门街道" code="450304001" />
+    <street name="象山街道" code="450304002" />
+    <street name="平山街道" code="450304003" />
+    <street name="二塘乡" code="450304200" />
+</county>
+<county name="七星" code="450305">
+    <street name="七星区街道" code="450305001" />
+    <street name="东江街道" code="450305002" />
+    <street name="穿山街道" code="450305003" />
+    <street name="漓东街道" code="450305004" />
+    <street name="朝阳乡" code="450305200" />
+    <street name="桂林华侨旅游经济区管理委员会" code="450305400" />
+</county>
+<county name="雁山" code="450311">
+    <street name="雁山街道" code="450311001" />
+    <street name="雁山镇" code="450311100" />
+    <street name="柘木镇" code="450311101" />
+    <street name="大埠乡" code="450311200" />
+    <street name="草坪回族乡" code="450311201" />
+</county>
+<county name="阳朔" code="450321">
+    <street name="阳朔镇" code="450321100" />
+    <street name="白沙镇" code="450321101" />
+    <street name="福利镇" code="450321102" />
+    <street name="兴坪镇" code="450321103" />
+    <street name="葡萄镇" code="450321104" />
+    <street name="高田镇" code="450321105" />
+    <street name="金宝乡" code="450321200" />
+    <street name="普益乡" code="450321201" />
+    <street name="杨堤乡" code="450321202" />
+</county>
+<county name="临桂" code="450322">
+    <street name="临桂镇" code="450312100" />
+    <street name="六塘镇" code="450312101" />
+    <street name="会仙镇" code="450312102" />
+    <street name="两江镇" code="450312103" />
+    <street name="五通镇" code="450312104" />
+    <street name="四塘镇" code="450312105" />
+    <street name="南边山乡" code="450312200" />
+    <street name="茶洞乡" code="450312202" />
+    <street name="中庸乡" code="450312203" />
+    <street name="宛田瑶族乡" code="450312204" />
+    <street name="黄沙瑶族乡" code="450312205" />
+</county>
+<county name="灵川" code="450323">
+    <street name="灵川镇" code="450323100" />
+    <street name="大圩镇" code="450323101" />
+    <street name="定江镇" code="450323102" />
+    <street name="三街镇" code="450323103" />
+    <street name="潭下镇" code="450323104" />
+    <street name="青狮潭镇" code="450323106" />
+    <street name="灵田镇" code="450323107" />
+    <street name="潮田乡" code="450323200" />
+    <street name="大境瑶族乡" code="450323201" />
+    <street name="海洋乡" code="450323202" />
+    <street name="兰田瑶族乡" code="450323206" />
+</county>
+<county name="全州" code="450324">
+    <street name="全州镇" code="450324100" />
+    <street name="黄沙河镇" code="450324101" />
+    <street name="庙头镇" code="450324102" />
+    <street name="文桥镇" code="450324103" />
+    <street name="大西江镇" code="450324104" />
+    <street name="龙水镇" code="450324105" />
+    <street name="才湾镇" code="450324106" />
+    <street name="绍水镇" code="450324107" />
+    <street name="石塘镇" code="450324108" />
+    <street name="永岁乡" code="450324200" />
+    <street name="枧塘乡" code="450324201" />
+    <street name="咸水乡" code="450324202" />
+    <street name="凤凰乡" code="450324203" />
+    <street name="蕉江瑶族乡" code="450324204" />
+    <street name="安和乡" code="450324205" />
+    <street name="两河乡" code="450324206" />
+    <street name="白宝乡" code="450324207" />
+    <street name="东山瑶族乡" code="450324208" />
+</county>
+<county name="兴安" code="450325">
+    <street name="兴安镇" code="450325100" />
+    <street name="湘漓镇" code="450325101" />
+    <street name="界首镇" code="450325102" />
+    <street name="高尚镇" code="450325103" />
+    <street name="严关镇" code="450325104" />
+    <street name="溶江镇" code="450325105" />
+    <street name="漠川乡" code="450325200" />
+    <street name="白石乡" code="450325201" />
+    <street name="崔家乡" code="450325202" />
+    <street name="华江瑶族乡" code="450325203" />
+</county>
+<county name="永福" code="450326">
+    <street name="永福镇" code="450326100" />
+    <street name="罗锦镇" code="450326101" />
+    <street name="百寿镇" code="450326102" />
+    <street name="苏桥镇" code="450326103" />
+    <street name="堡里乡" code="450326201" />
+    <street name="广福乡" code="450326202" />
+    <street name="三皇乡" code="450326203" />
+    <street name="永安乡" code="450326204" />
+    <street name="龙江乡" code="450326205" />
+</county>
+<county name="灌阳" code="450327">
+    <street name="灌阳镇" code="450327100" />
+    <street name="黄关镇" code="450327101" />
+    <street name="文市镇" code="450327102" />
+    <street name="新街镇" code="450327103" />
+    <street name="洞井瑶族乡" code="450327200" />
+    <street name="观音阁乡" code="450327201" />
+    <street name="西山瑶族乡" code="450327202" />
+    <street name="新圩乡" code="450327204" />
+    <street name="水车乡" code="450327205" />
+</county>
+<county name="龙胜" code="450328">
+    <street name="龙胜镇" code="450328100" />
+    <street name="瓢里镇" code="450328101" />
+    <street name="三门镇" code="450328102" />
+    <street name="和平乡" code="450328200" />
+    <street name="泗水乡" code="450328201" />
+    <street name="江底乡" code="450328202" />
+    <street name="马堤乡" code="450328203" />
+    <street name="伟江乡" code="450328204" />
+    <street name="平等乡" code="450328205" />
+    <street name="乐江乡" code="450328206" />
+</county>
+<county name="资源" code="450329">
+    <street name="资源镇" code="450329100" />
+    <street name="中峰乡" code="450329200" />
+    <street name="梅溪乡" code="450329201" />
+    <street name="瓜里乡" code="450329202" />
+    <street name="车田苗族乡" code="450329203" />
+    <street name="两水苗族乡" code="450329204" />
+    <street name="河口瑶族乡" code="450329205" />
+</county>
+<county name="平乐" code="450330">
+    <street name="平乐镇" code="450330100" />
+    <street name="二塘镇" code="450330101" />
+    <street name="沙子镇" code="450330102" />
+    <street name="同安镇" code="450330103" />
+    <street name="张家镇" code="450330104" />
+    <street name="源头镇" code="450330105" />
+    <street name="阳安乡" code="450330200" />
+    <street name="青龙乡" code="450330201" />
+    <street name="桥亭乡" code="450330202" />
+    <street name="大发瑶族乡" code="450330203" />
+</county>
+<county name="荔浦" code="450331">
+    <street name="荔城镇" code="450331100" />
+    <street name="东昌镇" code="450331101" />
+    <street name="新坪镇" code="450331102" />
+    <street name="杜莫镇" code="450331103" />
+    <street name="青山镇" code="450331104" />
+    <street name="修仁镇" code="450331105" />
+    <street name="大塘镇" code="450331106" />
+    <street name="花箦镇" code="450331107" />
+    <street name="双江镇" code="450331108" />
+    <street name="马岭镇" code="450331109" />
+    <street name="龙怀乡" code="450331200" />
+    <street name="茶城乡" code="450331201" />
+    <street name="蒲芦瑶族乡" code="450331202" />
+</county>
+<county name="恭城" code="450332">
+    <street name="恭城镇" code="450332100" />
+    <street name="栗木镇" code="450332101" />
+    <street name="莲花镇" code="450332102" />
+    <street name="平安乡" code="450332200" />
+    <street name="三江乡" code="450332201" />
+    <street name="嘉会乡" code="450332202" />
+    <street name="西岭乡" code="450332203" />
+    <street name="观音乡" code="450332204" />
+    <street name="龙虎乡" code="450332205" />
+</county>
+</city>
+</address>

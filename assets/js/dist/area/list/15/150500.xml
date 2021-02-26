@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="通辽" code="150500">
+<county name="科尔沁" code="150502">
+    <street name="科尔沁街道" code="150502001" />
+    <street name="西门街道" code="150502002" />
+    <street name="永清街道" code="150502003" />
+    <street name="明仁街道" code="150502004" />
+    <street name="施介街道" code="150502005" />
+    <street name="清真街道" code="150502006" />
+    <street name="东郊街道" code="150502007" />
+    <street name="铁路街道" code="150502008" />
+    <street name="红星街道" code="150502009" />
+    <street name="霍林街道" code="150502010" />
+    <street name="建国街道" code="150502011" />
+    <street name="河西街道" code="150502020" />
+    <street name="电厂街道" code="150502021" />
+    <street name="新城街道" code="150502022" />
+    <street name="滨河街道" code="150502023" />
+    <street name="大林镇" code="150502100" />
+    <street name="钱家店镇" code="150502101" />
+    <street name="余粮堡镇" code="150502102" />
+    <street name="木里图镇" code="150502103" />
+    <street name="丰田镇" code="150502104" />
+    <street name="清河镇" code="150502105" />
+    <street name="育新镇" code="150502106" />
+    <street name="庆和镇" code="150502107" />
+    <street name="敖力布皋镇" code="150502108" />
+    <street name="辽河镇" code="150502130" />
+    <street name="莫力庙苏木" code="150502200" />
+    <street name="哲南农场" code="150502400" />
+    <street name="三义堂农场" code="150502401" />
+    <street name="高林屯种畜场" code="150502402" />
+    <street name="胡力海原种繁殖场" code="150502403" />
+    <street name="莫力庙羊场" code="150502404" />
+    <street name="半截店牧场" code="150502405" />
+</county>
+<county name="科尔沁左翼中" code="150521">
+    <street name="保康镇" code="150521100" />
+    <street name="宝龙山镇" code="150521101" />
+    <street name="舍伯吐镇" code="150521102" />
+    <street name="巴彦塔拉镇" code="150521103" />
+    <street name="门达镇" code="150521104" />
+    <street name="架玛吐镇" code="150521105" />
+    <street name="腰林毛都镇" code="150521106" />
+    <street name="希伯花镇" code="150521107" />
+    <street name="花吐古拉镇" code="150521108" />
+    <street name="代力吉镇" code="150521109" />
+    <street name="努日木镇" code="150521110" />
+    <street name="花胡硕苏木乡" code="150521200" />
+    <street name="协代苏木乡" code="150521201" />
+    <street name="白兴吐苏木乡" code="150521202" />
+    <street name="图布信苏木乡" code="150521203" />
+    <street name="敖包苏木" code="150521204" />
+    <street name="胜利乡" code="150521205" />
+    <street name="白音塔拉农场" code="150521400" />
+    <street name="珠日河牧场" code="150521401" />
+    <street name="丰库牧场" code="150521402" />
+    <street name="保康街道" code="150521403" />
+</county>
+<county name="科尔沁左翼后" code="150522">
+    <street name="甘旗卡镇" code="150522100" />
+    <street name="吉尔嘎朗镇" code="150522101" />
+    <street name="金宝屯镇" code="150522102" />
+    <street name="常胜镇" code="150522103" />
+    <street name="查日苏镇" code="150522104" />
+    <street name="双胜镇" code="150522105" />
+    <street name="阿古拉镇" code="150522106" />
+    <street name="朝鲁吐镇" code="150522107" />
+    <street name="努古斯台镇" code="150522108" />
+    <street name="海鲁吐镇" code="150522109" />
+    <street name="阿都沁苏木" code="150522200" />
+    <street name="茂道吐苏木" code="150522201" />
+    <street name="巴嘎塔拉苏木" code="150522202" />
+    <street name="散都苏木" code="150522203" />
+    <street name="巴彦毛都苏木" code="150522204" />
+    <street name="胜利农场" code="150522400" />
+    <street name="孟根达坝牧场" code="150522401" />
+    <street name="查金台牧场" code="150522402" />
+    <street name="原种场" code="150522403" />
+    <street name="大青沟管理局" code="150522404" />
+    <street name="哈日乌苏种畜场" code="150522405" />
+    <street name="乌兰敖道渔场" code="150522406" />
+    <street name="金宝屯林场" code="150522407" />
+    <street name="朝鲁吐林场" code="150522408" />
+    <street name="茂道吐林场" code="150522409" />
+    <street name="伊胡塔林场" code="150522410" />
+    <street name="乌旦塔拉林场" code="150522411" />
+</county>
+<county name="开鲁" code="150523">
+    <street name="开鲁镇" code="150523100" />
+    <street name="大榆树镇" code="150523101" />
+    <street name="黑龙坝镇" code="150523102" />
+    <street name="麦新镇" code="150523103" />
+    <street name="义和塔拉镇" code="150523104" />
+    <street name="建华镇" code="150523105" />
+    <street name="小街基镇" code="150523106" />
+    <street name="东风镇" code="150523107" />
+    <street name="吉日嘎郎吐镇" code="150523108" />
+    <street name="东来镇" code="150523109" />
+    <street name="清河牧场" code="150523400" />
+    <street name="辽河农场" code="150523401" />
+    <street name="保安农场" code="150523402" />
+</county>
+<county name="库伦" code="150524">
+    <street name="库伦镇" code="150524100" />
+    <street name="扣河子镇" code="150524101" />
+    <street name="白音花镇" code="150524102" />
+    <street name="六家子镇" code="150524103" />
+    <street name="额勒顺镇" code="150524104" />
+    <street name="茫汗苏木" code="150524200" />
+    <street name="先进苏木" code="150524201" />
+    <street name="水泉乡" code="150524202" />
+    <street name="库伦街道" code="150524400" />
+</county>
+<county name="奈曼" code="150525">
+    <street name="大沁他拉镇" code="150525100" />
+    <street name="八仙筒镇" code="150525101" />
+    <street name="青龙山镇" code="150525102" />
+    <street name="新镇" code="150525103" />
+    <street name="治安镇" code="150525104" />
+    <street name="东明镇" code="150525105" />
+    <street name="沙日浩来镇" code="150525106" />
+    <street name="义隆永镇" code="150525107" />
+    <street name="固日班花苏木" code="150525200" />
+    <street name="白音他拉苏木" code="150525201" />
+    <street name="明仁苏木" code="150525202" />
+    <street name="黄花塔拉苏木" code="150525203" />
+    <street name="土城子乡" code="150525204" />
+    <street name="苇莲苏乡" code="150525205" />
+    <street name="国有六号农场" code="150525400" />
+</county>
+<county name="扎鲁特" code="150526">
+    <street name="鲁北镇" code="150526100" />
+    <street name="黄花山镇" code="150526101" />
+    <street name="嘎亥图镇" code="150526102" />
+    <street name="巨日合镇" code="150526103" />
+    <street name="巴雅尔图胡硕镇" code="150526104" />
+    <street name="香山镇" code="150526105" />
+    <street name="阿日昆都楞镇" code="150526106" />
+    <street name="巴彦塔拉苏木乡" code="150526200" />
+    <street name="乌力吉木仁苏木乡" code="150526201" />
+    <street name="道老杜苏木乡" code="150526202" />
+    <street name="格日朝鲁苏木乡" code="150526203" />
+    <street name="前德门苏木" code="150526204" />
+    <street name="乌兰哈达苏木" code="150526205" />
+    <street name="查布嘎图苏木" code="150526206" />
+    <street name="乌额格其苏木" code="150526207" />
+    <street name="乌额格其牧场" code="150526400" />
+    <street name="香山农场" code="150526401" />
+    <street name="乌日根塔拉农场" code="150526402" />
+    <street name="嘎达苏种畜场" code="150526403" />
+</county>
+<county name="霍林郭勒" code="150581">
+    <street name="珠斯花街道" code="150581001" />
+    <street name="莫斯台街道" code="150581002" />
+    <street name="宝日呼吉尔街道" code="150581003" />
+    <street name="沙尔呼热街道" code="150581004" />
+    <street name="达来胡硕街道" code="150581005" />
+    <street name="东蒙农牧业有限责任公司" code="150581400" />
+</county>
+</city>
+</address>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="兴安" code="152200">
+<county name="乌兰浩特" code="152201">
+    <street name="爱国办事处" code="152201001" />
+    <street name="和平办事处" code="152201002" />
+    <street name="兴安办事处" code="152201003" />
+    <street name="胜利办事处" code="152201004" />
+    <street name="铁西办事处" code="152201005" />
+    <street name="都林办事处" code="152201006" />
+    <street name="五一办事处" code="152201007" />
+    <street name="城郊办事处" code="152201008" />
+    <street name="乌兰哈达镇" code="152201100" />
+    <street name="葛根庙镇" code="152201101" />
+    <street name="太本站镇" code="152201102" />
+    <street name="义勒力特镇" code="152201103" />
+    <street name="乌兰哈达原种场" code="152201400" />
+    <street name="呼和马场" code="152201401" />
+    <street name="乌兰浩特工业经济开发区" code="152201402" />
+    <street name="乌兰浩特经济技术开发区" code="152201403" />
+</county>
+<county name="阿尔山" code="152202">
+    <street name="阿尔山市林海街道" code="152202001" />
+    <street name="阿尔山市新城街道" code="152202002" />
+    <street name="阿尔山市温泉街道" code="152202003" />
+    <street name="伊尔施街道" code="152202004" />
+    <street name="阿尔山市天池镇" code="152202100" />
+    <street name="阿尔山市白狼镇" code="152202101" />
+    <street name="阿尔山市五岔沟镇" code="152202102" />
+    <street name="明水河镇" code="152202103" />
+</county>
+<county name="科尔沁右翼前" code="152221">
+    <street name="科尔沁镇" code="152221100" />
+    <street name="索伦镇" code="152221101" />
+    <street name="德佰斯镇" code="152221102" />
+    <street name="大石寨镇" code="152221103" />
+    <street name="归流河镇" code="152221104" />
+    <street name="居力很镇" code="152221105" />
+    <street name="察尔森镇" code="152221106" />
+    <street name="额尔格图镇" code="152221107" />
+    <street name="俄体镇" code="152221108" />
+    <street name="满族屯满族乡" code="152221200" />
+    <street name="乌兰毛都苏木乡" code="152221201" />
+    <street name="阿力得尔苏木乡" code="152221202" />
+    <street name="巴拉格歹乡" code="152221203" />
+    <street name="桃合木苏木" code="152221204" />
+    <street name="跃进马场" code="152221400" />
+    <street name="索伦牧场" code="152221401" />
+    <street name="阿力得尔牧场" code="152221403" />
+    <street name="公主陵牧场" code="152221404" />
+    <street name="绿水种畜场" code="152221405" />
+    <street name="科右前旗工业园区" code="152221407" />
+</county>
+<county name="科尔沁右翼中" code="152222">
+    <street name="巴彦呼舒镇" code="152222100" />
+    <street name="巴仁哲里木镇" code="152222101" />
+    <street name="吐列毛都镇" code="152222102" />
+    <street name="杜尔基镇" code="152222103" />
+    <street name="高力板镇" code="152222104" />
+    <street name="好腰苏木镇" code="152222105" />
+    <street name="代钦塔拉苏木" code="152222200" />
+    <street name="新佳木苏木" code="152222201" />
+    <street name="哈日诺尔苏木" code="152222202" />
+    <street name="额木庭高勒苏木" code="152222203" />
+    <street name="巴彦茫哈苏木" code="152222204" />
+    <street name="巴彦淖尔苏木" code="152222205" />
+    <street name="布敦化牧场" code="152222400" />
+    <street name="吐列毛杜农场" code="152222401" />
+    <street name="孟恩套力盖矿区工作部" code="152222402" />
+    <street name="布敦化矿区工作部" code="152222403" />
+</county>
+<county name="扎赉特" code="152223">
+    <street name="音德尔镇" code="152223100" />
+    <street name="新林镇" code="152223101" />
+    <street name="巴彦高勒镇" code="152223102" />
+    <street name="胡尔勒镇" code="152223103" />
+    <street name="阿尔本格勒镇" code="152223104" />
+    <street name="巴达尔胡镇" code="152223105" />
+    <street name="图牧吉镇" code="152223106" />
+    <street name="好力保乡" code="152223200" />
+    <street name="巴彦乌兰苏木" code="152223201" />
+    <street name="宝力根花苏木" code="152223202" />
+    <street name="阿拉达尔吐苏木" code="152223203" />
+    <street name="巴彦扎拉嘎乡" code="152223204" />
+    <street name="努文牧仁乡" code="152223205" />
+    <street name="图牧吉劳管所" code="152223400" />
+    <street name="保安沼监狱" code="152223401" />
+    <street name="乌兰监狱" code="152223402" />
+    <street name="乌塔其监狱" code="152223403" />
+    <street name="种畜场" code="152223404" />
+    <street name="八一牧场" code="152223405" />
+    <street name="巴达尔胡农场" code="152223406" />
+</county>
+<county name="突泉" code="152224">
+    <street name="突泉镇" code="152224100" />
+    <street name="六户镇" code="152224101" />
+    <street name="东杜尔基镇" code="152224102" />
+    <street name="永安镇" code="152224103" />
+    <street name="水泉镇" code="152224104" />
+    <street name="宝石镇" code="152224105" />
+    <street name="学田乡" code="152224200" />
+    <street name="九龙乡" code="152224201" />
+    <street name="太平乡" code="152224202" />
+    <street name="东杜尔基国营农场" code="152224400" />
+</county>
+</city>
+</address>

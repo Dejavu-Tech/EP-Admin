@@ -1,0 +1,213 @@
+
+.my-memvers .member-count {
+  margin-top: 0px;
+  padding: 0 15px;
+  background: #fff;
+  box-shadow: 0 3px 3px rgba(0,0,0,.06);
+  border-bottom: 1px solid #dcdcdc;
+}
+.my-memvers .member-count-title {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 16px;
+  color: #333;
+}
+.my-memvers .member-count-title .icon-chunk-gray {
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: #ccc;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.my-memvers .member-count-title .icon-chunk-blue {
+  display: inline-block;
+  width: 4px;
+  height: 15px;
+  background: #45a5cf;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  vertical-align: top;
+}
+.my-memvers .member-count-title span {
+  margin: 0 0 0 10px;
+}
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.my-memvers .member-count-row {
+  padding: 20px 0 30px 0;
+}
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+.my-memvers .member-count-column.columns {
+  padding: 0 10px;
+  border-right: 1px solid #eee;
+}
+.my-memvers .member-count-label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+.my-memvers .member-count-number {
+  display: block;
+  padding: 15px 0;
+  font-size: 28px;
+  color: #f37872;
+  font-style: normal;
+}
+.row:after {
+  clear: both;
+}
+.my-memvers .member-browse {
+  margin-top: 10px;
+  padding: 0 15px;
+  background: #fff;
+}
+.my-memvers .member-browse-title {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 16px;
+  color: #333;
+}
+.my-memvers .member-browse-title .icon-chunk-gray {
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: #ccc;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.my-memvers .member-browse-title .icon-chunk-blue {
+  display: inline-block;
+  width: 4px;
+  height: 15px;
+  background: #45a5cf;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  vertical-align: top;
+}
+.my-memvers .member-browse-title span {
+  margin: 0 0 0 10px;
+}
+.my-memvers .member-browse-ul {
+  list-style: none;
+  margin: 0;
+}
+.my-memvers .member-browse-li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.my-memvers .member-browse-summey-info {
+  float: left;
+  font-family: "微软雅黑","Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+}
+.my-memvers .member-browse-li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.my-memvers .member-browse-nt {
+  overflow: hidden;
+  line-height: 18px;
+}
+.my-memvers .member-browse-name {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+.member-browser-pro-a .pro-img img {
+  width: 60px;
+  height: 60px;
+}
+.my-memvers .member-browse-summey-info {
+  float: left;
+}
+.my-memvers .member-browse-nt {
+  overflow: hidden;
+  line-height: 18px;
+}
+.member-browser-pro-list {
+  margin: 0px 0 0 0px;
+}
+.member-browser-pro-a {
+  display: block;
+  padding: 3px 0;
+}
+.member-browser-pro-a:before, .member-browser-pro-a:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.member-browser-pro-a .pro-img {
+  float: left;
+  margin-right: 10px;
+}
+.member-browser-pro-a .pro-img img {
+  width: 60px;
+  height: 60px;
+}
+.member-browser-pro-a .pro-info {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+    font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+ line-height:16px;
+  text-rendering: optimizeLegibility;
+}
+.member-browser-pro-a .pro-name {
+  display: block;
+  line-height: 20px;
+  font-size: 14px;
+  color: #333;
+}
+.member-browser-pro-a .pro-price {
+  font-size: 12px;
+  color: #999;
+}
+.member-browser-pro-a .pro-price strong {
+  font-size: 12px;
+  color: #f37872;
+}
+.member-browser-pro-a .pro-price {
+  font-size: 12px;
+  color: #999;
+}
+.member-browser-pro-a .pro-price strong {
+  font-size: 12px;
+  color: #f37872;
+}
+.my-memvers .member-browse-summey-info {
+  float: left;
+}
+.my-memvers .member-browse-nt {
+  overflow: hidden;
+  line-height: 18px;
+}
+
+.my-memvers .member-browse-name {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+.columns {
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    float: left;
+}
+.small-4 {
+    width: 33.33333%;
+}

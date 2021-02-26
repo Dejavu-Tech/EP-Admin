@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="益阳" code="430900">
+<county name="资阳" code="430902">
+    <street name="大码头街道" code="430902005" />
+    <street name="汽车路街道" code="430902006" />
+    <street name="迎风桥镇" code="430902102" />
+    <street name="沙头镇" code="430902104" />
+    <street name="茈湖口镇" code="430902105" />
+    <street name="长春镇" code="430902106" />
+    <street name="新桥河镇" code="430902107" />
+    <street name="张家塞乡" code="430902203" />
+    <street name="长春工业园" code="430902401" />
+</county>
+<county name="赫山" code="430903">
+    <street name="赫山街道" code="430903001" />
+    <street name="桃花仑街道" code="430903002" />
+    <street name="金银山街道" code="430903003" />
+    <street name="朝阳街道" code="430903005" />
+    <street name="会龙山街道" code="430903006" />
+    <street name="八字哨镇" code="430903101" />
+    <street name="泉交河镇" code="430903103" />
+    <street name="欧江岔镇" code="430903104" />
+    <street name="沧水铺镇" code="430903105" />
+    <street name="岳家桥镇" code="430903107" />
+    <street name="谢林港镇" code="430903109" />
+    <street name="新市渡镇" code="430903110" />
+    <street name="兰溪镇" code="430903111" />
+    <street name="龙光桥镇" code="430903112" />
+    <street name="衡龙桥镇" code="430903113" />
+    <street name="泥江口镇" code="430903114" />
+    <street name="牌口乡" code="430903202" />
+    <street name="笔架山乡" code="430903209" />
+    <street name="龙岭工业园" code="430903402" />
+</county>
+<county name="南县" code="430921">
+    <street name="明山头镇" code="430921102" />
+    <street name="青树嘴镇" code="430921103" />
+    <street name="厂窖镇" code="430921106" />
+    <street name="武圣宫镇" code="430921107" />
+    <street name="河坝镇" code="430921121" />
+    <street name="沙堡洲镇" code="430921122" />
+    <street name="金盆镇" code="430921123" />
+    <street name="北洲子镇" code="430921124" />
+    <street name="南洲镇" code="430921125" />
+    <street name="华阁镇" code="430921126" />
+    <street name="茅草街镇" code="430921127" />
+    <street name="三仙湖镇" code="430921128" />
+    <street name="麻河口镇" code="430921129" />
+    <street name="千山红镇" code="430921130" />
+    <street name="浪拔湖镇" code="430921131" />
+    <street name="乌嘴乡" code="430921201" />
+    <street name="中鱼口乡" code="430921212" />
+    <street name="南湾湖办事处" code="430921405" />
+</county>
+<county name="桃江" code="430922">
+    <street name="修山镇" code="430922101" />
+    <street name="鸬鹚渡镇" code="430922103" />
+    <street name="石牛江镇" code="430922107" />
+    <street name="牛田镇" code="430922108" />
+    <street name="松木塘镇" code="430922109" />
+    <street name="桃花江镇" code="430922112" />
+    <street name="灰山港镇" code="430922113" />
+    <street name="武潭镇" code="430922114" />
+    <street name="马迹塘镇" code="430922115" />
+    <street name="三堂街镇" code="430922116" />
+    <street name="大栗港镇" code="430922117" />
+    <street name="沾溪镇" code="430922118" />
+    <street name="高桥乡" code="430922203" />
+    <street name="鲊埠回族乡" code="430922208" />
+    <street name="浮丘山乡" code="430922212" />
+    <street name="板溪林场" code="430922400" />
+</county>
+<county name="安化" code="430923">
+    <street name="清塘铺镇" code="430923101" />
+    <street name="仙溪镇" code="430923103" />
+    <street name="长塘镇" code="430923105" />
+    <street name="小淹镇" code="430923106" />
+    <street name="羊角塘镇" code="430923108" />
+    <street name="冷市镇" code="430923109" />
+    <street name="奎溪镇" code="430923111" />
+    <street name="烟溪镇" code="430923112" />
+    <street name="渠江镇" code="430923113" />
+    <street name="平口镇" code="430923114" />
+    <street name="柘溪镇" code="430923115" />
+    <street name="乐安镇" code="430923116" />
+    <street name="滔溪镇" code="430923117" />
+    <street name="梅城镇" code="430923118" />
+    <street name="大福镇" code="430923119" />
+    <street name="马路镇" code="430923120" />
+    <street name="东坪镇" code="430923121" />
+    <street name="江南镇" code="430923122" />
+    <street name="高明乡" code="430923200" />
+    <street name="龙塘乡" code="430923206" />
+    <street name="田庄乡" code="430923209" />
+    <street name="南金乡" code="430923211" />
+    <street name="古楼乡" code="430923212" />
+</county>
+<county name="沅江" code="430981">
+    <street name="琼湖街道" code="430981006" />
+    <street name="庆云山街道" code="430981007" />
+    <street name="四季红镇" code="430981102" />
+    <street name="泗湖山镇" code="430981105" />
+    <street name="南嘴镇" code="430981107" />
+    <street name="新湾镇" code="430981108" />
+    <street name="茶盘洲镇" code="430981110" />
+    <street name="南大膳镇" code="430981112" />
+    <street name="黄茅洲镇" code="430981113" />
+    <street name="草尾镇" code="430981114" />
+    <street name="阳罗洲镇" code="430981115" />
+    <street name="共华镇" code="430981116" />
+    <street name="三眼塘镇" code="430981117" />
+    <street name="万子湖乡" code="430981209" />
+    <street name="南洞庭芦苇场" code="430981401" />
+    <street name="漉湖芦苇场" code="430981402" />
+    <street name="经济开发区" code="430981403" />
+</county>
+</city>
+</address>

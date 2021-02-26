@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="临高" code="469028">
+<county name="临高" code="469028001">
+    <street name="临城镇" code="469024100" />
+    <street name="波莲镇" code="469024101" />
+    <street name="东英镇" code="469024102" />
+    <street name="博厚镇" code="469024103" />
+    <street name="皇桐镇" code="469024104" />
+    <street name="多文镇" code="469024105" />
+    <street name="和舍镇" code="469024106" />
+    <street name="南宝镇" code="469024107" />
+    <street name="新盈镇" code="469024108" />
+    <street name="调楼镇" code="469024109" />
+    <street name="国营红华农场" code="469024400" />
+    <street name="国营加来农场" code="469024401" />
+</county>
+</city>
+</address>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="潍坊" code="370700">
+<county name="潍城" code="370702">
+    <street name="城关街道" code="370702001" />
+    <street name="南关街道" code="370702002" />
+    <street name="西关街道" code="370702003" />
+    <street name="北关街道" code="370702004" />
+    <street name="于河街道" code="370702005" />
+    <street name="望留街道" code="370702006" />
+    <street name="潍城经济开发区" code="370702400" />
+</county>
+<county name="寒亭" code="370703">
+    <street name="寒亭街道" code="370703001" />
+    <street name="开元街道" code="370703002" />
+    <street name="固堤街道" code="370703003" />
+    <street name="央子街道" code="370703004" />
+    <street name="大家洼街道" code="370703005" />
+    <street name="高里街道" code="370703006" />
+    <street name="朱里街道" code="370703007" />
+</county>
+<county name="坊子" code="370704">
+    <street name="凤凰街道" code="370704003" />
+    <street name="坊安街道" code="370704004" />
+    <street name="坊城街道" code="370704005" />
+    <street name="九龙街道" code="370704006" />
+    <street name="黄旗堡街道" code="370704007" />
+    <street name="太保庄镇" code="370704108" />
+    <street name="赵戈镇" code="370704109" />
+</county>
+<county name="奎文" code="370705">
+    <street name="东关街道" code="370705001" />
+    <street name="大虞街道" code="370705002" />
+    <street name="梨园街道" code="370705003" />
+    <street name="廿里堡街道" code="370705004" />
+    <street name="潍州路街道" code="370705005" />
+    <street name="北苑街道" code="370705006" />
+    <street name="广文街道" code="370705007" />
+    <street name="新城街道" code="370705009" />
+    <street name="清池街道" code="370705010" />
+    <street name="北海路街道" code="370705012" />
+</county>
+<county name="临朐" code="370724">
+    <street name="城关街道" code="370724001" />
+    <street name="东城街道" code="370724002" />
+    <street name="五井镇" code="370724101" />
+    <street name="冶源镇" code="370724103" />
+    <street name="寺头镇" code="370724104" />
+    <street name="九山镇" code="370724105" />
+    <street name="辛寨镇" code="370724107" />
+    <street name="龙岗镇" code="370724112" />
+    <street name="柳山镇" code="370724113" />
+    <street name="沂山镇" code="370724116" />
+</county>
+<county name="昌乐" code="370725">
+    <street name="城关街道" code="370725001" />
+    <street name="宝城街道" code="370725002" />
+    <street name="朱刘街道" code="370725003" />
+    <street name="城南街道" code="370725004" />
+    <street name="五图街道" code="370725005" />
+    <street name="乔官镇" code="370725107" />
+    <street name="唐吾镇" code="370725108" />
+    <street name="红河镇" code="370725110" />
+    <street name="营丘镇" code="370725116" />
+    <street name="县经济开发区" code="370725400" />
+</county>
+<county name="青州" code="370781">
+    <street name="王府街道" code="370781001" />
+    <street name="益都街道" code="370781002" />
+    <street name="云门山街道" code="370781006" />
+    <street name="黄楼街道" code="370781007" />
+    <street name="弥河镇" code="370781100" />
+    <street name="王坟镇" code="370781101" />
+    <street name="庙子镇" code="370781103" />
+    <street name="邵庄镇" code="370781105" />
+    <street name="高柳镇" code="370781109" />
+    <street name="何官镇" code="370781111" />
+    <street name="东夏镇" code="370781113" />
+    <street name="谭坊镇" code="370781115" />
+    <street name="青州经济开发区管理委员会" code="370781400" />
+</county>
+<county name="诸城" code="370782">
+    <street name="密州街道" code="370782001" />
+    <street name="龙都街道" code="370782002" />
+    <street name="舜王街道" code="370782003" />
+    <street name="枳沟镇" code="370782101" />
+    <street name="贾悦镇" code="370782102" />
+    <street name="石桥子镇" code="370782105" />
+    <street name="相州镇" code="370782108" />
+    <street name="昌城镇" code="370782110" />
+    <street name="百尺河镇" code="370782111" />
+    <street name="辛兴镇" code="370782112" />
+    <street name="林家村镇" code="370782114" />
+    <street name="皇华镇" code="370782117" />
+    <street name="桃林镇" code="370782118" />
+    <street name="诸城经济开发区管理委员会" code="370782400" />
+</county>
+<county name="寿光" code="370783">
+    <street name="圣城街道" code="370783001" />
+    <street name="文家街道" code="370783003" />
+    <street name="古城街道" code="370783004" />
+    <street name="洛城街道" code="370783005" />
+    <street name="孙家集街道" code="370783006" />
+    <street name="化龙镇" code="370783100" />
+    <street name="营里镇" code="370783103" />
+    <street name="台头镇" code="370783104" />
+    <street name="田柳镇" code="370783106" />
+    <street name="上口镇" code="370783108" />
+    <street name="侯镇" code="370783109" />
+    <street name="纪台镇" code="370783111" />
+    <street name="稻田镇" code="370783112" />
+    <street name="羊口镇" code="370783115" />
+    <street name="双王城生态经济园区管委会" code="370783400" />
+</county>
+<county name="安丘" code="370784">
+    <street name="兴安街道" code="370784001" />
+    <street name="新安街道" code="370784003" />
+    <street name="景芝镇" code="370784100" />
+    <street name="凌河镇" code="370784103" />
+    <street name="官庄镇" code="370784104" />
+    <street name="大盛镇" code="370784107" />
+    <street name="石埠子镇" code="370784111" />
+    <street name="石堆镇" code="370784112" />
+    <street name="柘山镇" code="370784118" />
+    <street name="辉渠镇" code="370784119" />
+    <street name="吾山镇" code="370784120" />
+    <street name="金冢子镇" code="370784121" />
+</county>
+<county name="高密" code="370785">
+    <street name="朝阳街道" code="370785001" />
+    <street name="醴泉街道" code="370785002" />
+    <street name="密水街道" code="370785003" />
+    <street name="柏城镇" code="370785100" />
+    <street name="夏庄镇" code="370785103" />
+    <street name="姜庄镇" code="370785104" />
+    <street name="大牟家镇" code="370785106" />
+    <street name="阚家镇" code="370785109" />
+    <street name="井沟镇" code="370785111" />
+    <street name="柴沟镇" code="370785114" />
+</county>
+<county name="昌邑" code="370786">
+    <street name="奎聚街道" code="370786001" />
+    <street name="都昌街道" code="370786002" />
+    <street name="围子街道" code="370786003" />
+    <street name="柳疃镇" code="370786101" />
+    <street name="龙池镇" code="370786102" />
+    <street name="卜庄镇" code="370786104" />
+    <street name="饮马镇" code="370786108" />
+    <street name="北孟镇" code="370786109" />
+    <street name="下营镇" code="370786112" />
+</county>
+</city>
+</address>

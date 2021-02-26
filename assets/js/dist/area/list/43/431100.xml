@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="永州" code="431100">
+<county name="零陵" code="431102">
+    <street name="朝阳街道" code="431102001" />
+    <street name="南津渡街道" code="431102002" />
+    <street name="七里店街道" code="431102003" />
+    <street name="徐家井街道" code="431102004" />
+    <street name="水口山镇" code="431102101" />
+    <street name="珠山镇" code="431102102" />
+    <street name="黄田铺镇" code="431102103" />
+    <street name="富家桥镇" code="431102104" />
+    <street name="菱角塘镇" code="431102105" />
+    <street name="邮亭圩镇" code="431102106" />
+    <street name="接履桥镇" code="431102107" />
+    <street name="石岩头镇" code="431102108" />
+    <street name="大庆坪乡" code="431102200" />
+    <street name="梳子铺乡" code="431102201" />
+    <street name="石山脚乡" code="431102202" />
+    <street name="凼底乡" code="431102203" />
+</county>
+<county name="冷水滩" code="431103">
+    <street name="梅湾街道" code="431103001" />
+    <street name="菱角山街道" code="431103002" />
+    <street name="肖家园街道" code="431103003" />
+    <street name="杨家桥街道" code="431103004" />
+    <street name="梧桐街道" code="431103005" />
+    <street name="凤凰街道" code="431103006" />
+    <street name="珊瑚街道" code="431103007" />
+    <street name="曲河街道" code="431103008" />
+    <street name="花桥街镇" code="431103101" />
+    <street name="普利桥镇" code="431103102" />
+    <street name="牛角坝镇" code="431103103" />
+    <street name="高溪市镇" code="431103104" />
+    <street name="黄阳司镇" code="431103105" />
+    <street name="上岭桥镇" code="431103106" />
+    <street name="竹山桥镇" code="431103107" />
+    <street name="伊塘镇" code="431103108" />
+    <street name="岚角山镇" code="431103109" />
+    <street name="蔡市镇" code="431103110" />
+    <street name="仁湾镇" code="431103111" />
+    <street name="杨村甸乡" code="431103201" />
+</county>
+<county name="祁阳" code="431121">
+    <street name="龙山街道" code="431121001" />
+    <street name="长虹街道" code="431121002" />
+    <street name="浯溪街道" code="431121003" />
+    <street name="观音滩镇" code="431121101" />
+    <street name="茅竹镇" code="431121102" />
+    <street name="大忠桥镇" code="431121103" />
+    <street name="三口塘镇" code="431121104" />
+    <street name="肖家村镇" code="431121105" />
+    <street name="八宝镇" code="431121106" />
+    <street name="白水镇" code="431121107" />
+    <street name="黄泥塘镇" code="431121108" />
+    <street name="进宝塘镇" code="431121109" />
+    <street name="潘市镇" code="431121110" />
+    <street name="梅溪镇" code="431121111" />
+    <street name="羊角塘镇" code="431121112" />
+    <street name="下马渡镇" code="431121113" />
+    <street name="七里桥镇" code="431121114" />
+    <street name="大村甸镇" code="431121115" />
+    <street name="黎家坪镇" code="431121116" />
+    <street name="文富市镇" code="431121117" />
+    <street name="文明铺镇" code="431121118" />
+    <street name="龚家坪镇" code="431121119" />
+    <street name="金洞镇" code="431121120" />
+    <street name="小金洞乡" code="431121200" />
+    <street name="晒北滩瑶族乡" code="431121201" />
+    <street name="凤凰乡" code="431121202" />
+    <street name="白果市乡" code="431121203" />
+    <street name="石鼓源乡" code="431121204" />
+    <street name="上司源乡" code="431121205" />
+    <street name="内下乡" code="431121206" />
+    <street name="万宝山乡" code="431121207" />
+    <street name="挂榜山乡" code="431121208" />
+    <street name="大江乡" code="431121209" />
+    <street name="原种场" code="431121401" />
+    <street name="畜牧场" code="431121402" />
+</county>
+<county name="东安" code="431122">
+    <street name="白牙市镇" code="431122100" />
+    <street name="大庙口镇" code="431122101" />
+    <street name="紫溪市镇" code="431122102" />
+    <street name="横塘镇" code="431122103" />
+    <street name="石期市镇" code="431122104" />
+    <street name="井头圩镇" code="431122105" />
+    <street name="端桥铺镇" code="431122106" />
+    <street name="鹿马桥镇" code="431122107" />
+    <street name="芦洪市镇" code="431122108" />
+    <street name="新圩江镇" code="431122109" />
+    <street name="花桥镇" code="431122110" />
+    <street name="大盛镇" code="431122111" />
+    <street name="南桥镇" code="431122112" />
+    <street name="大江口乡" code="431122200" />
+    <street name="川岩乡" code="431122201" />
+    <street name="水岭乡" code="431122202" />
+    <street name="黄泥洞乡" code="431122203" />
+    <street name="大庙口林场" code="431122400" />
+    <street name="黄泥洞林场" code="431122401" />
+</county>
+<county name="双牌" code="431123">
+    <street name="泷泊镇" code="431123100" />
+    <street name="江村镇" code="431123101" />
+    <street name="五里牌镇" code="431123102" />
+    <street name="茶林镇" code="431123103" />
+    <street name="平福头乡" code="431123200" />
+    <street name="尚仁里乡" code="431123201" />
+    <street name="永江乡" code="431123202" />
+    <street name="何家洞乡" code="431123203" />
+    <street name="麻江乡" code="431123204" />
+    <street name="塘底乡" code="431123206" />
+    <street name="上梧江瑶族乡" code="431123207" />
+    <street name="理家坪乡" code="431123208" />
+    <street name="五星岭乡" code="431123209" />
+    <street name="打鼓坪乡" code="431123210" />
+    <street name="双牌打鼓坪林场" code="431123400" />
+    <street name="双牌五星岭林场" code="431123401" />
+    <street name="双牌阳明山林场" code="431123402" />
+</county>
+<county name="道县" code="431124">
+    <street name="濂溪街道" code="431124001" />
+    <street name="西洲街道" code="431124002" />
+    <street name="上关街道" code="431124003" />
+    <street name="营江街道" code="431124004" />
+    <street name="东门街道" code="431124005" />
+    <street name="富塘街道" code="431124006" />
+    <street name="万家庄街道" code="431124007" />
+    <street name="梅花镇" code="431124101" />
+    <street name="寿雁镇" code="431124102" />
+    <street name="仙子脚镇" code="431124103" />
+    <street name="清塘镇" code="431124104" />
+    <street name="祥霖铺镇" code="431124105" />
+    <street name="蚣坝镇" code="431124106" />
+    <street name="四马桥镇" code="431124107" />
+    <street name="白马渡镇" code="431124108" />
+    <street name="柑子园镇" code="431124109" />
+    <street name="新车镇" code="431124110" />
+    <street name="白芒铺镇" code="431124111" />
+    <street name="桥头镇" code="431124112" />
+    <street name="乐福堂乡" code="431124201" />
+    <street name="审章塘瑶族乡" code="431124210" />
+    <street name="井塘瑶族乡" code="431124211" />
+    <street name="横岭瑶族乡" code="431124212" />
+    <street name="洪塘营瑶族乡" code="431124213" />
+    <street name="道县月岩林场" code="431124400" />
+    <street name="道县桥头林场" code="431124401" />
+    <street name="道县大坪铺农场" code="431124402" />
+</county>
+<county name="江永" code="431125">
+    <street name="潇浦镇" code="431125100" />
+    <street name="上江圩镇" code="431125101" />
+    <street name="允山镇" code="431125102" />
+    <street name="夏层铺镇" code="431125103" />
+    <street name="桃川镇" code="431125104" />
+    <street name="粗石江镇" code="431125105" />
+    <street name="回龙圩镇" code="431125106" />
+    <street name="松柏瑶族乡" code="431125200" />
+    <street name="黄甲岭乡" code="431125201" />
+    <street name="千家峒瑶族乡" code="431125202" />
+    <street name="兰溪瑶族乡" code="431125203" />
+    <street name="源口瑶族乡" code="431125204" />
+</county>
+<county name="宁远" code="431126">
+    <street name="文庙街道" code="431126001" />
+    <street name="东溪街道" code="431126002" />
+    <street name="舜陵镇" code="431126100" />
+    <street name="天堂镇" code="431126101" />
+    <street name="水市镇" code="431126102" />
+    <street name="湾井镇" code="431126103" />
+    <street name="冷水镇" code="431126104" />
+    <street name="太平镇" code="431126105" />
+    <street name="禾亭镇" code="431126106" />
+    <street name="仁和镇" code="431126107" />
+    <street name="中和镇" code="431126108" />
+    <street name="柏家坪镇" code="431126109" />
+    <street name="清水桥镇" code="431126110" />
+    <street name="鲤溪镇" code="431126111" />
+    <street name="九疑山瑶族乡" code="431126200" />
+    <street name="保安乡" code="431126201" />
+    <street name="荒塘瑶族乡" code="431126202" />
+    <street name="棉花坪瑶族乡" code="431126203" />
+    <street name="桐木漯瑶族乡" code="431126204" />
+</county>
+<county name="蓝山" code="431127">
+    <street name="塔峰镇" code="431127100" />
+    <street name="竹管寺镇" code="431127101" />
+    <street name="毛俊镇" code="431127102" />
+    <street name="楠市镇" code="431127103" />
+    <street name="所城镇" code="431127104" />
+    <street name="新圩镇" code="431127105" />
+    <street name="汇源瑶族乡" code="431127200" />
+    <street name="犁头瑶族乡" code="431127201" />
+    <street name="浆洞瑶族乡" code="431127202" />
+    <street name="紫良瑶族乡" code="431127203" />
+    <street name="大桥瑶族乡" code="431127204" />
+    <street name="荆竹瑶族乡" code="431127205" />
+    <street name="祠堂圩乡" code="431127206" />
+    <street name="土市乡" code="431127207" />
+    <street name="太平圩乡" code="431127208" />
+    <street name="蓝山荆竹林场" code="431127400" />
+    <street name="蓝山浆洞林场" code="431127401" />
+    <street name="蓝山南岭林场" code="431127402" />
+    <street name="蓝山原种场" code="431127403" />
+    <street name="蓝山黄毛岭茶场" code="431127404" />
+</county>
+<county name="新田" code="431128">
+    <street name="龙泉镇" code="431128100" />
+    <street name="金陵镇" code="431128101" />
+    <street name="骥村镇" code="431128102" />
+    <street name="枧头镇" code="431128103" />
+    <street name="新圩镇" code="431128104" />
+    <street name="石羊镇" code="431128105" />
+    <street name="新隆镇" code="431128106" />
+    <street name="莲花乡" code="431128200" />
+    <street name="冷水井乡" code="431128201" />
+    <street name="门楼下瑶族乡" code="431128202" />
+    <street name="茂家乡" code="431128203" />
+    <street name="毛里乡" code="431128204" />
+    <street name="十字乡" code="431128205" />
+    <street name="金盆圩乡" code="431128206" />
+    <street name="三井乡" code="431128207" />
+    <street name="陶岭乡" code="431128208" />
+    <street name="高山乡" code="431128209" />
+    <street name="知市坪乡" code="431128210" />
+    <street name="大坪塘乡" code="431128211" />
+</county>
+<county name="江华" code="431129">
+    <street name="沱江镇" code="431129100" />
+    <street name="桥头铺镇" code="431129101" />
+    <street name="东田镇" code="431129102" />
+    <street name="大路铺镇" code="431129103" />
+    <street name="白芒营镇" code="431129104" />
+    <street name="涛圩镇" code="431129105" />
+    <street name="河路口镇" code="431129106" />
+    <street name="小圩镇" code="431129107" />
+    <street name="大圩镇" code="431129108" />
+    <street name="水口镇" code="431129109" />
+    <street name="码市镇" code="431129110" />
+    <street name="涔天河镇" code="431129111" />
+    <street name="界牌乡" code="431129200" />
+    <street name="桥市乡" code="431129201" />
+    <street name="大石桥乡" code="431129202" />
+    <street name="清塘壮族乡" code="431129203" />
+    <street name="两岔河乡" code="431129204" />
+    <street name="务江乡" code="431129205" />
+    <street name="花江乡" code="431129206" />
+    <street name="湘江乡" code="431129207" />
+    <street name="贝江乡" code="431129208" />
+    <street name="未竹口乡" code="431129209" />
+    <street name="大锡乡" code="431129210" />
+    <street name="小圩壮族乡" code="431129211" />
+    <street name="江华林业采育场" code="431129400" />
+</county>
+</city>
+</address>

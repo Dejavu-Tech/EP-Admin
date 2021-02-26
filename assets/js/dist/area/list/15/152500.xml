@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="锡林郭勒" code="152500">
+<county name="二连浩特" code="152501">
+    <street name="格日勒敖都苏木" code="152501200" />
+    <street name="二连浩特市社区建设管理局" code="152501400" />
+    <street name="二连边境经济技术合作区" code="152501401" />
+</county>
+<county name="锡林浩特" code="152502">
+    <street name="希日塔拉街道" code="152502001" />
+    <street name="宝力根街道" code="152502002" />
+    <street name="杭盖街道" code="152502003" />
+    <street name="楚古兰街道" code="152502004" />
+    <street name="额尔敦街道" code="152502005" />
+    <street name="南郊街道" code="152502006" />
+    <street name="巴彦查干街道" code="152502007" />
+    <street name="阿尔善宝拉格镇" code="152502100" />
+    <street name="宝力根苏木" code="152502200" />
+    <street name="朝克乌拉苏木" code="152502201" />
+    <street name="巴彦锡勒办事处乡" code="152502202" />
+    <street name="巴彦宝拉格苏木" code="152502203" />
+    <street name="锡林郭勒盟经济技术开发区" code="152502400" />
+    <street name="白音库伦牧场" code="152502500" />
+    <street name="贝力克牧场" code="152502501" />
+    <street name="毛登牧场" code="152502502" />
+</county>
+<county name="阿巴嘎" code="152522">
+    <street name="别力古台镇" code="152522100" />
+    <street name="洪格尔高勒镇" code="152522101" />
+    <street name="查干淖尔镇" code="152522102" />
+    <street name="那仁宝拉格苏木乡" code="152522200" />
+    <street name="伊和高勒苏木乡乡" code="152522201" />
+    <street name="吉尔嘎郎图苏木乡" code="152522202" />
+    <street name="巴彦图嘎苏木" code="152522203" />
+    <street name="玛尼图煤矿" code="152522400" />
+    <street name="阿旗德力格尔工业园区" code="152522401" />
+</county>
+<county name="苏尼特左" code="152523">
+    <street name="满都拉图镇" code="152523100" />
+    <street name="查干敖包镇" code="152523101" />
+    <street name="巴彦淖尔镇" code="152523102" />
+    <street name="巴彦乌拉苏木" code="152523200" />
+    <street name="赛罕高毕苏木" code="152523201" />
+    <street name="洪格尔苏木" code="152523202" />
+    <street name="达来苏木" code="152523203" />
+    <street name="苏尼特左旗芒来循环经济产业园区" code="152523400" />
+    <street name="恩格尔河灌区" code="152523500" />
+</county>
+<county name="苏尼特右" code="152524">
+    <street name="赛汉塔拉镇" code="152524100" />
+    <street name="朱日和镇" code="152524101" />
+    <street name="乌日根塔拉镇" code="152524102" />
+    <street name="桑宝拉格苏木乡" code="152524200" />
+    <street name="额仁淖尔苏木" code="152524201" />
+    <street name="赛罕乌力吉苏木" code="152524202" />
+    <street name="阿其图乌拉苏木" code="152524203" />
+    <street name="苏尼特右旗朱日和工业园区" code="152524400" />
+</county>
+<county name="东乌珠穆沁" code="152525">
+    <street name="乌里雅斯太镇" code="152525100" />
+    <street name="道特淖尔镇" code="152525101" />
+    <street name="嘎达布其镇" code="152525102" />
+    <street name="满都胡宝拉格镇" code="152525103" />
+    <street name="额吉淖尔镇" code="152525104" />
+    <street name="巴音胡硕镇" code="152525105" />
+    <street name="呼热图淖尔苏木" code="152525200" />
+    <street name="萨麦苏木" code="152525201" />
+    <street name="嘎海乐苏木" code="152525202" />
+    <street name="阿拉坦合力苏木" code="152525203" />
+    <street name="乌里雅斯太工业区" code="152525400" />
+    <street name="哈拉盖图农牧场" code="152525500" />
+    <street name="贺斯格乌拉农牧场" code="152525501" />
+    <street name="乌拉盖牧场" code="152525502" />
+    <street name="宝格达乌拉总场" code="152525503" />
+</county>
+<county name="西乌珠穆沁" code="152526">
+    <street name="巴拉嘎尔高勒镇" code="152526100" />
+    <street name="巴彦花镇" code="152526101" />
+    <street name="吉仁高勒镇" code="152526102" />
+    <street name="浩勒图高勒镇" code="152526103" />
+    <street name="高日罕镇" code="152526104" />
+    <street name="巴彦胡舒苏木乡" code="152526200" />
+    <street name="乌兰哈拉嘎苏木" code="152526201" />
+    <street name="西乌旗白音华能源化工园区" code="152526400" />
+    <street name="林业总场" code="152526500" />
+</county>
+<county name="太仆寺" code="152527">
+    <street name="宝昌镇" code="152527100" />
+    <street name="千斤沟镇" code="152527101" />
+    <street name="红旗镇" code="152527102" />
+    <street name="骆驼山镇" code="152527103" />
+    <street name="永丰镇" code="152527104" />
+    <street name="幸福乡" code="152527200" />
+    <street name="贡宝拉格苏木乡" code="152527201" />
+    <street name="万寿滩良种场" code="152527500" />
+</county>
+<county name="镶黄" code="152528">
+    <street name="新宝拉格镇" code="152528100" />
+    <street name="巴彦塔拉镇" code="152528101" />
+    <street name="翁贡乌拉苏木乡" code="152528200" />
+    <street name="宝格达音髙勒苏木" code="152528201" />
+</county>
+<county name="正镶白" code="152529">
+    <street name="明安图镇" code="152529100" />
+    <street name="星耀镇" code="152529101" />
+    <street name="伊和淖尔苏木乡" code="152529200" />
+    <street name="乌兰查布苏木乡" code="152529201" />
+    <street name="宝拉根陶海苏木" code="152529202" />
+    <street name="额里图种畜场" code="152529500" />
+    <street name="哲日根图林场" code="152529502" />
+</county>
+<county name="正蓝" code="152530">
+    <street name="上都镇" code="152530100" />
+    <street name="桑根达来镇" code="152530101" />
+    <street name="哈毕日嘎镇" code="152530102" />
+    <street name="宝绍代苏木乡" code="152530200" />
+    <street name="那日图苏木乡" code="152530201" />
+    <street name="赛音呼都嘎苏木乡" code="152530202" />
+    <street name="扎格斯台苏木" code="152530203" />
+    <street name="五一种畜场总场" code="152530500" />
+    <street name="黑城子示范区" code="152530501" />
+</county>
+<county name="多伦" code="152531">
+    <street name="大北沟镇" code="152531100" />
+    <street name="多伦诺尔镇" code="152531101" />
+    <street name="大河口乡" code="152531200" />
+    <street name="蔡木山乡" code="152531201" />
+    <street name="西干沟乡" code="152531202" />
+    <street name="多伦新型工业化化工区" code="152531400" />
+</county>
+</city>
+</address>

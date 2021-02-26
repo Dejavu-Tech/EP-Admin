@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="铜川" code="610200">
+<county name="王益" code="610202">
+    <street name="七一路街道" code="610202001" />
+    <street name="红旗街道" code="610202002" />
+    <street name="桃园街道" code="610202003" />
+    <street name="青年路街道" code="610202004" />
+    <street name="王家河街道" code="610202005" />
+    <street name="黄堡镇" code="610202100" />
+    <street name="王益乡" code="610202201" />
+</county>
+<county name="印台" code="610203">
+    <street name="城关街道" code="610203001" />
+    <street name="三里洞街道" code="610203002" />
+    <street name="王石凹街道" code="610203003" />
+    <street name="陈炉镇" code="610203100" />
+    <street name="红土镇" code="610203101" />
+    <street name="广阳镇" code="610203102" />
+    <street name="金锁关镇" code="610203104" />
+    <street name="阿庄镇" code="610203106" />
+    <street name="印台镇" code="610203107" />
+    <street name="高楼河镇" code="610203108" />
+</county>
+<county name="耀州" code="610204">
+    <street name="永安路街道" code="610204001" />
+    <street name="天宝路街道" code="610204002" />
+    <street name="咸丰路街道" code="610204003" />
+    <street name="正阳路街道" code="610204004" />
+    <street name="锦阳路街道" code="610204005" />
+    <street name="董家河镇" code="610204101" />
+    <street name="庙湾镇" code="610204102" />
+    <street name="瑶曲镇" code="610204103" />
+    <street name="照金镇" code="610204104" />
+    <street name="坡头镇" code="610204106" />
+    <street name="小丘镇" code="610204107" />
+    <street name="孙塬镇" code="610204108" />
+    <street name="关庄镇" code="610204109" />
+    <street name="石柱镇" code="610204111" />
+    <street name="演池乡" code="610204200" />
+</county>
+<county name="宜君" code="610222">
+    <street name="城关镇" code="610222100" />
+    <street name="彭镇" code="610222101" />
+    <street name="五里镇" code="610222102" />
+    <street name="太安镇" code="610222103" />
+    <street name="棋盘镇" code="610222104" />
+    <street name="尧生镇" code="610222105" />
+    <street name="哭泉乡" code="610222200" />
+    <street name="云梦乡" code="610222201" />
+    <street name="西村乡" code="610222204" />
+</county>
+</city>
+</address>

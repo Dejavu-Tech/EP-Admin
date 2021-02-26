@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="随州" code="421300">
+<county name="曾都" code="421302">
+    <street name="西城街道" code="421303001" />
+    <street name="东城街道" code="421303002" />
+    <street name="南郊街道" code="421303003" />
+    <street name="北郊街道" code="421303004" />
+    <street name="城南新区" code="421303005" />
+    <street name="万店镇" code="421303101" />
+    <street name="何店镇" code="421303102" />
+    <street name="洛阳镇" code="421303103" />
+    <street name="府河镇" code="421303104" />
+    <street name="淅河镇" code="421303187" />
+    <street name="曾都区新型工业基地" code="421303499" />
+    <street name="随州市经济开发区" code="421303587" />
+</county>
+<county name="随县" code="421321">
+    <street name="厉山镇" code="421321101" />
+    <street name="高城镇" code="421321102" />
+    <street name="殷店镇" code="421321103" />
+    <street name="草店镇" code="421321104" />
+    <street name="小林镇" code="421321105" />
+    <street name="淮河镇" code="421321106" />
+    <street name="万和镇" code="421321107" />
+    <street name="尚市镇" code="421321108" />
+    <street name="唐县镇" code="421321109" />
+    <street name="吴山镇" code="421321110" />
+    <street name="新街镇" code="421321111" />
+    <street name="安居镇" code="421321112" />
+    <street name="环潭镇" code="421321113" />
+    <street name="洪山镇" code="421321114" />
+    <street name="长岗镇" code="421321115" />
+    <street name="三里岗镇" code="421321116" />
+    <street name="柳林镇" code="421321117" />
+    <street name="均川镇" code="421321118" />
+    <street name="万福店镇" code="421321119" />
+</county>
+<county name="广水" code="421381">
+    <street name="应山街道" code="421381001" />
+    <street name="十里（街道）办事处" code="421381002" />
+    <street name="广水街道" code="421381003" />
+    <street name="武胜关镇" code="421381100" />
+    <street name="杨寨镇" code="421381101" />
+    <street name="陈巷镇" code="421381102" />
+    <street name="长岭镇" code="421381103" />
+    <street name="马坪镇" code="421381104" />
+    <street name="关庙镇" code="421381105" />
+    <street name="余店镇" code="421381106" />
+    <street name="吴店镇" code="421381107" />
+    <street name="郝店镇" code="421381108" />
+    <street name="蔡河镇" code="421381109" />
+    <street name="城郊乡" code="421381200" />
+    <street name="李店乡" code="421381201" />
+    <street name="太平乡" code="421381202" />
+    <street name="骆店乡" code="421381203" />
+    <street name="中华山林场" code="421381400" />
+    <street name="三潭风景区" code="421381401" />
+</county>
+</city>
+</address>

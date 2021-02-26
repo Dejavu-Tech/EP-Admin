@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="六安" code="341500">
+<county name="金安" code="341502">
+    <street name="中市街道" code="341502001" />
+    <street name="东市街道" code="341502002" />
+    <street name="三里桥街道" code="341502003" />
+    <street name="望城街道" code="341502004" />
+    <street name="清水河街道" code="341502005" />
+    <street name="木厂镇" code="341502100" />
+    <street name="马头镇" code="341502101" />
+    <street name="东桥镇" code="341502102" />
+    <street name="张店镇" code="341502103" />
+    <street name="毛坦厂镇" code="341502104" />
+    <street name="东河口镇" code="341502105" />
+    <street name="双河镇" code="341502106" />
+    <street name="施桥镇" code="341502107" />
+    <street name="孙岗镇" code="341502108" />
+    <street name="三十铺镇" code="341502109" />
+    <street name="椿树镇" code="341502110" />
+    <street name="城北乡" code="341502200" />
+    <street name="翁墩乡" code="341502201" />
+    <street name="淠东乡" code="341502202" />
+    <street name="中店乡" code="341502203" />
+    <street name="横塘岗乡" code="341502204" />
+    <street name="先生店乡" code="341502205" />
+    <street name="六安经济开发区" code="341502400" />
+</county>
+<county name="裕安" code="341503">
+    <street name="鼓楼街道" code="341503001" />
+    <street name="西市街道" code="341503002" />
+    <street name="小华山街道" code="341503003" />
+    <street name="苏埠镇" code="341503100" />
+    <street name="韩摆渡镇" code="341503101" />
+    <street name="新安镇" code="341503102" />
+    <street name="顺河镇" code="341503103" />
+    <street name="独山镇" code="341503104" />
+    <street name="石婆店镇" code="341503105" />
+    <street name="城南镇" code="341503106" />
+    <street name="丁集镇" code="341503107" />
+    <street name="固镇镇" code="341503108" />
+    <street name="徐集镇" code="341503109" />
+    <street name="分路口镇" code="341503110" />
+    <street name="江家店镇" code="341503111" />
+    <street name="单王乡" code="341503200" />
+    <street name="青山乡" code="341503201" />
+    <street name="石板冲乡" code="341503202" />
+    <street name="西河口乡" code="341503203" />
+    <street name="平桥乡" code="341503204" />
+    <street name="罗集乡" code="341503205" />
+    <street name="狮子岗乡" code="341503206" />
+    <street name="六安市裕安区经济开发区" code="341503400" />
+</county>
+<county name="寿县" code="341521">
+    <street name="寿春镇" code="341521100" />
+    <street name="双桥镇" code="341521101" />
+    <street name="涧沟镇" code="341521102" />
+    <street name="丰庄镇" code="341521103" />
+    <street name="正阳关镇" code="341521104" />
+    <street name="迎河镇" code="341521105" />
+    <street name="板桥镇" code="341521106" />
+    <street name="安丰塘镇" code="341521107" />
+    <street name="堰口镇" code="341521108" />
+    <street name="保义镇" code="341521109" />
+    <street name="隐贤镇" code="341521110" />
+    <street name="安丰镇" code="341521111" />
+    <street name="众兴镇" code="341521112" />
+    <street name="茶庵镇" code="341521113" />
+    <street name="三觉镇" code="341521114" />
+    <street name="炎刘镇" code="341521115" />
+    <street name="刘岗镇" code="341521116" />
+    <street name="双庙集镇" code="341521117" />
+    <street name="小甸镇" code="341521118" />
+    <street name="瓦埠镇" code="341521119" />
+    <street name="大顺镇" code="341521120" />
+    <street name="八公山乡" code="341521200" />
+    <street name="张李乡" code="341521201" />
+    <street name="窑口乡" code="341521202" />
+    <street name="陶店回族乡" code="341521203" />
+    <street name="安徽寿县工业园区" code="341521402" />
+    <street name="寿西湖农场" code="341521500" />
+    <street name="正阳关农场" code="341521501" />
+</county>
+<county name="霍邱" code="341522">
+    <street name="城关镇" code="341522100" />
+    <street name="河口镇" code="341522101" />
+    <street name="周集镇" code="341522102" />
+    <street name="临水镇" code="341522103" />
+    <street name="新店镇" code="341522104" />
+    <street name="石店镇" code="341522105" />
+    <street name="马店镇" code="341522106" />
+    <street name="孟集镇" code="341522107" />
+    <street name="花园镇" code="341522108" />
+    <street name="扈胡镇" code="341522109" />
+    <street name="长集镇" code="341522110" />
+    <street name="洪集镇" code="341522111" />
+    <street name="姚李镇" code="341522112" />
+    <street name="乌龙镇" code="341522113" />
+    <street name="高塘镇" code="341522114" />
+    <street name="龙潭镇" code="341522115" />
+    <street name="岔路镇" code="341522116" />
+    <street name="冯井镇" code="341522117" />
+    <street name="众兴集镇" code="341522118" />
+    <street name="夏店镇" code="341522119" />
+    <street name="曹庙镇" code="341522120" />
+    <street name="叶集区镇区办事处" code="341522121" />
+    <street name="叶集区镇平岗办事处" code="341522122" />
+    <street name="范桥镇" code="341522123" />
+    <street name="潘集镇" code="341522124" />
+    <street name="彭塔乡" code="341522200" />
+    <street name="王截流乡" code="341522201" />
+    <street name="临淮岗乡" code="341522203" />
+    <street name="城西湖乡" code="341522204" />
+    <street name="宋店乡" code="341522205" />
+    <street name="三流乡" code="341522206" />
+    <street name="邵岗乡" code="341522207" />
+    <street name="白莲乡" code="341522208" />
+    <street name="冯瓴乡" code="341522210" />
+    <street name="孙岗乡" code="341522211" />
+    <street name="三元乡" code="341522212" />
+    <street name="安徽霍邱经济开发区" code="341522400" />
+    <street name="水产局管辖村" code="341522500" />
+</county>
+<county name="舒城" code="341523">
+    <street name="城关镇" code="341523100" />
+    <street name="晓天镇" code="341523101" />
+    <street name="桃溪镇" code="341523102" />
+    <street name="万佛湖镇" code="341523103" />
+    <street name="千人桥镇" code="341523104" />
+    <street name="百神庙镇" code="341523105" />
+    <street name="杭埠镇" code="341523106" />
+    <street name="舒茶镇" code="341523107" />
+    <street name="南港镇" code="341523108" />
+    <street name="干汊河镇" code="341523109" />
+    <street name="张母桥镇" code="341523110" />
+    <street name="五显镇" code="341523111" />
+    <street name="山七镇" code="341523112" />
+    <street name="河棚镇" code="341523113" />
+    <street name="汤池镇" code="341523114" />
+    <street name="春秋乡" code="341523200" />
+    <street name="柏林乡" code="341523201" />
+    <street name="棠树乡" code="341523202" />
+    <street name="阙店乡" code="341523203" />
+    <street name="高峰乡" code="341523204" />
+    <street name="庐镇乡" code="341523205" />
+    <street name="舒城县经济开发区" code="341523400" />
+</county>
+<county name="金寨" code="341524">
+    <street name="梅山镇" code="341524100" />
+    <street name="麻埠镇" code="341524101" />
+    <street name="青山镇" code="341524102" />
+    <street name="燕子河镇" code="341524103" />
+    <street name="天堂寨镇" code="341524104" />
+    <street name="古碑镇" code="341524105" />
+    <street name="吴家店镇" code="341524106" />
+    <street name="斑竹园镇" code="341524107" />
+    <street name="汤家汇镇" code="341524108" />
+    <street name="南溪镇" code="341524109" />
+    <street name="双河镇" code="341524110" />
+    <street name="白塔畈镇" code="341524111" />
+    <street name="张冲乡" code="341524201" />
+    <street name="油坊店乡" code="341524202" />
+    <street name="长岭乡" code="341524203" />
+    <street name="槐树湾乡" code="341524204" />
+    <street name="花石乡" code="341524205" />
+    <street name="沙河乡" code="341524206" />
+    <street name="桃岭乡" code="341524207" />
+    <street name="果子园乡" code="341524208" />
+    <street name="关庙乡" code="341524209" />
+    <street name="全军乡" code="341524211" />
+    <street name="铁冲乡" code="341524214" />
+    <street name="现代产业园（经济开发区）" code="341524400" />
+</county>
+<county name="霍山" code="341525">
+    <street name="衡山镇" code="341525100" />
+    <street name="佛子岭镇" code="341525101" />
+    <street name="下符桥镇" code="341525102" />
+    <street name="但家庙镇" code="341525103" />
+    <street name="与儿街镇" code="341525104" />
+    <street name="黑石渡镇" code="341525105" />
+    <street name="诸佛庵镇" code="341525106" />
+    <street name="落儿岭镇" code="341525107" />
+    <street name="磨子潭镇" code="341525108" />
+    <street name="大化坪镇" code="341525109" />
+    <street name="漫水河镇" code="341525110" />
+    <street name="上士市镇" code="341525111" />
+    <street name="单龙寺乡" code="341525200" />
+    <street name="东西溪乡" code="341525201" />
+    <street name="太平畈乡" code="341525202" />
+    <street name="太阳乡" code="341525203" />
+    <street name="经济开发区" code="341525400" />
+</county>
+</city>
+</address>

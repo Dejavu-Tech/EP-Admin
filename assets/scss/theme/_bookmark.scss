@@ -1,0 +1,76 @@
+/**=====================
+    50. Bookmark CSS start
+==========================**/
+.bookmark.pull-right{
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+}
+.bookmark {
+  ul {
+    li {
+      display: inline-block;
+      .search-form {
+        position: absolute;
+        bottom: 53px;
+        .form-control-search {
+          top: 60px;
+          position: absolute;
+          transition: all linear 0.3s;
+          right: -75px;
+          transform: translateY(-35px) scaleY(0);
+          opacity: 0;
+          visibility: hidden;
+          input {
+            width: 300px;
+            background-color: $white;
+            box-shadow: 0 5px 21px rgba(0, 0, 0, 0.10);
+          }
+          &.open {
+            transform: translateY(0px) scaleY(1);
+            opacity: 1;
+            visibility: visible;
+            transition: all linear 0.3s;
+            z-index: 100;
+          }
+          &:after {
+            top: 12px;
+            left: 20px;
+            z-index: 1;
+          }
+          &:before {
+            left: 50px;
+            top: 9px;
+            z-index: 2;
+          }
+        }
+      }
+      a{
+        position: relative;
+        color: $theme-body-font-color;
+        svg {
+          vertical-align: middle;
+          height: 18px;
+          width: 18px;
+          margin: 12px 18px;
+        }
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        background-color: $primary-color;
+        border-radius: 8px;
+        a {
+          border-radius: 5px;
+          svg {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+/**=====================
+   50. Bookmark CSS Ends
+==========================**/

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="汕尾" code="441500">
+<county name="城区" code="441502">
+    <street name="新港街道" code="441502001" />
+    <street name="香洲街道" code="441502002" />
+    <street name="凤山街道" code="441502003" />
+    <street name="田墘街道" code="441502004" />
+    <street name="东洲街道" code="441502005" />
+    <street name="遮浪街道" code="441502006" />
+    <street name="马宫街道" code="441502007" />
+    <street name="红草镇" code="441502100" />
+    <street name="东涌镇" code="441502102" />
+    <street name="捷胜镇" code="441502103" />
+</county>
+<county name="海丰" code="441521">
+    <street name="梅陇镇" code="441521101" />
+    <street name="小漠镇" code="441521102" />
+    <street name="鮜门镇" code="441521105" />
+    <street name="联安镇" code="441521106" />
+    <street name="陶河镇" code="441521107" />
+    <street name="赤坑镇" code="441521108" />
+    <street name="大湖镇" code="441521109" />
+    <street name="可塘镇" code="441521110" />
+    <street name="黄羌镇" code="441521112" />
+    <street name="平东镇" code="441521113" />
+    <street name="海城镇" code="441521115" />
+    <street name="鹅埠镇" code="441521116" />
+    <street name="赤石镇" code="441521117" />
+    <street name="公平镇" code="441521118" />
+    <street name="附城镇" code="441521119" />
+    <street name="城东镇" code="441521120" />
+    <street name="梅陇农场" code="441521450" />
+</county>
+<county name="陆河" code="441523">
+    <street name="河田镇" code="441523100" />
+    <street name="水唇镇" code="441523101" />
+    <street name="河口镇" code="441523102" />
+    <street name="新田镇" code="441523103" />
+    <street name="上护镇" code="441523104" />
+    <street name="螺溪镇" code="441523105" />
+    <street name="东坑镇" code="441523106" />
+    <street name="南万镇" code="441523107" />
+</county>
+<county name="陆丰" code="441581">
+    <street name="东海街道" code="441581001" />
+    <street name="河西街道" code="441581002" />
+    <street name="城东街道" code="441581003" />
+    <street name="甲子镇" code="441581101" />
+    <street name="碣石镇" code="441581102" />
+    <street name="湖东镇" code="441581103" />
+    <street name="大安镇" code="441581104" />
+    <street name="博美镇" code="441581105" />
+    <street name="内湖镇" code="441581106" />
+    <street name="南塘镇" code="441581107" />
+    <street name="陂洋镇" code="441581108" />
+    <street name="八万镇" code="441581109" />
+    <street name="金厢镇" code="441581110" />
+    <street name="潭西镇" code="441581111" />
+    <street name="甲东镇" code="441581112" />
+    <street name="河东镇" code="441581115" />
+    <street name="上英镇" code="441581116" />
+    <street name="桥冲镇" code="441581117" />
+    <street name="甲西镇" code="441581118" />
+    <street name="西南镇" code="441581119" />
+    <street name="华侨管理区" code="441581400" />
+    <street name="铜锣湖农场" code="441581450" />
+    <street name="星都经济开发试验区" code="441581451" />
+    <street name="大安农场" code="441581452" />
+    <street name="罗经嶂林场" code="441581453" />
+    <street name="湖东林场" code="441581454" />
+    <street name="东海岸林场" code="441581455" />
+    <street name="红岭林场" code="441581456" />
+    <street name="畜牧果林场" code="441581457" />
+</county>
+</city>
+</address>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="琼中" code="469036">
+<county name="琼中" code="469036001">
+    <street name="营根镇" code="469030100" />
+    <street name="湾岭镇" code="469030101" />
+    <street name="黎母山镇" code="469030102" />
+    <street name="和平镇" code="469030103" />
+    <street name="长征镇" code="469030104" />
+    <street name="红毛镇" code="469030105" />
+    <street name="中平镇" code="469030106" />
+    <street name="吊罗山乡" code="469030200" />
+    <street name="上安乡" code="469030201" />
+    <street name="什运乡" code="469030202" />
+    <street name="国营阳江农场" code="469030402" />
+    <street name="国营乌石农场" code="469030403" />
+    <street name="国营加钗农场" code="469030406" />
+    <street name="国营长征农场" code="469030407" />
+    <street name="国营黎母山林业公司" code="469030500" />
+</county>
+</city>
+</address>

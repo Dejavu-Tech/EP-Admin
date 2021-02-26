@@ -1,0 +1,423 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var height_equal          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Navs
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Ui Elements
+                                      li.breadcrumb-item.active Navs
+                    // Container-fluid starts                 
+                    .container-fluid
+                      .row
+                        .col-md-6
+                          .card
+                            .card-header
+                              h5 Default Nav
+                            .card-body
+                              ul.icon-lists.border.navs-icon
+                                li
+                                  a(href='#')
+                                    i(data-feather='home')
+                                    span  Dashboard
+                                li
+                                  a(href='#')
+                                    i(data-feather='airplay')
+                                    span  Widgets
+                                li
+                                  a(href='#')
+                                    i(data-feather='box')
+                                    span  Base
+                                li
+                                  a(href='#')
+                                    i(data-feather='file-text')
+                                    span  Forms
+                                li
+                                  a(href='#')
+                                    i(data-feather='server')
+                                    span  Tables
+                              .onhover-dropdown.navs-dropdown
+                                button.btn.btn-primary.onhover-dropdown
+                                  | Dropdown example 
+                                  i.icon-arrow-down
+                                .onhover-show-div
+                                  ul.icon-lists.navs-icon
+                                    li
+                                      a(href='#')
+                                        i(data-feather='home')
+                                        span  Dashboard
+                                    li
+                                      a(href='#')
+                                        i(data-feather='airplay')
+                                        span  Widgets
+                                    li
+                                      a(href='#')
+                                        i(data-feather='box')
+                                        span  Base
+                                    li
+                                      a(href='#')
+                                        i(data-feather='file-text')
+                                        span  Forms
+                                    li
+                                      a(href='#')
+                                        i(data-feather='server')
+                                        span  Tables
+                        .col-md-6
+                          .card
+                            .card-header
+                              h5 Item Bullets
+                            .card-body
+                              .border.nav-list
+                                ul.nav-list-disc
+                                  li
+                                    a(href='#')
+                                      i.fa.fa-angle-right
+                                      span  Dashboard
+                                  li
+                                    a(href='#')
+                                      i.fa.fa-angle-right
+                                      span  Widgets
+                                  li
+                                    a(href='#')
+                                      i.fa.fa-angle-right
+                                      span  Base
+                                  li
+                                    a(href='#')
+                                      i.fa.fa-angle-right
+                                      span  Forms
+                                  li
+                                    a(href='#')
+                                      i.fa.fa-angle-right
+                                      span  Tables
+                              .onhover-dropdown.navs-dropdown
+                                button.btn.btn-primary.onhover-dropdown
+                                  | Dropdown example 
+                                  i.icon-arrow-down
+                                .onhover-show-div
+                                  .nav-list
+                                    ul.nav-list-disc
+                                      li
+                                        a(href='#')
+                                          i.fa.fa-angle-right
+                                          span  Dashboard
+                                      li
+                                        a(href='#')
+                                          i.fa.fa-angle-right
+                                          span  Widgets
+                                      li
+                                        a(href='#')
+                                          i.fa.fa-angle-right
+                                          span  Base
+                                      li
+                                        a(href='#')
+                                          i.fa.fa-angle-right
+                                          span  Forms
+                                      li
+                                        a(href='#')
+                                          i.fa.fa-angle-right
+                                          span  Tables
+                        .col-lg-6
+                          .card.height-equal
+                            .card-header
+                              h5 Section and Separator
+                            .card-body
+                              ul.icon-lists.border.navs-icon
+                                li
+                                  h5.mb-0 General
+                                li
+                                  a(href='#')
+                                    i(data-feather='home')
+                                    span  Dashboard
+                                li.pb-0
+                                  a(href='#')
+                                    i(data-feather='airplay')
+                                    span  Widgets
+                                li.main-section
+                                  h5.mb-0 Layout
+                                li
+                                  a(href='#')
+                                    i(data-feather='sidebar')
+                                    span  Sidebar
+                                li
+                                  a(href='#')
+                                    i(data-feather='layout')
+                                    span  Page Layout
+                                li.pb-0
+                                  a(href='#')
+                                    i(data-feather='cloud-lightning')
+                                    span  Footers
+                                li.separator
+                                li.pt-0
+                                  button.btn.btn-pill.btn-outline-primary Log Out
+                              .onhover-dropdown.navs-dropdown
+                                button.btn.btn-primary.onhover-dropdown
+                                  | Dropdown example 
+                                  i.icon-arrow-down
+                                .onhover-show-div
+                                  ul.icon-lists.navs-icon
+                                    li
+                                      h5.mb-0 General
+                                    li
+                                      a(href='#')
+                                        i(data-feather='home')
+                                        span  Dashboard
+                                    li
+                                      a(href='#')
+                                        i(data-feather='airplay')
+                                        span  Widgets
+                                    li.main-section
+                                      h5.mb-0 Layout
+                                    li
+                                      a(href='#')
+                                        i(data-feather='sidebar')
+                                        span  Sidebar
+                                    li
+                                      a(href='#')
+                                        i(data-feather='layout')
+                                        span  Page Layout
+                                    li.pb-0
+                                      a(href='#')
+                                        i(data-feather='cloud-lightning')
+                                        span  Footers
+                                    li.separator
+                                    li.pt-0
+                                      button.btn.btn-pill.btn-outline-primary Log Out
+                        .col-lg-6
+                          .card.height-equal
+                            .card-header
+                              h5 Active and Disabled Links
+                            .card-body
+                              ul.icon-lists.border.navs-icon
+                                li
+                                  a.active(href='#')
+                                    i(data-feather='home')
+                                    span  Dashboard
+                                li
+                                  a(href='#')
+                                    i(data-feather='airplay')
+                                    span  Widgets
+                                li
+                                  a.disabled(href='#')
+                                    i(data-feather='box')
+                                    span  Base
+                                li
+                                  a(href='#')
+                                    i(data-feather='file-text')
+                                    span  Forms
+                                li
+                                  a(href='#')
+                                    i(data-feather='server')
+                                    span  Tables
+                                li
+                                  a(href='#')
+                                    i(data-feather='credit-card')
+                                    span  Cards
+                                li
+                                  a.disabled(href='#')
+                                    i(data-feather='sliders')
+                                    span  Timeline
+                                li
+                                  a(href='#')
+                                    i(data-feather='bar-chart')
+                                    span  Charts
+                                li
+                                  a(href='#')
+                                    i(data-feather='map')
+                                    span  Maps
+                                li
+                                  a(href='#')
+                                    i(data-feather='git-pull-request')
+                                    span  Editors
+                              .onhover-dropdown.navs-dropdown
+                                button.btn.btn-primary.onhover-dropdown
+                                  | Dropdown example 
+                                  i.icon-arrow-down
+                                .onhover-show-div
+                                  ul.icon-lists.navs-icon
+                                    li
+                                      a.active(href='#')
+                                        i(data-feather='home')
+                                        span  Dashboard
+                                    li
+                                      a(href='#')
+                                        i(data-feather='airplay')
+                                        span  Widgets
+                                    li
+                                      a.disabled(href='#')
+                                        i(data-feather='box')
+                                        span  Base
+                                    li
+                                      a(href='#')
+                                        i(data-feather='file-text')
+                                        span  Forms
+                                    li
+                                      a(href='#')
+                                        i(data-feather='server')
+                                        span  Tables
+                                    li
+                                      a(href='#')
+                                        i(data-feather='credit-card')
+                                        span  Cards
+                                    li
+                                      a.disabled(href='#')
+                                        i(data-feather='sliders')
+                                        span  Timeline
+                                    li
+                                      a(href='#')
+                                        i(data-feather='bar-chart')
+                                        span  Charts
+                                    li
+                                      a(href='#')
+                                        i(data-feather='map')
+                                        span  Maps
+                                    li
+                                      a(href='#')
+                                        i(data-feather='git-pull-request')
+                                        span  Editors
+                        .col-xl-6.xl-40.col-lg-12
+                          .card
+                            .card-header
+                              h5 Inline Nav
+                            .card-body
+                              ul.icon-lists.border.navs-icon.inline-nav
+                                li
+                                  a(href='#')
+                                    i(data-feather='box')
+                                    span  Base
+                                li.pl-navs-inline
+                                  a(href='#')
+                                    i.fa.fa-angle-right
+                                    span  State Color
+                                li.pl-navs-inline
+                                  a(href='#')
+                                    i.fa.fa-angle-right
+                                    span  Typography
+                                li.pl-navs-inline
+                                  a(href='#')
+                                    i.fa.fa-angle-right
+                                    span  Grid
+                                li.pl-navs-inline
+                                  a(href='#')
+                                    i.fa.fa-angle-right
+                                    span  Tags & Pills
+                                li.pl-navs-inline
+                                  a(href='#')
+                                    i.fa.fa-angle-right
+                                    span  Progress
+                                li.pl-navs-inline
+                                  a(href='#')
+                                    i.fa.fa-angle-right
+                                    span  Modal
+                                li.pl-navs-inline
+                                  a(href='#')
+                                    i.fa.fa-angle-right
+                                    span  Alert
+                        .col-xl-6.xl-60.col-lg-12
+                          .card
+                            .card-header
+                              h5 Sub Nav
+                            .card-body
+                              .row
+                                .col-lg-6
+                                  div
+                                    h5 Static Sub Nav
+                                  ul.icon-lists.border.navs-icon
+                                    li
+                                      a(href='#')
+                                        i(data-feather='box')
+                                        span  Base
+                                    li
+                                      a(href='#')
+                                        i(data-feather='folder-plus')
+                                        span  Advance
+                                      ul
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Scrollable
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Tree View
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Rating
+                                    li
+                                      a(href='#')
+                                        i(data-feather='file-text')
+                                        span  Forms
+                                    li
+                                      a(href='#')
+                                        i(data-feather='server')
+                                        span  Tables
+                                .col-lg-6.nav-md-mt
+                                  div
+                                    h5 Toggle Sub Nav
+                                  ul#accordionoc.icon-lists.border.navs-icon.default-according.style-1
+                                    li
+                                      a(href='#')
+                                        i(data-feather='box')
+                                        span  Base
+                                    li
+                                      button.btn.btn-link.text-muted.active(data-toggle='collapse', data-target='#collapseicon', aria-expanded='true')
+                                        i(data-feather='folder-plus')
+                                        span  Advance
+                                      ul#collapseicon.collapse.show(aria-labelledby='collapseicon', data-parent='#accordionoc')
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Scrollable
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Tree View
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Rating
+                                    li
+                                      a(href='#')
+                                        i(data-feather='file-text')
+                                        span  Forms
+                                    li
+                                      button.btn.btn-link.text-muted.collapsed.pb-0(data-toggle='collapse', data-target='#collapseicon1', aria-expanded='false')
+                                        i(data-feather='server')
+                                        |  Tables
+                                      ul#collapseicon1.collapse(data-parent='#accordionoc')
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | New
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Replied
+                                        li.pl-navs-inline
+                                          a(href='#')
+                                            i.fa.fa-angle-right
+                                            | Panding
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

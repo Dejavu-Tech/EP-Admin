@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="日喀则" code="542300">
+<county name="桑珠孜" code="542301">
+    <street name="城北办事处" code="542301001" />
+    <street name="城南办事处" code="542301002" />
+    <street name="曲美乡" code="542301200" />
+    <street name="聂日雄乡" code="542301201" />
+    <street name="曲布雄乡" code="542301202" />
+    <street name="联乡" code="542301203" />
+    <street name="甲措雄乡" code="542301204" />
+    <street name="纳尔乡" code="542301205" />
+    <street name="年木乡" code="542301206" />
+    <street name="东嘎乡" code="542301207" />
+    <street name="边雄乡" code="542301208" />
+    <street name="江当乡" code="542301209" />
+</county>
+<county name="南木林" code="542322">
+    <street name="南木林镇" code="542322100" />
+    <street name="普当乡" code="542322200" />
+    <street name="仁堆乡" code="542322201" />
+    <street name="拉布普乡" code="542322202" />
+    <street name="多角乡" code="542322203" />
+    <street name="卡孜乡" code="542322204" />
+    <street name="土布加乡" code="542322205" />
+    <street name="艾玛乡" code="542322206" />
+    <street name="奴玛乡" code="542322207" />
+    <street name="达孜乡" code="542322208" />
+    <street name="索金乡" code="542322209" />
+    <street name="茶尔乡" code="542322210" />
+    <street name="秋木乡" code="542322211" />
+    <street name="达那乡" code="542322212" />
+    <street name="芒热乡" code="542322213" />
+    <street name="热当乡" code="542322214" />
+    <street name="甲措乡" code="542322215" />
+</county>
+<county name="江孜" code="542323">
+    <street name="江孜镇" code="542323100" />
+    <street name="纳如乡" code="542323200" />
+    <street name="卡麦乡" code="542323201" />
+    <street name="卡堆乡" code="542323202" />
+    <street name="藏改乡" code="542323203" />
+    <street name="日朗乡" code="542323204" />
+    <street name="达孜乡" code="542323205" />
+    <street name="热索乡" code="542323206" />
+    <street name="重孜乡" code="542323207" />
+    <street name="龙马乡" code="542323208" />
+    <street name="紫金乡" code="542323209" />
+    <street name="江热乡" code="542323210" />
+    <street name="年堆乡" code="542323211" />
+    <street name="康卓乡" code="542323212" />
+    <street name="金嘎乡" code="542323213" />
+    <street name="日星乡" code="542323214" />
+    <street name="热龙乡" code="542323215" />
+    <street name="车仁乡" code="542323216" />
+    <street name="加克西乡" code="542323217" />
+</county>
+<county name="定日" code="542324">
+    <street name="协格尔镇" code="542324100" />
+    <street name="岗嘎镇" code="542324101" />
+    <street name="加措乡" code="542324200" />
+    <street name="绒辖乡" code="542324201" />
+    <street name="尼辖乡" code="542324202" />
+    <street name="盆吉乡" code="542324203" />
+    <street name="曲当乡" code="542324204" />
+    <street name="扎果乡" code="542324205" />
+    <street name="扎西宗乡" code="542324206" />
+    <street name="长所乡" code="542324207" />
+    <street name="曲洛乡" code="542324208" />
+    <street name="措果乡" code="542324209" />
+    <street name="克玛乡" code="542324210" />
+</county>
+<county name="萨迦" code="542325">
+    <street name="萨迦镇" code="542325100" />
+    <street name="吉定镇" code="542325101" />
+    <street name="木拉乡" code="542325200" />
+    <street name="查荣乡" code="542325201" />
+    <street name="拉洛乡" code="542325202" />
+    <street name="赛乡" code="542325203" />
+    <street name="扯休乡" code="542325204" />
+    <street name="扎西岗乡" code="542325205" />
+    <street name="雄玛乡" code="542325206" />
+    <street name="麻布加乡" code="542325207" />
+    <street name="雄麦乡" code="542325208" />
+</county>
+<county name="拉孜" code="542326">
+    <street name="曲下镇" code="542326100" />
+    <street name="拉孜镇" code="542326101" />
+    <street name="扎西宗乡" code="542326200" />
+    <street name="曲玛乡" code="542326201" />
+    <street name="彭措林乡" code="542326202" />
+    <street name="扎西岗乡" code="542326203" />
+    <street name="柳乡" code="542326204" />
+    <street name="热萨乡" code="542326205" />
+    <street name="芒普乡" code="542326206" />
+    <street name="锡钦乡" code="542326207" />
+    <street name="查务乡" code="542326208" />
+</county>
+<county name="昂仁" code="542327">
+    <street name="卡嘎镇" code="542327100" />
+    <street name="桑桑镇" code="542327101" />
+    <street name="切热乡" code="542327200" />
+    <street name="秋窝乡" code="542327201" />
+    <street name="达居乡" code="542327202" />
+    <street name="亚木乡" code="542327203" />
+    <street name="贡久布乡" code="542327204" />
+    <street name="达若乡" code="542327205" />
+    <street name="措迈乡" code="542327206" />
+    <street name="尼果乡" code="542327207" />
+    <street name="孔隆乡" code="542327208" />
+    <street name="如萨乡" code="542327209" />
+    <street name="阿木雄乡" code="542327210" />
+    <street name="查孜乡" code="542327211" />
+    <street name="日吾其乡" code="542327212" />
+    <street name="多白乡" code="542327213" />
+    <street name="雄巴乡" code="542327214" />
+</county>
+<county name="谢通门" code="542328">
+    <street name="卡嘎镇" code="542328100" />
+    <street name="达木夏乡" code="542328200" />
+    <street name="查布乡" code="542328201" />
+    <street name="春哲乡" code="542328202" />
+    <street name="则许乡" code="542328203" />
+    <street name="娘热乡" code="542328204" />
+    <street name="措布西乡" code="542328205" />
+    <street name="纳当乡" code="542328206" />
+    <street name="青都乡" code="542328207" />
+    <street name="切琼乡" code="542328208" />
+    <street name="美巴切勤乡" code="542328209" />
+    <street name="列巴乡" code="542328210" />
+    <street name="塔定乡" code="542328211" />
+    <street name="荣玛乡" code="542328212" />
+    <street name="通门乡" code="542328213" />
+    <street name="仁钦则乡" code="542328214" />
+    <street name="达那普乡" code="542328215" />
+    <street name="达那塔乡" code="542328216" />
+    <street name="南木切乡" code="542328217" />
+</county>
+<county name="白朗" code="542329">
+    <street name="洛江镇" code="542329100" />
+    <street name="嘎东镇" code="542329101" />
+    <street name="巴扎乡" code="542329200" />
+    <street name="玛乡" code="542329201" />
+    <street name="旺丹乡" code="542329202" />
+    <street name="曲奴乡" code="542329203" />
+    <street name="杜琼乡" code="542329204" />
+    <street name="强堆乡" code="542329205" />
+    <street name="嘎普乡" code="542329206" />
+    <street name="者下乡" code="542329207" />
+    <street name="东喜乡" code="542329208" />
+</county>
+<county name="仁布" code="542330">
+    <street name="德吉林镇" code="542330100" />
+    <street name="帕当乡" code="542330200" />
+    <street name="康雄乡" code="542330201" />
+    <street name="普松乡" code="542330202" />
+    <street name="然巴乡" code="542330203" />
+    <street name="茶巴乡" code="542330204" />
+    <street name="切洼乡" code="542330205" />
+    <street name="母乡" code="542330206" />
+    <street name="仁布乡" code="542330207" />
+</county>
+<county name="康马" code="542331">
+    <street name="康马镇" code="542331100" />
+    <street name="涅如麦乡" code="542331200" />
+    <street name="涅如堆乡" code="542331201" />
+    <street name="嘎拉乡" code="542331202" />
+    <street name="萨玛达乡" code="542331203" />
+    <street name="康如乡" code="542331204" />
+    <street name="少岗乡" code="542331205" />
+    <street name="南尼乡" code="542331206" />
+    <street name="雄章乡" code="542331207" />
+</county>
+<county name="定结" code="542332">
+    <street name="江嘎镇" code="542332100" />
+    <street name="陈塘镇" code="542332101" />
+    <street name="日屋镇" code="542332102" />
+    <street name="确布乡" code="542332200" />
+    <street name="扎西岗乡" code="542332201" />
+    <street name="多布扎乡" code="542332202" />
+    <street name="定结乡" code="542332203" />
+    <street name="琼孜乡" code="542332204" />
+    <street name="萨尔乡" code="542332205" />
+    <street name="郭加乡" code="542332206" />
+</county>
+<county name="仲巴" code="542333">
+    <street name="帕羊镇" code="542333100" />
+    <street name="拉让乡" code="542333200" />
+    <street name="帕江乡" code="542333201" />
+    <street name="仁多乡" code="542333202" />
+    <street name="吉玛乡" code="542333203" />
+    <street name="隆格尔乡" code="542333204" />
+    <street name="霍尔巴乡" code="542333205" />
+    <street name="吉拉乡" code="542333206" />
+    <street name="纳久乡" code="542333207" />
+    <street name="偏吉乡" code="542333208" />
+    <street name="布多乡" code="542333209" />
+    <street name="亚热乡" code="542333210" />
+    <street name="琼果乡" code="542333211" />
+</county>
+<county name="亚东" code="542334">
+    <street name="下司马镇" code="542334100" />
+    <street name="帕里镇" code="542334101" />
+    <street name="下亚东乡" code="542334200" />
+    <street name="堆纳乡" code="542334201" />
+    <street name="上亚东乡" code="542334202" />
+    <street name="吉汝乡" code="542334203" />
+    <street name="康布乡" code="542334204" />
+</county>
+<county name="吉隆" code="542335">
+    <street name="宗嘎镇" code="542335100" />
+    <street name="吉隆镇" code="542335101" />
+    <street name="折巴乡" code="542335200" />
+    <street name="贡当乡" code="542335201" />
+    <street name="差那乡" code="542335202" />
+</county>
+<county name="聂拉木" code="542336">
+    <street name="聂拉木镇" code="542336100" />
+    <street name="樟木镇" code="542336101" />
+    <street name="亚来乡" code="542336200" />
+    <street name="锁作乡" code="542336201" />
+    <street name="门布乡" code="542336202" />
+    <street name="乃龙乡" code="542336203" />
+    <street name="波绒乡" code="542336204" />
+</county>
+<county name="萨嘎" code="542337">
+    <street name="加加镇" code="542337100" />
+    <street name="夏如乡" code="542337200" />
+    <street name="旦嘎乡" code="542337201" />
+    <street name="达吉岭乡" code="542337202" />
+    <street name="如角乡" code="542337203" />
+    <street name="拉藏乡" code="542337204" />
+    <street name="雄如乡" code="542337205" />
+    <street name="昌果乡" code="542337206" />
+</county>
+<county name="岗巴" code="542338">
+    <street name="岗巴镇" code="542338100" />
+    <street name="昌龙乡" code="542338200" />
+    <street name="直克乡" code="542338201" />
+    <street name="孔玛乡" code="542338202" />
+    <street name="龙中乡" code="542338203" />
+</county>
+</city>
+</address>

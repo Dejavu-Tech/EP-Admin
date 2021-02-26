@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="宿州" code="341300">
+<county name="埇桥" code="341302">
+    <street name="埇桥街道" code="341302001" />
+    <street name="沱河街道" code="341302002" />
+    <street name="道东街道" code="341302003" />
+    <street name="东关街道" code="341302004" />
+    <street name="三里湾街道" code="341302005" />
+    <street name="南关街道" code="341302006" />
+    <street name="西关街道" code="341302007" />
+    <street name="北关街道" code="341302008" />
+    <street name="汴河街道" code="341302009" />
+    <street name="三八街道" code="341302010" />
+    <street name="城东街道" code="341302011" />
+    <street name="金海街道" code="341302012" />
+    <street name="符离镇" code="341302100" />
+    <street name="芦岭镇" code="341302101" />
+    <street name="朱仙庄镇" code="341302102" />
+    <street name="褚兰镇" code="341302103" />
+    <street name="曹村镇" code="341302104" />
+    <street name="夹沟镇" code="341302105" />
+    <street name="栏杆镇" code="341302106" />
+    <street name="时村镇" code="341302107" />
+    <street name="永安镇" code="341302108" />
+    <street name="灰古镇" code="341302109" />
+    <street name="大店镇" code="341302110" />
+    <street name="大泽乡镇" code="341302111" />
+    <street name="桃园镇" code="341302112" />
+    <street name="蕲县镇" code="341302113" />
+    <street name="大营镇" code="341302114" />
+    <street name="杨庄乡" code="341302200" />
+    <street name="支河乡" code="341302201" />
+    <street name="解集乡" code="341302202" />
+    <street name="桃沟乡" code="341302203" />
+    <street name="顺河乡" code="341302204" />
+    <street name="蒿沟乡" code="341302205" />
+    <street name="苗安乡" code="341302206" />
+    <street name="永镇乡" code="341302207" />
+    <street name="西二铺乡" code="341302208" />
+    <street name="夹沟农场" code="341302400" />
+    <street name="宿州马鞍山现代产业园区" code="341302401" />
+    <street name="宿州高新技术产业开发区" code="341302402" />
+    <street name="宿州埇桥经济开发区" code="341302403" />
+    <street name="宿州经济技术开发区鞋城管理委员会" code="341302404" />
+    <street name="宿州经济技术开发区北杨寨行政管理区" code="341302405" />
+</county>
+<county name="砀山" code="341321">
+    <street name="砀城镇" code="341321100" />
+    <street name="赵屯镇" code="341321101" />
+    <street name="李庄镇" code="341321102" />
+    <street name="唐寨镇" code="341321103" />
+    <street name="葛集镇" code="341321104" />
+    <street name="周寨镇" code="341321105" />
+    <street name="玄庙镇" code="341321106" />
+    <street name="官庄坝镇" code="341321107" />
+    <street name="曹庄镇" code="341321108" />
+    <street name="关帝庙镇" code="341321109" />
+    <street name="朱楼镇" code="341321110" />
+    <street name="良梨镇" code="341321111" />
+    <street name="程庄镇" code="341321112" />
+    <street name="经济开发区" code="341321400" />
+    <street name="薛楼板材加工园" code="341321401" />
+    <street name="高铁新区" code="341321402" />
+</county>
+<county name="萧县" code="341322">
+    <street name="龙城镇" code="341322100" />
+    <street name="黄口镇" code="341322101" />
+    <street name="杨楼镇" code="341322102" />
+    <street name="闫集镇" code="341322103" />
+    <street name="新庄镇" code="341322104" />
+    <street name="刘套镇" code="341322105" />
+    <street name="马井镇" code="341322106" />
+    <street name="大屯镇" code="341322107" />
+    <street name="赵庄镇" code="341322108" />
+    <street name="杜楼镇" code="341322109" />
+    <street name="丁里镇" code="341322110" />
+    <street name="王寨镇" code="341322111" />
+    <street name="祖楼镇" code="341322112" />
+    <street name="青龙集镇" code="341322113" />
+    <street name="张庄寨镇" code="341322114" />
+    <street name="永堌镇" code="341322115" />
+    <street name="白土镇" code="341322116" />
+    <street name="官桥镇" code="341322117" />
+    <street name="圣泉乡" code="341322200" />
+    <street name="酒店乡" code="341322201" />
+    <street name="孙圩子乡" code="341322202" />
+    <street name="庄里乡" code="341322203" />
+    <street name="石林乡" code="341322204" />
+    <street name="萧县经济开发区" code="341322400" />
+</county>
+<county name="灵璧" code="341323">
+    <street name="灵城镇" code="341323100" />
+    <street name="韦集镇" code="341323101" />
+    <street name="黄湾镇" code="341323102" />
+    <street name="娄庄镇" code="341323103" />
+    <street name="杨疃镇" code="341323104" />
+    <street name="尹集镇" code="341323105" />
+    <street name="浍沟镇" code="341323106" />
+    <street name="尤集镇" code="341323107" />
+    <street name="下楼镇" code="341323108" />
+    <street name="朝阳镇" code="341323109" />
+    <street name="渔沟镇" code="341323110" />
+    <street name="高楼镇" code="341323111" />
+    <street name="冯庙镇" code="341323112" />
+    <street name="向阳乡" code="341323200" />
+    <street name="朱集乡" code="341323201" />
+    <street name="大路乡" code="341323202" />
+    <street name="大庙乡" code="341323203" />
+    <street name="禅堂乡" code="341323204" />
+    <street name="虞姬乡" code="341323205" />
+    <street name="灵璧县经济开发区" code="341323400" />
+</county>
+<county name="泗县" code="341324">
+    <street name="泗城镇" code="341324100" />
+    <street name="墩集镇" code="341324101" />
+    <street name="丁湖镇" code="341324102" />
+    <street name="草沟镇" code="341324103" />
+    <street name="长沟镇" code="341324104" />
+    <street name="黄圩镇" code="341324105" />
+    <street name="大庄镇" code="341324106" />
+    <street name="山头镇" code="341324107" />
+    <street name="刘圩镇" code="341324108" />
+    <street name="黑塔镇" code="341324109" />
+    <street name="草庙镇" code="341324110" />
+    <street name="屏山镇" code="341324111" />
+    <street name="大路口乡" code="341324200" />
+    <street name="大杨乡" code="341324201" />
+    <street name="瓦坊乡" code="341324202" />
+    <street name="泗县开发区管委会" code="341324400" />
+</county>
+</city>
+</address>

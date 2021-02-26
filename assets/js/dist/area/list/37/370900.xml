@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="泰安" code="370900">
+<county name="泰山" code="370902">
+    <street name="岱庙街道" code="370902001" />
+    <street name="财源街道" code="370902002" />
+    <street name="泰前街道" code="370902003" />
+    <street name="上高街道" code="370902004" />
+    <street name="徐家楼街道" code="370902005" />
+    <street name="省庄镇" code="370902100" />
+    <street name="邱家店镇" code="370902101" />
+    <street name="大津口乡" code="370902202" />
+</county>
+<county name="岱岳" code="370903">
+    <street name="粥店街道" code="370911001" />
+    <street name="天平街道" code="370911002" />
+    <street name="北集坡街道" code="370911003" />
+    <street name="山口镇" code="370911100" />
+    <street name="祝阳镇" code="370911101" />
+    <street name="范镇" code="370911102" />
+    <street name="角峪镇" code="370911103" />
+    <street name="徂徕镇" code="370911104" />
+    <street name="满庄镇" code="370911106" />
+    <street name="夏张镇" code="370911107" />
+    <street name="道朗镇" code="370911108" />
+    <street name="黄前镇" code="370911109" />
+    <street name="大汶口镇" code="370911110" />
+    <street name="马庄镇" code="370911111" />
+    <street name="房村镇" code="370911112" />
+    <street name="良庄镇" code="370911113" />
+    <street name="下港乡" code="370911200" />
+    <street name="化马湾乡" code="370911201" />
+</county>
+<county name="宁阳" code="370921">
+    <street name="文庙街道" code="370921001" />
+    <street name="八仙桥街道" code="370921002" />
+    <street name="泗店镇" code="370921101" />
+    <street name="东疏镇" code="370921102" />
+    <street name="伏山镇" code="370921103" />
+    <street name="堽城镇" code="370921105" />
+    <street name="蒋集镇" code="370921107" />
+    <street name="磁窑镇" code="370921109" />
+    <street name="华丰镇" code="370921110" />
+    <street name="葛石镇" code="370921111" />
+    <street name="东庄镇" code="370921112" />
+    <street name="鹤山乡" code="370921201" />
+    <street name="乡饮乡" code="370921206" />
+</county>
+<county name="东平" code="370923">
+    <street name="东平街道" code="370923001" />
+    <street name="州城街道" code="370923002" />
+    <street name="彭集街道" code="370923003" />
+    <street name="沙河站镇" code="370923101" />
+    <street name="老湖镇" code="370923106" />
+    <street name="银山镇" code="370923107" />
+    <street name="斑鸠店镇" code="370923108" />
+    <street name="接山镇" code="370923109" />
+    <street name="大羊镇" code="370923110" />
+    <street name="梯门镇" code="370923111" />
+    <street name="新湖镇" code="370923112" />
+    <street name="戴庙镇" code="370923113" />
+    <street name="商老庄乡" code="370923206" />
+    <street name="旧县乡" code="370923208" />
+</county>
+<county name="新泰" code="370982">
+    <street name="青云街道" code="370982001" />
+    <street name="新汶街道" code="370982002" />
+    <street name="东都镇" code="370982101" />
+    <street name="小协镇" code="370982102" />
+    <street name="翟镇" code="370982103" />
+    <street name="泉沟镇" code="370982104" />
+    <street name="羊流镇" code="370982105" />
+    <street name="果都镇" code="370982106" />
+    <street name="西张庄镇" code="370982107" />
+    <street name="天宝镇" code="370982108" />
+    <street name="楼德镇" code="370982110" />
+    <street name="禹村镇" code="370982111" />
+    <street name="宫里镇" code="370982112" />
+    <street name="谷里镇" code="370982113" />
+    <street name="石莱镇" code="370982114" />
+    <street name="放城镇" code="370982115" />
+    <street name="刘杜镇" code="370982116" />
+    <street name="汶南镇" code="370982117" />
+    <street name="龙廷镇" code="370982119" />
+    <street name="岳家庄乡" code="370982203" />
+</county>
+<county name="肥城" code="370983">
+    <street name="新城街道" code="370983001" />
+    <street name="老城街道" code="370983002" />
+    <street name="王瓜店街道" code="370983003" />
+    <street name="潮泉镇" code="370983101" />
+    <street name="桃园镇" code="370983103" />
+    <street name="王庄镇" code="370983104" />
+    <street name="湖屯镇" code="370983105" />
+    <street name="石横镇" code="370983106" />
+    <street name="安临站镇" code="370983107" />
+    <street name="孙伯镇" code="370983108" />
+    <street name="安驾庄镇" code="370983109" />
+    <street name="汶阳镇" code="370983110" />
+    <street name="边院镇" code="370983111" />
+    <street name="仪阳镇" code="370983112" />
+</county>
+</city>
+</address>

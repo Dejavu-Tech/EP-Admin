@@ -1,0 +1,74 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var jsgrid                = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | JS Grid
+                                      span
+                                        | Tables
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Tables
+                                      li.breadcrumb-item.active JS Grid Tables
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Basic Scenario
+                              span
+                                | Grid with filtering, editing, inserting, deleting, sorting and paging. Data provided by controller.
+                            .card-body
+                              #basicScenario
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Sorting Scenario
+                              span
+                                | Sorting can be done not only with column header interaction, but also with sort method.
+                            .card-body
+                              .sort-panel.mb-3
+                                label
+                                  | Sorting Field:
+                                  select#sortingField.btn.btn-primary.dropdown-toggle.btn-sm
+                                    option Name
+                                    option Age
+                                    option Address
+                                    option Country
+                                    option Married
+                                .d-inline
+                                  button#sort.btn.btn-sm.btn-secondary(type='button') Sort
+                              #sorting-table.js-shorting
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Batch Delete
+                              span
+                                | Cell content of every column can be customized with itemTemplate, headerTemplate, filterTemplate and insertTemplate functions specified in field config. This example shows how to implement batch deleting with custom field for selecting items.
+                            .card-body
+                              #batchDelete
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

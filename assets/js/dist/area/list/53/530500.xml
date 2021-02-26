@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="保山" code="530500">
+<county name="隆阳" code="530502">
+    <street name="兰城街道" code="530502001" />
+    <street name="永昌街道" code="530502002" />
+    <street name="板桥镇" code="530502101" />
+    <street name="河图镇" code="530502102" />
+    <street name="汉庄镇" code="530502103" />
+    <street name="蒲缥镇" code="530502104" />
+    <street name="瓦窑镇" code="530502105" />
+    <street name="潞江镇" code="530502106" />
+    <street name="金鸡乡" code="530502201" />
+    <street name="辛街乡" code="530502202" />
+    <street name="西邑乡" code="530502203" />
+    <street name="丙麻乡" code="530502204" />
+    <street name="瓦渡乡" code="530502205" />
+    <street name="水寨乡" code="530502206" />
+    <street name="瓦马彝族白族乡" code="530502207" />
+    <street name="瓦房彝族苗族乡" code="530502208" />
+    <street name="杨柳白族彝族乡" code="530502209" />
+    <street name="芒宽彝族傣族乡" code="530502210" />
+    <street name="保山工贸园区" code="530502401" />
+    <street name="保山市高黎贡山旅游渡假区" code="530502501" />
+</county>
+<county name="施甸" code="530521">
+    <street name="甸阳镇" code="530521101" />
+    <street name="由旺镇" code="530521102" />
+    <street name="姚关镇" code="530521103" />
+    <street name="仁和镇" code="530521104" />
+    <street name="太平镇" code="530521105" />
+    <street name="万兴乡" code="530521201" />
+    <street name="摆榔彝族布朗族乡" code="530521202" />
+    <street name="酒房乡" code="530521203" />
+    <street name="旧城乡" code="530521204" />
+    <street name="木老元布朗族彝族乡" code="530521205" />
+    <street name="老麦乡" code="530521206" />
+    <street name="何元乡" code="530521207" />
+    <street name="水长乡" code="530521208" />
+    <street name="保山市水长工业园区" code="530521401" />
+</county>
+<county name="腾冲" code="530522">
+    <street name="腾越镇" code="530522101" />
+    <street name="固东镇" code="530522102" />
+    <street name="滇滩镇" code="530522103" />
+    <street name="猴桥镇" code="530522104" />
+    <street name="和顺镇" code="530522105" />
+    <street name="界头镇" code="530522106" />
+    <street name="曲石镇" code="530522107" />
+    <street name="明光镇" code="530522108" />
+    <street name="中和镇" code="530522109" />
+    <street name="芒棒镇" code="530522110" />
+    <street name="荷花镇" code="530522111" />
+    <street name="马站乡" code="530522204" />
+    <street name="北海乡" code="530522205" />
+    <street name="清水乡" code="530522207" />
+    <street name="五合乡" code="530522209" />
+    <street name="新华乡" code="530522210" />
+    <street name="蒲川乡" code="530522211" />
+    <street name="团田乡" code="530522212" />
+</county>
+<county name="龙陵" code="530523">
+    <street name="龙山镇" code="530523101" />
+    <street name="镇安镇" code="530523102" />
+    <street name="勐糯镇" code="530523103" />
+    <street name="龙江乡" code="530523201" />
+    <street name="腊勐乡" code="530523202" />
+    <street name="碧寨乡" code="530523203" />
+    <street name="龙新乡" code="530523204" />
+    <street name="象达乡" code="530523205" />
+    <street name="平达乡" code="530523206" />
+    <street name="木城彝族傈僳族乡" code="530523207" />
+</county>
+<county name="昌宁" code="530524">
+    <street name="田园镇" code="530524101" />
+    <street name="漭水镇" code="530524102" />
+    <street name="柯街镇" code="530524103" />
+    <street name="卡斯镇" code="530524104" />
+    <street name="勐统镇" code="530524105" />
+    <street name="温泉乡" code="530524201" />
+    <street name="大田坝乡" code="530524202" />
+    <street name="鸡飞乡" code="530524203" />
+    <street name="翁堵乡" code="530524204" />
+    <street name="湾甸傣族乡" code="530524205" />
+    <street name="更戛乡" code="530524206" />
+    <street name="珠街彝族乡" code="530524207" />
+    <street name="耈街彝族苗族乡" code="530524208" />
+</county>
+</city>
+</address>

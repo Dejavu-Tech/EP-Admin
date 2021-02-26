@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="昭通" code="530600">
+<county name="昭阳" code="530602">
+    <street name="凤凰街道" code="530602001" />
+    <street name="龙泉街道" code="530602002" />
+    <street name="太平街道" code="530602003" />
+    <street name="旧圃镇" code="530602101" />
+    <street name="永丰镇" code="530602102" />
+    <street name="北闸镇" code="530602103" />
+    <street name="盘河镇" code="530602104" />
+    <street name="靖安镇" code="530602105" />
+    <street name="洒渔镇" code="530602106" />
+    <street name="乐居镇" code="530602107" />
+    <street name="苏家院镇" code="530602108" />
+    <street name="大山包镇" code="530602109" />
+    <street name="炎山镇" code="530602110" />
+    <street name="布嘎回族乡" code="530602201" />
+    <street name="守望回族乡" code="530602202" />
+    <street name="小龙洞回族彝族乡" code="530602203" />
+    <street name="青岗岭回族彝族乡" code="530602206" />
+    <street name="苏甲乡" code="530602210" />
+    <street name="大寨子乡" code="530602212" />
+    <street name="田坝乡" code="530602214" />
+</county>
+<county name="鲁甸" code="530621">
+    <street name="文屏镇" code="530621101" />
+    <street name="水磨镇" code="530621102" />
+    <street name="龙头山镇" code="530621103" />
+    <street name="小寨镇" code="530621104" />
+    <street name="江底镇" code="530621105" />
+    <street name="火德红镇" code="530621106" />
+    <street name="龙树镇" code="530621107" />
+    <street name="新街镇" code="530621108" />
+    <street name="梭山镇" code="530621109" />
+    <street name="乐红镇" code="530621110" />
+    <street name="桃源回族乡" code="530621201" />
+    <street name="茨院回族乡" code="530621202" />
+</county>
+<county name="巧家" code="530622">
+    <street name="白鹤滩镇" code="530622101" />
+    <street name="大寨镇" code="530622102" />
+    <street name="小河镇" code="530622103" />
+    <street name="药山镇" code="530622104" />
+    <street name="马树镇" code="530622105" />
+    <street name="老店镇" code="530622106" />
+    <street name="茂租镇" code="530622107" />
+    <street name="东坪镇" code="530622108" />
+    <street name="新店镇" code="530622109" />
+    <street name="崇溪镇" code="530622110" />
+    <street name="金塘镇" code="530622111" />
+    <street name="蒙姑镇" code="530622112" />
+    <street name="红山乡" code="530622203" />
+    <street name="包谷垴乡" code="530622205" />
+    <street name="中寨乡" code="530622206" />
+    <street name="炉房乡" code="530622209" />
+</county>
+<county name="盐津" code="530623">
+    <street name="盐井镇" code="530623101" />
+    <street name="普洱镇" code="530623102" />
+    <street name="豆沙镇" code="530623103" />
+    <street name="中和镇" code="530623104" />
+    <street name="庙坝镇" code="530623105" />
+    <street name="柿子镇" code="530623106" />
+    <street name="兴隆乡" code="530623201" />
+    <street name="落雁乡" code="530623202" />
+    <street name="滩头乡" code="530623203" />
+    <street name="牛寨乡" code="530623204" />
+</county>
+<county name="大关" code="530624">
+    <street name="翠华镇" code="530624101" />
+    <street name="玉碗镇" code="530624102" />
+    <street name="吉利镇" code="530624103" />
+    <street name="天星镇" code="530624104" />
+    <street name="木杆镇" code="530624105" />
+    <street name="悦乐镇" code="530624106" />
+    <street name="寿山镇" code="530624107" />
+    <street name="高桥镇" code="530624108" />
+    <street name="上高桥回族彝族苗族乡" code="530624201" />
+</county>
+<county name="永善" code="530625">
+    <street name="溪洛渡镇" code="530625101" />
+    <street name="桧溪镇" code="530625102" />
+    <street name="黄华镇" code="530625103" />
+    <street name="茂林镇" code="530625104" />
+    <street name="大兴镇" code="530625105" />
+    <street name="莲峰镇" code="530625106" />
+    <street name="务基镇" code="530625107" />
+    <street name="码口镇" code="530625108" />
+    <street name="团结乡" code="530625201" />
+    <street name="细沙乡" code="530625202" />
+    <street name="青胜乡" code="530625203" />
+    <street name="马楠苗族彝族乡" code="530625205" />
+    <street name="水竹乡" code="530625206" />
+    <street name="墨翰乡" code="530625207" />
+    <street name="伍寨彝族苗族乡" code="530625208" />
+</county>
+<county name="绥江" code="530626">
+    <street name="中城镇" code="530626101" />
+    <street name="南岸镇" code="530626102" />
+    <street name="新滩镇" code="530626103" />
+    <street name="会仪镇" code="530626104" />
+    <street name="板栗镇" code="530626105" />
+</county>
+<county name="镇雄" code="530627">
+    <street name="乌峰镇" code="530627101" />
+    <street name="泼机镇" code="530627102" />
+    <street name="黑树镇" code="530627103" />
+    <street name="母享镇" code="530627104" />
+    <street name="大湾镇" code="530627105" />
+    <street name="以勒镇" code="530627106" />
+    <street name="赤水源镇" code="530627107" />
+    <street name="芒部镇" code="530627108" />
+    <street name="雨河镇" code="530627109" />
+    <street name="罗坎镇" code="530627110" />
+    <street name="牛场镇" code="530627111" />
+    <street name="五德镇" code="530627112" />
+    <street name="坡头镇" code="530627113" />
+    <street name="以古镇" code="530627114" />
+    <street name="场坝镇" code="530627115" />
+    <street name="塘房镇" code="530627116" />
+    <street name="中屯镇" code="530627117" />
+    <street name="木卓镇" code="530627118" />
+    <street name="盐源镇" code="530627119" />
+    <street name="碗厂镇" code="530627120" />
+    <street name="坪上镇" code="530627121" />
+    <street name="鱼洞乡" code="530627202" />
+    <street name="花朗乡" code="530627203" />
+    <street name="尖山乡" code="530627204" />
+    <street name="杉树乡" code="530627208" />
+    <street name="花山乡" code="530627209" />
+    <street name="果珠彝族乡" code="530627211" />
+    <street name="林口彝族苗族乡" code="530627212" />
+</county>
+<county name="彝良" code="530628">
+    <street name="角奎镇" code="530628101" />
+    <street name="洛泽河镇" code="530628102" />
+    <street name="牛街镇" code="530628103" />
+    <street name="海子镇" code="530628104" />
+    <street name="荞山镇" code="530628105" />
+    <street name="龙安镇" code="530628106" />
+    <street name="钟鸣镇" code="530628107" />
+    <street name="两河镇" code="530628108" />
+    <street name="小草坝镇" code="530628109" />
+    <street name="龙海镇" code="530628110" />
+    <street name="龙街苗族彝族乡" code="530628201" />
+    <street name="奎香苗族彝族乡" code="530628202" />
+    <street name="树林彝族苗族乡" code="530628203" />
+    <street name="柳溪苗族乡" code="530628211" />
+    <street name="洛旺乡" code="530628212" />
+</county>
+<county name="威信" code="530629">
+    <street name="扎西镇" code="530629101" />
+    <street name="旧城镇" code="530629102" />
+    <street name="罗布镇" code="530629103" />
+    <street name="林凤镇" code="530629104" />
+    <street name="长安镇" code="530629105" />
+    <street name="庙沟镇" code="530629106" />
+    <street name="水田镇" code="530629107" />
+    <street name="双河苗族彝族乡" code="530629201" />
+    <street name="高田乡" code="530629202" />
+    <street name="三桃乡" code="530629207" />
+</county>
+<county name="水富" code="530630">
+    <street name="云富街道" code="530630001" />
+    <street name="向家坝镇" code="530630101" />
+    <street name="太平镇" code="530630102" />
+    <street name="两碗镇" code="530630103" />
+</county>
+</city>
+</address>

@@ -1,0 +1,109 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var form_wizard_four      = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Form Vertical
+                                      span
+                                        | Wizard
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Forms   
+                                      li.breadcrumb-item Form Layout
+                                      li.breadcrumb-item.active Form Wizard 4
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Form Vertical Wizard
+                            .card-body
+                              // Smart Wizard start
+                              #wizard.wizard-4
+                                ul
+                                  li
+                                    a(href='#step-1')
+                                      | Step 1
+                                      small Registration
+                                  li
+                                    a(href='#step-2')
+                                      | Step 2
+                                      small Email
+                                  li
+                                    a(href='#step-3')
+                                      | Step 3
+                                      small Birth Date
+                                  li.pb-0
+                                    a(href='#step-4')
+                                      | Step 4
+                                      small Login Info
+                                #step-1
+                                  .col-sm-12.pl-0
+                                    .form-group
+                                      label(for='name') First Name
+                                      input#name.form-control(type='text', placeholder='Johan', required='required')
+                                    .form-group
+                                      label(for='lname') Last Name
+                                      input#lname.form-control(type='text', placeholder='Deo')
+                                    .form-group
+                                      label(for='contact') Contact No.
+                                      input#contact.form-control.digits(type='number', placeholder='123456789')
+                                #step-2
+                                  .col-sm-12.pl-0
+                                    .form-group.m-t-15
+                                      label(for='exampleFormControlInput1') Email address
+                                      input#exampleFormControlInput1.form-control(type='email', placeholder='name@example.com')
+                                    .form-group
+                                      label(for='exampleInputPassword1') Password
+                                      input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                                    .form-group
+                                      label(for='exampleInputPassword1') Confirm Password
+                                      input#exampleInputcPassword1.form-control(type='password', placeholder='Enter again')
+                                #step-3
+                                  .col-sm-12.pl-0
+                                    .form-group
+                                      label(for='exampleFormControlInput1') Birthday:
+                                      input.form-control.digits(type='date')
+                                    .form-group
+                                      label.control-label Age
+                                      input.form-control.digits(placeholder='Age', type='text')
+                                    .form-group
+                                      label.control-label Have Passport
+                                      input.form-control.digits(placeholder='Yes/No', type='text')
+                                #step-4
+                                  .col-sm-12.pl-0
+                                    .form-group
+                                      label.control-label Country
+                                      input.form-control.mt-1(type='text', placeholder='Country', required='required')
+                                    .form-group
+                                      label.control-label State
+                                      input.form-control.mt-1(type='text', placeholder='State', required='required')
+                                    .form-group
+                                      label.control-label City
+                                      input.form-control.mt-1(type='text', placeholder='City', required='required')
+                              // Smart Wizard Ends
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

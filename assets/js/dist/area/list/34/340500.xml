@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="马鞍山" code="340500">
+<county name="花山" code="340503">
+    <street name="沙塘路街道" code="340503001" />
+    <street name="解放路街道" code="340503002" />
+    <street name="湖东路街道" code="340503003" />
+    <street name="桃源路街道" code="340503004" />
+    <street name="霍里街道" code="340503005" />
+    <street name="金家庄街道" code="340503006" />
+    <street name="塘西街道" code="340503007" />
+    <street name="慈湖街道" code="340503008" />
+    <street name="江东街道" code="340503009" />
+    <street name="慈湖乡" code="340503200" />
+    <street name="金家庄工业园" code="340503401" />
+    <street name="花山经济开发区" code="340503402" />
+</county>
+<county name="雨山" code="340504">
+    <street name="平湖街道" code="340504001" />
+    <street name="雨山街道" code="340504002" />
+    <street name="安民街道" code="340504003" />
+    <street name="采石街道" code="340504004" />
+    <street name="向山镇" code="340504100" />
+    <street name="银塘镇" code="340504101" />
+    <street name="佳山乡" code="340504200" />
+    <street name="雨山经济开发区" code="340504401" />
+</county>
+<county name="博望" code="340506">
+    <street name="博望镇" code="340506100" />
+    <street name="丹阳镇" code="340506101" />
+    <street name="新市镇" code="340506102" />
+    <street name="博望高新技术产业开发区" code="340506400" />
+</county>
+<county name="当涂" code="340521">
+    <street name="姑孰镇" code="340521100" />
+    <street name="黄池镇" code="340521101" />
+    <street name="乌溪镇" code="340521102" />
+    <street name="石桥镇" code="340521103" />
+    <street name="塘南镇" code="340521104" />
+    <street name="护河镇" code="340521105" />
+    <street name="太白镇" code="340521106" />
+    <street name="年陡镇" code="340521110" />
+    <street name="大陇乡" code="340521200" />
+    <street name="江心乡" code="340521202" />
+    <street name="湖阳乡" code="340521203" />
+    <street name="当涂经济开发区" code="340521400" />
+    <street name="当涂青山河高新技术产业园区" code="340521401" />
+    <street name="当涂现代农业示范区" code="340521500" />
+</county>
+<county name="含山" code="341423">
+    <street name="环峰镇" code="340522100" />
+    <street name="运漕镇" code="340522101" />
+    <street name="铜闸镇" code="340522102" />
+    <street name="陶厂镇" code="340522103" />
+    <street name="林头镇" code="340522104" />
+    <street name="清溪镇" code="340522105" />
+    <street name="仙踪镇" code="340522106" />
+    <street name="昭关镇" code="340522107" />
+    <street name="安徽含山工业园区" code="340522400" />
+    <street name="安徽含山经济开发区" code="340522401" />
+    <street name="含山县褒禅山经济园区" code="340522402" />
+</county>
+<county name="和县" code="341424">
+    <street name="历阳镇" code="340523100" />
+    <street name="白桥镇" code="340523102" />
+    <street name="姥桥镇" code="340523103" />
+    <street name="功桥镇" code="340523104" />
+    <street name="西埠镇" code="340523105" />
+    <street name="香泉镇" code="340523106" />
+    <street name="乌江镇" code="340523107" />
+    <street name="善厚镇" code="340523108" />
+    <street name="石杨镇" code="340523109" />
+    <street name="安徽和县经济开发区" code="340523400" />
+    <street name="安徽精细化工产业有机合成基地" code="340523401" />
+    <street name="安徽和县台湾农民创业园" code="340523500" />
+</county>
+</city>
+</address>

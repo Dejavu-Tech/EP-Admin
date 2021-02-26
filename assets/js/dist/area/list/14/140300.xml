@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阳泉" code="140300">
+<county name="城区" code="140302">
+    <street name="上站街道" code="140302001" />
+    <street name="下站街道" code="140302002" />
+    <street name="北大街街道" code="140302003" />
+    <street name="南山路街道" code="140302004" />
+    <street name="义井街道" code="140302005" />
+    <street name="坡底街道" code="140302006" />
+</county>
+<county name="矿区" code="140303">
+    <street name="平潭街街道" code="140303001" />
+    <street name="蔡洼街道" code="140303003" />
+    <street name="赛鱼街道" code="140303004" />
+    <street name="沙坪街道" code="140303005" />
+    <street name="贵石沟街道" code="140303006" />
+    <street name="县区直属镇" code="140303198" />
+</county>
+<county name="郊区" code="140311">
+    <street name="荫营镇" code="140311100" />
+    <street name="河底镇" code="140311101" />
+    <street name="义井镇" code="140311102" />
+    <street name="平坦镇" code="140311103" />
+    <street name="西南舁乡" code="140311200" />
+    <street name="杨家庄乡" code="140311201" />
+    <street name="李家庄乡" code="140311202" />
+    <street name="旧街乡" code="140311203" />
+    <street name="开发区" code="140311450" />
+</county>
+<county name="平定" code="140321">
+    <street name="冠山镇" code="140321100" />
+    <street name="冶西镇" code="140321101" />
+    <street name="锁簧镇" code="140321102" />
+    <street name="张庄镇" code="140321103" />
+    <street name="东回镇" code="140321104" />
+    <street name="柏井镇" code="140321105" />
+    <street name="娘子关镇" code="140321106" />
+    <street name="巨城镇" code="140321107" />
+    <street name="石门口乡" code="140321200" />
+    <street name="岔口乡" code="140321201" />
+</county>
+<county name="盂县" code="140322">
+    <street name="秀水镇" code="140322100" />
+    <street name="孙家庄镇" code="140322101" />
+    <street name="路家村镇" code="140322102" />
+    <street name="南娄镇" code="140322103" />
+    <street name="牛村镇" code="140322104" />
+    <street name="苌池镇" code="140322105" />
+    <street name="上社镇" code="140322106" />
+    <street name="西烟镇" code="140322107" />
+    <street name="仙人乡" code="140322200" />
+    <street name="北下庄乡" code="140322201" />
+    <street name="下社乡" code="140322202" />
+    <street name="梁家寨乡" code="140322203" />
+    <street name="西潘乡" code="140322204" />
+    <street name="东梁乡" code="140322205" />
+</county>
+</city>
+</address>

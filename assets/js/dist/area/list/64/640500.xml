@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="中卫" code="640500">
+<county name="沙坡头" code="640502">
+    <street name="滨河镇" code="640502100" />
+    <street name="文昌镇" code="640502101" />
+    <street name="东园镇" code="640502102" />
+    <street name="柔远镇" code="640502103" />
+    <street name="镇罗镇" code="640502104" />
+    <street name="宣和镇" code="640502105" />
+    <street name="永康镇" code="640502106" />
+    <street name="常乐镇" code="640502107" />
+    <street name="迎水桥镇" code="640502108" />
+    <street name="兴仁镇" code="640502109" />
+    <street name="香山乡" code="640502200" />
+    <street name="蒿川乡" code="640502201" />
+    <street name="中卫山羊选育场" code="640502400" />
+    <street name="中卫工业园区" code="640502401" />
+</county>
+<county name="中宁" code="640521">
+    <street name="宁安镇" code="640521100" />
+    <street name="鸣沙镇" code="640521101" />
+    <street name="石空镇" code="640521102" />
+    <street name="新堡镇" code="640521103" />
+    <street name="恩和镇" code="640521104" />
+    <street name="大战场镇" code="640521105" />
+    <street name="舟塔乡" code="640521200" />
+    <street name="白马乡" code="640521201" />
+    <street name="余丁乡" code="640521202" />
+    <street name="喊叫水乡" code="640521204" />
+    <street name="徐套乡" code="640521205" />
+    <street name="长山头农场" code="640521400" />
+    <street name="渠口农场" code="640521401" />
+</county>
+<county name="海原" code="640522">
+    <street name="海城镇" code="640522100" />
+    <street name="李旺镇" code="640522101" />
+    <street name="西安镇" code="640522103" />
+    <street name="三河镇" code="640522104" />
+    <street name="七营镇" code="640522105" />
+    <street name="史店乡" code="640522200" />
+    <street name="树台乡" code="640522201" />
+    <street name="关桥乡" code="640522202" />
+    <street name="高崖乡" code="640522206" />
+    <street name="郑旗乡" code="640522207" />
+    <street name="贾塘乡" code="640522208" />
+    <street name="曹洼乡" code="640522209" />
+    <street name="九彩乡" code="640522210" />
+    <street name="李俊乡" code="640522211" />
+    <street name="红羊乡" code="640522212" />
+    <street name="关庄乡" code="640522213" />
+    <street name="甘城乡" code="640522214" />
+    <street name="种羊场" code="640522400" />
+    <street name="涵养林总场" code="640522401" />
+    <street name="老城管理办公室" code="640522402" />
+    <street name="海原县工业物流园区" code="640522406" />
+</county>
+</city>
+</address>

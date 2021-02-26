@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="遵义" code="520300">
+<county name="红花岗" code="520302">
+    <street name="老城街道" code="520302001" />
+    <street name="万里路街道" code="520302002" />
+    <street name="中华路街道" code="520302003" />
+    <street name="南门关街道" code="520302004" />
+    <street name="延安路街道" code="520302005" />
+    <street name="舟水桥街道" code="520302006" />
+    <street name="中山路街道" code="520302007" />
+    <street name="北京路街道" code="520302008" />
+    <street name="长征镇" code="520302100" />
+    <street name="巷口镇" code="520302101" />
+    <street name="南关镇" code="520302102" />
+    <street name="忠庄镇" code="520302103" />
+    <street name="海龙镇" code="520302104" />
+    <street name="深溪镇" code="520302105" />
+    <street name="金鼎山镇" code="520302106" />
+    <street name="新蒲镇" code="520302107" />
+    <street name="虾子镇" code="520321106" />
+    <street name="三渡镇" code="520321107" />
+    <street name="新舟镇" code="520321108" />
+    <street name="永乐镇" code="520321109" />
+    <street name="喇叭镇" code="520321111" />
+</county>
+<county name="汇川" code="520303">
+    <street name="上海路街道" code="520303001" />
+    <street name="洗马路街道" code="520303002" />
+    <street name="大连路街道" code="520303003" />
+    <street name="高桥镇" code="520303100" />
+    <street name="董公寺镇" code="520303101" />
+    <street name="团泽镇" code="520303102" />
+    <street name="高坪镇" code="520303103" />
+    <street name="板桥镇" code="520303104" />
+    <street name="泗渡镇" code="520303105" />
+    <street name="沙湾镇" code="520321124" />
+    <street name="松林镇" code="520321125" />
+    <street name="毛石镇" code="520321126" />
+    <street name="山盆镇" code="520321127" />
+    <street name="芝麻镇" code="520321128" />
+</county>
+<county name="遵义" code="520321">
+    <street name="南白镇" code="520321100" />
+    <street name="龙坑镇" code="520321101" />
+    <street name="三岔镇" code="520321102" />
+    <street name="苟江镇" code="520321103" />
+    <street name="三合镇" code="520321104" />
+    <street name="乌江镇" code="520321105" />
+    <street name="龙坪镇" code="520321110" />
+    <street name="团溪镇" code="520321112" />
+    <street name="铁厂镇" code="520321113" />
+    <street name="西坪镇" code="520321114" />
+    <street name="尚嵇镇" code="520321115" />
+    <street name="茅栗镇" code="520321116" />
+    <street name="新民镇" code="520321117" />
+    <street name="鸭溪镇" code="520321118" />
+    <street name="石板镇" code="520321119" />
+    <street name="乐山镇" code="520321120" />
+    <street name="枫香镇" code="520321121" />
+    <street name="泮水镇" code="520321122" />
+    <street name="马蹄镇" code="520321123" />
+    <street name="平正仡佬族乡" code="520321200" />
+    <street name="洪关苗族乡" code="520321201" />
+</county>
+<county name="桐梓" code="520322">
+    <street name="娄山关镇" code="520322100" />
+    <street name="楚米镇" code="520322101" />
+    <street name="新站镇" code="520322102" />
+    <street name="松坎镇" code="520322103" />
+    <street name="高桥镇" code="520322104" />
+    <street name="水坝塘镇" code="520322105" />
+    <street name="官仓镇" code="520322106" />
+    <street name="花秋镇" code="520322107" />
+    <street name="羊磴镇" code="520322108" />
+    <street name="九坝镇" code="520322109" />
+    <street name="大河镇" code="520322110" />
+    <street name="夜郎镇" code="520322111" />
+    <street name="木瓜镇" code="520322112" />
+    <street name="坡渡镇" code="520322113" />
+    <street name="燎原镇" code="520322114" />
+    <street name="狮溪镇" code="520322115" />
+    <street name="茅石镇" code="520322116" />
+    <street name="尧龙山镇" code="520322117" />
+    <street name="风水乡" code="520322201" />
+    <street name="容光乡" code="520322202" />
+    <street name="小水乡" code="520322203" />
+    <street name="黄莲乡" code="520322205" />
+    <street name="芭蕉乡" code="520322206" />
+    <street name="马鬃苗族乡" code="520322207" />
+</county>
+<county name="绥阳" code="520323">
+    <street name="洋川镇" code="520323100" />
+    <street name="郑场镇" code="520323101" />
+    <street name="旺草镇" code="520323102" />
+    <street name="蒲场镇" code="520323103" />
+    <street name="风华镇" code="520323104" />
+    <street name="茅垭镇" code="520323105" />
+    <street name="枧坝镇" code="520323106" />
+    <street name="宽阔镇" code="520323107" />
+    <street name="黄杨镇" code="520323108" />
+    <street name="青杠塘镇" code="520323109" />
+    <street name="太白镇" code="520323110" />
+    <street name="温泉镇" code="520323111" />
+    <street name="大路槽乡" code="520323200" />
+    <street name="小关乡" code="520323201" />
+    <street name="坪乐乡" code="520323202" />
+</county>
+<county name="正安" code="520324">
+    <street name="凤仪镇" code="520324100" />
+    <street name="瑞溪镇" code="520324101" />
+    <street name="和溪镇" code="520324102" />
+    <street name="安场镇" code="520324103" />
+    <street name="土坪镇" code="520324104" />
+    <street name="流渡镇" code="520324105" />
+    <street name="格林镇" code="520324106" />
+    <street name="新州镇" code="520324107" />
+    <street name="庙塘镇" code="520324108" />
+    <street name="小雅镇" code="520324109" />
+    <street name="中观镇" code="520324110" />
+    <street name="碧峰乡" code="520324200" />
+    <street name="乐俭乡" code="520324201" />
+    <street name="谢坝仡佬族苗族乡" code="520324202" />
+    <street name="市坪苗族仡佬族乡" code="520324203" />
+    <street name="俭坪乡" code="520324204" />
+    <street name="杨兴乡" code="520324205" />
+    <street name="桴?乡" code="520324206" />
+    <street name="班竹乡" code="520324207" />
+</county>
+<county name="道真" code="520325">
+    <street name="玉溪镇" code="520325100" />
+    <street name="三江镇" code="520325101" />
+    <street name="隆兴镇" code="520325102" />
+    <street name="旧城镇" code="520325103" />
+    <street name="忠信镇" code="520325104" />
+    <street name="洛龙镇" code="520325105" />
+    <street name="阳溪镇" code="520325106" />
+    <street name="三桥镇" code="520325107" />
+    <street name="大磏镇" code="520325108" />
+    <street name="平模镇" code="520325109" />
+    <street name="上坝土家族乡" code="520325200" />
+    <street name="棕坪乡" code="520325201" />
+    <street name="桃源乡" code="520325202" />
+    <street name="河口乡" code="520325203" />
+</county>
+<county name="务川" code="520326">
+    <street name="都濡镇" code="520326100" />
+    <street name="丰乐镇" code="520326101" />
+    <street name="黄都镇" code="520326102" />
+    <street name="涪洋镇" code="520326103" />
+    <street name="镇南镇" code="520326104" />
+    <street name="砚山镇" code="520326105" />
+    <street name="浞水镇" code="520326106" />
+    <street name="茅天镇" code="520326107" />
+    <street name="柏村镇" code="520326108" />
+    <street name="大坪镇" code="520326109" />
+    <street name="泥高乡" code="520326200" />
+    <street name="分水乡" code="520326201" />
+    <street name="蕉坝乡" code="520326202" />
+    <street name="红丝乡" code="520326203" />
+    <street name="石朝乡" code="520326204" />
+</county>
+<county name="凤冈" code="520327">
+    <street name="龙泉镇" code="520327100" />
+    <street name="进化镇" code="520327101" />
+    <street name="琊川镇" code="520327102" />
+    <street name="蜂岩镇" code="520327103" />
+    <street name="永和镇" code="520327104" />
+    <street name="花坪镇" code="520327105" />
+    <street name="绥阳镇" code="520327106" />
+    <street name="土溪镇" code="520327107" />
+    <street name="永安镇" code="520327108" />
+    <street name="何坝乡" code="520327200" />
+    <street name="天桥乡" code="520327201" />
+    <street name="王寨乡" code="520327202" />
+    <street name="石径乡" code="520327203" />
+    <street name="新建乡" code="520327204" />
+</county>
+<county name="湄潭" code="520328">
+    <street name="茶城街道" code="520328001" />
+    <street name="湄江街道" code="520328002" />
+    <street name="桃花江街道" code="520328003" />
+    <street name="永兴镇" code="520328101" />
+    <street name="复兴镇" code="520328102" />
+    <street name="马山镇" code="520328103" />
+    <street name="鱼泉镇" code="520328104" />
+    <street name="黄家坝镇" code="520328105" />
+    <street name="高台镇" code="520328106" />
+    <street name="茅坪镇" code="520328107" />
+    <street name="兴隆镇" code="520328108" />
+    <street name="新南镇" code="520328109" />
+    <street name="石莲镇" code="520328110" />
+    <street name="西河乡" code="520328200" />
+    <street name="洗马乡" code="520328201" />
+    <street name="抄乐乡" code="520328204" />
+    <street name="天城乡" code="520328205" />
+</county>
+<county name="余庆" code="520329">
+    <street name="白泥镇" code="520329100" />
+    <street name="小腮镇" code="520329101" />
+    <street name="龙溪镇" code="520329102" />
+    <street name="构皮滩镇" code="520329103" />
+    <street name="大乌江镇" code="520329104" />
+    <street name="敖溪镇" code="520329105" />
+    <street name="龙家镇" code="520329106" />
+    <street name="松烟镇" code="520329107" />
+    <street name="关兴镇" code="520329108" />
+    <street name="花山苗族乡" code="520329200" />
+</county>
+<county name="习水" code="520330">
+    <street name="东皇镇" code="520330100" />
+    <street name="土城镇" code="520330101" />
+    <street name="同民镇" code="520330102" />
+    <street name="醒民镇" code="520330103" />
+    <street name="隆兴镇" code="520330104" />
+    <street name="习酒镇" code="520330105" />
+    <street name="回龙镇" code="520330106" />
+    <street name="桑木镇" code="520330107" />
+    <street name="永安镇" code="520330108" />
+    <street name="良村镇" code="520330109" />
+    <street name="温水镇" code="520330110" />
+    <street name="仙源镇" code="520330111" />
+    <street name="官店镇" code="520330112" />
+    <street name="寨坝镇" code="520330113" />
+    <street name="民化乡" code="520330200" />
+    <street name="二郎乡" code="520330201" />
+    <street name="二里乡" code="520330202" />
+    <street name="三岔河乡" code="520330203" />
+    <street name="大坡乡" code="520330204" />
+    <street name="双龙乡" code="520330205" />
+    <street name="桃林乡" code="520330206" />
+    <street name="坭坝乡" code="520330207" />
+    <street name="程寨乡" code="520330208" />
+</county>
+<county name="赤水" code="520381">
+    <street name="市中街道" code="520381001" />
+    <street name="文华街道" code="520381002" />
+    <street name="金华街道" code="520381003" />
+    <street name="天台镇" code="520381100" />
+    <street name="复兴镇" code="520381101" />
+    <street name="大同镇" code="520381102" />
+    <street name="旺隆镇" code="520381103" />
+    <street name="葫市镇" code="520381104" />
+    <street name="元厚镇" code="520381105" />
+    <street name="官渡镇" code="520381106" />
+    <street name="长期镇" code="520381107" />
+    <street name="长沙镇" code="520381108" />
+    <street name="两河口乡" code="520381200" />
+    <street name="丙安乡" code="520381201" />
+    <street name="宝源乡" code="520381202" />
+    <street name="石堡乡" code="520381203" />
+    <street name="白云乡" code="520381204" />
+</county>
+<county name="仁怀" code="520382">
+    <street name="盐津街道" code="520382001" />
+    <street name="中枢街道" code="520382002" />
+    <street name="苍龙街道" code="520382003" />
+    <street name="茅台镇" code="520382100" />
+    <street name="坛厂镇" code="520382101" />
+    <street name="长岗镇" code="520382102" />
+    <street name="鲁班镇" code="520382103" />
+    <street name="五马镇" code="520382104" />
+    <street name="茅坝镇" code="520382105" />
+    <street name="九仓镇" code="520382106" />
+    <street name="喜头镇" code="520382107" />
+    <street name="大坝镇" code="520382108" />
+    <street name="三合镇" code="520382109" />
+    <street name="合马镇" code="520382110" />
+    <street name="二合镇" code="520382111" />
+    <street name="龙井乡" code="520382200" />
+    <street name="后山苗族布依族乡" code="520382201" />
+    <street name="学孔乡" code="520382202" />
+    <street name="高大坪乡" code="520382203" />
+    <street name="火石岗乡" code="520382204" />
+    <street name="沙滩乡" code="520382205" />
+</county>
+</city>
+</address>

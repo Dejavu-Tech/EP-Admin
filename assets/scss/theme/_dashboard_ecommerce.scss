@@ -1,0 +1,461 @@
+/**=====================
+    69. Dashboard ecommerce css starts
+==========================**/
+.ecommerce-chart-card{
+  .card-body{
+    padding: 30px 55px;
+  }
+}
+.ecommerce-small-chart {
+  align-items: center;
+  display: flex;
+  .small-bar {
+    position: relative;
+    .flot-chart-container {
+      height: 80px;
+      width: 80px;
+      .chartist-tooltip {
+        position: absolute;
+        .chartist-tooltip-value {
+          font-size: 10px;
+          padding: 5px;
+          color: $white;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      svg {
+        position: absolute;
+        bottom: 14px;
+        width: 100%;
+        height: 95%;
+        left: -6px;
+      }
+    }
+    .small-chart1 {
+      svg {
+        .ct-series-a {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: $white;
+          }
+        }
+        .ct-series-b {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: rgba($white, 0.1);
+          }
+        }
+      }
+    }
+    .small-chart2 {
+      svg {
+        .ct-series-a {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke:  $white;
+          }
+        }
+        .ct-series-b {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: rgba($white, 0.1);
+          }
+        }
+      }
+    }
+    .small-chart3 {
+      svg {
+        .ct-series-a {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: $white;
+          }
+        }
+        .ct-series-b {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: rgba($white, 0.1);
+          }
+        }
+      }
+    }
+    .small-chart4 {
+      svg {
+        .ct-series-a {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: $white;
+          }
+        }
+        .ct-series-b {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: rgba($white, 0.1);
+          }
+        }
+      }
+    }
+  }
+  .media-body {
+    h6 {
+      color: $white;
+    }
+    h4 {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+}
+.monthly-overview{
+  .card-body{
+    position: relative;
+  }
+  g{
+    text{
+      &:nth-child(1){
+        opacity: 0.5;
+      }
+    }
+  }
+  .rounds-decore{
+    left: 50%;
+    margin-right: 80%;
+    transform: translate(50%, 0);
+    li{
+      animation-fill-mode: both;
+      position: absolute;
+      top: 23px;
+      left: 0;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      border: 2px solid $white;
+      animation: ball-scale-ripple-multiple 1.5s 1s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);      
+      &:nth-child(1){
+        animation-delay: -0.8s;
+      }&:nth-child(2){
+        animation-delay: -0.6s;
+      }&:nth-child(3){
+        animation-delay: -0.4s;
+      }&:nth-child(4){
+        animation-delay: -0.2s;
+      }
+    }
+  }
+
+}
+@keyframes ball-scale-ripple-multiple {
+  0% {
+    transform: scale(0.1);
+    opacity: 1; }
+    50% {
+      transform: scale(1);
+      opacity: 0.15; }
+      100% {
+        opacity: 0.0; } 
+      }
+      .crypto-revenue {
+        .card-body{
+          padding-bottom: 10px;
+        }
+        .apexcharts-tooltip.light {
+          .apexcharts-tooltip-title{
+            display: none;
+          }
+        }
+        .apexcharts-tooltip.light {    
+          border: none !important;
+          box-shadow: none; 
+          background-color: transparent !important;
+        }
+        .apexcharts-tooltip-series-group.active {
+          .apexcharts-tooltip-y-group{
+            font-size: 110px;
+            color: $secondary-color;
+            opacity: 0.1;
+            .apexcharts-tooltip-text-label{
+              display: none;
+            }
+          }
+          .apexcharts-tooltip-marker{
+            display: none;            
+          }
+        }
+        .apexcharts-xaxistooltip-bottom{
+          &:before{
+            border-bottom-color: $secondary-color;
+          }
+          &:after{
+            border-bottom-color: lighten($secondary-color, 23%);
+          }
+        }
+        .apexcharts-xaxistooltip {
+         color: $secondary-color;
+         background: lighten($secondary-color, 23%);
+         border-color: $secondary-color;
+       }
+       .card-header {
+        justify-content: space-between;
+        border-bottom: none;
+        h5{
+          .badge{
+            margin-left: 35px;
+            background-color: rgba($secondary-color, 0.1);
+            color: $secondary-color;
+            padding: 7px 20px;
+          }
+        }
+        .header-right {
+          h6 {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .selling-product-table {
+      table {
+        tbody {
+          tr{
+            td{
+              vertical-align: middle;
+              border-bottom: 1px solid $horizontal-border-color;
+              &:nth-child(5) {
+                color: $light-font;
+              }
+              img {
+                filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.18));
+              }
+              .badge-secondary {
+                box-shadow: -0.5px 4.33px 16px 0px rgba($secondary-color, 0.25);
+              }
+              &:last-child {
+                color: rgba( 27, 49, 85, 0.6 );
+                font-weight: $table-footer-font-weight;
+              }
+              .align-middle {
+                img {
+                  filter: none;
+                }
+                h6 {
+                  padding-top: 6px;
+                  margin-bottom: 0;
+                }
+              }
+            }
+            &:last-child {
+              td {
+                border-bottom: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .watch{
+      h5{
+        color: $white;
+        font-weight: 700;
+      }
+      p{
+        font-weight: 600;
+      }
+    }
+    .p-watch{
+      text-align: center;
+      position: relative;
+      img{
+       width: 170px;
+       margin: 20px 0;
+     }
+   }
+   .customers{
+    h5{
+      color: $white;
+      font-weight: 700;
+    }
+  }
+  .apexcharts-radialbar{
+    #apexcharts-radialbarTrack-0{
+      stroke: rgba($primary-color,1);
+    }
+  }
+  .default-chartist-container {
+    margin-bottom: 45px;
+    &.ct-10 {
+      height: 270px;
+      svg {
+        overflow: unset;
+        filter: drop-shadow(2px -3px 9px rgba($secondary-color, 0.45));
+        .ct-series-a {
+          .ct-bar {
+            stroke: url(#gradient) !important;
+          }
+        }
+        .ct-labels {
+          foreignObject {
+            .ct-label {
+              line-height: 0;
+              color: rgba($secondary-color, 0.5);
+              margin-top: 30px;
+              border-radius: 25px;
+              position: absolute;
+              bottom: -30px;
+              width: 35px !important;
+              height: 35px !important;
+              left: 18px;
+              box-shadow: none;
+              transition: all 0.3s ease;
+              padding: 15px 0;
+              &:hover{
+                color: $primary-color;
+                background-color: $light-color;
+                transition: all 0.3s ease;
+              }
+            }
+            &:last-child {
+              .ct-label {
+                color: darken($secondary-color, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.ct-11 {
+      height: 270px;
+      svg {
+        overflow: unset;
+        filter: drop-shadow(2px -3px 9px rgba(21, 141, 247, 0.3));
+        .ct-series-a {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: #158df7;
+          }
+        }
+        .ct-label {
+          line-height: 0;
+          color: rgba(21, 141, 247, 0.5);
+          margin-top: 30px;
+          border-radius: 25px;
+          position: absolute;
+          bottom: -30px;
+          width: 35px !important;
+          height: 35px !important;
+          left: 18px;
+          box-shadow: none;
+          transition: all 0.3s ease;
+          padding: 15px;
+          &:hover{
+            color: $primary-color;
+            background-color: $light-color;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+  .month-overview{
+    h2{
+      font-weight: 800;
+      color: $secondary-color;
+      position: absolute;
+    }
+    .card-header{
+      border-bottom: none !important;
+    }
+    .ct-10{
+      margin-bottom: 0;
+    }
+    .ct-11{
+      margin-bottom: 0;
+    }
+
+    span{
+      &.badge{
+        margin-top: 27px !important;
+        margin-left: 100px;
+        display: inline-block !important;
+        background-color: rgba($secondary-color, 0.1);
+        color: $secondary-color;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1366px) {
+    .sale-chart{
+      position: absolute;
+      right: 60px;
+    }
+  }
+  @media screen and (max-width: 1199px)  {
+    .ecommerce-chart-card{
+      .card-body{
+        padding: 30px 20px;
+      }
+    }
+    .selling-product {
+      table {
+        tr {
+          td {
+            &:nth-child(2) {
+              min-width: 300px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .sale-chart{
+      position: absolute;
+      right: 40px;
+    }
+  }
+  @media screen and (max-width: 767px){
+  }
+  @media screen and (max-width: 600px){
+    .activity-table{
+      table{
+        td{
+          h5{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 575px){
+    .sale-chart{
+      position: absolute;
+      right: 32px;
+    }
+    .card{
+      .card-header{
+        h5{
+          font-size: 17px;
+        }
+      }
+    }
+    .crypto-revenue {
+     .card-header {
+      display: block !important;
+      .text-right {
+        text-align: left !important;
+        float: none;
+        margin-top: 20px;
+      }
+      h5  {
+        .badge {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .month-overview {
+    .card-header {
+      display: block !important;
+      .text-right {
+        text-align: left !important;
+        float: none;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+/**=====================
+     69. Dashboard ecommerce  CSS Ends
+==========================**/

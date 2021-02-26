@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="广州" code="440100">
+<county name="荔湾" code="440103">
+    <street name="沙面街道" code="440103001" />
+    <street name="岭南街道" code="440103002" />
+    <street name="华林街道" code="440103003" />
+    <street name="多宝街道" code="440103004" />
+    <street name="昌华街道" code="440103005" />
+    <street name="逢源街道" code="440103006" />
+    <street name="龙津街道" code="440103007" />
+    <street name="金花街道" code="440103008" />
+    <street name="彩虹街道" code="440103009" />
+    <street name="南源街道" code="440103010" />
+    <street name="西村街道" code="440103011" />
+    <street name="站前街道" code="440103012" />
+    <street name="桥中街道" code="440103013" />
+    <street name="白鹤洞街道" code="440103014" />
+    <street name="冲口街道" code="440103015" />
+    <street name="花地街道" code="440103016" />
+    <street name="石围塘街道" code="440103017" />
+    <street name="茶滘街道" code="440103018" />
+    <street name="东漖街道" code="440103019" />
+    <street name="海龙街道" code="440103020" />
+    <street name="东沙街道" code="440103021" />
+    <street name="中南街道" code="440103022" />
+</county>
+<county name="越秀" code="440104">
+    <street name="洪桥街道" code="440104001" />
+    <street name="北京街道" code="440104003" />
+    <street name="六榕街道" code="440104004" />
+    <street name="流花街道" code="440104005" />
+    <street name="光塔街道" code="440104007" />
+    <street name="人民街道" code="440104010" />
+    <street name="东山街道" code="440104011" />
+    <street name="农林街道" code="440104012" />
+    <street name="梅花村街道" code="440104013" />
+    <street name="黄花岗街道" code="440104014" />
+    <street name="华乐街道" code="440104015" />
+    <street name="建设街道" code="440104016" />
+    <street name="大塘街道" code="440104017" />
+    <street name="珠光街道" code="440104018" />
+    <street name="大东街道" code="440104019" />
+    <street name="白云街道" code="440104020" />
+    <street name="登峰街道" code="440104021" />
+    <street name="矿泉街道" code="440104022" />
+</county>
+<county name="海珠" code="440105">
+    <street name="赤岗街道" code="440105001" />
+    <street name="新港街道" code="440105002" />
+    <street name="昌岗街道" code="440105003" />
+    <street name="江南中街道" code="440105004" />
+    <street name="滨江街道" code="440105005" />
+    <street name="素社街道" code="440105006" />
+    <street name="海幢街道" code="440105007" />
+    <street name="南华西街道" code="440105008" />
+    <street name="龙凤街道" code="440105009" />
+    <street name="沙园街道" code="440105010" />
+    <street name="南石头街道" code="440105011" />
+    <street name="凤阳街道" code="440105012" />
+    <street name="瑞宝街道" code="440105013" />
+    <street name="江海街道" code="440105014" />
+    <street name="琶洲街道" code="440105015" />
+    <street name="南洲街道" code="440105016" />
+    <street name="华洲街道" code="440105017" />
+    <street name="官洲街道" code="440105018" />
+</county>
+<county name="天河" code="440106">
+    <street name="五山街道" code="440106001" />
+    <street name="员村街道" code="440106002" />
+    <street name="车陂街道" code="440106003" />
+    <street name="沙河街道" code="440106004" />
+    <street name="石牌街道" code="440106006" />
+    <street name="沙东街道" code="440106007" />
+    <street name="天河南街道" code="440106008" />
+    <street name="林和街道" code="440106009" />
+    <street name="兴华街道" code="440106010" />
+    <street name="棠下街道" code="440106011" />
+    <street name="天园街道" code="440106012" />
+    <street name="猎德街道" code="440106013" />
+    <street name="冼村街道" code="440106014" />
+    <street name="元岗街道" code="440106015" />
+    <street name="黄村街道" code="440106016" />
+    <street name="长兴街道" code="440106017" />
+    <street name="龙洞街道" code="440106018" />
+    <street name="凤凰街道" code="440106019" />
+    <street name="前进街道" code="440106020" />
+    <street name="珠吉街道" code="440106021" />
+    <street name="新塘街道" code="440106022" />
+</county>
+<county name="白云" code="440111">
+    <street name="三元里街道" code="440111002" />
+    <street name="松洲街道" code="440111003" />
+    <street name="景泰街道" code="440111004" />
+    <street name="同德街道" code="440111005" />
+    <street name="黄石街道" code="440111006" />
+    <street name="棠景街道" code="440111007" />
+    <street name="新市街道" code="440111008" />
+    <street name="同和街道" code="440111009" />
+    <street name="京溪街道" code="440111010" />
+    <street name="永平街道" code="440111011" />
+    <street name="嘉禾街道" code="440111012" />
+    <street name="均禾街道" code="440111013" />
+    <street name="石井街道" code="440111014" />
+    <street name="金沙街道" code="440111015" />
+    <street name="人和镇" code="440111103" />
+    <street name="太和镇" code="440111107" />
+    <street name="钟落潭镇" code="440111108" />
+    <street name="江高镇" code="440111113" />
+</county>
+<county name="黄埔" code="440112">
+    <street name="黄埔街道" code="440112001" />
+    <street name="红山街道" code="440112002" />
+    <street name="鱼珠街道" code="440112003" />
+    <street name="大沙街道" code="440112005" />
+    <street name="文冲街道" code="440112006" />
+    <street name="穗东街道" code="440112007" />
+    <street name="南岗街道" code="440112008" />
+    <street name="荔联街道" code="440112009" />
+    <street name="长洲街道" code="440112010" />
+</county>
+<county name="番禺" code="440113">
+    <street name="市桥街道" code="440113007" />
+    <street name="沙头街道" code="440113008" />
+    <street name="东环街道" code="440113009" />
+    <street name="桥南街道" code="440113010" />
+    <street name="小谷围街道" code="440113011" />
+    <street name="大石街道" code="440113012" />
+    <street name="洛浦街道" code="440113013" />
+    <street name="石壁街道" code="440113014" />
+    <street name="钟村街道" code="440113015" />
+    <street name="大龙街道" code="440113016" />
+    <street name="南村镇" code="440113102" />
+    <street name="新造镇" code="440113103" />
+    <street name="化龙镇" code="440113104" />
+    <street name="石楼镇" code="440113105" />
+    <street name="沙湾镇" code="440113118" />
+    <street name="石基镇" code="440113120" />
+</county>
+<county name="花都" code="440114">
+    <street name="新华街道" code="440114001" />
+    <street name="梯面镇" code="440114103" />
+    <street name="花山镇" code="440114104" />
+    <street name="花东镇" code="440114105" />
+    <street name="炭步镇" code="440114107" />
+    <street name="赤坭镇" code="440114108" />
+    <street name="狮岭镇" code="440114109" />
+    <street name="雅瑶镇" code="440114111" />
+</county>
+<county name="南沙" code="440115">
+    <street name="南沙街道" code="440115001" />
+    <street name="珠江街道" code="440115002" />
+    <street name="龙穴街道" code="440115003" />
+    <street name="万顷沙镇" code="440115100" />
+    <street name="横沥镇" code="440115101" />
+    <street name="黄阁镇" code="440115102" />
+    <street name="东涌镇" code="440115103" />
+    <street name="大岗镇" code="440115104" />
+    <street name="榄核镇" code="440115105" />
+</county>
+<county name="萝岗" code="440116">
+    <street name="夏港街道" code="440116001" />
+    <street name="萝岗街道" code="440116002" />
+    <street name="东区街道" code="440116003" />
+    <street name="联和街道" code="440116004" />
+    <street name="永和街道" code="440116005" />
+    <street name="九龙镇" code="440116101" />
+</county>
+<county name="增城" code="440183">
+    <street name="荔城街道" code="440183001" />
+    <street name="增江街道" code="440183002" />
+    <street name="朱村街道" code="440183003" />
+    <street name="永宁街道" code="440183004" />
+    <street name="新塘镇" code="440183101" />
+    <street name="石滩镇" code="440183102" />
+    <street name="中新镇" code="440183103" />
+    <street name="正果镇" code="440183104" />
+    <street name="派潭镇" code="440183105" />
+    <street name="小楼镇" code="440183106" />
+    <street name="仙村镇" code="440183107" />
+</county>
+<county name="从化" code="440184">
+    <street name="街口街道" code="440184001" />
+    <street name="江埔街道" code="440184002" />
+    <street name="城郊街道" code="440184003" />
+    <street name="温泉镇" code="440184103" />
+    <street name="良口镇" code="440184104" />
+    <street name="吕田镇" code="440184107" />
+    <street name="太平镇" code="440184111" />
+    <street name="鳌头镇" code="440184113" />
+    <street name="流溪河林场" code="440184402" />
+    <street name="黄龙带水库管理处" code="440184404" />
+    <street name="大岭山林场" code="440184405" />
+</county>
+</city>
+</address>

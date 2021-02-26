@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="白沙" code="469030">
+<county name="白沙" code="469030001">
+    <street name="牙叉镇" code="469025100" />
+    <street name="七坊镇" code="469025101" />
+    <street name="邦溪镇" code="469025102" />
+    <street name="打安镇" code="469025103" />
+    <street name="细水乡" code="469025200" />
+    <street name="元门乡" code="469025201" />
+    <street name="南开乡" code="469025202" />
+    <street name="阜龙乡" code="469025203" />
+    <street name="青松乡" code="469025204" />
+    <street name="金波乡" code="469025205" />
+    <street name="荣邦乡" code="469025206" />
+    <street name="国营白沙农场" code="469025401" />
+    <street name="国营龙江农场" code="469025404" />
+    <street name="国营邦溪农场" code="469025408" />
+</county>
+</city>
+</address>

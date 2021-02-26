@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="肇庆" code="441200">
+<county name="端州" code="441202">
+    <street name="城东街道" code="441202001" />
+    <street name="城西街道" code="441202003" />
+    <street name="黄岗街道" code="441202005" />
+    <street name="睦岗街道" code="441202006" />
+</county>
+<county name="鼎湖" code="441203">
+    <street name="坑口街道" code="441203001" />
+    <street name="桂城街道" code="441203002" />
+    <street name="广利街道" code="441203003" />
+    <street name="永安镇" code="441203101" />
+    <street name="沙浦镇" code="441203102" />
+    <street name="凤凰镇" code="441203103" />
+    <street name="莲花镇" code="441203104" />
+</county>
+<county name="广宁" code="441223">
+    <street name="排沙镇" code="441223100" />
+    <street name="潭布镇" code="441223102" />
+    <street name="江屯镇" code="441223103" />
+    <street name="螺岗镇" code="441223105" />
+    <street name="北市镇" code="441223106" />
+    <street name="坑口镇" code="441223107" />
+    <street name="赤坑镇" code="441223108" />
+    <street name="南街镇" code="441223109" />
+    <street name="宾亨镇" code="441223110" />
+    <street name="五和镇" code="441223111" />
+    <street name="横山镇" code="441223112" />
+    <street name="木格镇" code="441223113" />
+    <street name="石咀镇" code="441223114" />
+    <street name="古水镇" code="441223115" />
+    <street name="洲仔镇" code="441223116" />
+	<street name="石涧镇" code="441223117" />
+</county>
+<county name="怀集" code="441224">
+    <street name="怀城镇" code="441224100" />
+    <street name="闸岗镇" code="441224101" />
+    <street name="坳仔镇" code="441224102" />
+    <street name="汶朗镇" code="441224103" />
+    <street name="甘洒镇" code="441224104" />
+    <street name="凤岗镇" code="441224105" />
+    <street name="洽水镇" code="441224106" />
+    <street name="梁村镇" code="441224107" />
+    <street name="大岗镇" code="441224108" />
+    <street name="岗坪镇" code="441224109" />
+    <street name="冷坑镇" code="441224110" />
+    <street name="马宁镇" code="441224111" />
+    <street name="蓝钟镇" code="441224112" />
+    <street name="永固镇" code="441224113" />
+    <street name="诗洞镇" code="441224114" />
+    <street name="桥头镇" code="441224115" />
+    <street name="中洲镇" code="441224116" />
+    <street name="连麦镇" code="441224118" />
+    <street name="下帅壮族瑶族乡" code="441224200" />
+    <street name="广东省第一监狱" code="441224498" />
+</county>
+<county name="封开" code="441225">
+    <street name="江口镇" code="441225100" />
+    <street name="江川镇" code="441225101" />
+    <street name="白垢镇" code="441225102" />
+    <street name="大洲镇" code="441225103" />
+    <street name="渔涝镇" code="441225104" />
+    <street name="河儿口镇" code="441225105" />
+    <street name="连都镇" code="441225106" />
+    <street name="杏花镇" code="441225107" />
+    <street name="罗董镇" code="441225108" />
+    <street name="长岗镇" code="441225109" />
+    <street name="平凤镇" code="441225110" />
+    <street name="南丰镇" code="441225111" />
+    <street name="大玉口镇" code="441225112" />
+    <street name="都平镇" code="441225113" />
+    <street name="金装镇" code="441225114" />
+    <street name="长安镇" code="441225115" />
+</county>
+<county name="德庆" code="441226">
+    <street name="德城街道" code="441226001" />
+    <street name="新圩镇" code="441226101" />
+    <street name="回龙镇" code="441226102" />
+    <street name="官圩镇" code="441226103" />
+    <street name="马圩镇" code="441226105" />
+    <street name="高良镇" code="441226106" />
+    <street name="莫村镇" code="441226107" />
+    <street name="永丰镇" code="441226109" />
+    <street name="武垄镇" code="441226110" />
+    <street name="播植镇" code="441226111" />
+    <street name="凤村镇" code="441226112" />
+    <street name="悦城镇" code="441226113" />
+    <street name="九市镇" code="441226114" />
+</county>
+<county name="高要" code="441283">
+    <street name="南岸街道" code="441283001" />
+    <street name="河台镇" code="441283100" />
+    <street name="乐城镇" code="441283101" />
+    <street name="水南镇" code="441283102" />
+    <street name="禄步镇" code="441283103" />
+    <street name="小湘镇" code="441283105" />
+    <street name="大湾镇" code="441283106" />
+    <street name="新桥镇" code="441283107" />
+    <street name="白诸镇" code="441283108" />
+    <street name="莲塘镇" code="441283109" />
+    <street name="活道镇" code="441283110" />
+    <street name="蛟塘镇" code="441283111" />
+    <street name="回龙镇" code="441283112" />
+    <street name="白土镇" code="441283113" />
+    <street name="金渡镇" code="441283114" />
+    <street name="金利镇" code="441283115" />
+    <street name="蚬岗镇" code="441283116" />
+</county>
+<county name="四会" code="441284">
+    <street name="城中街道" code="441284001" />
+    <street name="东城街道" code="441284002" />
+    <street name="贞山街道" code="441284003" />
+    <street name="龙甫镇" code="441284100" />
+    <street name="地豆镇" code="441284101" />
+    <street name="威整镇" code="441284102" />
+    <street name="罗源镇" code="441284103" />
+    <street name="迳口镇" code="441284104" />
+    <street name="大沙镇" code="441284105" />
+    <street name="石狗镇" code="441284107" />
+    <street name="黄田镇" code="441284108" />
+    <street name="江谷镇" code="441284110" />
+    <street name="下茆镇" code="441284113" />
+    <street name="广东省济广监狱" code="441284400" />
+    <street name="肇庆高新技术产业开发区" code="441284450" />
+</county>
+</city>
+</address>

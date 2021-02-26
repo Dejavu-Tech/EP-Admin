@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="绥化" code="231200">
+<county name="北林" code="231202">
+    <street name="紫来办事处" code="231202001" />
+    <street name="爱路办事处" code="231202002" />
+    <street name="大有办事处" code="231202003" />
+    <street name="吉泰办事处" code="231202004" />
+    <street name="东兴办事处" code="231202005" />
+    <street name="北林办事处" code="231202006" />
+    <street name="宝山镇" code="231202101" />
+    <street name="绥胜镇" code="231202102" />
+    <street name="西长发镇" code="231202103" />
+    <street name="永安镇" code="231202104" />
+    <street name="太平川镇" code="231202105" />
+    <street name="秦家镇" code="231202106" />
+    <street name="双河镇" code="231202107" />
+    <street name="三河镇" code="231202108" />
+    <street name="四方台镇" code="231202109" />
+    <street name="津河镇" code="231202110" />
+    <street name="张维镇" code="231202111" />
+    <street name="东津镇" code="231202113" />
+    <street name="红旗乡" code="231202201" />
+    <street name="连岗乡" code="231202202" />
+    <street name="新华乡" code="231202203" />
+    <street name="兴福乡" code="231202204" />
+    <street name="东富乡" code="231202205" />
+    <street name="三井乡" code="231202209" />
+    <street name="五营乡" code="231202212" />
+    <street name="兴和乡" code="231202213" />
+    <street name="康庄办事处" code="231202214" />
+    <street name="北辰办事处" code="231202216" />
+    <street name="先锋办事处" code="231202218" />
+    <street name="东城办事处" code="231202219" />
+    <street name="朝旭办事处" code="231202221" />
+    <street name="春雷办事处" code="231202222" />
+    <street name="绥化局直" code="231202579" />
+</county>
+<county name="望奎" code="231221">
+    <street name="望奎镇" code="231221100" />
+    <street name="通江镇" code="231221101" />
+    <street name="卫星镇" code="231221102" />
+    <street name="海丰镇" code="231221103" />
+    <street name="莲花镇" code="231221104" />
+    <street name="惠七满族镇" code="231221105" />
+    <street name="先锋镇" code="231221106" />
+    <street name="火箭镇" code="231221107" />
+    <street name="东郊乡" code="231221201" />
+    <street name="灵山满族乡" code="231221202" />
+    <street name="后三乡" code="231221203" />
+    <street name="灯塔乡" code="231221207" />
+    <street name="东升乡" code="231221209" />
+    <street name="恭六乡" code="231221210" />
+    <street name="厢白满族乡" code="231221211" />
+    <street name="白四林场" code="231221400" />
+    <street name="种畜场" code="231221580" />
+    <street name="第一良种场" code="231221581" />
+    <street name="第二良种场" code="231221582" />
+</county>
+<county name="兰西" code="231222">
+    <street name="兰西镇" code="231222101" />
+    <street name="榆林镇" code="231222102" />
+    <street name="临江镇" code="231222103" />
+    <street name="平山镇" code="231222104" />
+    <street name="康荣乡" code="231222200" />
+    <street name="燎原乡" code="231222201" />
+    <street name="北安乡" code="231222202" />
+    <street name="长江乡" code="231222203" />
+    <street name="兰河乡" code="231222204" />
+    <street name="红星乡" code="231222205" />
+    <street name="红光乡" code="231222206" />
+    <street name="长岗乡" code="231222207" />
+    <street name="远大乡" code="231222209" />
+    <street name="星火乡" code="231222210" />
+    <street name="奋斗乡" code="231222211" />
+    <street name="第一原种场" code="231222580" />
+    <street name="第二原种场" code="231222581" />
+    <street name="肉用种羊场" code="231222582" />
+</county>
+<county name="青冈" code="231223">
+    <street name="青冈镇" code="231223100" />
+    <street name="中和镇" code="231223101" />
+    <street name="祯祥镇" code="231223102" />
+    <street name="兴华镇" code="231223103" />
+    <street name="永丰镇" code="231223104" />
+    <street name="芦河镇" code="231223105" />
+    <street name="民政镇" code="231223106" />
+    <street name="柞岗镇" code="231223107" />
+    <street name="劳动乡" code="231223201" />
+    <street name="建设乡" code="231223202" />
+    <street name="新村乡" code="231223203" />
+    <street name="昌盛乡" code="231223206" />
+    <street name="德胜乡" code="231223209" />
+    <street name="迎春乡" code="231223211" />
+    <street name="连丰乡" code="231223212" />
+    <street name="青冈县林场" code="231223400" />
+    <street name="青冈县互利营林站" code="231223401" />
+    <street name="青冈县果树场" code="231223402" />
+    <street name="青冈县种马场" code="231223580" />
+    <street name="青冈县种羊场" code="231223581" />
+    <street name="青冈县原种场" code="231223582" />
+</county>
+<county name="庆安" code="231224">
+    <street name="庆安镇" code="231224101" />
+    <street name="民乐镇" code="231224102" />
+    <street name="大罗镇" code="231224103" />
+    <street name="平安镇" code="231224104" />
+    <street name="勤劳镇" code="231224105" />
+    <street name="久胜镇" code="231224106" />
+    <street name="建民乡" code="231224201" />
+    <street name="巨宝山乡" code="231224202" />
+    <street name="新胜乡" code="231224204" />
+    <street name="丰收乡" code="231224206" />
+    <street name="发展乡" code="231224208" />
+    <street name="同乐乡" code="231224209" />
+    <street name="致富乡" code="231224210" />
+    <street name="欢胜乡" code="231224211" />
+    <street name="国有林场管理局" code="231224400" />
+    <street name="柳河农场" code="231224500" />
+</county>
+<county name="明水" code="231225">
+    <street name="明水镇" code="231225100" />
+    <street name="兴仁镇" code="231225101" />
+    <street name="永兴镇" code="231225102" />
+    <street name="崇德镇" code="231225103" />
+    <street name="通达镇" code="231225104" />
+    <street name="双兴乡" code="231225201" />
+    <street name="永久乡" code="231225203" />
+    <street name="树人乡" code="231225204" />
+    <street name="光荣乡" code="231225205" />
+    <street name="繁荣乡" code="231225206" />
+    <street name="通泉乡" code="231225207" />
+    <street name="育林乡" code="231225208" />
+    <street name="国营林场" code="231225400" />
+    <street name="县联社马场" code="231225580" />
+    <street name="明水种畜场" code="231225581" />
+    <street name="育林畜牧场" code="231225582" />
+    <street name="国营第一良种" code="231225583" />
+    <street name="国营第二良种" code="231225584" />
+    <street name="国营第三良种" code="231225585" />
+</county>
+<county name="绥棱" code="231226">
+    <street name="绥棱镇" code="231226100" />
+    <street name="上集镇" code="231226101" />
+    <street name="四海店镇" code="231226102" />
+    <street name="双岔河镇" code="231226103" />
+    <street name="靠山乡" code="231226200" />
+    <street name="后头乡" code="231226201" />
+    <street name="长山乡" code="231226203" />
+    <street name="克音河乡" code="231226205" />
+    <street name="绥中乡" code="231226206" />
+    <street name="泥尔河乡" code="231226207" />
+    <street name="阁山乡" code="231226210" />
+    <street name="阁山林场" code="231226400" />
+    <street name="四海店林场" code="231226401" />
+    <street name="三吉台林场" code="231226402" />
+    <street name="半截河林场" code="231226403" />
+    <street name="绥棱林业局" code="231226404" />
+    <street name="绥棱农场" code="231226500" />
+    <street name="种马场" code="231226580" />
+    <street name="良种场" code="231226581" />
+    <street name="奶山羊场" code="231226582" />
+</county>
+<county name="安达" code="231281">
+    <street name="铁西街道" code="231281001" />
+    <street name="新兴街道" code="231281002" />
+    <street name="安虹街道" code="231281003" />
+    <street name="安达镇" code="231281100" />
+    <street name="任民镇" code="231281101" />
+    <street name="万宝山镇" code="231281103" />
+    <street name="昌德镇" code="231281104" />
+    <street name="升平镇" code="231281105" />
+    <street name="羊草镇" code="231281106" />
+    <street name="老虎岗镇" code="231281107" />
+    <street name="中本镇" code="231281108" />
+    <street name="太平庄镇" code="231281109" />
+    <street name="吉兴岗镇" code="231281110" />
+    <street name="火石山乡" code="231281202" />
+    <street name="卧里屯乡" code="231281204" />
+    <street name="青肯泡乡" code="231281205" />
+    <street name="先源乡" code="231281209" />
+    <street name="安达畜牧场" code="231281500" />
+    <street name="原种场" code="231281581" />
+    <street name="红旗泡水库管理所" code="231281583" />
+    <street name="东湖水库管理站" code="231281584" />
+</county>
+<county name="肇东" code="231282">
+    <street name="朝阳区办事处" code="231282001" />
+    <street name="东升区办事处" code="231282002" />
+    <street name="西园区办事处" code="231282003" />
+    <street name="正阳区办事处" code="231282004" />
+    <street name="肇东镇" code="231282100" />
+    <street name="昌五镇" code="231282101" />
+    <street name="宋站镇" code="231282102" />
+    <street name="五站镇" code="231282103" />
+    <street name="尚家镇" code="231282104" />
+    <street name="姜家镇" code="231282105" />
+    <street name="里木店镇" code="231282106" />
+    <street name="四站镇" code="231282107" />
+    <street name="涝洲镇" code="231282108" />
+    <street name="五里明镇" code="231282109" />
+    <street name="黎明镇" code="231282110" />
+    <street name="太平乡" code="231282201" />
+    <street name="海城乡" code="231282203" />
+    <street name="向阳乡" code="231282204" />
+    <street name="洪河乡" code="231282205" />
+    <street name="跃进乡" code="231282206" />
+    <street name="西八里乡" code="231282211" />
+    <street name="德昌乡" code="231282212" />
+    <street name="宣化乡" code="231282213" />
+    <street name="安民乡" code="231282214" />
+    <street name="明久乡" code="231282215" />
+    <street name="四方山农场" code="231282500" />
+    <street name="涝洲鱼种场" code="231282501" />
+</county>
+<county name="海伦" code="231283">
+    <street name="海伦镇" code="231283100" />
+    <street name="海北镇" code="231283101" />
+    <street name="伦河镇" code="231283102" />
+    <street name="共合镇" code="231283103" />
+    <street name="海兴镇" code="231283104" />
+    <street name="祥富镇" code="231283105" />
+    <street name="东风镇" code="231283106" />
+    <street name="前进乡" code="231283202" />
+    <street name="向荣乡" code="231283203" />
+    <street name="长发乡" code="231283204" />
+    <street name="东林乡" code="231283205" />
+    <street name="海南乡" code="231283208" />
+    <street name="共荣乡" code="231283209" />
+    <street name="乐业乡" code="231283210" />
+    <street name="福民乡" code="231283211" />
+    <street name="丰山乡" code="231283212" />
+    <street name="永富乡" code="231283213" />
+    <street name="百祥乡" code="231283215" />
+    <street name="联发乡" code="231283216" />
+    <street name="永和乡" code="231283217" />
+    <street name="爱民乡" code="231283218" />
+    <street name="扎音河乡" code="231283220" />
+    <street name="双录乡" code="231283221" />
+    <street name="林场公司" code="231283400" />
+    <street name="东方红水库地区" code="231283401" />
+    <street name="海伦农场" code="231283500" />
+    <street name="红光农场" code="231283501" />
+    <street name="海伦二粮种场" code="231283581" />
+    <street name="海伦种畜场" code="231283582" />
+</county>
+</city>
+</address>

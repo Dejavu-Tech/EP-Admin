@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="承德" code="130800">
+<county name="双桥" code="130802">
+    <street name="西大街街道" code="130802001" />
+    <street name="头道牌楼街道" code="130802002" />
+    <street name="潘家沟街道" code="130802003" />
+    <street name="中华路街道" code="130802004" />
+    <street name="新华路街道" code="130802005" />
+    <street name="石洞子沟街道" code="130802006" />
+    <street name="桥东街道" code="130802007" />
+    <street name="水泉沟镇" code="130802100" />
+    <street name="狮子沟镇" code="130802101" />
+    <street name="牛圈子沟镇" code="130802102" />
+    <street name="大石庙镇" code="130802103" />
+    <street name="冯营子镇" code="130802104" />
+    <street name="双峰寺镇" code="130802105" />
+    <street name="上板城镇" code="130802106" />
+    <street name="承德市高新技术开发区" code="130802401" />
+</county>
+<county name="双滦" code="130803">
+    <street name="元宝山街道" code="130803001" />
+    <street name="钢城街道" code="130803002" />
+    <street name="双塔山镇" code="130803100" />
+    <street name="滦河镇" code="130803101" />
+    <street name="大庙镇" code="130803102" />
+    <street name="偏桥子镇" code="130803103" />
+    <street name="陈栅子乡" code="130803200" />
+    <street name="西地满族乡" code="130803201" />
+</county>
+<county name="鹰手营子矿" code="130804">
+    <street name="鹰手营子矿区铁北路街道" code="130804001" />
+    <street name="鹰手营子镇" code="130804100" />
+    <street name="北马圈子镇" code="130804101" />
+    <street name="寿王坟镇" code="130804102" />
+    <street name="汪家庄镇" code="130804103" />
+</county>
+<county name="承德" code="130821">
+    <street name="下板城镇" code="130821100" />
+    <street name="甲山镇" code="130821102" />
+    <street name="六沟镇" code="130821103" />
+    <street name="三沟镇" code="130821104" />
+    <street name="头沟镇" code="130821105" />
+    <street name="高寺台镇" code="130821106" />
+    <street name="东小白旗乡" code="130821200" />
+    <street name="鞍匠乡" code="130821201" />
+    <street name="刘杖子乡" code="130821202" />
+    <street name="新杖子乡" code="130821203" />
+    <street name="孟家院乡" code="130821204" />
+    <street name="大营子乡" code="130821205" />
+    <street name="八家乡" code="130821206" />
+    <street name="上谷乡" code="130821207" />
+    <street name="满杖子乡" code="130821208" />
+    <street name="石灰窑乡" code="130821209" />
+    <street name="五道河乡" code="130821210" />
+    <street name="岔沟乡" code="130821211" />
+    <street name="岗子满族乡" code="130821212" />
+    <street name="磴上乡" code="130821213" />
+    <street name="两家满族乡" code="130821214" />
+    <street name="三家乡" code="130821215" />
+    <street name="仓子乡" code="130821216" />
+</county>
+<county name="兴隆" code="130822">
+    <street name="兴隆镇" code="130822100" />
+    <street name="半壁山镇" code="130822101" />
+    <street name="挂兰峪镇" code="130822102" />
+    <street name="青松岭镇" code="130822103" />
+    <street name="六道河镇" code="130822104" />
+    <street name="平安堡镇" code="130822105" />
+    <street name="北营房镇" code="130822106" />
+    <street name="孤山子镇" code="130822107" />
+    <street name="蓝旗营镇" code="130822108" />
+    <street name="南天门满族乡" code="130822200" />
+    <street name="八卦岭满族乡" code="130822202" />
+    <street name="陡子峪乡" code="130822203" />
+    <street name="上石洞乡" code="130822204" />
+    <street name="雾灵山乡" code="130822205" />
+    <street name="李家营乡" code="130822206" />
+    <street name="大杖子乡" code="130822207" />
+    <street name="蘑菇峪乡" code="130822208" />
+    <street name="三道河乡" code="130822209" />
+    <street name="安子岭乡" code="130822211" />
+    <street name="大水泉乡" code="130822212" />
+</county>
+<county name="平泉" code="130823">
+    <street name="平泉镇" code="130823100" />
+    <street name="黄土梁子镇" code="130823101" />
+    <street name="榆树林子镇" code="130823102" />
+    <street name="杨树岭镇" code="130823103" />
+    <street name="七沟镇" code="130823104" />
+    <street name="小寺沟镇" code="130823105" />
+    <street name="党坝镇" code="130823106" />
+    <street name="卧龙镇" code="130823107" />
+    <street name="南五十家子镇" code="130823108" />
+    <street name="北五十家子镇" code="130823109" />
+    <street name="桲椤树镇" code="130823110" />
+    <street name="王土房乡" code="130823200" />
+    <street name="柳溪满族乡" code="130823202" />
+    <street name="七家岱满族乡" code="130823203" />
+    <street name="平房满族蒙古族乡" code="130823204" />
+    <street name="茅兰沟满族蒙古族乡" code="130823206" />
+    <street name="台头山乡" code="130823207" />
+    <street name="松树台乡" code="130823209" />
+    <street name="道虎沟乡" code="130823210" />
+</county>
+<county name="滦平" code="130824">
+    <street name="中兴路街道" code="130824001" />
+    <street name="滦平镇" code="130824100" />
+    <street name="长山峪镇" code="130824101" />
+    <street name="红旗镇" code="130824102" />
+    <street name="金沟屯镇" code="130824103" />
+    <street name="虎什哈镇" code="130824104" />
+    <street name="巴克什营镇" code="130824105" />
+    <street name="张百湾镇" code="130824106" />
+    <street name="平坊满族乡" code="130824200" />
+    <street name="安纯沟门满族乡" code="130824201" />
+    <street name="付营子乡" code="130824204" />
+    <street name="小营满族乡" code="130824205" />
+    <street name="西沟满族乡" code="130824206" />
+    <street name="邓厂满族乡" code="130824207" />
+    <street name="五道营子满族乡" code="130824208" />
+    <street name="马营子满族乡" code="130824209" />
+    <street name="付家店满族乡" code="130824210" />
+    <street name="火斗山乡" code="130824211" />
+    <street name="两间房乡" code="130824212" />
+    <street name="涝洼乡" code="130824213" />
+    <street name="大屯满族乡" code="130824214" />
+</county>
+<county name="隆化" code="130825">
+    <street name="隆化镇" code="130825100" />
+    <street name="韩麻营镇" code="130825101" />
+    <street name="中关镇" code="130825102" />
+    <street name="七家镇" code="130825103" />
+    <street name="汤头沟镇" code="130825104" />
+    <street name="张三营镇" code="130825105" />
+    <street name="唐三营镇" code="130825106" />
+    <street name="蓝旗镇" code="130825107" />
+    <street name="步古沟镇" code="130825108" />
+    <street name="郭家屯镇" code="130825109" />
+    <street name="荒地乡" code="130825200" />
+    <street name="章吉营乡" code="130825201" />
+    <street name="茅荆坝乡" code="130825202" />
+    <street name="尹家营满族乡" code="130825203" />
+    <street name="庙子沟蒙古族满族乡" code="130825204" />
+    <street name="偏坡营满族乡" code="130825205" />
+    <street name="山湾乡" code="130825206" />
+    <street name="八达营蒙古族乡" code="130825207" />
+    <street name="太平庄满族乡" code="130825208" />
+    <street name="旧屯满族乡" code="130825209" />
+    <street name="西阿超满族蒙古族乡" code="130825210" />
+    <street name="白虎沟满族蒙古族乡" code="130825211" />
+    <street name="碱房乡" code="130825212" />
+    <street name="韩家店乡" code="130825213" />
+    <street name="湾沟门乡" code="130825214" />
+</county>
+<county name="丰宁" code="130826">
+    <street name="大阁镇" code="130826100" />
+    <street name="大滩镇" code="130826101" />
+    <street name="鱼儿山镇" code="130826102" />
+    <street name="土城镇" code="130826103" />
+    <street name="黄旗镇" code="130826104" />
+    <street name="凤山镇" code="130826105" />
+    <street name="波罗诺镇" code="130826106" />
+    <street name="黑山咀镇" code="130826107" />
+    <street name="天桥镇" code="130826108" />
+    <street name="万胜永乡" code="130826200" />
+    <street name="四岔口乡" code="130826201" />
+    <street name="苏家店乡" code="130826202" />
+    <street name="外沟门乡" code="130826203" />
+    <street name="草原乡" code="130826204" />
+    <street name="窟窿山乡" code="130826205" />
+    <street name="小坝子乡" code="130826206" />
+    <street name="五道营乡" code="130826207" />
+    <street name="南关蒙古族乡" code="130826208" />
+    <street name="选将营乡" code="130826209" />
+    <street name="西官营乡" code="130826210" />
+    <street name="王营乡" code="130826211" />
+    <street name="北头营乡" code="130826212" />
+    <street name="胡麻营乡" code="130826213" />
+    <street name="石人沟乡" code="130826214" />
+    <street name="汤河乡" code="130826215" />
+    <street name="杨木栅子乡" code="130826216" />
+</county>
+<county name="宽城" code="130827">
+    <street name="宽城镇" code="130827100" />
+    <street name="龙须门镇" code="130827101" />
+    <street name="峪耳崖镇" code="130827102" />
+    <street name="板城镇" code="130827103" />
+    <street name="汤道河镇" code="130827104" />
+    <street name="饽罗台镇" code="130827105" />
+    <street name="碾子峪镇" code="130827106" />
+    <street name="亮甲台镇" code="130827107" />
+    <street name="化皮溜子乡" code="130827200" />
+    <street name="塌山乡" code="130827201" />
+    <street name="孟子岭乡" code="130827203" />
+    <street name="独石沟乡" code="130827204" />
+    <street name="东大地乡" code="130827206" />
+    <street name="铧尖乡" code="130827207" />
+    <street name="东黄花川乡" code="130827208" />
+    <street name="苇子沟乡" code="130827210" />
+    <street name="大字沟门乡" code="130827211" />
+    <street name="大石柱子乡" code="130827212" />
+</county>
+<county name="围场" code="130828">
+    <street name="围场镇" code="130828100" />
+    <street name="四合永镇" code="130828101" />
+    <street name="克勒沟镇" code="130828102" />
+    <street name="棋盘山镇" code="130828103" />
+    <street name="半截塔镇" code="130828104" />
+    <street name="朝阳地镇" code="130828105" />
+    <street name="朝阳湾镇" code="130828106" />
+    <street name="道坝子乡" code="130828200" />
+    <street name="龙头山乡" code="130828201" />
+    <street name="腰站乡" code="130828202" />
+    <street name="黄土坎乡" code="130828203" />
+    <street name="四道沟乡" code="130828204" />
+    <street name="兰旗卡伦乡" code="130828205" />
+    <street name="银窝沟乡" code="130828206" />
+    <street name="新地乡" code="130828207" />
+    <street name="广发永乡" code="130828208" />
+    <street name="育太和乡" code="130828209" />
+    <street name="郭家湾乡" code="130828210" />
+    <street name="杨家湾乡" code="130828211" />
+    <street name="大唤起乡" code="130828212" />
+    <street name="哈里哈乡" code="130828213" />
+    <street name="新拨乡" code="130828214" />
+    <street name="张家湾乡" code="130828215" />
+    <street name="宝元栈乡" code="130828216" />
+    <street name="山湾子乡" code="130828217" />
+    <street name="三义永乡" code="130828218" />
+    <street name="姜家店乡" code="130828219" />
+    <street name="下伙房乡" code="130828220" />
+    <street name="燕格柏乡" code="130828221" />
+    <street name="牌楼乡" code="130828222" />
+    <street name="城子乡" code="130828223" />
+    <street name="老窝铺乡" code="130828224" />
+    <street name="御道口乡" code="130828225" />
+    <street name="石桌子乡" code="130828226" />
+    <street name="大头山乡" code="130828227" />
+    <street name="南山嘴乡" code="130828228" />
+    <street name="西龙头乡" code="130828229" />
+    <street name="塞罕坝机械林场" code="130828450" />
+    <street name="国营御道口牧场" code="130828500" />
+</county>
+</city>
+</address>

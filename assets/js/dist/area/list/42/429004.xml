@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="仙桃" code="429004">
+<county name="仙桃" code="429004001">
+    <street name="干河街道" code="429004002" />
+    <street name="龙华山办事处" code="429004003" />
+    <street name="郑场镇" code="429004100" />
+    <street name="毛嘴镇" code="429004101" />
+    <street name="豆河镇" code="429004102" />
+    <street name="三伏潭镇" code="429004103" />
+    <street name="胡场镇" code="429004104" />
+    <street name="长倘口镇" code="429004105" />
+    <street name="西流河镇" code="429004106" />
+    <street name="沙湖镇" code="429004107" />
+    <street name="杨林尾镇" code="429004108" />
+    <street name="彭场镇" code="429004109" />
+    <street name="张沟镇" code="429004110" />
+    <street name="郭河镇" code="429004111" />
+    <street name="沔城回族镇" code="429004112" />
+    <street name="通海口镇" code="429004113" />
+    <street name="陈场镇" code="429004114" />
+    <street name="工业园区" code="429004400" />
+    <street name="九合垸原种场" code="429004401" />
+    <street name="沙湖原种场" code="429004402" />
+    <street name="五湖渔场" code="429004404" />
+    <street name="赵西垸林场" code="429004405" />
+    <street name="畜禽良种场" code="429004407" />
+    <street name="排湖风景区" code="429004408" />
+</county>
+</city>
+</address>

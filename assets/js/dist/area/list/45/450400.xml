@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="梧州" code="450400">
+<county name="万秀" code="450403">
+    <street name="城东街道" code="450403001" />
+    <street name="城南街道" code="450403002" />
+    <street name="城中办街道事处" code="450403003" />
+    <street name="城北办街道事处" code="450403004" />
+    <street name="角嘴街道" code="450403005" />
+    <street name="东兴街道" code="450403006" />
+    <street name="富民街道" code="450403007" />
+    <street name="城东镇" code="450403101" />
+    <street name="龙湖镇" code="450403103" />
+    <street name="夏郢镇" code="450403104" />
+</county>
+<county name="长洲" code="450405">
+    <street name="大塘街道" code="450405001" />
+    <street name="兴龙街道" code="450405002" />
+    <street name="长洲镇" code="450405101" />
+    <street name="倒水镇" code="450405102" />
+</county>
+<county name="龙圩" code="450406">
+    <street name="龙圩镇" code="450406100" />
+    <street name="大坡镇" code="450406101" />
+    <street name="广平镇" code="450406102" />
+    <street name="新地镇" code="450406103" />
+</county>
+<county name="苍梧" code="450421">
+    <street name="石桥镇" code="450421100" />
+    <street name="沙头镇" code="450421101" />
+    <street name="梨埠镇" code="450421102" />
+    <street name="岭脚镇" code="450421105" />
+    <street name="京南镇" code="450421108" />
+    <street name="狮寨镇" code="450421109" />
+    <street name="旺甫镇" code="450421110" />
+    <street name="六堡镇" code="450421112" />
+    <street name="木双镇" code="450421114" />
+</county>
+<county name="藤县" code="450422">
+    <street name="藤州镇" code="450422100" />
+    <street name="塘步镇" code="450422103" />
+    <street name="埌南镇" code="450422104" />
+    <street name="同心镇" code="450422105" />
+    <street name="金鸡镇" code="450422106" />
+    <street name="新庆镇" code="450422107" />
+    <street name="象棋镇" code="450422108" />
+    <street name="岭景镇" code="450422109" />
+    <street name="天平镇" code="450422110" />
+    <street name="蒙江镇" code="450422111" />
+    <street name="和平镇" code="450422112" />
+    <street name="太平镇" code="450422113" />
+    <street name="古龙镇" code="450422114" />
+    <street name="东荣镇" code="450422115" />
+    <street name="大黎镇" code="450422116" />
+    <street name="平福乡" code="450422200" />
+    <street name="藤县宁康乡" code="450422201" />
+</county>
+<county name="蒙山" code="450423">
+    <street name="蒙山镇" code="450423100" />
+    <street name="西河镇" code="450423101" />
+    <street name="新圩镇" code="450423102" />
+    <street name="文圩镇" code="450423103" />
+    <street name="黄村镇" code="450423104" />
+    <street name="陈塘镇" code="450423105" />
+    <street name="汉豪乡" code="450423200" />
+    <street name="长坪瑶族乡" code="450423201" />
+    <street name="夏宜瑶族乡" code="450423202" />
+</county>
+<county name="岑溪" code="450481">
+    <street name="岑城镇" code="450481100" />
+    <street name="马路镇" code="450481102" />
+    <street name="南渡镇" code="450481103" />
+    <street name="水汶镇" code="450481105" />
+    <street name="大隆镇" code="450481106" />
+    <street name="梨木镇" code="450481107" />
+    <street name="大业镇" code="450481108" />
+    <street name="筋竹镇" code="450481109" />
+    <street name="城谏镇" code="450481110" />
+    <street name="归义镇" code="450481111" />
+    <street name="糯垌镇" code="450481112" />
+    <street name="安平镇" code="450481113" />
+    <street name="三堡镇" code="450481114" />
+    <street name="波塘镇" code="450481115" />
+</county>
+</city>
+</address>

@@ -1,0 +1,486 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+	<title><?php echo $shoname_name; ?></title>
+	<link rel="shortcut icon" href="" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="author" content="Dejavu871.Tech.">
+	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- Font Awesome-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<!-- ico-font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+	<!-- Themify icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
+	<!-- Flag icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
+	<!-- Feather icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+	<!-- Plugins css start-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
+	<!-- Plugins css Ends-->
+	<!-- Bootstrap css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+	<!-- App css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
+	<!-- Responsive css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+
+<script type="text/javascript">
+            window.sysinfo = {
+            <?php if(!empty($_W['uniacid'])){ ?>'uniacid': '<?php echo ($_W['uniacid']); ?>',<?php } ?>
+
+            <?php if(!empty($_W['acid'])){ ?>'acid': '<?php echo ($_W['acid']); ?>',<?php } ?>
+
+            <?php if(!empty($_W['openid'])){ ?>'openid': '<?php echo ($_W['openid']); ?>',<?php } ?>
+
+            <?php if(!empty($_W['uid'])){ ?>'uid': '<?php echo ($_W['uid']); ?>',<?php } ?>
+
+            'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
+
+            'siteroot': '<?php echo ($_W['siteroot']); ?>',
+                    'siteurl': '<?php echo ($_W['siteurl']); ?>',
+                    'attachurl': '<?php echo ($_W['attachurl']); ?>',
+                    'attachurl_local': '<?php echo ($_W['attachurl_local']); ?>',
+                    'attachurl_remote': '<?php echo ($_W['attachurl_remote']); ?>',
+                    'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
+            'cookie' : {'pre': ''},
+            'account' : <?php echo json_encode($_W['account']);?>,
+            };
+        </script>
+
+<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+	<script type="text/javascript" src="/resource/components/colpick/colpick.js"></script>
+	<link href="/resource/components/colpick/colpick.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+</head>
+<body class="custom-scrollbar" >
+
+<div class="page-wrapper custom-scrollbar">
+	<div class="page-body-wrapper">
+		<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+			<div class="container-fluid">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-lg-6 main-header">
+							<h6 class="mb-0">当前位置</h6>
+							<h2>小程序底部菜单<span>设置</span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
+								<div class="card-body">
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">首页标题</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_tabbar_text1]" class="form-control" value="<?php echo ($data['wepro_tabbar_list']['t1']); ?>" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">未选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_iconPath1]', $data['wepro_tabbar_list']['i1']);?>
+											<small>此图为导航栏未选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_selectedIconPath1]', $data['wepro_tabbar_list']['s1']);?>
+											<small>此图为导航栏选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">分类标题</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_tabbar_text4]" class="form-control" value="<?php echo ($data['wepro_tabbar_list']['t4']); ?>" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">未选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_iconPath4]', $data['wepro_tabbar_list']['i4']);?>
+											<small>此图为导航栏未选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_selectedIconPath4]', $data['wepro_tabbar_list']['s4']);?>
+											<small>此图为导航栏选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">是否开启分类</label>
+										<div class="col-sm-10">
+											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[open_tabbar_type]' title="关闭" value='0' <?php if(!empty($data) && $data['open_tabbar_type'] ==0 ){ ?>checked <?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[open_tabbar_type]' title="开启" value='1' <?php if(empty($data) || $data['open_tabbar_type'] ==1 ){ ?>checked <?php } ?> />
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">外部跳转标题</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_tabbar_text5]" class="form-control" value="<?php echo ($data['wepro_tabbar_list']['t5']); ?>" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">链接类型</label>
+										<div class="col-sm-10">
+											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="外部小程序链接" lay-filter="linktype" value="2" <?php if($data['tabbar_out_type']==2 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="拼团" lay-filter="linktype" value="3" <?php if($data['tabbar_out_type']==3 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="菜谱" lay-filter="linktype" value="4" <?php if($data['tabbar_out_type']==4 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="视频列表" lay-filter="linktype" value="5" <?php if($data['tabbar_out_type']==5 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="群接龙" lay-filter="linktype" value="6" <?php if($data['tabbar_out_type']==6 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="直播列表" lay-filter="linktype" value="7" <?php if( $data['tabbar_out_type']==7 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="付费会员卡页面" lay-filter="linktype" value="8" <?php if( $data['tabbar_out_type']==8 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="团长中心" lay-filter="linktype" value="9" <?php if( $data['tabbar_out_type']==9 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="专题列表" lay-filter="linktype" value="10" <?php if( $data['tabbar_out_type']==10 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="积分签到" lay-filter="linktype" value="11" <?php if( $data['tabbar_out_type']==11 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="整点秒杀" lay-filter="linktype" value="12" <?php if( $data['tabbar_out_type']==12 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row" id="appidGroup" style="<?php if($data['tabbar_out_type']!=2){ ?>display: none;<?php } ?>">
+										<label class="col-sm-2 col-form-label">跳转小程序appID</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[tabbar_out_appid]" class="form-control" value="<?php echo ($data['tabbar_out_appid']); ?>" />
+										</div>
+									</div>
+									<div class="form-group row" id="linkGroup" style="<?php if( $data['tabbar_out_type']==3 || $data['tabbar_out_type']==4 || $data['tabbar_out_type']==5 || $data['tabbar_out_type']==6 || $data['tabbar_out_type']==7 || $data['tabbar_out_type']==8 || $data['tabbar_out_type']==9 || $data['tabbar_out_type']==10 || $data['tabbar_out_type']==11 || $data['tabbar_out_type']==12){ ?>display: none;<?php } ?>">
+										<label class="col-sm-2 col-form-label">跳转链接</label>
+
+										<div class="col-sm-10">
+											<div class="input-group pill-input-group">
+												<input type="text" value="<?php echo ($data['tabbar_out_link']); ?>" class="form-control valid" name="parameter[tabbar_out_link]" placeholder="" id="advlink">
+
+												<div class="input-group-append">
+													<span data-input="#advlink" id="chose_link" data-toggle="selectUrl" class="btn btn-pill btn-primary">选择链接</span>
+												</div>
+											</div>
+											<!-- <input type="text" name="parameter[tabbar_out_link]" class="form-control" value="<?php echo ($data['tabbar_out_link']); ?>" /> -->
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">未选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_iconPath5]', $data['wepro_tabbar_list']['i5']);?>
+											<small>此图为导航栏未选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_selectedIconPath5]', $data['wepro_tabbar_list']['s5']);?>
+											<small>此图为导航栏选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">是否开启跳转按钮</label>
+										<div class="col-sm-10">
+											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[open_tabbar_out_weapp]' title="关闭" value='0' <?php if(!empty($data) && $data['open_tabbar_out_weapp'] ==0 ){ ?>checked <?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[open_tabbar_out_weapp]' title="开启" value='1' <?php if(empty($data) || $data['open_tabbar_out_weapp'] ==1 ){ ?>checked <?php } ?> />
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">购物车标题</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_tabbar_text2]" class="form-control" value="<?php echo ($data['wepro_tabbar_list']['t2']); ?>" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">未选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_iconPath2]', $data['wepro_tabbar_list']['i2']);?>
+											<small>此图为导航栏未选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_selectedIconPath2]', $data['wepro_tabbar_list']['s2']);?>
+											<small>此图为导航栏选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">个人中心标题</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_tabbar_text3]" class="form-control" value="<?php echo ($data['wepro_tabbar_list']['t3']); ?>" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">未选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_iconPath3]', $data['wepro_tabbar_list']['i3']);?>
+											<small>此图为导航栏未选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">选中图标</label>
+										<div class="col-sm-10">
+											<?php echo tpl_form_field_image2('parameter[wepro_tabbar_selectedIconPath3]', $data['wepro_tabbar_list']['s3']);?>
+											<small>此图为导航栏选中状态图标，尺寸为81*81</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">选中字体颜色</label>
+										<div class="col-sm-6">
+											<div class="col-sm-6" id="minicolors" style="display: flex;padding-left: 0px">
+												<input type="text" name="parameter[wepro_tabbar_selectedColor]" value="<?php echo ($data['wepro_tabbar_selectedColor']); ?>" placeholder="请选择颜色" class="form-control" id="test-colorpicker-form-input">
+												<div  class="form-control colorpicker"><span class="colorpicker-trigger-span" lay-type="" style="background: <?php echo ($data['wepro_tabbar_selectedColor']); ?>"></span></div>
+											</div>
+											<small>底部菜单选中文字颜色值，有效值为十六进制颜色。默认色值：<font color="#004986">#004986</font></small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">背景颜色</label>
+										<div class="col-sm-6">
+											<div class="col-sm-6" id="minicolors2" style="display: flex;padding-left: 0px">
+												<input type="text" name="parameter[wepro_tabbar_bgColor]" value="<?php echo ($data['wepro_tabbar_bgColor']); ?>" placeholder="请选择颜色" class="form-control" id="test-colorpicker-form-input2">
+												<div  class="form-control colorpicker"><span class="colorpicker-trigger-span" lay-type="" style="background: <?php echo ($data['wepro_tabbar_bgColor']); ?>"></span></div>
+											</div>
+											<small>底部菜单选中文字颜色值，有效值为十六进制颜色。默认色值：<font color="#FFFFFF">#FFFFFF</font></small>
+										</div>
+									</div>
+									<div class="card-footer">
+										<input type="hidden" name="wepro_tabbar_version" value="<?php if( !empty($data['wepro_tabbar_version']) ){ echo $data['wepro_tabbar_version']+1; }else{ ?>0<?php } ?>">
+										<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 footer-copyright">
+						<p class="mb-0">Copyright © 2019-2021 Dejavu.Tech. All rights reserved.</p>
+					</div>
+					<div class="col-md-6">
+						<p class="pull-right mb-0">吃货星球v4.0.1<i class="fa fa-heart"></i></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+
+
+<script src="/layuiadmin/layui/layui2.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap js-->
+
+<!-- Sidebar jquery-->
+<script src="/assets/js/sidebar-menu.js"></script>
+
+<!-- feather icon js-->
+
+<!-- Plugins JS start-->
+
+<script src="/assets/js/chat-menu.js"></script>
+<!-- Plugins JS Ends-->
+<!-- Theme js-->
+<script src="/assets/js/script.js"></script>
+
+<!-- Theme js-->
+<script src="/assets/js/theme-customizer/customizer1.js"></script>
+
+<script>
+	layui.config({
+		base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+	var wepro_tabbar_selectedColor = '<?php echo ($data["wepro_tabbar_selectedColor"]); ?>';
+	$('#minicolors').colpick({
+		submit:true,
+		color: wepro_tabbar_selectedColor,
+		onSubmit: function(color,color2){
+			$('#test-colorpicker-form-input').val('#'+color2);
+			$('#minicolors').find('.colorpicker-trigger-span').css('background','#'+color2);
+			$('.colpick_full').hide();
+		}
+	});
+
+	var wepro_tabbar_bgColor = '<?php echo ($data["wepro_tabbar_bgColor"]); ?>';
+	$('#minicolors2').colpick({
+		submit:true,
+		color: wepro_tabbar_bgColor,
+		onSubmit: function(color,color2){
+			$('#test-colorpicker-form-input2').val('#'+color2);
+			$('#minicolors2').find('.colorpicker-trigger-span').css('background','#'+color2);
+			$('.colpick_full').hide();
+		}
+	});
+</script>
+
+<script>
+//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+var layer = layui.layer;
+var $;
+
+layui.use(['jquery', 'layer','form','colorpicker'], function(){
+  $ = layui.$;
+  var form = layui.form;
+
+  	var colorpicker = layui.colorpicker;
+
+    //表单赋值
+	/*var wepro_tabbar_selectedColor = '<?php echo ($data["wepro_tabbar_selectedColor"]); ?>';
+   colorpicker.render({
+     elem: '#minicolors'
+     ,color: wepro_tabbar_selectedColor ? wepro_tabbar_selectedColor : '#F75451'
+     ,done: function(color){
+       $('#test-colorpicker-form-input').val(color);
+     }
+   });
+
+   var wepro_tabbar_bgColor = '<?php echo ($data["wepro_tabbar_bgColor"]); ?>';
+   colorpicker.render({
+     elem: '#minicolors2'
+     ,color: wepro_tabbar_bgColor ? wepro_tabbar_bgColor : '#FFFFFF'
+     ,done: function(color){
+       $('#test-colorpicker-form-input2').val(color);
+     }
+   });*/
+
+    form.on('radio(linktype)', function(data){
+		if (data.value == 2) {
+			$('#linkGroup').show();
+			$('#appidGroup').show();
+		} else if(data.value == 3 || data.value == 4 || data.value == 5 || data.value == 6 || data.value == 7 || data.value == 8 || data.value == 9 || data.value == 10 || data.value == 11 || data.value == 12){
+			$('#linkGroup').hide();
+			$('#appidGroup').hide();
+		} else {
+			$('#linkGroup').show();
+			$('#appidGroup').hide();
+		}
+	});
+
+	$('#chose_link').click(function(){
+		cur_open_div = $(this).attr('data-input');
+		$.post("<?php echo U('util/selecturl', array('ok' => 1));?>", {}, function(shtml){
+		 layer.open({
+			type: 1,
+			area: '700px',
+			content: shtml //注意，如果str是object，那么需要字符拼接。
+		  });
+		});
+	})
+
+  	//监听提交
+  	form.on('submit(formDemo)', function(data){
+
+	 $.ajax({
+		url: data.form.action,
+		type: data.form.method,
+		data: data.field,
+		dataType:'json',
+		success: function (info) {
+
+			if(info.status == 0)
+			{
+				layer.msg(info.result.message,{icon: 1,time: 2000});
+			}else if(info.status == 1){
+				var go_url = location.href;
+				if( info.result.hasOwnProperty("url") )
+				{
+					go_url = info.result.url;
+				}
+
+				layer.msg('操作成功',{time: 1000,
+					end:function(){
+						location.href = info.result.url;
+					}
+				});
+			}
+		}
+	});
+
+    return false;
+  });
+})
+
+
+
+</script>
+</body>

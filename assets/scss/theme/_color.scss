@@ -1,0 +1,199 @@
+/**=====================
+     07. Color CSS Start
+==========================**/
+.color-box{
+  margin-bottom: -10px;
+  > div{
+    >div{
+      border-radius: 15px;
+    }
+  }
+}
+.bottom-color-space {
+  margin-bottom: -30px;
+}
+
+// primary Color
+$m-val:13;
+$or: $primary-color;
+@while $m-val >=1 {
+  .primary-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 1.5%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//primary Color
+
+// secondary Color
+$m-val:13;
+$or: $secondary-color;
+@while $m-val >=1 {
+  .secondary-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 1%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//secondary Color
+
+//Success Color
+$m-val:13;
+$or:$success-color;
+@while $m-val >=1 {
+  .success-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 3%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//Success Color
+
+// Info Color
+$m-val:13;
+$or: $info-color;
+@while $m-val >=1 {
+  .info-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 2.5%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//Info Color
+
+// warning Color
+$m-val:13;
+$or:  $warning-color;
+@while $m-val >=1 {
+  .yellow-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 3%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//warning Color
+
+//Danger Color
+$m-val:13;
+$or:$danger-color;
+@while $m-val >=1 {
+  .red-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 2%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//Danger Color
+
+//Pink Color
+$m-val:13;
+$or:#e6155e;
+@while $m-val >=1 {
+  .pink-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 3%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//Pink Color
+
+
+// Gray Color
+$m-val:13;
+$or: $dark-gray;
+@while $m-val >=1 {
+  .gray-color ul li:nth-child(#{$m-val}) {
+    $or: lighten($or, 3%);
+    background-color: $or;
+    padding: 10px 15px;
+    span:before {
+      content: "#{$or}";
+      display: block;
+      color: $white;
+      text-align: center;
+    }
+    $m-val: $m-val - 1;
+  }
+}
+//gray Color
+
+// gradient color
+.default-text {
+  color: $theme-default-color;
+}
+.gradient-primary {
+  background-image: $gradient-primary;
+  color: $white;
+  box-shadow: 2px 12px 26px 3px rgba($primary-color, 0.3);
+}
+.gradient-secondary {
+  background-image: $gradient-secondary;
+  box-shadow: 2px 12px 26px 3px rgba($secondary-color, 0.3);
+  color: $white;
+}
+.gradient-success {
+  background-image: $gradient-success;
+  box-shadow: 2px 12px 26px 3px rgba($success-color, 0.3);
+}
+.gradient-warning {
+  background-image: $gradient-warning;
+  box-shadow: 2px 12px 26px 3px rgba($warning-color, 0.3);
+}
+.gradient-info {
+  background-image: $gradient-info;
+  box-shadow: 2px 12px 26px 3px rgba($info-color, 0.3);
+}
+
+/**=====================
+     07. Color CSS Ends
+==========================**/
+

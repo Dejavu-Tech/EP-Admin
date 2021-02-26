@@ -1,0 +1,222 @@
+/*====todo css start====*/
+.todo .action-box {
+  background: transparent;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: all 300ms ease; }
+  .todo .action-box .icon {
+    vertical-align: 0; }
+  .todo .action-box.completed {
+    background: #fd517d;
+    border: 1px solid #fd517d;
+    border-radius: 4px; }
+    .todo .action-box.completed .icon {
+      color: #fff;
+      font-size: 14px; }
+  .todo .action-box.large {
+    height: 30px;
+    width: 30px; }
+    .todo .action-box.large .icon {
+      font-size: 20px;
+      vertical-align: -5px; }
+      .todo .action-box.large .icon .icon-trash {
+        color: #7e37d8; }
+      .todo .action-box.large .icon .icon-check {
+        color: #7e37d8; }
+.todo .todo-list-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box; }
+  .todo .todo-list-wrapper .mark-all-tasks {
+    position: absolute;
+    top: 30px;
+    right: 30px; }
+    .todo .todo-list-wrapper .mark-all-tasks .mark-all-tasks-container {
+      overflow: hidden;
+      position: relative; }
+    .todo .todo-list-wrapper .mark-all-tasks .mark-all-btn {
+      cursor: pointer;
+      display: inline-block;
+      transition: all 200ms ease; }
+      .todo .todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-finished {
+        color: #fd517d; }
+      .todo .todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-incomplete {
+        color: #80cf00; }
+        .todo .todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-incomplete .action-box {
+          border: 2px solid #80cf00;
+          border-radius: 4px; }
+          .todo .todo-list-wrapper .mark-all-tasks .mark-all-btn#mark-all-incomplete .action-box .icon {
+            color: #80cf00; }
+      .todo .todo-list-wrapper .mark-all-tasks .mark-all-btn.move-up {
+        transform: translateY(-30px);
+        position: absolute;
+        right: 0; }
+      .todo .todo-list-wrapper .mark-all-tasks .mark-all-btn.move-down {
+        transform: translateY(30px);
+        position: absolute;
+        right: 0; }
+    .todo .todo-list-wrapper .mark-all-tasks .btn-label {
+      margin-right: 5px;
+      font-weight: 600; }
+  .todo .todo-list-wrapper .todo-list-footer {
+    position: relative; }
+    .todo .todo-list-wrapper .todo-list-footer h5 {
+      text-align: center;
+      color: #efefef; }
+    .todo .todo-list-wrapper .todo-list-footer .add-task-btn-wrapper {
+      padding-top: 30px; }
+    .todo .todo-list-wrapper .todo-list-footer .add-task-btn.hide {
+      opacity: 0;
+      display: none; }
+    .todo .todo-list-wrapper .todo-list-footer .add-task-btn:hover {
+      background: #7e37d8; }
+      .todo .todo-list-wrapper .todo-list-footer .add-task-btn:hover .icon {
+        color: #f8f5fd; }
+    .todo .todo-list-wrapper .todo-list-footer .add-task-btn .icon {
+      color: #7e37d8;
+      font-size: 20px; }
+    .todo .todo-list-wrapper .todo-list-footer .new-task-wrapper {
+      transition: all 300ms ease;
+      max-height: 0;
+      overflow: hidden; }
+      .todo .todo-list-wrapper .todo-list-footer .new-task-wrapper textarea {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #f8f5fd;
+        height: 90px;
+        padding: 10px 15px;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        transition: all 300ms ease; }
+        .todo .todo-list-wrapper .todo-list-footer .new-task-wrapper textarea:focus {
+          border: 1px solid #efefef;
+          outline: none; }
+        .todo .todo-list-wrapper .todo-list-footer .new-task-wrapper textarea.error {
+          border: 1px solid #fd517d;
+          outline: none; }
+      .todo .todo-list-wrapper .todo-list-footer .new-task-wrapper .error-message {
+        color: #fd517d;
+        font-style: italic; }
+      .todo .todo-list-wrapper .todo-list-footer .new-task-wrapper.visible {
+        max-height: 300px;
+        overflow: auto; }
+    .todo .todo-list-wrapper .todo-list-footer .new-task-wrapper::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .todo .todo-list-wrapper .todo-list-body {
+    max-height: 500px;
+    overflow: auto; }
+  .todo .todo-list-wrapper #todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .todo .todo-list-wrapper #todo-list .task:first-child .task-container {
+      padding-top: 0; }
+      .todo .todo-list-wrapper #todo-list .task:first-child .task-container h4 {
+        padding-top: 0; }
+    .todo .todo-list-wrapper #todo-list li {
+      margin: 0;
+      padding: 0; }
+      .todo .todo-list-wrapper #todo-list li .task-container {
+        display: table;
+        background: #fff;
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid #f8f5fd;
+        box-sizing: border-box;
+        position: relative;
+        transition: background 200ms ease; }
+        .todo .todo-list-wrapper #todo-list li .task-container .task-label {
+          display: block;
+          font-size: 17px;
+          vertical-align: middle;
+          color: #898989;
+          word-break: break-all;
+          padding-top: 5px; }
+        .todo .todo-list-wrapper #todo-list li .task-container .task-action-btn {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: right;
+          min-width: 65px; }
+          .todo .todo-list-wrapper #todo-list li .task-container .task-action-btn .action-box {
+            margin-left: 5px;
+            margin-top: 2px;
+            border: 1px solid transparent;
+            margin-bottom: 2px; }
+            .todo .todo-list-wrapper #todo-list li .task-container .task-action-btn .action-box:hover {
+              border: 1px solid #aaaaaa;
+              background: #fff;
+              border-radius: 4px; }
+              .todo .todo-list-wrapper #todo-list li .task-container .task-action-btn .action-box:hover .icon {
+                color: #aaaaaa; }
+        .todo .todo-list-wrapper #todo-list li .task-container:hover h4 {
+          color: #2c323f;
+          transition: all 0.3s ease; }
+      .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn {
+        border: 1px solid #80cf00;
+        border-radius: 4px; }
+        .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn .icon {
+          font-weight: bold; }
+        .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn:hover {
+          background: #fff;
+          border: 1px solid #80cf00; }
+          .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn:hover .icon {
+            color: #fff; }
+      .todo .todo-list-wrapper #todo-list li.completed .task-container .task-label {
+        text-decoration: line-through;
+        color: #7e37d8; }
+      .todo .todo-list-wrapper #todo-list li.new .task-container {
+        animation: taskHighlighter 2000ms linear 1; }
+  .todo .todo-list-wrapper .todo-list-header h5 {
+    text-align: center;
+    color: #efefef; }
+.todo .notification-popup {
+  position: fixed;
+  top: 85px;
+  right: 10px;
+  width: 300px;
+  display: inline-block;
+  background: #80cf00;
+  border: 1px solid #80cf00;
+  color: #fff;
+  padding: 20px;
+  opacity: 0.9;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transition: all 300ms ease; }
+  .todo .notification-popup.success {
+    background: #80cf00;
+    border: 1px solid #80cf00; }
+  .todo .notification-popup p {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .todo .notification-popup .task {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block; }
+  .todo .notification-popup .notification-text {
+    font-size: 14px;
+    display: inline-block;
+    overflow: hidden; }
+  .todo .notification-popup.hide {
+    opacity: 0;
+    visibility: hidden; }
+@-webkit-keyframes taskHighlighter {
+  0% {
+    background: rgba(68, 102, 242, 0.5); }
+  100% {
+    background: #fff; } }
+@keyframes taskHighlighter {
+  0% {
+    background: rgba(68, 102, 242, 0.5); }
+  100% {
+    background: #fff; } }
+/*====todo css end====*/
+
+/*# sourceMappingURL=todo.css.map */

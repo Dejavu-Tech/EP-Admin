@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="哈密" code="652200">
+<county name="哈密" code="652201">
+    <street name="东河区街道" code="652201001" />
+    <street name="西河区街道" code="652201002" />
+    <street name="新市区街道" code="652201003" />
+    <street name="丽园街道" code="652201004" />
+    <street name="石油新城街道" code="652201005" />
+    <street name="雅满苏镇" code="652201100" />
+    <street name="七角井镇" code="652201101" />
+    <street name="星星峡镇" code="652201102" />
+    <street name="二堡镇" code="652201103" />
+    <street name="陶家宫镇" code="652201104" />
+    <street name="五堡镇" code="652201105" />
+    <street name="沁城乡" code="652201200" />
+    <street name="乌拉台哈萨克民族乡" code="652201201" />
+    <street name="双井子乡" code="652201202" />
+    <street name="大泉湾乡" code="652201203" />
+    <street name="回城乡" code="652201205" />
+    <street name="花园乡" code="652201206" />
+    <street name="南湖乡" code="652201207" />
+    <street name="德外里都如克哈萨克乡" code="652201209" />
+    <street name="西山乡" code="652201210" />
+    <street name="天山乡" code="652201211" />
+    <street name="白石头乡" code="652201212" />
+    <street name="柳树沟乡" code="652201214" />
+    <street name="三道岭矿区" code="652201401" />
+    <street name="巴里坤县山南开发区" code="652201402" />
+    <street name="伊吾县山南开发区管委会" code="652201403" />
+    <street name="西戈壁农业综合开发区" code="652201404" />
+    <street name="哈密伊吾马场" code="652201405" />
+    <street name="哈密工业园区" code="652201406" />
+    <street name="兵团红星一场" code="652201500" />
+    <street name="兵团红星二场" code="652201501" />
+    <street name="兵团红星四场" code="652201502" />
+    <street name="兵团黄田农场" code="652201503" />
+    <street name="兵团火箭农场" code="652201504" />
+    <street name="兵团柳树泉农场" code="652201505" />
+</county>
+<county name="巴里坤" code="652222">
+    <street name="巴里坤镇" code="652222100" />
+    <street name="博尔羌吉镇" code="652222101" />
+    <street name="大河镇" code="652222102" />
+    <street name="奎苏镇" code="652222103" />
+    <street name="萨尔乔克乡" code="652222200" />
+    <street name="海子沿乡" code="652222201" />
+    <street name="下涝坝乡" code="652222202" />
+    <street name="石人子乡" code="652222205" />
+    <street name="花园乡" code="652222206" />
+    <street name="三塘湖乡" code="652222207" />
+    <street name="大红柳峡乡" code="652222208" />
+    <street name="八墙子乡" code="652222209" />
+    <street name="良种繁育场" code="652222400" />
+    <street name="黄土场开发区" code="652222401" />
+    <street name="兵团红山农场" code="652222500" />
+</county>
+<county name="伊吾" code="652223">
+    <street name="伊吾镇" code="652223100" />
+    <street name="淖毛湖镇" code="652223101" />
+    <street name="盐池镇" code="652223102" />
+    <street name="苇子峡乡" code="652223201" />
+    <street name="下马崖乡" code="652223202" />
+    <street name="吐葫芦乡" code="652223204" />
+    <street name="前山哈萨克民族乡" code="652223205" />
+    <street name="兵团淖毛湖农场" code="652223500" />
+</county>
+</city>
+</address>

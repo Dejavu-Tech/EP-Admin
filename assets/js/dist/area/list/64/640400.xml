@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="固原" code="640400">
+<county name="原州" code="640402">
+    <street name="南关街道" code="640402001" />
+    <street name="新区街道" code="640402002" />
+    <street name="北塬街道" code="640402003" />
+    <street name="三营镇" code="640402100" />
+    <street name="官厅镇" code="640402103" />
+    <street name="开城镇" code="640402104" />
+    <street name="张易镇" code="640402105" />
+    <street name="彭堡镇" code="640402106" />
+    <street name="头营镇" code="640402107" />
+    <street name="黄铎堡镇" code="640402108" />
+    <street name="中河乡" code="640402200" />
+    <street name="河川乡" code="640402201" />
+    <street name="炭山乡" code="640402204" />
+    <street name="寨科乡" code="640402205" />
+</county>
+<county name="西吉" code="640422">
+    <street name="吉强镇" code="640422100" />
+    <street name="兴隆镇" code="640422101" />
+    <street name="平峰镇" code="640422102" />
+    <street name="新营乡" code="640422200" />
+    <street name="红耀乡" code="640422201" />
+    <street name="田坪乡" code="640422202" />
+    <street name="马建乡" code="640422203" />
+    <street name="震湖乡" code="640422204" />
+    <street name="兴平乡" code="640422205" />
+    <street name="西滩乡" code="640422206" />
+    <street name="王民乡" code="640422207" />
+    <street name="什字乡" code="640422208" />
+    <street name="马莲乡" code="640422209" />
+    <street name="将台乡" code="640422210" />
+    <street name="硝河乡" code="640422211" />
+    <street name="偏城乡" code="640422212" />
+    <street name="沙沟乡" code="640422213" />
+    <street name="白崖乡" code="640422214" />
+    <street name="火石寨乡" code="640422215" />
+</county>
+<county name="隆德" code="640423">
+    <street name="六盘山街道" code="640423001" />
+    <street name="城关镇" code="640423100" />
+    <street name="沙塘镇" code="640423101" />
+    <street name="联财镇" code="640423102" />
+    <street name="陈靳乡" code="640423200" />
+    <street name="好水乡" code="640423201" />
+    <street name="观庄乡" code="640423202" />
+    <street name="杨河乡" code="640423203" />
+    <street name="神林乡" code="640423204" />
+    <street name="张程乡" code="640423205" />
+    <street name="凤岭乡" code="640423206" />
+    <street name="山河乡" code="640423207" />
+    <street name="温堡乡" code="640423208" />
+    <street name="奠安乡" code="640423209" />
+</county>
+<county name="泾源" code="640424">
+    <street name="香水镇" code="640424100" />
+    <street name="泾河源镇" code="640424101" />
+    <street name="六盘山镇" code="640424102" />
+    <street name="新民乡" code="640424200" />
+    <street name="兴盛乡" code="640424201" />
+    <street name="黄花乡" code="640424202" />
+    <street name="大湾乡" code="640424203" />
+</county>
+<county name="彭阳" code="640425">
+    <street name="白阳镇" code="640425100" />
+    <street name="王洼镇" code="640425101" />
+    <street name="古城镇" code="640425102" />
+    <street name="新集乡" code="640425200" />
+    <street name="城阳乡" code="640425201" />
+    <street name="红河乡" code="640425202" />
+    <street name="冯庄乡" code="640425203" />
+    <street name="小岔乡" code="640425204" />
+    <street name="孟塬乡" code="640425205" />
+    <street name="罗洼乡" code="640425206" />
+    <street name="交岔乡" code="640425207" />
+    <street name="草庙乡" code="640425208" />
+</county>
+</city>
+</address>

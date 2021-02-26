@@ -1,0 +1,67 @@
+/*
+Error: Invalid GBK character "\xE2"
+        on line 553 of simple-mde/_simplemde.scss
+        from line 1 of simple-mde.scss
+
+548:     }
+549:     &.fa-header-3:after {
+550:       content: "3";
+551:     }
+552:     &.fa-header-bigger:after {
+553:       content: "▲";
+554:     }
+555:     &.fa-header-smaller:after {
+556:       content: "▼";
+557:     }
+558:   }
+
+Backtrace:
+simple-mde/_simplemde.scss:553
+simple-mde.scss:1
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1090:in `rescue in block in find_encoding_error'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1087:in `block in find_encoding_error'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each_with_index'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `find_encoding_error'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:814:in `check_sass_encoding'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:444:in `check_encoding!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:400:in `_to_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:321:in `to_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/bin/scss:13:in `<top (required)>'
+C:/Ruby23-x64/bin/scss:22:in `load'
+C:/Ruby23-x64/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE2\"\A         on line 553 of simple-mde/_simplemde.scss\A         from line 1 of simple-mde.scss\A \A 548:     }\A 549:     &.fa-header-3:after {\A 550:       content: \"3\";\A 551:     }\A 552:     &.fa-header-bigger:after {\A 553:       content: \"▲\";\A 554:     }\A 555:     &.fa-header-smaller:after {\A 556:       content: \"▼\";\A 557:     }\A 558:   }"; }

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="曲靖" code="530300">
+<county name="麒麟" code="530302">
+    <street name="南宁街道" code="530302001" />
+    <street name="建宁街道" code="530302002" />
+    <street name="白石江街道" code="530302003" />
+    <street name="寥廓街道" code="530302004" />
+    <street name="西城街道" code="530302005" />
+    <street name="三宝镇" code="530302101" />
+    <street name="越州镇" code="530302102" />
+    <street name="东山镇" code="530302103" />
+    <street name="珠街乡" code="530302201" />
+    <street name="沿江乡" code="530302202" />
+    <street name="茨营乡" code="530302203" />
+</county>
+<county name="马龙" code="530321">
+    <street name="通泉镇" code="530321101" />
+    <street name="旧县镇" code="530321102" />
+    <street name="马过河镇" code="530321103" />
+    <street name="王家庄镇" code="530321104" />
+    <street name="纳章镇" code="530321105" />
+    <street name="马鸣乡" code="530321201" />
+    <street name="大庄乡" code="530321202" />
+    <street name="月望乡" code="530321203" />
+</county>
+<county name="陆良" code="530322">
+    <street name="中枢镇" code="530322101" />
+    <street name="板桥镇" code="530322102" />
+    <street name="三岔河镇" code="530322103" />
+    <street name="马街镇" code="530322104" />
+    <street name="召夸镇" code="530322105" />
+    <street name="大莫古镇" code="530322106" />
+    <street name="芳华镇" code="530322107" />
+    <street name="小百户镇" code="530322108" />
+    <street name="活水乡" code="530322201" />
+    <street name="龙海乡" code="530322202" />
+    <street name="陆良华侨管理区（镇）" code="530322501" />
+</county>
+<county name="师宗" code="530323">
+    <street name="丹凤镇" code="530323101" />
+    <street name="雄壁镇" code="530323102" />
+    <street name="葵山镇" code="530323103" />
+    <street name="彩云镇" code="530323104" />
+    <street name="竹基镇" code="530323105" />
+    <street name="龙庆乡" code="530323202" />
+    <street name="五龙乡" code="530323203" />
+    <street name="高良乡" code="530323204" />
+</county>
+<county name="罗平" code="530324">
+    <street name="罗雄镇" code="530324101" />
+    <street name="板桥镇" code="530324102" />
+    <street name="马街镇" code="530324103" />
+    <street name="富乐镇" code="530324104" />
+    <street name="九龙镇" code="530324105" />
+    <street name="阿岗镇" code="530324106" />
+    <street name="大水井乡" code="530324201" />
+    <street name="鲁布革乡" code="530324202" />
+    <street name="旧屋基乡" code="530324203" />
+    <street name="钟山乡" code="530324204" />
+    <street name="长底乡" code="530324205" />
+    <street name="老厂乡" code="530324206" />
+</county>
+<county name="富源" code="530325">
+    <street name="中安镇" code="530325101" />
+    <street name="营上镇" code="530325102" />
+    <street name="黄泥河镇" code="530325103" />
+    <street name="竹园镇" code="530325104" />
+    <street name="后所镇" code="530325105" />
+    <street name="大河镇" code="530325106" />
+    <street name="墨红镇" code="530325107" />
+    <street name="富村镇" code="530325108" />
+    <street name="十八连山镇" code="530325109" />
+    <street name="老厂镇" code="530325110" />
+    <street name="古敢乡" code="530325201" />
+</county>
+<county name="会泽" code="530326">
+    <street name="金钟镇" code="530326101" />
+    <street name="娜姑镇" code="530326102" />
+    <street name="迤车镇" code="530326103" />
+    <street name="乐业镇" code="530326104" />
+    <street name="矿山镇" code="530326105" />
+    <street name="者海镇" code="530326106" />
+    <street name="大井镇" code="530326107" />
+    <street name="待补镇" code="530326108" />
+    <street name="大海乡" code="530326201" />
+    <street name="老厂乡" code="530326202" />
+    <street name="五星乡" code="530326203" />
+    <street name="大桥乡" code="530326204" />
+    <street name="纸厂乡" code="530326205" />
+    <street name="马路乡" code="530326206" />
+    <street name="火红乡" code="530326207" />
+    <street name="新街乡" code="530326208" />
+    <street name="雨碌乡" code="530326209" />
+    <street name="鲁纳乡" code="530326210" />
+    <street name="上村乡" code="530326211" />
+    <street name="驾车乡" code="530326212" />
+    <street name="田坝乡" code="530326213" />
+</county>
+<county name="沾益" code="530328">
+    <street name="花山街道" code="530328001" />
+    <street name="西平镇" code="530328101" />
+    <street name="白水镇" code="530328102" />
+    <street name="盘江镇" code="530328103" />
+    <street name="炎方乡" code="530328201" />
+    <street name="播乐乡" code="530328202" />
+    <street name="大坡乡" code="530328203" />
+    <street name="菱角乡" code="530328204" />
+    <street name="德泽乡" code="530328205" />
+</county>
+<county name="宣威" code="530381">
+    <street name="宛水街道" code="530381001" />
+    <street name="西宁街道" code="530381002" />
+    <street name="双龙街道" code="530381003" />
+    <street name="虹桥街道" code="530381004" />
+    <street name="来宾镇" code="530381101" />
+    <street name="格宜镇" code="530381102" />
+    <street name="田坝镇" code="530381103" />
+    <street name="羊场镇" code="530381104" />
+    <street name="板桥镇" code="530381105" />
+    <street name="倘塘镇" code="530381106" />
+    <street name="落水镇" code="530381107" />
+    <street name="务德镇" code="530381108" />
+    <street name="海岱镇" code="530381109" />
+    <street name="龙场镇" code="530381110" />
+    <street name="龙潭镇" code="530381111" />
+    <street name="热水镇" code="530381112" />
+    <street name="宝山镇" code="530381113" />
+    <street name="东山镇" code="530381114" />
+    <street name="普立乡" code="530381201" />
+    <street name="西泽乡" code="530381202" />
+    <street name="得禄乡" code="530381203" />
+    <street name="杨柳乡" code="530381204" />
+    <street name="双河乡" code="530381205" />
+    <street name="乐丰乡" code="530381206" />
+    <street name="文兴乡" code="530381207" />
+    <street name="阿都乡" code="530381208" />
+</county>
+</city>
+</address>

@@ -1,0 +1,83 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var radial_chart_tooltip  = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | Radial
+                                      span
+                                        | Chart
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Charts
+                                      li.breadcrumb-item.active Radial Chart
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-12.col-xl-12
+                          .card
+                            .card-header
+                              h5 Radial Variants
+                            .card-body.redial-chart-block
+                              .radial-bar.radial-bar-10.radial-bar-lg.radial-bar-primary.mr-3(data-label='10%')
+                              .radial-bar.radial-bar-30.radial-bar-lg.radial-bar-secondary.mr-3(data-label='30%')
+                              .radial-bar.radial-bar-50.radial-bar-lg.radial-bar-success.mr-3(data-label='50%')
+                              .radial-bar.radial-bar-70.radial-bar-lg.mr-3(data-label='70%', class='.radial-bar-info')
+                              .radial-bar.radial-bar-90.radial-bar-lg.radial-bar-warning.mr-3(data-label='90%')
+                              .radial-bar.radial-bar-100.radial-bar-lg.radial-bar-danger.mr-3(data-label='100%')
+                        .col-sm-12.col-xl-6
+                          .card
+                            .card-header
+                              h5 Radial Sizes
+                            .card-body.redial-chart-block
+                              .radial-bar.radial-bar-50.radial-bar-lg.radial-bar-primary.mr-3(data-label='50%')
+                              .radial-bar.radial-bar-40.radial-bar-secondary.mr-3(data-label='40%')
+                              .radial-bar.radial-bar-40.radial-bar-sm.radial-bar-success.mr-3(data-label='40%')
+                              .radial-bar.radial-bar-30.radial-bar-xs.radial-bar-info.mr-3(data-label='30%')
+                        .col-sm-12.col-xl-6
+                          .card
+                            .card-header
+                              h5 Radial With Images
+                            .card-body.redial-chart-block
+                              .radial-bar.radial-bar-50.radial-bar-lg.radial-bar-primary.mr-3(data-label='50%')
+                                img(src='../assets/images/user/1.jpg', alt='User-Image')
+                              .radial-bar.radial-bar-50.radial-bar-secondary.mr-3(data-label='50%')
+                                img(src='../assets/images/user/1.jpg', alt='User-Image')
+                              .radial-bar.radial-bar-40.radial-bar-sm.radial-bar-success.mr-3(data-label='40%')
+                                img(src='../assets/images/user/1.jpg', alt='User-Image')
+                              .radial-bar.radial-bar-30.radial-bar-xs.radial-bar-info.mr-3(data-label='30%')
+                                img(src='../assets/images/user/1.jpg', alt='User-Image')
+                        .col-sm-12.col-xl-12
+                          .card
+                            .card-header
+                              h5 Radial With Toopltip
+                            .card-body.redial-chart-block
+                              .radial-bar.radial-bar-10.radial-bar-lg.radial-bar-primary.mr-3(data-label='10%', data-toggle='tooltip', data-title='10%')
+                              .radial-bar.radial-bar-30.radial-bar-lg.radial-bar-secondary.mr-3(data-label='30%', data-toggle='tooltip', data-title='30%')
+                              .radial-bar.radial-bar-50.radial-bar-lg.radial-bar-success.mr-3(data-label='50%', data-toggle='tooltip', data-title='50%')
+                              .radial-bar.radial-bar-70.radial-bar-lg.radial-bar-info.mr-3(data-label='70%', data-toggle='tooltip', data-title='70%')
+                              .radial-bar.radial-bar-90.radial-bar-lg.radial-bar-warning.mr-3(data-label='90%', data-toggle='tooltip', data-title='90%')
+                              .radial-bar.radial-bar-100.radial-bar-lg.radial-bar-danger.mr-3(data-label='100%', data-toggle='tooltip', data-title='100%')
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

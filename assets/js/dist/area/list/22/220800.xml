@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="白城" code="220800">
+<county name="洮北" code="220802">
+    <street name="海明街道" code="220802001" />
+    <street name="长庆街道" code="220802002" />
+    <street name="瑞光街道" code="220802003" />
+    <street name="明仁街道" code="220802004" />
+    <street name="铁东街道" code="220802005" />
+    <street name="城南街道办事处（工业园区）" code="220802006" />
+    <street name="新立街道" code="220802007" />
+    <street name="幸福街道办事处（白城经济开发区）" code="220802008" />
+    <street name="新华街道" code="220802009" />
+    <street name="保平街道办事处（白城经济开发区）" code="220802010" />
+    <street name="西郊街道办事处（白城经济开发区）" code="220802011" />
+    <street name="平安镇" code="220802100" />
+    <street name="青山镇" code="220802101" />
+    <street name="林海镇" code="220802102" />
+    <street name="洮河镇" code="220802103" />
+    <street name="平台镇" code="220802104" />
+    <street name="到保镇" code="220802105" />
+    <street name="岭下镇（查干浩特旅游经济开发区）（省级）" code="220802170" />
+    <street name="东风乡" code="220802200" />
+    <street name="三合乡" code="220802201" />
+    <street name="东胜乡" code="220802202" />
+    <street name="金祥乡" code="220802203" />
+    <street name="德顺蒙古族乡" code="220802204" />
+    <street name="镇南种羊场" code="220802402" />
+    <street name="白城牧场" code="220802403" />
+    <street name="洮儿河农场" code="220802404" />
+    <street name="保民农场" code="220802405" />
+    <street name="到保林场" code="220802406" />
+</county>
+<county name="镇赉" code="220821">
+    <street name="镇赉镇" code="220821100" />
+    <street name="坦途镇" code="220821101" />
+    <street name="东屏镇" code="220821102" />
+    <street name="大屯镇" code="220821103" />
+    <street name="沿江镇" code="220821104" />
+    <street name="五棵树镇" code="220821105" />
+    <street name="黑鱼泡镇" code="220821106" />
+    <street name="哈吐气蒙古族乡" code="220821200" />
+    <street name="莫莫格蒙古族乡" code="220821201" />
+    <street name="建平乡" code="220821202" />
+    <street name="嘎什根乡" code="220821203" />
+    <street name="四方坨子农场" code="220821400" />
+    <street name="白音套海牧场" code="220821401" />
+    <street name="县种猪场" code="220821402" />
+    <street name="九龙山马场" code="220821403" />
+    <street name="莫莫格林场" code="220821404" />
+    <street name="大岗林场" code="220821405" />
+    <street name="国营渔场" code="220821406" />
+    <street name="到保农场" code="220821407" />
+</county>
+<county name="通榆" code="220822">
+    <street name="开通镇" code="220822100" />
+    <street name="瞻榆镇" code="220822101" />
+    <street name="双岗镇" code="220822102" />
+    <street name="兴隆山镇" code="220822103" />
+    <street name="边昭镇" code="220822104" />
+    <street name="鸿兴镇" code="220822105" />
+    <street name="新华镇" code="220822106" />
+    <street name="乌兰花镇" code="220822107" />
+    <street name="新发乡" code="220822200" />
+    <street name="新兴乡" code="220822201" />
+    <street name="向海蒙古族乡" code="220822202" />
+    <street name="包拉温都蒙古族乡" code="220822203" />
+    <street name="团结乡" code="220822204" />
+    <street name="十花道乡" code="220822205" />
+    <street name="八面乡" code="220822206" />
+    <street name="苏公坨乡" code="220822207" />
+    <street name="通榆经济开发区" code="220822400" />
+    <street name="三家子种牛场" code="220822401" />
+    <street name="良井子畜牧场" code="220822402" />
+    <street name="双岗鹿场" code="220822403" />
+    <street name="同发牧场" code="220822404" />
+    <street name="新华牛场" code="220822405" />
+</county>
+<county name="洮南" code="220881">
+    <street name="团结街道" code="220881001" />
+    <street name="富文街道" code="220881002" />
+    <street name="光明街道" code="220881003" />
+    <street name="兴隆街道" code="220881004" />
+    <street name="永康街道" code="220881005" />
+    <street name="通达街道" code="220881006" />
+    <street name="洮府街道" code="220881007" />
+    <street name="向阳街道" code="220881008" />
+    <street name="瓦房镇" code="220881100" />
+    <street name="万宝镇" code="220881101" />
+    <street name="黑水镇" code="220881102" />
+    <street name="那金镇" code="220881103" />
+    <street name="安定镇" code="220881104" />
+    <street name="福顺镇" code="220881105" />
+    <street name="胡力吐蒙古族乡" code="220881200" />
+    <street name="万宝乡" code="220881201" />
+    <street name="聚宝乡" code="220881202" />
+    <street name="东升乡" code="220881203" />
+    <street name="野马乡" code="220881204" />
+    <street name="永茂乡" code="220881205" />
+    <street name="蛟流河乡" code="220881206" />
+    <street name="大通乡" code="220881207" />
+    <street name="二龙乡" code="220881209" />
+    <street name="呼和车力蒙古族乡" code="220881210" />
+    <street name="东方红畜牧场" code="220881400" />
+    <street name="永茂林场" code="220881401" />
+    <street name="市原种场" code="220881402" />
+</county>
+<county name="大安" code="220882">
+    <street name="慧阳街道" code="220882001" />
+    <street name="临江街道" code="220882002" />
+    <street name="长虹街道" code="220882003" />
+    <street name="锦华街道" code="220882004" />
+    <street name="安北街道" code="220882005" />
+    <street name="月亮泡镇" code="220882100" />
+    <street name="安广镇" code="220882101" />
+    <street name="丰收镇" code="220882102" />
+    <street name="新平安镇" code="220882103" />
+    <street name="两家子镇" code="220882104" />
+    <street name="舍力镇" code="220882105" />
+    <street name="大岗子镇" code="220882106" />
+    <street name="叉干镇" code="220882107" />
+    <street name="龙沼镇" code="220882108" />
+    <street name="太山镇" code="220882109" />
+    <street name="烧锅镇" code="220882110" />
+    <street name="乐胜镇" code="220882111" />
+    <street name="四棵树乡" code="220882200" />
+    <street name="联合乡" code="220882201" />
+    <street name="大赉乡" code="220882202" />
+    <street name="红岗子乡" code="220882203" />
+    <street name="海坨乡" code="220882204" />
+    <street name="新艾里蒙古族乡" code="220882205" />
+    <street name="大安经济开发区（省级）" code="220882400" />
+    <street name="新荒渔场" code="220882401" />
+    <street name="东方红农场" code="220882402" />
+    <street name="舍力林场" code="220882403" />
+    <street name="五间房水库" code="220882404" />
+    <street name="大岗子林场" code="220882405" />
+    <street name="风水山牧场" code="220882406" />
+    <street name="东风马场" code="220882407" />
+    <street name="良种繁育场" code="220882408" />
+    <street name="大安马场" code="220882409" />
+    <street name="安广猪场" code="220882410" />
+    <street name="红旗饲养场" code="220882411" />
+</county>
+</city>
+</address>

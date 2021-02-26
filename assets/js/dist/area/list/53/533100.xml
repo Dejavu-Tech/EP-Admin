@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="德宏" code="533100">
+<county name="瑞丽" code="533102">
+    <street name="勐卯镇" code="533102101" />
+    <street name="畹町镇" code="533102102" />
+    <street name="弄岛镇" code="533102103" />
+    <street name="姐相乡" code="533102201" />
+    <street name="户育乡" code="533102202" />
+    <street name="勐秀乡" code="533102203" />
+</county>
+<county name="芒市" code="533103">
+    <street name="勐焕街道" code="533103001" />
+    <street name="芒市镇" code="533103101" />
+    <street name="遮放镇" code="533103102" />
+    <street name="勐戛镇" code="533103103" />
+    <street name="芒海镇" code="533103104" />
+    <street name="风平镇" code="533103105" />
+    <street name="轩岗乡" code="533103201" />
+    <street name="江东乡" code="533103202" />
+    <street name="西山乡" code="533103203" />
+    <street name="中山乡" code="533103204" />
+    <street name="三台山乡" code="533103205" />
+    <street name="五岔路乡" code="533103206" />
+</county>
+<county name="梁河" code="533122">
+    <street name="遮岛镇" code="533122101" />
+    <street name="芒东镇" code="533122102" />
+    <street name="勐养镇" code="533122103" />
+    <street name="平山乡" code="533122201" />
+    <street name="小厂乡" code="533122202" />
+    <street name="大厂乡" code="533122203" />
+    <street name="九保阿昌族乡" code="533122204" />
+    <street name="曩宋阿昌族乡" code="533122205" />
+    <street name="河西乡" code="533122206" />
+</county>
+<county name="盈江" code="533123">
+    <street name="平原镇" code="533123101" />
+    <street name="旧城镇" code="533123102" />
+    <street name="那邦镇" code="533123103" />
+    <street name="弄璋镇" code="533123104" />
+    <street name="盏西镇" code="533123105" />
+    <street name="卡场镇" code="533123106" />
+    <street name="昔马镇" code="533123107" />
+    <street name="太平镇" code="533123108" />
+    <street name="新城乡" code="533123201" />
+    <street name="油松岭乡" code="533123202" />
+    <street name="芒章乡" code="533123203" />
+    <street name="支那乡" code="533123204" />
+    <street name="苏典傈僳族乡" code="533123205" />
+    <street name="勐弄乡" code="533123206" />
+    <street name="铜壁关乡" code="533123207" />
+</county>
+<county name="陇川" code="533124">
+    <street name="章凤镇" code="533124101" />
+    <street name="陇把镇" code="533124102" />
+    <street name="景罕镇" code="533124103" />
+    <street name="城子镇" code="533124104" />
+    <street name="户撒阿昌族乡" code="533124201" />
+    <street name="护国乡" code="533124202" />
+    <street name="清平乡" code="533124203" />
+    <street name="王子树乡" code="533124204" />
+    <street name="勐约乡" code="533124205" />
+</county>
+</city>
+</address>

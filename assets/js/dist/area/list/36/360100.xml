@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="南昌" code="360100">
+<county name="东湖" code="360102">
+    <street name="公园街道" code="360102001" />
+    <street name="滕王阁街道" code="360102002" />
+    <street name="八一桥街道" code="360102003" />
+    <street name="百花洲街道" code="360102004" />
+    <street name="墩子塘街道" code="360102005" />
+    <street name="大院街道" code="360102006" />
+    <street name="豫章街道" code="360102007" />
+    <street name="董家窑街道" code="360102008" />
+    <street name="彭家桥街道" code="360102009" />
+    <street name="沙井街道办事处（红谷滩新区）" code="360102050" />
+    <street name="贤士湖管理处" code="360102400" />
+    <street name="凤凰洲管理处（红谷滩新区）" code="360102450" />
+</county>
+<county name="西湖" code="360103">
+    <street name="南浦街道" code="360103001" />
+    <street name="朝阳洲街道" code="360103002" />
+    <street name="广润门街道" code="360103004" />
+    <street name="西湖街道" code="360103005" />
+    <street name="系马桩街道" code="360103006" />
+    <street name="绳金塔街道" code="360103007" />
+    <street name="丁公路街道" code="360103009" />
+    <street name="南站街道" code="360103010" />
+    <street name="桃源街道" code="360103011" />
+    <street name="十字街街道" code="360103012" />
+    <street name="桃花镇" code="360103101" />
+    <street name="南昌市朝阳农场" code="360103400" />
+</county>
+<county name="青云谱" code="360104">
+    <street name="洪都街道" code="360104002" />
+    <street name="京山街道" code="360104006" />
+    <street name="三家店街道" code="360104007" />
+    <street name="岱山街道" code="360104008" />
+    <street name="徐家坊街道" code="360104009" />
+    <street name="青云谱镇" code="360104100" />
+    <street name="南昌昌南工业园" code="360104400" />
+</county>
+<county name="湾里" code="360105">
+    <street name="站前街道" code="360105001" />
+    <street name="幸福街道" code="360105002" />
+    <street name="招贤镇" code="360105100" />
+    <street name="梅岭镇" code="360105101" />
+    <street name="罗亭镇" code="360105102" />
+    <street name="太平镇" code="360105103" />
+</county>
+<county name="青山湖" code="360111">
+    <street name="青山路街道" code="360111001" />
+    <street name="上海路街道" code="360111003" />
+    <street name="南钢街道" code="360111004" />
+    <street name="京东镇" code="360111100" />
+    <street name="罗家镇" code="360111103" />
+    <street name="湖坊镇" code="360111104" />
+    <street name="塘山镇" code="360111105" />
+    <street name="扬子洲镇" code="360111106" />
+    <street name="蛟桥镇（南昌经济技术开发区）" code="360111180" />
+    <street name="南昌昌东工业区" code="360111400" />
+    <street name="扬农管理处" code="360111402" />
+    <street name="白水湖管理处（南昌经济技术开发区）" code="360111481" />
+    <street name="冠山管理处" code="360111482" />
+    <street name="艾溪湖管理处（南昌高新开发区）" code="360111490" />
+    <street name="湖西新建区（南昌高新开发区）" code="360111493" />
+</county>
+<county name="南昌" code="360121">
+    <street name="莲塘镇" code="360121100" />
+    <street name="向塘镇" code="360121101" />
+    <street name="三江镇" code="360121102" />
+    <street name="塘南镇" code="360121103" />
+    <street name="幽兰镇" code="360121104" />
+    <street name="蒋巷镇" code="360121105" />
+    <street name="武阳镇" code="360121106" />
+    <street name="冈上镇" code="360121107" />
+    <street name="广福镇" code="360121108" />
+    <street name="昌东镇（南昌高新开发区）" code="360121191" />
+    <street name="麻丘镇（南昌高新开发区）" code="360121192" />
+    <street name="泾口乡" code="360121200" />
+    <street name="南新乡" code="360121201" />
+    <street name="塔城乡" code="360121202" />
+    <street name="黄马乡" code="360121203" />
+    <street name="富山乡" code="360121204" />
+    <street name="东新乡" code="360121205" />
+    <street name="八一乡" code="360121206" />
+    <street name="小蓝经济开发区" code="360121403" />
+    <street name="南昌县银三角管理委员会" code="360121471" />
+    <street name="南昌市五星垦殖场" code="360121501" />
+    <street name="江西省良种繁殖场" code="360121572" />
+</county>
+<county name="新建" code="360122">
+    <street name="长堎镇" code="360122100" />
+    <street name="望城镇" code="360122101" />
+    <street name="生米镇（红谷滩新区）" code="360122102" />
+    <street name="西山镇" code="360122103" />
+    <street name="石岗镇" code="360122104" />
+    <street name="松湖镇" code="360122105" />
+    <street name="樵舍镇" code="360122106" />
+    <street name="乐化镇" code="360122107" />
+    <street name="溪霞镇" code="360122108" />
+    <street name="象山镇" code="360122109" />
+    <street name="石埠镇" code="360122110" />
+    <street name="联圩镇" code="360122111" />
+    <street name="流湖乡" code="360122201" />
+    <street name="厚田乡" code="360122202" />
+    <street name="金桥乡" code="360122204" />
+    <street name="铁河乡" code="360122205" />
+    <street name="大塘坪乡" code="360122206" />
+    <street name="昌邑乡" code="360122207" />
+    <street name="南矶乡" code="360122208" />
+    <street name="恒湖垦殖场" code="360122400" />
+    <street name="成新实业有限公司" code="360122402" />
+    <street name="朱港实业有限公司" code="360122403" />
+    <street name="江西长堎外商投资工业区" code="360122404" />
+    <street name="红角洲管理处（红谷滩新区）" code="360122450" />
+    <street name="九龙湖管理处（红谷滩新区）" code="360122451" />
+    <street name="江西桑海集团有限公司（江西桑海经济开发区）" code="360122460" />
+    <street name="新祺周管理处（江西桑海经济技术开发区）" code="360122461" />
+    <street name="新丰垦殖场" code="360122502" />
+</county>
+<county name="安义" code="360123">
+    <street name="龙津镇" code="360123100" />
+    <street name="万埠镇" code="360123101" />
+    <street name="石鼻镇" code="360123102" />
+    <street name="鼎湖镇" code="360123103" />
+    <street name="长埠镇" code="360123104" />
+    <street name="东阳镇" code="360123105" />
+    <street name="黄洲镇" code="360123106" />
+    <street name="乔乐乡" code="360123200" />
+    <street name="长均乡" code="360123201" />
+    <street name="新民乡" code="360123202" />
+    <street name="江西安义工业园区" code="360123402" />
+    <street name="国营万埠垦殖场" code="360123501" />
+    <street name="国营峤岭垦殖场" code="360123502" />
+</county>
+<county name="进贤" code="360124">
+    <street name="民和镇" code="360124100" />
+    <street name="李渡镇" code="360124101" />
+    <street name="温圳镇" code="360124102" />
+    <street name="文港镇" code="360124103" />
+    <street name="梅庄镇" code="360124104" />
+    <street name="张公镇" code="360124105" />
+    <street name="罗溪镇" code="360124106" />
+    <street name="架桥镇" code="360124107" />
+    <street name="前坊镇" code="360124108" />
+    <street name="三里乡" code="360124200" />
+    <street name="二塘乡" code="360124201" />
+    <street name="钟陵乡" code="360124202" />
+    <street name="池溪乡" code="360124203" />
+    <street name="南台乡" code="360124204" />
+    <street name="三阳集乡" code="360124205" />
+    <street name="七里乡" code="360124206" />
+    <street name="下埠集乡" code="360124207" />
+    <street name="衙前乡" code="360124208" />
+    <street name="白圩乡" code="360124209" />
+    <street name="长山晏乡" code="360124210" />
+    <street name="泉岭乡" code="360124211" />
+    <street name="五里垦殖场" code="360124500" />
+</county>
+</city>
+</address>

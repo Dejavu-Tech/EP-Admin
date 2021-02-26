@@ -1,0 +1,66 @@
+
+.switchery {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: content-box;
+  background-clip: content-box;
+  border-color: #dfdfdf; 
+  -webkit-box-shadow:  #dfdfdf 0px 0px 0px 0px inset; 
+               box-shadow: #dfdfdf 0px 0px 0px 0px inset; 
+  -webkit-transition: border 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s ; 
+               transition: border 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s ; 
+  background-color: #fff;
+}
+
+.switchery > small {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  height: 30px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+  left: 0px; 
+  -webkit-transition:background-color 0.4s, left 0.2s;
+               transition: background-color 0.4s, left 0.2s;
+}
+.switchery.checked {
+	border-color: #1ab394; 
+	box-shadow: #1ab394 0px 0px 0px 16px inset;
+	background-color: #1ab394;
+	-webkit-transition: border 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s, background-color 1.2s; 
+	             transition: border 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s, background-color 1.2s; 
+}
+.switchery.checked > small {
+	left: 20px; transition: background-color 0.4s, left 0.2s;
+}
+
+
+.switchery-small {
+  border-radius: 20px;
+  height: 20px;
+  width: 33px;
+}
+
+.switchery-small > small {
+  height: 20px;
+  width: 20px;
+}
+.switchery.switchery-small.checked > small {
+  left: 13px; transition: background-color 0.4s, left 0.2s;
+}
+
+
+

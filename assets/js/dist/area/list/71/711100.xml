@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="新北" code="711100">
+<county name="八里" code="711155">
+</county>
+<county name="板桥" code="711132">
+</county>
+<county name="淡水" code="711156">
+</county>
+<county name="贡寮" code="711139">
+</county>
+<county name="中和" code="711144">
+</county>
+<county name="金山" code="711131">
+</county>
+<county name="林口" code="711152">
+</county>
+<county name="芦洲" code="711153">
+</county>
+<county name="坪林" code="711141">
+</county>
+<county name="平溪" code="711137">
+</county>
+<county name="瑞芳" code="711136">
+</county>
+<county name="三重" code="711149">
+</county>
+<county name="三芝" code="711157">
+</county>
+<county name="三峡" code="711146">
+</county>
+<county name="深坑" code="711134">
+</county>
+<county name="石碇" code="711135">
+</county>
+<county name="石门" code="711158">
+</county>
+<county name="双溪" code="711138">
+</county>
+<county name="树林" code="711147">
+</county>
+<county name="汐止" code="711133">
+</county>
+<county name="新店" code="711140">
+</county>
+<county name="新庄" code="711150">
+</county>
+<county name="泰山" code="711151">
+</county>
+<county name="土城" code="711145">
+</county>
+<county name="万里" code="711130">
+</county>
+<county name="五股" code="711154">
+</county>
+<county name="乌来" code="711142">
+</county>
+<county name="莺歌" code="711148">
+</county>
+<county name="永和" code="711143">
+</county>
+</city>
+</address>

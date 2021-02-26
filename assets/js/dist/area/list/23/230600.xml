@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="大庆" code="230600">
+<county name="萨尔图" code="230602">
+    <street name="萨尔图街道" code="230602001" />
+    <street name="铁人街道" code="230602005" />
+    <street name="友谊街道" code="230602006" />
+    <street name="富强街道" code="230602007" />
+    <street name="拥军街道" code="230602008" />
+    <street name="会战街道" code="230602009" />
+    <street name="火炬街道" code="230602010" />
+    <street name="东风街道" code="230602011" />
+    <street name="东安街道" code="230602012" />
+</county>
+<county name="龙凤" code="230603">
+    <street name="龙凤街道" code="230603001" />
+    <street name="兴化街道" code="230603002" />
+    <street name="卧里屯街道" code="230603007" />
+    <street name="东光街道" code="230603008" />
+    <street name="三永街道" code="230603009" />
+    <street name="开发区黎明街道" code="230603010" />
+    <street name="龙凤镇" code="230603100" />
+    <street name="高新区农场" code="230603580" />
+</county>
+<county name="让胡路" code="230604">
+    <street name="龙岗街道" code="230604001" />
+    <street name="银浪街道" code="230604002" />
+    <street name="奋斗街道" code="230604004" />
+    <street name="庆新街道" code="230604005" />
+    <street name="西宾街道" code="230604007" />
+    <street name="乘风街道" code="230604009" />
+    <street name="喇嘛甸镇" code="230604101" />
+    <street name="红骥牧场" code="230604580" />
+    <street name="星火牧场" code="230604581" />
+    <street name="银浪牧场" code="230604582" />
+</county>
+<county name="红岗" code="230605">
+    <street name="红岗街道" code="230605001" />
+    <street name="八百垧街道" code="230605004" />
+    <street name="杏南街道" code="230605005" />
+    <street name="解放街道" code="230605006" />
+    <street name="创业街道" code="230605007" />
+    <street name="杏树岗镇" code="230605100" />
+    <street name="红岗区铁人生态工业园区" code="230605480" />
+</county>
+<county name="大同" code="230606">
+    <street name="庆葡街道" code="230606001" />
+    <street name="高台子镇街道" code="230606002" />
+    <street name="林源镇街道" code="230606004" />
+    <street name="立志街道" code="230606005" />
+    <street name="新华街道" code="230606006" />
+    <street name="大同镇街道" code="230606007" />
+    <street name="大同镇" code="230606100" />
+    <street name="高台子镇" code="230606101" />
+    <street name="太阳升镇" code="230606102" />
+    <street name="林源镇" code="230606103" />
+    <street name="祝三乡" code="230606200" />
+    <street name="老山头乡" code="230606203" />
+    <street name="八井子乡" code="230606205" />
+    <street name="双榆树乡" code="230606206" />
+    <street name="和平牧场" code="230606500" />
+</county>
+<county name="肇州" code="230621">
+    <street name="肇州镇" code="230621100" />
+    <street name="永乐镇" code="230621101" />
+    <street name="丰乐镇" code="230621102" />
+    <street name="朝阳沟镇" code="230621103" />
+    <street name="兴城镇" code="230621104" />
+    <street name="二井镇" code="230621105" />
+    <street name="双发乡" code="230621202" />
+    <street name="托古乡" code="230621203" />
+    <street name="朝阳乡" code="230621205" />
+    <street name="永胜乡" code="230621206" />
+    <street name="榆树乡" code="230621208" />
+    <street name="新福乡" code="230621211" />
+    <street name="乐园良种场" code="230621580" />
+    <street name="卫星种畜场" code="230621581" />
+</county>
+<county name="肇源" code="230622">
+    <street name="肇源镇" code="230622100" />
+    <street name="三站镇" code="230622101" />
+    <street name="二站镇" code="230622102" />
+    <street name="茂兴镇" code="230622103" />
+    <street name="古龙镇" code="230622104" />
+    <street name="新站镇" code="230622105" />
+    <street name="头台镇" code="230622106" />
+    <street name="古恰镇" code="230622107" />
+    <street name="福兴乡" code="230622200" />
+    <street name="薄荷台乡" code="230622201" />
+    <street name="和平乡" code="230622203" />
+    <street name="超等乡" code="230622207" />
+    <street name="民意乡" code="230622208" />
+    <street name="义顺乡" code="230622210" />
+    <street name="浩德乡" code="230622211" />
+    <street name="大兴乡" code="230622212" />
+    <street name="肇源农场" code="230622500" />
+    <street name="种畜场" code="230622581" />
+    <street name="新立良种繁育场" code="230622583" />
+    <street name="立陡山良种场" code="230622584" />
+    <street name="果树示范场" code="230622586" />
+    <street name="经济作物示范场" code="230622587" />
+    <street name="茂兴湖水产养殖场" code="230622588" />
+</county>
+<county name="林甸" code="230623">
+    <street name="林甸镇" code="230623100" />
+    <street name="红旗镇" code="230623101" />
+    <street name="花园镇" code="230623102" />
+    <street name="四季青镇" code="230623103" />
+    <street name="东兴乡" code="230623200" />
+    <street name="宏伟乡" code="230623201" />
+    <street name="三合乡" code="230623202" />
+    <street name="四合乡" code="230623204" />
+    <street name="林甸县长青林场" code="230623400" />
+    <street name="巨浪牧场" code="230623500" />
+    <street name="国营苇场" code="230623580" />
+    <street name="新兴畜牧场" code="230623581" />
+</county>
+<county name="杜尔伯特" code="230624">
+    <street name="泰康镇" code="230624100" />
+    <street name="胡吉吐莫镇" code="230624101" />
+    <street name="烟筒屯镇" code="230624102" />
+    <street name="他拉哈镇" code="230624103" />
+    <street name="连环湖镇" code="230624104" />
+    <street name="一心乡" code="230624200" />
+    <street name="克尔台乡" code="230624201" />
+    <street name="敖林西伯乡" code="230624203" />
+    <street name="巴彦查干乡" code="230624204" />
+    <street name="腰新乡" code="230624205" />
+    <street name="江湾乡" code="230624206" />
+    <street name="绿色草原牧场" code="230624500" />
+    <street name="大山种羊场" code="230624501" />
+</county>
+</city>
+</address>

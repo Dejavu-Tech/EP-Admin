@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="大兴安岭" code="232700">
+<county name="松岭" code="232702">
+</county>
+<county name="新林" code="232703">
+</county>
+<county name="呼中" code="232704">
+</county>
+<county name="呼玛" code="232721">
+    <street name="呼玛镇" code="232721100" />
+    <street name="韩家园镇" code="232721101" />
+    <street name="三卡乡" code="232721200" />
+    <street name="金山乡" code="232721201" />
+    <street name="兴华乡" code="232721202" />
+    <street name="鸥浦乡" code="232721203" />
+    <street name="白银纳鄂伦春族民族乡" code="232721204" />
+    <street name="北疆乡" code="232721205" />
+    <street name="韩家园林业局" code="232721400" />
+</county>
+<county name="塔河" code="232722">
+    <street name="塔河镇" code="232722100" />
+    <street name="瓦拉干镇" code="232722101" />
+    <street name="盘古镇" code="232722102" />
+    <street name="十八站鄂伦春族民族乡" code="232722200" />
+    <street name="依西肯乡" code="232722201" />
+    <street name="开库康乡" code="232722202" />
+    <street name="十八站林业局" code="232722400" />
+</county>
+<county name="漠河" code="232723">
+    <street name="西林吉镇" code="232723100" />
+    <street name="图强镇" code="232723101" />
+    <street name="劲涛镇" code="232723102" />
+    <street name="兴安镇" code="232723103" />
+    <street name="北极乡" code="232723200" />
+    <street name="西林吉林业局" code="232723400" />
+    <street name="图强林业局" code="232723401" />
+    <street name="阿木尔林业局" code="232723402" />
+</county>
+<county name="加格达奇" code="232724">
+</county>
+</city>
+</address>

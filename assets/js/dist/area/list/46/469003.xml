@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="儋州" code="469003">
+<county name="儋州" code="469003001">
+    <street name="那大镇" code="469003100" />
+    <street name="和庆镇" code="469003101" />
+    <street name="南丰镇" code="469003102" />
+    <street name="大成镇" code="469003103" />
+    <street name="雅星镇" code="469003104" />
+    <street name="兰洋镇" code="469003105" />
+    <street name="光村镇" code="469003106" />
+    <street name="木棠镇" code="469003107" />
+    <street name="海头镇" code="469003108" />
+    <street name="峨蔓镇" code="469003109" />
+    <street name="三都镇" code="469003110" />
+    <street name="王五镇" code="469003111" />
+    <street name="白马井镇" code="469003112" />
+    <street name="中和镇" code="469003113" />
+    <street name="排浦镇" code="469003114" />
+    <street name="东成镇" code="469003115" />
+    <street name="新州镇" code="469003116" />
+    <street name="国营西培农场" code="469003400" />
+    <street name="国营西联农场" code="469003404" />
+    <street name="国营蓝洋农场" code="469003405" />
+    <street name="国营八一农场" code="469003407" />
+    <street name="洋浦经济开发区" code="469003499" />
+    <street name="华南热作学院" code="469003500" />
+</county>
+</city>
+</address>

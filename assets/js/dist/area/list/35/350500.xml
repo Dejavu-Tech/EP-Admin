@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="泉州" code="350500">
+<county name="鲤城" code="350502">
+    <street name="海滨街道" code="350502001" />
+    <street name="临江街道" code="350502002" />
+    <street name="鲤中街道" code="350502003" />
+    <street name="开元街道" code="350502004" />
+    <street name="浮桥街道" code="350502005" />
+    <street name="江南街道" code="350502006" />
+    <street name="金龙街道" code="350502007" />
+    <street name="常泰街道" code="350502008" />
+    <street name="清濛经济开发区" code="350502400" />
+</county>
+<county name="丰泽" code="350503">
+    <street name="东湖街道" code="350503001" />
+    <street name="丰泽街道" code="350503002" />
+    <street name="泉秀街道" code="350503003" />
+    <street name="清源街道" code="350503004" />
+    <street name="华大街道" code="350503005" />
+    <street name="城东街道" code="350503006" />
+    <street name="东海街道" code="350503007" />
+    <street name="北峰街道" code="350503008" />
+</county>
+<county name="洛江" code="350504">
+    <street name="万安街道" code="350504001" />
+    <street name="双阳街道" code="350504002" />
+    <street name="罗溪镇" code="350504100" />
+    <street name="马甲镇" code="350504101" />
+    <street name="河市镇" code="350504102" />
+    <street name="虹山乡" code="350504200" />
+</county>
+<county name="泉港" code="350505">
+    <street name="山腰街道" code="350505001" />
+    <street name="南埔镇" code="350505100" />
+    <street name="界山镇" code="350505101" />
+    <street name="后龙镇" code="350505102" />
+    <street name="峰尾镇" code="350505103" />
+    <street name="前黄镇" code="350505105" />
+    <street name="涂岭镇" code="350505106" />
+</county>
+<county name="惠安" code="350521">
+    <street name="螺城镇" code="350521100" />
+    <street name="螺阳镇" code="350521101" />
+    <street name="黄塘镇" code="350521102" />
+    <street name="紫山镇" code="350521103" />
+    <street name="洛阳镇" code="350521104" />
+    <street name="东园镇" code="350521105" />
+    <street name="张坂镇" code="350521106" />
+    <street name="崇武镇" code="350521107" />
+    <street name="山霞镇" code="350521108" />
+    <street name="涂寨镇" code="350521109" />
+    <street name="东岭镇" code="350521110" />
+    <street name="东桥镇" code="350521111" />
+    <street name="净峰镇" code="350521112" />
+    <street name="小岞镇" code="350521113" />
+    <street name="辋川镇" code="350521114" />
+    <street name="百崎回族乡" code="350521200" />
+    <street name="城南工业区" code="350521400" />
+    <street name="惠南工业区" code="350521401" />
+</county>
+<county name="安溪" code="350524">
+    <street name="凤城镇" code="350524100" />
+    <street name="蓬莱镇" code="350524101" />
+    <street name="湖头镇" code="350524102" />
+    <street name="官桥镇" code="350524103" />
+    <street name="剑斗镇" code="350524104" />
+    <street name="城厢镇" code="350524105" />
+    <street name="金谷镇" code="350524106" />
+    <street name="龙门镇" code="350524107" />
+    <street name="虎邱镇" code="350524108" />
+    <street name="芦田镇" code="350524109" />
+    <street name="感德镇" code="350524110" />
+    <street name="魁斗镇" code="350524111" />
+    <street name="西坪镇" code="350524112" />
+    <street name="参内乡" code="350524200" />
+    <street name="白濑乡" code="350524201" />
+    <street name="湖上乡" code="350524202" />
+    <street name="尚卿乡" code="350524203" />
+    <street name="大坪乡" code="350524204" />
+    <street name="龙涓乡" code="350524205" />
+    <street name="长坑乡" code="350524206" />
+    <street name="蓝田乡" code="350524207" />
+    <street name="祥华乡" code="350524208" />
+    <street name="桃舟乡" code="350524209" />
+    <street name="福田乡" code="350524210" />
+</county>
+<county name="永春" code="350525">
+    <street name="桃城镇" code="350525100" />
+    <street name="五里街镇" code="350525101" />
+    <street name="一都镇" code="350525102" />
+    <street name="下洋镇" code="350525103" />
+    <street name="蓬壶镇" code="350525104" />
+    <street name="达埔镇" code="350525105" />
+    <street name="吾峰镇" code="350525106" />
+    <street name="石鼓镇" code="350525107" />
+    <street name="岵山镇" code="350525108" />
+    <street name="东平镇" code="350525109" />
+    <street name="湖洋镇" code="350525110" />
+    <street name="坑仔口镇" code="350525111" />
+    <street name="玉斗镇" code="350525112" />
+    <street name="锦斗镇" code="350525113" />
+    <street name="东关镇" code="350525114" />
+    <street name="桂洋镇" code="350525115" />
+    <street name="苏坑镇" code="350525116" />
+    <street name="仙夹镇" code="350525117" />
+    <street name="横口乡" code="350525200" />
+    <street name="呈祥乡" code="350525201" />
+    <street name="介福乡" code="350525202" />
+    <street name="外山乡" code="350525204" />
+</county>
+<county name="德化" code="350526">
+    <street name="浔中镇" code="350526100" />
+    <street name="龙浔镇" code="350526101" />
+    <street name="三班镇" code="350526102" />
+    <street name="龙门滩镇" code="350526103" />
+    <street name="雷峰镇" code="350526104" />
+    <street name="南埕镇" code="350526105" />
+    <street name="水口镇" code="350526106" />
+    <street name="赤水镇" code="350526107" />
+    <street name="上涌镇" code="350526108" />
+    <street name="葛坑镇" code="350526109" />
+    <street name="盖德镇" code="350526110" />
+    <street name="杨梅乡" code="350526200" />
+    <street name="汤头乡" code="350526202" />
+    <street name="桂阳乡" code="350526204" />
+    <street name="国宝乡" code="350526206" />
+    <street name="美湖镇" code="350526207" />
+    <street name="大铭乡" code="350526208" />
+    <street name="春美乡" code="350526209" />
+</county>
+<county name="金门" code="350527">
+</county>
+<county name="石狮" code="350581">
+    <street name="湖滨街道" code="350581001" />
+    <street name="凤里街道" code="350581002" />
+    <street name="灵秀镇" code="350581100" />
+    <street name="宝盖镇" code="350581101" />
+    <street name="蚶江镇" code="350581102" />
+    <street name="祥芝镇" code="350581103" />
+    <street name="鸿山镇" code="350581104" />
+    <street name="锦尚镇" code="350581105" />
+    <street name="永宁镇" code="350581106" />
+</county>
+<county name="晋江" code="350582">
+    <street name="青阳街道" code="350582001" />
+    <street name="梅岭街道" code="350582002" />
+    <street name="西园街道" code="350582003" />
+    <street name="罗山街道" code="350582004" />
+    <street name="新塘街道" code="350582005" />
+    <street name="灵源街道" code="350582006" />
+    <street name="安海镇" code="350582101" />
+    <street name="磁灶镇" code="350582102" />
+    <street name="陈埭镇" code="350582103" />
+    <street name="东石镇" code="350582104" />
+    <street name="深沪镇" code="350582105" />
+    <street name="金井镇" code="350582106" />
+    <street name="池店镇" code="350582107" />
+    <street name="内坑镇" code="350582109" />
+    <street name="龙湖镇" code="350582110" />
+    <street name="永和镇" code="350582111" />
+    <street name="英林镇" code="350582112" />
+    <street name="紫帽镇" code="350582113" />
+    <street name="西滨镇" code="350582114" />
+    <street name="安平开发区" code="350582400" />
+    <street name="晋江市经济开发区" code="350582401" />
+    <street name="泉州出口加工区" code="350582402" />
+</county>
+<county name="南安" code="350583">
+    <street name="溪美街道" code="350583001" />
+    <street name="柳城街道" code="350583002" />
+    <street name="美林街道" code="350583003" />
+    <street name="省新镇" code="350583100" />
+    <street name="仑苍镇" code="350583101" />
+    <street name="东田镇" code="350583102" />
+    <street name="英都镇" code="350583103" />
+    <street name="翔云镇" code="350583104" />
+    <street name="金淘镇" code="350583105" />
+    <street name="诗山镇" code="350583106" />
+    <street name="蓬华镇" code="350583107" />
+    <street name="码头镇" code="350583108" />
+    <street name="九都镇" code="350583109" />
+    <street name="乐峰镇" code="350583110" />
+    <street name="罗东镇" code="350583111" />
+    <street name="梅山镇" code="350583112" />
+    <street name="洪濑镇" code="350583113" />
+    <street name="洪梅镇" code="350583114" />
+    <street name="康美镇" code="350583115" />
+    <street name="丰州镇" code="350583116" />
+    <street name="霞美镇" code="350583117" />
+    <street name="官桥镇" code="350583118" />
+    <street name="水头镇" code="350583119" />
+    <street name="石井镇" code="350583120" />
+    <street name="眉山乡" code="350583200" />
+    <street name="向阳乡" code="350583201" />
+    <street name="雪峰管委会" code="350583400" />
+</county>
+</city>
+</address>

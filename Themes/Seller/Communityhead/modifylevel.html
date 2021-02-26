@@ -1,0 +1,180 @@
+<div class="modal-dialog modal-dialog-centered btn-showcase">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title"><?php if(!empty($level['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>团长等级</h5>
+			<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+		</div>
+
+		<div class="modal-body">
+			<form action="<?php if( empty($level['id'])){ ?>{:U('communityhead/addlevel')}<?php  }else{  ?>{:U('communityhead/editlevel')}<?php } ?>" method="post"  class="form-horizontal form-validate" enctype="multipart/form-data">
+				<input type="hidden" name="id" value="{$level['id']}" />
+				<input type="hidden" name="controller" value="communityhead.<?php if(empty($level['id'])){ ?>addlevel<?php }else{ ?>editlevel<?php } ?>" />
+
+				<?php if($has_notice == 0){ ?>
+				<div class="form-group">
+					<label class="col-form-label" style="color:red;">此操作将启用等级全局提成，原商品比例失效，可到商品编辑“等级/分销”单独设置</label>
+				</div>
+				<?php } ?>
+				<div class="form-group">
+					<label class="col-form-label must">等级名称</label>
+					<input type="text" name="levelname" class="form-control" value="{$level['levelname']}" data-rule-required='true'/>
+				</div>
+				<?php if(!empty($community_money_type) && $community_money_type ==1 ){ ?>
+				<div class="form-group">
+					<label class="col-form-label">团长提成金额</label>
+					<div class="col-xs-12">
+						<div class="input-group pill-input-group">
+							<input type="text" name="commission" class="form-control" value="{$level['commission']}" />
+							<div class="input-group-append"><span class="input-group-text">元</span></div>
+						</div>
+					</div>
+				</div>
+				<?php }else{ ?>
+				<div class="form-group">
+					<label class="col-form-label">团长提成比例</label>
+					<div class="col-xs-12">
+						<div class="input-group ">
+							<input type="text" name="commission" class="form-control" value="{$level['commission']}" />
+							<div class="input-group-append"><span class="input-group-text">%</span></div>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+				<?php if($level['id']!='default'){ ?>
+				<div class="form-group row p-l-5">
+					<label class="col-sm-4 col-form-label">团长自动升级</label>
+					<div class="col-sm-8">
+						<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+							<div class="radio radio-primary">
+								<input id="radioinline1" type='radio' name='auto_upgrade'  value='0' <?php if(empty($level) || $level['auto_upgrade'] ==0 ){ ?>checked <?php } ?> title="关闭" />
+								<label class="mb-0" for="radioinline1">关闭</label>
+							</div>
+							<div class="radio radio-primary">
+								<input id="radioinline2" type='radio' name='auto_upgrade'  value='1' <?php if(!empty($level) && $level['auto_upgrade'] ==1 ){ ?>checked <?php } ?> title="开启" />
+								<label class="mb-0" for="radioinline2">开启</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row p-l-5" id="auto_condition" <?php if( empty($level) || $level['auto_upgrade'] ==0 ){ ?> style="display:none;" <?php } ?>>
+				<label class="col-sm-4 col-form-label">自动升级条件</label>
+				<div class="col-sm-8">
+					<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+						<div class="radio radio-primary">
+							<input id="radioinline3" type='radio' name='condition_type'  value='0' <?php if(empty($level) || $level['condition_type'] ==0 ){ ?>checked <?php } ?> title="" />
+							<label class="mb-0" for="radioinline3">订单总金额</label>
+						</div>
+						<div class="radio radio-primary">
+							<input id="radioinline4" type='radio' name='condition_type'  value='1' <?php if(!empty($level) && $level['condition_type'] ==1 ){ ?>checked <?php } ?> title="" />
+							<label class="mb-0" for="radioinline4">累计社区用户</label>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="form-group" id="condition_one" <?php if( (!empty($level) && $level['auto_upgrade'] ==1) && (empty($level) || $level['condition_type'] ==0) ){ ?> style="display:block;"<?php }else{ ?> style="display:none;"<?php } ?> >
+		<label class="col-form-label">订单总金额</label>
+		<div class="col-xs-12">
+			<div class="input-group">
+				<input type="text" name="condition_one" class="form-control" value="{$level['condition_one']}" />
+				<div class="input-group-append"><span class="input-group-text">元</span></div>
+			</div>
+			<div class="help-block">累计社区用户完成订单总金额</div>
+		</div>
+	</div>
+
+	<div class="form-group" id="condition_two" <?php if( (!empty($level) && $level['auto_upgrade'] ==1) && (!empty($level) && $level['condition_type'] ==1) ){ ?> style="display:block;"<?php }else{ ?> style="display:none;"<?php } ?> >
+	<label class="col-form-label">累计社区用户</label>
+	<div class="col-xs-12">
+		<div class="input-group">
+			<input type="text" name="condition_two" class="form-control" value="{$level['condition_two']}" />
+			<div class="input-group-append"><span class="input-group-text">人</span></div>
+		</div>
+		<div class="help-block">累计社区用户数量</div>
+	</div>
+</div>
+<div class="form-group" id="condition_order_total" <?php if( (!empty($level) && $level['auto_upgrade'] ==1) && (!empty($level) && $level['condition_type'] ==2) ){ ?> style="display:block;"<?php }else{ ?> style="display:none;"<?php } ?> >
+<label class="col-sm-2 col-form-label">累计满*单</label>
+<div class="col-sm-9 col-xs-12">
+	<div class="input-group">
+		<input type="text" name="condition_order_total" class="form-control" value="{$level['condition_order_total']}" />
+		<div class='input-group-addon'>单</div>
+	</div>
+	<div class="help-block">累计满*单</div>
+</div>
+</div>
+<?php } ?>
+<?php if( empty($level['id'])){ ?>
+<div class="form-group">
+	<label class="col-form-label" style="color:red;">新增等级可能会对已设置的商品独立团长提成比例产生影响，确认提交？</label>
+</div>
+<?php } ?>
+</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary btn-order" type="submit">提交</button>
+	<button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
+</div>
+</div>
+
+
+<script>
+
+	$(function(){
+		$('input[name=auto_upgrade]').click(function(){
+			var s_val = $(this).val();
+			if(s_val == 0)
+			{
+				$('#auto_condition').hide();
+				$('#condition_one').hide();
+				$('#condition_two').hide();
+				$('#condition_order_total').hide();
+
+			}else{
+				$('#auto_condition').show();
+				var sc_val = $('input[name=condition_type]:checked').val();
+				if(sc_val == 0)
+				{
+					$('#condition_one').show();
+					$('#condition_two').hide();
+					$('#condition_order_total').hide();
+				}else if(sc_val == 1){
+					$('#condition_one').hide();
+					$('#condition_two').show();
+					$('#condition_order_total').hide();
+				}else if(sc_val == 2){
+					$('#condition_one').hide();
+					$('#condition_two').hide();
+					$('#condition_order_total').show();
+
+				}
+
+			}
+		})
+
+		$('input[name=condition_type]').click(function(){
+
+			var s_val = $(this).val();
+			if(s_val == 0)
+			{
+				$('#condition_one').show();
+				$('#condition_two').hide();
+				$('#condition_order_total').hide();
+			}else if(s_val == 1){
+				$('#condition_one').hide();
+				$('#condition_two').show();
+				$('#condition_order_total').hide();
+			}else if(s_val == 2){
+				$('#condition_one').hide();
+				$('#condition_two').hide();
+				$('#condition_order_total').show();
+
+			}
+
+		})
+
+	})
+
+
+
+</script>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="上饶" code="361100">
+<county name="信州" code="361102">
+    <street name="水南街道" code="361102001" />
+    <street name="东市街道" code="361102002" />
+    <street name="西市街道" code="361102003" />
+    <street name="北门街道" code="361102004" />
+    <street name="茅家岭街道" code="361102005" />
+    <street name="灵溪街道" code="361102006" />
+    <street name="沙溪镇" code="361102100" />
+    <street name="朝阳镇" code="361102102" />
+    <street name="秦峰乡" code="361102201" />
+</county>
+<county name="上饶" code="361121">
+    <street name="旭日街道" code="361121001" />
+    <street name="罗桥街道" code="361121002" />
+    <street name="兴园街道" code="361121003" />
+    <street name="田墩镇" code="361121101" />
+    <street name="上泸镇" code="361121102" />
+    <street name="华坛山镇" code="361121103" />
+    <street name="茶亭镇" code="361121104" />
+    <street name="皂头镇" code="361121105" />
+    <street name="四十八镇" code="361121106" />
+    <street name="枫岭头镇" code="361121107" />
+    <street name="煌固镇" code="361121108" />
+    <street name="花厅镇" code="361121109" />
+    <street name="五府山镇" code="361121110" />
+    <street name="郑坊镇" code="361121111" />
+    <street name="望仙乡" code="361121200" />
+    <street name="石人乡" code="361121201" />
+    <street name="清水乡" code="361121202" />
+    <street name="石狮乡" code="361121203" />
+    <street name="湖村乡" code="361121204" />
+    <street name="尊桥乡" code="361121207" />
+    <street name="应家乡" code="361121209" />
+    <street name="黄沙岭乡" code="361121210" />
+    <street name="铁山乡" code="361121211" />
+    <street name="董团乡" code="361121290" />
+</county>
+<county name="广丰" code="361122">
+    <street name="永丰街道" code="361122001" />
+    <street name="芦林街道" code="361122002" />
+    <street name="丰溪街道" code="361122003" />
+    <street name="五都镇" code="361122101" />
+    <street name="洋口镇" code="361122102" />
+    <street name="横山镇" code="361122103" />
+    <street name="桐畈镇" code="361122104" />
+    <street name="湖丰镇" code="361122105" />
+    <street name="大南镇" code="361122106" />
+    <street name="排山镇" code="361122107" />
+    <street name="毛村镇" code="361122108" />
+    <street name="枧底镇" code="361122109" />
+    <street name="泉波镇" code="361122110" />
+    <street name="壶峤镇" code="361122111" />
+    <street name="霞峰镇" code="361122112" />
+    <street name="下溪镇" code="361122113" />
+    <street name="吴村镇" code="361122114" />
+    <street name="沙田镇" code="361122115" />
+    <street name="铜钹山镇" code="361122116" />
+    <street name="大石乡" code="361122200" />
+    <street name="东阳乡" code="361122202" />
+    <street name="嵩峰乡" code="361122204" />
+    <street name="少阳乡" code="361122206" />
+    <street name="铜拔山垦殖场" code="361122500" />
+</county>
+<county name="玉山" code="361123">
+    <street name="枫林办事处" code="361123001" />
+    <street name="冰溪镇" code="361123100" />
+    <street name="临湖镇" code="361123101" />
+    <street name="必姆镇" code="361123102" />
+    <street name="横街镇" code="361123103" />
+    <street name="文成镇" code="361123104" />
+    <street name="下镇镇" code="361123105" />
+    <street name="岩瑞镇" code="361123107" />
+    <street name="双明镇" code="361123108" />
+    <street name="紫湖镇" code="361123109" />
+    <street name="仙岩镇" code="361123110" />
+    <street name="樟村镇" code="361123111" />
+    <street name="南山乡" code="361123200" />
+    <street name="怀玉乡" code="361123201" />
+    <street name="下塘乡" code="361123202" />
+    <street name="四股桥乡" code="361123203" />
+    <street name="六都乡" code="361123204" />
+    <street name="三清乡" code="361123290" />
+</county>
+<county name="铅山" code="361124">
+    <street name="河口镇" code="361124100" />
+    <street name="永平镇" code="361124101" />
+    <street name="石塘镇" code="361124102" />
+    <street name="鹅湖镇" code="361124103" />
+    <street name="湖坊镇" code="361124105" />
+    <street name="武夷山镇" code="361124106" />
+    <street name="汪二镇" code="361124108" />
+    <street name="陈坊乡" code="361124200" />
+    <street name="虹桥乡" code="361124201" />
+    <street name="新滩乡" code="361124202" />
+    <street name="葛仙山乡" code="361124203" />
+    <street name="稼轩乡" code="361124205" />
+    <street name="英将乡" code="361124206" />
+    <street name="紫溪乡" code="361124207" />
+    <street name="太源畲族乡" code="361124208" />
+    <street name="天柱山乡" code="361124209" />
+    <street name="篁碧畲族乡" code="361124210" />
+    <street name="江西铜业集团公司永铜分公司" code="361124406" />
+    <street name="铅山县青溪服务中心" code="361124407" />
+    <street name="铅山县国营森林苗圃" code="361124501" />
+</county>
+<county name="横峰" code="361125">
+    <street name="兴安街道" code="361125001" />
+    <street name="岑阳镇" code="361125100" />
+    <street name="葛源镇" code="361125101" />
+    <street name="姚家乡" code="361125200" />
+    <street name="莲荷乡" code="361125201" />
+    <street name="司铺乡" code="361125202" />
+    <street name="港边乡" code="361125203" />
+    <street name="龙门畈乡" code="361125204" />
+    <street name="青板乡" code="361125205" />
+    <street name="铺前煤矿" code="361125400" />
+    <street name="红桥垦殖场" code="361125401" />
+    <street name="上坑源林场" code="361125502" />
+    <street name="山黄林场" code="361125503" />
+    <street name="新篁办事处" code="361125504" />
+</county>
+<county name="弋阳" code="361126">
+    <street name="桃源街道" code="361126001" />
+    <street name="曹溪镇" code="361126101" />
+    <street name="漆工镇" code="361126102" />
+    <street name="樟树墩镇" code="361126103" />
+    <street name="南岩镇" code="361126104" />
+    <street name="朱坑镇" code="361126105" />
+    <street name="圭峰镇" code="361126106" />
+    <street name="叠山镇" code="361126107" />
+    <street name="港口镇" code="361126108" />
+    <street name="弋江镇" code="361126109" />
+    <street name="中畈乡" code="361126202" />
+    <street name="葛溪乡" code="361126203" />
+    <street name="湾里乡" code="361126204" />
+    <street name="清湖乡" code="361126206" />
+    <street name="旭光乡" code="361126207" />
+    <street name="花亭乡" code="361126500" />
+    <street name="三县岭乡" code="361126501" />
+</county>
+<county name="余干" code="361127">
+    <street name="玉亭镇" code="361127100" />
+    <street name="瑞洪镇" code="361127101" />
+    <street name="黄金埠镇" code="361127102" />
+    <street name="古埠镇" code="361127104" />
+    <street name="乌泥镇" code="361127105" />
+    <street name="石口镇" code="361127106" />
+    <street name="杨埠镇" code="361127107" />
+    <street name="九龙镇" code="361127108" />
+    <street name="康山乡" code="361127200" />
+    <street name="东塘乡" code="361127202" />
+    <street name="大塘乡" code="361127204" />
+    <street name="鹭鸶港乡" code="361127206" />
+    <street name="三塘乡" code="361127207" />
+    <street name="洪家嘴乡" code="361127209" />
+    <street name="白马桥乡" code="361127210" />
+    <street name="江埠乡" code="361127211" />
+    <street name="枫港乡" code="361127213" />
+    <street name="大溪乡" code="361127214" />
+    <street name="梅港乡" code="361127217" />
+    <street name="社赓乡" code="361127218" />
+    <street name="渔池湖水产场" code="361127500" />
+    <street name="县良种场" code="361127501" />
+    <street name="李梅林场" code="361127502" />
+    <street name="康山垦总场" code="361127503" />
+    <street name="禾斛岭垦殖场" code="361127504" />
+    <street name="峡山林场" code="361127505" />
+    <street name="信丰垦殖场" code="361127506" />
+</county>
+<county name="鄱阳" code="361128">
+    <street name="鄱阳镇" code="361128100" />
+    <street name="谢家滩镇" code="361128101" />
+    <street name="石门街镇" code="361128102" />
+    <street name="四十里街镇" code="361128103" />
+    <street name="油墩街镇" code="361128104" />
+    <street name="田畈街镇" code="361128105" />
+    <street name="金盘岭镇" code="361128106" />
+    <street name="高家岭镇" code="361128107" />
+    <street name="凰岗镇" code="361128108" />
+    <street name="双港镇" code="361128109" />
+    <street name="古县渡镇" code="361128110" />
+    <street name="饶丰镇" code="361128111" />
+    <street name="乐丰镇" code="361128112" />
+    <street name="饶埠镇" code="361128113" />
+    <street name="侯家岗乡" code="361128201" />
+    <street name="莲花山乡" code="361128202" />
+    <street name="响水滩乡" code="361128203" />
+    <street name="枧田街乡" code="361128206" />
+    <street name="柘港乡" code="361128207" />
+    <street name="鸦鹊湖乡" code="361128208" />
+    <street name="银宝湖乡" code="361128209" />
+    <street name="游城乡" code="361128210" />
+    <street name="珠湖乡" code="361128211" />
+    <street name="白沙洲乡" code="361128212" />
+    <street name="团林乡" code="361128213" />
+    <street name="昌洲乡" code="361128215" />
+    <street name="庙前乡" code="361128216" />
+    <street name="莲湖乡" code="361128217" />
+    <street name="芦田乡" code="361128218" />
+    <street name="农科所" code="361128401" />
+    <street name="饶洲监狱" code="361128402" />
+</county>
+<county name="万年" code="361129">
+    <street name="陈营镇" code="361129100" />
+    <street name="石镇镇" code="361129101" />
+    <street name="青云镇" code="361129102" />
+    <street name="梓埠镇" code="361129103" />
+    <street name="大源镇" code="361129104" />
+    <street name="裴梅镇" code="361129105" />
+    <street name="湖云乡" code="361129200" />
+    <street name="齐埠乡" code="361129201" />
+    <street name="汪家乡" code="361129203" />
+    <street name="上坊乡" code="361129205" />
+    <street name="苏桥乡" code="361129206" />
+    <street name="珠田乡" code="361129208" />
+</county>
+<county name="婺源" code="361130">
+    <street name="蚺城街道" code="361130001" />
+    <street name="紫阳镇" code="361130100" />
+    <street name="清华镇" code="361130101" />
+    <street name="秋口镇" code="361130102" />
+    <street name="江湾镇" code="361130103" />
+    <street name="思口镇" code="361130104" />
+    <street name="赋春镇" code="361130106" />
+    <street name="镇头镇" code="361130107" />
+    <street name="太白镇" code="361130109" />
+    <street name="中云镇" code="361130110" />
+    <street name="许村镇" code="361130111" />
+    <street name="溪头乡" code="361130200" />
+    <street name="段莘乡" code="361130201" />
+    <street name="浙源乡" code="361130204" />
+    <street name="沱川乡" code="361130205" />
+    <street name="大鄣山乡" code="361130206" />
+    <street name="珍珠山乡" code="361130208" />
+</county>
+<county name="德兴" code="361181">
+    <street name="银城街道" code="361181001" />
+    <street name="新营街道" code="361181002" />
+    <street name="香屯街道" code="361181003" />
+    <street name="绕二镇" code="361181103" />
+    <street name="海口镇" code="361181105" />
+    <street name="新岗山镇" code="361181106" />
+    <street name="泗洲镇" code="361181107" />
+    <street name="花桥镇" code="361181190" />
+    <street name="黄柏乡" code="361181200" />
+    <street name="万村乡" code="361181201" />
+    <street name="张村乡" code="361181202" />
+    <street name="昄大乡" code="361181203" />
+    <street name="李宅乡" code="361181204" />
+    <street name="龙头山乡" code="361181205" />
+    <street name="江西省德兴铜矿" code="361181401" />
+</county>
+</city>
+</address>

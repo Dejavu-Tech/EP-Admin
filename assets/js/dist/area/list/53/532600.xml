@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="文山" code="532600">
+<county name="文山" code="532621">
+    <street name="开化街道" code="532601001" />
+    <street name="卧龙街道" code="532601002" />
+    <street name="新平街道" code="532601003" />
+    <street name="古木镇" code="532601102" />
+    <street name="平坝镇" code="532601103" />
+    <street name="马塘镇" code="532601104" />
+    <street name="德厚镇" code="532601105" />
+    <street name="小街镇" code="532601106" />
+    <street name="薄竹镇" code="532601107" />
+    <street name="追栗街镇" code="532601108" />
+    <street name="东山彝族乡" code="532601201" />
+    <street name="柳井彝族乡" code="532601202" />
+    <street name="新街乡" code="532601203" />
+    <street name="喜古乡" code="532601204" />
+    <street name="坝心彝族乡" code="532601205" />
+    <street name="秉烈彝族乡" code="532601206" />
+    <street name="红甸回族乡" code="532601207" />
+    <street name="文山市三七产业园区" code="532601401" />
+    <street name="文山市马塘工业园区" code="532601402" />
+</county>
+<county name="砚山" code="532622">
+    <street name="江那镇" code="532622101" />
+    <street name="平远镇" code="532622102" />
+    <street name="稼依镇" code="532622103" />
+    <street name="阿猛镇" code="532622104" />
+    <street name="阿舍彝族乡" code="532622201" />
+    <street name="维末彝族乡" code="532622202" />
+    <street name="盘龙彝族乡" code="532622203" />
+    <street name="八嘎乡" code="532622204" />
+    <street name="者腊乡" code="532622205" />
+    <street name="蚌峨乡" code="532622206" />
+    <street name="干河彝族乡" code="532622207" />
+    <street name="平远管理区" code="532622501" />
+    <street name="稼依管理区" code="532622502" />
+    <street name="回龙管理区" code="532622503" />
+</county>
+<county name="西畴" code="532623">
+    <street name="西洒镇" code="532623101" />
+    <street name="兴街镇" code="532623102" />
+    <street name="蚌谷乡" code="532623201" />
+    <street name="莲花塘乡" code="532623202" />
+    <street name="新马街乡" code="532623203" />
+    <street name="柏林乡" code="532623204" />
+    <street name="法斗乡" code="532623205" />
+    <street name="董马乡" code="532623206" />
+    <street name="鸡街乡" code="532623207" />
+</county>
+<county name="麻栗坡" code="532624">
+    <street name="麻栗镇" code="532624101" />
+    <street name="大坪镇" code="532624102" />
+    <street name="董干镇" code="532624103" />
+    <street name="天保镇" code="532624104" />
+    <street name="猛硐瑶族乡" code="532624201" />
+    <street name="下金厂乡" code="532624202" />
+    <street name="八布乡" code="532624203" />
+    <street name="六河乡" code="532624204" />
+    <street name="杨万乡" code="532624205" />
+    <street name="铁厂乡" code="532624206" />
+    <street name="马街乡" code="532624207" />
+</county>
+<county name="马关" code="532625">
+    <street name="马白镇" code="532625101" />
+    <street name="八寨镇" code="532625102" />
+    <street name="仁和镇" code="532625103" />
+    <street name="木厂镇" code="532625104" />
+    <street name="夹寒箐镇" code="532625105" />
+    <street name="小坝子镇" code="532625106" />
+    <street name="都龙镇" code="532625107" />
+    <street name="金厂镇" code="532625108" />
+    <street name="坡脚镇" code="532625109" />
+    <street name="南捞乡" code="532625201" />
+    <street name="大栗树乡" code="532625202" />
+    <street name="篾厂乡" code="532625203" />
+    <street name="古林箐乡" code="532625204" />
+</county>
+<county name="丘北" code="532626">
+    <street name="锦屏镇" code="532626101" />
+    <street name="曰者镇" code="532626102" />
+    <street name="双龙营镇" code="532626103" />
+    <street name="八道哨彝族乡" code="532626201" />
+    <street name="天星乡" code="532626202" />
+    <street name="平寨乡" code="532626203" />
+    <street name="树皮彝族乡" code="532626204" />
+    <street name="腻脚彝族乡" code="532626205" />
+    <street name="新店彝族乡" code="532626206" />
+    <street name="舍得彝族乡" code="532626207" />
+    <street name="官寨乡" code="532626208" />
+    <street name="温浏乡" code="532626209" />
+</county>
+<county name="广南" code="532627">
+    <street name="莲城镇" code="532627101" />
+    <street name="八宝镇" code="532627102" />
+    <street name="南屏镇" code="532627103" />
+    <street name="珠街镇" code="532627104" />
+    <street name="那洒镇" code="532627105" />
+    <street name="珠琳镇" code="532627106" />
+    <street name="坝美镇" code="532627107" />
+    <street name="董堡乡" code="532627201" />
+    <street name="旧莫乡" code="532627202" />
+    <street name="杨柳井乡" code="532627203" />
+    <street name="板蚌乡" code="532627204" />
+    <street name="曙光乡" code="532627205" />
+    <street name="黑支果乡" code="532627206" />
+    <street name="篆角乡" code="532627207" />
+    <street name="五珠乡" code="532627208" />
+    <street name="者兔乡" code="532627209" />
+    <street name="者太乡" code="532627210" />
+    <street name="底圩乡" code="532627211" />
+</county>
+<county name="富宁" code="532628">
+    <street name="新华镇" code="532628101" />
+    <street name="归朝镇" code="532628102" />
+    <street name="剥隘镇" code="532628103" />
+    <street name="里达镇" code="532628104" />
+    <street name="田蓬镇" code="532628105" />
+    <street name="木央镇" code="532628106" />
+    <street name="板仑乡" code="532628201" />
+    <street name="谷拉乡" code="532628202" />
+    <street name="者桑乡" code="532628203" />
+    <street name="那能乡" code="532628204" />
+    <street name="洞波瑶族乡" code="532628205" />
+    <street name="阿用乡" code="532628206" />
+    <street name="花甲乡" code="532628207" />
+</county>
+</city>
+</address>

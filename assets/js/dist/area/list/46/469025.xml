@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="定安" code="469025">
+<county name="定安" code="469025001">
+    <street name="定城镇" code="469021100" />
+    <street name="新竹镇" code="469021101" />
+    <street name="龙湖镇" code="469021102" />
+    <street name="黄竹镇" code="469021103" />
+    <street name="雷鸣镇" code="469021104" />
+    <street name="龙门镇" code="469021105" />
+    <street name="龙河镇" code="469021106" />
+    <street name="岭口镇" code="469021107" />
+    <street name="翰林镇" code="469021108" />
+    <street name="富文镇" code="469021109" />
+    <street name="国营中瑞农场" code="469021400" />
+    <street name="国营南海农场" code="469021401" />
+    <street name="国营金鸡岭农场" code="469021402" />
+</county>
+</city>
+</address>

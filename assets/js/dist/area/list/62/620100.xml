@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="兰州" code="620100">
+<county name="城关" code="620102">
+    <street name="酒泉路街道" code="620102001" />
+    <street name="张掖路街道" code="620102002" />
+    <street name="雁南街道" code="620102003" />
+    <street name="临夏路街道" code="620102004" />
+    <street name="雁北街道" code="620102005" />
+    <street name="五泉街道" code="620102006" />
+    <street name="白银路街道" code="620102007" />
+    <street name="皋兰路街道" code="620102008" />
+    <street name="广武门街道" code="620102009" />
+    <street name="伏龙坪街道" code="620102010" />
+    <street name="靖远路街道" code="620102011" />
+    <street name="草场街街道" code="620102012" />
+    <street name="火车站街道" code="620102013" />
+    <street name="拱星墩街道" code="620102014" />
+    <street name="东岗街道" code="620102015" />
+    <street name="团结新村街道" code="620102016" />
+    <street name="东岗西路街道" code="620102017" />
+    <street name="铁路东村街道" code="620102018" />
+    <street name="铁路西村街道" code="620102019" />
+    <street name="渭源路街道" code="620102020" />
+    <street name="盐场路街道" code="620102021" />
+    <street name="嘉峪关路街道" code="620102022" />
+    <street name="焦家湾街道" code="620102023" />
+    <street name="青白石街道" code="620102024" />
+    <street name="高新区" code="620102400" />
+</county>
+<county name="七里河" code="620103">
+    <street name="西园街道" code="620103001" />
+    <street name="西湖街道" code="620103002" />
+    <street name="建兰路街道" code="620103003" />
+    <street name="敦煌路街道" code="620103004" />
+    <street name="西站街道" code="620103005" />
+    <street name="晏家坪街道" code="620103006" />
+    <street name="龚家湾街道" code="620103007" />
+    <street name="土门墩街道" code="620103008" />
+    <street name="秀川街道" code="620103009" />
+    <street name="阿干镇" code="620103100" />
+    <street name="八里镇" code="620103101" />
+    <street name="彭家坪镇" code="620103102" />
+    <street name="西果园镇" code="620103103" />
+    <street name="魏岭乡" code="620103200" />
+    <street name="黄峪乡" code="620103201" />
+</county>
+<county name="西固" code="620104">
+    <street name="陈坪街道" code="620104001" />
+    <street name="先锋路街道" code="620104002" />
+    <street name="福利路街道" code="620104003" />
+    <street name="西固城街道" code="620104004" />
+    <street name="四季青街道" code="620104005" />
+    <street name="临洮街街道" code="620104006" />
+    <street name="西柳沟街道" code="620104007" />
+    <street name="新城镇" code="620104100" />
+    <street name="东川镇" code="620104101" />
+    <street name="达川乡" code="620104200" />
+    <street name="河口乡" code="620104201" />
+    <street name="柳泉乡" code="620104203" />
+    <street name="金沟乡" code="620104204" />
+    <street name="新安路街道" code="620104400" />
+    <street name="新和路街道" code="620104401" />
+</county>
+<county name="安宁" code="620105">
+    <street name="培黎街道" code="620105001" />
+    <street name="西路街道" code="620105002" />
+    <street name="沙井驿街道" code="620105003" />
+    <street name="十里店街道" code="620105004" />
+    <street name="孔家崖街道" code="620105005" />
+    <street name="银滩路街道" code="620105006" />
+    <street name="刘家堡街道" code="620105007" />
+    <street name="安宁堡街道" code="620105008" />
+</county>
+<county name="红古" code="620111">
+    <street name="窑街街道" code="620111001" />
+    <street name="下窑街道" code="620111002" />
+    <street name="矿区街道" code="620111003" />
+    <street name="海石湾镇" code="620111101" />
+    <street name="花庄镇" code="620111102" />
+    <street name="平安镇" code="620111103" />
+    <street name="红古乡" code="620111200" />
+</county>
+<county name="永登" code="620121">
+    <street name="城关镇" code="620121100" />
+    <street name="红城镇" code="620121101" />
+    <street name="中堡镇" code="620121102" />
+    <street name="武胜驿镇" code="620121103" />
+    <street name="河桥镇" code="620121104" />
+    <street name="连城镇" code="620121105" />
+    <street name="苦水镇" code="620121106" />
+    <street name="中川镇" code="620121107" />
+    <street name="秦川镇" code="620121108" />
+    <street name="大同镇" code="620121109" />
+    <street name="龙泉寺镇" code="620121110" />
+    <street name="树屏镇" code="620121111" />
+    <street name="上川镇" code="620121112" />
+    <street name="柳树乡" code="620121200" />
+    <street name="坪城乡" code="620121201" />
+    <street name="民乐乡" code="620121202" />
+    <street name="通远乡" code="620121203" />
+    <street name="七山乡" code="620121204" />
+</county>
+<county name="皋兰" code="620122">
+    <street name="石洞镇" code="620122100" />
+    <street name="西岔镇" code="620122101" />
+    <street name="忠和镇" code="620122102" />
+    <street name="什川镇" code="620122103" />
+    <street name="九合镇" code="620122104" />
+    <street name="黑石川乡" code="620122200" />
+    <street name="水阜乡" code="620122202" />
+</county>
+<county name="榆中" code="620123">
+    <street name="城关镇" code="620123100" />
+    <street name="夏官营镇" code="620123101" />
+    <street name="高崖镇" code="620123102" />
+    <street name="金崖镇" code="620123103" />
+    <street name="和平镇" code="620123104" />
+    <street name="甘草店镇" code="620123105" />
+    <street name="青城镇" code="620123106" />
+    <street name="定远镇" code="620123107" />
+    <street name="来紫堡乡" code="620123200" />
+    <street name="三角城乡" code="620123201" />
+    <street name="小康营乡" code="620123202" />
+    <street name="连搭乡" code="620123203" />
+    <street name="银山乡" code="620123204" />
+    <street name="马坡乡" code="620123205" />
+    <street name="新营乡" code="620123206" />
+    <street name="清水驿乡" code="620123207" />
+    <street name="龙泉乡" code="620123208" />
+    <street name="韦营乡" code="620123209" />
+    <street name="中连川乡" code="620123210" />
+    <street name="贡井乡" code="620123211" />
+    <street name="园子岔乡" code="620123212" />
+    <street name="上花岔乡" code="620123213" />
+    <street name="哈岘乡" code="620123214" />
+</county>
+</city>
+</address>

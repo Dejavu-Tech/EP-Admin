@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title><?php echo C('SITE_NAME'); ?>-后台管理中心</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href="__CSS__/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="__CSS__/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="__CSS__/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<link type="image/x-icon" href="<?php echo resize(C('SITE_ICON'),16,16); ?>" rel="icon">
+		<link type="image/x-icon" href="<?php echo resize(C('SITE_ICON'),16,16); ?>" rel="bookmark">
+
+
+		<link rel="stylesheet" href="__CSS__/ace.min.css" />
+		<link rel="stylesheet" href="__CSS__/ace-rtl.min.css" />
+		<link rel="stylesheet" href="__CSS__/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="__CSS__/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="__JS__/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="__JS__/html5shiv.js"></script>
+		<script src="__JS__/respond.min.js"></script>
+		<![endif]-->
+
+		<block name="css">
+			<style>
+				.search-row {margin-bottom: 10px;}
+				.page-content{
+					background: url(__PUBLIC__/image/2zrdI1g.jpg) no-repeat 50%;
+					background-size: cover;
+				}
+				.main-content{margin-left:0px;}
+				.chatBox{background-color:#fff;margin-top:0px;width:750px;}
+				.chatRight{width:186px;}
+				body {
+					font-family: Helvetica Neue,Helvetica,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+					background: url(__PUBLIC__/image/2zrdI1g.jpg) no-repeat 50%;
+					background-size: cover;
+				}
+			</style>
+		</block>
+
+	</head>
+
+	<body >
+
+
+		<div class="main-container" id="main-container">
+
+			<div class="main-container-inner">
+
+				<div class="main-content">
+
+
+					<div class="page-content">
+
+							<block name="content">
+
+							</block>
+
+					</div><!-- /.page-content -->
+				<!-- /.main-content -->
+
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<block name="jquery">
+		<script src="__PUBLIC__/js/jquery/jquery-2.0.3.min.js"></script>
+		<script src="__PUBLIC__/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+		</block>
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="/assets/js/jquery-1.10.2.min.js"></script>
+		<script src="__PUBLIC__/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='__JS__/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="__JS__/bootstrap.min.js"></script>
+		<script src="__JS__/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="__JS__/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="__JS__/ace-elements.min.js"></script>
+		<script src="__JS__/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script src="__PUBLIC__/js/dejavutech_common.js"></script>
+
+		<block name="javascript">
+
+		</block>
+	</body>
+</html>

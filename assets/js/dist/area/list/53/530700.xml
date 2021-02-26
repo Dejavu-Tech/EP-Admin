@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="丽江" code="530700">
+<county name="古城" code="530702">
+    <street name="西安街道" code="530702001" />
+    <street name="大研街道" code="530702002" />
+    <street name="祥和街道" code="530702003" />
+    <street name="束河街道" code="530702004" />
+    <street name="金安镇" code="530702101" />
+    <street name="七河镇" code="530702102" />
+    <street name="大东乡" code="530702203" />
+    <street name="金山白族乡" code="530702204" />
+    <street name="金江白族乡" code="530702205" />
+</county>
+<county name="玉龙" code="530721">
+    <street name="黄山镇" code="530721101" />
+    <street name="石鼓镇" code="530721102" />
+    <street name="巨甸镇" code="530721103" />
+    <street name="白沙镇" code="530721104" />
+    <street name="拉市镇" code="530721105" />
+    <street name="奉科镇" code="530721106" />
+    <street name="鸣音镇" code="530721107" />
+    <street name="太安乡" code="530721203" />
+    <street name="龙蟠乡" code="530721204" />
+    <street name="黎明傈僳族乡" code="530721205" />
+    <street name="鲁甸乡" code="530721206" />
+    <street name="塔城乡" code="530721207" />
+    <street name="大具乡" code="530721208" />
+    <street name="宝山乡" code="530721209" />
+    <street name="石头白族乡" code="530721212" />
+    <street name="九河白族乡" code="530721213" />
+</county>
+<county name="永胜" code="530722">
+    <street name="永北镇" code="530722101" />
+    <street name="仁和镇" code="530722102" />
+    <street name="期纳镇" code="530722103" />
+    <street name="三川镇" code="530722104" />
+    <street name="程海镇" code="530722105" />
+    <street name="涛源镇" code="530722106" />
+    <street name="羊坪彝族乡" code="530722201" />
+    <street name="六德傈僳族彝族乡" code="530722202" />
+    <street name="东山傈僳族彝族乡" code="530722203" />
+    <street name="东风傈僳族乡" code="530722204" />
+    <street name="片角乡" code="530722206" />
+    <street name="光华傈僳族彝族乡" code="530722207" />
+    <street name="松坪傈僳族乡" code="530722208" />
+    <street name="大安彝族纳西族乡" code="530722209" />
+    <street name="顺州乡" code="530722210" />
+</county>
+<county name="华坪" code="530723">
+    <street name="中心镇" code="530723101" />
+    <street name="荣将镇" code="530723102" />
+    <street name="兴泉镇" code="530723103" />
+    <street name="石龙坝镇" code="530723104" />
+    <street name="新庄傈僳族傣族乡" code="530723202" />
+    <street name="通达傈僳族乡" code="530723203" />
+    <street name="永兴傈僳族乡" code="530723204" />
+    <street name="船房傈僳族傣族乡" code="530723205" />
+</county>
+<county name="宁蒗" code="530724">
+    <street name="大兴镇" code="530724101" />
+    <street name="拉伯乡" code="530724201" />
+    <street name="永宁乡" code="530724202" />
+    <street name="翠玉傈僳族普米族乡" code="530724203" />
+    <street name="红桥乡" code="530724204" />
+    <street name="宁利乡" code="530724205" />
+    <street name="金棉乡" code="530724206" />
+    <street name="西川乡" code="530724207" />
+    <street name="西布河乡" code="530724208" />
+    <street name="战河乡" code="530724209" />
+    <street name="永宁坪乡" code="530724210" />
+    <street name="跑马坪乡" code="530724211" />
+    <street name="蝉战河乡" code="530724212" />
+    <street name="新营盘乡" code="530724213" />
+    <street name="烂泥箐乡" code="530724214" />
+</county>
+</city>
+</address>

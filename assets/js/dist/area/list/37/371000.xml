@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="威海" code="371000">
+<county name="环翠" code="371002">
+    <street name="环翠楼街道" code="371002001" />
+    <street name="鲸园街道" code="371002002" />
+    <street name="竹岛街道" code="371002003" />
+    <street name="怡园街道" code="371002004" />
+    <street name="田和街道" code="371002007" />
+    <street name="皇冠街道" code="371002008" />
+    <street name="凤林街道" code="371002009" />
+    <street name="西苑街道" code="371002010" />
+    <street name="张村镇" code="371002100" />
+    <street name="羊亭镇" code="371002101" />
+    <street name="温泉镇" code="371002102" />
+    <street name="崮山镇" code="371002103" />
+    <street name="孙家疃镇" code="371002104" />
+    <street name="泊于镇" code="371002105" />
+    <street name="桥头镇" code="371002106" />
+    <street name="草庙子镇" code="371002107" />
+    <street name="初村镇" code="371002108" />
+</county>
+<county name="文登" code="371081">
+    <street name="龙山路街道" code="371081001" />
+    <street name="天福路街道" code="371081002" />
+    <street name="环山路街道" code="371081003" />
+    <street name="文登营镇" code="371081100" />
+    <street name="大水泊镇" code="371081101" />
+    <street name="张家产镇" code="371081102" />
+    <street name="高村镇" code="371081103" />
+    <street name="泽库镇" code="371081104" />
+    <street name="侯家镇" code="371081105" />
+    <street name="宋村镇" code="371081106" />
+    <street name="泽头镇" code="371081107" />
+    <street name="小观镇" code="371081108" />
+    <street name="葛家镇" code="371081109" />
+    <street name="米山镇" code="371081110" />
+    <street name="界石镇" code="371081111" />
+    <street name="汪疃镇" code="371081112" />
+    <street name="苘山镇" code="371081113" />
+    <street name="开发区办事处" code="371081400" />
+    <street name="埠口港管理委员会" code="371081401" />
+</county>
+<county name="荣成" code="371082">
+    <street name="宁津街道" code="371082001" />
+    <street name="港湾街道" code="371082002" />
+    <street name="桃园街道" code="371082003" />
+    <street name="王连街道" code="371082004" />
+    <street name="东山街道" code="371082005" />
+    <street name="斥山街道" code="371082006" />
+    <street name="崖头街道" code="371082007" />
+    <street name="城西街道" code="371082008" />
+    <street name="寻山街道" code="371082009" />
+    <street name="崂山街道" code="371082010" />
+    <street name="俚岛镇" code="371082101" />
+    <street name="成山镇" code="371082102" />
+    <street name="埠柳镇" code="371082103" />
+    <street name="港西镇" code="371082104" />
+    <street name="夏庄镇" code="371082105" />
+    <street name="崖西镇" code="371082106" />
+    <street name="荫子镇" code="371082107" />
+    <street name="滕家镇" code="371082108" />
+    <street name="大疃镇" code="371082109" />
+    <street name="上庄镇" code="371082110" />
+    <street name="虎山镇" code="371082111" />
+    <street name="人和镇" code="371082112" />
+</county>
+<county name="乳山" code="371083">
+    <street name="城区街道" code="371083001" />
+    <street name="夏村镇" code="371083100" />
+    <street name="乳山口镇" code="371083101" />
+    <street name="海阳所镇" code="371083102" />
+    <street name="白沙滩镇" code="371083103" />
+    <street name="大孤山镇" code="371083104" />
+    <street name="南黄镇" code="371083105" />
+    <street name="冯家镇" code="371083106" />
+    <street name="下初镇" code="371083107" />
+    <street name="午极镇" code="371083108" />
+    <street name="育黎镇" code="371083109" />
+    <street name="崖子镇" code="371083110" />
+    <street name="诸往镇" code="371083111" />
+    <street name="乳山寨镇" code="371083112" />
+    <street name="徐家镇" code="371083114" />
+</county>
+</city>
+</address>

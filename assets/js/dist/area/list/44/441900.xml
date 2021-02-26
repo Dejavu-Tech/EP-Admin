@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="东莞" code="441900">
+<county name="城区片区" code="441901">
+    <street name="莞城街道" code="441901001" />
+	<street name="东城街道" code="441901002" />
+	<street name="南城街道" code="441901003" />
+	<street name="万江街道" code="441901004" />
+	<street name="石碣镇" code="441901005" />
+	<street name="高埗镇" code="441901006" />
+</county>
+<county name="水乡新城片区" code="441902">
+    <street name="麻涌镇" code="441902001" />
+	<street name="洪梅镇" code="441902002" />
+	<street name="中堂镇" code="441902003" />
+	<street name="望牛墩镇" code="441902004" />
+	<street name="道滘镇" code="441902005" />
+</county>
+<county name="滨海片区" code="441903">
+    <street name="虎门镇" code="441903001" />
+	<street name="长安镇" code="441903002" />
+	<street name="厚街镇" code="441903003" />
+	<street name="沙田镇" code="441903004" />
+	<street name="东莞港开发区（滨海湾新区）" code="441903005" />
+</county>
+<county name="松山湖片区" code="441904">
+    <street name="石龙镇" code="441904001" />
+	<street name="石排镇" code="441904002" />
+	<street name="茶山镇" code="441904003" />
+	<street name="寮步镇" code="441904004" />
+	<street name="大岭山镇" code="441904005" />
+	<street name="大朗镇" code="441904006" />
+	<street name="松山湖高新区（生态园开发区）" code="441904007" />
+</county>
+<county name="东部产业园片区" code="441905">
+    <street name="常平镇" code="441905001" />
+	<street name="黄江镇" code="441905002" />
+	<street name="企石镇" code="441905003" />
+	<street name="桥头镇" code="441905004" />
+	<street name="横沥镇" code="441905005" />
+	<street name="谢岗镇" code="441905006" />
+	<street name="东部工业园（银瓶新区）" code="441905007" />
+</county>
+<county name="东南临深片区" code="441906">
+    <street name="塘厦镇" code="441906001" />
+	<street name="清溪镇" code="441906002" />
+	<street name="樟木头镇" code="441906003" />
+	<street name="凤岗镇" code="441906004" />
+</county>
+
+<county name="东坑镇" code="441907">
+    <street name="东坑社区" code="441907001" />
+	<street name="明初立村" code="441907002" />
+	<street name="角社村" code="441907003" />
+	<street name="塔岗村" code="441907004" />
+	<street name="黄麻岭村" code="441907005" />
+	<street name="凤大村" code="441907006" />
+	<street name="黄屋村" code="441907007" />
+	<street name="寮边头村" code="441907008" />
+	<street name="长安塘村" code="441907009" />
+	<street name="井美村" code="441907010" />
+	<street name="初坑村" code="441907011" />
+	<street name="彭屋村" code="441907012" />
+	<street name="丁屋村" code="441907013" />
+</county>
+
+</city>
+</address>		

@@ -1,0 +1,115 @@
+{template '_header'}
+
+<link href="/assets/ep/diypage/css/web.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/ep/diypage/css/diy.min.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/ep/diypage/css/foxui.diy.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+
+<div class="page-header">
+    当前位置：<span class="text-primary">首页布局</span>
+</div>
+
+<div class="page-content">
+    <div class="row relative w840">
+        <div class="diy-phone">
+            <div class="phone-head"></div>
+            <div class="phone-body">
+                <div class="phone-title" id="page">loading...</div>
+                <div class="phone-main" id="phone">
+                    <p style="text-align: center; line-height: 400px">您还没有添加任何元素</p>
+                </div>
+            </div>
+            <div class="phone-foot"></div>
+        </div>
+
+
+        <div class="diy-editor form-horizontal" id="diy-editor">
+            <div class="editor-arrow"></div>
+            <div class="inner"></div>
+        </div>
+
+
+        <div class="diy-menu">
+            <div class="navs" id="navs"></div>
+            <div class="action">
+                <nav class="btn btn-pill btn-primary btn-sm" style="float: left; display: none" id="gotop"><i class="icon icon-top" style="font-size: 12px"></i> 返回顶部</nav>
+                <nav class="btn btn-primary btn-sm btn-save" data-type="save">保存</nav>
+            </div>
+        </div>
+    </div>
+
+    {template 'config/layoutindex/_template'}
+    {template 'config/layoutindex/_template_edit'}
+</div>
+
+
+<script type="text/javascript" src="/resource/components/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/resource/components/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="/resource/components/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+<script language="javascript">
+    var path = '../diypage/js/diy.min';
+    myrequire([path,'tpl','web/biz'],function(modal,tpl){
+        modal.init({
+            tpl: tpl,
+            attachurl: "{$_W['attachurl']}",
+            id: '{: intval($_GPC["id"])}',
+            type: '{$type}',
+            data: <?php if(!empty($page['data'])){ ?>{:json_encode($page['data'])}<?php }else{ ?>null<?php } ?>,
+            diymenu: {:json_encode($diymenu)},
+            diyadvs: {:json_encode($diyadvs)},
+            levels: <?php if(!empty($levels)){ ?>{:json_encode($levels)}<?php }else{ ?>null<?php } ?>,
+            merch: <?php if($_W['plugin']=='merch' && !empty($_W['merchid'])){ ?>1<?php }else{ ?>0<?php } ?>,
+            plugins: {$hasplugins},
+            shopset: {"name":"","logo":"","description":"","img":"","signimg":"","getinfo":"1","saleout":"","loading":"","diycode":"","funbar":"0","goodstotal":"0"}
+        });
+    });
+    function selectUrlCallback(href){
+        var ue =  UE.getEditor('rich');
+        if(href){
+            ue.execCommand('link', {href: href, 'data-nocache': 'true'});
+        }
+    }
+    function callbackGoods(data) {
+        myrequire([path],function(modal) {
+            modal.callbackGoods(data);
+        });
+    }
+    function callbackCategory (data) {
+        myrequire([path],function(modal) {
+            modal.callbackCategory(data);
+        });
+    }
+    function callbackGroup (data) {
+        myrequire([path],function(modal) {
+            modal.callbackGroup(data);
+        });
+    }
+    function callbackMerch (data) {
+        myrequire([path],function(modal) {
+            modal.callbackMerch(data);
+        });
+    }
+    function callbackMerchCategory (data) {
+        myrequire([path],function(modal) {
+            modal.callbackMerchCategory(data);
+        });
+    }
+    function callbackMerchGroup (data) {
+        myrequire([path],function(modal) {
+            modal.callbackMerchGroup(data);
+        });
+    }
+    function callbackSeckill (data) {
+        myrequire([path],function(modal) {
+            modal.callbackSeckill(data);
+        });
+    }
+    function callbackCoupon (data) {
+        myrequire([path],function(modal) {
+            modal.callbackCoupon(data);
+        });
+    }
+</script>
+
+{template '_footer'}

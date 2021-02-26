@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阳江" code="441700">
+<county name="江城" code="441702">
+    <street name="南恩街道" code="441702001" />
+    <street name="城南街道" code="441702002" />
+    <street name="城北街道" code="441702003" />
+    <street name="中洲街道" code="441702004" />
+    <street name="城东街道" code="441702006" />
+    <street name="岗列街道" code="441702008" />
+    <street name="城西街道" code="441702009" />
+    <street name="白沙街道" code="441702011" />
+    <street name="埠场镇" code="441702102" />
+    <street name="平冈镇" code="441702103" />
+    <street name="海陵镇" code="441702104" />
+    <street name="闸坡镇" code="441702105" />
+    <street name="双捷镇" code="441702106" />
+    <street name="阳江林场罗琴分场" code="441702401" />
+    <street name="平冈农场" code="441702450" />
+    <street name="红十月农场" code="441702453" />
+</county>
+<county name="阳西" code="441721">
+    <street name="织篢镇" code="441721100" />
+    <street name="程村镇" code="441721101" />
+    <street name="塘口镇" code="441721102" />
+    <street name="上洋镇" code="441721103" />
+    <street name="溪头镇" code="441721104" />
+    <street name="沙扒镇" code="441721105" />
+    <street name="儒洞镇" code="441721106" />
+    <street name="新圩镇" code="441721107" />
+    <street name="织贡农场" code="441721501" />
+    <street name="阳江林场儒洞分场" code="441721502" />
+</county>
+<county name="阳东" code="441723">
+    <street name="东城镇" code="441723100" />
+    <street name="北惯镇" code="441723101" />
+    <street name="那龙镇" code="441723102" />
+    <street name="东平镇" code="441723103" />
+    <street name="雅韶镇" code="441723104" />
+    <street name="大沟镇" code="441723105" />
+    <street name="新洲镇" code="441723106" />
+    <street name="合山镇" code="441723107" />
+    <street name="塘坪镇" code="441723108" />
+    <street name="大八镇" code="441723109" />
+    <street name="红丰镇" code="441723110" />
+    <street name="阳江监狱" code="441723400" />
+    <street name="红五月农场" code="441723401" />
+    <street name="鸡山农场" code="441723402" />
+    <street name="阳江林场宝山分场" code="441723501" />
+    <street name="阳江林场田畔分场" code="441723502" />
+    <street name="阳东原种场" code="441723503" />
+    <street name="阳东林场" code="441723504" />
+    <street name="阳江林场东岸分场" code="441723505" />
+</county>
+<county name="阳春" code="441781">
+    <street name="春城街道" code="441781001" />
+    <street name="河朗镇" code="441781101" />
+    <street name="松柏镇" code="441781102" />
+    <street name="石望镇" code="441781103" />
+    <street name="春湾镇" code="441781105" />
+    <street name="合水镇" code="441781106" />
+    <street name="陂面镇" code="441781107" />
+    <street name="圭岗镇" code="441781108" />
+    <street name="永宁镇" code="441781109" />
+    <street name="马水镇" code="441781110" />
+    <street name="岗美镇" code="441781111" />
+    <street name="河口镇" code="441781112" />
+    <street name="潭水镇" code="441781113" />
+    <street name="三甲镇" code="441781114" />
+    <street name="双窖镇" code="441781116" />
+    <street name="八甲镇" code="441781117" />
+    <street name="岗桥管理区" code="441781401" />
+    <street name="三叶农场" code="441781402" />
+    <street name="石录矿区" code="441781403" />
+    <street name="花滩林场" code="441781404" />
+    <street name="东湖林场" code="441781405" />
+    <street name="河尾山林场" code="441781406" />
+    <street name="南山矿" code="441781407" />
+    <street name="阳春监狱" code="441781408" />
+    <street name="硫铁矿" code="441781410" />
+</county>
+</city>
+</address>

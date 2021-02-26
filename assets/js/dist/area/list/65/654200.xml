@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="塔城" code="654200">
+<county name="塔城" code="654201">
+    <street name="和平街道" code="654201001" />
+    <street name="杜别克街道" code="654201002" />
+    <street name="新城街道" code="654201003" />
+    <street name="二工镇" code="654201100" />
+    <street name="恰夏镇" code="654201101" />
+    <street name="喀拉哈巴克乡" code="654201200" />
+    <street name="阿西尔达斡尔民族乡" code="654201202" />
+    <street name="阿不都拉乡" code="654201203" />
+    <street name="也门勒乡" code="654201204" />
+    <street name="恰合吉牧场" code="654201403" />
+    <street name="博孜达克农场" code="654201404" />
+    <street name="窝依加依劳牧场" code="654201405" />
+    <street name="地区种牛场" code="654201406" />
+    <street name="兵团农九师一六三团" code="654201503" />
+    <street name="兵团农九师一六四团" code="654201504" />
+</county>
+<county name="乌苏" code="654202">
+    <street name="南苑街道" code="654202001" />
+    <street name="虹桥街道" code="654202002" />
+    <street name="新市区街道" code="654202003" />
+    <street name="白杨沟镇" code="654202100" />
+    <street name="哈图布呼镇" code="654202101" />
+    <street name="皇宫镇" code="654202102" />
+    <street name="车排子镇" code="654202103" />
+    <street name="甘河子镇" code="654202104" />
+    <street name="百泉镇" code="654202105" />
+    <street name="四棵树镇" code="654202106" />
+    <street name="古尔图镇" code="654202107" />
+    <street name="西湖镇" code="654202108" />
+    <street name="西大沟镇" code="654202109" />
+    <street name="八十四户乡" code="654202200" />
+    <street name="夹河子乡" code="654202201" />
+    <street name="九间楼乡" code="654202202" />
+    <street name="石桥乡" code="654202203" />
+    <street name="头台乡" code="654202204" />
+    <street name="吉尔格勒特郭愣蒙古民族乡" code="654202205" />
+    <street name="塔布勒合特蒙古民族乡" code="654202206" />
+    <street name="甘家湖牧场" code="654202400" />
+    <street name="巴音沟牧场" code="654202401" />
+    <street name="赛力克提牧场" code="654202402" />
+    <street name="乌苏监狱" code="654202403" />
+    <street name="兵团一二三团" code="654202500" />
+    <street name="兵团一二四团" code="654202501" />
+    <street name="兵团一二五团" code="654202502" />
+    <street name="兵团一二六团" code="654202503" />
+    <street name="兵团一二七团" code="654202504" />
+    <street name="兵团一二八团" code="654202505" />
+    <street name="兵团一三零团" code="654202507" />
+</county>
+<county name="额敏" code="654221">
+    <street name="额敏镇" code="654221100" />
+    <street name="玉什喀拉苏镇" code="654221101" />
+    <street name="杰勒阿尕什镇" code="654221102" />
+    <street name="上户镇" code="654221103" />
+    <street name="郊区乡" code="654221200" />
+    <street name="额玛勒郭楞蒙古民族乡" code="654221202" />
+    <street name="玛热勒苏乡" code="654221205" />
+    <street name="喀拉也木勒镇" code="654221206" />
+    <street name="喇嘛昭乡" code="654221207" />
+    <street name="霍吉尔特蒙古民族乡" code="654221208" />
+    <street name="二道桥乡" code="654221209" />
+    <street name="二支河牧场" code="654221400" />
+    <street name="加尔布拉克农场" code="654221401" />
+    <street name="阔什比克良种场" code="654221402" />
+    <street name="萨尔也木勒牧场" code="654221403" />
+    <street name="也木勒牧场" code="654221404" />
+    <street name="塔城地区种羊场" code="654221405" />
+    <street name="吾宗布拉克牧场" code="654221406" />
+    <street name="兵团农九师一六五团" code="654221505" />
+    <street name="兵团农九师一六六团" code="654221506" />
+    <street name="兵团农九师一六七团" code="654221507" />
+    <street name="兵团农九师一六八团" code="654221508" />
+    <street name="兵团农九师团结农场" code="654221511" />
+</county>
+<county name="沙湾" code="654223">
+    <street name="三道河子镇" code="654223100" />
+    <street name="四道河子镇" code="654223101" />
+    <street name="老沙湾镇" code="654223102" />
+    <street name="乌兰乌苏镇" code="654223103" />
+    <street name="安集海镇" code="654223104" />
+    <street name="东湾镇" code="654223105" />
+    <street name="西戈壁镇" code="654223106" />
+    <street name="柳毛湾镇" code="654223107" />
+    <street name="金沟河镇" code="654223108" />
+    <street name="商户地乡" code="654223200" />
+    <street name="大泉乡" code="654223201" />
+    <street name="博尔通古乡" code="654223202" />
+    <street name="牛圈子牧场" code="654223400" />
+    <street name="博尔通古牧场" code="654223401" />
+    <street name="良种场" code="654223402" />
+    <street name="兵团一二一团" code="654223503" />
+    <street name="兵团一三三团" code="654223506" />
+    <street name="兵团一三四团" code="654223507" />
+    <street name="兵团一四一团" code="654223509" />
+    <street name="兵团一四二团" code="654223510" />
+    <street name="兵团一四三团" code="654223511" />
+    <street name="兵团一四四团" code="654223512" />
+</county>
+<county name="托里" code="654224">
+    <street name="托里镇" code="654224100" />
+    <street name="铁厂沟镇" code="654224101" />
+    <street name="庙尔沟镇" code="654224102" />
+    <street name="多拉特乡" code="654224200" />
+    <street name="乌雪特乡" code="654224201" />
+    <street name="库普乡" code="654224202" />
+    <street name="阿克别里斗乡" code="654224203" />
+    <street name="白杨河林场" code="654224401" />
+    <street name="老风口林场" code="654224402" />
+    <street name="巴尔鲁克山塔斯特林场" code="654224403" />
+    <street name="兵团农九师一七零团" code="654224510" />
+</county>
+<county name="裕民" code="654225">
+    <street name="哈拉布拉镇" code="654225100" />
+    <street name="吉也克镇" code="654225101" />
+    <street name="哈拉布拉乡" code="654225200" />
+    <street name="新地乡" code="654225201" />
+    <street name="阿勒腾也木勒乡" code="654225202" />
+    <street name="江格斯乡" code="654225204" />
+    <street name="察汗托海牧场" code="654225400" />
+    <street name="兵团农九师一六一团" code="654225501" />
+</county>
+<county name="和布克赛尔" code="654226">
+    <street name="和布克赛尔镇" code="654226100" />
+    <street name="和什托洛盖镇" code="654226101" />
+    <street name="夏孜盖乡" code="654226200" />
+    <street name="铁布肯乌散乡" code="654226201" />
+    <street name="查干库勒乡" code="654226202" />
+    <street name="巴音傲瓦乡" code="654226203" />
+    <street name="莫特格乡" code="654226204" />
+    <street name="查和特乡" code="654226205" />
+    <street name="伊克乌图布拉格牧场" code="654226400" />
+    <street name="那仁和布克牧场" code="654226401" />
+    <street name="巴尕乌图布拉格牧场" code="654226402" />
+    <street name="布斯屯格牧场" code="654226403" />
+    <street name="仓德格矿区" code="654226404" />
+    <street name="兵团一八四团" code="654226500" />
+    <street name="新疆屯鑫能源开发有限公司" code="654226501" />
+</county>
+</city>
+</address>

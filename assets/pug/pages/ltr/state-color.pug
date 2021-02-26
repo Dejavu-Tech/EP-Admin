@@ -1,0 +1,306 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper
+                include ../../components/sidebar
+                include ../../components/chat-sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6.main-header
+                                    h2
+                                      | State
+                                      span
+                                        | Color
+                                    h6.mb-0 admin panel
+                                .col-lg-6.breadcrumb-right      
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.pe-7s-home
+                                      li.breadcrumb-item Ui Elements
+                                      li.breadcrumb-item.active State Color
+                    // Container-fluid starts                    
+                    .container-fluid
+                      .row
+                        .col-sm-12
+                          .card
+                            .card-header
+                              h5 Default Color
+                            .card-body
+                              .row.color-box
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-primary.p-20.m-b-10.text-center #ab8ce4
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-secondary.p-20.m-b-10.text-center #26c6da
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-success.p-20.m-b-10.text-center #00c292
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-info.p-20.m-b-10.text-center #03a9f3
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-warning.p-20.m-b-10.text-center #fec107
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-danger.p-20.m-b-10.text-center #fb9678
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-light.p-20.m-b-10.text-center.text-dark #eeeeee
+                                .col-lg-3.col-md-4.col-6.col-xl-2
+                                  .bg-dark.p-20.m-b-10.text-center #263238
+                          .card
+                            .card-header
+                              h5 Color
+                            .card-body
+                              .row
+                                .col-lg-3.col-sm-6
+                                  h6.sub-title.text-uppercase Primary
+                                  .primary-color
+                                    ul.m-b-30
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                .col-lg-3.col-sm-6
+                                  h6.sub-title.text-uppercase secondary
+                                  .secondary-color
+                                    ul.m-b-30
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                .col-lg-3.col-sm-6
+                                  h6.sub-title.text-uppercase Success
+                                  .success-color
+                                    ul.m-b-30
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                .col-lg-3.col-sm-6
+                                  h6.sub-title.text-uppercase Info
+                                  .info-color
+                                    ul.m-b-30
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                .col-lg-3.col-sm-6
+                                  h6.sub-title.text-uppercase Warning
+                                  .yellow-color
+                                    ul
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                .col-lg-3.col-sm-6.xs-mt
+                                  h6.sub-title.text-uppercase Danger
+                                  .red-color
+                                    ul
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                .col-lg-3.col-sm-6.nav-md-mt
+                                  h6.sub-title.text-uppercase Pink
+                                  .pink-color
+                                    ul
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                .col-lg-3.col-sm-6.nav-md-mt
+                                  h6.sub-title.text-uppercase Grey
+                                  .gray-color
+                                    ul
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+                                      li
+                                        span
+
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files   

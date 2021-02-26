@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="张掖" code="620700">
+<county name="甘州" code="620702">
+    <street name="东街街道" code="620702001" />
+    <street name="南街街道" code="620702002" />
+    <street name="西街街道" code="620702003" />
+    <street name="北街街道" code="620702004" />
+    <street name="火车站街道" code="620702005" />
+    <street name="梁家墩镇" code="620702100" />
+    <street name="上秦镇" code="620702101" />
+    <street name="大满镇" code="620702102" />
+    <street name="沙井镇" code="620702103" />
+    <street name="乌江镇" code="620702104" />
+    <street name="甘浚镇" code="620702105" />
+    <street name="新墩镇" code="620702106" />
+    <street name="党寨镇" code="620702107" />
+    <street name="碱滩镇" code="620702108" />
+    <street name="三闸镇" code="620702109" />
+    <street name="小满镇" code="620702110" />
+    <street name="龙渠乡" code="620702202" />
+    <street name="安阳乡" code="620702203" />
+    <street name="花寨乡" code="620702204" />
+    <street name="长安乡" code="620702205" />
+    <street name="靖安乡" code="620702207" />
+    <street name="明永乡" code="620702210" />
+    <street name="平山湖蒙古族乡" code="620702211" />
+    <street name="甘肃农垦张掖农场" code="620702400" />
+    <street name="甘肃省农业科学院张掖试验场" code="620702401" />
+    <street name="甘肃张掖工业园区" code="620702402" />
+    <street name="张掖滨河新区" code="620702403" />
+</county>
+<county name="肃南" code="620721">
+    <street name="红湾寺镇" code="620721100" />
+    <street name="皇城镇" code="620721101" />
+    <street name="马蹄藏族乡" code="620721200" />
+    <street name="康乐乡" code="620721201" />
+    <street name="白银蒙古族乡" code="620721202" />
+    <street name="大河乡" code="620721203" />
+    <street name="明花乡" code="620721204" />
+    <street name="祁丰蔵族乡" code="620721205" />
+    <street name="甘肃省绵羊育种场" code="620721500" />
+    <street name="张掖宝瓶河牧场" code="620721501" />
+</county>
+<county name="民乐" code="620722">
+    <street name="洪水镇" code="620722101" />
+    <street name="六坝镇" code="620722102" />
+    <street name="新天镇" code="620722103" />
+    <street name="南古镇" code="620722104" />
+    <street name="永固镇" code="620722105" />
+    <street name="三堡镇" code="620722106" />
+    <street name="南丰乡" code="620722200" />
+    <street name="民联乡" code="620722201" />
+    <street name="顺化乡" code="620722203" />
+    <street name="丰乐乡" code="620722204" />
+    <street name="民乐生态工业园区" code="620722400" />
+</county>
+<county name="临泽" code="620723">
+    <street name="沙河镇" code="620723101" />
+    <street name="新华镇" code="620723102" />
+    <street name="蓼泉镇" code="620723103" />
+    <street name="平川镇" code="620723104" />
+    <street name="板桥镇" code="620723105" />
+    <street name="鸭暖乡" code="620723201" />
+    <street name="倪家营乡" code="620723202" />
+    <street name="国营临泽农场" code="620723500" />
+    <street name="五泉林场" code="620723501" />
+    <street name="沙河林场" code="620723502" />
+    <street name="小泉子治沙站" code="620723503" />
+    <street name="园艺场" code="620723504" />
+    <street name="良种繁殖场" code="620723505" />
+</county>
+<county name="高台" code="620724">
+    <street name="城关镇" code="620724100" />
+    <street name="宣化镇" code="620724101" />
+    <street name="南华镇" code="620724102" />
+    <street name="巷道乡" code="620724200" />
+    <street name="黑泉乡" code="620724201" />
+    <street name="罗城乡" code="620724202" />
+    <street name="合黎乡" code="620724203" />
+    <street name="骆驼城乡" code="620724204" />
+    <street name="新坝乡" code="620724205" />
+    <street name="甘肃高台工业园区" code="620724400" />
+</county>
+<county name="山丹" code="620725">
+    <street name="清泉镇" code="620725101" />
+    <street name="位奇镇" code="620725102" />
+    <street name="霍城镇" code="620725103" />
+    <street name="东乐乡" code="620725200" />
+    <street name="大马营乡" code="620725201" />
+    <street name="陈户乡" code="620725202" />
+    <street name="老军乡" code="620725203" />
+    <street name="李桥乡" code="620725204" />
+    <street name="国营山丹农场" code="620725400" />
+    <street name="中牧公司山丹马场" code="620725402" />
+</county>
+</city>
+</address>

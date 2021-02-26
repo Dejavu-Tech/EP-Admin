@@ -1,0 +1,60 @@
+
+<div class="page-wrapper custom-scrollbar">
+<div class="page-body-wrapper">
+<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+		<div class="layui-card-header layui-elem-quote">当前位置：
+			<span class="line-text">队列批量处理订单小票</span>
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="form-group row">
+					<label class="col-sm-2 col-form-label">批量打印订单小票</label>
+					<div class="col-sm-10">
+						<div id='count' class="alert alert-info" style="line-height:20px;">
+							<div id="update_content" style="height:400px;overflow-y:auto;">
+								<p>批量处理马上开始....批量处理结束前请勿关闭该页面</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var a;
+
+	$(function(){
+		setTimeout( function() {
+            load_next_updata();
+        },300);
+	})
+	function load_next_updata()
+	{
+		$.post('<?php echo U("order/do_opprint_quene", array('cache_key' => $cache_key) ); ?>', function (ret) {
+                if(  ret.code == 0)
+				{
+					//msg update_content
+					$('#update_content').prepend("<p>"+ret.msg+"</p>");
+					$('#update_content').scrollTop(0);
+					setTimeout( function() {
+						load_next_updata();
+					},300);
+				}else if(ret.code ==2){
+
+					layer.msg('批量处理完成！',{time: 1000,
+						end:function(){
+							location.href = "<?php echo U("order/index" ); ?>";
+						}
+					});
+
+
+				}else{
+					alert(ret.msg);
+
+				}
+            }, 'json');
+	}
+
+</script>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="吉安" code="360800">
+<county name="吉州" code="360802">
+    <street name="古南街道" code="360802001" />
+    <street name="永叔街道" code="360802002" />
+    <street name="文山街道" code="360802003" />
+    <street name="习溪桥街道" code="360802004" />
+    <street name="北门街道" code="360802005" />
+    <street name="白塘街道" code="360802006" />
+    <street name="兴桥镇" code="360802100" />
+    <street name="樟山镇" code="360802101" />
+    <street name="长塘镇" code="360802102" />
+    <street name="曲濑镇" code="360802103" />
+    <street name="禾埠乡" code="360802200" />
+    <street name="吉州区工业园小区" code="360802400" />
+</county>
+<county name="青原" code="360803">
+    <street name="河东街道" code="360803001" />
+    <street name="滨江街道" code="360803002" />
+    <street name="天玉镇" code="360803100" />
+    <street name="值夏镇" code="360803101" />
+    <street name="新圩镇" code="360803102" />
+    <street name="富滩镇" code="360803103" />
+    <street name="富田镇" code="360803104" />
+    <street name="文陂镇" code="360803105" />
+    <street name="东固畲族少数民族乡" code="360803201" />
+    <street name="青原区河东经济开发区" code="360803400" />
+    <street name="东固垦殖场" code="360803500" />
+</county>
+<county name="吉安" code="360821">
+    <street name="高新街道" code="360821001" />
+    <street name="敦厚镇" code="360821100" />
+    <street name="永阳镇" code="360821101" />
+    <street name="天河镇" code="360821102" />
+    <street name="横江镇" code="360821103" />
+    <street name="固江镇" code="360821104" />
+    <street name="万福镇" code="360821105" />
+    <street name="永和镇" code="360821106" />
+    <street name="桐坪镇" code="360821107" />
+    <street name="凤凰镇" code="360821108" />
+    <street name="油田镇" code="360821109" />
+    <street name="敖城镇" code="360821110" />
+    <street name="梅塘镇" code="360821111" />
+    <street name="浬田镇" code="360821112" />
+    <street name="北源乡" code="360821200" />
+    <street name="大冲乡" code="360821201" />
+    <street name="登龙乡" code="360821204" />
+    <street name="安塘乡" code="360821205" />
+    <street name="官田乡" code="360821206" />
+    <street name="指阳乡" code="360821207" />
+    <street name="吉安高新技术产业园区" code="360821400" />
+    <street name="井冈山经济技术开发区" code="360821401" />
+</county>
+<county name="吉水" code="360822">
+    <street name="文峰镇" code="360822100" />
+    <street name="阜田镇" code="360822101" />
+    <street name="盘谷镇" code="360822102" />
+    <street name="枫江镇" code="360822103" />
+    <street name="黄桥镇" code="360822104" />
+    <street name="金滩镇" code="360822105" />
+    <street name="八都镇" code="360822106" />
+    <street name="双村镇" code="360822107" />
+    <street name="醪桥镇" code="360822108" />
+    <street name="螺田镇" code="360822109" />
+    <street name="白沙镇" code="360822110" />
+    <street name="白水镇" code="360822111" />
+    <street name="丁江镇" code="360822112" />
+    <street name="乌江镇" code="360822113" />
+    <street name="水南镇" code="360822114" />
+    <street name="尚贤乡" code="360822200" />
+    <street name="水田乡" code="360822201" />
+    <street name="冠山乡" code="360822202" />
+    <street name="吉水县工业园区" code="360822400" />
+</county>
+<county name="峡江" code="360823">
+    <street name="水边镇" code="360823100" />
+    <street name="马埠镇" code="360823101" />
+    <street name="巴邱镇" code="360823102" />
+    <street name="仁和镇" code="360823103" />
+    <street name="砚溪镇" code="360823104" />
+    <street name="罗田镇" code="360823105" />
+    <street name="桐林乡" code="360823200" />
+    <street name="福民乡" code="360823201" />
+    <street name="戈坪乡" code="360823202" />
+    <street name="金江乡" code="360823203" />
+    <street name="金坪民族乡" code="360823204" />
+    <street name="峡江县工业园区" code="360823400" />
+</county>
+<county name="新干" code="360824">
+    <street name="金川镇" code="360824100" />
+    <street name="三湖镇" code="360824101" />
+    <street name="大洋洲镇" code="360824102" />
+    <street name="七琴镇" code="360824103" />
+    <street name="麦斜镇" code="360824104" />
+    <street name="界埠镇" code="360824105" />
+    <street name="溧江镇" code="360824106" />
+    <street name="桃溪乡" code="360824201" />
+    <street name="城上乡" code="360824202" />
+    <street name="潭丘乡" code="360824203" />
+    <street name="神政桥乡" code="360824204" />
+    <street name="沂江乡" code="360824205" />
+    <street name="荷浦乡" code="360824207" />
+    <street name="新干工业园区" code="360824404" />
+    <street name="地质大队" code="360824405" />
+    <street name="洋峰农场" code="360824501" />
+    <street name="黎山林场" code="360824502" />
+</county>
+<county name="永丰" code="360825">
+    <street name="恩江镇" code="360825100" />
+    <street name="坑田镇" code="360825101" />
+    <street name="沿陂镇" code="360825102" />
+    <street name="古县镇" code="360825103" />
+    <street name="瑶田镇" code="360825104" />
+    <street name="藤田镇" code="360825105" />
+    <street name="石马镇" code="360825106" />
+    <street name="沙溪镇" code="360825107" />
+    <street name="佐龙乡" code="360825200" />
+    <street name="八江乡" code="360825201" />
+    <street name="潭城乡" code="360825202" />
+    <street name="鹿冈乡" code="360825203" />
+    <street name="七都乡" code="360825204" />
+    <street name="陶塘乡" code="360825205" />
+    <street name="中村乡" code="360825206" />
+    <street name="上溪乡" code="360825207" />
+    <street name="潭头乡" code="360825208" />
+    <street name="三坊乡" code="360825209" />
+    <street name="上固乡" code="360825210" />
+    <street name="君埠乡" code="360825211" />
+    <street name="龙冈畲族乡" code="360825212" />
+    <street name="永丰县工业园区" code="360825403" />
+    <street name="罗铺垦殖场" code="360825501" />
+    <street name="官山林场" code="360825502" />
+</county>
+<county name="泰和" code="360826">
+    <street name="澄江镇" code="360826100" />
+    <street name="碧溪镇" code="360826101" />
+    <street name="桥头镇" code="360826102" />
+    <street name="禾市镇" code="360826103" />
+    <street name="螺溪镇" code="360826104" />
+    <street name="苏溪镇" code="360826105" />
+    <street name="马市镇" code="360826106" />
+    <street name="塘洲镇" code="360826107" />
+    <street name="冠朝镇" code="360826108" />
+    <street name="沙村镇" code="360826109" />
+    <street name="老营盘镇" code="360826110" />
+    <street name="小龙镇" code="360826111" />
+    <street name="灌溪镇" code="360826112" />
+    <street name="苑前镇" code="360826113" />
+    <street name="万合镇" code="360826114" />
+    <street name="沿溪镇" code="360826115" />
+    <street name="石山乡" code="360826200" />
+    <street name="南溪乡" code="360826201" />
+    <street name="上模乡" code="360826202" />
+    <street name="水槎乡" code="360826203" />
+    <street name="上圯乡" code="360826204" />
+    <street name="中龙乡" code="360826205" />
+    <street name="小龙矿区管委会" code="360826402" />
+    <street name="八一八矿区" code="360826403" />
+    <street name="井冈山机场" code="360826404" />
+    <street name="泰和县工业园区" code="360826405" />
+    <street name="武山垦殖场" code="360826501" />
+    <street name="综合垦殖场" code="360826502" />
+</county>
+<county name="遂川" code="360827">
+    <street name="泉江镇" code="360827100" />
+    <street name="雩田镇" code="360827101" />
+    <street name="碧洲镇" code="360827102" />
+    <street name="草林镇" code="360827103" />
+    <street name="堆子前镇" code="360827104" />
+    <street name="左安镇" code="360827105" />
+    <street name="高坪镇" code="360827106" />
+    <street name="大汾镇" code="360827107" />
+    <street name="衙前镇" code="360827108" />
+    <street name="禾源镇" code="360827109" />
+    <street name="汤湖镇" code="360827110" />
+    <street name="珠田乡" code="360827200" />
+    <street name="巾石乡" code="360827201" />
+    <street name="大坑乡" code="360827202" />
+    <street name="枚江乡" code="360827203" />
+    <street name="双桥乡" code="360827204" />
+    <street name="新江乡" code="360827205" />
+    <street name="五斗江乡" code="360827206" />
+    <street name="西溪乡" code="360827207" />
+    <street name="南江乡" code="360827208" />
+    <street name="黄坑乡" code="360827209" />
+    <street name="戴家埔乡" code="360827210" />
+    <street name="营盘圩乡" code="360827211" />
+    <street name="遂川县工业园区" code="360827402" />
+    <street name="五指峰林场" code="360827501" />
+    <street name="云岭林场" code="360827502" />
+</county>
+<county name="万安" code="360828">
+    <street name="芙蓉镇" code="360828100" />
+    <street name="五丰镇" code="360828101" />
+    <street name="枧头镇" code="360828102" />
+    <street name="窑头镇" code="360828103" />
+    <street name="百嘉镇" code="360828104" />
+    <street name="高陂镇" code="360828105" />
+    <street name="潞田镇" code="360828106" />
+    <street name="沙坪镇" code="360828107" />
+    <street name="夏造镇" code="360828108" />
+    <street name="罗塘乡" code="360828200" />
+    <street name="弹前乡" code="360828201" />
+    <street name="武术乡" code="360828202" />
+    <street name="宝山乡" code="360828203" />
+    <street name="涧田乡" code="360828204" />
+    <street name="顺峰乡" code="360828205" />
+    <street name="韶口乡" code="360828206" />
+    <street name="万安县工业园" code="360828401" />
+    <street name="万安县麻源垦殖场" code="360828501" />
+</county>
+<county name="安福" code="360829">
+    <street name="平都镇" code="360829100" />
+    <street name="浒坑镇" code="360829101" />
+    <street name="洲湖镇" code="360829102" />
+    <street name="横龙镇" code="360829103" />
+    <street name="洋溪镇" code="360829104" />
+    <street name="严田镇" code="360829105" />
+    <street name="枫田镇" code="360829106" />
+    <street name="竹江乡" code="360829200" />
+    <street name="瓜畲乡" code="360829201" />
+    <street name="钱山乡" code="360829202" />
+    <street name="赤谷乡" code="360829203" />
+    <street name="山庄乡" code="360829204" />
+    <street name="洋门乡" code="360829205" />
+    <street name="金田乡" code="360829206" />
+    <street name="彭坊乡" code="360829207" />
+    <street name="泰山乡" code="360829208" />
+    <street name="寮塘乡" code="360829209" />
+    <street name="甘洛乡" code="360829210" />
+    <street name="章庄乡" code="360829211" />
+    <street name="安福县工业园" code="360829400" />
+</county>
+<county name="永新" code="360830">
+    <street name="禾川镇" code="360830100" />
+    <street name="石桥镇" code="360830101" />
+    <street name="龙源口镇" code="360830102" />
+    <street name="浬田镇" code="360830103" />
+    <street name="龙门镇" code="360830104" />
+    <street name="沙市镇" code="360830105" />
+    <street name="文竹镇" code="360830106" />
+    <street name="埠前镇" code="360830107" />
+    <street name="怀忠镇" code="360830108" />
+    <street name="高桥楼镇" code="360830109" />
+    <street name="坳南乡" code="360830200" />
+    <street name="曲白乡" code="360830201" />
+    <street name="才丰乡" code="360830202" />
+    <street name="烟阁乡" code="360830203" />
+    <street name="在中乡" code="360830204" />
+    <street name="三湾乡" code="360830205" />
+    <street name="台岭乡" code="360830206" />
+    <street name="龙田乡" code="360830207" />
+    <street name="高溪乡" code="360830208" />
+    <street name="莲洲乡" code="360830209" />
+    <street name="高市乡" code="360830210" />
+    <street name="象形乡" code="360830211" />
+    <street name="芦溪乡" code="360830212" />
+    <street name="永新县工业园区" code="360830400" />
+    <street name="永新县综合垦殖场" code="360830501" />
+</county>
+<county name="井冈山" code="360881">
+    <street name="红星街道" code="360881002" />
+    <street name="厦坪镇" code="360881100" />
+    <street name="龙市镇" code="360881101" />
+    <street name="古城镇" code="360881102" />
+    <street name="新城镇" code="360881103" />
+    <street name="大陇镇" code="360881104" />
+    <street name="茨坪镇" code="360881105" />
+    <street name="拿山乡" code="360881200" />
+    <street name="黄垇乡" code="360881201" />
+    <street name="下七乡" code="360881202" />
+    <street name="长坪乡" code="360881203" />
+    <street name="坳里乡" code="360881204" />
+    <street name="鹅岭乡" code="360881205" />
+    <street name="柏露乡" code="360881206" />
+    <street name="茅坪乡" code="360881207" />
+    <street name="葛田乡" code="360881208" />
+    <street name="荷花乡" code="360881209" />
+    <street name="睦村乡" code="360881210" />
+    <street name="东上乡" code="360881211" />
+    <street name="井企集团" code="360881400" />
+    <street name="井冈山自然保护区" code="360881401" />
+    <street name="井冈山市工业园区" code="360881403" />
+    <street name="白石垦殖场" code="360881501" />
+</county>
+</city>
+</address>

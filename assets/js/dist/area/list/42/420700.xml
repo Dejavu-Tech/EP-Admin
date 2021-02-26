@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="鄂州" code="420700">
+<county name="梁子湖" code="420702">
+    <street name="太和镇" code="420702100" />
+    <street name="东沟镇" code="420702101" />
+    <street name="梁子生态管理区（镇）" code="420702102" />
+    <street name="涂家垴镇" code="420702103" />
+    <street name="沼山镇" code="420702104" />
+    <street name="梧桐湖新区" code="420702400" />
+</county>
+<county name="华容" code="420703">
+    <street name="华容镇" code="420703100" />
+    <street name="葛店镇" code="420703101" />
+    <street name="庙岭镇" code="420703102" />
+    <street name="段店镇" code="420703103" />
+    <street name="临江乡" code="420703200" />
+    <street name="蒲团乡" code="420703201" />
+    <street name="葛店开发区" code="420703400" />
+</county>
+<county name="鄂城" code="420704">
+    <street name="凤凰街道" code="420704001" />
+    <street name="古楼街道" code="420704002" />
+    <street name="西山街道" code="420704003" />
+    <street name="泽林镇" code="420704100" />
+    <street name="杜山镇" code="420704101" />
+    <street name="新庙镇" code="420704102" />
+    <street name="碧石镇" code="420704103" />
+    <street name="汀祖镇" code="420704104" />
+    <street name="燕矶镇" code="420704105" />
+    <street name="杨叶镇" code="420704106" />
+    <street name="花湖镇" code="420704107" />
+    <street name="长港镇" code="420704108" />
+    <street name="沙窝乡" code="420704200" />
+    <street name="鄂州经济开发区" code="420704400" />
+</county>
+</city>
+</address>

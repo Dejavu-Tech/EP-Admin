@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="海西" code="632800">
+<county name="格尔木" code="632801">
+    <street name="昆仑路街道" code="632801001" />
+    <street name="黄河路街道" code="632801002" />
+    <street name="金峰路街道" code="632801003" />
+    <street name="河西街道" code="632801004" />
+    <street name="西藏路街道" code="632801005" />
+    <street name="郭勒木德镇" code="632801100" />
+    <street name="唐古拉镇" code="632801101" />
+    <street name="大格勒乡" code="632801200" />
+    <street name="乌图美仁乡" code="632801201" />
+    <street name="察尔汗工行委" code="632801400" />
+    <street name="格尔木农垦有限公司" code="632801401" />
+</county>
+<county name="德令哈" code="632802">
+    <street name="河西街道" code="632802001" />
+    <street name="河东街道" code="632802002" />
+    <street name="火车站街道" code="632802003" />
+    <street name="尕海镇" code="632802100" />
+    <street name="怀头他拉镇" code="632802101" />
+    <street name="柯鲁柯镇" code="632802102" />
+    <street name="柴旦镇" code="632802103" />
+    <street name="锡铁山镇" code="632802104" />
+    <street name="冷湖镇" code="632802105" />
+    <street name="花土沟镇" code="632802106" />
+    <street name="茫崖镇" code="632802107" />
+    <street name="蓄集乡" code="632802200" />
+</county>
+<county name="乌兰" code="632821">
+    <street name="希里沟镇" code="632821100" />
+    <street name="茶卡镇" code="632821101" />
+    <street name="柯柯镇" code="632821102" />
+    <street name="铜普镇" code="632821103" />
+    <street name="海西州莫河畜牧场" code="632821500" />
+</county>
+<county name="都兰" code="632822">
+    <street name="察汉乌苏镇" code="632822100" />
+    <street name="香日德镇" code="632822101" />
+    <street name="夏日哈镇" code="632822102" />
+    <street name="宗加镇" code="632822103" />
+    <street name="热水乡" code="632822200" />
+    <street name="香加乡" code="632822201" />
+    <street name="沟里乡" code="632822202" />
+    <street name="巴隆乡" code="632822203" />
+</county>
+<county name="天峻" code="632823">
+    <street name="新源镇" code="632823100" />
+    <street name="木里镇" code="632823101" />
+    <street name="江河镇" code="632823102" />
+    <street name="快尔玛乡" code="632823200" />
+    <street name="舟群乡" code="632823201" />
+    <street name="织合玛乡" code="632823202" />
+    <street name="苏里乡" code="632823203" />
+    <street name="生格乡" code="632823204" />
+    <street name="阳康乡" code="632823205" />
+    <street name="龙门乡" code="632823206" />
+</county>
+</city>
+</address>

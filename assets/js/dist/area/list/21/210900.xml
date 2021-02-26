@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="阜新" code="210900">
+<county name="海州" code="210902">
+    <street name="新兴街道" code="210902002" />
+    <street name="和平街道" code="210902003" />
+    <street name="西山街道" code="210902004" />
+    <street name="河北街道" code="210902005" />
+    <street name="站前街道" code="210902006" />
+    <street name="西阜新街道" code="210902007" />
+    <street name="五龙街道" code="210902008" />
+    <street name="平安西部街道" code="210902009" />
+    <street name="工人村街道" code="210902010" />
+    <street name="东梁街道" code="210902011" />
+    <street name="韩家店镇" code="210902101" />
+</county>
+<county name="新邱" code="210903">
+    <street name="兴隆街道" code="210903001" />
+    <street name="中兴街道" code="210903002" />
+    <street name="益民街道" code="210903003" />
+    <street name="新发街道" code="210903004" />
+    <street name="长营子蒙古族镇" code="210903101" />
+</county>
+<county name="太平" code="210904">
+    <street name="红树街道" code="210904001" />
+    <street name="煤海街道" code="210904002" />
+    <street name="高德街道" code="210904003" />
+    <street name="孙家湾街道" code="210904004" />
+    <street name="城南街道" code="210904005" />
+    <street name="水泉镇" code="210904101" />
+</county>
+<county name="清河门" code="210905">
+    <street name="清河街道" code="210905001" />
+    <street name="六台街道" code="210905002" />
+    <street name="艾友街道" code="210905003" />
+    <street name="新北街道" code="210905004" />
+    <street name="河西镇" code="210905101" />
+    <street name="乌龙坝镇" code="210905102" />
+</county>
+<county name="细河" code="210911">
+    <street name="西苑街道" code="210911001" />
+    <street name="北苑街道" code="210911002" />
+    <street name="东苑街道" code="210911003" />
+    <street name="学苑街道" code="210911004" />
+    <street name="中苑街道" code="210911005" />
+    <street name="华东街道" code="210911006" />
+    <street name="四合镇" code="210911102" />
+    <street name="六家子管委会" code="210911401" />
+</county>
+<county name="阜新" code="210921">
+    <street name="城区街道" code="210921001" />
+    <street name="阜新镇" code="210921100" />
+    <street name="东梁镇" code="210921102" />
+    <street name="佛寺镇" code="210921103" />
+    <street name="伊吗图镇" code="210921104" />
+    <street name="旧庙镇" code="210921105" />
+    <street name="务欢池镇" code="210921106" />
+    <street name="建设镇" code="210921107" />
+    <street name="大巴镇" code="210921108" />
+    <street name="泡子镇" code="210921109" />
+    <street name="十家子镇" code="210921110" />
+    <street name="王府镇" code="210921111" />
+    <street name="于寺镇" code="210921112" />
+    <street name="富荣镇" code="210921113" />
+    <street name="新民镇" code="210921114" />
+    <street name="福兴地镇" code="210921115" />
+    <street name="平安地镇" code="210921116" />
+    <street name="沙拉镇" code="210921117" />
+    <street name="大固本镇" code="210921118" />
+    <street name="大五家子镇" code="210921119" />
+    <street name="大板镇" code="210921120" />
+    <street name="招束沟镇" code="210921121" />
+    <street name="八家子镇" code="210921122" />
+    <street name="蜘蛛山镇" code="210921123" />
+    <street name="塔营子镇" code="210921124" />
+    <street name="扎兰营子镇" code="210921125" />
+    <street name="七家子镇" code="210921126" />
+    <street name="红帽子镇" code="210921127" />
+    <street name="紫都台镇" code="210921128" />
+    <street name="化石戈镇" code="210921129" />
+    <street name="哈达户稍镇" code="210921130" />
+    <street name="老河土镇" code="210921131" />
+    <street name="卧凤沟乡" code="210921203" />
+    <street name="苍土乡" code="210921211" />
+    <street name="太平乡" code="210921220" />
+    <street name="国华乡" code="210921222" />
+    <street name="泡子农场办事处" code="210921401" />
+</county>
+<county name="彰武" code="210922">
+    <street name="彰武镇" code="210922100" />
+    <street name="哈尔套镇" code="210922101" />
+    <street name="章古台镇" code="210922102" />
+    <street name="五峰镇" code="210922103" />
+    <street name="冯家镇" code="210922104" />
+    <street name="后新秋镇" code="210922105" />
+    <street name="东六家子镇" code="210922106" />
+    <street name="阿尔乡镇" code="210922107" />
+    <street name="前福兴地镇" code="210922108" />
+    <street name="双庙镇" code="210922109" />
+    <street name="大四家子镇" code="210922110" />
+    <street name="苇子沟镇" code="210922111" />
+    <street name="兴隆山镇" code="210922112" />
+    <street name="满堂红镇" code="210922113" />
+    <street name="四合城镇" code="210922114" />
+    <street name="大冷蒙古族镇" code="210922115" />
+    <street name="二道河子蒙古族乡" code="210922202" />
+    <street name="西六家子蒙古族满族乡" code="210922203" />
+    <street name="两家子乡" code="210922204" />
+    <street name="平安乡" code="210922206" />
+    <street name="四堡子乡" code="210922208" />
+    <street name="丰田乡" code="210922209" />
+    <street name="大德乡" code="210922210" />
+    <street name="兴隆堡乡" code="210922213" />
+</county>
+</city>
+</address>

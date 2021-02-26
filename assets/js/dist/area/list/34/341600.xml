@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="亳州" code="341600">
+<county name="谯城" code="341602">
+    <street name="花戏楼办事处" code="341602001" />
+    <street name="薛阁办事处" code="341602002" />
+    <street name="汤陵办事处" code="341602003" />
+    <street name="古井镇" code="341602100" />
+    <street name="芦庙镇" code="341602101" />
+    <street name="华佗镇" code="341602102" />
+    <street name="魏岗镇" code="341602103" />
+    <street name="牛集镇" code="341602104" />
+    <street name="颜集镇" code="341602105" />
+    <street name="五马镇" code="341602106" />
+    <street name="十八里镇" code="341602107" />
+    <street name="谯东镇" code="341602108" />
+    <street name="十九里镇" code="341602109" />
+    <street name="沙土镇" code="341602110" />
+    <street name="观堂镇" code="341602111" />
+    <street name="大杨镇" code="341602112" />
+    <street name="城父镇" code="341602113" />
+    <street name="十河镇" code="341602114" />
+    <street name="双沟镇" code="341602115" />
+    <street name="淝河镇" code="341602116" />
+    <street name="古城镇" code="341602117" />
+    <street name="龙杨镇" code="341602118" />
+    <street name="立德镇" code="341602119" />
+    <street name="张店乡" code="341602200" />
+    <street name="赵桥乡" code="341602201" />
+    <street name="亳州市经济技术开发区" code="341602400" />
+    <street name="安徽亳州工业园区" code="341602401" />
+</county>
+<county name="涡阳" code="341621">
+    <street name="城关街道" code="341621001" />
+    <street name="城西街道" code="341621002" />
+    <street name="城东街道" code="341621003" />
+    <street name="涡北街道" code="341621004" />
+    <street name="西阳镇" code="341621103" />
+    <street name="涡南镇" code="341621104" />
+    <street name="楚店镇" code="341621105" />
+    <street name="高公镇" code="341621106" />
+    <street name="高炉镇" code="341621108" />
+    <street name="曹市镇" code="341621109" />
+    <street name="青町镇" code="341621110" />
+    <street name="石弓镇" code="341621111" />
+    <street name="龙山镇" code="341621112" />
+    <street name="义门镇" code="341621113" />
+    <street name="新兴镇" code="341621114" />
+    <street name="临湖镇" code="341621115" />
+    <street name="丹城镇" code="341621116" />
+    <street name="马店集镇" code="341621117" />
+    <street name="花沟镇" code="341621118" />
+    <street name="店集镇" code="341621119" />
+    <street name="陈大镇" code="341621120" />
+    <street name="牌坊镇" code="341621121" />
+    <street name="公吉寺镇" code="341621122" />
+    <street name="标里镇" code="341621123" />
+    <street name="单集林场" code="341621400" />
+    <street name="安徽省涡阳工业园区" code="341621401" />
+</county>
+<county name="蒙城" code="341622">
+    <street name="漆园办事处（镇级单位）" code="341622001" />
+    <street name="庄周办事处（乡级单位）" code="341622002" />
+    <street name="城关镇" code="341622100" />
+    <street name="双涧镇" code="341622101" />
+    <street name="小涧镇" code="341622102" />
+    <street name="坛城镇" code="341622104" />
+    <street name="范集工业园区（镇级单位）" code="341622105" />
+    <street name="许疃镇" code="341622106" />
+    <street name="板桥集镇" code="341622107" />
+    <street name="马集镇" code="341622108" />
+    <street name="岳坊镇" code="341622109" />
+    <street name="立仓镇" code="341622110" />
+    <street name="楚村镇" code="341622111" />
+    <street name="乐土镇" code="341622112" />
+    <street name="三义镇" code="341622113" />
+    <street name="篱笆镇" code="341622114" />
+    <street name="蒙城县农业委员会（镇级单位）直辖村级单位" code="341622198" />
+    <street name="王集乡" code="341622201" />
+    <street name="小辛集乡" code="341622202" />
+    <street name="安徽蒙城经济开发区管理委员会" code="341622400" />
+    <street name="淮北矿业集团有限责任公司许疃煤矿" code="341622401" />
+    <street name="白杨林场" code="341622500" />
+</county>
+<county name="利辛" code="341623">
+    <street name="城关镇" code="341623100" />
+    <street name="阚疃镇" code="341623101" />
+    <street name="张村镇" code="341623102" />
+    <street name="江集镇" code="341623103" />
+    <street name="旧城镇" code="341623104" />
+    <street name="西潘楼镇" code="341623105" />
+    <street name="孙集镇" code="341623106" />
+    <street name="汝集镇" code="341623107" />
+    <street name="巩店镇" code="341623108" />
+    <street name="王人镇" code="341623109" />
+    <street name="王市镇" code="341623110" />
+    <street name="永兴镇" code="341623111" />
+    <street name="马店孜镇" code="341623112" />
+    <street name="大李集镇" code="341623113" />
+    <street name="胡集镇" code="341623114" />
+    <street name="展沟镇" code="341623115" />
+    <street name="程家集镇" code="341623116" />
+    <street name="中疃镇" code="341623117" />
+    <street name="望疃镇" code="341623118" />
+    <street name="刘家集乡" code="341623202" />
+    <street name="纪王场乡" code="341623203" />
+    <street name="孙庙乡" code="341623204" />
+    <street name="新张集乡" code="341623205" />
+    <street name="柴湖良种繁殖场" code="341623400" />
+    <street name="利辛县工业园区" code="341623401" />
+</county>
+</city>
+</address>

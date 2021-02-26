@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="吕梁" code="141100">
+<county name="离石" code="141102">
+    <street name="滨河街道" code="141102001" />
+    <street name="凤山街道" code="141102002" />
+    <street name="莲花池街道" code="141102003" />
+    <street name="城北街道" code="141102004" />
+    <street name="田家会街道" code="141102005" />
+    <street name="交口街道" code="141102006" />
+    <street name="西属巴街道" code="141102007" />
+    <street name="吴城镇" code="141102100" />
+    <street name="信义镇" code="141102101" />
+    <street name="红眼川乡" code="141102200" />
+    <street name="枣林乡" code="141102201" />
+    <street name="坪头乡" code="141102202" />
+</county>
+<county name="文水" code="141121">
+    <street name="凤城镇" code="141121100" />
+    <street name="开栅镇" code="141121101" />
+    <street name="南庄镇" code="141121102" />
+    <street name="南安镇" code="141121103" />
+    <street name="刘胡兰镇" code="141121104" />
+    <street name="下曲镇" code="141121105" />
+    <street name="孝义镇" code="141121106" />
+    <street name="南武乡" code="141121200" />
+    <street name="西城乡" code="141121201" />
+    <street name="北张乡" code="141121202" />
+    <street name="马西乡" code="141121203" />
+    <street name="西槽头乡" code="141121204" />
+</county>
+<county name="交城" code="141122">
+    <street name="天宁镇" code="141122100" />
+    <street name="夏家营镇" code="141122101" />
+    <street name="西营镇" code="141122102" />
+    <street name="水峪贯镇" code="141122103" />
+    <street name="西社镇" code="141122104" />
+    <street name="庞泉沟镇" code="141122105" />
+    <street name="洪相乡" code="141122200" />
+    <street name="岭底乡" code="141122201" />
+    <street name="东坡底乡" code="141122202" />
+    <street name="会立乡" code="141122203" />
+    <street name="夏家营生态工业园区管委会" code="141122400" />
+</county>
+<county name="兴县" code="141123">
+    <street name="蔚汾镇" code="141123100" />
+    <street name="魏家滩镇" code="141123101" />
+    <street name="瓦塘镇" code="141123102" />
+    <street name="康宁镇" code="141123103" />
+    <street name="高家村镇" code="141123104" />
+    <street name="罗峪口镇" code="141123105" />
+    <street name="蔡家会镇" code="141123106" />
+    <street name="交楼申乡" code="141123200" />
+    <street name="恶虎滩乡" code="141123201" />
+    <street name="东会乡" code="141123202" />
+    <street name="固贤乡" code="141123203" />
+    <street name="奥家湾乡" code="141123204" />
+    <street name="蔡家崖乡" code="141123205" />
+    <street name="贺家会乡" code="141123206" />
+    <street name="孟家坪乡" code="141123207" />
+    <street name="赵家坪乡" code="141123208" />
+    <street name="圪垯上乡" code="141123209" />
+    <street name="兴县资源环保循环经济综合开发示范基地" code="141123400" />
+</county>
+<county name="临县" code="141124">
+    <street name="临泉镇" code="141124100" />
+    <street name="白文镇" code="141124101" />
+    <street name="城庄镇" code="141124102" />
+    <street name="兔坂镇" code="141124103" />
+    <street name="克虎镇" code="141124104" />
+    <street name="三交镇" code="141124105" />
+    <street name="湍水头镇" code="141124106" />
+    <street name="林家坪镇" code="141124107" />
+    <street name="招贤镇" code="141124108" />
+    <street name="碛口镇" code="141124109" />
+    <street name="刘家会镇" code="141124110" />
+    <street name="丛罗峪镇" code="141124111" />
+    <street name="曲峪镇" code="141124112" />
+    <street name="木瓜坪乡" code="141124200" />
+    <street name="安业乡" code="141124201" />
+    <street name="玉坪乡" code="141124202" />
+    <street name="青凉寺乡" code="141124203" />
+    <street name="石白头乡" code="141124204" />
+    <street name="雷家碛乡" code="141124205" />
+    <street name="八堡乡" code="141124206" />
+    <street name="大禹乡" code="141124207" />
+    <street name="车赶乡" code="141124208" />
+    <street name="安家庄乡" code="141124209" />
+</county>
+<county name="柳林" code="141125">
+    <street name="柳林镇" code="141125100" />
+    <street name="穆村镇" code="141125101" />
+    <street name="薛村镇" code="141125102" />
+    <street name="庄上镇" code="141125103" />
+    <street name="留誉镇" code="141125104" />
+    <street name="三交镇" code="141125105" />
+    <street name="成家庄镇" code="141125106" />
+    <street name="孟门镇" code="141125107" />
+    <street name="李家湾乡" code="141125200" />
+    <street name="贾家垣乡" code="141125201" />
+    <street name="陈家湾乡" code="141125202" />
+    <street name="金家庄乡" code="141125203" />
+    <street name="高家沟乡" code="141125204" />
+    <street name="石西乡" code="141125205" />
+    <street name="王家沟乡" code="141125206" />
+</county>
+<county name="石楼" code="141126">
+    <street name="灵泉镇" code="141126100" />
+    <street name="罗村镇" code="141126101" />
+    <street name="义牒镇" code="141126102" />
+    <street name="小蒜镇" code="141126103" />
+    <street name="龙交乡" code="141126200" />
+    <street name="和合乡" code="141126201" />
+    <street name="前山乡" code="141126202" />
+    <street name="曹家垣乡" code="141126203" />
+    <street name="裴沟乡" code="141126204" />
+</county>
+<county name="岚县" code="141127">
+    <street name="东村镇" code="141127100" />
+    <street name="岚城镇" code="141127101" />
+    <street name="普明镇" code="141127102" />
+    <street name="界河口镇" code="141127103" />
+    <street name="土峪乡" code="141127200" />
+    <street name="上明乡" code="141127201" />
+    <street name="王狮乡" code="141127202" />
+    <street name="梁家庄乡" code="141127203" />
+    <street name="顺会乡" code="141127204" />
+    <street name="河口乡" code="141127205" />
+    <street name="社科乡" code="141127206" />
+    <street name="大蛇头乡" code="141127207" />
+    <street name="岚县普明工业园区" code="141127400" />
+</county>
+<county name="方山" code="141128">
+    <street name="圪洞镇" code="141128100" />
+    <street name="马坊镇" code="141128101" />
+    <street name="峪口镇" code="141128102" />
+    <street name="大武镇" code="141128103" />
+    <street name="北武当镇" code="141128104" />
+    <street name="积翠乡" code="141128200" />
+    <street name="麻地会乡" code="141128201" />
+</county>
+<county name="中阳" code="141129">
+    <street name="宁乡镇" code="141129100" />
+    <street name="金罗镇" code="141129101" />
+    <street name="枝柯镇" code="141129102" />
+    <street name="武家庄镇" code="141129103" />
+    <street name="暖泉镇" code="141129104" />
+    <street name="张子山乡" code="141129200" />
+    <street name="下枣林乡" code="141129201" />
+</county>
+<county name="交口" code="141130">
+    <street name="水头镇" code="141130100" />
+    <street name="康城镇" code="141130101" />
+    <street name="双池镇" code="141130102" />
+    <street name="桃红坡镇" code="141130103" />
+    <street name="石口乡" code="141130200" />
+    <street name="回龙乡" code="141130201" />
+    <street name="温泉乡" code="141130202" />
+</county>
+<county name="孝义" code="141181">
+    <street name="新义街道" code="141181001" />
+    <street name="中阳楼街道" code="141181002" />
+    <street name="振兴街道" code="141181003" />
+    <street name="东许街道" code="141181004" />
+    <street name="崇文街道" code="141181005" />
+    <street name="兑镇镇" code="141181100" />
+    <street name="阳泉曲镇" code="141181101" />
+    <street name="下堡镇" code="141181102" />
+    <street name="西辛庄镇" code="141181103" />
+    <street name="高阳镇" code="141181104" />
+    <street name="梧桐镇" code="141181105" />
+    <street name="柱濮镇" code="141181106" />
+    <street name="大孝堡乡" code="141181200" />
+    <street name="下栅乡" code="141181201" />
+    <street name="驿马乡" code="141181202" />
+    <street name="南阳乡" code="141181203" />
+    <street name="杜村乡" code="141181204" />
+</county>
+<county name="汾阳" code="141182">
+    <street name="文峰街道" code="141182001" />
+    <street name="太和桥街道" code="141182002" />
+    <street name="贾家庄镇" code="141182100" />
+    <street name="杏花村镇" code="141182101" />
+    <street name="冀村镇" code="141182102" />
+    <street name="肖家庄镇" code="141182103" />
+    <street name="演武镇" code="141182104" />
+    <street name="三泉镇" code="141182105" />
+    <street name="石庄镇" code="141182106" />
+    <street name="杨家庄镇" code="141182107" />
+    <street name="峪道河镇" code="141182108" />
+    <street name="西河乡" code="141182200" />
+    <street name="阳城乡" code="141182201" />
+    <street name="栗家庄乡" code="141182202" />
+    <street name="南薰街道" code="141182400" />
+    <street name="辰北街道" code="141182401" />
+</county>
+</city>
+</address>

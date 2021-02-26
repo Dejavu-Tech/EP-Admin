@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="玉溪" code="530400">
+<county name="红塔" code="530402">
+    <street name="玉兴路街道" code="530402001" />
+    <street name="凤凰路街道" code="530402002" />
+    <street name="玉带路街道" code="530402003" />
+    <street name="北城街道" code="530402004" />
+    <street name="春和街道" code="530402005" />
+    <street name="李棋街道" code="530402006" />
+    <street name="大营街街道" code="530402007" />
+    <street name="研和街道" code="530402008" />
+    <street name="高仓街道" code="530402009" />
+    <street name="小石桥乡" code="530402201" />
+    <street name="洛河乡" code="530402202" />
+</county>
+<county name="江川" code="530421">
+    <street name="大街街道" code="530421001" />
+    <street name="江城镇" code="530421101" />
+    <street name="前卫镇" code="530421102" />
+    <street name="九溪镇" code="530421103" />
+    <street name="路居镇" code="530421104" />
+    <street name="安化彝族乡" code="530421201" />
+    <street name="雄关乡" code="530421202" />
+</county>
+<county name="澄江" code="530422">
+    <street name="凤麓街道" code="530422001" />
+    <street name="龙街街道" code="530422002" />
+    <street name="右所镇" code="530422101" />
+    <street name="阳宗镇" code="530422102" />
+    <street name="海口镇" code="530422103" />
+    <street name="九村镇" code="530422104" />
+</county>
+<county name="通海" code="530423">
+    <street name="秀山街道" code="530423001" />
+    <street name="九龙街道" code="530423002" />
+    <street name="杨广镇" code="530423101" />
+    <street name="河西镇" code="530423102" />
+    <street name="四街镇" code="530423103" />
+    <street name="纳古镇" code="530423104" />
+    <street name="里山乡" code="530423201" />
+    <street name="高大乡" code="530423202" />
+    <street name="兴蒙乡" code="530423203" />
+</county>
+<county name="华宁" code="530424">
+    <street name="宁州街道" code="530424001" />
+    <street name="盘溪镇" code="530424102" />
+    <street name="华溪镇" code="530424103" />
+    <street name="青龙镇" code="530424104" />
+    <street name="通红甸乡" code="530424201" />
+</county>
+<county name="易门" code="530425">
+    <street name="龙泉街道" code="530425001" />
+    <street name="六街街道" code="530425002" />
+    <street name="绿汁镇" code="530425100" />
+    <street name="浦贝彝族乡" code="530425201" />
+    <street name="十街彝族乡" code="530425202" />
+    <street name="铜厂彝族乡" code="530425203" />
+    <street name="小街乡" code="530425204" />
+</county>
+<county name="峨山" code="530426">
+    <street name="双江街道" code="530426001" />
+    <street name="小街街道" code="530426002" />
+    <street name="甸中镇" code="530426103" />
+    <street name="化念镇" code="530426104" />
+    <street name="塔甸镇" code="530426105" />
+    <street name="岔河乡" code="530426201" />
+    <street name="大龙潭乡" code="530426202" />
+    <street name="富良棚乡" code="530426203" />
+</county>
+<county name="新平" code="530427">
+    <street name="桂山街道" code="530427001" />
+    <street name="古城街道" code="530427002" />
+    <street name="扬武镇" code="530427100" />
+    <street name="漠沙镇" code="530427101" />
+    <street name="戛洒镇" code="530427102" />
+    <street name="水塘镇" code="530427103" />
+    <street name="平甸乡" code="530427200" />
+    <street name="新化乡" code="530427201" />
+    <street name="建兴乡" code="530427202" />
+    <street name="老厂乡" code="530427203" />
+    <street name="者竜乡" code="530427204" />
+    <street name="平掌乡" code="530427205" />
+</county>
+<county name="元江" code="530428">
+    <street name="红河街道" code="530428001" />
+    <street name="澧江街道" code="530428002" />
+    <street name="甘庄街道" code="530428003" />
+    <street name="曼来镇" code="530428101" />
+    <street name="因远镇" code="530428102" />
+    <street name="龙潭乡" code="530428201" />
+    <street name="羊街乡" code="530428202" />
+    <street name="那诺乡" code="530428203" />
+    <street name="洼垤乡" code="530428204" />
+    <street name="咪哩乡" code="530428205" />
+</county>
+</city>
+</address>

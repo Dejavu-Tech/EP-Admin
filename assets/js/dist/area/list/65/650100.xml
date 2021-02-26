@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="乌鲁木齐" code="650100">
+<county name="天山" code="650102">
+    <street name="燕儿窝街道" code="650102002" />
+    <street name="胜利路街道" code="650102003" />
+    <street name="团结路街道" code="650102004" />
+    <street name="解放南路街道" code="650102005" />
+    <street name="新华南路街道" code="650102006" />
+    <street name="和平路街道" code="650102007" />
+    <street name="解放北路街道" code="650102008" />
+    <street name="幸福路街道" code="650102009" />
+    <street name="东门街道" code="650102010" />
+    <street name="新华北路街道" code="650102011" />
+    <street name="青年路街道" code="650102012" />
+    <street name="碱泉街道" code="650102013" />
+    <street name="延安路街道" code="650102014" />
+    <street name="红雁街道" code="650102015" />
+    <street name="二道桥街道" code="650102400" />
+    <street name="黑甲山街道" code="650102401" />
+    <street name="大湾街道" code="650102402" />
+    <street name="赛马场街道" code="650102403" />
+</county>
+<county name="沙依巴克" code="650103">
+    <street name="长江路街道" code="650103001" />
+    <street name="和田街街道" code="650103002" />
+    <street name="扬子江路街道" code="650103003" />
+    <street name="友好南路街道" code="650103004" />
+    <street name="友好北路街道" code="650103005" />
+    <street name="八一街道" code="650103006" />
+    <street name="炉院街街道" code="650103007" />
+    <street name="西山街道" code="650103008" />
+    <street name="雅玛里克山街道" code="650103009" />
+    <street name="红庙子街道" code="650103010" />
+    <street name="长胜东街道" code="650103011" />
+    <street name="长胜西街道" code="650103012" />
+    <street name="长胜南街道" code="650103013" />
+    <street name="火车南站街道" code="650103014" />
+    <street name="仓房沟片区街道" code="650103015" />
+    <street name="兵团农十二师一零四团" code="650103501" />
+    <street name="兵团十二师西山农场" code="650103502" />
+</county>
+<county name="新市" code="650104">
+    <street name="北京路街道" code="650104001" />
+    <street name="二工街道" code="650104002" />
+    <street name="三工街道" code="650104003" />
+    <street name="石油新村街道" code="650104004" />
+    <street name="迎宾路街道" code="650104005" />
+    <street name="喀什东路街道" code="650104006" />
+    <street name="北站东路街道" code="650104007" />
+    <street name="乌鲁木齐经济技术开发区街道" code="650104008" />
+    <street name="天津路街道" code="650104009" />
+    <street name="银川路街道" code="650104010" />
+    <street name="南纬路街道" code="650104011" />
+    <street name="杭州路街道" code="650104012" />
+    <street name="安宁渠镇" code="650104100" />
+    <street name="二工乡" code="650104200" />
+    <street name="地窝堡乡" code="650104201" />
+    <street name="青格达湖乡" code="650104202" />
+    <street name="六十户乡" code="650104203" />
+    <street name="高新街街道" code="650104400" />
+    <street name="长春中路街道" code="650104401" />
+</county>
+<county name="水磨沟" code="650105">
+    <street name="水磨沟街道" code="650105001" />
+    <street name="六道湾街道" code="650105002" />
+    <street name="苇湖梁街道" code="650105003" />
+    <street name="八道湾街道" code="650105004" />
+    <street name="新民路街道" code="650105005" />
+    <street name="南湖南路街道" code="650105006" />
+    <street name="南湖北路街道" code="650105007" />
+    <street name="七道湾街道" code="650105008" />
+    <street name="水磨沟区农村事务管理办公室" code="650105400" />
+</county>
+<county name="头屯河" code="650106">
+    <street name="头屯河街道" code="650106001" />
+    <street name="火车西站街道" code="650106002" />
+    <street name="王家沟街道" code="650106003" />
+    <street name="乌昌路街道" code="650106004" />
+    <street name="北站西路街道" code="650106005" />
+    <street name="头屯河区乡类似乡镇单位" code="650106198" />
+    <street name="兵团十二师三坪农场" code="650106501" />
+    <street name="兵团十二师五一农场" code="650106502" />
+    <street name="新疆兵团十二师头屯河农场" code="650106503" />
+</county>
+<county name="达坂城" code="650107">
+    <street name="艾维尔沟街道" code="650107001" />
+    <street name="乌拉泊街道" code="650107004" />
+    <street name="达坂城区盐湖街道" code="650107006" />
+    <street name="达坂城镇" code="650107100" />
+    <street name="东沟乡" code="650107200" />
+    <street name="西沟乡" code="650107201" />
+    <street name="阿克苏乡" code="650107202" />
+    <street name="柴窝堡管委会" code="650107400" />
+</county>
+<county name="米东" code="650109">
+    <street name="石化街道" code="650109001" />
+    <street name="地磅街道" code="650109002" />
+    <street name="卡子湾街道" code="650109003" />
+    <street name="古牧地东路街道" code="650109004" />
+    <street name="古牧地西路街道" code="650109005" />
+    <street name="南路街道" code="650109006" />
+    <street name="古牧地镇" code="650109100" />
+    <street name="铁厂沟镇" code="650109101" />
+    <street name="长山子镇" code="650109102" />
+    <street name="羊毛工镇" code="650109103" />
+    <street name="三道坝镇" code="650109104" />
+    <street name="柏杨河乡" code="650109200" />
+    <street name="芦草沟乡" code="650109201" />
+</county>
+<county name="乌鲁木齐" code="650121">
+    <street name="水西沟镇" code="650121100" />
+    <street name="萨尔达坂乡" code="650121207" />
+    <street name="甘沟乡" code="650121208" />
+    <street name="永丰乡" code="650121210" />
+    <street name="板房沟乡" code="650121212" />
+    <street name="托里乡" code="650121213" />
+</county>
+<county name="乌鲁木齐" code="650110">
+    <street name="经济技术开发区" code="650110100" />
+    
+</county>
+
+</city>
+</address>

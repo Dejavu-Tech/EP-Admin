@@ -1,0 +1,569 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+	<title><?php echo $shoname_name; ?></title>
+	<link rel="shortcut icon" href="" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
+	<meta name="author" content="Dejavu871.Tech.">
+	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- Font Awesome-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+	<!-- ico-font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+	<!-- Themify icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
+	<!-- Flag icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
+	<!-- Feather icon-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+	<!-- Plugins css start-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
+	<!-- Plugins css Ends-->
+	<!-- Bootstrap css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+	<!-- App css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
+	<!-- Responsive css-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+
+<script type="text/javascript">
+	window.sysinfo = {
+	<?php if(!empty($_W['uniacid'])){ ?>'uniacid': '<?php echo ($_W['uniacid']); ?>',<?php } ?>
+
+	<?php if(!empty($_W['acid'])){ ?>'acid': '<?php echo ($_W['acid']); ?>',<?php } ?>
+
+	<?php if(!empty($_W['openid'])){ ?>'openid': '<?php echo ($_W['openid']); ?>',<?php } ?>
+
+	<?php if(!empty($_W['uid'])){ ?>'uid': '<?php echo ($_W['uid']); ?>',<?php } ?>
+
+	'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
+
+	'siteroot': '<?php echo ($_W['siteroot']); ?>',
+			'siteurl': '<?php echo ($_W['siteurl']); ?>',
+			'attachurl': '<?php echo ($_W['attachurl']); ?>',
+			'attachurl_local': '<?php echo ($_W['attachurl_local']); ?>',
+			'attachurl_remote': '<?php echo ($_W['attachurl_remote']); ?>',
+			'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
+	'cookie' : {'pre': ''},
+	'account' : <?php echo json_encode($_W['account']);?>,
+	};
+</script>
+<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
+<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+
+<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+</head>
+<body class="custom-scrollbar" >
+
+<div class="page-wrapper custom-scrollbar">
+<div class="page-body-wrapper">
+	<div class="page-body" style="margin: 0">
+		<div class="container-fluid">
+			<div class="page-header">
+				<div class="row">
+					<div class="col-lg-6 main-header">
+						<h6 class="mb-0">当前位置 </h6>
+						<h2>团长<span>设置</span></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card">
+						<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
+							<div class="card-body">
+								<div class="form-group row" >
+									<label class="col-sm-2 col-form-label">团长中心入口</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' lay-filter="community_money_type" name='data[close_community_index]' value='0' <?php if(empty($data) || $data['close_community_index'] ==0){ ?>checked <?php } ?> title="开启" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' lay-filter="close_community_index" name='data[close_community_index]' value='1' <?php if(!empty($data) && $data['close_community_index'] ==1){ ?>checked <?php } ?> title="关闭" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group row" >
+									<label class="col-sm-2 col-form-label">团长提成模式</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' name='data[is_head_takegoods]' lay-filter="is_head_takegoods" value='1' <?php if( !empty($data) && isset($data['is_head_takegoods']) && $data['is_head_takegoods'] ==1 ){ ?>checked <?php } ?> title="团长等级对应提成模式" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' name='data[is_head_takegoods]' lay-filter="is_head_takegoods" value='0' <?php if( empty($data) || !isset($data['is_head_takegoods']) || $data['is_head_takegoods'] ==0 ){ ?>checked <?php } ?> title="统一提成模式" />
+											</div>
+										</div>
+										<small id='head_money_explain' <?php if( !empty($data) && $data['is_head_takegoods'] == 1 ){ ?> style="display:block;"<?php }else{ ?> style="display:none;"<?php } ?>>请务必到“团长等级”设置具体提成比例或金额。如需商品独立提成，请到商品编辑页面勾选独立团长提成相关设置。</small>
+									</div>
+								</div>
+								<div class="form-group row" id='head_money_type1' <?php if( !empty($data) && $data['is_head_takegoods'] == 1 ){ ?> style="display:none;"<?php }else{ ?> style="display:block;"<?php } ?>>
+									<label class="col-sm-2 col-form-label">统一提成模式</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' lay-filter="community_money_type" name='data[community_money_type]' value='0' <?php if(empty($data) || $data['community_money_type'] ==0 ){ ?>checked <?php } ?> title="比例" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' lay-filter="community_money_type" name='data[community_money_type]' value='1' <?php if(!empty($data) && $data['community_money_type'] ==1 ){ ?>checked <?php } ?> title="金额" />
+											</div>
+										</div>
+										<small>比例：团长可得佣金 = 商品最终的成交价格 x 比例%，  金额：团长可得佣金 = 设置金额</small>
+									</div>
+								</div>
+
+								<div class="form-group row" id='head_money_type2' >
+									<label class="col-sm-2 col-form-label" id="ti_name">
+										<?php if(empty($data) || $data['community_money_type'] ==0){ ?>团长提成比例 <?php } ?>
+										<?php if(!empty($data) && $data['community_money_type'] ==1){ ?>团长提成金额 <?php } ?>
+									</label>
+									<div class="col-sm-10">
+										<div class="input-group pill-input-group">
+											<input type="text" lay-verify="number" name="data[default_comunity_money]" class="form-control valid" value="<?php echo empty($data['default_comunity_money'])?0:$data['default_comunity_money']; ?>" />
+											<div class="input-group-append" id="danwei"><?php if(empty($data) || $data['community_money_type'] ==0 ){ ?><span class="input-group-text">%</span><?php } if(!empty($data) && $data['community_money_type'] ==1 ){ ?><span class="input-group-text">元</span> <?php } ?></div>
+										</div>
+										<small id="dan_notice"><?php if(empty($data) || $data['community_money_type'] ==0 ){ ?>预计团长可得佣金 = 商品最终的成交价格 * 比例% <?php } if(!empty($data) && $data['community_money_type'] ==1 ){ ?>预计团长可得佣金 = 商品总数量 * 固定金额<?php } ?></small>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">社区距离限制</label>
+									<div class="col-sm-10">
+										<div class="input-group pill-input-group">
+											<input type="text" name="data[default_comunity_limit_mile]" class="form-control valid" value="<?php echo empty($data['default_comunity_limit_mile'])?0:$data['default_comunity_limit_mile']; ?>" lay-verify="number" />
+											<div class="input-group-append"><span class="input-group-text">公里 </span></div>
+										</div>
+										<small>社区列表限制某个距离内显示, 0代表不限制</small>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">推荐现金奖励:</label>
+									<div class="col-sm-10">
+										<div class="input-group pill-input-group">
+											<input type="text" name="data[zhi_tui_reward_money]" class="form-control valid" value="<?php echo empty($data['zhi_tui_reward_money'])?0:$data['zhi_tui_reward_money']; ?>" />
+											<div class="input-group-append"><span class="input-group-text">元 </span></div>
+										</div>
+										<small>被推荐团长审核后，发放奖励到推荐人的团长账户余额中</small>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">前端添加核销会员</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' name='data[open_community_addhexiaomember]' value='0' <?php if(!empty($data) && $data['open_community_addhexiaomember'] ==0 ){ ?>checked <?php } ?> title="关闭" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' name='data[open_community_addhexiaomember]' value='1' <?php if(empty($data) || $data['open_community_addhexiaomember'] ==1 ){ ?>checked <?php } ?> title="开启" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">前端显示详细地址</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' name='data[index_hide_headdetail_address]' value='0' <?php if( empty($data) || $data['index_hide_headdetail_address'] ==0 ){ ?>checked <?php } ?> title="显示" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' name='data[index_hide_headdetail_address]' value='1' <?php if( !empty($data) && $data['index_hide_headdetail_address'] ==1 ){ ?>checked <?php } ?> title="隐藏" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">模板消息--新订单通知</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' name='data[template_order_success_notice]' value='0' <?php if( empty($data) || $data['template_order_success_notice'] ==0 ){ ?>checked <?php } ?> title="关闭" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' name='data[template_order_success_notice]' value='1' <?php if( !empty($data) && $data['template_order_success_notice'] ==1 ){ ?>checked <?php } ?> title="开启" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">显示团长等级</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' name='data[is_show_head_level]' value='0' <?php if( empty($data) || $data['is_show_head_level'] ==0 ){ ?>checked <?php } ?> title="隐藏" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' name='data[is_show_head_level]' value='1' <?php if( !empty($data) && $data['is_show_head_level'] ==1 ){ ?>checked <?php } ?> title="显示" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row head_level_chose">
+									<label class="col-sm-2 col-form-label">团长分销级数</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input type='radio' title="关闭" lay-filter="radi" class="radi" name='data[open_community_head_leve]' value='0' <?php if(empty($data) || $data['open_community_head_leve'] ==0 ){ ?>checked <?php } ?> />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' lay-filter="radi" class="radi" name='data[open_community_head_leve]' value='1' <?php if(!empty($data) && $data['open_community_head_leve'] ==1 ){ ?>checked <?php } ?> title="1级" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' lay-filter="radi" class="radi" name='data[open_community_head_leve]' value='2' <?php if(!empty($data) && $data['open_community_head_leve'] ==2 ){ ?>checked <?php } ?> title="2级" />
+											</div>
+											<div class="radio radio-primary">
+												<input type='radio' lay-filter="radi" class="radi" name='data[open_community_head_leve]' value='3' <?php if(!empty($data) && $data['open_community_head_leve'] ==3 ){ ?>checked <?php } ?> title="3级" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row community_head_commiss1" <?php if( !empty($data) && $data['open_community_head_leve'] >= 1 ){ ?> style="display:flex;"<?php }else{ ?> style="display:none;"<?php } ?> >
+								<label class="col-sm-2 col-form-label">1级提成比例</label>
+								<div class="col-sm-10 fixmore-input-group">
+									<div class="input-group pill-input-group">
+										<input type="text" name="data[community_head_commiss1]" class="form-control valid" value="<?php echo empty($data['community_head_commiss1'])?0:$data['community_head_commiss1'];?>" />
+										<div class="input-group-append"><span class="input-group-text">% </span></div>
+									</div>
+								</div>
+							    </div>
+							<div class="form-group row community_head_commiss2" <?php if( !empty($data) && $data['open_community_head_leve'] >= 2 ){ ?> style="display:flex;"<?php }else{ ?> style="display:none;"<?php } ?>>
+							<label class="col-sm-2 col-form-label">2级提成比例</label>
+							<div class="col-sm-10 fixmore-input-group">
+								<div class="input-group pill-input-group">
+									<input type="text" name="data[community_head_commiss2]" class="form-control valid" value="<?php echo empty($data['community_head_commiss2'])?0:$data['community_head_commiss2']; ?>" />
+									<div class="input-group-append"><span class="input-group-text">% </span></div>
+								</div>
+							</div>
+					</div>
+					<div class="form-group row community_head_commiss3" <?php if( !empty($data) && $data['open_community_head_leve'] >= 3 ){ ?> style="display:flex;"<?php }else{ ?> style="display:none;"<?php } ?>>
+					<label class="col-sm-2 col-form-label">3级提成比例</label>
+					<div class="col-sm-10 fixmore-input-group">
+						<div class="input-group pill-input-group">
+							<input type="text" name="data[community_head_commiss3]" class="form-control valid" value="<?php echo empty($data['community_head_commiss3'])?0:$data['community_head_commiss3']; ?>" />
+							<div class="input-group-append"><span class="input-group-text">% </span></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">团长申请页面内容</label>
+					<div class="col-sm-10">
+						<div class=""  style="border-radius: 20px">
+							<?php echo tpl_ueditor('data[communityhead_apply_page]',$data['communityhead_apply_page'],array('height'=>'300'));?>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">团长申请开关</label>
+					<div class="col-sm-10">
+						<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+							<div class="radio radio-primary">
+								<input type='radio' name='data[close_community_apply_enter]' value='0' <?php if(!empty($data) && $data['close_community_apply_enter'] ==0 ){ ?>checked <?php } ?> title="开启" />
+							</div>
+							<div class="radio radio-primary">
+								<input type='radio' name='data[close_community_apply_enter]' value='1' <?php if(empty($data) || $data['close_community_apply_enter'] ==1 ){ ?>checked <?php } ?> title="关闭" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">前端微信号字段自定义</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control valid" name="data[wechat_div]" value="<?php echo ($data[wechat_div]); ?>">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">团长休息开关</label>
+					<div class="col-sm-10">
+						<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+							<div class="radio radio-primary">
+								<input type='radio' name='data[close_community_reset_btn]' value='0' <?php if(!empty($data) && $data['close_community_reset_btn'] ==0 ){ ?>checked <?php } ?> title="开启" />
+							</div>
+							<div class="radio radio-primary">
+								<input type='radio' name='data[close_community_reset_btn]' value='1' <?php if(empty($data) || $data['close_community_reset_btn'] ==1 ){ ?>checked <?php } ?> title="关闭" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">社区用户待核销</label>
+					<div class="col-sm-10">
+						<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+							<div class="radio radio-primary">
+								<input type='radio' name='data[close_community_delivery_orders]' value='0' <?php if(empty($data) || $data['close_community_delivery_orders'] ==0 ){ ?>checked <?php } ?> title="开启" />
+							</div>
+							<div class="radio radio-primary">
+								<input type='radio' name='data[close_community_delivery_orders]' value='1' <?php if(!empty($data) && $data['close_community_delivery_orders'] ==1 ){ ?>checked <?php } ?> title="关闭" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">单团长模式</label>
+					<div class="col-sm-10">
+						<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+							<div class="radio radio-primary">
+								<input type='radio' name='data[open_danhead_model]' value='0' <?php if(empty($data) || $data['open_danhead_model'] ==0 ){ ?>checked <?php } ?> title="关闭" />
+							</div>
+							<div class="radio radio-primary">
+								<input type='radio' name='data[open_danhead_model]' value='1' <?php if(!empty($data) && $data['open_danhead_model'] ==1 ){ ?>checked <?php } ?> title="开启" />
+							</div>
+						</div>
+						<small style="color: #ff4229;">开启单团长模式后，小程序端只有一个默认的团长<strong>务必</strong>前往团长列表，选择默认团长，不能切换其他团长</small>
+					</div>
+				</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">小程序端团长排行</label>
+				<div class="col-sm-10">
+					<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+						<div class="radio radio-primary">
+							<input type='radio' name='data[is_show_community_ranking]' value='0' <?php if( empty($data) || $data['is_show_community_ranking'] ==0 ){ ?>checked <?php } ?> title="不显示" />
+						</div>
+						<div class="radio radio-primary">
+							<input type='radio' name='data[is_show_community_ranking]' value='1' <?php if( !empty($data) && $data['is_show_community_ranking'] ==1 ){ ?>checked <?php } ?> title="显示" />
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="card-footer">
+				<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
+				<a class="btn btn-pill btn-primary" style='margin-left:10px;display: none' href="<?php echo U('config/configindex.notice',array('ok'=>'1'));?>">返回列表</a>
+
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 footer-copyright">
+				<p class="mb-0">Copyright © 2019-2021 Dejavu.Tech. All rights reserved.</p>
+			</div>
+			<div class="col-md-6">
+				<p class="pull-right mb-0">吃货星球v4.0.1<i class="fa fa-heart"></i></p>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+</div>
+
+<script src="/layuiadmin/layui/layui2.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap js-->
+
+<!-- Sidebar jquery-->
+<script src="/assets/js/sidebar-menu.js"></script>
+
+<!-- feather icon js-->
+
+<!-- Plugins JS start-->
+
+<script src="/assets/js/chat-menu.js"></script>
+<!-- Plugins JS Ends-->
+<!-- Theme js-->
+<script src="/assets/js/script.js"></script>
+
+<!-- Theme js-->
+<script src="/assets/js/theme-customizer/customizer1.js"></script>
+
+<script>
+	layui.config({
+		base: '/layuiadmin/' //静态资源所在路径
+	}).extend({
+		index: 'lib/index' //主入口模块
+	}).use('index');
+</script>
+
+<script>
+//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+var layer = layui.layer;
+var $;
+
+var cur_open_div;
+
+layui.use(['jquery', 'layer','form'], function(){
+  $ = layui.$;
+  var form = layui.form;
+
+	form.on('radio(community_money_type)', function(data){
+		if (data.value == 0) {
+			$('#danwei').html('<span class="input-group-text">%</span>');
+			$('#dan_notice').html('预计团长可得佣金 = 商品最终的成交价格 * 比例%');
+			$('#ti_name').html('团长提成比例');
+		} else {
+			$('#danwei').html('<span class="input-group-text">元</span>');
+			$('#dan_notice').html('预计团长可得佣金 = 商品总数量 * 固定金额');
+			$('#ti_name').html('团长提成金额');
+		}
+	});
+	form.on('radio(is_head_takegoods)', function(data){
+		if (data.value == 0) {
+			$('#head_money_type1').show();
+			$('#head_money_type2').show();
+			$('#head_money_explain').hide();
+
+		} else {
+			$('#head_money_type1').hide();
+			$('#head_money_type2').hide();
+			$('#head_money_explain').show();
+
+		}
+	});
+	form.on('radio(community_level_rate_status111)', function(data){
+		var type = $('input[name="data[community_money_type]"]:checked').val();
+		var type_txt = "提成比例";
+		if(type == 1){
+			type_txt = "固定金额";
+		}
+		var content = "启用后，请务必到团长等级设置相应的"+type_txt+"！！！";
+		if (data.value == 1) {
+			layer.confirm(content, {
+				area:['450px','160px'],
+				btn: ['知道了'] //按钮
+			}, function(){
+				layer.closeAll();
+			});
+		}
+	});
+
+	form.on('radio(radi)', function(data){
+		var open_community_head_leve =data.value ;
+
+		if( open_community_head_leve == 0 )
+		{
+			$('.community_head_commiss1').hide();
+			$('.community_head_commiss2').hide();
+			$('.community_head_commiss3').hide();
+		}else if( open_community_head_leve == 1 ){
+			$('.community_head_commiss1').show();
+			$('.community_head_commiss2').hide();
+			$('.community_head_commiss3').hide();
+		}else if(open_community_head_leve == 2){
+			$('.community_head_commiss1').show();
+			$('.community_head_commiss2').show();
+			$('.community_head_commiss3').hide();
+		}else if(open_community_head_leve == 3){
+			$('.community_head_commiss1').show();
+			$('.community_head_commiss2').show();
+			$('.community_head_commiss3').show();
+		}
+
+	})
+
+	$('#chose_link').click(function(){
+		cur_open_div = $(this).attr('data-input');
+		$.post("<?php echo U('util/selecturl', array('ok' => 1));?>", {}, function(shtml){
+		 layer.open({
+			type: 1,
+			area: '700px',
+			content: shtml //注意，如果str是object，那么需要字符拼接。
+		  });
+		});
+	})
+
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+
+	 $.ajax({
+		url: data.form.action,
+		type: data.form.method,
+		data: data.field,
+		dataType:'json',
+		success: function (info) {
+
+			if(info.status == 0)
+			{
+				layer.msg(info.result.message,{icon: 1,time: 2000});
+			}else if(info.status == 1){
+				var go_url = location.href;
+				if( info.result.hasOwnProperty("url") )
+				{
+					go_url = info.result.url;
+				}
+
+				layer.msg('操作成功',{time: 1000,
+					end:function(){
+						location.href = info.result.url;
+					}
+				});
+			}
+		}
+	});
+
+    return false;
+  });
+})
+
+
+
+</script>
+
+<script>
+$(function(){
+
+
+
+	$('#clear_member_qrcode').click(function(){
+		$.ajax({
+			url:"<?php echo U('distribution/clear_user_member_qrcode');?>",
+			type:'get',
+			dataType:'json',
+			success:function(){
+				tip.msgbox.suc('清空成功');
+			}
+		})
+	})
+
+})
+</script>
+</body>

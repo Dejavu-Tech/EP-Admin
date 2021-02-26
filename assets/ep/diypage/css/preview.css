@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+body, html {
+    height: 100%;
+    background: #f2f2f2;
+    overflow: hidden
+}
+
+#preview {
+    display: block;
+    margin: 0 auto;
+    width: 640px;
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.qrcode-container {
+    height: 180px;
+    width: 160px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 48%;
+    top: 100px;
+    margin-left: 388px;
+}
+
+.qrcode-container p {
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+}
+
+.qrcode-container .qrcode-image {
+    height: 160px;
+    width: 160px;
+}
+
+.qrcode-container canvas {
+    height: 158px;
+    width: 158px;
+    border: 1px solid #ddd;
+}
+
+.back-container {
+    width: 180px;
+    height: 32px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 48%;
+    top: 310px;
+    margin-left: 388px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.iframe {
+    display: block;
+    margin: 0 auto;
+    width: 640px;
+    height: 100%;
+    border: 1px solid #ddd;
+}

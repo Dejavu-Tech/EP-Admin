@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="漯河" code="411100">
+<county name="源汇" code="411102">
+    <street name="老街街道" code="411102001" />
+    <street name="马路街街道" code="411102002" />
+    <street name="顺河街街道" code="411102003" />
+    <street name="干河陈街道" code="411102004" />
+    <street name="大刘镇" code="411102100" />
+    <street name="阴阳赵镇" code="411102101" />
+    <street name="空冢郭镇" code="411102102" />
+    <street name="问十乡" code="411102202" />
+</county>
+<county name="郾城" code="411103">
+    <street name="沙北街道" code="411103001" />
+    <street name="城关镇" code="411103100" />
+    <street name="孟庙镇" code="411103101" />
+    <street name="商桥镇" code="411103102" />
+    <street name="裴城镇" code="411103103" />
+    <street name="新店镇" code="411103104" />
+    <street name="龙城镇" code="411103105" />
+    <street name="李集镇" code="411103106" />
+    <street name="黑龙潭乡" code="411103201" />
+</county>
+<county name="召陵" code="411104">
+    <street name="天桥街街道" code="411104001" />
+    <street name="翟庄办事处" code="411104002" />
+    <street name="召陵镇" code="411104100" />
+    <street name="邓襄镇" code="411104101" />
+    <street name="万金镇" code="411104102" />
+    <street name="老窝镇" code="411104103" />
+    <street name="姬石镇" code="411104104" />
+    <street name="后谢乡" code="411104201" />
+    <street name="青年村乡" code="411104203" />
+</county>
+<county name="舞阳" code="411121">
+    <street name="舞泉镇" code="411121100" />
+    <street name="吴城镇" code="411121101" />
+    <street name="北舞渡镇" code="411121102" />
+    <street name="莲花镇" code="411121103" />
+    <street name="辛安镇" code="411121104" />
+    <street name="孟寨镇" code="411121105" />
+    <street name="太尉镇" code="411121106" />
+    <street name="侯集镇" code="411121107" />
+    <street name="文峰乡" code="411121200" />
+    <street name="保和乡" code="411121201" />
+    <street name="马村乡" code="411121202" />
+    <street name="姜店乡" code="411121204" />
+    <street name="九街乡" code="411121205" />
+    <street name="章化乡" code="411121206" />
+</county>
+<county name="临颍" code="411122">
+    <street name="城关镇" code="411122100" />
+    <street name="繁城镇" code="411122101" />
+    <street name="杜曲镇" code="411122102" />
+    <street name="王岗镇" code="411122103" />
+    <street name="台陈镇" code="411122104" />
+    <street name="巨陵镇" code="411122105" />
+    <street name="瓦店镇" code="411122106" />
+    <street name="三家店镇" code="411122107" />
+    <street name="窝城镇" code="411122108" />
+    <street name="大郭乡" code="411122200" />
+    <street name="皇帝庙乡" code="411122201" />
+    <street name="固厢乡" code="411122202" />
+    <street name="石桥乡" code="411122203" />
+    <street name="陈庄乡" code="411122204" />
+    <street name="王孟乡" code="411122205" />
+</county>
+</city>
+</address>

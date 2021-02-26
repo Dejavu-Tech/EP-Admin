@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="林芝" code="542600">
+<county name="巴宜" code="542621">
+    <street name="林芝镇" code="542621100" />
+    <street name="百巴镇" code="542621101" />
+    <street name="八一镇" code="542621102" />
+    <street name="鲁朗镇" code="542621103" />
+    <street name="更章门巴民族乡" code="542621200" />
+    <street name="布久乡" code="542621201" />
+    <street name="米瑞乡" code="542621202" />
+</county>
+<county name="工布江达" code="542622">
+    <street name="工布江达镇" code="542622100" />
+    <street name="金达镇" code="542622101" />
+    <street name="巴河镇" code="542622102" />
+    <street name="错高乡" code="542622200" />
+    <street name="朱拉乡" code="542622201" />
+    <street name="仲莎乡" code="542622202" />
+    <street name="江达乡" code="542622203" />
+    <street name="娘蒲乡" code="542622204" />
+    <street name="加兴乡" code="542622205" />
+</county>
+<county name="米林" code="542623">
+    <street name="米林镇" code="542623100" />
+    <street name="卧龙镇" code="542623101" />
+    <street name="派镇" code="542623102" />
+    <street name="丹娘乡" code="542623200" />
+    <street name="南伊珞巴民族乡" code="542623201" />
+    <street name="羌纳乡" code="542623202" />
+    <street name="里龙乡" code="542623203" />
+    <street name="扎西绕登乡" code="542623204" />
+</county>
+<county name="墨脱" code="542624">
+    <street name="墨脱镇" code="542624100" />
+    <street name="甘登乡" code="542624200" />
+    <street name="加热萨乡" code="542624201" />
+    <street name="达木珞巴民族乡" code="542624202" />
+    <street name="帮辛乡" code="542624203" />
+    <street name="格当乡" code="542624204" />
+    <street name="德兴乡" code="542624205" />
+    <street name="背崩乡" code="542624206" />
+</county>
+<county name="波密" code="542625">
+    <street name="扎木镇" code="542625100" />
+    <street name="倾多镇" code="542625101" />
+    <street name="松宗镇" code="542625102" />
+    <street name="古乡" code="542625200" />
+    <street name="玉许乡" code="542625201" />
+    <street name="多吉乡" code="542625202" />
+    <street name="康玉乡" code="542625203" />
+    <street name="玉普乡" code="542625204" />
+    <street name="易贡乡" code="542625205" />
+    <street name="八盖乡" code="542625206" />
+</county>
+<county name="察隅" code="542626">
+    <street name="竹瓦根镇" code="542626100" />
+    <street name="上察隅镇" code="542626101" />
+    <street name="下察隅镇" code="542626102" />
+    <street name="古玉乡" code="542626200" />
+    <street name="古拉乡" code="542626201" />
+    <street name="察瓦龙乡" code="542626202" />
+</county>
+<county name="朗县" code="542627">
+    <street name="朗镇" code="542627100" />
+    <street name="仲达镇" code="542627101" />
+    <street name="洞嘎镇" code="542627102" />
+    <street name="金东乡" code="542627200" />
+    <street name="拉多乡" code="542627201" />
+    <street name="登木乡" code="542627202" />
+</county>
+</city>
+</address>

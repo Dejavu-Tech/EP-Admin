@@ -1,0 +1,73 @@
+<div class="table-responsive custom-scrollbar" style="max-height: calc(100vh - 110px);overflow:auto;overflow-x:hidden;max-width:850px;">
+<div class="input-group m-b-10">
+		<input type="text" placeholder="请输入商品名称进行搜索" id="select-url-kw" value="" class="form-control">
+		<div class="input-group-append" data-type="url"><span class="btn btn-primary select-btn">搜索</span></div>
+	</div>
+<table class="display supplyquery" style="width:100%;">
+    <tbody>
+        <?php foreach( $ds as $row ){ ?>
+        <tr>
+          <td><img src='{: tomedia($row['thumb'])}' class="img-responsive img-thumbnail m-r-20" style="width:40px;height:40px;" /> {$row['goodsname']}</td>
+          <td style="white-space:nowrap;text-align: right;"><a href="javascript:;" class="choose_dan_link btn-primary btn-sm" data-json='{:json_encode($row);}'>选择</a></td>
+        </tr>
+        <?php } ?>
+        <?php if(count($ds)<=0){ ?>
+        <tr>
+            <td colspan='4' align='center'>未找到商品</td>
+        </tr>
+        <?php } ?>
+    </tbody>
+</table>
+    </div>
+
+	<script>
+	var query_kwd = '{$kwd}';
+var query_url = "{:U('goods/query_normal', array('type'=>$type,'is_not_hexiao' => $is_not_hexiao))}";
+var can_next = true;
+$(".select-btn").click(function(){
+
+	query_kwd = $.trim($("#select-url-kw").val());
+
+
+	if(!can_next)
+	{
+		return false;
+	}
+	can_next = false;
+	$.ajax({
+		url:query_url,
+		type:'post',
+		dataType:'json',
+		data:{keyword:query_kwd,is_ajax:1},
+		success:function(ret){
+			if(ret.code == 0)
+			{
+				$('.supplyquery tbody').html(ret.html);
+			//	$('#pager_ajax').html(ret.pager);
+			}
+			can_next = true;
+		}
+	})
+});
+
+$(document).delegate(".choose_dan_link","click",function(){
+
+	//data-json
+	var json_obj = JSON.parse($(this).attr('data-json'));
+	var p_html = '';
+	p_html+= '<div class="input-group m-t-10">';
+	p_html+= '	<div class="layadmin-text-center choose_user">';
+	p_html+= '		<img class="img-responsive img-thumbnail" src="'+json_obj.thumb+'">';
+	p_html+= '		<div class="layadmin-maillist-img" style="">'+json_obj.goodsname+'</div>';
+	p_html+= '		<button type="button" class="btn btn-primary" onclick="cancle_bind(this)">删除</button>';
+	p_html+= '	</div>';
+	p_html+= '</div>';
+
+	$(cur_open_div).parent().siblings().remove();
+	$(cur_open_div).parent().after(p_html);
+
+	$(cur_open_div).val( json_obj.gid );
+	layer.close(layer.index);
+});
+
+	</script>

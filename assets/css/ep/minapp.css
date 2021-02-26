@@ -1,0 +1,142 @@
+/*小程序界面*/
+
+.minapp {
+	width: 414px;
+	-webkit-box-shadow: #ccc 0px 0px 10px;
+   	-moz-box-shadow: #ccc 0px 0px 10px;
+   	box-shadow: #ccc 0px 0px 10px;
+   	background-color: #f6f6f6;
+   	height: 800px;
+   	margin-bottom: 30px;
+   	overflow: hidden;
+}
+
+.user {
+	max-height: 730px;
+	overflow-y: auto;
+   	overflow-x: hidden;
+}
+
+/*个人中心*/
+.user .user-top {
+	box-sizing: border-box;
+	background-color: #F75451;
+	height: 187px;
+	padding: 15px 20px;
+}
+
+.user .user-top .avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+	margin-right: 5px;
+}
+
+.user .user-top .username {
+	line-height: 40px;
+	float: left;
+	color: #fff;
+}
+
+.user .order {
+	background-color: #fff;
+	width: 390px;
+	margin: -90px auto 0;
+	border-radius: 10px;
+}
+
+.user .orderTab {
+	font-size: 0;
+	text-align: center;
+	border-top: 1px solid #efefef;
+	padding: 20px 0 15px;
+}
+
+.order-title {
+	padding: 10px 15px;
+  	font-weight: 500;
+  	color: #444;
+}
+
+.user .order_status_name {
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.order_menu_icon {
+	width: 44px;
+	height: 44px;
+	margin: 0 auto;
+}
+
+.order_menu_icon img {
+	width: 44px;
+	height: 44px;
+}
+
+.user .order_status {
+	width: 20%;
+	display: inline-block;
+}
+
+.user .tool {
+	background-color: #fff;
+	width: 390px;
+	margin: 15px auto 0;
+	border-radius: 10px;
+}
+
+.item-main {
+	padding: 10px 15px;
+	border-top: 1px solid #efefef;
+}
+
+.item-main:first-child {
+	border: 0;
+}
+
+.item-main span {
+	display: inline-block;
+	line-height: 30px;
+}
+
+.item-main .tool_icon {
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+	float: left;
+}
+
+.item-main .tool_icon img {
+	width: 30px;
+	height: 30px;
+}
+
+.user-details {
+	padding-top: 200px;
+	color: red;
+}
+
+.details-title {
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.toolList.grad {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.toolList.grad .item-main {
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="恩施" code="422800">
+<county name="恩施" code="422801">
+    <street name="舞阳坝街道" code="422801001" />
+    <street name="六角亭街道" code="422801002" />
+    <street name="小渡船街道" code="422801003" />
+    <street name="龙凤镇" code="422801100" />
+    <street name="崔坝镇" code="422801101" />
+    <street name="板桥镇" code="422801102" />
+    <street name="三岔乡" code="422801200" />
+    <street name="新塘乡" code="422801201" />
+    <street name="红土乡" code="422801202" />
+    <street name="沙地乡" code="422801203" />
+    <street name="白杨坪乡" code="422801204" />
+    <street name="太阳河乡" code="422801205" />
+    <street name="屯堡乡" code="422801206" />
+    <street name="白果乡" code="422801207" />
+    <street name="芭蕉侗族乡" code="422801208" />
+    <street name="盛家坝乡" code="422801209" />
+    <street name="沐抚办事处" code="422801400" />
+</county>
+<county name="利川" code="422802">
+    <street name="都亭街道" code="422802001" />
+    <street name="东城街道" code="422802002" />
+    <street name="谋道镇" code="422802100" />
+    <street name="柏杨坝镇" code="422802101" />
+    <street name="汪营镇" code="422802102" />
+    <street name="建南镇" code="422802103" />
+    <street name="忠路镇" code="422802104" />
+    <street name="团堡镇" code="422802105" />
+    <street name="毛坝镇" code="422802106" />
+    <street name="凉雾乡" code="422802200" />
+    <street name="元堡乡" code="422802201" />
+    <street name="南坪乡" code="422802202" />
+    <street name="文斗乡" code="422802203" />
+    <street name="沙溪乡" code="422802205" />
+    <street name="佛宝山生态综合开发区" code="422802400" />
+</county>
+<county name="建始" code="422822">
+    <street name="业州镇" code="422822100" />
+    <street name="高坪镇" code="422822101" />
+    <street name="红岩寺镇" code="422822102" />
+    <street name="景阳镇" code="422822103" />
+    <street name="官店镇" code="422822104" />
+    <street name="花坪镇" code="422822105" />
+    <street name="长梁乡" code="422822200" />
+    <street name="茅田乡" code="422822201" />
+    <street name="龙坪乡" code="422822202" />
+    <street name="三里乡" code="422822203" />
+</county>
+<county name="巴东" code="422823">
+    <street name="信陵镇" code="422823100" />
+    <street name="东瀼口镇" code="422823101" />
+    <street name="沿渡河镇" code="422823102" />
+    <street name="官渡口镇" code="422823103" />
+    <street name="茶店子镇" code="422823104" />
+    <street name="绿葱坡镇" code="422823105" />
+    <street name="大支坪镇" code="422823106" />
+    <street name="野三关镇" code="422823107" />
+    <street name="水布垭镇" code="422823108" />
+    <street name="清太坪镇" code="422823109" />
+    <street name="溪丘湾乡" code="422823200" />
+    <street name="金果坪乡" code="422823201" />
+</county>
+<county name="宣恩" code="422825">
+    <street name="珠山镇" code="422825100" />
+    <street name="椒园镇" code="422825101" />
+    <street name="沙道沟镇" code="422825102" />
+    <street name="万寨乡" code="422825200" />
+    <street name="长潭河侗族乡" code="422825201" />
+    <street name="李家河乡" code="422825202" />
+    <street name="晓关侗族乡" code="422825203" />
+    <street name="高罗乡" code="422825204" />
+    <street name="椿木营乡" code="422825205" />
+</county>
+<county name="咸丰" code="422826">
+    <street name="高乐山镇" code="422826100" />
+    <street name="忠堡镇" code="422826101" />
+    <street name="坪坝营镇" code="422826102" />
+    <street name="朝阳寺镇" code="422826103" />
+    <street name="清坪镇" code="422826104" />
+    <street name="丁寨乡" code="422826200" />
+    <street name="尖山乡" code="422826201" />
+    <street name="活龙坪乡" code="422826202" />
+    <street name="小村乡" code="422826203" />
+    <street name="黄金洞乡" code="422826204" />
+    <street name="大路坝区" code="422826400" />
+</county>
+<county name="来凤" code="422827">
+    <street name="翔凤镇" code="422827100" />
+    <street name="百福司镇" code="422827101" />
+    <street name="大河镇" code="422827102" />
+    <street name="绿水镇" code="422827103" />
+    <street name="旧司镇" code="422827104" />
+    <street name="漫水乡" code="422827200" />
+    <street name="革勒车乡" code="422827201" />
+    <street name="三胡乡" code="422827202" />
+</county>
+<county name="鹤峰" code="422828">
+    <street name="走马镇" code="422828100" />
+    <street name="容美镇" code="422828101" />
+    <street name="太平镇" code="422828102" />
+    <street name="铁炉乡" code="422828200" />
+    <street name="五里乡" code="422828201" />
+    <street name="燕子乡" code="422828202" />
+    <street name="下坪乡" code="422828203" />
+    <street name="邬阳乡" code="422828204" />
+    <street name="中营乡" code="422828205" />
+</county>
+</city>
+</address>

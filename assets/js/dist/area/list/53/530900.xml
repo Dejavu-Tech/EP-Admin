@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="临沧" code="530900">
+<county name="临翔" code="530902">
+    <street name="凤翔街道" code="530902001" />
+    <street name="忙畔街道" code="530902002" />
+    <street name="博尚镇" code="530902102" />
+    <street name="南美乡" code="530902202" />
+    <street name="蚂蚁堆乡" code="530902203" />
+    <street name="章驮乡" code="530902204" />
+    <street name="圈内乡" code="530902206" />
+    <street name="马台乡" code="530902207" />
+    <street name="邦东乡" code="530902208" />
+    <street name="平村乡" code="530902209" />
+</county>
+<county name="凤庆" code="530921">
+    <street name="凤山镇" code="530921101" />
+    <street name="鲁史镇" code="530921102" />
+    <street name="小湾镇" code="530921103" />
+    <street name="营盘镇" code="530921104" />
+    <street name="三岔河镇" code="530921105" />
+    <street name="勐佑镇" code="530921106" />
+    <street name="雪山镇" code="530921107" />
+    <street name="洛党镇" code="530921108" />
+    <street name="诗礼乡" code="530921201" />
+    <street name="新华乡" code="530921202" />
+    <street name="大寺乡" code="530921204" />
+    <street name="腰街乡" code="530921206" />
+    <street name="郭大寨乡" code="530921207" />
+</county>
+<county name="云县" code="530922">
+    <street name="爱华镇" code="530922101" />
+    <street name="漫湾镇" code="530922102" />
+    <street name="大朝山西镇" code="530922103" />
+    <street name="涌宝镇" code="530922104" />
+    <street name="茂兰镇" code="530922105" />
+    <street name="幸福镇" code="530922106" />
+    <street name="大寨镇" code="530922107" />
+    <street name="忙怀乡" code="530922201" />
+    <street name="晓街乡" code="530922202" />
+    <street name="茶房乡" code="530922203" />
+    <street name="栗树乡" code="530922204" />
+    <street name="后箐乡" code="530922205" />
+    <street name="幸福农场" code="530922501" />
+    <street name="新城农场" code="530922502" />
+</county>
+<county name="永德" code="530923">
+    <street name="德党镇" code="530923101" />
+    <street name="小勐统镇" code="530923102" />
+    <street name="永康镇" code="530923103" />
+    <street name="勐板乡" code="530923203" />
+    <street name="亚练乡" code="530923204" />
+    <street name="乌木龙乡" code="530923205" />
+    <street name="大雪山乡" code="530923206" />
+    <street name="班卡乡" code="530923207" />
+    <street name="崇岗乡" code="530923208" />
+    <street name="大山乡" code="530923209" />
+    <street name="勐底农场" code="530923401" />
+</county>
+<county name="镇康" code="530924">
+    <street name="凤尾镇" code="530924101" />
+    <street name="勐捧镇" code="530924102" />
+    <street name="南伞镇" code="530924103" />
+    <street name="忙丙乡" code="530924201" />
+    <street name="勐堆乡" code="530924202" />
+    <street name="木场乡" code="530924204" />
+    <street name="军赛乡" code="530924205" />
+</county>
+<county name="双江" code="530925">
+    <street name="勐勐镇" code="530925101" />
+    <street name="勐库镇" code="530925102" />
+    <street name="沙河乡" code="530925201" />
+    <street name="大文乡" code="530925202" />
+    <street name="忙糯乡" code="530925203" />
+    <street name="邦丙乡" code="530925205" />
+</county>
+<county name="耿马" code="530926">
+    <street name="耿马镇" code="530926100" />
+    <street name="勐永镇" code="530926101" />
+    <street name="勐撒镇" code="530926102" />
+    <street name="孟定镇" code="530926103" />
+    <street name="大兴乡" code="530926200" />
+    <street name="芒洪乡" code="530926201" />
+    <street name="四排山乡" code="530926202" />
+    <street name="贺派乡" code="530926203" />
+    <street name="勐简乡" code="530926204" />
+    <street name="耿马华侨农场" code="530926401" />
+    <street name="勐撒农场" code="530926402" />
+    <street name="孟定农场" code="530926403" />
+</county>
+<county name="沧源" code="530927">
+    <street name="勐董镇" code="530927101" />
+    <street name="岩帅镇" code="530927102" />
+    <street name="勐省镇" code="530927103" />
+    <street name="芒卡镇" code="530927104" />
+    <street name="单甲乡" code="530927202" />
+    <street name="糯良乡" code="530927203" />
+    <street name="勐来乡" code="530927204" />
+    <street name="勐角乡" code="530927205" />
+    <street name="班洪乡" code="530927206" />
+    <street name="班老乡" code="530927207" />
+    <street name="勐省农场" code="530927401" />
+</county>
+</city>
+</address>

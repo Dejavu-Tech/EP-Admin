@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address>
+<city name="南通" code="320600">
+<county name="崇川" code="320602">
+    <street name="城东街道" code="320602001" />
+    <street name="和平桥街道" code="320602002" />
+    <street name="任港街道" code="320602003" />
+    <street name="新城桥街道" code="320602004" />
+    <street name="虹桥街道" code="320602005" />
+    <street name="学田街道" code="320602006" />
+    <street name="钟秀街道" code="320602007" />
+    <street name="文峰街道" code="320602008" />
+    <street name="观音山街道" code="320602009" />
+    <street name="狼山镇街道" code="320602010" />
+    <street name="中兴街道" code="320602050" />
+    <street name="新开街道" code="320602051" />
+    <street name="竹行街道" code="320602052" />
+    <street name="小海街道" code="320602053" />
+    <street name="南通崇川经济开发区" code="320602400" />
+    <street name="江海镇区" code="320602450" />
+    <street name="南通市富民港良种场" code="320602451" />
+    <street name="南通市富民港种畜场" code="320602452" />
+    <street name="南通苏通科技产业园" code="320602453" />
+</county>
+<county name="港闸" code="320611">
+    <street name="永兴街道" code="320611001" />
+    <street name="唐闸镇街道" code="320611002" />
+    <street name="天生港镇街道" code="320611003" />
+    <street name="秦灶街道" code="320611004" />
+    <street name="陈桥街道" code="320611005" />
+    <street name="幸福街道" code="320611006" />
+    <street name="港闸开发区" code="320611400" />
+</county>
+<county name="通州" code="320612">
+    <street name="金沙镇" code="320612100" />
+    <street name="西亭镇" code="320612101" />
+    <street name="二甲镇" code="320612102" />
+    <street name="东社镇" code="320612103" />
+    <street name="三余镇" code="320612104" />
+    <street name="十总镇" code="320612107" />
+    <street name="骑岸镇" code="320612108" />
+    <street name="五甲镇" code="320612109" />
+    <street name="石港镇" code="320612110" />
+    <street name="四安镇" code="320612111" />
+    <street name="刘桥镇" code="320612112" />
+    <street name="平潮镇" code="320612114" />
+    <street name="平东镇" code="320612115" />
+    <street name="五接镇" code="320612116" />
+    <street name="兴仁镇" code="320612117" />
+    <street name="兴东镇" code="320612118" />
+    <street name="张芝山镇" code="320612119" />
+    <street name="川姜镇" code="320612120" />
+    <street name="先锋镇" code="320612121" />
+    <street name="南通高新技术产业开发区" code="320612400" />
+    <street name="环本农场" code="320612401" />
+</county>
+<county name="海安" code="320621">
+    <street name="海安镇" code="320621100" />
+    <street name="城东镇" code="320621101" />
+    <street name="曲塘镇" code="320621102" />
+    <street name="李堡镇" code="320621103" />
+    <street name="角斜镇" code="320621105" />
+    <street name="大公镇" code="320621107" />
+    <street name="雅周镇" code="320621109" />
+    <street name="白甸镇" code="320621111" />
+    <street name="南莫镇" code="320621112" />
+    <street name="墩头镇" code="320621113" />
+    <street name="海安县农场" code="320621400" />
+</county>
+<county name="如东" code="320623">
+    <street name="掘港街道" code="320623001" />
+    <street name="城中街道" code="320623002" />
+    <street name="栟茶镇" code="320623100" />
+    <street name="洋口镇" code="320623101" />
+    <street name="苴镇" code="320623102" />
+    <street name="长沙镇" code="320623103" />
+    <street name="大豫镇" code="320623104" />
+    <street name="掘港镇" code="320623105" />
+    <street name="马塘镇" code="320623107" />
+    <street name="丰利镇" code="320623108" />
+    <street name="曹埠镇" code="320623109" />
+    <street name="岔河镇" code="320623110" />
+    <street name="双甸镇" code="320623111" />
+    <street name="新店镇" code="320623112" />
+    <street name="河口镇" code="320623113" />
+    <street name="袁庄镇" code="320623114" />
+    <street name="如东县经济开发区" code="320623400" />
+    <street name="如东沿海经济开发区" code="320623401" />
+    <street name="如东洋口港经济开发区" code="320623402" />
+    <street name="如东东安科技园区" code="320623403" />
+    <street name="如东沿海旅游经济开发区" code="320623404" />
+    <street name="南通外向型农业综合开发区" code="320623405" />
+</county>
+<county name="启东" code="320681">
+    <street name="汇龙镇" code="320681100" />
+    <street name="北新镇" code="320681101" />
+    <street name="惠萍镇" code="320681102" />
+    <street name="寅阳镇" code="320681103" />
+    <street name="东海镇" code="320681104" />
+    <street name="近海镇" code="320681105" />
+    <street name="南阳镇" code="320681106" />
+    <street name="海复镇" code="320681107" />
+    <street name="合作镇" code="320681108" />
+    <street name="王鲍镇" code="320681109" />
+    <street name="吕四港镇" code="320681110" />
+    <street name="启隆乡" code="320681200" />
+    <street name="启东经济开发区" code="320681400" />
+    <street name="启东滨海工业园" code="320681401" />
+    <street name="启东滨江化工园" code="320681402" />
+    <street name="江苏吕四海洋经济开发区" code="320681403" />
+    <street name="启隆生态科技产业园" code="320681404" />
+    <street name="启东海工船舶工业园" code="320681405" />
+    <street name="启东江海产业园" code="320681406" />
+</county>
+<county name="如皋" code="320682">
+    <street name="如城街道" code="320682001" />
+    <street name="东陈镇" code="320682103" />
+    <street name="丁堰镇" code="320682104" />
+    <street name="白蒲镇" code="320682105" />
+    <street name="下原镇" code="320682107" />
+    <street name="九华镇" code="320682108" />
+    <street name="石庄镇" code="320682110" />
+    <street name="长江镇" code="320682111" />
+    <street name="吴窑镇" code="320682112" />
+    <street name="江安镇" code="320682113" />
+    <street name="搬经镇" code="320682116" />
+    <street name="磨头镇" code="320682117" />
+    <street name="如皋市经济开发区" code="320682400" />
+    <street name="如皋高新技术产业开发区" code="320682401" />
+    <street name="南通市粮棉原种场" code="320682402" />
+    <street name="如皋市蚕种场" code="320682403" />
+    <street name="如皋市良种场" code="320682404" />
+    <street name="如皋市种猪场" code="320682406" />
+    <street name="如皋市农科所" code="320682407" />
+    <street name="如皋市江滨医院" code="320682408" />
+    <street name="如皋市中心沙水产养殖场" code="320682409" />
+    <street name="如皋市九华水产养殖场" code="320682410" />
+</county>
+<county name="海门" code="320684">
+    <street name="常乐镇" code="320684106" />
+    <street name="悦来镇" code="320684108" />
+    <street name="四甲镇" code="320684111" />
+    <street name="余东镇" code="320684113" />
+    <street name="正余镇" code="320684114" />
+    <street name="海永乡" code="320684200" />
+    <street name="海门市经济技术开发区" code="320684400" />
+    <street name="海门市永隆沙农场" code="320684401" />
+    <street name="海门市大东农场" code="320684403" />
+    <street name="海门市畜禽良种场" code="320684404" />
+    <street name="海门市种羊场" code="320684405" />
+    <street name="海门市包场渔场" code="320684406" />
+    <street name="海门市长江芦荡养殖场" code="320684407" />
+    <street name="海门市沿江渔场" code="320684408" />
+    <street name="海门市三厂苗圃" code="320684409" />
+    <street name="海门市农科所" code="320684410" />
+    <street name="海门市财政局芦荡管理所" code="320684412" />
+    <street name="江苏省国营江心沙农场" code="320684413" />
+    <street name="海门市临江新区管理委员会" code="320684414" />
+    <street name="海门港新区" code="320684415" />
+    <street name="海门工业园区管理委员会" code="320684416" />
+    <street name="海门高新区" code="320684417" />
+    <street name="三厂工业园区" code="320684418" />
+</county>
+</city>
+</address>
