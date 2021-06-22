@@ -57,7 +57,7 @@ class GoodsModel extends Model{
 	    return $list;
 	}
 	/**
-		获取会员等级信息,某个商品的折扣
+		获取客户等级信息,某个商品的折扣
 	**/
 	public function get_member_level_info($member_id, $goods_id = 0)
 	{

@@ -92,6 +92,11 @@ class SalesroomModel{
 				}
 			}
 		}
+		if(!empty($list)){
+			foreach($list as $k=>$v){
+				$list[$k]['room_logo'] = tomedia($v['room_logo']);
+			}
+		}
 		return $list;
 	}
 
@@ -129,7 +134,7 @@ class SalesroomModel{
 					$goods_salesroom_list = M('eaterplanet_ecommerce_order_goods_relative_salesroom')->where(array('goods_id' => $goods_id,'order_goods_id'=>$order_goods_id))->field('salesroom_id')->select();
 					if (!empty($goods_salesroom_list)) {
 						foreach ($goods_salesroom_list as $k => $v) {
-							if (empty($salesroom_ids)) {
+							if (empty($all_salesroom_ids)) {
 								$all_salesroom_ids = $v['salesroom_id'];
 							} else {
 								$all_salesroom_ids = $all_salesroom_ids . ',' . $v['salesroom_id'];
@@ -272,6 +277,10 @@ class SalesroomModel{
 				$saleshexiao_record_list[$k]['goods_id'] = $order_goods_info['goods_id'];
 				$saleshexiao_record_list[$k]['goods_name'] = $order_goods_info['goods_name'];
 				$saleshexiao_record_list[$k]['goods_images'] = tomedia($order_goods_info['goods_images']);
+				$saleshexiao_record_list[$k]['hexiao_count2'] = $v['hexiao_count'];
+				
+				$order_goods_saleshexiao_info = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_goods_id'=>$order_goods_id))->find();
+				$saleshexiao_record_list[$k]['hexiao_type'] =$order_goods_saleshexiao_info['hexiao_type'];				
 			}
 		}
 		return $saleshexiao_record_list;
@@ -286,20 +295,51 @@ class SalesroomModel{
 	public function get_hexiao_order_by_code($hexiao_volume_code,$salesmember_id){
 		$order_result = array();
 		$field = "order_id,order_num_alias,member_id,ziti_name,ziti_mobile,shipping_name,shipping_tel";
+		//shipping_tel  收货号码
 		$order_info = M('eaterplanet_ecommerce_order')->where(array('hexiao_volume_code'=>$hexiao_volume_code))->field($field)->find();
 		$order_goods_saleshexiao_list = array();
 		$order_result['is_exist'] = 1;
 		if(empty($order_info)){
+			
 			$order_goods_saleshexiao_info = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('hexiao_volume_code'=>$hexiao_volume_code))->find();
 			if(!empty($order_goods_saleshexiao_info)){
+				$state = 1;
+				//扫码
 				$order_info = M('eaterplanet_ecommerce_order')->where(array('order_id'=>$order_goods_saleshexiao_info['order_id']))->field($field)->find();
 				$order_goods_saleshexiao_list[0] = $order_goods_saleshexiao_info;
 			}else{
-				$order_result['is_exist'] = 0;
-				return $order_result;
+				$state = 3;
+				//手机号  1 4 5  6 7  11 12 14
+				$order_list = M('eaterplanet_ecommerce_order')->where(array('shipping_tel'=>$hexiao_volume_code , 'delivery' =>'hexiao'))->where(' order_status_id = 4 || order_status_id = 11 ')->field('order_id')->select();
+				if(empty($order_list)){
+					if(strlen($hexiao_volume_code) == 11){
+						$order_result['is_exist'] = 4;
+						return $order_result;
+					}else{
+						$order_result['is_exist'] = 0;
+						return $order_result;
+					}
+				}
+				$order_list2 = array_column($order_list, 'order_id');
+				$order_id = implode(",",$order_list2);
+				$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(' order_id in('.$order_id.') ')->order('is_hexiao_over asc,addtime asc')->select();
+				
+				if(empty($order_goods_saleshexiao_list)){
+					if(strlen($hexiao_volume_code) == 11){
+						$order_result['is_exist'] = 4;
+						return $order_result;
+					}else{
+						$order_result['is_exist'] = 0;
+						return $order_result;
+					}
+				}
+				$order_info = M('eaterplanet_ecommerce_order')->where(array('order_id'=>$order_list[0]['order_id']))->field($field)->find();
+
 			}
 		}else{
-			$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id']))->select();
+			//核销码
+			$state = 2;
+			$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id']))->select();	
 		}
 		$hexiao_goods_list = array();
 		$hx_i = 0;
@@ -309,22 +349,62 @@ class SalesroomModel{
 			$order_info['username'] = $member_info['username'];
 			foreach($order_goods_saleshexiao_list as $k=>$v){
 				if($this->check_goods_relative_smember($v['order_id'],$v['order_goods_id'],$v['goods_id'],$salesmember_id) == 1){
+					$order_num_alias = M('eaterplanet_ecommerce_order')->where(array('order_id'=>$v['order_id']))->field('order_num_alias,order_status_id')->find();
 					$order_goods_info = M('eaterplanet_ecommerce_order_goods')->where(array('order_goods_id'=>$v['order_goods_id']))->field('goods_id,name as goods_name,goods_images,quantity')->find();
 					$order_goods_saleshexiao_list[$k]['goods_id'] = $order_goods_info['goods_id'];
 					$order_goods_saleshexiao_list[$k]['goods_name'] = $order_goods_info['goods_name'];
 					$order_goods_saleshexiao_list[$k]['goods_images'] = tomedia($order_goods_info['goods_images']);
 					$order_goods_saleshexiao_list[$k]['quantity'] = $order_goods_info['quantity'];
+					
+					$order_goods_saleshexiao_list[$k]['order_num_alias'] = $order_num_alias['order_num_alias'];
+					if($v['is_hexiao_over'] == 0 ){
+						if($order_num_alias['order_status_id'] == 11){
+							$order_goods_saleshexiao_list[$k]['is_hexiao_over'] = 1;
+						}else{
+							$order_goods_saleshexiao_list[$k]['is_hexiao_over'] = 0;
+						}
+					}else{
+						$order_goods_saleshexiao_list[$k]['is_hexiao_over'] = 1;
+					}
+					
 
 					//核销日期
 					$order_goods_saleshexiao_list[$k]['effect_begin_time'] = date('Y-m-d',$v['effect_begin_time']);
 					$order_goods_saleshexiao_list[$k]['effect_end_time'] = date('Y-m-d',$v['effect_end_time']);
 					//已核销次数
 					$order_goods_saleshexiao_list[$k]['has_hexiao_count'] = $v['hexiao_count']-$v['remain_hexiao_count'];
+					if($v['hexiao_type'] == 1){
+						if($v['hexiao_count'] == 0){
+							$order_goods_saleshexiao_list[$k]['hexiao_count'] = '无限';
+							$order_goods_saleshexiao_list[$k]['remain_hexiao_count'] = '无限';
+							$has_hexiao_count = M('eaterplanet_ecommerce_order_goods_saleshexiao_record')->where(array('order_id'=>$v['order_id'],'order_goods_id'=>$v['order_goods_id']))->sum('hexiao_count');
+							if(empty($has_hexiao_count)){
+								$has_hexiao_count = 0;
+							}
+							$order_goods_saleshexiao_list[$k]['has_hexiao_count'] = $has_hexiao_count;
+						}
+					}
+					$order_goods_saleshexiao_list[$k]['is_refund'] = 0;//未退款
+					if( $order_goods_saleshexiao_list[$k]['refund_quantity'] > 0 ){
+						if($order_goods_saleshexiao_list[$k]['refund_quantity'] == $order_goods_saleshexiao_list[$k]['quantity']){
+							$order_goods_saleshexiao_list[$k]['is_refund'] = 1;//全部退款
+						}else if($order_goods_saleshexiao_list[$k]['refund_quantity'] < $order_goods_saleshexiao_list[$k]['quantity']){
+							$order_goods_saleshexiao_list[$k]['is_refund'] = 2;//部分退款
+						}
+					}
+
 					$hexiao_goods_list[$hx_i] = $order_goods_saleshexiao_list[$k];
 					$hx_i++;
 				}
 			}
 		}
+		
+		//提取列数组；
+		foreach($hexiao_goods_list as $val){
+		$key_arrays[]=$val['is_hexiao_over'];
+		}
+		array_multisort($key_arrays,SORT_ASC,SORT_NUMERIC,$hexiao_goods_list);
+		
 		//核销订单用户信息
 		$order_result['orders'] = $order_info;
 		//核销订单商品列表
@@ -332,7 +412,12 @@ class SalesroomModel{
 		//订单商品数量
 		$order_result['order_goods_count'] = count($hexiao_goods_list);
 		if(count($hexiao_goods_list) == 0){
-			$order_result['is_exist'] = 2;//无权限操作核销商品
+			if($state == 3){
+				$order_result['is_exist'] = 4;//无权限操作核销商品
+			}else{
+				$order_result['is_exist'] = 2;//无权限操作核销商品
+			}
+			
 		}
 		return $order_result;
 	}
@@ -399,7 +484,7 @@ class SalesroomModel{
 		$field = "order_id,order_num_alias,member_id,ziti_name,ziti_mobile,shipping_name,shipping_tel";
 		$order_info = M('eaterplanet_ecommerce_order')->where(array('order_id'=>$order_id))->field($field)->find();
 		//订单要核销商品(未核销完，剩余核销数量大于0)
-		$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id'],'is_hexiao_over'=>0))->where(array('remain_hexiao_count'=>array('gt',0)))->select();
+		$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id'],'is_hexiao_over'=>0))->select();
 		foreach($order_goods_saleshexiao_list as $k=>$v){
 			if($this->check_goods_relative_smember($v['order_id'],$v['order_goods_id'],$v['goods_id'],$salesmember_id) == 1){
 				$hexiao_goods_list[$hx_i] = $v;
@@ -438,26 +523,37 @@ class SalesroomModel{
 		$hx_id = $order_goods_saleshexiao['id'];
 		//剩余核销数量
 		$remain_hexiao_count = $order_goods_saleshexiao['remain_hexiao_count'];
+		if($order_goods_saleshexiao['hexiao_count'] > 0) {
+			$hexiao_count = 0;
+			if ($hx_time > 0) {
+				if ($hx_time > $remain_hexiao_count) {
+					return -1;
+				} else {
+					$hexiao_count = $hx_time;
+				}
+			} else {
+				$hexiao_count = $remain_hexiao_count;
+			}
 
-		$hexiao_count = 0;
-		if($hx_time > 0){
-			if($hx_time > $remain_hexiao_count){
-				return -1;
+			$hexiao_data = array();
+			if ($hexiao_count == $remain_hexiao_count) {
+				$hexiao_data['remain_hexiao_count'] = 0;
+				$hexiao_data['is_hexiao_over'] = 1;
+			} else {
+				$hexiao_data['remain_hexiao_count'] = $remain_hexiao_count - $hexiao_count;
+			}
+			$hx_result = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id' => $hx_id))->save($hexiao_data);
+		}else{
+			if($hx_time == 0){
+				$hexiao_data = array();
+				$hexiao_data['is_hexiao_over'] = 1;
+				$hexiao_count = 1;
+				$hx_result = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$hx_id))->save($hexiao_data);
 			}else{
+				$hx_result = 1;
 				$hexiao_count = $hx_time;
 			}
-		}else{
-			$hexiao_count = $remain_hexiao_count;
 		}
-
-		$hexiao_data = array();
-		if($hexiao_count == $remain_hexiao_count){
-			$hexiao_data['remain_hexiao_count'] = 0;
-			$hexiao_data['is_hexiao_over'] = 1;
-		}else{
-			$hexiao_data['remain_hexiao_count'] = $remain_hexiao_count - $hexiao_count;
-		}
-		$hx_result = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$hx_id))->save($hexiao_data);
 		if($hx_result !== false){
 			//添加订单核销记录表
 			$hexiao_record = array();
@@ -535,6 +631,13 @@ class SalesroomModel{
 			$saleshexiao_info['effect_end_time'] = date('Y-m-d H:i',$saleshexiao_info['effect_end_time']);
 			//已核销次数
 			$saleshexiao_info['has_hexiao_count'] = $saleshexiao_info['hexiao_count']-$saleshexiao_info['remain_hexiao_count'];
+
+			if($saleshexiao_info['hexiao_type'] == 1){
+				if($saleshexiao_info['hexiao_count'] == 0){
+					$saleshexiao_info['hexiao_count'] = '无限';
+					$saleshexiao_info['remain_hexiao_count'] = '无限';
+				}
+			}
 			$result['saleshexiao_info'] = $saleshexiao_info;
 		}else{
 			$status = -1;
@@ -551,8 +654,16 @@ class SalesroomModel{
 		$is_finished = true;
 		$hexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_id))->select();
 		foreach($hexiao_list as $k=>$v){
-			if($v['is_hexiao_over'] == 0 && $v['remain_hexiao_count'] > 0){
+			if($v['hexiao_type'] == 0 && $v['is_hexiao_over'] == 0){//按订单核销
 				$is_finished = false;
+			}
+			if($v['hexiao_type'] == 1 && $v['is_hexiao_over'] == 0){//按次核销
+				if($v['hexiao_count'] > 0 && $v['remain_hexiao_count'] > 0){
+					$is_finished = false;
+				}
+				if($v['hexiao_count'] == 0){
+					$is_finished = false;
+				}
 			}
 		}
 		if($is_finished){
@@ -674,10 +785,14 @@ class SalesroomModel{
 	   if($sales_hexiao_info['hexiao_type'] == 0){
 	       if($sales_hexiao_info['goods_quantity'] == $data['refund_quantity']){
 	           $data['remain_hexiao_count'] = 0;
+			   $data['is_hexiao_over'] = 1;
 	       }
 	   }else{
 	       //剩余核销数量
 	       $data['remain_hexiao_count'] = $sales_hexiao_info['remain_hexiao_count']-$refund_quantity*$sales_hexiao_info['one_hexiao_count'];
+		   if($sales_hexiao_info['goods_quantity'] == $data['refund_quantity']){
+			   $data['is_hexiao_over'] = 1;
+		   }
 	   }
 	   M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$sales_hexiao_info['id']))->save($data);
 	}
@@ -708,24 +823,32 @@ class SalesroomModel{
 		$condition = " is_hexiao_over = 0 and effect_end_time < ".$now_time;
 		$order_goods_hx_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where($condition)->select();
 		foreach($order_goods_hx_list as $k=>$v){
-			$data = array();
-			$data['is_hexiao_over'] = 2;//已过期
-			$data['expire_act_time'] = time();//过期时间
-			M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$v['id']))->save($data);
+			$order_info = M('eaterplanet_ecommerce_order')->where(array('order_id'=>$v['order_id']))->field('order_status_id')->find();
+			if($order_info['order_status_id'] == 5){
+				$data = array();
+				$data['is_hexiao_over'] = 3;//已取消
+				$data['expire_act_time'] = time();//取消时间
+				M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$v['id']))->save($data);
+			}else{
+				$data = array();
+				$data['is_hexiao_over'] = 2;//已过期
+				$data['expire_act_time'] = time();//过期时间
+				M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$v['id']))->save($data);
 
-			//添加订单核销记录表
-			$hexiao_record = array();
-			$hexiao_record['order_id'] = $v['order_id'];
-			$hexiao_record['order_goods_id'] = $v['order_goods_id'];
-			$hexiao_record['goods_id'] = $v['goods_id'];
-			$hexiao_record['hexiao_count'] = $v['remain_hexiao_count'];
-			$hexiao_record['smember_name'] = "商品过期自动使用";
-			$hexiao_record['is_admin'] = 1;
-			$hexiao_record['addtime'] = time();
-			M('eaterplanet_ecommerce_order_goods_saleshexiao_record')->add($hexiao_record);
+				//添加订单核销记录表
+				$hexiao_record = array();
+				$hexiao_record['order_id'] = $v['order_id'];
+				$hexiao_record['order_goods_id'] = $v['order_goods_id'];
+				$hexiao_record['goods_id'] = $v['goods_id'];
+				$hexiao_record['hexiao_count'] = $v['remain_hexiao_count'];
+				$hexiao_record['smember_name'] = "商品过期自动使用";
+				$hexiao_record['is_admin'] = 1;
+				$hexiao_record['addtime'] = time();
+				M('eaterplanet_ecommerce_order_goods_saleshexiao_record')->add($hexiao_record);
 
-			//过期核销订单完成
-			$this->hexiao_auto_expire_finished($v['order_id']);
+				//过期核销订单完成
+				$this->hexiao_auto_expire_finished($v['order_id']);
+			}
 		}
 	}
 

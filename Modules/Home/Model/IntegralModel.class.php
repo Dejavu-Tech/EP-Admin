@@ -9,7 +9,7 @@ use Think\Model;
 class IntegralModel {
 
    /**
-		检测会员积分是否足够支付订单
+		检测客户积分是否足够支付订单
 	**/
 	public function check_user_score_can_pay($member_id, $sku_str ='', $goods_id)
 	{
@@ -44,7 +44,7 @@ class IntegralModel {
 	}
 
 	/**
-	检测会员积分是否足够支付订单
+	检测客户积分是否足够支付订单
 	 **/
 	public function check_user_score_quantity_can_pay($member_id, $sku_str ='', $goods_id, $quantity)
 	{

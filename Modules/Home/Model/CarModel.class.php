@@ -253,15 +253,22 @@ private $data = array();
         $this->data = array();
     }
 
-	 public function get_all_goodswecar($buy_type = 'dan', $token,$is_pay_need = 1, $community_id,$soli_id='') {
-
-
-        if (!($this->data)) {
-
-			if ($buy_type == 'dan') {
-				$cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car
-						where token='{$token}'  and community_id='{$community_id}' and carkey like 'cart.%' order by modifytime desc ";
-				$cart = M()->query($cart_sql);
+    /**
+     * @desc 获取不同类型的购物车数据
+     * @param string $buy_type
+     * @param $token
+     * @param $community_id
+     * @param string $soli_id
+     * @return array|mixed
+     */
+    public function getCarDataByTypeAndHeadIdAndToken( $buy_type = 'dan', $token, $community_id,$soli_id='' )
+    {
+        $cart = [];
+        //单独购买类型
+        if ($buy_type == 'dan') {
+            $cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car  
+                    where token='{$token}'  and community_id='{$community_id}' and carkey like 'cart.%' order by modifytime desc ";
+            $cart = M()->query($cart_sql);
 
 			}
 			else if( $buy_type == 'pindan' )
@@ -276,7 +283,18 @@ private $data = array();
 						where token='{$token}' and community_id={$community_id} and carkey like 'pintuancart.%' order by modifytime desc ";
 				$cart = M()->query($cart_sql);
 			}
-
+        else if( $buy_type == 'presale' )
+        {
+            $cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car  
+                    where token='{$token}' and community_id={$community_id} and carkey like 'presalecart.%' order by modifytime desc ";
+            $cart = M()->query($cart_sql);
+        }
+        else if( $buy_type == 'virtualcard' )
+        {
+            $cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car  
+                    where token='{$token}' and community_id={$community_id} and carkey like 'virtualcardcart.%' order by modifytime desc ";
+            $cart = M()->query($cart_sql);
+        }
 			else if( $buy_type == 'soitaire' )
 			{
 				$cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car
@@ -312,6 +330,26 @@ private $data = array();
 				$cart =  M()->query($cart_sql);
 
 			}
+
+        return $cart;
+    }
+
+    /**
+     * @desc 获取所有购物车中的商品
+     * @param string $buy_type
+     * @param $token
+     * @param int $is_pay_need
+     * @param $community_id
+     * @param string $soli_id
+     * @return array
+     */
+	 public function get_all_goodswecar($buy_type = 'dan', $token,$is_pay_need = 1, $community_id,$soli_id='') {
+
+
+        if (!($this->data)) {
+
+            //获取购物车中数据
+            $cart = $this->getCarDataByTypeAndHeadIdAndToken( $buy_type , $token, $community_id,$soli_id );
 
 			$is_open_vipcard_buy =  D('Home/Front')->get_config_by_name('is_open_vipcard_buy');
 			$is_open_vipcard_buy = !empty($is_open_vipcard_buy) && $is_open_vipcard_buy ==1 ? 1:0;
@@ -368,22 +406,6 @@ private $data = array();
 									on p.id = pd.goods_id where p.id ={$goods_id}   ";
 
 				$goods_query_arr = M()->query($goods_query_sql);
-
-				if( empty($goods_query_arr) )
-				{
-
-				    \Think\Log::record("出现空的商品");
-				    \Think\Log::record("sql:".$goods_query_sql);
-
-				    $tp_a = M('eaterplanet_ecommerce_goods')->where( array('id' => $goods_id ) )->find();
-				    $tp_b = M('eaterplanet_ecommerce_good_commiss')->where( array('goods_id' => $goods_id ) )->find();
-
-
-				    \Think\Log::record("goods:" .json_encode($tp_a) );
-				    \Think\Log::record("commiss:".json_encode($tp_b) );
-				    \Think\Log::record("出现空的商品endendend");
-
-				}
 
 				$goods_query = $goods_query_arr[0];
 
@@ -545,21 +567,21 @@ private $data = array();
 					}
 					**/
 
-					//判断是否会员折扣  TODO。。。先关闭
+					//判断是否客户折扣  TODO。。。先关闭
 					$level_info = array('member_discount' => 100,'level_name' =>'');
 
 					$member_info = M('eaterplanet_ecommerce_member')->field('level_id')->where( array('member_id' => $member_id) )->find();
-					//修改商品独立会员等级折扣设置 2020.05.11
+					//修改商品独立客户等级折扣设置 2020.05.11
 					$goods_common = M('eaterplanet_ecommerce_good_common')->field('is_mb_level_buy,has_mb_level_buy,mb_level_buy_list,packing_free,goods_start_count')->where( array('goods_id' => $goods_id ) )->find();
 
 					$goods_query['is_mb_level_buy'] = 0;
 					$goods_query['levelprice'] = 0;
 					$goods_query['goods_start_count'] = $goods_common['goods_start_count'];
 
-					if( $buy_type == 'dan' )
+					if( $buy_type == 'dan' || $buy_type == 'soitaire' )
 					{
-						//商品独立会员等级折扣 begin
-						if($member_info['level_id'] > 0 && $goods_common['has_mb_level_buy'] == 1 && $goods_common['is_mb_level_buy'] == 1 ){
+						//商品独立客户等级折扣 begin 关闭客户折扣
+						if($member_info['level_id'] > 0 && $goods_common['has_mb_level_buy'] == 1 && $goods_common['is_mb_level_buy'] == 1 && $buy_type != 'pesale' ){
 							$member_level_info = M('eaterplanet_ecommerce_member_level')->where( array('id' => $member_info['level_id'] ) )->find();
 
 							$mb_level_buy_list = unserialize($goods_common['mb_level_buy_list']);
@@ -585,10 +607,11 @@ private $data = array();
 
 								$goods_query['is_mb_level_buy'] = 1;
 								$goods_query['levelprice'] = $price2;
-								//商品独立会员等级折扣 end
+								//商品独立客户等级折扣 end
 							}
 						}else{
-							if($member_info['level_id'] > 0 && $goods_common['is_mb_level_buy'] == 1)
+						    //预售不参与客户等级折扣
+							if($member_info['level_id'] > 0 && $goods_common['is_mb_level_buy'] == 1  && $buy_type != 'pesale')
 							{
 								$member_level_info = M('eaterplanet_ecommerce_member_level')->where( array('id' => $member_info['level_id'] ) )->find();
 
@@ -617,7 +640,13 @@ private $data = array();
 					$is_open_fullreduction = D('Home/Front')->get_config_by_name('is_open_fullreduction');
 					$can_man_jian = 0;
 
-					if( $buy_type == 'dan' || $buy_type == 'soitaire')
+					//预售不参与满减
+                    if( $buy_type == 'pesale')
+                    {
+                       $is_open_fullreduction = 0;
+                    }
+
+					if( $buy_type == 'dan' || $buy_type == 'soitaire'  || $buy_type == 'virtualcard' )
 					{
 						if( !empty($is_open_fullreduction) && $is_open_fullreduction == 1)
 						{
@@ -694,6 +723,10 @@ private $data = array();
 					}
 
                     //拼团 end
+
+                    //begin 检测是否校验组件
+                    $isTradeComponts = D('Seller/MpModifyTradeComponts')->checkGoodsIsTradeComponts( $goods_id );
+                    //end 检测是否校验组件
                     $this->data[$key] = array(
                         'key' => $val_uns['carkey'],
                         'goods_id' => $goods_id ,
@@ -731,8 +764,8 @@ private $data = array();
 						'soli_id' => isset($val['soli_id']) ?  intval($val['soli_id']) : 0,
 						'is_new_buy' => $is_new_buy,
                         'packing_free' => $goods_common['packing_free'],
-						'goods_start_count' => $goods_query['goods_start_count']
-
+						'goods_start_count' => $goods_query['goods_start_count'],
+						'isTradeComponts' => $isTradeComponts,//是否参与交易组件
                     );
 
 
@@ -786,6 +819,19 @@ private $data = array();
 			$s = M()->query($cart_sql);
 		}
 
+        else if( $buy_type == 'presale' )
+        {
+            $cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car  
+						where token='{$token}' and carkey like 'presalecart.%' ";
+            $s = M()->query($cart_sql);
+        }
+        else if( $buy_type == 'virtualcard' )
+        {
+            $cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car  
+						where token='{$token}' and carkey like 'virtualcardcart.%' ";
+            $s = M()->query($cart_sql);
+        }
+
 		else if( $buy_type == 'integral' )
 		{
 			$cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car
@@ -838,6 +884,35 @@ private $data = array();
 		}
 
 		return $quantity;
+	}
+
+	/**
+	 * @desc 获取客户购物车中新人专享商品种类数
+	 * @param $token
+	 * @param $gid 商品id
+	 * @param $sku_str 商品规格id
+	 * @return int
+	 */
+	public function get_new_goods_count($token,$gid,$sku_str){
+		$count = 0;
+		$cart_sql = "select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_car
+						where token='{$token}' and carkey like 'cart.%' ";
+		$cart = M()->query($cart_sql);
+		foreach ($cart as $key => $val) {
+			$format_data = unserialize($val['format_data']);
+			$goods_id = $format_data['goods_id'];
+			$goods_description = D('Home/Front')->get_goods_common_field($goods_id , 'is_new_buy');
+			if( !empty($goods_description['is_new_buy']) &&  $goods_description['is_new_buy'] == 1){
+				if($goods_id != $gid){
+					$count++;
+				}else{
+					if(!empty($sku_str) && $sku_str != $format_data['sku_str']){
+						$count++;
+					}
+				}
+			}
+		}
+		return $count;
 	}
 
 }

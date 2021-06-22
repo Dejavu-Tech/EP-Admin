@@ -40,6 +40,22 @@ class GoodsCategoryModel {
 			$need_data[$key]['banner'] = $cate['banner'] && !empty($cate['banner']) ? tomedia($cate['banner']) : '';
 			$need_data[$key]['logo'] = $cate['logo'] && !empty($cate['logo']) ? tomedia($cate['logo']) : '';
 			$need_data[$key]['sort_order'] = $cate['sort_order'];
+			$need_data[$key]['adv_info'] = [];
+
+			if( $cate['pid'] == 0 )
+            {
+                $cate_adv_info = M('eaterplanet_ecommerce_adv_category')->where("cate_id=".$cate['id'] )->find();
+                if( !empty($cate_adv_info) )
+                {
+                    $cate_adv_info['image'] = tomedia($cate_adv_info['thumb']);
+                    $cate_adv_info['thumb'] = tomedia($cate_adv_info['thumb']);
+                    $cate_adv_info['link'] = htmlspecialchars_decode( $cate_adv_info['link'] );
+
+
+                    $need_data[$key]['adv_info'] = $cate_adv_info;
+                }
+            }
+
 
 			$params = array();
 			$params['pid'] = $cate['id'];

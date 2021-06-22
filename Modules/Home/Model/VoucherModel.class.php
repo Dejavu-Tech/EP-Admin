@@ -332,5 +332,81 @@ class VoucherModel {
 
 		return $voucher_list;
 	}
+	/**
+	 * @desc 获取优惠券最大可以优惠金额
+	 * @param unknown $vouche_list 优惠券列表
+	 * @param unknown $goods   购买商品列表
+	 * @param unknown $reduce_money 满级金额
+	 * @return number
+	 */
+	public function get_voucher_amout_bygoods($vouche_list, $goods, $reduce_money){
+	    $order_total = 0;
+	    foreach($goods as $k=>$v){
+	        $order_total = $order_total + round($v['price']*$v['quantity'],2);
+	    }
+	    if(!empty($vouche_list)){
+	        foreach($vouche_list as $vk=>$vv){
+	            $vouche_amount = 0;//优惠券优惠总金额
+	            $limit_money = $vv['limit_money'];
+	            if(empty($limit_money)){
+	                $limit_money = 0;
+	            }
+	            $goods_amount = 0;
+	            if($vv['is_limit_goods_buy'] == 0){//所有商品
+	                foreach($goods as $k=>$v){
+						if($v['level_total'] > 0){
+							$goods_amount = $goods_amount + $v['level_total'];
+						}else{
+							$goods_amount = $goods_amount + $v['total'];
+						}
+	                }
+	            }else if($vv['is_limit_goods_buy'] == 1){//指定商品
+	                $goods_array = explode(',', $vv['limit_goods_list']);
+	                foreach($goods as $k=>$v){
+	                    if(in_array($v['goods_id'], $goods_array)){
+							if($v['level_total'] > 0){
+								$goods_amount = $goods_amount + $v['level_total'];
+							}else{
+								$goods_amount = $goods_amount + $v['total'];
+							}
+	                    }
+	                }
+	            }else if($vv['is_limit_goods_buy'] == 2){//指定商品分类
+	                $goodscates = $vv['goodscates'];
+	                foreach($goods as $k=>$v){
+	                    $goods_id = $v['goods_id'];
+	                    $cate_gd_arr = M('eaterplanet_ecommerce_goods_to_category')->field('cate_id')->where( array('goods_id' => $goods_id) )->select();
+	                    
+	                    if( !empty($cate_gd_arr) )
+	                    {
+	                        foreach($cate_gd_arr as $cate_val)
+	                        {
+	                            if( $cate_val['cate_id'] == $goodscates )
+	                            {
+									if($v['level_total'] > 0){
+										$goods_amount = $goods_amount + $v['level_total'];
+									}else{
+										$goods_amount = $goods_amount + $v['total'];
+									}
+	                            }
+	                        }
+	                    }
+	                }
+	            }
+	            if($goods_amount >= $limit_money){
+	                if($goods_amount >= $vv['credit']){
+	                    $vouche_amount = $vv['credit'];
+	                }else{
+	                    $vouche_amount = $goods_amount;
+	                }
+	                if($vouche_amount > $order_total - $reduce_money){
+	                    $vouche_amount = $order_total - $reduce_money;
+	                }
+	            }
+	            $vouche_list[$vk]['can_vouche_amount'] = $vouche_amount;
+	        }
+	    }
+	    return $vouche_list;
+	}
 
 }

@@ -807,17 +807,27 @@ class OrderModel extends Model{
 
 	}
 	/**
-	 * 订单自动配送操作
+	 * 订单自动配送操作  同城配送订单预查询运费
 	 * @param unknown $order
 	 */
 	public function order_auto_delivery($order){
+
+	    $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $order['order_id'] );
+	    if( $presale_result['code'] == 0 )
+        {
+            //预售订单不自动发货
+            return false;
+        }
+
 	    if($order['delivery'] == 'localtown_delivery'){//同城配送订单
 	        $is_localtown_auto_delivery = D('Home/Front')->get_config_by_name('is_localtown_auto_delivery');
 	        if($is_localtown_auto_delivery == 1){//订单自动确认配送
 	            //同城配送
 	            D('Seller/Order')->do_send_localtown($order['order_id'],'后台自动确认发货，开始配送货物');
 	        }
-	    }else if($order['delivery'] == 'tuanz_send'){//团长配送订单
+			//同城配送订单预查询运费
+			$this->third_delivery_query($order);
+	    }else if($order['delivery'] == 'tuanz_send' && $order['type'] != 'pintuan' ){//团长配送订单
 	        $is_communityhead_auto_delivery = D('Home/Front')->get_config_by_name('is_communityhead_auto_delivery');
 	        if($is_communityhead_auto_delivery == 1){//团长订单自动确认配送
 	            D('Seller/Order')->do_send_tuanz($order['order_id'],'后台自动确认发货，开始配送货物');
@@ -827,7 +837,7 @@ class OrderModel extends Model{
 	                D('Home/Frontorder')->send_order_operate($order['order_id']);
 	            }
 	        }
-	    }else if($order['delivery'] == 'pickup'){//到点自提订单
+	    }else if($order['delivery'] == 'pickup' && $order['type'] != 'pintuan'){//到点自提订单
 	        $is_ziti_auto_delivery = D('Home/Front')->get_config_by_name('is_ziti_auto_delivery');
 	        if($is_ziti_auto_delivery == 1){//到店自提订单自动确认配送
 	            D('Seller/Order')->do_send_tuanz($order['order_id'],'后台自动确认发货，开始配送货物');
@@ -838,5 +848,386 @@ class OrderModel extends Model{
 	            }
 	        }
 	    }
+		//订单自动推送给第三方配送公司
+		$this->order_autosend_third_delivery($order);
+	}
+
+	/**
+	 * @desc 同城配送订单预查询运费
+	 * @param $order_id
+	 */
+	public function third_delivery_query($order){
+		//订单号
+		$order_id = $order['order_id'];
+
+		$is_localtown_imdada_status = D('Home/Front')->get_config_by_name('is_localtown_imdada_status');
+		$is_imdada_prequery_status = D('Home/Front')->get_config_by_name('is_imdada_prequery_status');
+
+		$is_localtown_sf_status = D('Home/Front')->get_config_by_name('is_localtown_sf_status');
+		$is_sf_prequery_status = D('Home/Front')->get_config_by_name('is_sf_prequery_status');
+
+		//是否开启码科配送，
+        //是否开启预测码科配送 todo
+        $is_localtown_mk_status = D('Home/Front')->get_config_by_name('is_localtown_mk_status');
+        $is_make_prequery_status = D('Home/Front')->get_config_by_name('is_make_prequery_status');
+
+
+		$order_info = $order;
+		//店铺地址
+		if($order_info['store_id'] > 0) {
+			$store_data = $this->getOrderStoreAddress($order_info);
+			$order_info['store_data'] = $store_data;
+		}
+		//商品信息
+		$sql = "select og.goods_id,og.name as goods_name,og.quantity,og.rela_goodsoption_valueid,g.weight as goods_weight  from "
+				. C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og left join  ".C('DB_PREFIX')."eaterplanet_ecommerce_goods as g on og.goods_id=g.id "
+				." where og.order_id = ".$order_id;
+		$goods_list = M()->query($sql);
+		$goods_count = 0;
+		$goods_weight = 0;
+		$goods_type_count = 0;
+		foreach($goods_list as $k=>$v){
+			$goods_count = $goods_count + $v['quantity'];
+			if(!empty($v['rela_goodsoption_valueid'])){
+				$goods_option_mult_value = M('eaterplanet_ecommerce_goods_option_item_value')->where( array('option_item_ids' => $v['rela_goodsoption_valueid'],'goods_id' => $v['goods_id']) )->find();
+				if(!empty($goods_option_mult_value)){
+					$v['goods_weight'] = $goods_option_mult_value['weight'];
+				}
+			}
+			$goods_weight = $goods_weight + $v['quantity'] * $v['goods_weight'];
+			$goods_type_count = $goods_type_count + 1;
+		}
+		if(empty($goods_weight)){
+			$goods_weight = 100;//默认100克
+		}
+		$order_info['goods_list'] = $goods_list;
+		//商品种类
+		$order_info['goods_type_count'] = $goods_type_count;
+		//商品数量
+		$order_info['goods_count'] = $goods_count;
+		//商品重量
+		$order_info['goods_weight'] = $goods_weight;
+		//订单总金额
+		$order_info['order_total'] = $order_info['total']+$order_info['packing_fare']+$order_info['shipping_fare']-$order_info['voucher_credit']-$order_info['fullreduction_money']-$order_info['score_for_money']+$order_info['localtown_add_shipping_fare']-$order_info['fare_shipping_free'];
+		//收货人地址
+		$province_info = D('Home/Front')->get_area_info($order_info['shipping_province_id']);
+		$city_info = D('Home/Front')->get_area_info($order_info['shipping_city_id']);
+		$area_info = D('Home/Front')->get_area_info($order_info['shipping_country_id']);
+		$order_info['shipping_address'] = $province_info['name'].$city_info['name'].$area_info['name'].$order_info['shipping_address'];
+		//收货人经纬度
+		$order_distribution_info = M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+		//收货人地址纬度
+		$order_info['shipping_lat'] = $order_distribution_info['member_lat'];
+		//收货人地址经度
+		$order_info['shipping_lng'] = $order_distribution_info['member_lon'];
+		//商城名称
+		$shoname = D('Home/Front')->get_config_by_name('shoname');
+		$order_info['shoname'] = $shoname;
+
+		//达达配送
+		if($is_localtown_imdada_status == 1 && $is_imdada_prequery_status == 1){
+			$imdada = new \Lib\Localtown\Imdada();
+			$result = $imdada->queryDeliverFee($order_info);
+			$thirth_data = [];
+			$thirth_data['order_id'] = $order_info['order_id'];
+			$thirth_data['third_distribution_type'] = "imdada";
+			if($result['status'] == 1){//成功
+				$thirth_data['status'] = 1;
+				//平台订单号
+				$thirth_data['delivery_no'] = $result['result']['deliveryNo'];
+				//实际运费(单位：元)
+				$thirth_data['shipping_fee'] = $result['result']['fee'];
+				//运费(单位：元)
+				$thirth_data['shipping_delivery_fee'] = $result['result']['deliverFee'];
+				//配送距离(单位：米)
+				$thirth_data['distance'] = $result['result']['distance'];
+			}else{
+				$thirth_data['status'] = 0;
+				//平台订单号
+				$thirth_data['delivery_no'] = "";
+				//实际运费(单位：元)
+				$thirth_data['shipping_fee'] = 0;
+				//运费(单位：元)
+				$thirth_data['shipping_delivery_fee'] = 0;
+				//配送距离(单位：米)
+				$thirth_data['distance'] = 0;
+
+				$thirth_data['message'] = $result['message'];
+			}
+			$this->addThirthQuery($thirth_data);
+		}
+		//顺丰同城配送
+		if($is_localtown_sf_status == 1 && $is_sf_prequery_status == 1){
+			$sfexpress = new \Lib\Localtown\Sfexpress();
+			$result = $sfexpress->queryDeliverFee($order_info);
+
+			$thirth_data = [];
+			$thirth_data['order_id'] = $order_info['order_id'];
+			$thirth_data['third_distribution_type'] = "sf";
+			if($result['status'] == 1){//成功
+				$thirth_data['status'] = 1;
+				//平台订单号
+				$thirth_data['delivery_no'] = "";
+				//实际运费(单位：元)
+				$thirth_data['shipping_fee'] = round($result['result']['total_price']/100,2);
+				//运费(单位：元)
+				$thirth_data['shipping_delivery_fee'] = round($result['result']['charge_price_list']['shop_pay_price']/100,2);
+				//配送距离(单位：米)
+				$thirth_data['distance'] = $result['result']['delivery_distance_meter'];
+			}else{
+				$thirth_data['status'] = 0;
+				//平台订单号
+				$thirth_data['delivery_no'] = "";
+				//实际运费(单位：元)
+				$thirth_data['shipping_fee'] = 0;
+				//运费(单位：元)
+				$thirth_data['shipping_delivery_fee'] = 0;
+				//配送距离(单位：米)
+				$thirth_data['distance'] = 0;
+
+				$thirth_data['message'] = $result['message'];
+			}
+			$this->addThirthQuery($thirth_data);
+		}
+		        //如果是码科配送
+		if( isset($is_localtown_mk_status) && $is_localtown_mk_status == 1 && isset($is_make_prequery_status) && $is_make_prequery_status == 1 )
+        {
+            $make_model = D('Home/Make');
+            $result = $make_model->queryDeliverFee($order_info);
+
+            $thirth_data = [];
+            $thirth_data['order_id'] = $order_info['order_id'];
+            $thirth_data['third_distribution_type'] = "mk";
+
+            if( !empty($result) && $result['code'] == 0 )
+            {
+                $thirth_data['status'] = 1;
+                //平台订单号
+                $thirth_data['delivery_no'] = "";
+                //实际运费(单位：元)
+                $thirth_data['shipping_fee'] = round($result['total_price'],2);
+                //运费(单位：元)
+                $thirth_data['shipping_delivery_fee'] = round($result['total_price'],2);
+                //配送距离(单位：米)
+                $thirth_data['distance'] = $result['distance'] * 1000;
+            }else {
+
+                $thirth_data['status'] = 0;
+                //平台订单号
+                $thirth_data['delivery_no'] = "";
+                //实际运费(单位：元)
+                $thirth_data['shipping_fee'] = 0;
+                //运费(单位：元)
+                $thirth_data['shipping_delivery_fee'] = 0;
+                //配送距离(单位：米)
+                $thirth_data['distance'] = 0;
+
+                $thirth_data['message'] = $result['message'];
+
+            }
+            $this->addThirthQuery($thirth_data);
+        }
+	}
+
+	/**
+	 * @desc 保存第三方配送预查询费用信息
+	 * @param $thirth_data
+	 */
+	public function addThirthQuery($thirth_data){
+		$order_id = $thirth_data['order_id'];
+		$third_distribution_type = $thirth_data['third_distribution_type'];
+
+		$thirth_query = M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where(array('order_id'=>$order_id,'third_distribution_type'=>$third_distribution_type))->find();
+		$thirth_data['addtime'] = time();
+		if(!empty($thirth_query)){
+			M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where(array('id'=>$thirth_query['id']))->save($thirth_data);
+		}else{
+			M('eaterplanet_ecommerce_orderdistribution_thirth_query')->add($thirth_data);
+		}
+	}
+
+	/**
+	 * @author  cy 2020-12-30
+	 * @desc 获取商户地址信息
+	 * @param $order_info
+	 * @return array
+	 */
+	public function getOrderStoreAddress($order_info){
+		$store_id = $order_info['store_id'];
+		$province_id = D('Home/Front')->get_supply_config_by_name('localtown_shop_province_id',$store_id);
+		$city_id = D('Home/Front')->get_supply_config_by_name('localtown_shop_city_id',$store_id);
+		$area_id = D('Home/Front')->get_supply_config_by_name('localtown_shop_area_id',$store_id);
+		$country_id = D('Home/Front')->get_supply_config_by_name('localtown_shop_country_id',$store_id);
+		$shop_address = D('Home/Front')->get_supply_config_by_name('localtown_shop_address',$store_id);
+		$shop_lon = D('Home/Front')->get_supply_config_by_name('localtown_shop_lon',$store_id);
+		$shop_lat = D('Home/Front')->get_supply_config_by_name('localtown_shop_lat',$store_id);
+		$shop_telephone = D('Home/Front')->get_supply_config_by_name('localtown_shop_telephone',$store_id);
+
+		//storename
+		$eaterplanet_ecommerce_supply = M('eaterplanet_ecommerce_supply')->where( array('id' => $store_id) )->find();
+
+		$store_data = [];
+		$store_data['address'] = $province_id.$city_id.$area_id.$country_id.$shop_address;
+		$store_data['city'] = $city_id;
+		$store_data['shop_lon'] = $shop_lon;
+		$store_data['shop_lat'] = $shop_lat;
+		$store_data['shop_telephone'] = $shop_telephone;
+		$store_data['begin_address'] = $shop_address;
+		$store_data['begin_detail'] = $province_id.$city_id.$area_id.$country_id;
+		$store_data['begin_username'] = $eaterplanet_ecommerce_supply['storename'];
+		return $store_data;
+	}
+
+	/**
+	 * 订单自动推送给第三方配送公司
+	 * @param array $order
+	 */
+	public function order_autosend_third_delivery($order){
+		if($order['delivery'] == 'localtown_delivery'){//同城配送订单
+			//商户“第三方配送服务” 1、开启，0、关闭
+			$supply_third_delivery_service = D('Home/Front')->get_config_by_name('supply_third_delivery_service');
+			$is_order_push_status = D('Home/Front')->get_config_by_name('is_order_push_status');
+			$order_push_third_distribution_company = D('Home/Front')->get_config_by_name('order_push_third_distribution_company');
+			if($is_order_push_status == 1){//订单自动确认配送
+				if($order['store_id'] == 0 || ($order['store_id'] > 0 && $supply_third_delivery_service == 1)){
+					$this->order_send_third_delivery_company($order,$order_push_third_distribution_company);
+				}
+			}
+		}
+	}
+
+	/**
+	 * @desc 订单自动发送给第三方配送公司
+	 * @param $order_info
+	 * @param $data_type
+	 */
+	public function order_send_third_delivery_company($order_info,$data_type){
+		$order_id = $order_info['order_id'];
+		//店铺地址
+		if($order_info['store_id'] > 0) {
+			$store_data = D('Home/Order')->getOrderStoreAddress($order_info);
+			$order_info['store_data'] = $store_data;
+		}
+		//商品信息
+		$sql = "select og.goods_id,og.name as goods_name,og.quantity,og.price,og.total,og.rela_goodsoption_valueid,g.weight as goods_weight  from "
+				. C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og left join  ".C('DB_PREFIX')."eaterplanet_ecommerce_goods as g on og.goods_id=g.id "
+				." where og.order_id = ".$order_id;
+		$goods_list = M()->query($sql);
+		$goods_count = 0;
+		$goods_weight = 0;
+		$goods_type_count = 0;
+		foreach($goods_list as $k=>$v){
+			$goods_count = $goods_count + $v['quantity'];
+			if(!empty($v['rela_goodsoption_valueid'])){
+				$goods_option_mult_value = M('eaterplanet_ecommerce_goods_option_item_value')->where( array('option_item_ids' => $v['rela_goodsoption_valueid'],'goods_id' => $v['goods_id']) )->find();
+				if(!empty($goods_option_mult_value)){
+					$v['goods_weight'] = $goods_option_mult_value['weight'];
+				}
+			}
+			$goods_weight = $goods_weight + $v['quantity'] * $v['goods_weight'];
+			$goods_type_count = $goods_type_count + 1;
+		}
+		if(empty($goods_weight)){
+			$goods_weight = 100;//默认100克
+		}
+		$order_info['goods_list'] = $goods_list;
+		//商品种类
+		$order_info['goods_type_count'] = $goods_type_count;
+		//商品数量
+		$order_info['goods_count'] = $goods_count;
+		//商品重量
+		$order_info['goods_weight'] = $goods_weight;
+		//订单总金额
+		$order_info['order_total'] = $order_info['total']+$order_info['packing_fare']+$order_info['shipping_fare']-$order_info['voucher_credit']-$order_info['fullreduction_money']-$order_info['score_for_money']+$order_info['localtown_add_shipping_fare']-$order_info['fare_shipping_free'];
+		//收货人地址
+		$province_info = D('Home/Front')->get_area_info($order_info['shipping_province_id']);
+		$city_info = D('Home/Front')->get_area_info($order_info['shipping_city_id']);
+		$area_info = D('Home/Front')->get_area_info($order_info['shipping_country_id']);
+		$order_info['shipping_address'] = $province_info['name'].$city_info['name'].$area_info['name'].$order_info['shipping_address'];
+		//收货人经纬度
+		$order_distribution_info = M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+		//收货人地址纬度
+		$order_info['shipping_lat'] = $order_distribution_info['member_lat'];
+		//收货人地址经度
+		$order_info['shipping_lng'] = $order_distribution_info['member_lon'];
+		//商城名称
+		$shoname = D('Home/Front')->get_config_by_name('shoname');
+		$order_info['shoname'] = $shoname;
+		if($data_type == 'imdada'){
+			$imdada = new \Lib\Localtown\Imdada();
+			$result = $imdada->addOrder($order_info);
+			if($result['status'] == 1){//成功
+				//配送费用
+				$delivery_fee = $result['result']['fee'];
+				$express_info = array();
+				$express_info['delivery_fee'] = $delivery_fee;
+				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+			}
+		}else if($data_type == 'sf'){
+			$sfexpress = new \Lib\Localtown\Sfexpress();
+			$result = $sfexpress->addOrder($order_info);
+			if($result['status'] == 1){//成功
+				//配送费用
+				$delivery_fee = round($result['result']['total_price']/100,2);
+				//顺丰订单号
+				$delivery_order_id = $result['result']['sf_order_id'];
+				//顺丰运单号
+				$delivery_bill_id = $result['result']['sf_bill_id'];
+
+				$express_info = array();
+				$express_info['delivery_fee'] = $delivery_fee;
+				$express_info['delivery_order_id'] = $delivery_order_id;
+				$express_info['delivery_bill_id'] = $delivery_bill_id;
+				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+			}
+		}else if( $data_type == 'make' )
+		{
+			//$store_data = D('Home/Make')->getOrderStoreAddress($order_info);
+			$result = D('Home/Make')->addOrder($order_info);
+
+			if( $result['code'] == 0 )
+			{
+				//码科订单号
+				$delivery_order_id = $result['order_number'];
+				$express_info = array();
+				$express_info['delivery_fee'] = $order_distribution_info['shipping_money'];
+				$express_info['delivery_order_id'] = $delivery_order_id;
+				$express_info['delivery_bill_id'] = '';
+
+				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+			}
+		}else if($data_type == 'ele'){//蜂鸟即配
+			$eleDistribution = new \Lib\Localtown\EleDistribution();
+
+			$order_code = build_order_no(session('user_auth.uid'));
+			//保存蜂鸟即配商户订单号
+			M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->save(['order_code'=>$order_code]);
+			$order_info['order_num_alias'] = $order_code;
+			$result = $eleDistribution->addOrder($order_info);
+			if($result['status'] == 1){//成功
+				//配送费用
+				$delivery_fee = round($result['result']['total_price']/100,2);
+				//蜂鸟即配订单号
+				$delivery_order_id = $result['result']['sf_order_id'];
+				//蜂鸟即配运单号
+				$delivery_bill_id = $result['result']['sf_bill_id'];
+
+				$express_info = array();
+				$express_info['delivery_fee'] = $delivery_fee;
+				$express_info['delivery_order_id'] = $delivery_order_id;
+				$express_info['delivery_bill_id'] = $delivery_bill_id;
+				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+			}
+		}
 	}
 }

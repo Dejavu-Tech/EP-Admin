@@ -52,6 +52,13 @@ class WeixinModel{
 			$total_fee = ($order_info["total"] + $order_info["shipping_fare"]-$order_info['voucher_credit']-$order_info['fullreduction_money'] - $order_info['score_for_money']-$order_info['fare_shipping_free'] )*100;
 		}
 
+		//预售begin
+        $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $order_id );
+		if( $presale_result['code'] ==0 )
+        {
+            $total_fee = $total_fee - $presale_result['data']['presale_ding_money'] * 100;
+        }
+        //end
 
 		$refund_fee = $total_fee;
 
@@ -669,7 +676,9 @@ class WeixinModel{
 
 			$res = \WxPayApi::refund($input,6,$order_info['from_type']);
 
-
+			if($res["return_code"] == 'FAIL'){
+          		return array('code' => 0, 'msg' => $res['return_msg']);
+			}
 
 			if( $res['err_code_des'] == '订单已全额退款' )
 			{
@@ -1002,6 +1011,16 @@ class WeixinModel{
 
 			$has_refun_money = D('Seller/Commonorder')->order_refund_totalmoney( $order_id );
 
+			//是否预售订单begin
+            $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $order_id );
+            $presale_info = [];
+            if( $presale_result['code'] == 0 )
+            {
+                $presale_info = $presale_result['data'];
+                $total_money = $total_money - $presale_info['presale_ding_money'];
+            }
+            //end
+
 			$refund_money = round($total_money - $has_refun_money,2);
 
 
@@ -1015,7 +1034,7 @@ class WeixinModel{
 				$order_history['order_id'] = $order_id;
 				$order_history['order_status_id'] = 5;
 				$order_history['notify'] = 0;
-				$order_history['comment'] = '会员前台申请取消订单，取消成功，并退款。';
+				$order_history['comment'] = '客户前台申请取消订单，取消成功，并退款。';
 				$order_history['date_added'] = time();
 
 				M('eaterplanet_ecommerce_order_history')->add( $order_history );
