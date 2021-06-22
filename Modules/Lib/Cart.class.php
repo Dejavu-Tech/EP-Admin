@@ -443,7 +443,7 @@ class Cart {
 						$header_disc = intval($goods_query[0]['head_disc']);
 					}
 
-					//判断是否会员折扣
+					//判断是否客户折扣
 					$level_info = $goods_model->get_member_level_info($member_id, $goods_id);
 
 

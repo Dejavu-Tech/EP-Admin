@@ -167,7 +167,7 @@ class KdApiEOrder
                     $eorder["SendStaff"] = $send_staff;
                     //月结编码
                     $eorder["MonthCode"] = $month_code;
-                    //ERP系统、电商平台等系统或平台类型用户的会员ID或店铺账号等唯一性标识，用于区分其用户
+                    //ERP系统、电商平台等系统或平台类型用户的客户ID或店铺账号等唯一性标识，用于区分其用户
                     $eorder["MemberID"] = "";
                     //发货仓编码
                     $eorder["WareHouseID"] = "";

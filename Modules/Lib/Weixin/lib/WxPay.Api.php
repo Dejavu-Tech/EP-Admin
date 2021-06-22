@@ -298,12 +298,9 @@ class WxPayApi
 		
 		$is_open_yinpay = D('Home/Front')->get_config_by_name('is_open_yinpay');
 
-			if( isset($is_open_yinpay) && $is_open_yinpay == 3 )
-			{
-				$response = self::sup_postXmlCurl($xml, $url, true ,6 );
-			}else{
+
 				$response = self::postXmlCurl($xml, $url, true ,6 );
-			}
+			
 		
 	
 		

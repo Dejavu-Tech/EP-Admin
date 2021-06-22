@@ -47,6 +47,8 @@ class Imdada
 
     private $cancel_order_url = "/api/order/formalCancel";
 
+    private $query_delivery_url = "/api/order/queryDeliverFee";
+
     private $notify_url = "";
     /**
      * 构造函数
@@ -79,12 +81,20 @@ class Imdada
      */
     public function addOrder($order_info){
         $order_data = array();
+        //商户地址
+        if($order_info['store_id'] > 0){
+            $city_name = $order_info['store_data']['city'];
+            $city_name = str_replace('市','',$city_name);
+            $area_info = M('eaterplanet_ecommerce_imdada_area_code')->where( array('city_name' => $city_name) )->find();
+            $this->city_code = $area_info['city_code'];
+        }
         //门店编号
         $order_data['shop_no'] = $this->shop_no;
         //第三方订单ID
         $order_data['origin_id'] = $order_info['order_num_alias'];
         //订单所在城市的code
         $order_data['city_code'] = $this->city_code;
+
         //订单金额
         $order_data['cargo_price'] = $order_info['order_total'];
         //是否需要垫付 1:是 0:否 (垫付订单金额，非运费)
@@ -122,6 +132,17 @@ class Imdada
         $order_data['origin_mark_no'] = "";
         //是否选择直拿直送（0：不需要；1：需要）
         $order_data['is_direct_delivery'] = "0";
+
+        //订单商品明细
+        $product_list = [];
+        foreach($order_info['goods_list'] as $k=>$v){
+            $goods_array = [];
+            $goods_array['sku_name'] = $v['goods_name'];//商品名称
+            $goods_array['src_product_no'] = $v['goods_id'];//商品编码
+            $goods_array['count'] = $v['quantity'];//商品数量
+            $product_list[] = $goods_array;
+        }
+        $order_data['product_list'] = $product_list;
 
         $body_data = json_encode($order_data);
         $reqParams = $this->bulidRequestParams($body_data);
@@ -135,6 +156,13 @@ class Imdada
      */
     public function reAddOrder($order_info){
         $order_data = array();
+        //商户地址
+        if($order_info['store_id'] > 0){
+            $city_name = $order_info['store_data']['city'];
+            $city_name = str_replace('市','',$city_name);
+            $area_info = M('eaterplanet_ecommerce_imdada_area_code')->where( array('city_name' => $city_name) )->find();
+            $this->city_code = $area_info['city_code'];
+        }
         //门店编号
         $order_data['shop_no'] = $this->shop_no;
         //第三方订单ID
@@ -178,6 +206,17 @@ class Imdada
         $order_data['origin_mark_no'] = "";
         //是否选择直拿直送（0：不需要；1：需要）
         $order_data['is_direct_delivery'] = "0";
+
+        //订单商品明细
+        $product_list = [];
+        foreach($order_info['goods_list'] as $k=>$v){
+            $goods_array = [];
+            $goods_array['sku_name'] = $v['goods_name'];//商品名称
+            $goods_array['src_product_no'] = $v['goods_id'];//商品编码
+            $goods_array['count'] = $v['quantity'];//商品数量
+            $product_list[] = $goods_array;
+        }
+        $order_data['product_list'] = $product_list;
 
         $body_data = json_encode($order_data);
         $reqParams = $this->bulidRequestParams($body_data);
@@ -201,6 +240,81 @@ class Imdada
         $body_data = json_encode($order_data);
         $reqParams = $this->bulidRequestParams($body_data);
         $resp = $this->getHttpRequestWithPost($this->reqUrl.$this->cancel_order_url,json_encode($reqParams));
+        $result = $this->parseResponseData($resp);
+        return $result;
+    }
+
+
+    /**
+     * 查询订单运费接口
+     */
+    public function queryDeliverFee($order_info){
+        $order_data = array();
+        //商户地址
+        if($order_info['store_id'] > 0){
+            $city_name = $order_info['store_data']['city'];
+            $city_name = str_replace('市','',$city_name);
+            $area_info = M('eaterplanet_ecommerce_imdada_area_code')->where( array('city_name' => $city_name) )->find();
+            $this->city_code = $area_info['city_code'];
+        }
+        //门店编号
+        $order_data['shop_no'] = $this->shop_no;
+        //第三方订单ID
+        $order_data['origin_id'] = $order_info['order_num_alias'];
+        //订单所在城市的code
+        $order_data['city_code'] = $this->city_code;
+        //订单金额
+        $order_data['cargo_price'] = $order_info['order_total'];
+        //是否需要垫付 1:是 0:否 (垫付订单金额，非运费)
+        $order_data['is_prepay'] = "0";
+        //收货人姓名
+        $order_data['receiver_name'] = $order_info['shipping_name'];
+        //收货人地址
+        $order_data['receiver_address'] = $order_info['shipping_address'];
+        //收货人地址纬度
+        $order_data['receiver_lat'] = $order_info['shipping_lat'];
+        //收货人地址经度
+        $order_data['receiver_lng'] = $order_info['shipping_lng'];
+        //回调URL
+        $order_data['callback'] = $this->notify_url;
+        //收货人手机号
+        $order_data['receiver_phone'] = $order_info['shipping_tel'];
+
+        /**************非必填项*******************/
+        //收货人座机号
+        $order_data['receiver_tel'] = "";
+        //小费
+        $order_data['tips'] = "0";
+        //订单备注
+        $order_data['info'] = $order_info['note_content'];
+        //订单商品类型：食品小吃-1,饮料-2,鲜花-3,文印票务-8,便利店-9,水果生鲜-13,同城电商-19, 医药-20,
+        //蛋糕-21,酒品-24,小商品市场-25,服装-26,汽修零配-27,数码-28,小龙虾-29,火锅-51,其他-5
+        $order_data['cargo_type'] = "19";
+        //订单商品数量
+        $order_data['cargo_num'] = $order_info['goods_count'];
+        //订单重量（单位：Kg）
+        $order_data['cargo_weight'] = round($order_info['goods_weight']/1000,2);
+        //订单来源标示
+        $order_data['origin_mark'] = "";
+        //订单来源编号
+        $order_data['origin_mark_no'] = "";
+        //是否选择直拿直送（0：不需要；1：需要）
+        $order_data['is_direct_delivery'] = "0";
+
+        //订单商品明细
+        $product_list = [];
+        foreach($order_info['goods_list'] as $k=>$v){
+            $goods_array = [];
+            $goods_array['sku_name'] = $v['goods_name'];//商品名称
+            $goods_array['src_product_no'] = $v['goods_id'];//商品编码
+            $goods_array['count'] = $v['quantity'];//商品数量
+            $product_list[] = $goods_array;
+        }
+        $order_data['product_list'] = $product_list;
+
+        $body_data = json_encode($order_data);
+        $reqParams = $this->bulidRequestParams($body_data);
+        $resp = $this->getHttpRequestWithPost($this->reqUrl.$this->query_delivery_url,json_encode($reqParams));
         $result = $this->parseResponseData($resp);
         return $result;
     }

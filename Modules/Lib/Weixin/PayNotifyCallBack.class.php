@@ -115,7 +115,7 @@ class PayNotifyCallBack extends WxPayNotify
 
 			if( isset($out_trade_no_arr[2]) && $out_trade_no_arr[2] == 'charge' )
 			{
-				//暂时屏蔽会员充值代码
+				//暂时屏蔽客户充值代码
 
 				$member_charge_flow_info = M('eaterplanet_ecommerce_member_charge_flow')->where( array('id' => $out_trade_no ) )->find();
 
@@ -230,7 +230,7 @@ class PayNotifyCallBack extends WxPayNotify
 
 				$order_all = M('eaterplanet_ecommerce_order_all')->where( array('id' => $out_trade_no ) )->find();
 
-				if( in_array($order_all['order_status_id'], array(1,2)) ){
+				if( in_array($order_all['order_status_id'], array(1,2,15)) ){
 
 					$stop_pay = false;
 
@@ -278,18 +278,42 @@ class PayNotifyCallBack extends WxPayNotify
 				{
 					$order = M('eaterplanet_ecommerce_order')->where( array('order_id' => $order_relate['order_id'] ) )->find();
 
-					if( $order && ($order['order_status_id'] == 3 || $order['order_status_id'] == 5) )
+                    //检测是否预售
+                    $order_presale_info = M('eaterplanet_ecommerce_order_presale')->where(['order_id' => $order_relate['order_id'] ])->find();
+
+                    //检测是否礼品卡
+                    $order_virtualcard_info =  D('Seller/VirtualCard')->getOrderVirtualCardByOrderId( $order_relate['order_id'] );
+
+					if( $order && ($order['order_status_id'] == 3 || $order['order_status_id'] == 5 || $order['order_status_id'] == 15 ) )
 					{
+					    //begin 判断预售第一次还是第二次付款
+					    $order_status_id = $order['is_pin'] == 1 ? 2:1;
+					    if( !empty($order_presale_info) )
+                        {
+                            if( $order_presale_info['state'] == 0 )
+                            {
+                                $order_status_id = 15;//首次付款
+                            }else if( $order_presale_info['state'] == 1 )
+                            {
+                                $order_status_id = 1;//二次付款
+                            }
+                        }
+                        //end
+
 						$o = array();
-						$o['order_status_id'] =  $order['is_pin'] == 1 ? 2:1;
+						$o['order_status_id'] =  $order_status_id;
 						$o['date_modified']=time();
 						$o['pay_time']=time();
 						$o['payment_code']='weixin';
 						$o['transaction_id'] = $transaction_id;
 
-						if($order['delivery'] == 'hexiao'){//核销订单 支付完成状态改成  已发货待收货
-							$o['order_status_id'] =  4;
-						}
+						if( empty($order_presale_info) || $order_presale_info['state'] == 1 )
+                        {
+                            if($order['delivery'] == 'hexiao'  ){//核销订单 支付完成状态改成  已发货待收货
+                                $o['order_status_id'] =  4;
+                            }
+                        }
+
 
 						M('eaterplanet_ecommerce_order')->where( array('order_id' => $order['order_id'] ) )->save( $o );
 
@@ -320,21 +344,26 @@ class PayNotifyCallBack extends WxPayNotify
 						$oh = array();
 						$oh['order_id']=$order['order_id'];
 						$oh['uniacid']=$order['uniacid'];
-						$oh['order_status_id']= $order['is_pin'] == 1 ? 2:1;
+						$oh['order_status_id']= $order_status_id;
 
 						$oh['comment']='买家已付款';
 						$oh['date_added']=time();
 						$oh['notify']=1;
 
-						if($order['delivery'] == 'hexiao'){//核销订单 支付完成状态改成  已发货待收货
+						if($order['delivery'] == 'hexiao' && empty($order_presale_info) ){//核销订单 支付完成状态改成  已发货待收货
 							$oh['order_status_id'] =  4;
 						}
 
 						M('eaterplanet_ecommerce_order_history')->add($oh);
 
+						//邀新有礼下单完成领取礼包
+						D('Home/Invitegift')->collectInvitegiftAfterOrder($order, 'orderpay');
 
-						//订单自动配送
-						D('Home/Order')->order_auto_delivery($order);
+                        if( empty($order_presale_info) )
+                        {
+                            //订单自动配送
+                            D('Home/Order')->order_auto_delivery($order);
+                        }
 
 						//$weixin_nofity->orderBuy($order['order_id']);
 
@@ -383,13 +412,26 @@ class PayNotifyCallBack extends WxPayNotify
 							    }
 							}
 
-
-
 						}
+						//检测预售支付
+						if( !empty($order_presale_info) )
+                        {
+                            D('Home/PresaleGoods')->payBackOrder( $order['order_id'] , $transaction_id );
+                        }
+                        //检测是否礼品卡
+                        if( !empty($order_virtualcard_info) )
+                        {
+                            D('Seller/VirtualCard')->payBackOrder( $order['order_id'] );
+                        }
 
 						//发送购买通知
 						D('Home/Weixinnotify')->orderBuy($order['order_id']);
 
+                        //微信交易组件
+                        if( $order['from_type'] == 'tradecomponts' )
+                        {
+                            D('Seller/MpModifyTradeComponts')->orderPay( $order['order_id'], '1' );
+                        }
 
 					}
 

@@ -51,6 +51,8 @@ class Sfexpress
     //取消订单地址
     private $cancel_order_url = "/open/api/external/cancelorder?sign=";
 
+    private $query_delivery_url = "/open/api/external/precreateorder?sign=";
+
     private $notify_url = "";
 
 
@@ -91,6 +93,17 @@ class Sfexpress
     public function addOrder($order_info){
         $time = time();
         $order_data = array();
+
+        //商户地址
+        if($order_info['store_id'] > 0){
+            $this->shop_phone = $order_info['store_data']['shop_telephone'];
+            $this->shop_address = $order_info['store_data']['address'];
+            $this->shop_lng = $order_info['store_data']['shop_lon'];
+            $this->shop_lat = $order_info['store_data']['shop_lat'];
+
+            $this->city_name = $order_info['store_data']['city'];
+        }
+
         //同城开发者ID
         $order_data['dev_id'] = $this->dev_id;
         //店铺ID
@@ -190,6 +203,90 @@ class Sfexpress
         $body = json_encode($order_data);
         $sign = $this->bulidRequestParams($body);
         $resp = $this->curl_post($body,$this->reqUrl.$this->add_order_url.$sign);
+        $result = $this->parseResponseData($resp);
+        return $result;
+    }
+    //查询订单运费接口
+    public function queryDeliverFee($order_info){
+        $time = time();
+        $order_data = array();
+
+        //商户地址
+        if($order_info['store_id'] > 0){
+            $this->shop_phone = $order_info['store_data']['shop_telephone'];
+            $this->shop_address = $order_info['store_data']['address'];
+            $this->shop_lng = $order_info['store_data']['shop_lon'];
+            $this->shop_lat = $order_info['store_data']['shop_lat'];
+            $this->city_name = $order_info['store_data']['city'];
+        }
+
+        //同城开发者ID
+        $order_data['dev_id'] = $this->dev_id;
+        //店铺ID
+        $order_data['shop_id'] = $this->shop_id;
+        //店铺ID类型 1：顺丰店铺ID；2：接入方店铺ID
+        $order_data['shop_type'] = 1;
+
+
+        //用户地址经度
+        $order_data['user_lng'] = $order_info['shipping_lng'];
+        //用户地址纬度
+        $order_data['user_lat'] = $order_info['shipping_lat'];
+        //用户详细地址
+        $order_data['user_address'] = $order_info['shipping_address'];
+        //发单城市
+        $order_data['city_name'] = $this->city_name;
+        //物品重量（单位：克）
+        $order_data['weight'] = $order_info['goods_weight'];
+        //物品类型
+        $order_data['product_type'] = 1;
+        //用户订单总金额（单位：分）
+        $order_data['total_price'] = $order_info['order_total']*100;
+        //是否是预约单
+        $order_data['is_appoint'] = 0;
+        /*//预约单类型
+        $order_data['appoint_type'] = 0;
+        //用户期望送达时间
+        $order_data['expect_time'] = 0;
+        //用户期望上门时间
+        $order_data['expect_pickup_time'] = 0;*/
+        //坐标类型，1：百度坐标，2：高德坐标
+        $order_data['lbs_type'] = 1;
+        //用户支付方式：1、已支付 0、货到付款
+        $order_data['pay_type'] = 1;
+        //代收金额
+        $order_data['receive_user_money'] = 0;
+        //是否保价，0：非保价；1：保价
+        $order_data['is_insured'] = 0;
+        //是否是专人直送订单，0：否；1：是
+        $order_data['is_person_direct'] = 0;
+        //配送交通工具，0：否；1：电动车；2：小轿车
+        $order_data['vehicle'] = 0;
+        //保价金额
+        $order_data['declared_value'] = 0;
+        //订单小费，不传或者传0为不加小费
+        $order_data['gratuity_fee'] = 0;
+        //物流流向
+        $order_data['rider_pick_method'] = 1;
+        //返回字段控制标志位（二进制）
+        $order_data['return_flag'] = 511;
+        //推单时间
+        $order_data['push_time'] = time();
+        //发货店铺信息
+        $shop_array = [
+            "shop_name"        =>  $this->shopname,//店铺名称
+            "shop_phone"       =>  $this->shop_phone,//店铺电话
+            "shop_address"     =>  $this->shop_address,//店铺地址
+            "shop_lng"          =>   $this->shop_lng,//店铺经度
+            "shop_lat"          =>  $this->shop_lat,//店铺纬度
+        ];
+        $order_data['shop'] = $shop_array;
+
+        //订单详情 end
+        ksort($order_data);
+        $body = json_encode($order_data);
+        $sign = $this->bulidRequestParams($body);
+        $resp = $this->curl_post($body,$this->reqUrl.$this->query_delivery_url.$sign);
         $result = $this->parseResponseData($resp);
         return $result;
     }
