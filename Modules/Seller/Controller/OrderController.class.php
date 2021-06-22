@@ -70,9 +70,21 @@ class OrderController extends CommonController{
 		$_GPC['is_soli'] = $is_soli;
 
 		$_GET['type'] = 'normal';
+		$is_presale_order = 0;
+		if( isset($_GET['presale_order']) && $_GET['presale_order'] == 1 )
+        {
+            $is_presale_order = 1;
+        }
 
+		$is_virtualcard_order = 0;
+		if( isset($_GET['virtualcard_order']) && $_GET['virtualcard_order'] == 1 )
+        {
+            $is_virtualcard_order = 1;
+        }
 
 		$this->is_soli = $is_soli;
+		$this->is_presale_order = $is_presale_order;
+		$this->is_virtualcard_order = $is_virtualcard_order;
 
 		$need_data = D('Seller/Order')->load_order_list();
 
@@ -144,6 +156,8 @@ class OrderController extends CommonController{
 		$is_can_confirm_delivery = true;
 		$is_can_confirm_receipt = true;
 
+		 $is_can_third_delivery = true;
+
 
 		$supply_can_look_headinfo = D('Home/Front')->get_config_by_name('supply_can_look_headinfo');
 
@@ -154,6 +168,7 @@ class OrderController extends CommonController{
 
 		$supply_can_confirm_receipt = D('Home/Front')->get_config_by_name('supply_can_confirm_receipt');
 
+		 $supply_third_delivery_service = D('Home/Front')->get_config_by_name('supply_third_delivery_service');
 
 
 		if (defined('ROLE') && ROLE == 'agenter' )
@@ -178,9 +193,50 @@ class OrderController extends CommonController{
 			}
 
 		}
+		if( isset($supply_third_delivery_service) && $supply_third_delivery_service == 1){
+		    $is_can_third_delivery = true;
+		}else{
+		    $is_can_third_delivery = false;
+		}
+
+		$s_id = 1 ;
+
+		if(SELLERUID != 1)
+		{
+			$seller_info = M('seller')->field('s_role_id')->where( array('s_id' => SELLERUID ) )->find();
+
+			$perms_arr = M('eaterplanet_ecommerce_perm_role')->where( array('id' => $seller_info['s_role_id']) )->find();
+
+			$perms1 = str_replace('.','/',$perms_arr['perms2']);
+
+			$perms2 = explode(",", $perms1);
+
+			if(in_array("user/user/index", $perms2)){
+				$s_id = 1 ;
+			} else {
+				$s_id = 0 ;
+			}
+
+		}
+		$this->s_id = $s_id;
 
 		$is_localtown_imdada_status = D('Home/Front')->get_config_by_name('is_localtown_imdada_status');
 		$is_localtown_sf_status = D('Home/Front')->get_config_by_name('is_localtown_sf_status');
+		//是否开启蜂鸟即配
+		$is_localtown_ele_status = D('Home/Front')->get_config_by_name('is_localtown_ele_status');
+		$is_localtown_ele_status = isset($is_localtown_ele_status) ? $is_localtown_ele_status : 0;
+
+        //是否开启码科配送
+        $is_localtown_mk_status = D('Home/Front')->get_config_by_name('is_localtown_mk_status');
+        $is_localtown_mk_status = isset($is_localtown_mk_status) ? $is_localtown_mk_status : 0;
+
+        //码科预览价格
+		$is_make_prequery_status = D('Home/Front')->get_config_by_name('is_make_prequery_status');
+		$is_make_prequery_status = isset($is_make_prequery_status) ? $is_make_prequery_status : 0;
+
+
+		$is_imdada_prequery_status = D('Home/Front')->get_config_by_name('is_imdada_prequery_status');
+		$is_sf_prequery_status = D('Home/Front')->get_config_by_name('is_sf_prequery_status');
 
 		$localtown_modifypickingname = D('Home/Front')->get_config_by_name('localtown_modifypickingname');
 		$localtown_modifypickingname = !empty($localtown_modifypickingname) ? $localtown_modifypickingname: '包装费';
@@ -192,12 +248,27 @@ class OrderController extends CommonController{
 
 		 $this->is_localtown_imdada_status = $is_localtown_imdada_status;
 		 $this->is_localtown_sf_status = $is_localtown_sf_status;
+		 $this->is_localtown_mk_status = $is_localtown_mk_status;
+		 $this->is_localtown_ele_status = $is_localtown_ele_status;
+		 $this->is_make_prequery_status = $is_make_prequery_status;
 		 $this->localtown_modifypickingname = $localtown_modifypickingname;
+		 $this->is_can_third_delivery = $is_can_third_delivery;
+
+		 if($is_localtown_imdada_status == 1 && $is_imdada_prequery_status == 1){
+			 $this->is_imdada_prequery_status = 1;
+		 }else{
+			 $this->is_imdada_prequery_status = 0;
+		 }
+		 if($is_localtown_sf_status == 1 && $is_sf_prequery_status == 1){
+			 $this->is_sf_prequery_status = 1;
+		 }else{
+			 $this->is_sf_prequery_status = 0;
+		 }
 
 		$data = D('Seller/Config')->get_all_config();
 		$this->data = $data;
 
-		$this->display();
+		$this->display('Order/index');
 	 }
 
 	 public function opremarksaler()
@@ -626,6 +697,16 @@ class OrderController extends CommonController{
 
 		$this->delivery = $delivery;
 
+		//预售订单begin
+        $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $id );
+        $presale_info = [];
+        if( $presale_result['code'] == 0 )
+        {
+            $presale_info = $presale_result['data'];
+        }
+        $this->presale_info = $presale_info;
+        //end
+
 		$is_has_refund_deliveryfree = D('Home/Front')->get_config_by_name('is_has_refund_deliveryfree');
 
 		$is_has_refund_deliveryfree = !isset($is_has_refund_deliveryfree) || $is_has_refund_deliveryfree == 1 ? 1:0;
@@ -854,6 +935,9 @@ class OrderController extends CommonController{
 						D('Seller/Order')->hexiao_finished($id, '未核销商品退款，订单完成');
 					}
 
+                    //礼品卡退款
+                    D('Seller/VirtualCard')->refundOrder($id);
+
 					show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
 				}
 			}
@@ -924,7 +1008,17 @@ class OrderController extends CommonController{
 		    $total_quantity = $total_quantity - $used_quantity;
 		    $free_tongji = $free_tongji - $hx_used_total;
 		}
+		//判断是否有预售 begin
+        $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $id );
+		$presale_info = [];
+		if( $presale_result['code'] == 0 )
+        {
+            $presale_info = $presale_result['data'];
+            $free_tongji = $free_tongji - $presale_info['presale_for_ordermoney'];
+        }
+        //end
 
+		$this->presale_info = $presale_info;
 		$this->is_has_refund_deliveryfree = $is_has_refund_deliveryfree;
 		$this->shipping_fare = $shipping_fare;
 		$this->total_quantity = $total_quantity;
@@ -1100,6 +1194,8 @@ class OrderController extends CommonController{
                         if($item['delivery'] == 'hexiao'){
                             D('Home/Salesroom')->hexiao_order_refund_action($id);
                         }
+                        //礼品卡退款
+                        D('Seller/VirtualCard')->refundOrder($id);
 
                         show_json(1, array('message' => '退款成功！') );
 					}
@@ -1201,13 +1297,15 @@ class OrderController extends CommonController{
 
 		$need_order_goods = array();
 
-
+		$total = 0;
 		foreach($order_goods as $key => $value)
 		{
 			$value['option_sku'] = D('Seller/Order')->get_order_option_sku($order_id, $value['order_goods_id']);
 
 			$need_order_goods[$key] = $value;
 		}
+		$total = M('eaterplanet_ecommerce_order_goods')->where( array('order_id' => $order_id) )->sum('total');
+		$legal_amount = D('Seller/Order')->num_to_rmb($total);
 
 		$province_info = D('Home/Front')->get_area_info($order_info['shipping_province_id']);
 		$city_info = D('Home/Front')->get_area_info($order_info['shipping_city_id']);
@@ -1215,7 +1313,12 @@ class OrderController extends CommonController{
 		$member = M('eaterplanet_ecommerce_member')->where( array('member_id' => $order_info['member_id'] ) )->find();
         sellerLog('订单['.$order_info['order_num_alias'].']打印配送单', 2);
 
+		$order_note_name = D('Home/Front')->get_config_by_name('order_note_name');
 
+		$order_note_name = isset($order_note_name) && !empty($order_note_name) ? $order_note_name :'店名';
+		$this->order_note_name = $order_note_name;
+
+		$this->legal_amount = $legal_amount;
         $this->province_info = $province_info;
 		$this->city_info = $city_info;
 		$this->area_info = $area_info;
@@ -1412,17 +1515,18 @@ class OrderController extends CommonController{
         $columns = array(
 				array('title' => '订单流水号', 'field' => 'day_paixu', 'width' => 24, 'sort' => 0, 'is_check' => 1),
 				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 24, 'sort' => 0, 'is_check' => 1),
-				array('title' => '会员昵称', 'field' => 'name', 'width' => 12, 'sort' => 0, 'is_check' => 1),
+				array('title' => '客户昵称', 'field' => 'name', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 
 
-            array('title' => '会员手机号', 'field' => 'telephone', 'width' => 12, 'sort' => 0, 'is_check' => 1),
+            array('title' => '客户手机号', 'field' => 'telephone', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 
-				array('title' => '会员备注', 'field' => 'member_content', 'width' => 24, 'sort' => 0, 'is_check' => 1),
+				array('title' => '客户备注', 'field' => 'member_content', 'width' => 24, 'sort' => 0, 'is_check' => 1),
 				array('title' => '收货姓名(或自提人)', 'field' => 'shipping_name', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 
 				array('title' => '联系电话', 'field' => 'shipping_tel', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 				array('title' => '收货地址', 'field' => 'address_province_city_area', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 
+				array('title' => '商户名称/类型', 'field' => 'supply_name', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 
 				array('title' => '提货详细地址', 'field' => 'address_address', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 				array('title' => '商品名称', 'field' => 'goods_title', 'width' => 24, 'sort' => 0, 'is_check' => 1),
@@ -1457,7 +1561,7 @@ class OrderController extends CommonController{
 				array('title' => '应收款(该笔订单总款)', 'field' => 'price', 'width' => 12, 'sort' => 0, 'is_check' => 0),
 				array('title' => '状态', 'field' => 'status', 'width' => 12, 'sort' => 0, 'is_check' => 0),
 				array('title' => '团长佣金', 'field' => 'head_money', 'width' => 12, 'sort' => 0, 'is_check' => 0),
-				array('title' => '会员佣金', 'field' => 'member_commissmoney', 'width' => 12, 'sort' => 0, 'is_check' => 0),
+				array('title' => '客户佣金', 'field' => 'member_commissmoney', 'width' => 12, 'sort' => 0, 'is_check' => 0),
 				array('title' => '付款时间', 'field' => 'paytime', 'width' => 24, 'sort' => 0, 'is_check' => 0),
 				array('title' => '发货时间', 'field' => 'sendtime', 'width' => 24, 'sort' => 0, 'is_check' => 0),
 				array('title' => '完成时间', 'field' => 'finishtime', 'width' => 24, 'sort' => 0, 'is_check' => 0),
@@ -1556,11 +1660,21 @@ class OrderController extends CommonController{
 		}
 
         switch ($item['delivery']){
-            case 'pickup':$item['delivery_text'] = '自提';break;
+            case 'pickup':$item['delivery_text'] = '社区自提';break;
             case 'express':$item['delivery_text'] = '快递';break;
             case 'tuanz_send':$item['delivery_text'] = '团长配送';break;
 			case 'hexiao':$item['delivery_text'] = '到店核销';break;
         }
+
+        //预收订单信息begin
+        $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $id );
+		if( $presale_result['code'] == 0 )
+        {
+            $item['presale_info'] = $presale_result['data'];
+        }else{
+		    $item['presale_info'] = [];
+        }
+        //预收订单信息end
 
 		if($item['type'] == 'pintuan'){
 
@@ -1583,7 +1697,7 @@ class OrderController extends CommonController{
 		$fullreduction_money = 0;
 		$voucher_credit = 0;
 		$total = 0;
-
+	    $order_head_status = 0 ;
 		foreach($order_goods as $key => $value)
 		{
 			// eaterplanet_community_head_commiss_order
@@ -1594,6 +1708,9 @@ class OrderController extends CommonController{
 			{
 				foreach( $head_commission_order_info  as  &$vv)
 				{
+					if($vv['state'] == 1){
+						$order_head_status =1;
+					}
 					$head_info_tp = M('eaterplanet_community_head')->field('head_name')->where( array('id' => $vv['head_id'] ) )->find();
 
 					$vv['head_name'] = $head_info_tp['head_name'];
@@ -1713,7 +1830,9 @@ class OrderController extends CommonController{
 							$value['hx_info']['is_can_refund'] = 0;
 						}
 					}
-			    }
+					$record_count = M('eaterplanet_ecommerce_order_goods_saleshexiao_record')->where(array('order_id' => $id,'order_goods_id' => $value['order_goods_id'] ) )->count();
+					$value['hx_info']['record_count'] = $record_count;
+				}
 			}
 
 			$need_order_goods[$key] = $value;
@@ -1771,15 +1890,19 @@ class OrderController extends CommonController{
 
 					$item['orderdistribution_order']['username'] = $orderdistribution['username'];
 				}else{
-					if($item['orderdistribution_order']['third_distribution_type'] == 'imdada'){
-						$item['orderdistribution_order']['username'] = "达达平台配送";
-					}else if($item['orderdistribution_order']['third_distribution_type'] == 'sf'){
-						$item['orderdistribution_order']['username'] = "顺丰同城配送";
-					}else if($item['orderdistribution_order']['third_distribution_type'] == 'uupt'){
-						$item['orderdistribution_order']['username'] = "UU跑腿配送";
-					}else if($item['orderdistribution_order']['third_distribution_type'] == 'dianwoda'){
-						$item['orderdistribution_order']['username'] = "点我达配送";
-					}
+					/*if($item['orderdistribution_order']['orderdistribution_id'] == -1){
+						$item['orderdistribution_order']['username'] = "系统默认配送员";
+					}else{*/
+						if($item['orderdistribution_order']['third_distribution_type'] == 'imdada'){
+							$item['orderdistribution_order']['username'] = "达达平台配送";
+						}else if($item['orderdistribution_order']['third_distribution_type'] == 'sf'){
+							$item['orderdistribution_order']['username'] = "顺丰同城配送";
+						}else if($item['orderdistribution_order']['third_distribution_type'] == 'uupt'){
+							$item['orderdistribution_order']['username'] = "UU跑腿配送";
+						}else if($item['orderdistribution_order']['third_distribution_type'] == 'dianwoda'){
+							$item['orderdistribution_order']['username'] = "点我达配送";
+						}
+					//}
 				}
 			}
 		}
@@ -1804,6 +1927,39 @@ class OrderController extends CommonController{
 
 		}
 
+		//售后期
+		$open_aftersale = D('Home/Front')->get_config_by_name('open_aftersale');
+		//天数
+		$open_aftersale_time = D('Home/Front')->get_config_by_name('open_aftersale_time');
+		$order_settlement =" ";
+
+		//订单状态
+		if($item['order_status_id'] ==5 || $item['order_status_id'] ==7 ){
+			//已失效
+			$order_status = 2;
+
+		}else{
+			//待结算
+			$order_status = $order_head_status;
+			if(($item['order_status_id'] ==6 || $item['order_status_id'] ==11) ){
+
+					if($item['order_status_id'] ==6){
+						$order_settlement = $item['receive_time'] + $open_aftersale_time*86400;
+					}
+
+					if($item['order_status_id'] ==11){
+						$order_settlement = $item['finishtime'] + $open_aftersale_time*86400;
+					}
+				}
+
+
+
+		}
+		$this->open_aftersale = $open_aftersale;
+		$this->order_status = $order_status;
+		$this->open_aftersale_time = $open_aftersale_time;
+		$this->order_settlement = $order_settlement;
+
 		$this->id = $id;
 		$this->item = $item;
 		$this->order_goods = $order_goods;
@@ -1822,11 +1978,17 @@ class OrderController extends CommonController{
 		$order_status_arr[18] = '已结算';
 		$order_status_arr[19] = '商品部分退款';
 		$order_status_arr[20] = '拒绝商品部分退款';
-		$order_status_arr[15] = '订单改价';
+		$order_status_arr[15] = '预售支付定金';
 
 		foreach( $history_list as  &$val )
 		{
-			$val['order_status_name'] = $order_status_arr[$val['order_status_id']];
+		    if( $val[''] == '订单改价' )
+            {
+                $val['order_status_name'] = 'comment';
+            }
+			else{
+                $val['order_status_name'] = $order_status_arr[$val['order_status_id']];
+            }
 		}
 		unset($val);
 
@@ -1866,6 +2028,56 @@ class OrderController extends CommonController{
 			}
 		}
 
+
+		$s_id = 1 ;
+
+		if(SELLERUID != 1)
+		{
+			$seller_info = M('seller')->field('s_role_id')->where( array('s_id' => SELLERUID ) )->find();
+
+			$perms_arr = M('eaterplanet_ecommerce_perm_role')->where( array('id' => $seller_info['s_role_id']) )->find();
+
+			$perms1 = str_replace('.','/',$perms_arr['perms2']);
+
+			$perms2 = explode(",", $perms1);
+
+			if(in_array("user/user/index", $perms2)){
+				$s_id = 1 ;
+			} else {
+				$s_id = 0 ;
+			}
+
+		}
+		$this->s_id = $s_id;
+
+		//预售判断 begin
+        $is_presale = 0;
+        $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $id );
+
+        $presale_for_ordermoney = 0;
+        if( $presale_result['code'] == 0 )
+        {
+            if( $presale_result['data']['presale_deduction_money'] > 0 )
+            {
+                $presale_for_ordermoney = $presale_result['data']['presale_for_ordermoney'];
+            }
+            $is_presale = 1;
+        }
+        $this->is_presale = $is_presale;
+        $this->presale_for_ordermoney = $presale_for_ordermoney;
+        //预售end
+
+        //礼品卡begin
+        $is_virtualcard = 0;
+        $virtualcard_result = D('Seller/VirtualCard')->getVirtualCardOrderInfO( $id );
+        if( $virtualcard_result['code'] == 0 )
+        {
+            $is_virtualcard = 1;
+            $this->virtualcard_info = $virtualcard_result['data'];
+        }
+        $this->is_virtualcard = $is_virtualcard;
+
+        //礼品卡end
 
 
 		$is_order_note_open = D('Home/Front')->get_config_by_name('order_note_open');
@@ -2044,7 +2256,11 @@ class OrderController extends CommonController{
 			}
 		}
 		//pdo_update('eaterplanet_ecommerce_order', array('order_status_id' => 6, 'receive_time' => time()), array('order_id' => $item['order_id'], 'uniacid' => $_W['uniacid']));
-
+		if( $item['delivery'] == 'localtown_delivery' )
+		{
+			M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $item['order_id']) )->save( array('state' => 4) );
+			D('Home/LocaltownDelivery')->write_distribution_log( $item['order_id'], 0 , 4 , "后台操作，确认收货" );
+		}
 		D('Seller/Order')->receive_order($item['order_id']);
 
 		M('eaterplanet_ecommerce_order_history')->where( array('order_id' => $item['order_id'],'order_status_id' => 6) )->save( array( 'comment' => '后台操作，确认收货') );
@@ -2113,6 +2329,28 @@ class OrderController extends CommonController{
 		$this->count_status_7 = $count_status_7;
 		$this->count_status_11 = $count_status_11;
 		$this->count_status_14 = $count_status_14;
+
+
+		$s_id = 1 ;
+
+		if(SELLERUID != 1)
+		{
+			$seller_info = M('seller')->field('s_role_id')->where( array('s_id' => SELLERUID ) )->find();
+
+			$perms_arr = M('eaterplanet_ecommerce_perm_role')->where( array('id' => $seller_info['s_role_id']) )->find();
+
+			$perms1 = str_replace('.','/',$perms_arr['perms2']);
+
+			$perms2 = explode(",", $perms1);
+
+			if(in_array("user/user/index", $perms2)){
+				$s_id = 1 ;
+			} else {
+				$s_id = 0 ;
+			}
+
+		}
+		$this->s_id = $s_id;
 
 
 		$open_feier_print =  D('Home/Front')->get_config_by_name('open_feier_print');
@@ -2924,14 +3162,14 @@ class OrderController extends CommonController{
 			{
 				if( empty($data['shop_buy_distance']) || $data['shop_buy_distance'] <= 0  )
 				{
-					show_json(0, array('message' => '开启限制购买距离，购买距离不能为空') );
+					show_json(0, array('msg' => '开启限制购买距离，购买距离不能为空') );
 				}
 			}
 			if( $data['open_auto_delete'] == 1)
 			{
 				if( empty($data['auto_cancle_order_time']) || $data['auto_cancle_order_time'] <= 0  )
 				{
-					show_json(0, array('message' => '开启自动取消订单，自动取消订单时间不能为空') );
+					show_json(0, array('msg' => '开启自动取消订单，自动取消订单时间不能为空') );
 				}
 			}
 
@@ -2940,7 +3178,7 @@ class OrderController extends CommonController{
 			{
 				if( empty($data['auto_recive_order_time']) || $data['auto_recive_order_time'] <= 0  )
 				{
-					show_json(0, array('message' => '开启系统自动签收，自动签收天数不能为空') );
+					show_json(0, array('msg' => '开启系统自动签收，自动签收天数不能为空') );
 				}
 			}
 
@@ -2951,7 +3189,7 @@ class OrderController extends CommonController{
 
 			if( $open_aftersale == 1 && ($open_aftersale_time ==0 || empty($open_aftersale_time) ) )
 			{
-				show_json(0, array('message' => '开启售后期，请填写售后期天数') );
+				show_json(0, array('msg' => '开启售后期，请填写售后期天数') );
 			}
 
 
@@ -2959,11 +3197,11 @@ class OrderController extends CommonController{
 			{
 				if( empty($data['redis_host']))
 				{
-					show_json(0, array('message' => '开启redis服务，redis-host不能为空') );
+					show_json(0, array('msg' => '开启redis服务，redis-host不能为空') );
 				}
 				if( empty($data['redis_port']))
 				{
-					show_json(0, array('message' => '开启redis服务，redis-port不能为空') );
+					show_json(0, array('msg' => '开启redis服务，redis-port不能为空') );
 				}
 			}
 
@@ -3033,7 +3271,7 @@ class OrderController extends CommonController{
 
 					if($res != 0)
 					{
-						show_json(0, array('message' => '添加易联云打印机失败！'));
+						show_json(0, array('msg' => '添加易联云打印机失败！'));
 					}
 				}
 
@@ -3042,6 +3280,7 @@ class OrderController extends CommonController{
 			}
 			//----end
 
+			$data['is_print_auto'] = $data['is_print_auto'] == 1 ? 0 : 1;
 			$data['is_print_cancleorder'] = isset($data['is_print_cancleorder']) ? $data['is_print_cancleorder'] : 0;
 			$data['is_print_admin_cancleorder'] = isset($data['is_print_admin_cancleorder']) ? $data['is_print_admin_cancleorder'] : 0;
 			$data['is_print_dansupply_order'] = isset($data['is_print_dansupply_order']) ? $data['is_print_dansupply_order'] : 0;
@@ -3291,7 +3530,34 @@ class OrderController extends CommonController{
 
 				if($order_info['delivery'] != 'express')
 				{
-					$data = array();
+
+
+					/*if($order_info['delivery'] == 'localtown_delivery'){
+
+						M('eaterplanet_ecommerce_order')->where( array('order_id' => $order_info['order_id']) )->save( array('order_status_id' => 4,'express_time' => time(),  'express_tuanz_time' => time()) );
+
+						//todo ... send member msg goods is ing
+
+						$history_data = array();
+						$history_data['order_id'] = $order_info['order_id'];
+						$history_data['order_status_id'] = 4;
+						$history_data['notify'] = 0;
+						$history_data['comment'] = '订单配送中，使用表格发货';
+						$history_data['date_added'] = time();
+
+						M('eaterplanet_ecommerce_order_history')->add( $history_data );
+
+						D('Home/LocaltownDelivery')->change_distribution_order_state( $order_info['order_id'], 0, 1);
+
+						M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_info['order_id']) )->save( array('delivery_type' => 1) );
+
+						D('Home/Frontorder')->send_order_operate($order_info['order_id']);
+						//给配送员发送公众号消息
+						$count = D('Seller/Redisorder')->set_distribution_delivery_message($order_info['order_id']);
+
+					}else{*/
+					if($order_info['delivery'] != 'localtown_delivery' && $order_info['delivery'] != 'hexiao') {
+						$data = array();
 
 					$data['express_time'] = time();
 
@@ -3306,7 +3572,9 @@ class OrderController extends CommonController{
 					$history_data['comment'] = '订单配送中，使用表格发货';
 					$history_data['date_added'] = time();
 
-					M('eaterplanet_ecommerce_order_history')->add($history_data);
+						M('eaterplanet_ecommerce_order_history')->add($history_data);
+					}
+					//}
 				}
 			}
 			//TODO...发送已经发货给团长的消息通知
@@ -3331,8 +3599,19 @@ class OrderController extends CommonController{
 
 		if($type =='mult_member_receive_order' && $order_info['order_status_id'] == 4  )
 		{
-			//批量用户确认收货
-			D('Home/Frontorder')->receive_order($order_info['order_id'], true);
+			/*if($order_info['delivery'] == 'localtown_delivery'){
+				M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_info['order_id']) )->save( array('state' => 4,'orderdistribution_id'=> -1) );
+
+				D('Seller/Order')->receive_order($order_info['order_id']);
+
+				M('eaterplanet_ecommerce_order_history')->where( array('order_id' => $order_info['order_id'],'order_status_id' => 6) )->save( array( 'comment' => '系统自动收货，等待结算佣金') );
+
+			}else{*/
+			if($order_info['delivery'] != 'localtown_delivery' && $order_info['delivery'] != 'hexiao') {
+				//批量用户确认收货
+				D('Home/Frontorder')->receive_order($order_info['order_id'], true);
+			}
+			//}
 		}
 
 		if( empty($quene_order_list) )
@@ -4417,6 +4696,21 @@ class OrderController extends CommonController{
 			}else{
 				show_json(0,  array('msg' => '顺丰同城参数未配置！' ) );
 			}
+		}else if($data_type == 'make'){
+            if(isset($config_data['localtown_mk_token']) && !empty($config_data['localtown_mk_token']) ){
+                show_json(1);
+            }else{
+                show_json(0,  array('msg' => '码科配送参数未配置！' ) );
+            }
+        }else if($data_type == 'ele'){
+			if(isset($config_data['localtown_ele_app_id']) && !empty($config_data['localtown_ele_secret_key']) && isset($config_data['localtown_ele_store_code']) && !empty($config_data['localtown_ele_transport_name'])
+					&& !empty($config_data['localtown_ele_transport_address']) && !empty($config_data['localtown_ele_transport_longitude'])  && !empty($config_data['localtown_ele_transport_latitude'])
+					&& !empty($config_data['localtown_ele_transport_tel']) && !empty($config_data['localtown_ele_position_source'])
+			){
+				show_json(1);
+			}else{
+				show_json(0,  array('msg' => '蜂鸟即配平台参数未配置！' ) );
+			}
 		}
 	}
 
@@ -4437,8 +4731,14 @@ class OrderController extends CommonController{
 		if(empty($order_info)){
 			show_json(0,  array('msg' => '订单不存在' ) );
 		}
+		//店铺地址
+		if($order_info['store_id'] > 0) {
+			$store_data = D('Home/Order')->getOrderStoreAddress($order_info);
+			$order_info['store_data'] = $store_data;
+		}
+
 		//商品信息
-		$sql = "select og.goods_id,og.name as goods_name,og.quantity,og.rela_goodsoption_valueid,g.weight as goods_weight  from "
+		$sql = "select og.goods_id,og.name as goods_name,og.quantity,og.price,og.total,og.rela_goodsoption_valueid,g.weight as goods_weight  from "
 				. C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og left join  ".C('DB_PREFIX')."eaterplanet_ecommerce_goods as g on og.goods_id=g.id "
 				." where og.order_id = ".$order_id;
 		$goods_list = M()->query($sql);
@@ -4491,6 +4791,8 @@ class OrderController extends CommonController{
 				$express_info = array();
 				$express_info['delivery_fee'] = $delivery_fee;
 				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
 				show_json(1);
 			}else{//失败
 				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
@@ -4511,6 +4813,64 @@ class OrderController extends CommonController{
 				$express_info['delivery_order_id'] = $delivery_order_id;
 				$express_info['delivery_bill_id'] = $delivery_bill_id;
 				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+				show_json(1);
+			}else{//失败
+				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
+			}
+		}else if( $data_type == 'make' )
+		{
+			//$store_data = D('Home/Make')->getOrderStoreAddress($order_info);
+            $result = D('Home/Make')->addOrder($order_info);
+
+            if( $result['code'] == 0 )
+			{
+
+               //码科订单号
+                $delivery_order_id = $result['order_number'];
+
+                $express_info = array();
+                $express_info['delivery_fee'] = $order_distribution_info['shipping_money'];
+                $express_info['delivery_order_id'] = $delivery_order_id;
+                $express_info['delivery_bill_id'] = '';
+
+                D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+                D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+
+                show_json(1);
+
+
+			}else{
+                show_json(0,  array('msg' => $result['message'] ) );
+			}
+
+		}else if($data_type == 'ele'){//蜂鸟即配
+			$eleDistribution = new \Lib\Localtown\EleDistribution();
+
+			$order_code = build_order_no(session('user_auth.uid'));
+			//保存蜂鸟即配商户订单号
+			M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->save(['order_code'=>$order_code]);
+			$order_info['order_num_alias'] = $order_code;
+			$result = $eleDistribution->addOrder($order_info);
+			if($result['status'] == 1){//成功
+				//配送费用
+				$delivery_fee = round($result['result']['total_price']/100,2);
+				//蜂鸟即配订单号
+				$delivery_order_id = $result['result']['sf_order_id'];
+				//蜂鸟即配运单号
+				$delivery_bill_id = $result['result']['sf_bill_id'];
+
+				$express_info = array();
+				$express_info['delivery_fee'] = $delivery_fee;
+				$express_info['delivery_order_id'] = $delivery_order_id;
+				$express_info['delivery_bill_id'] = $delivery_bill_id;
+				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
 				show_json(1);
 			}else{//失败
 				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
@@ -4536,6 +4896,13 @@ class OrderController extends CommonController{
 		if(empty($order_info)){
 			show_json(0,  array('msg' => '订单不存在' ) );
 		}
+
+		//店铺地址
+		if($order_info['store_id'] > 0) {
+			$store_data = D('Home/Order')->getOrderStoreAddress($order_info);
+			$order_info['store_data'] = $store_data;
+		}
+
 		//商品信息
 		$sql = "select og.goods_id,og.name as goods_name,og.quantity,og.rela_goodsoption_valueid,g.weight as goods_weight  from "
 				. C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og left join  ".C('DB_PREFIX')."eaterplanet_ecommerce_goods as g on og.goods_id=g.id "
@@ -4586,8 +4953,11 @@ class OrderController extends CommonController{
 			$result = $imdada->reAddOrder($order_info);
 			if($result['status'] == 1){//成功
 				//配送费用
-				$delivery_fee = $result['result']['fee'];
+				$delivery_fee = array();
+				$delivery_fee['delivery_fee'] = $result['result']['fee'];
 				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$delivery_fee);
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
 				show_json(1);
 			}else{//失败
 				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
@@ -4608,11 +4978,63 @@ class OrderController extends CommonController{
 				$express_info['delivery_order_id'] = $delivery_order_id;
 				$express_info['delivery_bill_id'] = $delivery_bill_id;
 				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
 				show_json(1);
 			}else{//失败
 				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
 			}
-		}else{
+		}else if($data_type == 'make')
+		{
+            $result = D('Home/Make')->addOrder($order_info);
+
+            if( $result['code'] == 0 )
+            {
+                //码科订单号
+                $delivery_order_id = $result['order_number'];
+
+                $express_info = array();
+                $express_info['delivery_fee'] = $order_distribution_info['shipping_money'];
+                $express_info['delivery_order_id'] = $delivery_order_id;
+                $express_info['delivery_bill_id'] = '';
+
+                D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+                D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+
+                show_json(1);
+            }else{
+                show_json(0,  array('msg' => $result['message'] ) );
+            }
+		}else if($data_type == 'ele'){//蜂鸟即配
+			$eleDistribution = new \Lib\Localtown\EleDistribution();
+			$order_code = build_order_no(session('user_auth.uid'));
+			//保存蜂鸟即配商户订单号
+			M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->save(['order_code'=>$order_code]);
+			$order_info['order_num_alias'] = $order_code;
+			$result = $eleDistribution->addOrder($order_info);
+			if($result['status'] == 1){//成功
+				//配送费用
+				$delivery_fee = round($result['result']['total_price']/100,2);
+				//蜂鸟即配订单号
+				$delivery_order_id = $result['result']['sf_order_id'];
+				//蜂鸟即配运单号
+				$delivery_bill_id = $result['result']['sf_bill_id'];
+
+				$express_info = array();
+				$express_info['delivery_fee'] = $delivery_fee;
+				$express_info['delivery_order_id'] = $delivery_order_id;
+				$express_info['delivery_bill_id'] = $delivery_bill_id;
+				D('Seller/Order')->do_send_localtown_thirth_delivery($order_id,$data_type,$express_info);
+
+				$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+				D('Seller/Supply')->update_supply_commission($order_id,$shipping_money["shipping_money"]);
+				show_json(1);
+			}else{//失败
+				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
+			}
+		}
+		else{
 			show_json(0,  array('msg' => '不存在第三方配送' ) );
 		}
 	}
@@ -4654,7 +5076,11 @@ class OrderController extends CommonController{
 					$other_data = array();
 					$other_data['deduct_fee'] = $deduct_fee+$orderdistribution_info['deduct_fee'];
 					$other_data['cancel_reason'] = $cancel_reason;
+					$other_data['now_deduct_fee'] = $deduct_fee;
 					D('Seller/Order')->do_cancel_thirth_delivery_order($order_id,$data_type,$other_data);
+
+					$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+					D('Seller/Supply')->thirth_cancel_supply_commission($order_id,$shipping_money["shipping_money"]);
 					show_json(1);
 				}else{//失败
 					show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
@@ -4668,7 +5094,63 @@ class OrderController extends CommonController{
 						$cancel_reason = "商家取消";
 					}
 					$other_data['cancel_reason'] = $cancel_reason;
+
+					$deduct_fee = round($result['result']['deduction_detail']['deduction_fee']/100,2);
+					$other_data['deduct_fee'] = $deduct_fee+$orderdistribution_info['deduct_fee'];
+					$other_data['now_deduct_fee'] = $deduct_fee;
+
 					D('Seller/Order')->do_cancel_thirth_delivery_order($order_id,$data_type,$other_data);
+					$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+					D('Seller/Supply')->thirth_cancel_supply_commission($order_id,$shipping_money["shipping_money"]);
+
+					show_json(1);
+				}else{//失败
+					show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
+				}
+			}else if( $data_type == 'make' )
+			{
+				//$orderdistribution_info
+				$third_order_id = $orderdistribution_info['third_order_id'];
+				$result = D('Home/Make')->cancelOrder( $third_order_id );
+
+				if( $result['code'] == 0 )
+				{
+                    $other_data = array();
+                    if(empty($cancel_reason)){
+                        $cancel_reason = "商家取消";
+                    }
+                    $other_data['cancel_reason'] = $cancel_reason;
+
+                    $deduct_fee = 0;
+                    $other_data['deduct_fee'] = $deduct_fee+$orderdistribution_info['deduct_fee'];
+                    $other_data['now_deduct_fee'] = $deduct_fee;
+
+                    D('Seller/Order')->do_cancel_thirth_delivery_order($order_id,$data_type,$other_data);
+                    $shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+					//D('Seller/Supply')->thirth_cancel_supply_commission($order_id,$shipping_money["shipping_money"]);
+					//load_model_class('supply')->thirth_cancel_supply_commission($order_id,$shipping_money["shipping_money"]);
+                    show_json(1);
+				}else{
+                    show_json(0,  array('msg' => $result['message'] ) );
+				}
+			}else if($data_type == 'ele'){
+				$eleDistribution = new \Lib\Localtown\EleDistribution();
+				$result = $eleDistribution->cancelOrder($orderdistribution_info,$cancel_reason_id,$cancel_reason);
+				if($result['status'] == 1){//成功
+					$other_data = array();
+					if(empty($cancel_reason)){
+						$cancel_reason = "商家取消";
+					}
+					$other_data['cancel_reason'] = $cancel_reason;
+
+					$deduct_fee = round($result['result']['deduction_detail']['deduction_fee']/100,2);
+					$other_data['deduct_fee'] = $deduct_fee+$orderdistribution_info['deduct_fee'];
+					$other_data['now_deduct_fee'] = $deduct_fee;
+
+					D('Seller/Order')->do_cancel_thirth_delivery_order($order_id,$data_type,$other_data);
+					$shipping_money =  M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->find();
+					D('Seller/Supply')->thirth_cancel_supply_commission($order_id,$shipping_money["shipping_money"]);
+
 					show_json(1);
 				}else{//失败
 					show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
@@ -4711,6 +5193,8 @@ class OrderController extends CommonController{
 			$third_name = '达达平台';
 		}else if($distribution_type == 'sf'){
 			$third_name = '顺丰同城';
+		}else if($distribution_type == 'make'){
+            $third_name = '码科配送';
 		}else if($distribution_type == 'uupt'){
 			$third_name = 'UU跑腿';
 		}else if($distribution_type == 'dianwoda'){

@@ -41,14 +41,14 @@ class GoodsCategoryModel extends Model{
 		{
 			//更新
 			M('eaterplanet_ecommerce_goods_category')->where( array('id' => $data['id']) )->save($ins_data);
-
+			D('Seller/Operatelog')->addOperateLog('goods','修改商品分类--'.$data['name']);
 			$id = $data['id'];
 		} else{
 			$ins_data['pid'] = $data['pid'];
 			//新增
 
 			M('eaterplanet_ecommerce_goods_category')->add($ins_data);
-
+			D('Seller/Operatelog')->addOperateLog('goods','新增商品分类--'.$data['name']);
 
 		}
 
@@ -238,6 +238,64 @@ class GoodsCategoryModel extends Model{
 			}
 		}
 		return implode(',',$cate_list);
+	}
+
+	/**
+	 * 全部分类树形结构
+	 */
+	public function getThreeCategory($enabled = false,$cate_type = 'normal')
+	{
+		$allcategory = array();
+		$category = M('eaterplanet_ecommerce_goods_category')->where(' cate_type="'.$cate_type.'" ')->order('pid ASC, sort_order DESC')->select();
+
+		if (empty($category)) {
+			return array();
+		}
+
+		foreach ($category as $pk=>&$c) {
+			if (empty($c['pid'])) {
+				$c['level'] = 1;
+				$c['category_id_1'] = $c['id'];
+				$c['category_id_2'] = 0;
+				$c['category_id_3'] = 0;
+				if (!empty($c['logo'])) { $c['logo'] = tomedia($c['logo']);}
+				$allcategory[$pk] = $c;
+
+				foreach ($category as $sec_k=>&$c1) {
+					if ($c1['pid'] != $c['id']) {
+						continue;
+					}
+
+					$c1['level'] = 2;
+					$c1['category_id_1'] = $c['id'];
+					$c1['category_id_2'] = $c1['id'];
+					$c1['category_id_3'] = 0;
+					if (!empty($c1['logo'])) { $c1['logo'] = tomedia($c1['logo']);}
+					$allcategory[$pk]['child_list'][$sec_k] = $c1;
+
+					foreach ($category as $three_k=>&$c2) {
+						if ($c2['pid'] != $c1['id']) {
+							continue;
+						}
+
+						$c2['level'] = 3;
+						$c2['category_id_1'] = $c['id'];
+						$c2['category_id_2'] = $c1['id'];
+						$c2['category_id_3'] = $c2['id'];
+						if (!empty($c2['logo'])) { $c2['logo'] = tomedia($c2['logo']);}
+						$allcategory[$pk]['child_list'][$sec_k]['child_list'][$three_k] = $c2;
+					}
+
+					unset($c2);
+				}
+
+				unset($c1);
+			}
+
+			unset($c);
+		}
+
+		return $allcategory;
 	}
 }
 ?>

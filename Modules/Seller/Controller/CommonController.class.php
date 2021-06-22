@@ -144,6 +144,7 @@ class CommonController extends Controller{
 			$access_controller_action[] = 'goods_mult_tpl';
 			$access_controller_action[] = 'goods_settop';
 			$access_controller_action[] = 'goods_ajax_batchcates';
+			$access_controller_action[] = 'goods_copy';
 			$access_controller_action[] = 'communityhead_query_head';
 			$access_controller_action[] = 'goods_ajax_batchcates_headgroup';
 			$access_controller_action[] = 'goods_ajax_batchtime';

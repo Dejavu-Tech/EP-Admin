@@ -134,13 +134,13 @@ class PermController extends CommonController{
 	protected function perm_user()
 	{
 		return array(
-			'text'          => '会员管理',
+			'text'          => '客户管理',
 			'user'           => array(
-				'index'   => '会员列表',
-				'userjia' => '虚拟会员管理',
-				'config' => '会员设置',
-				'usergroup' => '会员分组',
-				'userlevel' => '会员等级',
+				'index'   => '客户列表',
+				'userjia' => '虚拟客户管理',
+				'config' => '客户设置',
+				'usergroup' => '客户分组',
+				'userlevel' => '客户等级',
 				)
 		);
 
@@ -149,7 +149,7 @@ class PermController extends CommonController{
 	protected function perm_distribution()
 	{
 		return array(
-			'text'          => '会员分销',
+			'text'          => '客户分销',
 			'distribution'           => array(
 				'distribution'   => '分销列表',
 				'distributionorder'   => '订单管理',
@@ -179,6 +179,21 @@ class PermController extends CommonController{
 		);
 	}
 
+	protected function perm_salesroom()
+	{
+		return array(
+			'text'          => '门店管理',
+				'salesroom'     => array(
+				'index'   => '门店列表',
+				),
+				'salesroom_member'     => array(
+				'index'   => '核销人员',
+				),
+				'salesroom_order'     => array(
+				'index'   => '核销订单记录',
+				)
+		);
+	}
 
 
 	protected function perm_supply()
@@ -229,6 +244,33 @@ class PermController extends CommonController{
 				)
 		);
 	}
+	//应用
+	protected function application_group()
+	{
+		return array(
+			'text'          => '应用',
+				'application'     => array(
+                    'index'   => '应用管理',
+
+				)
+		);
+	}
+
+	//小程序交易组件
+	protected function mptrade_group()
+	{
+		return array(
+			'text'       => '小程序交易组件',
+                'application'     => array(
+                    'index'   => '应用管理',
+                ),
+				'mptradecomponts'     => array(
+                    'index'   => '商品列表',
+                    'config'   => '设置',
+
+				)
+		);
+	}
 
 	protected function perm_delivery()
 	{
@@ -250,6 +292,7 @@ class PermController extends CommonController{
 				'reports'     => array(
 					'index'   => '营业数据',
 					'datastatics'   => '数据统计',
+					'goodstatics'   => '毛利统计',
 					'communitystatics'   => '团长统计',
 				)
 		);
@@ -293,6 +336,7 @@ class PermController extends CommonController{
 				),
 				'configindex'     => array(
 					'slider'   => '幻灯片',
+					'category'   => '分类广告',
 					'notice'   => '公告',
 					'navigat'   => '导航图标',
 					'noticesetting'   => '公告设置',
@@ -316,7 +360,6 @@ class PermController extends CommonController{
 				'copyright'     => array(
 					'index'   => '版权说明',
 					'about'   => '关于我们',
-					'ordericon'   => '关于我们',
 					'account'   => '后台账户',
 				),
 				'wxlive'     => array(
@@ -370,14 +413,14 @@ class PermController extends CommonController{
 
 				'recipe'     => array(
 					'index'   => '菜谱',
-					'equity'   => '菜谱分类',
-					'order'   => '幻灯片',
+					'category'   => '菜谱分类',
+					'slider'   => '幻灯片',
 					'config'   => '菜谱设置',
 				),
 
 				'vipcard'     => array(
 					'index'   => '会员卡',
-					'equity'   => '会员权益',
+					'equity'   => '会员卡权益',
 					'order'   => '购买会员订单',
 					'config'   => '会员卡设置',
 				),
@@ -389,7 +432,28 @@ class PermController extends CommonController{
                 'add'   => '广告图片',
 
             ),
-
+			'presale' => array(
+                'index'   => '预售商品管理',
+				'slider'   => '幻灯片',
+				'order'   => '预售订单',
+				'statistics'   => '预售统计',
+				'config'   => '活动设置',
+            ),
+			'shopdiy' => array(
+                'index'   => '首页装修',
+            ),
+			'invitegift' => array(
+                'config'   => '邀新有礼',
+				'record'   => '邀新记录',
+				'poster_background'   => '邀新海报',
+            ),
+			'virtualcard' => array(
+                'index'   => '礼品卡管理',
+				'exchange_code'   => '兑换码管理',
+				'orderlist'   => '订单管理',
+				'exchangerecord'   => '兑换记录',
+				'config'   => '活动设置',
+            ),
 		);
 	}
 
@@ -411,9 +475,12 @@ class PermController extends CommonController{
 						'user' => $this->perm_user(),
 						'distribution' => $this->perm_distribution(),
 						'communityhead' => $this->perm_communityhead(),
+						'salesroom' => $this->perm_salesroom(),
 						'supply' => $this->perm_supply(),
 						'marketing' => $this->perm_marketing(),
 						'article' => $this->perm_article(),
+						//'application' => $this->application_group(),
+						'mptradecomponts' => $this->mptrade_group(),
 						'delivery' => $this->perm_delivery(),
 						'reports' => $this->perm_data_static(),
 						'group' => $this->perm_group(),

@@ -11,6 +11,7 @@
  * @author    Albert.Z
  *
  */
+
 namespace Seller\Controller;
 
 class GoodsController extends CommonController{
@@ -60,6 +61,8 @@ class GoodsController extends CommonController{
 
 		$type =  I('get.type','all');
 
+        $goods_type = I('get.goods_type', 'normal');
+
 		//---begin
 
 		$count_common_where ="";
@@ -84,36 +87,58 @@ class GoodsController extends CommonController{
 			}
 		}
 
+        $goods_stock_notice = D('Home/Front')->get_config_by_name('goods_stock_notice');
+        $goods_stock_notice = intval($goods_stock_notice);
+        if( empty($goods_stock_notice) )
+        {
+            $goods_stock_notice = 0;
+        }
 
-		$all_count =  D('Seller/Goods')->get_goods_count(" and type = 'normal' {$count_common_where}");//全部商品数量
 
-		$onsale_count = D('Seller/Goods')->get_goods_count(" and grounding = 1 and type = 'normal' {$count_common_where}");//出售中商品数量
-		$getdown_count = D('Seller/Goods')->get_goods_count(" and grounding = 0 and type = 'normal' {$count_common_where}");//已下架商品数量
-		$warehouse_count = D('Seller/Goods')->get_goods_count(" and grounding = 2 and type = 'normal' {$count_common_where}");//仓库商品数量
-		$recycle_count = D('Seller/Goods')->get_goods_count(" and grounding = 3 and type = 'normal' {$count_common_where}");//回收站商品数量
 
-		$waishen_count = D('Seller/Goods')->get_goods_count(" and grounding = 4 and type = 'normal' {$count_common_where}");//审核商品数量
-		$unsuccshen_count = D('Seller/Goods')->get_goods_count(" and grounding = 5 and type = 'normal' {$count_common_where}");//拒绝审核商品数量
+        if($goods_type != 'normal' && $goods_type == 'presale')
+        {
+            $all_count =  D('Seller/Goods')->get_goods_count(" and type = 'presale' {$count_common_where}");//全部商品数量
+            $onsale_count = D('Seller/Goods')->get_goods_count(" and grounding = 1 and type = 'presale' {$count_common_where}");//出售中商品数量
+            $getdown_count = D('Seller/Goods')->get_goods_count(" and grounding = 0 and type = 'presale' {$count_common_where}");//已下架商品数量
+            $warehouse_count = D('Seller/Goods')->get_goods_count(" and grounding = 2 and type = 'presale' {$count_common_where}");//仓库商品数量
+            $recycle_count = D('Seller/Goods')->get_goods_count(" and grounding = 3 and type = 'presale' {$count_common_where}");//回收站商品数量
+            $waishen_count = D('Seller/Goods')->get_goods_count(" and grounding = 4 and type = 'presale' {$count_common_where}");//审核商品数量
+            $unsuccshen_count = D('Seller/Goods')->get_goods_count(" and grounding = 5 and type = 'presale' {$count_common_where}");//拒绝审核商品数量
+            $stock_notice_count = D('Admin/Goods')->get_goods_count(" and grounding = 1 and total<= {$goods_stock_notice} and type = 'presale' {$count_common_where}  ");//回收站商品数量
+
+        }
+        else if($goods_type != 'normal' && $goods_type == 'virtualcard')
+        {
+            //礼品卡
+            $all_count =  D('Seller/Goods')->get_goods_count(" and type = 'virtualcard' {$count_common_where}");//全部商品数量
+            $onsale_count = D('Seller/Goods')->get_goods_count(" and grounding = 1 and type = 'virtualcard' {$count_common_where}");//出售中商品数量
+            $getdown_count = D('Seller/Goods')->get_goods_count(" and grounding = 0 and type = 'virtualcard' {$count_common_where}");//已下架商品数量
+            $warehouse_count = D('Seller/Goods')->get_goods_count(" and grounding = 2 and type = 'virtualcard' {$count_common_where}");//仓库商品数量
+            $recycle_count = D('Seller/Goods')->get_goods_count(" and grounding = 3 and type = 'virtualcard' {$count_common_where}");//回收站商品数量
+            $waishen_count = D('Seller/Goods')->get_goods_count(" and grounding = 4 and type = 'virtualcard' {$count_common_where}");//审核商品数量
+            $unsuccshen_count = D('Seller/Goods')->get_goods_count(" and grounding = 5 and type = 'virtualcard' {$count_common_where}");//拒绝审核商品数量
+            $stock_notice_count = D('Admin/Goods')->get_goods_count(" and grounding = 1 and total<= {$goods_stock_notice} and type = 'virtualcard' {$count_common_where}  ");//回收站商品数量
+
+        }
+        else{
+            $all_count =  D('Seller/Goods')->get_goods_count(" and type = 'normal' {$count_common_where}");//全部商品数量
+            $onsale_count = D('Seller/Goods')->get_goods_count(" and grounding = 1 and type = 'normal' {$count_common_where}");//出售中商品数量
+            $getdown_count = D('Seller/Goods')->get_goods_count(" and grounding = 0 and type = 'normal' {$count_common_where}");//已下架商品数量
+            $warehouse_count = D('Seller/Goods')->get_goods_count(" and grounding = 2 and type = 'normal' {$count_common_where}");//仓库商品数量
+            $recycle_count = D('Seller/Goods')->get_goods_count(" and grounding = 3 and type = 'normal' {$count_common_where}");//回收站商品数量
+            $waishen_count = D('Seller/Goods')->get_goods_count(" and grounding = 4 and type = 'normal' {$count_common_where}");//审核商品数量
+            $unsuccshen_count = D('Seller/Goods')->get_goods_count(" and grounding = 5 and type = 'normal' {$count_common_where}");//拒绝审核商品数量
+            $stock_notice_count = D('Admin/Goods')->get_goods_count(" and grounding = 1 and total<= {$goods_stock_notice} and type = 'normal' {$count_common_where}  ");//回收站商品数量
+
+        }
+
+
 
 		$this->assign('waishen_count',$waishen_count);
 		$this->assign('unsuccshen_count',$unsuccshen_count);
 
-		//recycle 仓库
 
-		//--end
-		//recycle 仓库 get_config_by_name($name)
-
-
-
-		$goods_stock_notice = D('Home/Front')->get_config_by_name('goods_stock_notice');
-		$goods_stock_notice = intval($goods_stock_notice);
-		if( empty($goods_stock_notice) )
-		{
-			$goods_stock_notice = 0;
-		}
-
-
-		$stock_notice_count = D('Admin/Goods')->get_goods_count(" and grounding = 1 and total<= {$goods_stock_notice} and type = 'normal' {$count_common_where}  ");//回收站商品数量
 		//goods_stock_notice
 
 
@@ -130,6 +155,15 @@ class GoodsController extends CommonController{
 		$psize = 20;
 
 		$condition = ' WHERE  g.type = "normal" ';
+
+        //预售
+        if($goods_type != 'normal' && $goods_type == 'presale')
+        {
+            $condition = ' WHERE  g.type = "presale" ';
+        }else if( $goods_type != 'normal' && $goods_type == 'virtualcard' )
+        {
+            $condition = ' WHERE  g.type = "virtualcard" ';
+        }
 
 		$sqlcondition = "";
 
@@ -164,9 +198,9 @@ class GoodsController extends CommonController{
 			$condition .= " and g.grounding != 3 ";
 		}
 
-		$keyword = I('get.keyword','');
-
-		$this->keyword = $keyword;
+		$keyword = I('get.keyword','','addslashes');
+		$keyword2 = stripslashes($keyword);
+		$this->keyword = $keyword2;
 
 		if (!(empty($keyword))) {
 			$condition .= " AND (g.`id` = '{$keyword}' or g.`goodsname` LIKE '%{$keyword}%' or g.`codes` LIKE '%{$keyword}%' ) ";
@@ -292,7 +326,7 @@ class GoodsController extends CommonController{
 
 			foreach ($list as $key => &$value ) {
 
-				$price_arr = D('Home/pingoods')->get_goods_price($value['id']);
+				$price_arr = D('Home/pingoods')->get_goods_price($value['id'], -888 );
                 $value['codes'] = "\t".$value['codes']."\t";
 				$value['price_arr'] = $price_arr;
 
@@ -472,7 +506,7 @@ class GoodsController extends CommonController{
 		$this->supply_add_goods_shenhe = $supply_add_goods_shenhe;
 		$this->supply_edit_goods_shenhe = $supply_edit_goods_shenhe;
 
-		$this->assign('is_open_shenhe',$is_open_shenhe);
+		$this->is_open_shenhe = $is_open_shenhe;
 		//--
 
 		//团长分组
@@ -530,7 +564,7 @@ class GoodsController extends CommonController{
 			{
 				$is_distributionsale = false;
 			}
-			if( isset($config_data['supply_add_goods_shenhe']) && $config_data['supply_add_goods_shenhe'] == 1 )
+			if( isset($config_data['supply_add_goods_shenhe']) && $config_data['supply_add_goods_shenhe'] == 0 )
 			{
 				$is_supply_add_goods_shenhe = false;
 			}
@@ -558,7 +592,6 @@ class GoodsController extends CommonController{
 
     /**
      * 商品列表到处excel
-     * @author 刘鑫芮 2020-03-02
      * @param $list 商品列表集合数据 全部-根据where 条件搜索的
      * */
     public function goods_listexcel($list) {
@@ -848,6 +881,7 @@ class GoodsController extends CommonController{
 
 		foreach ($items as $item) {
 			M('eaterplanet_ecommerce_goods_tags')->where( array('id' => $item['id']) )->save( array('state' => intval($_GPC['state'])) );
+			D('Seller/Operatelog')->addOperateLog('goods','修改商品标签状态--'.$item['tagname']);
 		}
 
 		show_json(1, array('url' => U('goods/goodstag')));
@@ -878,6 +912,7 @@ class GoodsController extends CommonController{
 
 		foreach ($items as $item) {
 			M('eaterplanet_ecommerce_goods_tags')->where( array('id' => $item['id']) )->delete();
+			D('Seller/Operatelog')->addOperateLog('goods','删除商品标签--'.$item['tagname']);
 		}
 
 		show_json(1, array('url' => U('goods/goodstag')));
@@ -1242,7 +1277,7 @@ class GoodsController extends CommonController{
 
 			}
 
-
+			D('Seller/Operatelog')->addOperateLog('goods','修改商品设置--统一时间');
 
 			//--end
 
@@ -1273,21 +1308,19 @@ class GoodsController extends CommonController{
 	public function addgoods()
 	{
 		if (IS_POST) {
-			$_GPC = I('request.');
+            $_GPC = I('request.');
+            $type = isset($_GPC['type']) ? $_GPC['type'] : 'normal';
+            if (!isset($_GPC['thumbs']) || empty($_GPC['thumbs'])) {
+                show_json(0, array('message' => '商品图片必须上传', 'url' => $_SERVER['HTTP_REFERER']));
+                die();
+            }
+            if (!empty($_GPC['has_mb_level_buy'])) {
 
-			if( !isset($_GPC['thumbs']) || empty($_GPC['thumbs']) )
-			{
-				show_json(0, array('message' => '商品图片必须上传' ,'url' => $_SERVER['HTTP_REFERER']) );
-				die();
-			}
-			if(!empty($_GPC['has_mb_level_buy'])){
-
-				foreach($_GPC['discount'] as $val)
-					{
-						if(preg_match("/^(([1-9]\d?)|100)$/", $val)){
+                foreach ($_GPC['discount'] as $val) {
+                    if (preg_match("/^(([1-9]\d?)|100)$/", $val)) {
 
 						}else{
-							show_json(0,  array('message' => '请按照提示设置独立会员等级折扣' ,'url' => $_SERVER['HTTP_REFERER']) );
+							show_json(0,  array('message' => '请按照提示设置独立客户等级折扣' ,'url' => $_SERVER['HTTP_REFERER']) );
 							die();
 						}
 
@@ -1299,8 +1332,8 @@ class GoodsController extends CommonController{
 				//商户开启同城
 				$sup_isopen_localtown_delivery =  D('Home/Front')->get_supply_config_by_name('isopen_localtown_delivery',$_GPC['supply_id']);
 
-				if(  empty($sup_isopen_localtown_delivery) )
-				{
+                if (empty($sup_isopen_localtown_delivery)) {
+
 					$supply_name  = M('eaterplanet_ecommerce_supply')->field('shopname,type')->where( array('id' => $_GPC['supply_id'] ) )->find();
 					if($supply_name["type"] == 1 ){
 							show_json(0, array('message' => '独立商户('.$supply_name["shopname"].')没有开启同城配送，此商品无法开启同城配送' ,'url' => $_SERVER['HTTP_REFERER']) );
@@ -1311,38 +1344,108 @@ class GoodsController extends CommonController{
 				}
 
 
-			}
-			$supply_id = $_GPC['supply_id'];
-			if (defined('ROLE') && ROLE == 'agenter' )
-			{
-				$supper_info = get_agent_logininfo();
-				$supply_id = $supper_info['id'];
-			}
+            }
+            $supply_id = $_GPC['supply_id'];
+            if (defined('ROLE') && ROLE == 'agenter') {
+                $supper_info = get_agent_logininfo();
+                $supply_id = $supper_info['id'];
+            }
 
-			if($_GPC['is_only_hexiao'] == 1){
-				if(!empty($supply_id)){
-					$salesroom_count  = M('eaterplanet_ecommerce_salesroom')->where( array('supply_id' => $supply_id,'state'=>1 ) )->count();
-					if($salesroom_count == 0){
-						$supply_name  = M('eaterplanet_ecommerce_supply')->field('shopname,type')->where( array('id' => $supply_id ) )->find();
-						if($supply_name["type"] == 1 ){
-							show_json(0, array('message' => '独立商户('.$supply_name["shopname"].')没有创建门店信息，此商品无法开启到店核销' ,'url' => $_SERVER['HTTP_REFERER']) );
-							die();
-						}
-					}
-				}
-				if($_GPC['hx_expire_type'] == 1){//指定过期时间
-					if($_GPC['hx_auto_off'] == 1){//设置自动下架时间
-						if(empty($_GPC['hx_auto_off_time']) || !is_numeric($_GPC['hx_auto_off_time']) || floatval($_GPC['hx_auto_off_time']) <= 0){
-							show_json(0, array('message' => '提前自动下架商品时间不能为空且必须为大于0数字' ,'url' => $_SERVER['HTTP_REFERER']) );
-							die();
-						}
-					}
-				}
-			}
+            if ($_GPC['is_only_hexiao'] == 1) {
+                if (!empty($supply_id)) {
+                    $salesroom_count = M('eaterplanet_ecommerce_salesroom')->where(array('supply_id' => $supply_id, 'state' => 1))->count();
+                    if ($salesroom_count == 0) {
+                        $supply_name = M('eaterplanet_ecommerce_supply')->field('shopname,type')->where(array('id' => $supply_id))->find();
+                        if ($supply_name["type"] == 1) {
+                            show_json(0, array('message' => '独立商户(' . $supply_name["shopname"] . ')没有创建门店信息，此商品无法开启到店核销', 'url' => $_SERVER['HTTP_REFERER']));
+                            die();
+                        }
+                    }
+                }
+                if ($_GPC['grounding'] == 1) {//上架商品
+                    if ($_GPC['hx_expire_type'] == 1) {//指定过期时间
+                        $hx_expire_end_time = $_GPC['hx_expire_end_time'];
+                        if (strtotime($hx_expire_end_time) < time()) {
+                            show_json(0, array('message' => '核销过期时间小于当前时间，商品不能上架', 'url' => $_SERVER['HTTP_REFERER']));
+                            die();
+                        }
+                    }
+                }
+                if ($_GPC['hx_expire_type'] == 1) {//指定过期时间
+                    if ($_GPC['hx_auto_off'] == 1) {//设置自动下架时间
+                        if (empty($_GPC['hx_auto_off_time']) || !is_numeric($_GPC['hx_auto_off_time']) || floatval($_GPC['hx_auto_off_time']) <= 0) {
+                            show_json(0, array('message' => '提前自动下架商品时间不能为空且必须为大于0数字', 'url' => $_SERVER['HTTP_REFERER']));
+                            die();
+                        }
+                    }
+                }
 
+            }
 
+            //礼品卡
+            if (isset($_GET['goods_type']) && $_GET['goods_type'] == 'virtualcard')
+            {
+                $type = 'virtualcard';
+                $virtual_code_id = I('post.virtual_code_id');
+                if( !isset($virtual_code_id) || $virtual_code_id <= 0 )
+                {
+                    show_json(0, array('message' => '礼品卡商品必须关联兑换码' ,'url' => $_SERVER['HTTP_REFERER']) );
+                    die();
+                }
+            }
 
-			D('Seller/Goods')->addgoods();
+            //预售时间判断
+            if( isset($_GET['goods_type']) && $_GET['goods_type'] == 'presale' )
+            {
+				$type = 'presale';
+                //预售时间限制判断
+                $time = I('post.time');
+
+                $post_begin_time = strtotime( $time['start'] );
+                $post_end_time = strtotime( $time['end'] );
+
+                $presale_ding_time = I('post.presale_ding_time');//定金支付时间
+                $presale_ding_time_start = strtotime( $presale_ding_time['start'] ); //开始
+                $presale_ding_time_end = strtotime( $presale_ding_time['end'] );//结束
+
+                if($presale_ding_time_start < $post_begin_time )
+                {
+                    show_json(0, array('message' => '预售定金支付开始时间不能小于团购开始时间' ,'url' => $_SERVER['HTTP_REFERER']) );
+                    die();
+                }
+                if($presale_ding_time_end > $post_end_time  )
+                {
+                    show_json(0, array('message' => '预售定金支付结束时间不能大于团购结束时间' ,'url' => $_SERVER['HTTP_REFERER']) );
+                    die();
+                }
+
+                $presale_sendorder_type = I('post.presale_sendorder_type');
+                if($presale_sendorder_type  == 1)
+                {
+                    $presale_sendorder_afterday = I('post.presale_sendorder_afterday');
+                    if( $presale_sendorder_afterday < 1 )
+                    {
+                        show_json(0, array('message' => '预售购买后几日发货必须是大于0的整数' ,'url' => $_SERVER['HTTP_REFERER']) );
+                        die();
+                    }
+                }else if( $presale_sendorder_type == 0 )
+                {
+                    //预计发货时间 必须大于 定金尾款付款时间
+                    $presale_sendorder_datetime = I('post.presale_sendorder_datetime');
+                    $presale_sendorder_datetime = strtotime($presale_sendorder_datetime.' 00:00:00');
+                    if( $presale_sendorder_datetime < $presale_ding_time_start )
+                    {
+                        show_json(0, array('message' => '固定发货日期必须大于定金支付开始时间' ,'url' => $_SERVER['HTTP_REFERER']) );
+                        die();
+                    }
+
+                }
+            }
+
+			//判断预售价格是否合理设置，不是bug价格
+            $this->checkPresaleAddGoods();
+
+            D('Seller/Goods')->addgoods($type);
 
 			$http_refer = S('HTTP_REFERER');
 
@@ -1411,6 +1514,13 @@ class GoodsController extends CommonController{
 		$item['hexiao_effect_begin_time'] = time();
 		$item['hexiao_effect_end_time'] = time() + 86400;
 
+		//预售begin
+		if( isset($_GET['goods_type']) && $_GET['goods_type'] == 'presale' )
+        {
+            $item['presale_ding_time_start'] = time();
+            $item['presale_ding_time_end'] = time() + 86400;
+        }
+        //预售end
 
 		$delivery_type_express =  $config_data['delivery_type_express'];
 
@@ -1543,7 +1653,18 @@ class GoodsController extends CommonController{
 		$this->is_head_takegoods = $is_head_takegoods;
 
 
+        //判断是否兑换卡 begin
+        if( isset($_GET['goods_type']) && $_GET['goods_type'] == 'virtualcard' )
+        {
+            //商品选中的兑换编组
+            $goods_virtualcode_id = 0;
+            $this->goods_virtualcode_id = $goods_virtualcode_id;
 
+            //可用的兑换编组列表
+            $virtualcard_code_list = D('Seller/VirtualCard')->getCanUseVirtualcardCodes(  );
+            $this->virtualcard_code_list = $virtualcard_code_list;
+        }
+        //end
 
         $isopen_localtown_delivery = isset($config_data['isopen_localtown_delivery']) && $config_data['isopen_localtown_delivery'] == 1 ? 1 : 0;
 		$this->isopen_localtown_delivery = $isopen_localtown_delivery;
@@ -1558,11 +1679,75 @@ class GoodsController extends CommonController{
 		//$is_default_vipmember_buy = isset($config_data['is_default_vipmember_buy']) && $config_data['is_default_vipmember_buy'] == 1 ? 1 : 0;
 		//$this->is_default_vipmember_buy = $is_default_vipmember_buy;
 
-		//获取会员等级列表
+		//获取客户等级列表
 		$member_level_ist = M('eaterplanet_ecommerce_member_level')->order('id asc')->select();
 		$this->member_level_ist = $member_level_ist;
 		$this->display();
 	}
+
+
+    public function checkPresaleAddGoods()
+    {
+        if( isset($_POST['presale_type']) )
+        {
+            $presale_type = I('post.presale_type', 0);//预售方式 0 定金
+            $presale_ding_money = I('post.presale_ding_money', 0);//定金金额，判断定金金额不能大于商品价格
+            $presale_deduction_money = I('post.presale_deduction_money');//定金可抵扣金额
+
+            if( $presale_type == 0)
+            {
+                $goods_price = I('post.price', 0);
+                $hasoption = I('post.hasoption');
+                if( intval($hasoption) == 1 )
+                {
+                    //取规格最低价格
+                    $option_ids_arr = I('post.option_ids');
+
+                    foreach($option_ids_arr as $val)
+                    {
+                        $productprice = I('post.option_productprice_' . $val);
+                        if( $goods_price > $productprice )
+                        {
+                            $goods_price = $productprice;
+                        }
+                    }
+                }
+                if( $presale_ding_money > $goods_price )
+                {
+                    show_json(0 , ['message' => '预售方式为定金，定金金额不能大于商品单价' ] );
+                }
+                if( $presale_deduction_money > $goods_price )
+                {
+                    show_json(0 , ['message' => '预售方式为定金，定金膨胀金不能大于商品单价' ] );
+                }
+				if($presale_deduction_money != 0){
+					if( $presale_deduction_money < $presale_ding_money )
+					{
+						show_json(0 , ['message' => '定金膨胀金不能小于定金金额' ] );
+					}
+				}
+
+				//付费价格
+				$is_open_vipcard_buy = D('Home/Front')->get_config_by_name('is_open_vipcard_buy');
+				$is_take_vipcard = I('post.is_take_vipcard', 0);
+				$card_price =I ('post.card_price'); //付费会员价
+				if( !empty($is_open_vipcard_buy) && $is_open_vipcard_buy == 1 && $is_take_vipcard == 1){
+					if( $presale_ding_money > $card_price )
+					{
+						show_json(0 , ['message' => '预售方式为定金，定金金额不能大于付费会员价' ] );
+					}
+					if( $presale_deduction_money > $card_price )
+					{
+						show_json(0 , ['message' => '预售方式为定金，定金膨胀金不能大于付费会员价' ] );
+					}
+				}
+
+
+            }
+
+        }
+    }
+
 
 
 	public function category_enabled()
@@ -1583,7 +1768,7 @@ class GoodsController extends CommonController{
 		foreach ($items as $item) {
 
 			M('eaterplanet_ecommerce_goods_category')->where( array('id' => $item['id']) )->save(  array('is_show' => intval($enabled)) );
-
+			D('Seller/Operatelog')->addOperateLog('goods','修改分类首页显示--'.$item['name']);
 		}
 
 		show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
@@ -1605,7 +1790,7 @@ class GoodsController extends CommonController{
 		foreach ($items as $item) {
 
 			M('eaterplanet_ecommerce_goods_category')->where( array('id' => $item['id']) )->save( array('is_type_show' => intval($_GPC['enabled']))  );
-
+			D('Seller/Operatelog')->addOperateLog('goods','修改分类独立分类页显示--'.$item['name']);
 		}
 		show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
 	}
@@ -1625,7 +1810,7 @@ class GoodsController extends CommonController{
 
 		foreach ($items as $item) {
 			M('eaterplanet_ecommerce_goods_category')->where( array('id' => $item['id']) )->save( array('is_express_show' => intval($_GPC['enabled']))  );
-
+			D('Seller/Operatelog')->addOperateLog('goods','修改分类仅快递商品页显示--'.$item['name']);
 		}
 		show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
 	}
@@ -1745,6 +1930,9 @@ class GoodsController extends CommonController{
 			$data['is_show_list_count'] = intval($data['is_show_list_count']);
 			$data['is_show_comment_list'] = intval($data['is_show_comment_list']);
 			$data['is_show_new_buy'] = intval($data['is_show_new_buy']);
+			$data['is_new_buy_limit'] = intval($data['is_new_buy_limit']);
+			$new_buy_limit_num = !empty(intval($data['new_buy_limit_num'])) ? $data['new_buy_limit_num'] : 1;
+			$data['new_buy_limit_num'] = intval($new_buy_limit_num);
 			$data['is_show_ziti_time'] = intval($data['is_show_ziti_time']);
 
 
@@ -1776,7 +1964,7 @@ class GoodsController extends CommonController{
 			$data['goods_details_title_bg'] = save_media($data['goods_details_title_bg']);
 
 			D('Seller/Config')->update($data);
-
+			D('Seller/Operatelog')->addOperateLog('goods','修改商品设置--基本设置');
 			//旧的的域名
 			$present_realm_name = I('post.present_realm_name');
 			//修改商品详情域名
@@ -1796,6 +1984,8 @@ class GoodsController extends CommonController{
 				$list = M()->execute($sql);
 				if(empty($list)){
 					show_json(0, array('message' => '商品详情中不存在该域名，或者不能填写相同的域名，请检查后重新填写'));
+				}else{
+					D('Seller/Operatelog')->addOperateLog('goods','替换商品详情域名--原域名：'.$present_realm_name.'新域名：'.$new_realm_name );
 				}
 			}
 
@@ -1869,6 +2059,7 @@ class GoodsController extends CommonController{
 
 		foreach ($items as $item) {
 			M('eaterplanet_ecommerce_spec')->where( array('id' => $item['id']) )->delete();
+			D('Seller/Operatelog')->addOperateLog('goods','删除商品规格--'.$item['name']);
 		}
 
 		show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
@@ -1946,6 +2137,7 @@ class GoodsController extends CommonController{
 				show_json(0, array('message' => '分类排序已存在，请重新填写'));
 			}
 			M('eaterplanet_ecommerce_goods_category')->where( array('id' => $cate_id) )->save(array('sort_order'=>$sort_order));
+			D('Seller/Operatelog')->addOperateLog('goods','修改商品分类排序--'.$item['name']);
 			show_json(1, array('url' => U('goods/goodscategory')));
 		}else{
 			show_json(0, array('message' => '分类信息错误'));
@@ -1961,7 +2153,7 @@ class GoodsController extends CommonController{
 
 
 		M('eaterplanet_ecommerce_goods_category')->where( "id={$id} or pid={$id}" )->delete();
-
+		D('Seller/Operatelog')->addOperateLog('goods','删除商品分类--'.$item['name']);
 
 		//m('shop')->getCategory(true);
 		show_json(1, array('url' => U('goods/goodscategory')));
@@ -3568,15 +3760,71 @@ class GoodsController extends CommonController{
 		}
 
 		if (!(in_array($type, array('goodsname', 'price','index_sort','is_index_show', 'total','grounding', 'goodssn', 'productsn', 'displayorder')))) {
-			show_json(0, array('message' => '参数错误'));
+			show_json(0, array('message' => '参数错误','url' => $_SERVER['HTTP_REFERER'] ));
 		}
 
+		if($type =='total'){
+			$value=str_replace('.00','',$value);
+			if(preg_match("/^[1-9][0-9]*$/" ,$value) || $value == 0 ) {
 
-		$items = M('eaterplanet_ecommerce_goods')->field('id')->where( array('id' => array('in', $id)) )->select();
+			}else{
+				show_json(3);
+
+			}
+		}
+
+		$items = M('eaterplanet_ecommerce_goods')->field('id,goodsname')->where( array('id' => array('in', $id)) )->select();
 
 		foreach ($items as $item ) {
+			if($type == 'grounding' && $value == 1){//上架判断核销商品过期时间
+				$goods_hexiao = M('eaterplanet_ecommerce_goods_salesroombase')->field('is_only_hexiao,hexiao_type,hx_expire_type,hx_expire_end_time')->where( array('goods_id' => $item['id']) )->find();
+				if(!empty($goods_hexiao) && $goods_hexiao['is_only_hexiao'] == 1 && $goods_hexiao['hx_expire_type'] == 1){
+					if($goods_hexiao['hx_expire_end_time'] < time()){
+						show_json(0, array('message' => '核销过期时间小于当前时间，商品不能上架','url' => $_SERVER['HTTP_REFERER'] ));
+					}
+				}
+			}
+
 			M('eaterplanet_ecommerce_goods')->where( array('id' => $item['id']) )->save( array($type => $value) );
 
+			if($type == 'goodsname'){
+				D('Seller/Operatelog')->addOperateLog('goods','商品修改名称--'.$item['goodsname']);
+			}elseif($type == 'price'){
+				D('Seller/Operatelog')->addOperateLog('goods','商品修改价格--'.$item['goodsname']);
+			}elseif($type == 'index_sort'){
+				D('Seller/Operatelog')->addOperateLog('goods','商品修改排序序号--'.$item['goodsname']);
+			}elseif($type == 'is_index_show'){
+				D('Seller/Operatelog')->addOperateLog('goods','商品修改首页推荐--'.$item['goodsname']);
+			}elseif($type == 'total'){
+				D('Seller/Operatelog')->addOperateLog('goods','商品修改库存--'.$item['goodsname']);
+			}elseif($type == 'grounding'){
+				if($value == 1){
+					if (defined('ROLE') && ROLE == 'agenter' )
+					{
+						$supply_add_goods_shenhe = D('Home/Front')->get_config_by_name('supply_add_goods_shenhe');
+						if($supply_add_goods_shenhe == 1 )
+						{
+							M('eaterplanet_ecommerce_goods')->where( array('id' => $item['id']) )->save(  array('grounding' => 4) );
+						}
+					}
+					//D('Seller/Operatelog')->addOperateLog('goods','商品上架--'.$item['goodsname']);
+				}
+				if($value == 0){
+					D('Seller/Operatelog')->addOperateLog('goods','商品下架--'.$item['goodsname']);
+				}
+				if($value == 2){
+					D('Seller/Operatelog')->addOperateLog('goods','商品放入仓库中--'.$item['goodsname']);
+				}
+				if($value == 3){
+					D('Seller/Operatelog')->addOperateLog('goods','商品放入回收站--'.$item['goodsname']);
+				}
+			}elseif($type == 'goodssn'){
+
+			}elseif($type == 'productsn'){
+
+			}elseif($type == 'displayorder'){
+
+			}
 
 			if($type == 'total')
 			{
@@ -3616,6 +3864,7 @@ class GoodsController extends CommonController{
 			M('eaterplanet_ecommerce_goods_option_item_value')->where( array('goods_id' => $item['id']) )->delete();
 			M('eaterplanet_ecommerce_goods_to_category')->where( array('goods_id' => $item['id']) )->delete();
 			M('eaterplanet_ecommerce_good_common')->where( array('goods_id' => $item['id']) )->delete();
+			D('Seller/Operatelog')->addOperateLog('goods','永久删除商品--'.$item['goodsname']);
 		}
         sellerLog('删除了['.$items['goodsname'].']商品', 3);
 
@@ -3643,7 +3892,7 @@ class GoodsController extends CommonController{
 						if(preg_match("/^(([1-9]\d?)|100)$/", $val)){
 
 						}else{
-							show_json(0,  array('message' => '请按照提示设置独立会员等级折扣' ,'url' => $_SERVER['HTTP_REFERER']) );
+							show_json(0,  array('message' => '请按照提示设置独立客户等级折扣' ,'url' => $_SERVER['HTTP_REFERER']) );
 							die();
 						}
 
@@ -3685,6 +3934,15 @@ class GoodsController extends CommonController{
 						}
 					}
 				}
+				if($_GPC['grounding'] == 1){//上架商品
+					if($_GPC['hx_expire_type'] == 1){//指定过期时间
+						$hx_expire_end_time = $_GPC['hx_expire_end_time'];
+						if(strtotime($hx_expire_end_time) < time()){
+							show_json(0, array('message' => '核销过期时间小于当前时间，商品不能上架' ,'url' => $_SERVER['HTTP_REFERER']) );
+							die();
+						}
+					}
+				}
 				if($_GPC['hx_expire_type'] == 1){//指定过期时间
 					if($_GPC['hx_auto_off'] == 1){//设置自动下架时间
 						if(empty($_GPC['hx_auto_off_time']) || !is_numeric($_GPC['hx_auto_off_time']) || floatval($_GPC['hx_auto_off_time']) <= 0){
@@ -3695,6 +3953,69 @@ class GoodsController extends CommonController{
 				}
 			}
 
+            //礼品卡
+            if (isset($_GET['goods_type']) && $_GET['goods_type'] == 'virtualcard')
+            {
+                $type = 'virtualcard';
+                $virtual_code_id = I('post.virtual_code_id');
+                if( !isset($virtual_code_id) || $virtual_code_id <= 0 )
+                {
+                    show_json(0, array('message' => '礼品卡商品必须关联兑换码' ,'url' => $_SERVER['HTTP_REFERER']) );
+                    die();
+                }
+            }
+
+			//预售时间判断
+			if( isset($_GET['goods_type']) && $_GET['goods_type'] == 'presale' )
+            {
+                //预售时间限制判断
+                $time = I('post.time');
+
+                $post_begin_time = strtotime( $time['start'] );
+                $post_end_time = strtotime( $time['end'] );
+
+                $presale_ding_time = I('post.presale_ding_time');//定金支付时间
+                $presale_ding_time_start = strtotime( $presale_ding_time['start'] ); //开始
+                $presale_ding_time_end = strtotime( $presale_ding_time['end'] );//结束
+
+                if($presale_ding_time_start < $post_begin_time )
+                {
+                    show_json(0, array('message' => '预售定金支付开始时间不能小于团购开始时间' ,'url' => $_SERVER['HTTP_REFERER']) );
+                    die();
+                }
+                if($presale_ding_time_end > $post_end_time  )
+                {
+                    show_json(0, array('message' => '预售定金支付结束时间不能大于团购结束时间' ,'url' => $_SERVER['HTTP_REFERER']) );
+                    die();
+                }
+
+                $presale_sendorder_type = I('post.presale_sendorder_type');
+                if($presale_sendorder_type  == 1)
+                {
+                    $presale_sendorder_afterday = I('post.presale_sendorder_afterday');
+                    if( $presale_sendorder_afterday < 1 )
+                    {
+                        show_json(0, array('message' => '预售购买后几日发货必须是大于0的整数' ,'url' => $_SERVER['HTTP_REFERER']) );
+                        die();
+                    }
+                }else if( $presale_sendorder_type == 0 )
+                {
+                    //预计发货时间 必须大于 定金尾款付款时间
+                    $presale_sendorder_datetime = I('post.presale_sendorder_datetime');
+                    $presale_sendorder_datetime = strtotime($presale_sendorder_datetime.' 00:00:00');
+                    if( $presale_sendorder_datetime < $presale_ding_time_start )
+                    {
+                        show_json(0, array('message' => '固定发货日期必须大于定金支付开始时间' ,'url' => $_SERVER['HTTP_REFERER']) );
+                        die();
+                    }
+
+                }
+
+            }
+
+			//判断预售价格是否合理设置，不是bug价格
+            $this->checkPresaleAddGoods();
+
 			D('Seller/Goods')->modify_goods();
 
 			$http_refer = S('HTTP_REFERER');
@@ -3704,7 +4025,7 @@ class GoodsController extends CommonController{
             sellerLog('编辑了['.$goods['goodsname'].']商品', 3);
 
 
-			D('Seller/Operatelog')->addOperateLog('detailed_list','编辑商品--'.$goods['goodsname']);
+			D('Seller/Operatelog')->addOperateLog('goods','编辑商品--'.$goods['goodsname']);
 
             show_json(1, array('message'=>'修改商品成功！','url' => $http_refer ));
 		}
@@ -3835,6 +4156,37 @@ class GoodsController extends CommonController{
 			}
 		}
 
+		//判断是否预售 begin
+        if( $item['type'] == 'presale' )
+        {
+            $goods_presale = M('eaterplanet_ecommerce_goods_presale')->where(['goods_id' => $id ])->find();
+            if( !empty($goods_presale) )
+            {
+                unset( $goods_presale['id'] );
+                unset( $goods_presale['goods_id'] );
+                unset( $goods_presale['addtime'] );
+                foreach( $goods_presale as $k => $val )
+                {
+                    $item[ $k ] = $val;
+                }
+            }
+        }
+        //end
+        //判断是否兑换卡 begin
+        if( $item['type'] == 'virtualcard' )
+        {
+            //商品选中的兑换编组
+            $goods_virtualcode_info = D('Seller/VirtualCard')->getGoodsVirtualCardInfoByGoodsId( $id );
+
+            $goods_virtualcode_id = $goods_virtualcode_info['code_id'];
+            $this->goods_virtualcode_id = $goods_virtualcode_id;
+
+            //可用的兑换编组列表
+            $virtualcard_code_list = D('Seller/VirtualCard')->getCanUseVirtualcardCodes(  );
+            $this->virtualcard_code_list = $virtualcard_code_list;
+        }
+        //end
+
 		$this->community_head_commission_info = $community_head_commission_info;
 		$this->item = $item;
 		$this->community_head_level = $community_head_level;
@@ -3861,7 +4213,7 @@ class GoodsController extends CommonController{
 
 		$this->is_open_goods_relative_goods = $is_open_goods_relative_goods;
 
-		//获取会员等级列表
+		//获取客户等级列表
 		$member_level_ist = M('eaterplanet_ecommerce_member_level')->order('id asc')->select();
 
 		//商户权限begin
@@ -3957,7 +4309,19 @@ class GoodsController extends CommonController{
 		$supply_is_open_localtown_distribution = isset($config_data['supply_is_open_localtown_distribution']) && $config_data['supply_is_open_localtown_distribution'] == 1 ? 1 : 0;
 		$this->supply_is_open_localtown_distribution = $supply_is_open_localtown_distribution;
 
-		$this->display('Goods/addgoods');
+
+        if( $item['type'] == 'presale' )
+        {
+            $this->display('Presale/addgoods');
+        }
+        else if( $item['type'] == 'virtualcard' )
+        {
+            $this->display('Virtualcard/addgoods');
+        }
+        else{
+            $this->display('Goods/addgoods');
+        }
+
 	}
 
 	public function labelfile()
@@ -4082,7 +4446,7 @@ class GoodsController extends CommonController{
 
 
            D('Seller/Config')->update($data);
-
+            D('Seller/Operatelog')->addOperateLog('goods','修改商品设置--工商资质');
            show_json(1, array('url' => $_SERVER['HTTP_REFERER'] ));
         }
 

@@ -114,8 +114,8 @@ class GoodsModel extends Model{
 
 		$post_data = array();
 		$post_data_goods = array();
-
-		$post_data_goods['goodsname'] = I('post.goodsname','','trim');
+		$goodsname = I('post.goodsname','','trim');
+		$post_data_goods['goodsname'] = addslashes($goodsname);
 		$post_data_goods['subtitle'] = I('post.subtitle','','trim');
 		$post_data_goods['grounding'] = I('post.grounding');
 		$post_data_goods['type'] = $type;
@@ -165,8 +165,8 @@ class GoodsModel extends Model{
 		}
 
 		$goods_id = M('eaterplanet_ecommerce_goods')->add($post_data_goods);
-		D('Seller/Operatelog')->addOperateLog('detailed_list','添加商品--'.$post_data_goods['goodsname']);
-		
+		D('Seller/Operatelog')->addOperateLog('goods','添加商品--'.$post_data_goods['goodsname']);
+
 		//find type ,modify somethings TODO...
 
 		$pin_type_arr = array(
@@ -224,6 +224,15 @@ class GoodsModel extends Model{
 
 			$pin_data['begin_time'] = strtotime( $time['start'] );
 			$pin_data['end_time'] = strtotime( $time['end'] );
+
+			//拼团返利设置
+			$pin_data['is_pintuan_rebate'] = I('post.is_pintuan_rebate',0);
+			if($pin_data['is_pintuan_rebate'] == 1){
+				$pin_data['random_delivery_count'] = I('post.random_delivery_count',0);
+				$pin_data['rebate_reward'] = I('post.rebate_reward', 1);
+				$pin_data['reward_point'] = I('post.reward_point', 0);
+				$pin_data['reward_balance'] = I('post.reward_balance', 0);
+			}
 
 			M('eaterplanet_ecommerce_good_pin')->add( $pin_data );
 
@@ -362,7 +371,11 @@ class GoodsModel extends Model{
 
 			if (defined('ROLE') && ROLE == 'agenter' )
 			{
-
+				$supply_can_goods_sendscore =  D('Home/Front')->get_config_by_name('supply_can_goods_sendscore');
+				if($supply_can_goods_sendscore == 1){
+					$post_data_common['is_modify_sendscore'] = I('post.is_modify_sendscore',0);
+					$post_data_common['send_socre'] = I('post.send_socre');
+				}
 			}else{
 				$post_data_common['is_modify_sendscore'] = I('post.is_modify_sendscore',0);
 				$post_data_common['send_socre'] = I('post.send_socre');
@@ -690,8 +703,16 @@ class GoodsModel extends Model{
 					}
 				}
 			}
+			if( isset($_POST['presale_type']) )
+            {
+                D('Seller/GoodsPresale')->modifyGoodsPresale( $goods_id );
+            }
 
-
+            //虚拟卡密
+            if( isset($_POST['is_virtualcard_goods']) && $_POST['is_virtualcard_goods'] == 1 )
+            {
+                D('Seller/VirtualCard')->modifyGoodsVirtualCard( $goods_id );
+            }
 
 			//规格插入
 			$post_data_commiss = array();
@@ -1233,17 +1254,17 @@ class GoodsModel extends Model{
 		$item['salesroom_list'] = $item_salesroom;
 		return $item;
 	}
-	
+
 	/**
      * @desc 获取商品规格值关联id数组
      * @param $goods_id
      * @return array
      */
-	 
+
 	public function getGoodsOptionItemValueSpecIdsArray( $goods_id )
     {
 		$option_item_value_collects = M('eaterplanet_ecommerce_goods_option_item_value')->where(array('goods_id' => $goods_id))->select();
-		
+
         $data = array();
         if( !empty($option_item_value_collects) )
         {
@@ -1254,8 +1275,8 @@ class GoodsModel extends Model{
         }
         return $data;
     }
-	
-	
+
+
 	/**
      * @desc 删除不在规定数组中的商品规格值关联数据
      * @param $option_item_value_ids_arr
@@ -1294,8 +1315,8 @@ class GoodsModel extends Model{
         }
 
     }
-	
-	
+
+
 	public function modify_goods($type = 'normal')
 	{
 		global $_W;
@@ -1327,7 +1348,7 @@ class GoodsModel extends Model{
 		$post_data_goods['buyagain'] = I('post.buyagain');
 		$post_data_goods['buyagain_condition'] = I('post.buyagain_condition');
 		$post_data_goods['buyagain_sale'] = I('post.buyagain_sale');
-		
+
 		if (defined('ROLE') && ROLE == 'agenter' ) {
 			$supply_can_distribution_sale =  D('Home/Front')->get_config_by_name('supply_can_distribution_sale');
 			if($supply_can_distribution_sale == 1){
@@ -1336,7 +1357,7 @@ class GoodsModel extends Model{
 		}else{
 			$post_data_goods['is_all_sale'] =  I('post.is_all_sale',0,'intval');
 		}
-		
+
 		$post_data_goods['is_seckill'] =  I('post.is_seckill',0,'intval');
 
 		$post_data_goods['is_take_vipcard'] =  I('post.is_take_vipcard',0,'intval');
@@ -1411,6 +1432,15 @@ class GoodsModel extends Model{
 			$time_st = I('post.time');
 			$pin_data['begin_time'] = strtotime( $time_st['start'].':00' );
 			$pin_data['end_time'] = strtotime( $time_st['end'].':00' );
+
+			//拼团返利设置
+			$pin_data['is_pintuan_rebate'] = I('post.is_pintuan_rebate',0);
+			if($pin_data['is_pintuan_rebate'] == 1){
+				$pin_data['random_delivery_count'] = I('post.random_delivery_count',0);
+				$pin_data['rebate_reward'] = I('post.rebate_reward', 1);
+				$pin_data['reward_point'] = I('post.reward_point', 0);
+				$pin_data['reward_balance'] = I('post.reward_balance', 0);
+			}
 
 			M('eaterplanet_ecommerce_good_pin')->where( array('goods_id' => $goods_id) )->save( $pin_data );
 
@@ -1622,7 +1652,11 @@ class GoodsModel extends Model{
 
 		if (defined('ROLE') && ROLE == 'agenter' )
 		{
-
+			$supply_can_goods_sendscore =  D('Home/Front')->get_config_by_name('supply_can_goods_sendscore');
+			if($supply_can_goods_sendscore == 1){
+				$post_data_common['is_modify_sendscore'] = I('post.is_modify_sendscore',0);
+				$post_data_common['send_socre'] = I('post.send_socre');
+			}
 		}else{
 			$post_data_common['is_modify_sendscore'] = I('post.is_modify_sendscore',0);
 			$post_data_common['send_socre'] = I('post.send_socre');
@@ -1842,15 +1876,15 @@ class GoodsModel extends Model{
 			$spec_id = I('post.spec_id');
 			$option_ids_arr = I('post.option_ids');
 			//begin 换算多规格算法
-			
+
 			$option_item_value_ids_arr = $this->getGoodsOptionItemValueSpecIdsArray( $goods_id );
-			
-			
+
+
 			$this->deleteGoodsOptionValueSpecUninArray( $option_item_value_ids_arr, $option_ids_arr , $goods_id );
-			
+
 			//end  换算多规格算法
-			
-			
+
+
 			if( !empty($spec_id)  )
 			{
 				$option_order = 1;
@@ -2160,6 +2194,19 @@ class GoodsModel extends Model{
 		$post_data_commiss['commission3_pay'] = I('post.commission3_pay');
 
 		M('eaterplanet_ecommerce_good_commiss')->add( $post_data_commiss );
+
+		//变更预售商品begin
+        $new_goods_type_info = M('eaterplanet_ecommerce_goods')->field('type')->where( ['id' => $goods_id ] )->find();
+        if($new_goods_type_info['type'] == 'presale' )
+        {
+            D('Seller/GoodsPresale')->modifyGoodsPresale( $goods_id );
+        }
+        //end
+        //虚拟卡密
+        if( isset($_POST['is_virtualcard_goods']) && $_POST['is_virtualcard_goods'] == 1 )
+        {
+            D('Seller/VirtualCard')->modifyGoodsVirtualCard( $goods_id );
+        }
 
 		D('Seller/Redisorder')->sysnc_goods_total($goods_id);
 

@@ -32,25 +32,28 @@ class WeprogramController extends CommonController{
 		if (IS_POST) {
 
 			$data = I('request.parameter');
-			$data['wepro_share_title'] = trim($data['wepro_share_title']);
+			$param['wepro_share_title'] = trim($data['wepro_share_title']);
 
 
-			$data['wepro_appid'] = trim($data['wepro_appid']);
-			$data['wepro_appsecret'] = trim($data['wepro_appsecret']);
-			$data['wepro_partnerid'] = trim($data['wepro_partnerid']);
-			$data['wepro_key'] = trim($data['wepro_key']);
+			$param['wepro_appid'] = trim($data['wepro_appid']);
+			$param['wepro_appsecret'] = trim($data['wepro_appsecret']);
+			$param['wepro_partnerid'] = trim($data['wepro_partnerid']);
+			$param['wepro_key'] = trim($data['wepro_key']);
+			$param['is_open_yinpay'] =$data['is_open_yinpay'] ? trim($data['is_open_yinpay']) : 0;
 
-            if(trim($data['wechat_apiclient_cert_pem'])) $param['wechat_apiclient_cert_pem'] = trim($data['wechat_apiclient_cert_pem']);
-            if(trim($data['wechat_apiclient_key_pem'])) $param['wechat_apiclient_key_pem'] = trim($data['wechat_apiclient_key_pem']);
+            if(!empty($data['wechat_apiclient_cert_pem'])){ $param['wechat_apiclient_cert_pem'] = trim($data['wechat_apiclient_cert_pem']);}
+            if(!empty($data['wechat_apiclient_key_pem'])){ $param['wechat_apiclient_key_pem'] = trim($data['wechat_apiclient_key_pem']);}
 
-            if(trim($data['weapp_apiclient_cert_pem'])) $param['weapp_apiclient_cert_pem'] = trim($data['weapp_apiclient_cert_pem']);
-            if(trim($data['weapp_apiclient_key_pem'])) $param['weapp_apiclient_key_pem'] = trim($data['weapp_apiclient_key_pem']);
-
-            if(trim($data['app_apiclient_cert_pem'])) $param['app_apiclient_cert_pem'] = trim($data['app_apiclient_cert_pem']);
-            if(trim($data['app_apiclient_key_pem'])) $param['app_apiclient_key_pem'] = trim($data['app_apiclient_key_pem']);
+            if(!empty($data['sup_wechat_apiclient_cert_pem'])){ $param['sup_wechat_apiclient_cert_pem'] = trim($data['sup_wechat_apiclient_cert_pem']);}
+            if(!empty($data['sup_wechat_apiclient_key_pem'])){ $param['sup_wechat_apiclient_key_pem'] = trim($data['sup_wechat_apiclient_key_pem']);}
 
 
-            D('Seller/Config')->update($data);
+            if(!empty($data['wepro_sub_mch_id'])){ $param['wepro_sub_mch_id'] = trim($data['wepro_sub_mch_id']);}
+			if(!empty($data['wepro_fuwu_appid'])){ $param['wepro_fuwu_appid'] = trim($data['wepro_fuwu_appid']);}
+            if(!empty($data['wepro_fuwu_partnerid'])){ $param['wepro_fuwu_partnerid'] = trim($data['wepro_fuwu_partnerid']);}
+			if(!empty($data['sup_wepro_key'])){ $param['sup_wepro_key'] = trim($data['sup_wepro_key']);}
+
+            D('Seller/Config')->update($param);
 
 			show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
 		}
@@ -93,7 +96,7 @@ class WeprogramController extends CommonController{
 
 		if($_GPC['type']=='2'){
 
-			//获取选中的会员id
+			//获取选中的客户id
 			$data = array();
 			$data['userids'] = $_GPC['limit_user_list'];
 
@@ -109,12 +112,12 @@ class WeprogramController extends CommonController{
 				show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
 			}
 
-			//查询下会员id
+			//查询下客户id
 			$send = M('eaterplanet_ecommerce_config')->where( array('name' => 'platform_send_info_member') )->find();
 
 			if(!empty($send['value'])){
 
-				//in语句查询会员对应信息
+				//in语句查询客户对应信息
 				$list = array();
 				if( !empty($send['value']) )
 				{
@@ -209,7 +212,7 @@ class WeprogramController extends CommonController{
 			//单人
 			if( empty($limit_user_list)  )
 			{
-				show_json(0, '请选择会员');
+				show_json(0, '请选择客户');
 				die();
 			}
 
@@ -218,7 +221,7 @@ class WeprogramController extends CommonController{
 			//用户组
 			if( empty($member_group_id) || $member_group_id <= 0 )
 			{
-				show_json(0, '请选择会员组');
+				show_json(0, '请选择客户组');
 				die();
 			}
 		}else if( $all_msg_send_type == 3 )
@@ -265,7 +268,7 @@ class WeprogramController extends CommonController{
 
 			if( empty($membercount) || $membercount == 0 )
 			{
-				show_json(0, '暂无会员可发送消息');
+				show_json(0, '暂无客户可发送消息');
 				die();
 			}
 

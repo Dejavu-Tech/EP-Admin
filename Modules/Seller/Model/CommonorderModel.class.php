@@ -199,7 +199,8 @@ class CommonorderModel{
 	**/
 	public function refund_one_order( $order_id ,$is_back_buyscore = 0)
 	{
-		$order_goods_list = M('eaterplanet_ecommerce_order_goods')->field('order_goods_id,quantity,shipping_fare')->where( array('order_id' => $order_id , 'is_refund_state' => 0) )->select();
+		$_GPC = I('request.');
+		$order_goods_list = M('eaterplanet_ecommerce_order_goods')->field('order_goods_id,quantity,shipping_fare,fenbi_li')->where( array('order_id' => $order_id , 'is_refund_state' => 0) )->select();
 		if( !empty($order_goods_list) )
 		{
 			foreach( $order_goods_list as $val)
@@ -249,7 +250,9 @@ class CommonorderModel{
 
 				$real_refund_quantity = $val['quantity']- $has_refund_quantity;
 				$refund_quantity = $real_refund_quantity - $has_refund_quantity;
-				$refund_money = round($pay_total_money - $has_refund_money - $val['shipping_fare'],2);
+				//$refund_money = round($pay_total_money - $has_refund_money - $val['shipping_fare'],2);
+				$refund_money_sum = isset($_GPC['refund_money']) && $_GPC['refund_money'] >0  ? floatval($_GPC['refund_money']) : 0;
+				$refund_money = $refund_money_sum * $val['fenbi_li'];
 				$is_back_sellcount = 1;
 
 				$this->ins_order_goods_refund($order_id, $order_goods_id,$pay_total_money,$real_refund_quantity, $refund_quantity,$refund_money, $is_back_sellcount, $refund_shipping_fare);
@@ -344,9 +347,9 @@ class CommonorderModel{
 		$refund_data['back_head_commiss_1'] = 0; //退1级团长佣金
 		$refund_data['back_head_commiss_2'] = 0; //退2级团长佣金
 		$refund_data['back_head_commiss_3'] = 0; //退3级团长佣金
-		$refund_data['back_member_commiss_1'] = 0; //退会员1级佣金
-		$refund_data['back_member_commiss_2'] = 0; //退会员2级佣金
-		$refund_data['back_member_commiss_3'] = 0; //退会员3级佣金
+		$refund_data['back_member_commiss_1'] = 0; //退客户1级佣金
+		$refund_data['back_member_commiss_2'] = 0; //退客户2级佣金
+		$refund_data['back_member_commiss_3'] = 0; //退客户3级佣金
 		$refund_data['addtime'] = time(); //添加时间
 
 
@@ -419,6 +422,8 @@ class CommonorderModel{
 					if( $val['type'] == 'orderbuy' )
 					{
 
+						//$goods_shipping_fare  =$real_refund_quantity * round( ($real_refund_quantity / $order_goods_info['quantity'] ) * $order_goods_info['shipping_fare'] , 2);
+
 						$head_orderbuycommiss = round( ($refund_money / $pay_total_money ) * $val['money'] , 2);
 
 						$head_orderbuycommiss = $head_orderbuycommiss <= 0 ? 0 : $head_orderbuycommiss;
@@ -485,9 +490,9 @@ class CommonorderModel{
 
 			//
 
-			//$refund_data['back_member_commiss_1'] = 0; //退会员1级佣金
-			//$refund_data['back_member_commiss_2'] = 0; //退会员2级佣金
-			//$refund_data['back_member_commiss_3'] = 0; //退会员3级佣金
+			//$refund_data['back_member_commiss_1'] = 0; //退客户1级佣金
+			//$refund_data['back_member_commiss_2'] = 0; //退客户2级佣金
+			//$refund_data['back_member_commiss_3'] = 0; //退客户3级佣金
 
 			$member_commisslist = M('eaterplanet_ecommerce_member_commiss_order')->where( " order_id={$order_id} and order_goods_id={$order_goods_id} and state=0 " )->select();
 

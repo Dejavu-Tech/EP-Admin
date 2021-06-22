@@ -179,7 +179,7 @@ $this->ds = $ds;
 	 }
 	 public function level()
 	 {
-		 $this->breadcrumb2='会员等级';
+		 $this->breadcrumb2='客户等级';
 
 		 $model=new MemberModel();
 		 $data=$model->show_member_level();
@@ -200,7 +200,7 @@ $this->ds = $ds;
 
 	 public function editlevel()
 	 {
-		 $this->breadcrumb2='会员等级';
+		 $this->breadcrumb2='客户等级';
 		 $model=new MemberModel();
 		 $id = I('get.id');
 
@@ -226,7 +226,7 @@ $this->ds = $ds;
 
 	 public function levelconfig()
 	 {
-		 $this->breadcrumb2='会员等级';
+		 $this->breadcrumb2='客户等级';
 		 $model=new MemberModel();
 		 $member_level_is_open_info = M('config')->where( array('name' => 'member_level_is_open') )->find();
 		  if(IS_POST){
@@ -241,7 +241,7 @@ $this->ds = $ds;
 
 	 public function addlevel()
 	 {
-		 $this->breadcrumb2='会员等级';
+		 $this->breadcrumb2='客户等级';
 		 $model=new MemberModel();
 
 		 if(IS_POST){
@@ -414,7 +414,7 @@ $this->ds = $ds;
 	 }
 
 	 /**
-		会员积分列表
+		客户积分列表
 	 **/
 	 public function integra_list()
 	 {
@@ -502,7 +502,7 @@ $this->ds = $ds;
 	 }
 
 	 /**
-	  * 导出会员名单
+	  * 导出客户名单
 	  */
 	function export()
 	{
@@ -572,7 +572,7 @@ $this->ds = $ds;
 	    }
 
 	    $xlsCell  = array(
-	        array('member_id','会员ID'),
+	        array('member_id','客户ID'),
 	        array('openid','OPENID'),
 	        array('name','昵称'),
 	        array('address_name','收件人姓名'),
@@ -582,7 +582,7 @@ $this->ds = $ds;
 	        array('country','区 '),
 	        array('address','详细地址 ')
 	    );
-	    $expTitle = '会员信息_'.date('Y-m-d H:i:s');
+	    $expTitle = '客户信息_'.date('Y-m-d H:i:s');
 	    export_excel($expTitle,$xlsCell,$need_data);
 
 	}

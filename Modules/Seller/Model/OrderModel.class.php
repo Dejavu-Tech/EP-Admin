@@ -62,6 +62,8 @@ class OrderModel{
 
         D('Home/LocaltownDelivery')->change_distribution_order_state( $order_id, 0, 1);
 
+		M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id) )->save( array('delivery_type' => 1) );
+
         D('Home/Frontorder')->send_order_operate($order_id);
 		//给配送员发送公众号消息
 		$count = D('Seller/Redisorder')->set_distribution_delivery_message($order_id);
@@ -200,7 +202,21 @@ class OrderModel{
 			$condition .= " and o.soli_id > 0 ";
 		}
 
+		//begin 预售
+        if( isset($_GET['presale_order']) && $_GET['presale_order'] == 1 )
+        {
+            $condition .= " and opr.order_id=o.order_id ";
+            $sqlcondition .= ' inner join ' . C('DB_PREFIX').'eaterplanet_ecommerce_order_presale opr ';
+        }
+        //end  预售
 
+        //begin 礼品卡
+        if( isset($_GET['virtualcard_order']) && $_GET['virtualcard_order'] == 1 )
+        {
+            $condition .= " and vco.order_id=o.order_id ";
+            $sqlcondition .= ' inner join ' . C('DB_PREFIX').'eaterplanet_ecommerce_order_virtualcard vco ';
+        }
+        //end 礼品卡
 
 		if (defined('ROLE') && ROLE == 'agenter' )
 		{
@@ -544,12 +560,13 @@ class OrderModel{
 				array('title' => '订单流水号', 'field' => 'day_paixu', 'width' => 24),
 				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 24),
 				array('title' => '昵称', 'field' => 'name', 'width' => 12),
-				//array('title' => '会员姓名', 'field' => 'mrealname', 'width' => 12),
+				//array('title' => '客户姓名', 'field' => 'mrealname', 'width' => 12),
 				array('title' => 'openid', 'field' => 'openid', 'width' => 24),
-				array('title' => '会员手机号', 'field' => 'telephone', 'width' => 12),
-				array('title' => '会员备注', 'field' => 'member_content', 'width' => 24),
+				array('title' => '客户手机号', 'field' => 'telephone', 'width' => 12),
+				array('title' => '客户备注', 'field' => 'member_content', 'width' => 24),
 				array('title' => '收货姓名(或自提人)', 'field' => 'shipping_name', 'width' => 12),
 				array('title' => '联系电话', 'field' => 'shipping_tel', 'width' => 12),
+				array('title' => '商户名称/类型', 'field' => 'supply_name', 'width' => 12),
 				//array('title' => '收货地址', 'field' => 'address_province', 'width' => 12),
 				//array('title' => '', 'field' => 'address_city', 'width' => 12),
 				//array('title' => '', 'field' => 'address_area', 'width' => 12),
@@ -577,7 +594,7 @@ class OrderModel{
 				//array('title' => '余额抵扣', 'field' => 'deductcredit2', 'width' => 12),
 				array('title' => '满额立减', 'field' => 'fullreduction_money', 'width' => 12),
 				array('title' => '优惠券优惠', 'field' => 'voucher_credit', 'width' => 12),
-				array('title' => '会员佣金', 'field' => 'member_commissmoney', 'width' => 12),
+				array('title' => '客户佣金', 'field' => 'member_commissmoney', 'width' => 12),
 				//array('title' => '订单改价', 'field' => 'changeprice', 'width' => 12),
 				//array('title' => '运费改价', 'field' => 'changedispatchprice', 'width' => 12),
 				array('title' => '应收款(该笔订单总款)', 'field' => 'price', 'width' => 12),
@@ -731,12 +748,12 @@ class OrderModel{
 
 						if ($_GPC['export'] == 1 ) {
 						$sql = 'SELECT o.*,ogc.name as goods_title,ogc.supply_id,ogc.goods_id,ogc.order_goods_id ,ogc.quantity as ogc_quantity,ogc.price,ogc.statements_end_time, 
-									ogc.total as goods_total ,ogc.model,ogc.score_for_money as g_score_for_money, ogc.fullreduction_money as g_fullreduction_money,ogc.voucher_credit as g_voucher_credit ,ogc.has_refund_money,ogc.has_refund_quantity , ogc.shipping_fare as g_shipping_fare,ogc.model as codes  
+									ogc.total as goods_total ,ogc.score_for_money as g_score_for_money, ogc.fullreduction_money as g_fullreduction_money,ogc.voucher_credit as g_voucher_credit ,ogc.has_refund_money,ogc.has_refund_quantity , ogc.shipping_fare as g_shipping_fare,ogc.model as model ,ogc.cost_price 
 								FROM ' . C('DB_PREFIX') . 'eaterplanet_ecommerce_order as o  '.$sqlcondition.' where '  . $condition . ' ORDER BY o.head_id asc,ogc.goods_id desc,  o.`order_id` DESC  limit '."{$offset},500";
 
 						}else{
 						$sql = 'SELECT o.*,ogc.name as goods_title,ogc.supply_id,ogc.order_goods_id,ogc.goods_id,ogc.quantity as ogc_quantity,ogc.price,ogc.is_refund_state,ogc.statements_end_time,
-									ogc.total as goods_total ,ogc.score_for_money as g_score_for_money, ogc.fullreduction_money as g_fullreduction_money,ogc.voucher_credit as g_voucher_credit ,ogc.has_refund_money,ogc.has_refund_quantity ,ogc.shipping_fare as g_shipping_fare,ogc.model as codes 
+									ogc.total as goods_total ,ogc.score_for_money as g_score_for_money, ogc.fullreduction_money as g_fullreduction_money,ogc.voucher_credit as g_voucher_credit ,ogc.has_refund_money,ogc.has_refund_quantity ,ogc.shipping_fare as g_shipping_fare,ogc.model as model ,ogc.cost_price
 								FROM ' . C('DB_PREFIX') . 'eaterplanet_ecommerce_order as o  '.$sqlcondition.' where '  . $condition . ' ORDER BY o.`order_id` DESC  limit '."{$offset},500";
 						}
 
@@ -849,7 +866,12 @@ class OrderModel{
 								$tmp_exval['tuan_send_address'] = $val['tuan_send_address'];
 
 								$tmp_exval['goods_title'] = $val['goods_title'];
-
+								if($val['supply_id'] == 0){
+									$tmp_exval['supply_name'] = '平台自营(自营)';
+								}else{
+									$supply_list = M('eaterplanet_ecommerce_supply')->where( array('id' => $val['supply_id'] ) )->find();
+									$tmp_exval['supply_name'] = $supply_list['shopname'].'(独立商户)';
+								}
 								$goods_optiontitle = $this->get_order_option_sku($val['order_id'], $val['order_goods_id']);
 								$tmp_exval['goods_optiontitle'] = $goods_optiontitle;
 								$tmp_exval['quantity'] = $val['ogc_quantity'];
@@ -1000,7 +1022,7 @@ class OrderModel{
 								}
 
 								$tmp_exval['member_commissmoney'] = 0;
-								//array('title' => '会员佣金', 'field' => 'member_commissmoney', 'width' => 12),
+								//array('title' => '客户佣金', 'field' => 'member_commissmoney', 'width' => 12),
 								$member_commissmoney = M('eaterplanet_ecommerce_member_commiss_order')->where(  array('order_id' => $val['order_id'], 'order_goods_id' => $val['order_goods_id'] ) )->sum('money');
 								if( !empty($member_commissmoney) && $member_commissmoney > 0 )
 								{
@@ -1043,6 +1065,7 @@ class OrderModel{
                                     }
 
                                 }
+								$tmp_exval['costprice'] = isset($val['cost_price'])?$val['cost_price'] : 0;
 								$exportlist[] = $tmp_exval;
 
 								$row_arr = array();
@@ -1086,7 +1109,14 @@ class OrderModel{
 
 				$goods = M()->query($sql_goods);
 
-
+                $value['is_virtualcard'] = 0;
+				if( $value['delivery'] == 'express' )
+                {
+                    $virtualcard_result = D('Seller/VirtualCard')->getVirtualCardOrderInfO( $value['order_id'] );
+                    if( $virtualcard_result['code'] == 0 ) {
+                        $value['is_virtualcard'] = 1;
+                    }
+                }
 
 				$need_goods = array();
 
@@ -1104,6 +1134,42 @@ class OrderModel{
 
                         $value['orderdistribution_order']['username'] = $orderdistribution['username'];
                     }
+
+					$imdada_data =  M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where( array('order_id' => $value['order_id'], 'third_distribution_type'=>'imdada' ) )->find();
+					if($imdada_data['status'] == 1){
+						$value['pre_imdada_delivery_fee'] = "￥".$imdada_data['shipping_fee'];
+					}else{
+						$value['pre_imdada_delivery_fee'] = $imdada_data['message'];
+					}
+
+					$mk_data =  M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where( array('order_id' => $value['order_id'], 'third_distribution_type'=>'mk' ) )->find();
+					if($mk_data['status'] == 1){
+                        $value['pre_mk_delivery_fee'] = "￥".$mk_data['shipping_fee'];
+                    }else{
+                        $value['pre_mk_delivery_fee'] = $mk_data['message'];
+                    }
+
+					$sf_data =  M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where( array('order_id' => $value['order_id'], 'third_distribution_type'=>'sf' ) )->find();
+					if($sf_data['status'] == 1){
+						$value['pre_sf_delivery_fee'] = "￥".$sf_data['shipping_fee'];
+					}else{
+						$value['pre_sf_delivery_fee'] = $sf_data['message'];
+					}
+
+					//达达配送是否已发过
+					$imdada_count = M('eaterplanet_ecommerce_orderdistribution_thirth_log')->where(array('order_id'=>$value['order_id'],'third_distribution_type'=>'imdada'))->count();
+					$imdada_has_send = 0;
+					if($imdada_count > 0){
+						$imdada_has_send = 1;
+					}
+					$value['imdada_has_send'] = $imdada_has_send;
+					//顺丰配送是否已发过
+					$sf_count = M('eaterplanet_ecommerce_orderdistribution_thirth_log')->where(array('order_id'=>$value['order_id'],'third_distribution_type'=>'sf'))->count();
+					$sf_has_send = 0;
+					if($sf_count > 0){
+						$sf_has_send = 1;
+					}
+					$value['sf_has_send'] = $sf_has_send;
                 }
 
 				foreach($goods as $key =>$goods_val)
@@ -1617,10 +1683,10 @@ class OrderModel{
 				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 24),
 				array('title' => '订单流水号', 'field' => 'day_paixu', 'width' => 24),
 				array('title' => '昵称', 'field' => 'name', 'width' => 12),
-				//array('title' => '会员姓名', 'field' => 'mrealname', 'width' => 12),
+				//array('title' => '客户姓名', 'field' => 'mrealname', 'width' => 12),
 				array('title' => 'openid', 'field' => 'openid', 'width' => 24),
-				array('title' => '会员手机号', 'field' => 'telephone', 'width' => 12),
-				array('title' => '会员备注', 'field' => 'member_content', 'width' => 24),
+				array('title' => '客户手机号', 'field' => 'telephone', 'width' => 12),
+				array('title' => '客户备注', 'field' => 'member_content', 'width' => 24),
 
 				array('title' => '收货姓名(或自提人)', 'field' => 'shipping_name', 'width' => 12),
 				array('title' => '联系电话', 'field' => 'shipping_tel', 'width' => 12),
@@ -1631,7 +1697,7 @@ class OrderModel{
 				array('title' => '提货详细地址', 'field' => 'address_address', 'width' => 12),
 				array('title' => '团长配送送货详细地址', 'field' => 'tuan_send_address', 'width' => 22),
 				array('title' => '商品名称', 'field' => 'goods_title', 'width' => 24),
-				//array('title' => '商品编码', 'field' => 'goods_goodssn', 'width' => 12),
+				array('title' => '商品编码', 'field' => 'goods_goodssn', 'width' => 12),
 				array('title' => '商品规格', 'field' => 'goods_optiontitle', 'width' => 12),
 				array('title' => '商品数量', 'field' => 'quantity', 'width' => 12),
 				array('title' => '商品单价', 'field' => 'goods_price1', 'width' => 12),
@@ -1722,7 +1788,7 @@ class OrderModel{
 
 						$offset = ($s-1)* 500;
 
-						$sql = 'SELECT o.*,ogc.name as goods_title,ogc.supply_id,ogc.order_goods_id ,ogc.quantity as ogc_quantity,ogc.price,
+						$sql = 'SELECT o.*,ogc.name as goods_title,ogc.supply_id,ogc.order_goods_id ,ogc.quantity as ogc_quantity,ogc.price,ogc.model as model,
 								ogc.total as goods_total ,ogc.score_for_money as g_score_for_money,ogc.fullreduction_money as g_fullreduction_money,ogc.voucher_credit as g_voucher_credit ,ogc.shipping_fare as g_shipping_fare FROM '.C('DB_PREFIX').
 							"eaterplanet_ecommerce_order_refund as ore, " . C('DB_PREFIX'). 'eaterplanet_ecommerce_order as o  '.$sqlcondition.' where ore.order_id = o.order_id and '  .
 							$condition . ' ORDER BY  ore.`ref_id` DESC limit  ' . "{$offset}, 500";
@@ -2199,6 +2265,9 @@ class OrderModel{
 				$o['date_modified']=time();
 				$o['pay_time']=time();
 
+				if($order['delivery'] == 'hexiao'){//核销订单 支付完成状态改成  已发货待收货
+					$o['order_status_id'] =  4;
+				}
 
 				//ims_
 				M('eaterplanet_ecommerce_order')->where( array('order_id' => $order['order_id']) )->save($o);
@@ -2443,7 +2512,37 @@ class OrderModel{
 	**/
 	public function get_order_count($where = '')
 	{
-		$total = M('eaterplanet_ecommerce_order')->where("1 ".$where)->count();
+        //begin 预售
+        if( isset($_GET['presale_order']) && $_GET['presale_order'] == 1 )
+        {
+
+            $sql = "select count(1) as count from ".C('DB_PREFIX')."eaterplanet_ecommerce_order  inner join ".C('DB_PREFIX').'eaterplanet_ecommerce_order_presale opr on '.C("DB_PREFIX").'eaterplanet_ecommerce_order.order_id =opr.order_id  ';
+
+            $sql .= " where 1 {$where} ";
+
+
+            $count_arr = M()->query( $sql );
+
+            $total = $count_arr[0]['count'];
+
+
+        }else if( isset($_GET['virtualcard_order']) && $_GET['virtualcard_order'] == 1 )
+        {
+            //礼品卡订单
+            $sql = "select count(1) as count from ".C('DB_PREFIX')."eaterplanet_ecommerce_order  inner join ".C('DB_PREFIX').'eaterplanet_ecommerce_order_virtualcard vco on '.C("DB_PREFIX").'eaterplanet_ecommerce_order.order_id =vco.order_id  ';
+
+            $sql .= " where 1 {$where} ";
+
+
+            $count_arr = M()->query( $sql );
+
+            $total = $count_arr[0]['count'];
+        }
+
+        else{
+            $total = M('eaterplanet_ecommerce_order')->where("1 ".$where)->count();
+        }
+        //end  预售
 
 		return $total;
 	}
@@ -2548,6 +2647,7 @@ class OrderModel{
 				if( isset($kdniao_freestatus) && $kdniao_freestatus ==1 )
 				{
 					$datas['RequestType'] = '8001';
+					//$datas['RequestType'] = '8002';
 				}
 
 				if($kdniao_freestatus == 0 ){
@@ -2779,7 +2879,17 @@ class OrderModel{
 	        $log_data['state'] = 1;
 	        $log_data['remark'] = "评价有礼,增加积分";
 	        M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
-	    }
+	    }else if($type == 'invitegift'){
+			//邀请者赠送积分
+			$log_data['state'] = 1;
+			$log_data['remark'] = "邀请者邀请成功，增加积分".$score;
+			M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
+		}else if($type == 'invitegift_new'){
+			//被邀请者赠送积分
+			$log_data['state'] = 1;
+			$log_data['remark'] = "被邀请者邀请成功，增加积分".$score;
+			M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
+		}
 	    M('eaterplanet_ecommerce_member_integral_flow')->add($log_data);
 	}
 
@@ -2875,6 +2985,10 @@ class OrderModel{
 			$delivery_company = "第三方达达";
 		}else if($data_type == 'sf'){
 			$delivery_company = "第三方顺丰同城";
+		}else if($data_type == 'make'){
+            $delivery_company = "码科配送";
+        }else if($data_type == 'ele'){
+			$delivery_company = "蜂鸟即配";
 		}
 		$title = $delivery_company.$title;
 		//express_time
@@ -2899,6 +3013,12 @@ class OrderModel{
 			$other_data['delivery_fee'] = $express_info['delivery_fee'];
 			$other_data['delivery_order_id'] = $express_info['delivery_order_id'];
 			$other_data['delivery_bill_id'] = $express_info['delivery_bill_id'];
+		}else if( $data_type == 'make' ){
+			$other_data['delivery_fee'] = $express_info['delivery_fee'];
+            $other_data['delivery_order_id'] = $express_info['delivery_order_id'];
+        }else if( $data_type == 'ele' ){
+			$other_data['delivery_fee'] = $express_info['delivery_fee'];
+			$other_data['delivery_order_id'] = $express_info['delivery_order_id'];
 		}
 		D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 1, $other_data);
 		D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $data_type , 1 ,'已创建订单' );
@@ -2920,6 +3040,12 @@ class OrderModel{
 				$delivery_company = "第三方达达";
 			}else if($other_data['data_type'] == 'sf'){
 				$delivery_company = "第三方顺丰同城";
+			}else if( $other_data['data_type'] == 'make' )
+            {
+                $delivery_company = "第三方码科配送";
+            }else if( $other_data['data_type'] == 'ele' )
+			{
+				$delivery_company = "第三方蜂鸟即配";
 			}
 			if($order_status_id > 0){
 				if($order_status_id == 6 && $order_info['order_status_id'] == 4){
@@ -2963,7 +3089,20 @@ class OrderModel{
 					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 5, $other_data);
 					D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] ,$other_data['cancel_reason'] );
 				}
-			}else if($other_data['data_type'] == 'sf'){//顺丰同城配送
+			}else if( $other_data['data_type'] == 'make' ){
+                //2 3/ 4
+                if($other_data['order_status'] == 2){//待取货
+                    D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 2, $other_data);
+                    D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] ,$other_data['dm_name'].'已抢单，待取货' );
+                }else if($other_data['order_status'] == 3){//配送中
+                    D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 3, $other_data);
+                    D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] ,$other_data['dm_name'].'配送中' );
+                }else if($other_data['order_status'] == 4){//已完成
+                    D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 4, $other_data);
+                    D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] ,$other_data['dm_name'].'配送完成' );
+                }
+
+            }else if($other_data['data_type'] == 'sf'){//顺丰同城配送
 				if($other_data['order_status'] == 2){//已取消
 					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 5, $other_data);
 					$cancel_reason = "订单取消，操作人：".$other_data['operator_name']."，取消原因：".$other_data['status_desc'];
@@ -2995,6 +3134,20 @@ class OrderModel{
 					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 4, $other_data);
 					D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , 4 , '配送员点击完成' );
 				}
+			}else if( $other_data['data_type'] == 'ele' ){//蜂鸟即配
+				if($other_data['order_status'] == 2){//待取货
+					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 2, $other_data);
+					D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] , $other_data['desc'] );
+				}else if($other_data['order_status'] == 3){//配送中
+					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 3, $other_data);
+					D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] , $other_data['desc'] );
+				}else if($other_data['order_status'] == 4){//已完成
+					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 4, $other_data);
+					D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] , $other_data['desc'] );
+				}else if($other_data['order_status'] == 100){//异常订单
+					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 5, $other_data);
+					D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $other_data['data_type'] , $other_data['order_status'] ,$other_data['desc'] );
+				}
 			}
 		}
 	}
@@ -3015,8 +3168,43 @@ class OrderModel{
 		M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->save(
 				array('state' => 5,'cancel_reason'=>$other_data['cancel_reason'],'deduct_fee'=>$other_data['deduct_fee'])
 		);
+		//违约金
+		if(!empty($other_data['now_deduct_fee']) && $other_data['now_deduct_fee'] > 0){
+			$log_mgs = "";
+			if($data_type == 'imdada'){
+				$log_mgs = "第三方达达取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+			}else if($data_type == 'sf'){
+				$log_mgs = "第三方顺丰取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+			}else if($data_type == 'make'){
+                $log_mgs = "码科配送取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+            }else if($data_type == 'ele'){
+				$log_mgs = "蜂鸟即配取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+			}
+			$oh = array();
+			$oh['order_id'] = $order_id;
+			$oh['order_status_id'] = 4;
+			$oh['comment'] = $log_mgs;
+			$oh['date_added'] = time();
+			$oh['notify'] = 1;
+			M('eaterplanet_ecommerce_order_history')->add($oh);
+			//扣除违约金
+			D('Seller/Supply')->update_supply_commission($order_id,$other_data['now_deduct_fee']);
+		}
 		if($data_type == 'sf'){
 			$delivery_company = "第三方顺丰同城";
+			$remark = $delivery_company.'订单已取消，取消原因:'.$other_data['cancel_reason'];
+			D('Home/LocaltownDelivery')->write_distribution_log( $order_id, 0 , 5 ,$remark );
+			M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->save(
+					array('delivery_type'=>0)
+			);
+			D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $data_type , 5 ,'订单已取消，取消原因:'.$other_data['cancel_reason'] );
+		}if($data_type == 'make'){
+            $delivery_company = "码科配送";
+            $remark = $delivery_company.'订单已取消，取消原因:'.$other_data['cancel_reason'];
+            D('Home/LocaltownDelivery')->write_distribution_log( $order_id, 0 , 5 ,$remark );
+            D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $data_type , 5 ,'订单已取消，取消原因:'.$other_data['cancel_reason'] );
+        }if($data_type == 'ele'){
+			$delivery_company = "蜂鸟即配";
 			$remark = $delivery_company.'订单已取消，取消原因:'.$other_data['cancel_reason'];
 			D('Home/LocaltownDelivery')->write_distribution_log( $order_id, 0 , 5 ,$remark );
 			D('Home/LocaltownDelivery')->save_orderdistribution_thirth_log( $order_id, $data_type , 5 ,'订单已取消，取消原因:'.$other_data['cancel_reason'] );
@@ -3032,6 +3220,10 @@ class OrderModel{
 			$delivery_company = "达达";
 		}else if($other_data['data_type'] == 'sf'){
 			$delivery_company = "顺丰同城";
+		}else if($other_data['data_type'] == 'ele'){
+			$delivery_company = "蜂鸟即配";
+		}if($other_data['data_type'] == 'make') {
+			$delivery_company = "码科配送";
 		}
 		$order_member_name = M('eaterplanet_ecommerce_member')->where( array('member_id' => $order_info['member_id'] ) )->find();
 		//6、发送取消通知订单给平台
@@ -3087,7 +3279,7 @@ class OrderModel{
 	    $field = "order_id,order_num_alias,member_id,ziti_name,ziti_mobile,shipping_name,shipping_tel";
 	    $order_info = M('eaterplanet_ecommerce_order')->where(array('order_id'=>$order_id))->field($field)->find();
 	    //订单要核销商品(未核销完，剩余核销数量大于0)
-	    $order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id'],'is_hexiao_over'=>0))->where(array('remain_hexiao_count'=>array('gt',0)))->select();
+	    $order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id'],'is_hexiao_over'=>0))->select();
 
 	    if(count($order_goods_saleshexiao_list) > 0){
 	        foreach($order_goods_saleshexiao_list as $k=>$v){
@@ -3106,8 +3298,16 @@ class OrderModel{
 	    $is_finished = true;
 	    $hexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_id))->select();
 	    foreach($hexiao_list as $k=>$v){
-	        if($v['is_hexiao_over'] == 0 && $v['remain_hexiao_count'] > 0){
-	            $is_finished = false;
+			if($v['hexiao_type'] == 0 && $v['is_hexiao_over'] == 0){//按订单核销
+				$is_finished = false;
+			}
+	        if($v['hexiao_type'] == 1 && $v['is_hexiao_over'] == 0){//按次核销
+	            if($v['hexiao_count'] > 0 && $v['remain_hexiao_count'] > 0){
+					$is_finished = false;
+				}
+				if($v['hexiao_count'] == 0){
+					$is_finished = false;
+				}
 	        }
 	    }
 	    if($is_finished){
@@ -3146,26 +3346,38 @@ class OrderModel{
 	    $hx_id = $order_goods_saleshexiao['id'];
 	    //剩余核销数量
 	    $remain_hexiao_count = $order_goods_saleshexiao['remain_hexiao_count'];
+	    if($order_goods_saleshexiao['hexiao_count'] > 0){
+			$hexiao_count = 0;
+			if($hx_time > 0){
+				if($hx_time > $remain_hexiao_count){
+					return -1;
+				}else{
+					$hexiao_count = $hx_time;
+				}
+			}else{
+				$hexiao_count = $remain_hexiao_count;
+			}
 
-	    $hexiao_count = 0;
-	    if($hx_time > 0){
-	        if($hx_time > $remain_hexiao_count){
-	            return -1;
-	        }else{
-	            $hexiao_count = $hx_time;
-	        }
-	    }else{
-	        $hexiao_count = $remain_hexiao_count;
-	    }
+			$hexiao_data = array();
+			if($hexiao_count == $remain_hexiao_count){
+				$hexiao_data['remain_hexiao_count'] = 0;
+				$hexiao_data['is_hexiao_over'] = 1;
+			}else{
+				$hexiao_data['remain_hexiao_count'] = $remain_hexiao_count - $hexiao_count;
+			}
+			$hx_result = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$hx_id))->save($hexiao_data);
+		}else{
+			if($hx_time == 0){
+				$hexiao_data = array();
+				$hexiao_data['is_hexiao_over'] = 1;
+				$hexiao_count = 1;
+				$hx_result = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$hx_id))->save($hexiao_data);
+			}else{
+				$hx_result = 1;
+				$hexiao_count = $hx_time;
+			}
+		}
 
-	    $hexiao_data = array();
-	    if($hexiao_count == $remain_hexiao_count){
-	        $hexiao_data['remain_hexiao_count'] = 0;
-	        $hexiao_data['is_hexiao_over'] = 1;
-	    }else{
-	        $hexiao_data['remain_hexiao_count'] = $remain_hexiao_count - $hexiao_count;
-	    }
-	    $hx_result = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('id'=>$hx_id))->save($hexiao_data);
 	    if($hx_result !== false){
 	        //添加订单核销记录表
 	        $hexiao_record = array();
@@ -3236,6 +3448,69 @@ class OrderModel{
 				$str_arr[] = mb_substr($string, $i, 1);
 		}
 		return implode('',$str_arr);
+	}
+
+	public function num_to_rmb($num){
+		$c1 = "零壹贰叁肆伍陆柒捌玖";
+		$c2 = "分角元拾佰仟万拾佰仟亿";
+		//精确到分后面就不要了，所以只留两个小数位
+		$num = round($num, 2);
+		//将数字转化为整数
+		$num = $num * 100;
+		if (strlen($num) > 10) {
+			return "金额太大，请检查";
+		}
+		$i = 0;
+		$c = "";
+		while (1) {
+			if ($i == 0) {
+				//获取最后一位数字
+				$n = substr($num, strlen($num)-1, 1);
+			} else {
+				$n = $num % 10;
+			}
+			//每次将最后一位数字转化为中文
+			$p1 = substr($c1, 3 * $n, 3);
+			$p2 = substr($c2, 3 * $i, 3);
+			if ($n != '0' || ($n == '0' && ($p2 == '亿' || $p2 == '万' || $p2 == '元'))) {
+				$c = $p1 . $p2 . $c;
+			} else {
+				$c = $p1 . $c;
+			}
+			$i = $i + 1;
+			//去掉数字最后一位了
+			$num = $num / 10;
+			$num = (int)$num;
+			//结束循环
+			if ($num == 0) {
+				break;
+			}
+		}
+		$j = 0;
+		$slen = strlen($c);
+		while ($j < $slen) {
+			//utf8一个汉字相当3个字符
+			$m = substr($c, $j, 6);
+			//处理数字中很多0的情况,每次循环去掉一个汉字“零”
+			if ($m == '零元' || $m == '零万' || $m == '零亿' || $m == '零零') {
+				$left = substr($c, 0, $j);
+				$right = substr($c, $j + 3);
+				$c = $left . $right;
+				$j = $j-3;
+				$slen = $slen-3;
+			}
+			$j = $j + 3;
+		}
+		//这个是为了去掉类似23.0中最后一个“零”字
+		if (substr($c, strlen($c)-3, 3) == '零') {
+			$c = substr($c, 0, strlen($c)-3);
+		}
+		//将处理的汉字加上“整”
+		if (empty($c)) {
+			return "零元整";
+		}else{
+			return $c . "整";
+		}
 	}
 
 }

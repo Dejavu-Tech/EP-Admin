@@ -195,7 +195,7 @@ class FissionbonusModel{
 	}
 
 	/**
-		给会员赠送红包金额
+		给客户赠送红包金额
 		1:自己签到，2：别人帮忙金额得到 3，给别人点赞得到金额
 	**/
 	private function send_member_fissionbonus($member_id =0,$send_member_id=0,$fissionbonus_id =0, $money = 0,$type=1)

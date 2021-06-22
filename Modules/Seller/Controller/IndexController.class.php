@@ -138,13 +138,12 @@ class IndexController extends CommonController {
 
 
 		//使用积分
-
-		$list = M('eaterplanet_ecommerce_order')->where("1 ".$score_for_money_where )->select();
+		
 		$sum_score = 0;
-		foreach( $list as $key => $val )
-		{
-			$od_info = M('eaterplanet_ecommerce_member_integral_flow')->field('score')->where( array('order_id' => $val['order_id'] ) )->find();
-			$sum_score += $od_info['score'];
+
+		$sum_score = M('eaterplanet_ecommerce_member_integral_flow')->where(' addtime > '.$today_time.' and type = "orderbuy" and in_out = "out"  ')->sum('score');
+		if(empty($sum_score)){
+			$sum_score = 0;
 		}
 		$this->sum_score = $sum_score;
 

@@ -346,7 +346,7 @@ class CronController extends \Think\Controller {
 
 	                               $voucher = M('voucher')->where( array('id' => $lottery_goods['voucher_id']) )->find();
 	                               $title = "恭喜您中了二等奖，获得{$voucher[credit]}元代金券";
-	                               $msg = "亲爱的会员，恭喜您参加 ".$order_goods['name']." 拼团成功，获得{$voucher[credit]}元代金券，立即点击查收哈 ";
+	                               $msg = "亲爱的客户，恭喜您参加 ".$order_goods['name']." 拼团成功，获得{$voucher[credit]}元代金券，立即点击查收哈 ";
 
 								    \Log::DEBUG("退款送券:".$openId.'  '.$msg.'  '.$title.'  '.$url );
 
@@ -403,7 +403,7 @@ class CronController extends \Think\Controller {
 	                    $url = $config_info['value'].'/'."/index.php?s=/Order/info/id/".$order['order_id'].".html";
 
 	                    $title = "恭喜您中了一等奖";
-	                    $msg = "亲爱的会员，恭喜您参加 ".$order_goods['name']." 拼团成功，您中奖了。请点击查看！ ";
+	                    $msg = "亲爱的客户，恭喜您参加 ".$order_goods['name']." 拼团成功，您中奖了。请点击查看！ ";
 
 						if( $order['from_type'] == 'wepro' )
 						{

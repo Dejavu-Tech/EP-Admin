@@ -39,7 +39,7 @@ class StatisticsController extends CommonController{
 				//今日
 				$today_time = strtotime( date('Y-m-d').' 00:00:00' );
 				$today_member_count = D('Seller/User')->get_member_count(" and create_time > ".$today_time );
-				//今日会员数量
+				//今日客户数量
 				$result['today_member_count'] = $today_member_count;
 
 
@@ -56,7 +56,7 @@ class StatisticsController extends CommonController{
 
 					$total_where = " and supply_id= ".$supper_info['id'];
 
-					$order_ids_list = M()->query("select og.order_id,o.total,og.shipping_fare,og.voucher_credit,og.fullreduction_money from ".C('DB_PREFIX').
+					$order_ids_list = M()->query("select og.order_id,o.total,o.packing_fare,og.shipping_fare,og.voucher_credit,og.fullreduction_money from ".C('DB_PREFIX').
 										"eaterplanet_ecommerce_order_goods as og , ".C('DB_PREFIX')."eaterplanet_ecommerce_order as o  where  og.order_id =o.order_id  and og.supply_id = ".$supper_info['id']." and o.pay_time > {$today_time} and o.type <> 'integral'  ");
 					//and o.order_status_id in (1,4,6,7,11,14)
 					$order_ids_arr = array();
@@ -74,7 +74,7 @@ class StatisticsController extends CommonController{
 					$today_pay_money = 0;
 					foreach($order_ids_arr as $vv)
 					{
-						$today_pay_money += $vv['total']+$vv['shipping_fare']-$vv['voucher_credit']-$vv['fullreduction_money'];
+						$today_pay_money += $vv['total']+$vv['shipping_fare']-$vv['voucher_credit']-$vv['fullreduction_money']+$vv['packing_fare'];
 					}
 
 					$today_pay_money = empty($today_pay_money) ? 0:$today_pay_money;
@@ -90,7 +90,7 @@ class StatisticsController extends CommonController{
 
 					//get_order_sum($field=' sum(total) as total ' , $where = '',$uniacid = 0)
 					//total
-					$today_pay_money_info = D('Seller/Order')->get_order_sum(' sum(total+shipping_fare-voucher_credit-fullreduction_money-fare_shipping_free) as total ' , $today_pay_where);
+					$today_pay_money_info = D('Seller/Order')->get_order_sum(' sum(total+shipping_fare-voucher_credit-fullreduction_money-fare_shipping_free+packing_fare) as total ' , $today_pay_where);
 
 					$today_pay_money = empty($today_pay_money_info['total']) ? 0:$today_pay_money_info['total'];
 
@@ -133,7 +133,7 @@ class StatisticsController extends CommonController{
 						$total_arr = M()->query($sql);
 
 
-						$order_ids_list = M()->query("select og.order_id,og.total,og.shipping_fare,og.voucher_credit,og.fullreduction_money from ".C('DB_PREFIX').
+						$order_ids_list = M()->query("select og.order_id,og.total,og.shipping_fare,og.voucher_credit,og.fullreduction_money,o.packing_fare from ".C('DB_PREFIX').
 								"eaterplanet_ecommerce_order_goods as og , ".C('DB_PREFIX')."eaterplanet_ecommerce_order as o  where og.order_id =o.order_id and og.supply_id = ".$supper_info['id']."  ");
 						$total_count = count($order_ids_list);
 
@@ -141,7 +141,7 @@ class StatisticsController extends CommonController{
 						{
 							foreach($order_ids_list as $vv)
 							{
-								$total_money += $vv['total']+$vv['shipping_fare']-$vv['voucher_credit']-$vv['fullreduction_money'];
+								$total_money += $vv['total']+$vv['shipping_fare']-$vv['voucher_credit']-$vv['fullreduction_money']+$vv['packing_fare'];
 							}
 						}
 					}
@@ -175,7 +175,7 @@ class StatisticsController extends CommonController{
 
 
 					//C('DB_PREFIX')
-					$sq_s = "SELECT sum(total+shipping_fare-voucher_credit-fullreduction_money-fare_shipping_free) as total FROM ".
+					$sq_s = "SELECT sum(total+shipping_fare-voucher_credit-fullreduction_money-fare_shipping_free+packing_fare) as total FROM ".
 							C('DB_PREFIX')."eaterplanet_ecommerce_order where order_status_id in (1,4,6,11,12,14) and type <> 'integral' ";
 
 					$total_order_money_arr = M()->query($sq_s);
@@ -187,7 +187,7 @@ class StatisticsController extends CommonController{
 
 
 
-				//会员数量
+				//客户数量
 				$result['member_count'] = $member_count;
 				//商品数量
 

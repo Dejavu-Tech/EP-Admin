@@ -79,7 +79,7 @@ class RedisorderModel
 	        }
 	    }
 
-	    $redis_html = "<table><tr><th>序号</th><th>用户名</th><th>会员id</th><th>购买数量</th></tr>";
+	    $redis_html = "<table><tr><th>序号</th><th>用户名</th><th>客户id</th><th>购买数量</th></tr>";
 	    $i =1;
 
 	    foreach( $need_data as $val )

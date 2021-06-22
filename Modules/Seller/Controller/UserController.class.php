@@ -28,9 +28,13 @@ class UserController extends CommonController{
 		$this->keyword = $keyword;
 
 		if (!empty($keyword)) {
-			$condition .= ' and ( (username like '.'"%' . $keyword . '%") or (telephone like '.'"%' . $keyword . '%"))';
-		}
+			if(is_numeric($keyword)){
+				$condition .= ' and ( (username like '.'"%' . $keyword . '%") or (telephone like '.'"%' . $keyword . '%") or (member_id = ' . $keyword .'))';
+			}else{
+				$condition .= ' and ( (username like '.'"%' . $keyword . '%") or (telephone like '.'"%' . $keyword . '%") )';
+			}
 
+		}
 		//时间
 		$starttime_arr = I('request.time');
 
@@ -204,7 +208,7 @@ class UserController extends CommonController{
 				$val['cur_communityname'] = '无';
 			}
 
-			$val['levelname'] = empty($val['level_id']) ? '普通会员':$keys_level[$val['level_id']];
+			$val['levelname'] = empty($val['level_id']) ? '普通客户':$keys_level[$val['level_id']];
 			$val['groupname'] = empty($val['groupid']) ? '默认分组':$keys_group[$val['groupid']];
 			$val['cardname'] = empty($val['card_id']) ? '无会员卡':$keys_card[$val['card_id']];
 
@@ -249,13 +253,13 @@ class UserController extends CommonController{
 
 			$columns = array(
 				array('title' => 'ID', 'field' => 'member_id', 'width' => 12),
-				array('title' => '会员名称', 'field' => 'username', 'width' => 12),
+				array('title' => '客户名称', 'field' => 'username', 'width' => 12),
 				array('title' => '推荐人', 'field' => 'share_name', 'width' => 12),
 				array('title' => '小区名称', 'field' => 'cur_communityname', 'width' => 24),
 				array('title' => 'openid', 'field' => 'openid', 'width' => 24),
 				array('title' => '手机', 'field' => 'telephone', 'width' => 12),
-				array('title' => '会员等级', 'field' => 'levelname', 'width' => 12),
-			    array('title' => '会员分组', 'field' => 'groupname', 'width' => 12),
+				array('title' => '客户等级', 'field' => 'levelname', 'width' => 12),
+			    array('title' => '客户分组', 'field' => 'groupname', 'width' => 12),
 			    array('title' => '积分', 'field' => 'score', 'width' => 12),
 			    array('title' => '余额', 'field' => 'account_money', 'width' => 12),
 			    array('title' => '订单数', 'field' => 'ordercount', 'width' => 12),
@@ -266,7 +270,7 @@ class UserController extends CommonController{
 				array('title' => '状态', 'field' => 'isblack', 'width' => 12)
 			);
 
-			D('Seller/excel')->export($list, array('title' => '会员数据-' . date('Y-m-d-H-i', time()), 'columns' => $columns));
+			D('Seller/excel')->export($list, array('title' => '客户数据-' . date('Y-m-d-H-i', time()), 'columns' => $columns));
 
 		}
 
@@ -289,7 +293,7 @@ class UserController extends CommonController{
 		$this->commiss_level = $commiss_level;
 
 
-        //会员是否需要审核
+        //客户是否需要审核
         $is_user_shenhe = D('Home/Front')->get_config_by_name('is_user_shenhe');
 
         if( empty($is_user_shenhe) || $is_user_shenhe == 0 )
@@ -380,7 +384,7 @@ class UserController extends CommonController{
 
 
 		$list = array(
-			array('id' => 'default', 'level_money'=>'0','discount'=>'100' ,'level'=>0,'levelname' => '普通会员',
+			array('id' => 'default', 'level_money'=>'0','discount'=>'100' ,'level'=>0,'levelname' => '普通客户',
 						'membercount' => $membercount ) );
 
 
@@ -455,6 +459,7 @@ class UserController extends CommonController{
 		{
 			$val['add_time'] = date('Y-m-d H:i:s',$val['add_time'] );
 
+            $val['trans_id'] = '--';
 			if($val['state'] == 3 || $val['state'] == 4)
 			{
 
@@ -679,7 +684,7 @@ class UserController extends CommonController{
 		$membercount = M('eaterplanet_ecommerce_member')->where( array('level_id' => 0)  )->count();
 
 		$list = array(
-			array('id' => 'default', 'level_money'=>'0','discount'=>'100' ,'level'=>0,'levelname' => '普通会员',
+			array('id' => 'default', 'level_money'=>'0','discount'=>'100' ,'level'=>0,'levelname' => '普通客户',
 						'membercount' => $membercount ) );
 
 		$condition = ' 1 ';
@@ -728,7 +733,7 @@ class UserController extends CommonController{
 		if (IS_POST) {
 			$discount = trim($_GPC['discount']);
 			if(!preg_match("/^[1-9][0-9]*$/" ,$discount) || intval($discount) < 1 || intval($discount) > 100){
-				show_json(0, array('message' => '请按照提示设置会员等级折扣'));
+				show_json(0, array('message' => '请按照提示设置客户等级折扣'));
 			}
 
 			$data = array('logo' => trim($_GPC['logo']),'discount' => trim($_GPC['discount']),'level_money' =>  trim($_GPC['level_money']),'levelname' => trim($_GPC['levelname']),
@@ -924,7 +929,7 @@ class UserController extends CommonController{
 
 			$value['id'] = $value['member_id'];
 
-			//判断该会员是否已经是团长
+			//判断该客户是否已经是团长
 			if($limit == 1)
 			{
 				$value['exist'] = M('eaterplanet_community_head')->where( array('member_id' => $value['id'] ) )->count();
@@ -1156,8 +1161,8 @@ class UserController extends CommonController{
 			$num = floatval($_GPC['num']);
 			$remark = trim($_GPC['remark']);
 
-			if ($num <= 0) {
-				show_json(0, array('message' => '请填写大于0的数字!'));
+			if ($num < 0) {
+				show_json(0, array('message' => '请填写不小于0的数字!'));
 			}
 
 			$changetype = intval($_GPC['changetype']);
@@ -1311,7 +1316,7 @@ class UserController extends CommonController{
 			$ordermoney = M('eaterplanet_ecommerce_order')->where( array('order_status_id' => array('in','1,2,4,6,11,14,12,13'),'member_id' => $val['member_id']) )->sum('total');
 
 
-			$val['levelname'] = empty($val['level_id']) ? '普通会员':$keys_level[$val['level_id']];
+			$val['levelname'] = empty($val['level_id']) ? '普通客户':$keys_level[$val['level_id']];
 			$val['groupname'] = empty($val['groupid']) ? '默认分组':$keys_group[$val['groupid']];
 
 
@@ -1333,7 +1338,7 @@ class UserController extends CommonController{
 
 		$saler = array();
 
-        //会员是否需要审核
+        //客户是否需要审核
         $is_user_shenhe = D('Home/Front')->get_config_by_name('is_user_shenhe');
 
         if( empty($is_user_shenhe) || $is_user_shenhe == 0 )
@@ -1343,7 +1348,7 @@ class UserController extends CommonController{
 
         $this->is_user_shenhe = $is_user_shenhe;
 
-        //会员是否需要收集表单
+        //客户是否需要收集表单
         $is_get_formdata = D('Home/Front')->get_config_by_name('is_get_formdata');
 
         if( empty($is_get_formdata) || $is_get_formdata == 0 )
@@ -1542,7 +1547,7 @@ class UserController extends CommonController{
 		$card_id = $_GPC['card_id'];
 		$id = $_GPC['member_id'];
 		if(empty($id) || empty($card_id)){
-			show_json(0, array('message' => '会员或会员卡数据错误'));
+			show_json(0, array('message' => '客户或会员卡数据错误'));
 		}
 		$member_card = M('eaterplanet_ecommerce_member_card')->where( array('id' => $card_id) )->find();
 		$begin_time = time();

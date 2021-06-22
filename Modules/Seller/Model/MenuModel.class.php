@@ -471,16 +471,16 @@ class MenuModel
                 ),
             ),
             'user' => array(
-                'title' => '会员',
-                'subtitle' => '会员管理',
+                'title' => '客户',
+                'subtitle' => '客户管理',
                 'icon' => 'user-alt-5',
                 'route' => 'user/index',
                 'items' => array(
-                    array('title' => '会员列表', 'route' => 'user/index', 'desc' => ''),
-                    array('title' => '虚拟会员', 'route' => 'user/userjia', 'desc' => ''),
-                    array('title' => '会员设置', 'route' => 'user/config', 'desc' => ''),
-                    array('title' => '会员分组', 'route' => 'user/usergroup', 'desc' => ''),
-                    array('title' => '会员等级', 'route' => 'user/userlevel', 'desc' => ''),
+                    array('title' => '客户列表', 'route' => 'user/index', 'desc' => ''),
+                    array('title' => '虚拟客户', 'route' => 'user/userjia', 'desc' => ''),
+                    array('title' => '客户设置', 'route' => 'user/config', 'desc' => ''),
+                    array('title' => '客户分组', 'route' => 'user/usergroup', 'desc' => ''),
+                    array('title' => '客户等级', 'route' => 'user/userlevel', 'desc' => ''),
                 )
             ),
             'communityhead' => array(
@@ -515,9 +515,19 @@ class MenuModel
                 'items' => array(
                     array('title' => '角色管理', 'route' => 'perm/index', 'desc' => ''),
                     array('title' => '后台管理员', 'route' => 'perm/user', 'desc' => ''),
+                    array('title' => '操作日志', 'route' => 'SellerLog/index', 'desc' => ''),
+                    array('title' => '系统日志', 'route' => 'operatelog/index', 'desc' => ''),
                 ),
             ),
-
+            'attachment' => array(
+                'title' => '附件',
+                'subtitle' => '附件管理',
+                'icon' => 'attachment',
+                'route' => 'attachment/index',
+                'items' => array(
+                    array('title' => '附件设置', 'route' => 'attachment/index', 'desc' => ''),
+                ),
+            ),
             'config' => array(
                 'title' => '设置',
                 'subtitle' => '设置',
@@ -586,7 +596,7 @@ class MenuModel
                         foreach ($vv['items'] as $tk => $tv) {
                             $new_rt_tk = str_replace('/', '.', $tv['route']);
 
-                            if (strpos($perms_str, $new_rt_tk) !== false) {
+                            if (strpos($perms_str, '.'.$new_rt_tk) !== false) {
                                 $tp_items[$tk] = $tv;
 
                                 $is_in_child = true;
@@ -605,7 +615,7 @@ class MenuModel
                     }
 
 
-                    if (strpos($perms_str, $new_rt) !== false) {
+                    if (strpos($perms_str, '.'.$new_rt) !== false) {
                         $get_items[$kk] = $vv;
                         $is_in = true;
                     } else {

@@ -1593,7 +1593,7 @@ class CommunityheadController extends CommonController {
 				if($row['type'] > 0){
 
 					if( $row['type'] == 1 ){
-							$row['bankname'] = "会员余额";
+							$row['bankname'] = "客户余额";
 					}else if($row['type'] == 2){
 							$row['bankname'] = "微信零钱";
 
@@ -1719,7 +1719,7 @@ class CommunityheadController extends CommonController {
 				{
 					if( $apply['type'] == 1 )
 					{
-						//到会员余额
+						//到客户余额
 						$del_money = $money-$service_charge;
 						if( $del_money >0 )
 						{
@@ -2221,10 +2221,15 @@ class CommunityheadController extends CommonController {
 			$where .= ' and co.state=' . intval($_GPC['order_status']);
 		}
 
-		$sql = "select co.order_id,co.state,co.money,co.type,co.addtime ,og.total,og.name,og.total,og.is_refund_state
+		/*$sql = "select co.order_id,co.state,co.money,co.type,co.addtime ,og.total,og.name,og.total,og.is_refund_state
 				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,
                 ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og
 	                    where  co.order_goods_id = og.order_goods_id {$where}
+	                      order by co.id desc ".' limit ' . (($pindex - 1) * $psize) . ',' . $psize;*/
+		$sql = "select co.order_id,co.state,co.money,co.type,co.addtime ,og.total,og.name,og.total,og.is_refund_state
+				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co left join
+                ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og on co.order_goods_id = og.order_goods_id
+	                    where 1=1  {$where}
 	                      order by co.id desc ".' limit ' . (($pindex - 1) * $psize) . ',' . $psize;
 
 
@@ -2246,10 +2251,15 @@ class CommunityheadController extends CommonController {
 			}
 		}
 
-		$sql_count = "select count(1) as count
+		/*$sql_count = "select count(1) as count
 				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,
                 ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og
-	                    where   co.order_goods_id = og.order_goods_id {$where}  ";
+	                    where   co.order_goods_id = og.order_goods_id {$where}  ";*/
+
+		$sql_count = "select count(1) as count
+				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co left join
+                ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og  on co.order_goods_id = og.order_goods_id
+	                    where 1=1 {$where}  ";
 
 		$total_arr = M()->query($sql_count );
 		$total = $total_arr[0]['count'];
@@ -2450,7 +2460,7 @@ class CommunityheadController extends CommonController {
 
 			if( !is_numeric($_GPC['member_id']) )
 			{
-				show_json(0, array('message' => '请选择会员'));
+				show_json(0, array('message' => '请选择客户'));
 			}
 			//团长名称
 			if( empty(trim($_GPC['head_name']) ))
@@ -2511,13 +2521,13 @@ class CommunityheadController extends CommonController {
 
 			if( $id <=0  )
 			{
-				//检查会员是否已经有申请过团长了。避免重复添加
+				//检查客户是否已经有申请过团长了。避免重复添加
 
 				$ck_head = M('eaterplanet_community_head')->where( array('member_id' => $_GPC['member_id'] ) )->find();
 
 				if( !empty($ck_head) )
 				{
-					show_json(0, array('message' => '该会员已经申请团长'));
+					show_json(0, array('message' => '该客户已经申请团长'));
 				}
 			}
 
@@ -2882,6 +2892,8 @@ class CommunityheadController extends CommonController {
 			//检测是否存在账户，没有就新建
 			//TODO....sendmsg  发送成为团长的信息
 			$community_model->send_head_success_msg($member['id']);
+
+			$community_model->ins_agent_community( $member['id'] );
 
 			show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
 		}

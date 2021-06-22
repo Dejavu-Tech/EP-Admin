@@ -81,7 +81,7 @@ class IntegralModel{
 	}
 
 	/**
-		检测会员积分是否足够支付订单
+		检测客户积分是否足够支付订单
 	**/
 	public function check_user_score_can_pay($member_id, $sku_str ='', $goods_id)
 	{
@@ -194,10 +194,10 @@ class IntegralModel{
 
 
 	/**
-		系统奖励或者扣除会员积分
+		系统奖励或者扣除客户积分
 		CREATE TABLE IF NOT EXISTS `dejavutech_integral_flow` (
 		  `id` int(10) NOT NULL COMMENT '自增id',
-		  `member_id` int(10) NOT NULL COMMENT '会员id',
+		  `member_id` int(10) NOT NULL COMMENT '客户id',
 		  `in_out` enum('in','out') NOT NULL COMMENT '增加积分，还是减少积分',
 		  `type` enum('goodsbuy','refundorder','system_add','system_del') NOT NULL COMMENT '积分获赠/减少 类型',
 		  `order_id` int(10) DEFAULT NULL COMMENT '订单id',
@@ -309,6 +309,18 @@ class IntegralModel{
 				//增加积分
 				$log_data['state'] = 1;
 				$log_data['remark'] = "系统奖励，增加积分".$last_score;
+
+				$this->_do_charge_score($member_id, $score,0);
+			}else if($type == 'invitegift'){
+				//邀请者赠送积分
+				$log_data['state'] = 1;
+				$log_data['remark'] = "邀请者邀请成功，增加积分".$score;
+
+				$this->_do_charge_score($member_id, $score,0);
+			}else if($type == 'invitegift_new'){
+				//被邀请者赠送积分
+				$log_data['state'] = 1;
+				$log_data['remark'] = "被邀请者邀请成功，增加积分".$score;
 
 				$this->_do_charge_score($member_id, $score,0);
 			}

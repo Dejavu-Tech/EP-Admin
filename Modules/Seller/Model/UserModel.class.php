@@ -245,7 +245,7 @@ class UserModel{
 	//--------begin
 
 	/**
-		更改会员余额
+		更改客户余额
 	**/
 	public function sendMemberMoneyChange($member_id, $num, $changetype, $remark='')
 	{
@@ -323,7 +323,7 @@ class UserModel{
 	}
 
 	/**
-		更新会员积分
+		更新客户积分
 	**/
 	public function sendMemberPointChange($member_id,$num, $changetype ,$remark ='', $ch_type='system_add')
 	{
@@ -647,6 +647,28 @@ class UserModel{
 				$config_data['weprogram_subtemplate_apply_tixian'] = $result['priTmplId'];
 			}
 			//---------------------------------------------------------------
+            //-----------------预售商品到货通知
+            $data = array();
+
+            $data['tid'] = '339';
+            $data['kidList'] = array(2,3,7);
+            $data['sceneDesc'] ='预定到货通知';
+            //先删除再添加
+            $arr = array();
+            $arr['priTmplId'] = D('Home/Front')->get_config_by_name('weprogram_subtemplate_presale_ordercan_continuepay');
+
+            if(!empty($arr['priTmplId'])){
+                $result_del_json = $this->curl_datas($del_url,$arr);
+                $result_del = json_decode($result_del_json, true);
+            }
+            $result_json = $this->curl_datas($send_url,$data);
+
+            $result = json_decode($result_json, true);
+            if($result['errcode'] == 0)
+            {
+                $config_data['weprogram_subtemplate_presale_ordercan_continuepay'] = $result['priTmplId'];
+            }
+            //---------------------------------------------------------------
 
 			D('Seller/Config')->update($config_data);
 		}
