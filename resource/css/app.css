@@ -248,7 +248,7 @@ ul{list-style:none;}
 .app .app-region .panel .panel-body ul li,.app .app-side .app-add-item .addItem-wrap ul li{float: left; display: table; margin: 0 0 10px 5px; background: #fff;}
 .app .app-region .app-add-filed a,.app .app-side .app-add-item .addItem-wrap .app-add-filed a {display:table-cell; width:60px; height:40px; text-align:center; box-sizing: border-box; white-space:normal; vertical-align:middle; line-height:14px; cursor:pointer; padding:6px 8px; color:#428bca;}
 
-.app .app-side{margin:71px 0 0 0;width: 560px; overflow-x: hidden; } 
+.app .app-side{margin:71px 0 0 0;width: 560px; overflow-x: hidden; }
 .app .app-side .panel {border-radius: 0;}
 .app .app-side .panel-body{padding:12px 10px;}
 .app .app-side>div{position:relative; padding-bottom:60px; width:535px; margin-left:20px;}
@@ -368,7 +368,7 @@ ul{list-style:none;}
 .micro-page-category .app-category .app-paginations-container .summary{font-size: 12px; line-height: 1.4; color: #666; margin: 10px 0 10px 105px; word-break: break-all;}
 .micro-page-category .app-category-edit .category-messages-list i{cursor:pointer; color:rgba(0,0,0,0.3); font-size:20px;}
 .micro-page-category .app-category-edit .category-messages-list i:hover{ color:rgba(0,0,0,1);}
-/*会员主页*/
+/*客户主页*/
 .usercenter .modules{height: auto;}
 .usercenter .app .app-header{position:relative;width: 100%;}
 .usercenter .app .app-header .app-header-content{width:350px;border: 1px solid #e5e5e5;border-radius: 18px 18px 0 0;height:60px; background:url('../images/app/iphone_head.png') center center no-repeat;}
