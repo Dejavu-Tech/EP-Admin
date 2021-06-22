@@ -36,7 +36,7 @@ function check_env()
         'upload' => array('附件上传', '不限制', '2M+', '未知', 'success'),
         'gd' => array('GD库', '2.0', '2.0+', '未知', 'success'),
         'curl' => array('Curl扩展', '开启', '不限制', '未知', 'success'),
-        'disk' => array('磁盘空间', '150M', '不限制', '未知', 'success'),
+        'disk' => array('磁盘空间', '200M', '不限制', '未知', 'success'),
     );
 
     //PHP环境检测
@@ -130,6 +130,7 @@ function check_dirfile()
 function check_func()
 {
     $items = array(
+
         array('file_get_contents', '支持', 'ok'),
         array('mb_strlen', '支持', 'ok'),
         array('curl_init', '支持', 'ok'),

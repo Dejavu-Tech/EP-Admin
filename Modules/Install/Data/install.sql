@@ -4,6 +4,8 @@
 -- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,28 +25,6 @@ CREATE TABLE IF NOT EXISTS `access`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='结点权限访问表';
 
-
-
-INSERT INTO `access` (`id`, `role_id`, `node_id`)
-VALUES (8, 2, 14),
-       (9, 2, 16),
-       (10, 2, 19),
-       (11, 2, 20),
-       (12, 2, 21),
-       (13, 2, 22),
-       (14, 2, 23),
-       (15, 2, 1),
-       (16, 2, 4),
-       (17, 2, 5),
-       (18, 2, 6),
-       (22, 3, 1),
-       (23, 3, 2),
-       (24, 3, 3),
-       (25, 3, 4),
-       (26, 3, 5);
-
-
-
 CREATE TABLE IF NOT EXISTS `address`
 (
     `address_id`   int(11)      NOT NULL,
@@ -60,8 +40,6 @@ CREATE TABLE IF NOT EXISTS `address`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='用户收货地址';
-
-
 
 CREATE TABLE IF NOT EXISTS `admin`
 (
@@ -83,8 +61,6 @@ CREATE TABLE IF NOT EXISTS `admin`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='后台管理员';
 
-
-
 CREATE TABLE IF NOT EXISTS `apply`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
@@ -102,8 +78,6 @@ CREATE TABLE IF NOT EXISTS `apply`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
 
-
-
 CREATE TABLE IF NOT EXISTS `apply_relship`
 (
     `id`        int(10) NOT NULL COMMENT '自增ID',
@@ -115,21 +89,15 @@ CREATE TABLE IF NOT EXISTS `apply_relship`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='申请信息关联表';
 
-
-
 CREATE TABLE IF NOT EXISTS `area`
 (
-    `area_id`        int(11) unsigned    NOT NULL COMMENT '索引ID',
+    `area_id`        int(11) UNSIGNED    NOT NULL COMMENT '索引ID',
     `area_name`      varchar(50)         NOT NULL COMMENT '地区名称',
-    `area_parent_id` int(11) unsigned    NOT NULL DEFAULT '0' COMMENT '地区父ID',
-    `area_sort`      tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
-    `area_deep`      tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '地区深度，从1开始'
+    `area_parent_id` int(11) UNSIGNED    NOT NULL DEFAULT '0' COMMENT '地区父ID',
+    `area_sort`      tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '排序',
+    `area_deep`      tinyint(1) UNSIGNED NOT NULL DEFAULT '1' COMMENT '地区深度，从1开始'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 45056
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='地区表';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='地区表';
 
 INSERT INTO `area` (`area_id`, `area_name`, `area_parent_id`, `area_sort`, `area_deep`)
 VALUES (1, '北京', 0, 0, 1),
@@ -2251,9 +2219,8 @@ VALUES (1, '北京', 0, 0, 1),
        (2893, '黄梅县', 267, 0, 3),
        (2894, '咸安区', 268, 0, 3),
        (2895, '嘉鱼县', 268, 0, 3),
-       (2896, '崇阳县', 268, 0, 3);
-INSERT INTO `area` (`area_id`, `area_name`, `area_parent_id`, `area_sort`, `area_deep`)
-VALUES (2897, '赤壁市', 268, 0, 3),
+       (2896, '崇阳县', 268, 0, 3),
+       (2897, '赤壁市', 268, 0, 3),
        (2898, '通城县', 268, 0, 3),
        (2899, '通山县', 268, 0, 3),
        (2900, '广水市', 269, 0, 3),
@@ -3463,8 +3430,6 @@ VALUES (2897, '赤壁市', 268, 0, 3),
        (5024, '五家渠市', 492, 0, 3),
        (45055, '海外', 35, 0, 2);
 
-
-
 CREATE TABLE IF NOT EXISTS `bad_domain`
 (
     `id`       int(10)      NOT NULL,
@@ -3472,82 +3437,134 @@ CREATE TABLE IF NOT EXISTS `bad_domain`
     `add_time` int(10)      NOT NULL DEFAULT '0'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 INSERT INTO `bad_domain` (`id`, `domain`, `add_time`)
 VALUES (0, '/index.php?m=member&c=index&a=register&siteid=1', 1507905932),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1507907299),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1507907299),
        (0, '/index.php?s=/Apicheckout/checkout/token/ddd', 1507943652),
        (0, '/index.php?s=/apiindex/load_normal_pintuan.html', 1507987837),
        (0, '/index.php?s=/apiindex/load_normal_pintuan.html', 1507987904),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1507992015),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1507992015),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1507992016),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1507992056),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1507992056),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508119671),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508119697),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508119697),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508172122),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508172124),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508172124),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508208128),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508208130),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508208130),
        (0, '/index.php?s=/Apicar/show_cart_goods/token/ddd', 1508209161),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508242660),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508242662),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508251637),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1508251686),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508242662),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508251637),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1508251686),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508278969),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508278969),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508278969),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508312228),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508312229),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508312229),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508348521),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508348522),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508348522),
        (0, '/index.php?s=/goods/comment/id/1.html', 1508375418),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508377026),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508377028),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508377028),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508408867),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508408868),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508424697),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508408868),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508424697),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508424698),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1508424749),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508439193),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1508424749),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508439193),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508570954),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508570962),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508669879),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508669883),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508684245),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508669883),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508684245),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508684247),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1508684408),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1508684408),
        (0, '/index.php?s=/index/index.htmli3980209i&from=singlemessage', 1508684459),
        (0, '/index.php?s=/index/index.htmli3980209i&from=singlemessage', 1508684465),
        (0, '/index.php?s=/index/index.htmli3980209i&from=singlemessage', 1508684466),
        (0, '/index.php?s=/index/index.htmli3980209i&from=singlemessage', 1508684467),
        (0, '/index.php?s=/index/index.htmli3980209i&from=singlemessage', 1508684471),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508701334),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508701334),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508701334),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508719002),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508720154),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508723410),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508723413),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508727332),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508727332),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508764467),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508764532),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508780881),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508764532),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508780881),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508808172),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508808174),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508808174),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508838172),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508838173),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508857228),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508838173),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508857228),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508857229),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1508857466),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1508857466),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508873552),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508873553),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508873553),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508892312),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508892331),
        (0, '/index.php?s=/pingoods/newman.html', 1508896890),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508900996),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508904777),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508904778),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508904778),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508916481),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508916556),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508920907),
@@ -3556,126 +3573,230 @@ VALUES (0, '/index.php?m=member&c=index&a=register&siteid=1', 1507905932),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508931782),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1508934304),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508939849),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508939850),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508939850),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1508973167),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1508973169),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1508973169),
        (0, '/index.php?s=/user/myfavshop.html', 1509004540),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509005375),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509005804),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509005804),
        (0, '/index.php?s=/user/myfavshop.html', 1509006927),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509041899),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509041901),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509041901),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1509068997),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509070401),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509070421),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509070421),
        (0, '/index.php?s=/Apigoods/seller_goods_list/seller_id/1', 1509095108),
        (0, '/index.php?s=/Apigoods/myfavgoodst/token/dddd', 1509097064),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509112564),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509112850),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509116622),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509112850),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509116622),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509116623),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1509116968),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1509116968),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509141778),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509141779),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509141779),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1509160692),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509175952),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509175954),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509175954),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509215277),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509215278),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509215278),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1509268135),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1509276284),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509289532),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509289532),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509289533),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1509289708),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1509289708),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1509331915),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509452870),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509452937),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509462471),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509452937),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509462471),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509462472),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1509462697),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1509462697),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509482890),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509482892),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509482892),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509511037),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509511038),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509511038),
        (0, '/index.php?s=/Apiuser/get_user_info/token/1af563b025c04262b9a800dc2cbe1b67', 1509518969),
        (0, '/index.php?s=/Apiuser/get_user_info/token/1af563b025c04262b9a800dc2cbe1b67', 1509518984),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509545670),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509545672),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509548961),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509545672),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509548961),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509548962),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1509549150),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1509549150),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1509580249),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509581599),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509581600),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509581600),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509612868),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509612981),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509635461),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509612981),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509635461),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509635461),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1509635521),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1509635521),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509647296),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509647298),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509647298),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509674296),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509674298),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509674298),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509706372),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509706480),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509721944),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509706480),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509721944),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509721945),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1509722001),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1509722001),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509739404),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509739406),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509739406),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509770554),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509770555),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509770555),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509806238),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509806239),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509806239),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509840188),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509840189),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1509981376),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509840189),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1509981376),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1509981377),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1509981524),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510067814),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1509981524),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510067814),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510067815),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1510067867),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510154271),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1510067867),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510154271),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510154272),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1510154323),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1510154323),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1510324700),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1510421050),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1510421512),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1510453154),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1510567961),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510582898),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510582898),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510583117),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1510584847),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510711488),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1510584847),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510711488),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510711489),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1510711543),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510797966),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1510711543),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510797966),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510797967),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1510798205),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1510798205),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510826138),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510826166),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510826166),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510860304),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510860306),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510884432),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510860306),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510884432),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510884462),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1510885065),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1510885065),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510888510),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510888512),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510888512),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510917054),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510917132),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510917132),
        (0, '/index.php?s=/index.php/s/%2Findex%2Findex.html.html', 1510948134),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510950927),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510950931),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510970874),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510950931),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510970874),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510970875),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1510970934),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1510970934),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1510978512),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1510978515),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1510978515),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1511017804),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1511017805),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1511017805),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1511050814),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1511050815),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1511057318),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1511050815),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1511057318),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1511057319),
        (0, '/index.php?s=/order/refund_order.html', 1511057393),
        (0, '/index.php?s=/order/refund_order.html', 1511057395),
@@ -3686,41 +3807,72 @@ VALUES (0, '/index.php?m=member&c=index&a=register&siteid=1', 1507905932),
        (0, '/index.php?s=/order/refund_order.html', 1511057397),
        (0, '/index.php?s=/order/refund_order.html', 1511057399),
        (0, '/index.php?s=/order/refund_order.html', 1511057399),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1511057523),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1511057523),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1511081903),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1511082283),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1511082283),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1511123717),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1511123719),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1511143783),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1511123719),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1511143783),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1511143784),
-       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23', 1511143834),
+       (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
+        1511143834),
        (0, '/index.php?m=member&c=index&a=register&siteid=1', 1511157318),
-       (0, '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6', 1511157320),
-       (0, '/dan/index.php?s=/Apiuser/hexiao_pickup/token/84cb5b6d1535f110df697ef540e94e64/pick_sn/534924238607', 1513999092),
-       (0, '/dan/index.php?s=/Apiuser/hexiao_pickup/token/84cb5b6d1535f110df697ef540e94e64/pick_sn/534924238607', 1513999113),
-       (0, '/dan/index.php?s=/Apiuser/pickup_pickage/token/7625994393e45c03c816cb91392afec6/pick_sn/534924238607', 1514086925),
-       (0, '/dan/index.php?s=/Apiuser/pickup_pickage/token/7625994393e45c03c816cb91392afec6/pick_sn/534924238607', 1514086972),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1', 1545116412),
+       (0,
+        '/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id=%*27a*nd%20ex*p(~(sele*ct%25*2afro*m(sele*ct+co*nc*at(0x7e,md5(233333),0x7e))x))%23%26m%3D1%26f%3Dtest%26modelid%3D2%26catid%3D6',
+        1511157320),
+       (0, '/dan/index.php?s=/Apiuser/hexiao_pickup/token/84cb5b6d1535f110df697ef540e94e64/pick_sn/534924238607',
+        1513999092),
+       (0, '/dan/index.php?s=/Apiuser/hexiao_pickup/token/84cb5b6d1535f110df697ef540e94e64/pick_sn/534924238607',
+        1513999113),
+       (0, '/dan/index.php?s=/Apiuser/pickup_pickage/token/7625994393e45c03c816cb91392afec6/pick_sn/534924238607',
+        1514086925),
+       (0, '/dan/index.php?s=/Apiuser/pickup_pickage/token/7625994393e45c03c816cb91392afec6/pick_sn/534924238607',
+        1514086972),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545116412),
        (0, '/index.php?c=utility&a=file&do=group_list&local=local', 1545116413),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=wx&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1', 1545116416),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=wx&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545116416),
        (0, '/index.php?c=utility&a=file&do=group_list&local=wx', 1545116416),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1', 1545116441),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545116441),
        (0, '/index.php?c=utility&a=file&do=group_list&local=local', 1545116441),
-       (0, '/index.php?c=utility&a=file&do=upload&upload_type=image&global=&dest_dir=&uniacid=-1&quality=0&group_id=-1', 1545116451),
-       (0, '/index.php?c=utility&a=file&do=upload&upload_type=image&global=&dest_dir=&uniacid=-1&quality=0&group_id=-1', 1545116471),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1', 1545116653),
+       (0, '/index.php?c=utility&a=file&do=upload&upload_type=image&global=&dest_dir=&uniacid=-1&quality=0&group_id=-1',
+        1545116451),
+       (0, '/index.php?c=utility&a=file&do=upload&upload_type=image&global=&dest_dir=&uniacid=-1&quality=0&group_id=-1',
+        1545116471),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545116653),
        (0, '/index.php?c=utility&a=file&do=group_list&local=local', 1545116653),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=wx&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1', 1545116655),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=wx&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545116655),
        (0, '/index.php?c=utility&a=file&do=group_list&local=wx', 1545116655),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1', 1545116656),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545116656),
        (0, '/index.php?c=utility&a=file&do=group_list&local=local', 1545116656),
        (0, '/index.php?c=utility&a=file&do=group_list&local=local', 1545116672),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=local&year=2018&month=1&uniacid=-1&dest_dir=&global=&groupid=-1', 1545116672),
-       (0, '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1', 1545118384),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=local&year=2018&month=1&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545116672),
+       (0,
+        '/index.php?c=utility&a=file&do=image&page=1&local=local&year=0&month=0&uniacid=-1&dest_dir=&global=&groupid=-1',
+        1545118384),
        (0, '/index.php?c=utility&a=file&do=group_list&local=local', 1545118384),
-       (0, '/index.php?c=utility&a=file&do=upload&upload_type=image&global=&dest_dir=&uniacid=-1&quality=0&group_id=-1', 1545118404);
-
-
+       (0, '/index.php?c=utility&a=file&do=upload&upload_type=image&global=&dest_dir=&uniacid=-1&quality=0&group_id=-1',
+        1545118404);
 
 CREATE TABLE IF NOT EXISTS `bad_word`
 (
@@ -3730,8 +3882,6 @@ CREATE TABLE IF NOT EXISTS `bad_word`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='违规词过滤表';
-
-
 
 INSERT INTO `bad_word` (`bad_id`, `badword`, `replaceword`)
 VALUES (1, '法轮功', ''),
@@ -6607,8 +6757,6 @@ VALUES (2855, '六和彩网', ''),
        (2870, '盛大私服', ''),
        (2871, '巨人私服', '巨人a');
 
-
-
 CREATE TABLE IF NOT EXISTS `balance`
 (
     `bid`          int(11)      NOT NULL COMMENT '自增id',
@@ -6620,9 +6768,7 @@ CREATE TABLE IF NOT EXISTS `balance`
     `addtime`      int(10)      NOT NULL COMMENT '时钟运行时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `balance_order`
 (
@@ -6635,9 +6781,7 @@ CREATE TABLE IF NOT EXISTS `balance_order`
     `addtime`    int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `bargain_goods`
 (
@@ -6654,12 +6798,10 @@ CREATE TABLE IF NOT EXISTS `bargain_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='砍价商品表';
 
-
-
 CREATE TABLE IF NOT EXISTS `bargain_order`
 (
     `id`           int(10)      NOT NULL COMMENT '自增id',
-    `member_id`    int(10)      NOT NULL COMMENT '会员id',
+    `member_id`    int(10)      NOT NULL COMMENT '客户id',
     `goods_id`     int(10)      NOT NULL COMMENT '商品id',
     `sku_str`      varchar(255) NOT NULL COMMENT '规格，',
     `state`        tinyint(1)   NOT NULL COMMENT '状态，0进行中，1成功，2失败',
@@ -6671,18 +6813,16 @@ CREATE TABLE IF NOT EXISTS `bargain_order`
     `end_time`     int(10)      NOT NULL COMMENT '活动结束时间',
     `add_time`     int(10)      NOT NULL COMMENT '添加时间',
     `order_id`     int(10)      NOT NULL COMMENT '订单id',
-    `address_id`   int(10)      NOT NULL COMMENT '会员收货地址',
+    `address_id`   int(10)      NOT NULL COMMENT '客户收货地址',
     `is_share`     tinyint(1)   DEFAULT '0' COMMENT '是否分享过，分享过后，多砍一次价'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='好友砍价订单表';
 
-
-
 CREATE TABLE IF NOT EXISTS `bargain_order_detail`
 (
     `id`               int(10) NOT NULL COMMENT '自增id',
-    `member_id`        int(10) NOT NULL COMMENT '砍价的会员id',
+    `member_id`        int(10) NOT NULL COMMENT '砍价的客户id',
     `kan_money`        float(10, 2) DEFAULT '0.00' COMMENT '砍价金额',
     `bargain_order_id` int(10) NOT NULL COMMENT '砍价人数',
     `addtime`          int(10) NOT NULL COMMENT '砍价时间',
@@ -6692,8 +6832,6 @@ CREATE TABLE IF NOT EXISTS `bargain_order_detail`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='砍价详情表';
-
-
 
 CREATE TABLE IF NOT EXISTS `blog`
 (
@@ -6712,10 +6850,7 @@ CREATE TABLE IF NOT EXISTS `blog`
     `reply`            int(11)      NOT NULL COMMENT '回复数量',
     `allow_reply`      tinyint(1)   NOT NULL COMMENT '是否可以评论'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `blog_category`
 (
@@ -6727,8 +6862,6 @@ CREATE TABLE IF NOT EXISTS `blog_category`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='后台菜单';
 
-
-
 CREATE TABLE IF NOT EXISTS `blog_content`
 (
     `blog_id` int(11)      NOT NULL,
@@ -6737,8 +6870,6 @@ CREATE TABLE IF NOT EXISTS `blog_content`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
-
-
 
 CREATE TABLE IF NOT EXISTS `blog_image`
 (
@@ -6750,8 +6881,6 @@ CREATE TABLE IF NOT EXISTS `blog_image`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
-
-
 
 CREATE TABLE IF NOT EXISTS `blog_reply`
 (
@@ -6766,10 +6895,7 @@ CREATE TABLE IF NOT EXISTS `blog_reply`
     `status`      tinyint(1)   NOT NULL,
     `device`      varchar(255) NOT NULL COMMENT '设备'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `blog_seller_order`
 (
@@ -6781,20 +6907,16 @@ CREATE TABLE IF NOT EXISTS `blog_seller_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='后台通知查看记录表';
 
-
-
 CREATE TABLE IF NOT EXISTS `car`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
-    `token`       varchar(200) NOT NULL COMMENT '客户端token,会员身份',
+    `token`       varchar(200) NOT NULL COMMENT '客户端token,客户身份',
     `carkey`      varchar(255) NOT NULL COMMENT '购物车key',
     `format_data` text         NOT NULL COMMENT '购物车商品参数',
     `modifytime`  int(10) DEFAULT '0' COMMENT '加入购物车时间'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='客户端购物车表';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='客户端购物车表'
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `comment`
 (
@@ -6824,9 +6946,8 @@ CREATE TABLE IF NOT EXISTS `config`
     `info`         varchar(255)         NOT NULL COMMENT '描述',
     `sort`         smallint(3) unsigned NOT NULL DEFAULT '0' COMMENT '排序'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 168
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
+  DEFAULT CHARSET = utf8;
+
 
 
 
@@ -6882,7 +7003,7 @@ VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
        (63, 'APPID', 'site', 0, '', '微信APPID', 0),
        (64, 'APPSECRET', 'site', 0, '', '微信APPSECRET', 0),
        (65, 'MCHID', 'site', 0, '1246637501', '微信商户号', 0),
-       (66, 'VERSION', 'site', 0, 'V4.0.1', '系统版本', 0),
+       (66, 'VERSION', 'site', 0, 'V4.7.0', '系统版本', 0),
        (67, 'deliverNoticeId', 'weixin', 0, 'eGWpyoJInWgSNYdnkujvjAIF9hbJIGm4p4tDCwcmURI', '订单标记发货通知', 0),
        (68, 'groupResultId', 'weixin', 0, 'jfNyI5kK7X5pyAaxkCmU2gRqjLB91fl_u1X0FVNWC0A', '团购结果通知', 0),
        (69, 'expireId', 'weixin', 0, 'eceRXDPx1NnK7aR8Bp19hic0mcHMYl7rl74evMopxCU', '到期提醒', 0),
@@ -6942,16 +7063,18 @@ VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
        (123, 'weprogram_template_take_pin', 'weixin', 0, 'dIOGduRb8S28Ktp7Y-zocQUgOdSfeFgfJ3BsjM3-hZY', '拼团参与通知', 0),
        (124, 'weprogram_template_success_pin', 'weixin', 0, 'ygij9h-Rbll02yeglFnJq58fr2SGym_6cYi3jLadpQw', '拼团成功通知', 0),
        (125, 'weprogram_template_fail_pin', 'weixin', 0, '51--pbSW9KS-rGLeSsDAjRGCMOTNDJDqJH9PtwMYvLw', '拼团失败通知', 0),
-       (126, 'weprogram_template_refund_order', 'weixin', 0, ' 74vjSjyQPfLirwpecSbDJEWfE_klsgUKL2kuF6uWiZY', '退款成功通知', 0),
+       (126, 'weprogram_template_refund_order', 'weixin', 0, ' 74vjSjyQPfLirwpecSbDJEWfE_klsgUKL2kuF6uWiZY', '退款成功通知',
+        0),
        (127, 'weprogram_template_tip_pin', 'weixin', 0, 'hE_nDnLGXFa9yPOO0o33-mOM9hgxVq1Rzs8fV1RfR90', '参团人数不足通知', 0),
        (128, 'weprogram_template_pay_order', 'weixin', 0, '8YX436RNVanBF1JHaBeorjL-gJqyh9CrOAzhWEIzmBE', '订单支付成功通知', 0),
-       (129, 'weprogram_template_lottery_result', 'weixin', 0, '1CCajAjY9BxPfOJ3w4XTwYQEuVXSlDaReZguYH7qkfg', '抽奖结果通知', 0),
+       (129, 'weprogram_template_lottery_result', 'weixin', 0, '1CCajAjY9BxPfOJ3w4XTwYQEuVXSlDaReZguYH7qkfg', '抽奖结果通知',
+        0),
        (130, 'weprogram_template_open_pin', 'weixin', 0, 'pUBO0lF2JF3yXet39pnDAJet7pLneZe34GTKFHHTsLg', '拼团开团通知', 0),
        (131, 'weprogram_template_send_order', 'weixin', 0, 'EVzcEN5J8mD64wNuliTJxV_P3x7z8Lt1c4pSgqrG54Q', '订单发货提醒', 0),
        (132, 'index_share_titile', 'site', 0, '自定义分享-吃货星球拼团系统', '首页分享标题自定义', 0),
        (133, 'commiss_level_num', 'site', 0, '3', '分销等级', 0),
-       (134, 'wxprog_member_take_in', 'weixin', 0, 'nKhUP1r7ObhiH_JdjA-EWz3cvZLkalEUnWHsESy_zuU', '新会员加入通知', 0),
-       (135, 'weprog_neworder_commiss', 'weixin', 0, 'AfH6DlMZqv83uysJxbipkuOQMErrOXDE23ncKJakzM0', '分销会员订单佣金', 0),
+       (134, 'wxprog_member_take_in', 'weixin', 0, 'nKhUP1r7ObhiH_JdjA-EWz3cvZLkalEUnWHsESy_zuU', '新客户加入通知', 0),
+       (135, 'weprog_neworder_commiss', 'weixin', 0, 'AfH6DlMZqv83uysJxbipkuOQMErrOXDE23ncKJakzM0', '分销客户订单佣金', 0),
        (136, 'weprogram_template_hexiao_success', 'weixin', 0, '', '核销成功', 0),
        (137, 'kefu_wait_msg', 'site', 0, '', '卖家不在线留言', 0),
        (138, '24hours_new_sg', 'site', 0, '', '24小时后访问首次自动回复', 0),
@@ -6963,9 +7086,9 @@ VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
        (144, 'buy_send_score', 'site', 0, '', '购物返积分', 0),
        (145, 'integral_description', 'site', 0, '', '积分商城兑换规则', 0),
        (146, 'is_open_integral', 'site', 0, '1', '是否开启积分商城', 0),
-       (147, 'member_default_levelname', 'site', 0, '默认会员', '会员默认等级默认折扣', 0),
-       (148, 'member_defualt_discount', 'site', 0, '100', '会员默认等级默认折扣', 0),
-       (149, 'member_level_is_open', 'site', 0, '0', '是否开启会员等级', 0),
+       (147, 'member_default_levelname', 'site', 0, '默认客户', '客户默认等级默认折扣', 0),
+       (148, 'member_defualt_discount', 'site', 0, '100', '客户默认等级默认折扣', 0),
+       (149, 'member_level_is_open', 'site', 0, '0', '是否开启客户等级', 0),
        (150, 'is_open_fissionbonus', 'site', 0, '0', '开启红包裂变功能', 0),
        (151, 'distribute_type', 'site', 0, '0', '红包分配方式，0随机，1平均', 0),
        (152, 'bonus_count', 'site', 0, '4', '红包人数', 0),
@@ -6974,7 +7097,7 @@ VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
        (155, 'bonus_rule', 'site', 0, '拆红包', '活动规则', 0),
        (156, 'bonus_share_title', 'site', 0, '', '红包分享标题', 0),
        (157, 'is_yue_open', 'site', 0, '0', '开启余额支付', 0),
-       (158, 'member_upgrade_msg', 'weixin', 0, '', '会员升级模板消息通知', 0),
+       (158, 'member_upgrade_msg', 'weixin', 0, '', '客户升级模板消息通知', 0),
        (159, 'fissionbonus_index_image', 'site', 0, '', '首页裂变弹窗图片', 0),
        (160, 'fissionbonus_detail_image', 'site', 0, '', '红包详情页弹出窗口', 0),
        (161, 'fissionbonus_index_tan', 'site', 0, '1', '开启首页弹窗', 0),
@@ -6999,9 +7122,8 @@ CREATE TABLE IF NOT EXISTS `core_attachment`
     `module_upload_dir` varchar(100)        NOT NULL,
     `group_id`          int(11) DEFAULT NULL
 ) ENGINE = MyISAM
-  AUTO_INCREMENT = 18
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
+  DEFAULT CHARSET = utf8;
+
 
 
 
@@ -7021,7 +7143,7 @@ CREATE TABLE IF NOT EXISTS `core_attachment_group`
 CREATE TABLE IF NOT EXISTS `fen_tixian_order`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
-    `member_id` int(10)      NOT NULL COMMENT '会员id',
+    `member_id` int(10)      NOT NULL COMMENT '客户id',
     `money`     float(10, 2) NOT NULL COMMENT '提现金额',
     `state`     tinyint(1)   NOT NULL COMMENT '提现状态，0申请中，1提现成功，2体现失败',
     `shentime`  int(10)      NOT NULL COMMENT '审核时间',
@@ -7035,7 +7157,7 @@ CREATE TABLE IF NOT EXISTS `fen_tixian_order`
 CREATE TABLE IF NOT EXISTS `fissionbonus`
 (
     `id`         int(10)    NOT NULL COMMENT '自增id',
-    `member_id`  int(10)    NOT NULL COMMENT '会员id',
+    `member_id`  int(10)    NOT NULL COMMENT '客户id',
     `count`      int(10)    NOT NULL COMMENT '分享人数',
     `bonus_ser`  text       NOT NULL COMMENT '裂变红包金额队列',
     `state`      tinyint(1) NOT NULL DEFAULT '0' COMMENT '状态，0未成功，1已经成功',
@@ -7051,7 +7173,7 @@ CREATE TABLE IF NOT EXISTS `fissionbonus_flow`
 (
     `id`              int(10)        NOT NULL COMMENT '自增id',
     `fissionbonus_id` int(10)        NOT NULL COMMENT '来源订单id',
-    `member_id`       int(10)        NOT NULL COMMENT '会员id',
+    `member_id`       int(10)        NOT NULL COMMENT '客户id',
     `send_member_id`  int(10)        NOT NULL COMMENT '点击人id',
     `money`           decimal(10, 2) NOT NULL COMMENT '金额',
     `type`            tinyint(1)     NOT NULL COMMENT '1:自己签到，2：别人帮忙金额得到 3，给别人点赞得到金额',
@@ -7066,7 +7188,7 @@ CREATE TABLE IF NOT EXISTS `fissionbonus_order`
 (
     `id`              int(10)        NOT NULL COMMENT '自增id',
     `fissionbonus_id` int(10)        NOT NULL COMMENT '订单id',
-    `member_id`       int(10)        NOT NULL COMMENT '会员id',
+    `member_id`       int(10)        NOT NULL COMMENT '客户id',
     `is_self`         tinyint(1)     NOT NULL DEFAULT '0' COMMENT '是否自己的签到，0否，1是',
     `is_notify`       tinyint(1)              DEFAULT '0' COMMENT '是否通知，0未通知，1已经通知',
     `money`           decimal(10, 2) NOT NULL COMMENT '红包金额',
@@ -7082,19 +7204,18 @@ CREATE TABLE IF NOT EXISTS `fissionsharing_link`
     `id`             int(10)               NOT NULL COMMENT '自增id',
     `type`           enum ('page','goods') NOT NULL COMMENT '记录类型',
     `goods_id`       int(10)               NOT NULL COMMENT '商品id',
-    `member_id`      int(10)               NOT NULL COMMENT '会员id',
-    `share_one_id`   int(10)               NOT NULL COMMENT '1级分享会员id',
-    `share_two_id`   int(10)               NOT NULL COMMENT '二级分享会员id',
-    `share_three_id` int(10)               NOT NULL COMMENT '三级分销会员id',
+    `member_id`      int(10)               NOT NULL COMMENT '客户id',
+    `share_one_id`   int(10)               NOT NULL COMMENT '1级分享客户id',
+    `share_two_id`   int(10)               NOT NULL COMMENT '二级分享客户id',
+    `share_three_id` int(10)               NOT NULL COMMENT '三级分销客户id',
     `modify_time`    int(10)               NOT NULL COMMENT '最近修改时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 2
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='分享裂变分享情况记录表';
+  DEFAULT CHARSET = utf8 COMMENT ='分享裂变分享情况记录表';
 
 
 
-INSERT INTO `fissionsharing_link` (`id`, `type`, `goods_id`, `member_id`, `share_one_id`, `share_two_id`, `share_three_id`, `modify_time`)
+INSERT INTO `fissionsharing_link` (`id`, `type`, `goods_id`, `member_id`, `share_one_id`, `share_two_id`,
+                                   `share_three_id`, `modify_time`)
 VALUES (1, 'page', 0, 0, 0, 0, 0, 1605324229);
 
 
@@ -7174,8 +7295,8 @@ CREATE TABLE IF NOT EXISTS `goods_description`
     `summary`            varchar(255) NOT NULL COMMENT '产品简介',
     `activity_summary`   text COMMENT '互动规则',
     `description`        text         NOT NULL COMMENT '商品详情',
-    `is_untake_level`    tinyint(1)   DEFAULT '0' COMMENT '是否不参与会员折扣',
-    `level_discount`     varchar(255) DEFAULT NULL COMMENT '商品会员折扣',
+    `is_untake_level`    tinyint(1)   DEFAULT '0' COMMENT '是否不参与客户折扣',
+    `level_discount`     varchar(255) DEFAULT NULL COMMENT '商品客户折扣',
     `video_src`          varchar(255) DEFAULT NULL COMMENT '视频地址',
     `video_size_width`   varchar(50)  DEFAULT '0' COMMENT '视频尺寸',
     `vedio_size_height`  varchar(20)  DEFAULT '0' COMMENT '视频高度',
@@ -7272,13 +7393,13 @@ CREATE TABLE IF NOT EXISTS `goods_option_value`
 CREATE TABLE IF NOT EXISTS `goods_share_image`
 (
     `id`         int(10)      NOT NULL COMMENT '自增id',
-    `member_id`  int(10)      NOT NULL COMMENT '会员id',
+    `member_id`  int(10)      NOT NULL COMMENT '客户id',
     `goods_id`   int(10)      NOT NULL COMMENT '商品id',
     `image_path` varchar(255) NOT NULL COMMENT '图片路径',
     `addtime`    int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员商品分享图';
+  ROW_FORMAT = COMPACT COMMENT ='客户商品分享图';
 
 
 
@@ -7302,14 +7423,14 @@ CREATE TABLE IF NOT EXISTS `group`
     `title`             varchar(255) NOT NULL COMMENT '圈子标题',
     `post_count`        int(10)      NOT NULL,
     `status`            tinyint(1)   NOT NULL COMMENT '1，正常。0禁止',
-    `member_count`      int(10)      NOT NULL COMMENT '会员数量',
+    `member_count`      int(10)      NOT NULL COMMENT '客户数量',
     `quan_share`        varchar(255) DEFAULT NULL COMMENT '圈子分享标题',
     `is_synchro`        tinyint(1)   DEFAULT '1' COMMENT '同步评论到圈子',
-    `limit_send_member` tinyint(1)   DEFAULT NULL COMMENT '是否限制会员发布',
+    `limit_send_member` tinyint(1)   DEFAULT NULL COMMENT '是否限制客户发布',
     `quan_logo`         varchar(255) DEFAULT NULL COMMENT '圈子logo',
     `quan_banner`       varchar(255) NOT NULL COMMENT '圈子banner图片',
     `quan_share_desc`   varchar(255) NOT NULL COMMENT '圈子分享描述',
-    `member_ids`        text COMMENT '限制的会员发布id',
+    `member_ids`        text COMMENT '限制的客户发布id',
     `create_time`       int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
@@ -7350,7 +7471,7 @@ CREATE TABLE IF NOT EXISTS `group_member`
 CREATE TABLE IF NOT EXISTS `group_post`
 (
     `id`              int(10)      NOT NULL COMMENT '自增id',
-    `member_id`       int(10)      NOT NULL COMMENT '会员id',
+    `member_id`       int(10)      NOT NULL COMMENT '客户id',
     `is_vir`          tinyint(1)   DEFAULT '0' COMMENT '是否虚拟评价同步',
     `avatar`          varchar(255) DEFAULT NULL COMMENT '机器人头像',
     `user_name`       varchar(255) DEFAULT NULL COMMENT '用户名称',
@@ -7374,7 +7495,7 @@ CREATE TABLE IF NOT EXISTS `group_post`
 CREATE TABLE IF NOT EXISTS `group_post_fav`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `post_id`   int(10) NOT NULL COMMENT '帖子id',
     `fav_time`  int(10) NOT NULL COMMENT '喜欢时间'
 ) ENGINE = InnoDB
@@ -7401,7 +7522,7 @@ CREATE TABLE IF NOT EXISTS `guobie`
 CREATE TABLE IF NOT EXISTS `integral_flow`
 (
     `id`        int(10)                                                              NOT NULL COMMENT '自增id',
-    `member_id` int(10)                                                              NOT NULL COMMENT '会员id',
+    `member_id` int(10)                                                              NOT NULL COMMENT '客户id',
     `in_out`    enum ('in','out')                                                    NOT NULL COMMENT '增加积分，还是减少积分',
     `type`      enum ('goodsbuy','refundorder','system_add','system_del','orderbuy') NOT NULL COMMENT '积分获赠/减少 类型',
     `order_id`  int(10)      DEFAULT NULL COMMENT '订单id',
@@ -7504,7 +7625,7 @@ VALUES (1, '100.00000000', '厘米', 'cm'),
 CREATE TABLE IF NOT EXISTS `eaterplanet_community_head`
 (
     `id`                        int(10)      NOT NULL COMMENT '自增id',
-    `member_id`                 int(10)      NOT NULL COMMENT '会员id',
+    `member_id`                 int(10)      NOT NULL COMMENT '客户id',
     `agent_id`                  int(10)               DEFAULT '0' COMMENT '推荐人id',
     `level_id`                  int(10)               DEFAULT '0' COMMENT '团长等级id',
     `community_name`            varchar(255)          DEFAULT NULL COMMENT '小区名称',
@@ -7537,7 +7658,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head`
 CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_commiss`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
-    `member_id`    int(10) NOT NULL COMMENT '会员ID',
+    `member_id`    int(10) NOT NULL COMMENT '客户ID',
     `head_id`      int(10) NOT NULL COMMENT '团长ID',
     `money`        float(10, 2) DEFAULT '0.00' COMMENT '可提现金额',
     `dongmoney`    float(10, 2) DEFAULT '0.00' COMMENT '提现中金额',
@@ -7558,10 +7679,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_commiss`
 CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_commiss_order`
 (
     `id`                int(10)                               NOT NULL COMMENT '自增ID',
-    `member_id`         int(10)                               NOT NULL COMMENT '会员ID',
+    `member_id`         int(10)                               NOT NULL COMMENT '客户ID',
     `head_id`           int(10)                               NOT NULL COMMENT '团长id',
     `child_head_id`     int(10)                                        DEFAULT '0' COMMENT '下级团长id',
-    `type`              enum ('orderbuy','commiss','tuijian') NOT NULL DEFAULT 'orderbuy' COMMENT 'orderbuy 团员订单购买 ,commiss 下级的会员订单购买,tuijian 推荐团长的佣金',
+    `type`              enum ('orderbuy','commiss','tuijian') NOT NULL DEFAULT 'orderbuy' COMMENT 'orderbuy 团员订单购买 ,commiss 下级的客户订单购买,tuijian 推荐团长的佣金',
     `fen_type`          tinyint(1)                                     DEFAULT '0' COMMENT '0,按照比例计算的，1按照实际金额计算的',
     `bili`              float(10, 2)                                   DEFAULT '0.00' COMMENT '分销分佣比例',
     `level`             int(10)                                        DEFAULT '0' COMMENT '第几层分佣',
@@ -7616,7 +7737,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_tixian_order`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
     `uniacid`        int(10)      NOT NULL,
-    `member_id`      int(10)      NOT NULL COMMENT '会员id',
+    `member_id`      int(10)      NOT NULL COMMENT '客户id',
     `head_id`        int(10)      NOT NULL COMMENT '团长id',
     `money`          float(10, 2) NOT NULL COMMENT '提现金额',
     `service_charge` float(10, 2) DEFAULT '0.00' COMMENT '手续费',
@@ -7638,7 +7759,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_tixian_order`
 CREATE TABLE IF NOT EXISTS `eaterplanet_community_history`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `head_id`   int(10) NOT NULL COMMENT '社区id',
     `addtime`   int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
@@ -7650,7 +7771,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_history`
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_address`
 (
     `address_id`   int(11)              NOT NULL COMMENT '自增id',
-    `member_id`    int(11)              NOT NULL COMMENT '会员id',
+    `member_id`    int(11)              NOT NULL COMMENT '客户id',
     `name`         varchar(100)         NOT NULL COMMENT '收货人姓名',
     `telephone`    varchar(50)          NOT NULL COMMENT '电话',
     `address`      varchar(255)         NOT NULL COMMENT '收货地址',
@@ -7669,16 +7790,16 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_address`
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_adv`
 (
-    `id`           int(11)                                  NOT NULL COMMENT '自增id',
-    `advname`      varchar(200)                             NOT NULL COMMENT '广告名称',
-    `thumb`        varchar(255)                             NOT NULL COMMENT '图片地址',
-    `link`         varchar(255)                             NOT NULL COMMENT '广告链接地址',
-    `appid`        varchar(255)                                      DEFAULT NULL COMMENT '外部小程序appid',
-    `linktype`     tinyint(1)                               NOT NULL DEFAULT '1' COMMENT '0外链 1小程序内 2外部小程序',
-    `type`         enum ('slider','nav','pintuan','recipe') NOT NULL COMMENT '广告类型，slider幻灯，nav导航小图',
-    `displayorder` int(10)                                  NOT NULL COMMENT '排序，越大排序越前面',
-    `enabled`      tinyint(1)                               NOT NULL COMMENT '是否生效，1生效，0不生效',
-    `addtime`      int(10)                                  NOT NULL COMMENT '添加广告时间'
+    `id`           int(11)                                            NOT NULL COMMENT '自增id',
+    `advname`      varchar(200)                                       NOT NULL COMMENT '广告名称',
+    `thumb`        varchar(255)                                       NOT NULL COMMENT '图片地址',
+    `link`         varchar(255)                                       NOT NULL COMMENT '广告链接地址',
+    `appid`        varchar(255)                                                DEFAULT NULL COMMENT '外部小程序appid',
+    `linktype`     tinyint(1)                                         NOT NULL DEFAULT '1' COMMENT '0外链 1小程序内 2外部小程序',
+    `type`         enum ('slider','nav','pintuan','recipe','presale') NOT NULL COMMENT '广告类型，slider幻灯，nav导航小图',
+    `displayorder` int(10)                                            NOT NULL COMMENT '排序，越大排序越前面',
+    `enabled`      tinyint(1)                                         NOT NULL COMMENT '是否生效，1生效，0不生效',
+    `addtime`      int(10)                                            NOT NULL COMMENT '添加广告时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品广告表';
@@ -7701,6 +7822,22 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_advimg`
 
 
 
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_adv_category`
+(
+    `id`           int(11)                                            NOT NULL COMMENT '自增id',
+    `cate_id`      int(10)                                            NOT NULL COMMENT '分类id',
+    `advname`      varchar(200)                                       NOT NULL COMMENT '广告名称',
+    `thumb`        varchar(255)                                       NOT NULL COMMENT '图片地址',
+    `link`         varchar(255)                                       NOT NULL COMMENT '广告链接地址',
+    `appid`        varchar(255)                                                DEFAULT NULL COMMENT '外部小程序appid',
+    `linktype`     tinyint(1)                                         NOT NULL DEFAULT '1' COMMENT '0外链 1小程序内 2外部小程序',
+    `type`         enum ('slider','nav','pintuan','recipe','presale') NOT NULL COMMENT '广告类型，slider幻灯，nav导航小图',
+    `displayorder` int(10)                                            NOT NULL COMMENT '排序，越大排序越前面',
+    `enabled`      tinyint(1)                                         NOT NULL COMMENT '是否生效，1生效，0不生效',
+    `addtime`      int(10)                                            NOT NULL COMMENT '添加广告时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4 COMMENT ='吃货星球商城商品广告表';
+
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_area`
 (
     `id`   int(11)      NOT NULL COMMENT '11',
@@ -7708,7 +7845,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_area`
     `pid`  int(11)      NOT NULL COMMENT '上级id',
     `code` varchar(20)  NOT NULL COMMENT '地区编号'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 3636
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城地区配置表';
 
@@ -11371,7 +11507,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_article`
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_car`
 (
     `id`           int(10)      NOT NULL COMMENT '自增id',
-    `token`        varchar(200) NOT NULL COMMENT '客户端token,会员身份',
+    `token`        varchar(200) NOT NULL COMMENT '客户端token,客户身份',
     `community_id` int(10)      NOT NULL COMMENT '团长id',
     `carkey`       varchar(255) NOT NULL COMMENT '购物车key',
     `format_data`  text         NOT NULL COMMENT '购物车商品参数',
@@ -11391,7 +11527,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_chargetype`
     `uniacid`    int(10)      NOT NULL COMMENT '公众号id'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员充值选项表';
+  ROW_FORMAT = COMPACT COMMENT ='客户充值选项表';
 
 
 
@@ -11429,7 +11565,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_pickup_member`
 (
     `id`           int(10)    NOT NULL COMMENT '自增id',
     `community_id` int(10)    NOT NULL COMMENT '社区id',
-    `member_id`    int(10)    NOT NULL COMMENT '会员id',
+    `member_id`    int(10)    NOT NULL COMMENT '客户id',
     `state`        tinyint(1) NOT NULL DEFAULT '0' COMMENT '状态，0未审核，1审核通过',
     `remark`       varchar(255)        DEFAULT NULL COMMENT '备注',
     `addtime`      int(10)    NOT NULL COMMENT '添加时间'
@@ -11445,7 +11581,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_pickup_member_record
     `order_id`     int(10) NOT NULL COMMENT '订单id',
     `order_sn`     varchar(100) DEFAULT NULL COMMENT '订单编号',
     `community_id` int(10) NOT NULL COMMENT '社区id',
-    `member_id`    int(10) NOT NULL COMMENT '会员id',
+    `member_id`    int(10) NOT NULL COMMENT '客户id',
     `addtime`      int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
@@ -11459,19 +11595,19 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_config`
     `name`  varchar(100)         NOT NULL,
     `value` text                 NOT NULL
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 98
   DEFAULT CHARSET = utf8
+  AUTO_INCREMENT = 194
   ROW_FORMAT = COMPACT;
 
 
 
 INSERT INTO `eaterplanet_ecommerce_config` (`id`, `name`, `value`)
-VALUES (1, 'goods_stock_notice', '122'),
-       (2, 'instructions', ''),
-       (3, 'default_comunity_money', '12'),
+VALUES (1, 'goods_stock_notice', '100'),
+       (2, 'instructions', '&amp;lt;p&amp;gt;我们竭诚为您服务&amp;lt;/p&amp;gt;'),
+       (3, 'default_comunity_money', '10'),
        (4, 'user_qrcode_image', ''),
-       (5, 'user_qrcode_x', '{php echo empty($data[''user_qrcode_x''])?0:$data[''user_qrcode_x'']}'),
-       (6, 'user_qrcode_y', '{php echo empty($data[''user_qrcode_y''])?0:$data[''user_qrcode_y'']}'),
+       (5, 'user_qrcode_x', '{php echo empty($data[\'user_qrcode_x\'])?0:$data[\'user_qrcode_x\']}'),
+       (6, 'user_qrcode_y', '{php echo empty($data[\'user_qrcode_y\'])?0:$data[\'user_qrcode_y\']}'),
        (7, 'communityhead_apply_page', ''),
        (8, 'shoname', '吃货星球'),
        (9, 'shoplogo', ''),
@@ -11515,50 +11651,145 @@ VALUES (1, 'goods_stock_notice', '122'),
        (47, 'open_comment_shenhe', '1'),
        (48, 'shop_domain', 'https://demo.ch871.com/'),
        (49, 'supply_apply_page', ''),
-       (50, 'site_version', 'V3.1.0'),
-       (51, 'cur_release', '202012181524'),
-       (56, 'enabled_front_supply', '1'),
-       (57, 'supply_add_goods_shenhe', '0'),
-       (58, 'supply_edit_goods_shenhe', '0'),
-       (59, 'is_open_supply_print', '0'),
-       (60, 'is_order_notice_supply', '1'),
-       (61, 'supply_diy_name', ''),
-       (62, 'index_list_theme_type', '0'),
-       (63, 'nav_bg_color', ''),
-       (64, 'group_name', ''),
-       (65, 'owner_name', ''),
-       (66, 'haibao_group_name', ''),
-       (67, 'index_top_img_bg_open', '0'),
-       (68, 'index_share_switch', '0'),
-       (69, 'index_change_cate_btn', '0'),
-       (70, 'index_service_switch', '0'),
-       (71, 'user_service_switch', '1'),
-       (72, 'index_switch_search', '0'),
-       (73, 'index_top_font_color', ''),
-       (74, 'hide_community_change_btn', '0'),
-       (75, 'hide_index_top_communityinfo', '0'),
-       (76, 'index_communityinfo_showtype', '0'),
-       (77, 'index_type_first_name', ''),
-       (78, 'ishow_index_copy_text', '0'),
-       (79, 'ishow_special_share_btn', '0'),
-       (80, 'ishow_user_loginout_btn', '0'),
-       (81, 'fetch_coder_type', '0'),
-       (82, 'show_user_pin', '0'),
-       (83, 'is_show_notice001', '1'),
-       (84, 'hide_community_change_word', '0'),
-       (85, 'ishow_index_gotop', '0'),
-       (86, 'show_user_change_comunity', '0'),
-       (87, 'hide_index_type', '0'),
-       (88, 'is_new_backadmin', '1'),
-       (89, 'clear_goodsdaysales', '1607270400'),
-       (90, 'skin', ''),
-       (91, 'user_top_font_color', ''),
-       (92, 'show_user_tuan_mobile', '0'),
-       (93, 'show_index_wechat_oa', '0'),
-       (94, 'ishide_index_goodslist', '0'),
-       (95, 'excharge_nav_name', ''),
-       (96, 'technical_support', ''),
-       (97, 'record_number', '');
+       (50, 'site_version', 'V4.7.0'),
+       (51, 'cur_release', '202106030620'),
+       (56, 'index_list_theme_type', '0'),
+       (57, 'nav_bg_color', ''),
+       (58, 'group_name', ''),
+       (59, 'owner_name', ''),
+       (60, 'index_share_switch', '0'),
+       (61, 'enabled_front_supply', '1'),
+       (62, 'is_show_buy_record', '0'),
+       (63, 'is_show_comment_list', '0'),
+       (64, 'is_show_list_timer', '0'),
+       (65, 'is_show_list_count', '0'),
+       (66, 'default_comunity_limit_mile', '0'),
+       (67, 'nav_font_color', ''),
+       (68, 'seller_backimage', ''),
+       (69, 'index_share_qrcode_bg', ''),
+       (70, 'qrcode_rgb', ''),
+       (71, 'avatar_rgb', ''),
+       (72, 'modify_index_share_time', ''),
+       (73, 'index_list_top_image_on', '0'),
+       (74, 'goods_details_middle_image', ''),
+       (75, 'index_lead_image', ''),
+       (76, 'is_show_index_lead_image', '0'),
+       (77, 'common_header_backgroundimage', ''),
+       (78, 'auth_bg_image', ''),
+       (79, 'shop_limit_buy_distance', '0'),
+       (80, 'shop_buy_distance', ''),
+       (81, 'open_redis_server', '0'),
+       (82, 'redis_host', ''),
+       (83, 'redis_port', ''),
+       (84, 'redis_auth', ''),
+       (85, 'order_notify_switch', '1'),
+       (86, 'order_pay_after_share', '1'),
+       (87, 'order_pay_after_share_img', ''),
+       (88, 'open_feier_print', '1'),
+       (89, 'feier_print_sn', ''),
+       (90, 'feier_print_key', ''),
+       (91, 'is_open_order_message', '0'),
+       (92, 'is_user_shenhe', '1'),
+       (93, 'is_get_formdata', '1'),
+       (94, 'is_show_auth_mobile', '1'),
+       (95, 'supply_add_goods_shenhe', '1'),
+       (96, 'supply_edit_goods_shenhe', '1'),
+       (97, 'is_open_supply_print', '1'),
+       (99, 'goods_details_price_bg', ''),
+       (100, 'is_show_notice001', '1'),
+       (101, 'haibao_group_name', ''),
+       (102, 'index_top_img_bg_open', '0'),
+       (103, 'index_change_cate_btn', '0'),
+       (104, 'index_service_switch', '0'),
+       (105, 'user_service_switch', '1'),
+       (106, 'index_switch_search', '0'),
+       (107, 'index_top_font_color', ''),
+       (108, 'hide_community_change_word', '0'),
+       (109, 'hide_community_change_btn', '0'),
+       (110, 'hide_index_top_communityinfo', '0'),
+       (111, 'index_communityinfo_showtype', '0'),
+       (112, 'index_type_first_name', ''),
+       (113, 'ishow_index_copy_text', '0'),
+       (114, 'ishow_index_gotop', '0'),
+       (115, 'ishow_special_share_btn', '0'),
+       (116, 'ishow_user_loginout_btn', '0'),
+       (117, 'fetch_coder_type', '0'),
+       (118, 'show_user_pin', '0'),
+       (119, 'show_user_change_comunity', '0'),
+       (120, 'newauth_bg_image', ''),
+       (121, 'newauth_cancel_image', ''),
+       (122, 'newauth_confirm_image', ''),
+       (123, 'weprogram_subtemplate_pay_order', ''),
+       (124, 'weprogram_subtemplate_send_order', ''),
+       (125, 'weprogram_subtemplate_hexiao_success', ''),
+       (126, 'weprogram_subtemplate_apply_community', ''),
+       (127, 'weprogram_subtemplate_open_tuan', ''),
+       (128, 'weprogram_subtemplate_take_tuan', ''),
+       (129, 'weprogram_subtemplate_pin_tuansuccess', ''),
+       (130, 'weprogram_subtemplate_apply_tixian', ''),
+       (131, 'weprogram_subtemplate_refund_order', ''),
+       (132, 'index_sort_method', '0'),
+       (133, 'is_show_new_buy', '0'),
+       (134, 'is_show_spike_buy', '0'),
+       (135, 'is_show_guess_like', '0'),
+       (136, 'show_goods_guess_like', '0'),
+       (137, 'num_guess_like', '8'),
+       (138, 'is_show_ziti_time', '0'),
+       (139, 'is_open_only_express', '0'),
+       (140, 'is_open_goods_relative_goods', '0'),
+       (141, 'is_close_details_time', '0'),
+       (142, 'goodsdetails_addcart_bg_color', ''),
+       (143, 'goodsdetails_buy_bg_color', ''),
+       (144, 'is_show_goodsdetails_communityinfo', '0'),
+       (145, 'is_show_goodsdetails_commiss_money', '0'),
+       (146, 'ishow_index_pickup_time', '0'),
+       (147, 'is_pop_vipmember_buytip', '0'),
+       (148, 'pop_vipmember_buyimage', ''),
+       (149, 'isopen_community_group_share', '0'),
+       (150, 'group_share_avatar', ''),
+       (151, 'group_share_title', ''),
+       (152, 'group_share_desc', ''),
+       (153, 'show_index_wechat_oa', '0'),
+       (154, 'community_money_type', '0'),
+       (155, 'zhi_tui_reward_money', '0'),
+       (156, 'open_community_addhexiaomember', '0'),
+       (157, 'index_hide_headdetail_address', '0'),
+       (158, 'template_order_success_notice', '0'),
+       (159, 'is_show_head_level', '0'),
+       (160, 'is_head_takegoods', '0'),
+       (161, 'open_community_head_leve', '0'),
+       (162, 'community_head_commiss1', '0'),
+       (163, 'community_head_commiss2', '0'),
+       (164, 'community_head_commiss3', '0'),
+       (165, 'close_community_apply_enter', '0'),
+       (166, 'close_community_reset_btn', '0'),
+       (167, 'close_community_delivery_orders', '0'),
+       (168, 'open_danhead_model', '0'),
+       (169, 'is_new_backadmin', '1'),
+       (170, 'skin', ''),
+       (171, 'user_top_font_color', ''),
+       (172, 'show_user_tuan_mobile', '0'),
+       (173, 'ishide_index_goodslist', '0'),
+       (174, 'excharge_nav_name', ''),
+       (175, 'technical_support', ''),
+       (176, 'record_number', ''),
+       (177, 'clear_goodsdaysales', '1618934400'),
+       (178, 'is_hide_details_count', '0'),
+       (179, 'is_show_spike_buy_time', '0'),
+       (180, 'goods_avatar_rgb', ''),
+       (181, 'is_open_goods_full_video', '0'),
+       (182, 'haibao_gooods_bg2', ''),
+       (183, 'goods_details_title_bg', ''),
+       (184, 'ishide_details_desc', '0'),
+       (185, 'isnull_goods_sale_unit', '0'),
+       (186, 'goods_sale_unit', ''),
+       (187, 'show_goods_subtitle', '0'),
+       (188, 'show_goods_preview', '0'),
+       (189, 'videolist_nav_title', ''),
+       (190, 'videolist_share_title', ''),
+       (191, 'videolist_share_poster', ''),
+       (192, 'can_index_notice_alert', '0'),
+       (193, 'show_user_change_comunity_map', '0');
 
 
 
@@ -11591,10 +11822,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon`
     `add_time`           int(10)      NOT NULL COMMENT '添加时间',
     `displayorder`       int(10)               DEFAULT NULL COMMENT '排序'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_category`
 (
@@ -11604,10 +11832,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_category`
     `status`       int(11)      DEFAULT '0',
     `merchid`      int(11)      DEFAULT '0'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_list`
 (
@@ -11628,12 +11853,11 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_list`
     `gettype`            tinyint(1)              DEFAULT '1' COMMENT '领取方式，1首页领取',
     `begin_time`         int(10)        NOT NULL COMMENT '开始时间',
     `end_time`           int(10)        NOT NULL COMMENT '结束时间',
-    `add_time`           int(10)        NOT NULL COMMENT '添加时间'
+    `add_time`           int(10)        NOT NULL COMMENT '添加时间',
+    `receive_type`       enum ('normal','invitegift','invitegift_new') DEFAULT 'normal' COMMENT '优惠券获取类型：normal 普通获取，invitegift 邀新有礼赠送优惠券，invitegift_new 被邀请者赠送优惠券',
+    `receive_id`         int(10)                                       DEFAULT '0' COMMENT '邀新有礼记录id'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_cube`
 (
@@ -11651,8 +11875,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_cube`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='魔方图片';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryclerk`
 (
     `id`      int(10)      NOT NULL COMMENT '自增id',
@@ -11666,8 +11888,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryclerk`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购配送员表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
@@ -11679,8 +11899,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购配送线路';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline_headrelative`
 (
     `id`      int(10) NOT NULL COMMENT '自增id',
@@ -11691,8 +11909,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline_headrelative`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购线路团长关联表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist`
 (
@@ -11718,8 +11934,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购清单表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_goods`
 (
     `id`                       int(10)      NOT NULL COMMENT '自增id',
@@ -11736,8 +11950,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_goods`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_order`
 (
     `id`       int(10) NOT NULL COMMENT '自增id',
@@ -11749,8 +11961,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_order`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购清单订单关联表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_express`
 (
     `id`            int(11)      NOT NULL COMMENT '自增id',
@@ -11759,11 +11969,8 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_express`
     `customer_name` varchar(50) DEFAULT '' COMMENT '客户账号',
     `customer_pwd`  varchar(30) DEFAULT '' COMMENT '客户密码'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 102
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城快递表';
-
-
 
 INSERT INTO `eaterplanet_ecommerce_express` (`id`, `name`, `simplecode`, `customer_name`, `customer_pwd`)
 VALUES (1, '安捷快递', 'AJ', '', ''),
@@ -11884,8 +12091,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_generalmall_adv`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='吃货星球商城独立商城幻灯片表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_generalmall_navigat`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
@@ -11900,8 +12105,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_generalmall_navigat`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城独立商城导航图标';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods`
 (
     `id`                 int(11)        NOT NULL COMMENT '自增id',
@@ -11914,8 +12117,8 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods`
     `is_take_vipcard`    tinyint(1)                                                                                      DEFAULT '0' COMMENT '是否参加会员卡，1参加，0不参加',
     `productprice`       decimal(10, 2) NOT NULL COMMENT '商品原价',
     `sales`              int(10)        NOT NULL COMMENT '已出售数',
-    `seller_count`       int(10)                                                                                         DEFAULT '0' COMMENT '实际销量',
-    `type`               enum ('normal','pin','lottery','oldman','newman','commiss','ladder','flash','spike','integral') DEFAULT 'normal' COMMENT '商品类型',
+    `seller_count`       int(10)                                                                                                                 DEFAULT '0' COMMENT '实际销量',
+    `type`               enum ('normal','pin','lottery','oldman','newman','commiss','ladder','flash','spike','integral','presale','virtualcard') DEFAULT 'normal' COMMENT '商品类型,presale预售,virtualcard礼品卡',
     `showsales`          tinyint(1)     NOT NULL COMMENT '显示销量',
     `dispatchtype`       tinyint(1)     NOT NULL COMMENT '运费类型：0运费模板，1统一运费',
     `dispatchid`         int(10)        NOT NULL COMMENT '运费模板id',
@@ -11941,8 +12144,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城普通商品表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_category`
 (
     `id`              int(11)      NOT NULL COMMENT '自增id',
@@ -11961,8 +12162,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_category`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品分类表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_images`
 (
     `id`       int(11)      NOT NULL COMMENT '自增id',
@@ -11972,8 +12171,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_images`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品图片表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option`
 (
@@ -12019,6 +12216,23 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option_item_value`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品规格值关联表';
 
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_presale`
+(
+    `id`                           int(10)        NOT NULL COMMENT '自增id',
+    `goods_id`                     int(10)        NOT NULL COMMENT '商品id',
+    `presale_type`                 tinyint(1)     NOT NULL DEFAULT '0' COMMENT '预售方式，0 定金，1全开',
+    `presale_ding_money`           decimal(10, 2) NOT NULL DEFAULT '0.00' COMMENT '定金金额',
+    `presale_deduction_money`      decimal(10, 2) NOT NULL DEFAULT '0.00' COMMENT '定金抵扣金额',
+    `presale_ding_time_start`      int(10)        NOT NULL DEFAULT '0' COMMENT '定金支付开始时间',
+    `presale_ding_time_end`        int(10)        NOT NULL DEFAULT '0' COMMENT '定金支付结束时间',
+    `presale_limit_balancepaytime` tinyint(1)     NOT NULL DEFAULT '0' COMMENT '0不限制尾款支付时间， 1限制尾款支付时间',
+    `presale_balance_paytime`      int(10)        NOT NULL DEFAULT '0' COMMENT ' 尾款支付时间 几天内',
+    `presale_sendorder_type`       tinyint(1)     NOT NULL DEFAULT '0' COMMENT '预计发货时间，0 固定时间，1购买后几日发货',
+    `presale_sendorder_datetime`   int(10)        NOT NULL DEFAULT '0' COMMENT 'presale_sendorder_datetime',
+    `presale_sendorder_afterday`   int(10)        NOT NULL DEFAULT '0' COMMENT 'presale_sendorder_afterday',
+    `addtime`                      int(10)        NOT NULL COMMENT '添加时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商品预售属性表';
 
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_salesroom`
@@ -12031,8 +12245,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_salesroom`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='商品门店关联表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_smember`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
@@ -12043,12 +12255,9 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_smember`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球门店核销员关联表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroombase`
 (
     `id`                   int(10) NOT NULL COMMENT '自增id',
-    `uniacid`              int(10) NOT NULL COMMENT '公众号id',
     `goods_id`             int(10) NOT NULL COMMENT '商品id',
     `is_only_hexiao`       tinyint(1)     DEFAULT '0' COMMENT '商品是否核销：0、否，1、是',
     `hexiao_type`          tinyint(1)     DEFAULT '0' COMMENT '核销方式：0、订单核销，1、自定义核销次数',
@@ -12065,8 +12274,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroombase`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品核销基础表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroom_limit`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
@@ -12079,21 +12286,16 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroom_limit`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品核销限制表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_share_image`
 (
     `id`         int(10)      NOT NULL COMMENT '自增id',
-    `member_id`  int(10)      NOT NULL COMMENT '会员id',
+    `member_id`  int(10)      NOT NULL COMMENT '客户id',
     `goods_id`   int(10)      NOT NULL COMMENT '商品id',
     `image_path` varchar(255) NOT NULL COMMENT '图片路径',
     `addtime`    int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 13
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员商品分享图';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球客户商品分享图';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_tags`
 (
@@ -12108,8 +12310,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_tags`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品标签表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_to_category`
 (
     `id`       int(11) NOT NULL COMMENT '自增id',
@@ -12119,7 +12319,27 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_to_category`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品分类关联表';
 
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_tradecomponts`
+(
+    `id`                      int(10)    NOT NULL COMMENT '自增id',
+    `goods_id`                int(10)    NOT NULL COMMENT '商品id',
+    `state`                   tinyint(1) NOT NULL COMMENT '提交给腾讯审核状态，0 审核中,1 审核通过,2 拒绝， 3 取消提交审核',
+    `qualification_imagelist` text COMMENT '审核所需要的图片',
+    `third_cate_id`           int(10)    NOT NULL COMMENT '腾讯第三级分类类目',
+    `addtime`                 int(10)    NOT NULL COMMENT '添加时间',
+    `tx_product_id`           varchar(50) DEFAULT NULL COMMENT '腾讯自定义的产品id',
+    `reject_reason`           text COMMENT '审核结果，腾讯返回的'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商品交易组件';
 
+
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_virturalcard`
+(
+    `id`       int(10) NOT NULL COMMENT '自增id',
+    `goods_id` int(10) NOT NULL,
+    `code_id`  int(10) NOT NULL
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商品关联礼品兑换码表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_commiss`
 (
@@ -12137,8 +12357,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_commiss`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品分销配置表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_common`
 (
@@ -12176,7 +12394,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_common`
     `is_limit_levelunbuy`              tinyint(1)            DEFAULT '0' COMMENT '默认等级不能买',
     `is_limit_vipmember_buy`           tinyint(1)            DEFAULT '0' COMMENT '非VIP 不能购买',
     `is_spike_buy`                     tinyint(1)            DEFAULT '0' COMMENT '是否限时秒杀，0不是，1是',
-    `is_mb_level_buy`                  tinyint(1)            DEFAULT '1' COMMENT '是否支持会员折扣购买',
+    `is_mb_level_buy`                  tinyint(1)            DEFAULT '1' COMMENT '是否支持客户折扣购买',
     `is_modify_sendscore`              tinyint(1)            DEFAULT '0' COMMENT '是否自定义赠送积分',
     `send_socre`                       int(10)               DEFAULT '0' COMMENT '买一个商品赠送积分多少',
     `is_only_express`                  tinyint(1)            DEFAULT '0' COMMENT '是否仅快递',
@@ -12187,44 +12405,42 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_common`
     `is_show_arrive`                   tinyint(1)   NOT NULL DEFAULT '1' COMMENT '商品预达简介',
     `diy_arrive_switch`                tinyint(1)   NOT NULL DEFAULT '0' COMMENT '预达简介开关',
     `diy_arrive_details`               varchar(200)          DEFAULT NULL COMMENT '预达简介内容',
-    `has_mb_level_buy`                 tinyint(1)   NOT NULL DEFAULT '0' COMMENT '会员等级折扣独立规则状态：0、未启用，1、启用',
-    `mb_level_buy_list`                text COMMENT '独立规则会员等级折扣内容'
+    `has_mb_level_buy`                 tinyint(1)   NOT NULL DEFAULT '0' COMMENT '客户等级折扣独立规则状态：0、未启用，1、启用',
+    `mb_level_buy_list`                text COMMENT '独立规则客户等级折扣内容'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品详情表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_pin`
 (
-    `id`              int(11)        NOT NULL COMMENT '自增id',
-    `goods_id`        int(11)        NOT NULL COMMENT '商品id',
-    `pinprice`        decimal(10, 2) NOT NULL COMMENT '拼团价格',
-    `pin_count`       int(10)        NOT NULL COMMENT '拼团人数',
-    `pin_hour`        decimal(10, 2) NOT NULL COMMENT '拼团小时，可以小数点',
-    `begin_time`      int(10)        NOT NULL COMMENT '拼团开始时间',
-    `end_time`        int(10)        NOT NULL COMMENT '拼团结束时间',
-    `is_commiss_tuan` tinyint(1)   DEFAULT '0' COMMENT '是否佣金团，0否，1是',
-    `is_zero_open`    tinyint(1)   DEFAULT '0' COMMENT '是否0元开团：0否，1是',
-    `is_newman`       tinyint(1)   DEFAULT '0' COMMENT '是否仅新人参加：0否，1是',
-    `commiss_type`    tinyint(1)   DEFAULT '0' COMMENT '0百分比，1固定金额',
-    `commiss_money`   float(10, 2) DEFAULT '0.00' COMMENT '具体佣金比例或佣金'
+    `id`                    int(11)        NOT NULL COMMENT '自增id',
+    `goods_id`              int(11)        NOT NULL COMMENT '商品id',
+    `pinprice`              decimal(10, 2) NOT NULL COMMENT '拼团价格',
+    `pin_count`             int(10)        NOT NULL COMMENT '拼团人数',
+    `pin_hour`              decimal(10, 2) NOT NULL COMMENT '拼团小时，可以小数点',
+    `begin_time`            int(10)        NOT NULL COMMENT '拼团开始时间',
+    `end_time`              int(10)        NOT NULL COMMENT '拼团结束时间',
+    `is_commiss_tuan`       tinyint(1)              DEFAULT '0' COMMENT '是否佣金团，0否，1是',
+    `is_zero_open`          tinyint(1)              DEFAULT '0' COMMENT '是否0元开团：0否，1是',
+    `is_newman`             tinyint(1)              DEFAULT '0' COMMENT '是否仅新人参加：0否，1是',
+    `commiss_type`          tinyint(1)              DEFAULT '0' COMMENT '0百分比，1固定金额',
+    `commiss_money`         float(10, 2)            DEFAULT '0.00' COMMENT '具体佣金比例或佣金',
+    `is_pintuan_rebate`     tinyint(1)              DEFAULT '0' COMMENT '拼团返利是否开启：1、开启，0、关闭',
+    `random_delivery_count` int(10)        NOT NULL DEFAULT '0' COMMENT '随机发货人数',
+    `rebate_reward`         tinyint(1)     NOT NULL DEFAULT '1' COMMENT '返利奖励：1、送积分，2、送余额',
+    `reward_point`          int(10)        NOT NULL DEFAULT '0' COMMENT '赠送的积分数',
+    `reward_balance`        int(10)        NOT NULL DEFAULT '0' COMMENT '赠送的余额'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城拼团商品表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_imdada_area_code`
 (
-    `id`        int(10) unsigned NOT NULL COMMENT '编号',
+    `id`        int(10) UNSIGNED NOT NULL COMMENT '编号',
     `city_name` varchar(100)     NOT NULL COMMENT '城市名称',
     `city_code` varchar(10)      NOT NULL COMMENT '城市编码'
 ) ENGINE = MyISAM
-  AUTO_INCREMENT = 301
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城达达配送城市编号表';
-
-
 
 INSERT INTO `eaterplanet_ecommerce_imdada_area_code` (`id`, `city_name`, `city_code`)
 VALUES (1, '上海', '021'),
@@ -12528,8 +12744,29 @@ VALUES (1, '上海', '021'),
        (299, '盱眙', '0517'),
        (300, '温岭', '0576');
 
-
-
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_invitegift_record`
+(
+    `id`                                int(10)    NOT NULL COMMENT '自增id',
+    `user_id`                           int(11)    NOT NULL COMMENT '邀请者客户id',
+    `inviter_reward_type`               tinyint(1) NOT NULL COMMENT '邀请者奖励类型：0、送优惠券和积分，1、送优惠券，2、送积分',
+    `inviter_reward_couponid`           int(10)    NOT NULL COMMENT '邀请者奖励优惠券id',
+    `inviter_reward_point`              int(10)    NOT NULL COMMENT '邀请者奖励积分数',
+    `status`                            tinyint(1) NOT NULL DEFAULT '0' COMMENT '邀请者奖励状态：1、已领取，0、未领取',
+    `invitee_userid`                    int(11)             DEFAULT NULL COMMENT '被邀请者客户id',
+    `invitees_reward_type`              tinyint(1) NOT NULL COMMENT '被邀请者奖励类型：0、新人注册（授权登录）和下单分别奖励，1、新人注册（授权登录）即奖励，2、新人注册（授权登录）并且下单奖励',
+    `invitees_register_reward_type`     tinyint(1) NOT NULL COMMENT '被邀请者新人注册（授权登录）奖励类型：0、送优惠券和积分，1、送优惠券，2、送积分',
+    `invitees_register_reward_couponid` int(10)    NOT NULL COMMENT '被邀请者新人注册（授权登录）奖励优惠券id',
+    `invitees_register_reward_point`    int(10)    NOT NULL COMMENT '被邀请者新人注册（授权登录）奖励积分数',
+    `invitees_order_reward_type`        tinyint(1) NOT NULL COMMENT '被邀请者下单完成奖励类型：0、送优惠券和积分，1、送优惠券，2、送积分',
+    `invitees_order_reward_couponid`    int(10)    NOT NULL COMMENT '被邀请者下单完成奖励优惠券id',
+    `invitees_order_reward_point`       int(10)    NOT NULL COMMENT '被邀请者下单完成奖励积分数',
+    `invite_activity_reward_type`       tinyint(1) NOT NULL COMMENT '被邀请者下单完成奖励时间：0、下单支付完成获得奖励，1、订单售后期结束获得奖励',
+    `invitee_status`                    tinyint(1) NOT NULL DEFAULT '0' COMMENT '被邀请者奖励状态：1、已领取，0、未领取',
+    `invitee_register_status`           tinyint(1) NOT NULL DEFAULT '0' COMMENT '被邀请者新人注册(授权登录)和下单分别奖励时，新人注册奖励状态：1、已奖励，0、未奖励',
+    `is_old`                            tinyint(1) NOT NULL DEFAULT '0' COMMENT '被邀请者是否是老用户（老用户不参与活动）：1、是，0、否',
+    `addtime`                           int(10)    NOT NULL COMMENT '邀请时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球邀新有礼记录表';
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiapinorder`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
@@ -12543,8 +12780,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiapinorder`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiauser`
 (
     `id`       bigint(20) unsigned NOT NULL,
@@ -12552,10 +12787,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiauser`
     `avatar`   varchar(255) DEFAULT NULL,
     `mobile`   varchar(16)  DEFAULT NULL
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_list`
 (
@@ -12583,11 +12815,9 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_list`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟电子面单列表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_template`
 (
-    `id`            int(11) unsigned NOT NULL COMMENT '编号',
+    `id`            int(11) UNSIGNED NOT NULL COMMENT '编号',
     `express_name`  varchar(100)     NOT NULL COMMENT '快递公司名称',
     `express_code`  varchar(20)      NOT NULL COMMENT '快递公司编码',
     `template_name` varchar(100)     NOT NULL COMMENT '模板样式',
@@ -12595,12 +12825,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_template`
     `template_size` varchar(20)      NOT NULL DEFAULT '0' COMMENT 'templateSize',
     `customer_area` tinyint(1)       NOT NULL DEFAULT '0' COMMENT 'customArea字段：0、不支持，1、支持'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 65
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟电子面单模板规格';
 
-
-
-INSERT INTO `eaterplanet_ecommerce_kdniao_template` (`id`, `express_name`, `express_code`, `template_name`, `template_spec`, `template_size`, `customer_area`)
+INSERT INTO `eaterplanet_ecommerce_kdniao_template` (`id`, `express_name`, `express_code`, `template_name`,
+                                                     `template_spec`, `template_size`, `customer_area`)
 VALUES (1, '安能快递', 'ANE', '二联 180', '宽 100mm,高 180mm,切点 110/70', '0', 0),
        (2, '安能快运', 'ANEKY', '二联 180', '宽 100mm,高 180mm,切点 110/70', '0', 1),
        (3, '承诺达', 'CND', '二联 180', '宽 100mm,高 180mm,切点 110/70', '0', 1),
@@ -12666,8 +12894,6 @@ VALUES (1, '安能快递', 'ANE', '二联 180', '宽 100mm,高 180mm,切点 110/
        (63, '中通快递', 'ZTO', '一联 130', '宽 76mm,高 130mm', '130', 1),
        (64, '中通快运', 'ZTOKY', '二联 180', '宽 100mm,高 180mm,切点 110/70', '0', 0);
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member`
 (
     `member_id`            int(11)                     NOT NULL COMMENT '自增id',
@@ -12680,16 +12906,16 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member`
     `comsiss_state`        tinyint(1)                           DEFAULT '0' COMMENT '分销商状态',
     `commission_level_id`  int(10)                              DEFAULT '0' COMMENT '分销等级id',
     `comsiss_time`         int(10)                              DEFAULT NULL COMMENT '成为分销商时间',
-    `groupid`              int(10)                              DEFAULT '0' COMMENT '会员分组id',
-    `level_id`             int(10)                              DEFAULT '0' COMMENT '会员等级',
+    `groupid`              int(10)                              DEFAULT '0' COMMENT '客户分组id',
+    `level_id`             int(10)                              DEFAULT '0' COMMENT '客户等级',
     `isblack`              tinyint(1)                           DEFAULT '0' COMMENT '是否黑名单',
     `account_money`        decimal(10, 2)                       DEFAULT NULL,
     `score`                decimal(10, 2)                       DEFAULT NULL,
-    `reg_type`             enum ('weixin','weprogram') NOT NULL COMMENT '会员注册类型',
-    `username`             varchar(200)                NOT NULL COMMENT '会员名称',
-    `realname`             varchar(100)                         DEFAULT NULL COMMENT '会员真实姓名',
+    `reg_type`             enum ('weixin','weprogram') NOT NULL COMMENT '客户注册类型',
+    `username`             varchar(200)                NOT NULL COMMENT '客户名称',
+    `realname`             varchar(100)                         DEFAULT NULL COMMENT '客户真实姓名',
     `telephone`            varchar(30)                          DEFAULT NULL COMMENT '电话',
-    `avatar`               varchar(255)                NOT NULL COMMENT '会员头像',
+    `avatar`               varchar(255)                NOT NULL COMMENT '客户头像',
     `wepro_qrcode`         varchar(255)                         DEFAULT NULL COMMENT '分销商小程序二维码图',
     `hexiao_qrcod`         varchar(255)                         DEFAULT NULL COMMENT '提货核销二维码',
     `commiss_qrcode`       varchar(255)                         DEFAULT NULL COMMENT '分销商二维码',
@@ -12709,12 +12935,11 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member`
     `is_comsiss_audit`     tinyint(1)                           DEFAULT '0' COMMENT '0 未审核，1 已审核',
     `is_apply_state`       tinyint(1)                           DEFAULT '1' COMMENT '是否审核过，0否，1是，2拒绝',
     `is_write_form`        tinyint(1)                           DEFAULT '0' COMMENT '是否写过表单，0否，1是',
-    `form_info`            text COMMENT '表单内容'
+    `form_info`            text COMMENT '表单内容',
+    `share_status`         tinyint(1)                  NOT NULL DEFAULT '1' COMMENT '邀请状态：1、可以邀请，0、禁止邀请'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城会员表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城客户表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card`
 (
@@ -12727,9 +12952,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card`
     `addtime`    int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='付费会员卡表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球付费会员卡表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_equity`
 (
@@ -12740,16 +12963,14 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_equity`
     `addtime`     int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员卡权益';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球会员卡权益';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_order`
 (
     `id`         int(10)                        NOT NULL COMMENT '自增id',
     `order_sn`   varchar(50)                    NOT NULL COMMENT '订单编号',
     `uniacid`    int(10)                        NOT NULL COMMENT '公众号id',
-    `member_id`  int(10)                        NOT NULL COMMENT '会员id',
+    `member_id`  int(10)                        NOT NULL COMMENT '客户id',
     `pay_type`   enum ('weixin','yuer','admin') NOT NULL COMMENT '支付类型，微信，余额，后台购买',
     `state`      tinyint(1)                     NOT NULL DEFAULT '0' COMMENT '支付状态：0未支付，1已支付',
     `car_id`     int(10)                        NOT NULL COMMENT '购买的 会员卡id',
@@ -12766,32 +12987,28 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='付费会员卡 购买订单表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_charge_flow`
 (
     `id`               int(10)        NOT NULL COMMENT '自增id',
     `formid`           varchar(255)   DEFAULT NULL COMMENT '充值时候的prepayid',
-    `member_id`        int(10)        NOT NULL COMMENT '会员id',
+    `member_id`        int(10)        NOT NULL COMMENT '客户id',
     `trans_id`         varchar(100)   DEFAULT NULL COMMENT '交易号',
     `order_goods_id`   int(10)        DEFAULT '0' COMMENT '订单商品id',
     `money`            decimal(10, 2) NOT NULL COMMENT '充值金额',
-    `give_money`       float(10, 2)   DEFAULT '0.00' COMMENT '赠送金额',
-    `operate_end_yuer` decimal(10, 2) DEFAULT NULL,
-    `state`            tinyint(1)     NOT NULL COMMENT '0，未支付，1已支付,3余额付款，4退款到余额，5后台充值,6 裂变红包,7 会员升级，8后台扣款',
+    `give_money`       float(10, 2)            DEFAULT '0.00' COMMENT '赠送金额',
+    `operate_end_yuer` decimal(10, 2)          DEFAULT NULL,
+    `state`            tinyint(1)     NOT NULL DEFAULT '0' COMMENT '0，未支付，1已支付,3余额付款，4退款到余额，5后台充值,6 裂变红包,7 客户升级，8后台扣款，9 分销提现到余额, 10 团长提现到余额,11 拼团佣金提现到余额, 12 配送佣金提现到余额, 20 礼品卡兑换, 21 拼团返利',
     `charge_time`      int(10)        NOT NULL COMMENT '充值时间',
     `remark`           varchar(255)   DEFAULT NULL COMMENT '充值描述',
     `add_time`         int(10)        NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城会员充值记录表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城客户充值记录表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
-    `member_id`    int(10) NOT NULL COMMENT '会员ID',
+    `member_id`    int(10) NOT NULL COMMENT '客户ID',
     `money`        float(10, 2) DEFAULT '0.00' COMMENT '可提现金额',
     `dongmoney`    float(10, 2) DEFAULT '0.00' COMMENT '提现中金额',
     `type`         tinyint(1)   DEFAULT '0' COMMENT '1余额，2 weixin，3alipay，4bank ',
@@ -12800,28 +13017,22 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss`
     `bankaccount`  varchar(200) DEFAULT NULL COMMENT '卡号',
     `bankusername` varchar(200) DEFAULT NULL COMMENT '持卡人姓名'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss_apply`
 (
     `id`        int(10)    NOT NULL COMMENT '自增id',
-    `member_id` int(10)    NOT NULL COMMENT '会员id',
+    `member_id` int(10)    NOT NULL COMMENT '客户id',
     `state`     tinyint(1) NOT NULL COMMENT '审核状态，0申请中，1已通过，2拒绝',
     `addtime`   int(10)    NOT NULL COMMENT '申请时间'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss_order`
 (
     `id`                  int(10)      NOT NULL COMMENT '自增ID',
-    `member_id`           int(10)      NOT NULL COMMENT '会员ID',
-    `child_member_id`     int(10)      NOT NULL COMMENT '下级会员ID',
+    `member_id`           int(10)      NOT NULL COMMENT '客户ID',
+    `child_member_id`     int(10)      NOT NULL COMMENT '下级客户ID',
     `order_id`            int(10)      NOT NULL COMMENT '订单ID',
     `order_goods_id`      int(10)               DEFAULT '0' COMMENT '商品订单id',
     `level`               int(10)               DEFAULT '1' COMMENT '第几层分佣',
@@ -12833,72 +13044,69 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss_order`
     `money`               float(10, 2) NOT NULL DEFAULT '0.00' COMMENT '分佣金额',
     `addtime`             int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = FIXED;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_formid`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
-    `member_id` int(10)      NOT NULL COMMENT '会员id',
+    `member_id` int(10)      NOT NULL COMMENT '客户id',
     `state`     tinyint(1)   NOT NULL COMMENT '状态，0未使用，已使用',
     `formid`    varchar(255) NOT NULL COMMENT '用来群发使用的',
     `addtime`   int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员的群发formid表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='客户的群发formid表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_group`
 (
     `id`        int(11) NOT NULL,
     `groupname` varchar(255) DEFAULT ''
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_integral_flow`
 (
     `id`                  int(10)           NOT NULL COMMENT '自增id',
-    `member_id`           int(10)           NOT NULL COMMENT '会员id',
+    `member_id`           int(10)           NOT NULL COMMENT '客户id',
     `in_out`              enum ('in','out') NOT NULL COMMENT '增加积分，还是减少积分',
-    `type`                enum ('goodsbuy','refundorder','system_add','system_del','orderbuy','signin_send','integral_exchange','goodscomment') DEFAULT NULL,
-    `order_id`            int(10)                                                                                                               DEFAULT NULL COMMENT '订单id',
-    `order_goods_id`      int(10)                                                                                                               DEFAULT NULL COMMENT '订单商品id',
-    `score`               float(10, 2)                                                                                                          DEFAULT '0.00' COMMENT '积分数量',
-    `after_operate_score` float(10, 2)                                                                                                          DEFAULT '0.00' COMMENT '操作后的积分',
-    `state`               tinyint(1)                                                                                                            DEFAULT '0' COMMENT '0 还未赠送，1处理成功，',
-    `remark`              varchar(255)                                                                                                          DEFAULT NULL COMMENT '说明',
+    `type`                enum ('goodsbuy','refundorder','system_add','system_del','orderbuy','signin_send','integral_exchange','goodscomment','invitegift','invitegift_new','pintuan_rebate') DEFAULT NULL COMMENT '积分类型：goodsbuy 购买商品赠送积分，refundorder 退款增加积分，system_add 后台增加积分，system_del 后台减少积分，orderbuy 下单扣除积分，signin_send 签到送积分，integral_exchange 积分兑换商品，goodscomment 好评赠送积分，invitegift 邀新有礼赠送积分，invitegift_new 被邀请者赠送积分, pintuan_rebate 拼团返利',
+    `order_id`            int(10)                                                                                                                                                              DEFAULT NULL COMMENT '订单id',
+    `order_goods_id`      int(10)                                                                                                                                                              DEFAULT NULL COMMENT '订单商品id',
+    `score`               float(10, 2)                                                                                                                                                         DEFAULT '0.00' COMMENT '积分数量',
+    `after_operate_score` float(10, 2)                                                                                                                                                         DEFAULT '0.00' COMMENT '操作后的积分',
+    `state`               tinyint(1)                                                                                                                                                           DEFAULT '0' COMMENT '0 还未赠送，1处理成功，',
+    `remark`              varchar(255)                                                                                                                                                         DEFAULT NULL COMMENT '说明',
     `addtime`             int(10)           NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='积分流水记录表';
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球积分流水记录表';
 
-
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_invitegift`
+(
+    `id`                int(10) NOT NULL COMMENT '自增id',
+    `member_id`         int(11) NOT NULL COMMENT '客户id',
+    `invite_addtime`    int(10) NOT NULL DEFAULT '0' COMMENT '邀请码生成时间',
+    `invite_image_path` varchar(255)     DEFAULT NULL COMMENT '邀请小程序码'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球客户邀新有礼信息表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_level`
 (
     `id`            int(10)        NOT NULL COMMENT '自增id',
     `level`         int(11)        NOT NULL COMMENT '等级',
     `levelname`     varchar(100)   NOT NULL COMMENT '等级名称',
-    `level_money`   decimal(10, 2)          DEFAULT '0.00' COMMENT '会员升级金额',
+    `level_money`   decimal(10, 2)          DEFAULT '0.00' COMMENT '客户升级金额',
     `is_auto_grade` tinyint(1)              DEFAULT '0' COMMENT '是否自动升级，0 否，1是',
     `discount`      decimal(10, 2) NOT NULL DEFAULT '0.00' COMMENT '折扣',
-    `logo`          varchar(255)            DEFAULT NULL COMMENT '会员等级logo'
+    `logo`          varchar(255)            DEFAULT NULL COMMENT '客户等级logo'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员等级表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='客户等级表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_shopinfo`
 (
     `id`            int(10)      NOT NULL COMMENT '自增id',
-    `member_id`     int(10)      NOT NULL COMMENT '会员id',
+    `member_id`     int(10)      NOT NULL COMMENT '客户id',
     `shop_name`     varchar(255) NOT NULL COMMENT '店铺名称',
     `shop_mobile`   varchar(50)  NOT NULL COMMENT '店铺手机号',
     `imgGroup`      text COMMENT '营业执照',
@@ -12909,12 +13117,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_shopinfo`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城用户店铺申请表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_tixian_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
-    `member_id`            int(10)      NOT NULL COMMENT '会员id',
+    `member_id`            int(10)      NOT NULL COMMENT '客户id',
     `money`                float(10, 2) NOT NULL COMMENT '提现金额',
     `service_charge`       float(10, 2) DEFAULT '0.00' COMMENT '提现手续费比例',
     `service_charge_money` float(10, 2) DEFAULT '0.00' COMMENT '提现后实际到账金额',
@@ -12929,8 +13135,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_tixian_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='分销佣金提现表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_navigat`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
@@ -12944,9 +13148,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_navigat`
     `addtime`      int(10)      NOT NULL COMMENT '添加广告时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='导航图标';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球导航图标';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notice`
 (
@@ -12959,12 +13161,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notice`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城公告表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notify_order`
 (
     `id`         int(10)      NOT NULL,
-    `username`   varchar(255) NOT NULL COMMENT '会员名称',
+    `username`   varchar(255) NOT NULL COMMENT '客户名称',
     `member_id`  int(10) DEFAULT '0',
     `avatar`     varchar(255) NOT NULL COMMENT '头像',
     `order_time` int(10)      NOT NULL COMMENT '购买时间',
@@ -12976,8 +13176,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notify_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='最新订单消息通知';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order`
 (
     `order_id`                        int(11)        NOT NULL,
@@ -12985,17 +13183,17 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order`
     `member_id`                       int(11)        NOT NULL,
     `store_id`                        int(11)        NOT NULL                                                                 DEFAULT '0' COMMENT '商家id',
     `head_id`                         int(10)                                                                                 DEFAULT '0' COMMENT '团长id',
-    `supply_id`                       int(10)                                                                                 DEFAULT '0' COMMENT '供应商id',
+    `supply_id`                       int(10)                                                                                 DEFAULT '0' COMMENT '商户id',
     `is_vipcard_buy`                  tinyint(1)                                                                              DEFAULT '0' COMMENT '是否会员卡购买，0 否，1是',
-    `is_level_buy`                    tinyint(1)                                                                              DEFAULT '0' COMMENT '是否会员等级购买，1是，0 不是',
+    `is_level_buy`                    tinyint(1)                                                                              DEFAULT '0' COMMENT '是否客户等级购买，1是，0 不是',
     `type`                            enum ('pintuan','normal','lottery','virtual','bargain','integral','community','ignore') DEFAULT 'normal',
     `charge_mobile`                   varchar(30)                                                                             DEFAULT NULL COMMENT '充值的手机号',
     `is_pin`                          tinyint(1)                                                                              DEFAULT '0' COMMENT '是否拼团，0表示否，1表示是',
-    `from_type`                       enum ('weixin','wepro')                                                                 DEFAULT 'weixin' COMMENT '订单来源：weixin表示服务号，wepro表示小程序',
+    `from_type`                       enum ('weixin','wepro','tradecomponts')                                                 DEFAULT 'weixin' COMMENT '订单来源：weixin表示服务号，wepro表示小程序,tradecomponts 视频号',
     `perpay_id`                       varchar(255)                                                                            DEFAULT NULL COMMENT '预支付id',
-    `name`                            varchar(32)    NOT NULL COMMENT '购买的会员名字',
+    `name`                            varchar(32)    NOT NULL COMMENT '购买的客户名字',
     `email`                           varchar(96)    NOT NULL,
-    `telephone`                       varchar(32)    NOT NULL COMMENT '下单会员电话',
+    `telephone`                       varchar(32)    NOT NULL COMMENT '下单客户电话',
     `delivery`                        enum ('express','pickup','tuanz_send','localtown_delivery','hexiao')                    DEFAULT 'express' COMMENT '配送类型',
     `shipping_name`                   varchar(32)    NOT NULL COMMENT '收货人姓名',
     `address_id`                      int(11)        NOT NULL,
@@ -13058,46 +13256,39 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order`
     `is_localtown_free_shipping_fare` tinyint(1)                                                                              DEFAULT '0' COMMENT '满金额减同城配送费',
     `localtown_free_shipping_fare`    float(10, 2)                                                                            DEFAULT '0.00' COMMENT '减免的同城配送费',
     `localtown_add_shipping_fare`     float(10, 2)                                                                            DEFAULT '0.00' COMMENT '加价配送费',
-    `expected_delivery_time`           varchar(20)                                                                             DEFAULT '' COMMENT '指定配送时间',
+    `expected_delivery_time`          varchar(20)                                                                             DEFAULT '' COMMENT '指定配送时间',
     `third_distribution_type`         varchar(20)                                                                             DEFAULT '' COMMENT '第三方配送类型：达达配送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
     `hexiao_volume_code`              varchar(18)                                                                             DEFAULT '' COMMENT '核销卷码',
     `hexiao_qr_code`                  varchar(255)                                                                            DEFAULT '' COMMENT '核销二维码'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
     `username`       varchar(100) NOT NULL COMMENT '配送员姓名',
     `mobile`         varchar(30)  NOT NULL COMMENT '配送员电话',
-    `member_id`      int(10)      NOT NULL COMMENT '关联会员id',
+    `member_id`      int(10)      NOT NULL COMMENT '关联客户id',
     `has_send_count` int(10)      NOT NULL DEFAULT '0' COMMENT '已配送单数',
     `state`          tinyint(1)   NOT NULL DEFAULT '0' COMMENT '0禁用，1启用',
     `always_address` varchar(200) NOT NULL COMMENT '配送地址',
     `addtime`        int(10)               DEFAULT NULL COMMENT '添加时间',
-    `store_id`       int(10)               DEFAULT '0' COMMENT '店铺id：0 平台自营，其他则为供应商',
+    `store_id`       int(10)               DEFAULT '0' COMMENT '店铺id：0 平台自营，其他则为商户',
     `is_new_notice`  tinyint(1)            DEFAULT '0' COMMENT '新订单语音通知：1、通知，0、不通知'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城订单配送员表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_commiss`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `orderdistribution_id` int(10)      NOT NULL COMMENT '配送员id',
-    `member_id`            int(10)      NOT NULL COMMENT '配送员关联会员id',
+    `member_id`            int(10)      NOT NULL COMMENT '配送员关联客户id',
     `money`                float(10, 2) NOT NULL COMMENT '账户金额',
     `dongmoney`            float(10, 2) NOT NULL COMMENT '账户冻结，提现中金额',
     `getmoney`             float(10, 2) NOT NULL COMMENT '已经获得多少钱',
     `addtime`              int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城配送员佣金账户表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_log`
 (
@@ -13110,8 +13301,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_log`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城跑腿配送日志表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_order`
 (
     `id`                      int(10)      NOT NULL COMMENT '自增id',
@@ -13121,13 +13310,14 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_order`
     `shop_lon`                float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '店家经度',
     `shop_lat`                float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '店家纬度',
     `shop_address`            varchar(255)          DEFAULT NULL COMMENT '商家配送地址',
-    `member_lon`              float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '会员经度',
-    `member_lat`              float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '会员纬度',
+    `member_lon`              float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '客户经度',
+    `member_lat`              float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '客户纬度',
     `is_admin_assign`         tinyint(1)            DEFAULT '0' COMMENT '是否后台指定，1是，0否',
     `state`                   tinyint(1)   NOT NULL DEFAULT '0' COMMENT '0 未付款，未配送，1已付款，未被抢  2 已付款，待配送，已被抢单，3，已拿货，配送中， 4、已送达，5、 已取消',
     `distr_commiss_type`      tinyint(1)   NOT NULL DEFAULT '0' COMMENT '配送费 计费方式： 0 每单固定， 1每单按照订单配送费抽成，3按距离收配送费',
     `shipping_money`          float(10, 2) NOT NULL DEFAULT '0.00' COMMENT '配送员佣金',
     `is_statement`            tinyint(1)   NOT NULL DEFAULT '0' COMMENT '是否结算，0未结算，1已结算',
+    `delivery_type`           tinyint(1)            DEFAULT '0' COMMENT '配送方式：0 默认，1、平台配送，2,、第三方配送',
     `addtime`                 int(10)      NOT NULL COMMENT '添加时间',
     `third_distribution_type` varchar(20)           DEFAULT '' COMMENT '第三方配送类型：达达配送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
     `dm_id`                   int(10)               DEFAULT '0' COMMENT '第三方配送员编号',
@@ -13136,11 +13326,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_order`
     `cancel_reason`           varchar(100)          DEFAULT '' COMMENT '订单取消原因',
     `third_id`                varchar(50)           DEFAULT '' COMMENT '第三方配送运单号',
     `third_order_id`          varchar(50)           DEFAULT '' COMMENT '第三方配送订单号',
-    `deduct_fee`              decimal(10, 2)        DEFAULT '0.00' COMMENT '第三方配送扣除的违约金'
+    `deduct_fee`              decimal(10, 2)        DEFAULT '0.00' COMMENT '第三方配送扣除的违约金',
+    `order_code`              varchar(40)           DEFAULT NULL COMMENT '蜂鸟即配商户订单号'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城骑手配送费订单表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_thirth_log`
 (
@@ -13151,16 +13340,28 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_thirth_log`
     `remark`                  varchar(255) NOT NULL COMMENT '备注',
     `addtime`                 int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 781
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城第三方配送日志表';
 
-
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_thirth_query`
+(
+    `id`                      int(11) UNSIGNED NOT NULL COMMENT '编号',
+    `order_id`                int(10)          NOT NULL COMMENT '订单id',
+    `third_distribution_type` varchar(20)      NOT NULL COMMENT '第三方配送公司（达达配送：imdada；顺丰同城：sf；）',
+    `distance`                decimal(11, 2)   NOT NULL DEFAULT '0.00' COMMENT '配送距离(单位：米)',
+    `shipping_fee`            decimal(10, 2)   NOT NULL DEFAULT '0.00' COMMENT '实际运费(最终运费)',
+    `shipping_delivery_fee`   decimal(10, 2)   NOT NULL DEFAULT '0.00' COMMENT '运费',
+    `delivery_no`             varchar(50)      NOT NULL COMMENT '平台订单号',
+    `status`                  tinyint(1)       NOT NULL DEFAULT '0' COMMENT '查询状态：1 成功，0 失败',
+    `message`                 varchar(100)     NOT NULL COMMENT '查询错误原因',
+    `addtime`                 int(10)          NOT NULL COMMENT '添加时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球第三方配送预查询费用表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `orderdistribution_id` int(10)      NOT NULL COMMENT '配送员id',
-    `member_id`            int(10)      NOT NULL COMMENT '配送员关联会员id',
+    `member_id`            int(10)      NOT NULL COMMENT '配送员关联客户id',
     `money`                float(10, 2) NOT NULL COMMENT '提现金额',
     `service_charge`       int(10)      NOT NULL COMMENT '提现服务费百分比%',
     `service_charge_money` float(10, 2) NOT NULL COMMENT '提现服务费金额',
@@ -13173,13 +13374,11 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城配送员提现表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `uniacid`              int(10)      NOT NULL,
-    `member_id`            int(10)      NOT NULL COMMENT '会员id',
+    `member_id`            int(10)      NOT NULL COMMENT '客户id',
     `money`                float(10, 2) NOT NULL COMMENT '提现金额',
     `service_charge`       float(10, 2) DEFAULT '0.00' COMMENT '提现手续费比例',
     `service_charge_money` float(10, 2) DEFAULT '0.00' COMMENT '提现后实际到账金额',
@@ -13193,12 +13392,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian_order
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='同城配送佣金提现表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_all`
 (
     `id`              int(10)    NOT NULL COMMENT '自增id，',
-    `member_id`       int(10)    NOT NULL COMMENT '所属会员',
+    `member_id`       int(10)    NOT NULL COMMENT '所属客户',
     `is_pin`          tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否拼团订单',
     `total_money`     float(10, 2)        DEFAULT '0.00' COMMENT '总需要支付金额',
     `order_num_alias` varchar(200)        DEFAULT NULL COMMENT '支付的订单号',
@@ -13209,9 +13406,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_all`
     `addtime`         int(10)    NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='订单总表，支付时候使用';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='IF NOT EXISTS 订单总表，支付时候使用';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_comment`
 (
@@ -13219,7 +13414,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_comment`
     `order_id`        int(10)    NOT NULL       DEFAULT '0' COMMENT '订单id',
     `goods_id`        int(10)    NOT NULL       DEFAULT '0' COMMENT '商品id',
     `state`           tinyint(1) NOT NULL       DEFAULT '0' COMMENT '是否显示，0审核中，1：显示',
-    `member_id`       int(10)    NOT NULL       DEFAULT '0' COMMENT '会员id',
+    `member_id`       int(10)    NOT NULL       DEFAULT '0' COMMENT '客户id',
     `goods_name`      varchar(255)              DEFAULT NULL COMMENT '商品名称',
     `goods_image`     text COMMENT '商品图片',
     `order_num_alias` varchar(100)              DEFAULT NULL COMMENT '订单编号',
@@ -13236,10 +13431,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_comment`
     `add_time`        int(10)    NOT NULL       DEFAULT '0' COMMENT '评价时间',
     `is_send_point`   tinyint(1)                DEFAULT '0' COMMENT '好评有礼，0、好评未送积分，1、好评已送积分'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods`
 (
@@ -13247,7 +13439,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods`
     `order_id`                 int(11)        NOT NULL,
     `goods_id`                 int(11)        NOT NULL,
     `store_id`                 int(11)        NOT NULL   DEFAULT '0' COMMENT '商家id',
-    `supply_id`                int(10)                   DEFAULT NULL COMMENT '供应商id',
+    `supply_id`                int(10)                   DEFAULT NULL COMMENT '商户id',
     `is_pin`                   tinyint(1)     NOT NULL   DEFAULT '0' COMMENT '是否拼团商品订单，0：单独购买，1：拼团商品',
     `pin_id`                   int(10)                   DEFAULT NULL,
     `shipping_fare`            float(10, 2)              DEFAULT '0.00' COMMENT '运费',
@@ -13255,8 +13447,8 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods`
     `fare_shipping_free`       float(10, 2)              DEFAULT '0.00' COMMENT '满x金额减运费',
     `name`                     varchar(255)   NOT NULL,
     `head_disc`                int(10)                   DEFAULT '100' COMMENT '团长折扣',
-    `member_disc`              int(10)                   DEFAULT '100' COMMENT '会员折扣，100 表示不打折',
-    `level_name`               varchar(200)              DEFAULT NULL COMMENT '会员折扣等级名称',
+    `member_disc`              int(10)                   DEFAULT '100' COMMENT '客户折扣，100 表示不打折',
+    `level_name`               varchar(200)              DEFAULT NULL COMMENT '客户折扣等级名称',
     `goods_images`             varchar(255)              DEFAULT NULL COMMENT '商品图片',
     `goods_type`               enum ('pintuan','normal') DEFAULT 'normal' COMMENT '商品类型',
     `model`                    varchar(64)    NOT NULL,
@@ -13266,19 +13458,20 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods`
     `oldprice`                 decimal(10, 2)            DEFAULT '0.00' COMMENT '旧的商品总价',
     `fullreduction_money`      float(10, 2)              DEFAULT '0.00' COMMENT '满减金额',
     `voucher_credit`           float(10, 2)              DEFAULT '0.00' COMMENT '优惠券优惠金额',
+    `score_for_money2`         float(10, 2)              DEFAULT '0.00' COMMENT '积分抵扣金额',
     `score_for_money`          float(10, 2)              DEFAULT '0.00' COMMENT '积分抵扣金额',
     `fenbi_li`                 float(10, 2)              DEFAULT '0.00' COMMENT '订单中金额占比',
     `total`                    decimal(15, 4) NOT NULL   DEFAULT '0.0000',
     `has_refund_money`         float(10, 2)              DEFAULT '0.00' COMMENT '已经退款金额',
     `has_refund_quantity`      int(10)                   DEFAULT '0' COMMENT '已经退款数量',
     `is_vipcard_buy`           tinyint(1)                DEFAULT '0' COMMENT '0非vip价格购买，1是',
-    `is_level_buy`             tinyint(1)                DEFAULT '0' COMMENT '是否会员等级购买，1是，0 不是',
+    `is_level_buy`             tinyint(1)                DEFAULT '0' COMMENT '是否客户等级购买，1是，0 不是',
     `old_total`                float(10, 2)              DEFAULT '0.00' COMMENT '原始总价',
     `rela_goodsoption_valueid` varchar(50)               DEFAULT NULL COMMENT '关联属性id',
     `is_refund_state`          tinyint(1)                DEFAULT '0' COMMENT '是否退款，0未退款，1已退款',
     `is_statements_state`      tinyint(1)                DEFAULT '1' COMMENT '是否结算',
     `statements_end_time`      int(10)                   DEFAULT '0' COMMENT '结算时间',
-    `comment`                  varchar(255)              DEFAULT NULL COMMENT '会员留言',
+    `comment`                  varchar(255)              DEFAULT NULL COMMENT '客户留言',
     `commiss_one_money`        float(10, 2)              DEFAULT '0.00' COMMENT '一级分佣金额',
     `commiss_two_money`        float(10, 2)              DEFAULT '0.00' COMMENT '二级分佣金额',
     `commiss_three_money`      float(10, 2)              DEFAULT '0.00' COMMENT '三级分佣金额',
@@ -13288,12 +13481,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods`
     `addtime`                  int(11)                   DEFAULT '1538487932' COMMENT '订单生成时间',
     `is_change_price`          tinyint(1)                DEFAULT '0' COMMENT '是否改价过，0、未改价，1、已改价',
     `cost_price`               decimal(15, 4)            DEFAULT NULL COMMENT '商品成本价',
-    `profit_total`             decimal(15, 4)            DEFAULT NULL COMMENT '毛利金额'
+    `profit_total`             decimal(15, 4)            DEFAULT NULL COMMENT '毛利金额',
+    `reward_socre`             int(10)        NOT NULL COMMENT '赠送积分数量'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund`
 (
@@ -13310,19 +13501,17 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund`
     `back_score_for_money`      float(10, 2) NOT NULL COMMENT '退还积分兑换商品的积分',
     `back_send_score`           float(10, 2) NOT NULL COMMENT '退还赠送积分',
     `back_head_orderbuycommiss` float(10, 2) NOT NULL COMMENT '退还团长佣金',
-    `back_head_supplycommiss`   float(10, 2) DEFAULT '0.00' COMMENT '退还供应商佣金',
+    `back_head_supplycommiss`   float(10, 2) DEFAULT '0.00' COMMENT '退还商户佣金',
     `back_head_commiss_1`       float(10, 2) NOT NULL COMMENT '退1级团长佣金',
     `back_head_commiss_2`       float(10, 2) NOT NULL COMMENT '退2级团长佣金',
     `back_head_commiss_3`       float(10, 2) NOT NULL COMMENT '退3级团长佣金',
-    `back_member_commiss_1`     float(10, 2) NOT NULL COMMENT '退会员1级佣金',
-    `back_member_commiss_2`     float(10, 2) NOT NULL COMMENT '退会员2级佣金',
-    `back_member_commiss_3`     float(10, 2) NOT NULL COMMENT '退会员3级佣金',
+    `back_member_commiss_1`     float(10, 2) NOT NULL COMMENT '退客户1级佣金',
+    `back_member_commiss_2`     float(10, 2) NOT NULL COMMENT '退客户2级佣金',
+    `back_member_commiss_3`     float(10, 2) NOT NULL COMMENT '退客户3级佣金',
     `addtime`                   int(10)      NOT NULL COMMENT '操作时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单商品退款记录表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund_intrgral`
 (
@@ -13334,8 +13523,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund_intrgral`
     `addtime`        int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城积分退款表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_relative_salesroom`
 (
@@ -13349,8 +13536,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_relative_salesroom
     `addtime`        int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='商品门店关联表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao`
 (
@@ -13374,8 +13559,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单核销信息表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao_record`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
@@ -13388,13 +13571,11 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao_record
     `salesroom_name` varchar(255) NOT NULL COMMENT '核销门店名称',
     `salesmember_id` int(10)      NOT NULL COMMENT '核销员id',
     `smember_name`   varchar(200) NOT NULL COMMENT '核销员名称',
-    `member_id`      int(10)      NOT NULL COMMENT '核销员会员id',
+    `member_id`      int(10)      NOT NULL COMMENT '核销员客户id',
     `addtime`        int(10)      NOT NULL COMMENT '核销时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单核销记录表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_history`
 (
@@ -13406,10 +13587,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_history`
     `comment`          text       NOT NULL,
     `date_added`       int(11)    NOT NULL
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_info`
 (
@@ -13426,8 +13604,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_info`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟打印面单信息';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_print_log`
 (
     `id`          int(10)    NOT NULL COMMENT '自增id',
@@ -13439,8 +13615,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_print_log`
     `addtime`     int(10)    NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟电子面单打印日志';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_option`
 (
@@ -13454,7 +13628,27 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_option`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
 
-
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_presale`
+(
+    `id`                           int(10)        NOT NULL COMMENT '自增id',
+    `is_notify`                    tinyint(1)              DEFAULT '0' COMMENT '是否通知过，0否，1是',
+    `goods_id`                     int(10)        NOT NULL COMMENT '商品id',
+    `presale_type`                 tinyint(1)     NOT NULL DEFAULT '0' COMMENT '0 定金， 1全款',
+    `presale_ding_money`           decimal(10, 2) NOT NULL DEFAULT '0.00' COMMENT '支付定金金额',
+    `presale_deduction_money`      decimal(10, 2) NOT NULL DEFAULT '0.00' COMMENT '定金抵扣金额',
+    `presale_limit_balancepaytime` tinyint(1)     NOT NULL DEFAULT '0' COMMENT '限制尾款支付时间， 0 限制， 1不限制',
+    `presale_balance_beginpaytime` int(10)                 DEFAULT '0' COMMENT '限制尾款支付开始时间',
+    `presale_balance_paytime`      int(10)        NOT NULL DEFAULT '0' COMMENT '限制尾款支付时间，具体结束时间',
+    `presale_sendorder_datetime`   int(10)        NOT NULL COMMENT '具体发货时间',
+    `state`                        tinyint(1)     NOT NULL DEFAULT '0' COMMENT '0 未付款，1已付定金 ,2 已付尾款',
+    `addtime`                      int(10)        NOT NULL COMMENT '添加时间',
+    `order_id`                     int(10)        NOT NULL COMMENT '订单id',
+    `transaction_id_first`         varchar(200)            DEFAULT NULL COMMENT '定金支付时微信交易号',
+    `transaction_id_second`        varchar(200)            DEFAULT NULL COMMENT '尾款支付时微信交易号',
+    `first_paytime`                int(10)                 DEFAULT NULL COMMENT '预约款支付时间',
+    `second_paytime`               int(10)                 DEFAULT NULL COMMENT '尾款支付时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球预售订单记录表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_quantity_order`
 (
@@ -13469,22 +13663,20 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_quantity_order`
     `type`                      tinyint(1) NOT NULL DEFAULT '0' COMMENT '0减少库存，1增加库存'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='库存记录表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球库存记录表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund`
 (
     `ref_id`               int(10)      NOT NULL COMMENT '退款自增id',
     `order_id`             int(10)      NOT NULL COMMENT '订单id',
-    `store_id`             int(10)      DEFAULT '0' COMMENT '供应商id',
+    `store_id`             int(10)      DEFAULT '0' COMMENT '商户id',
     `order_goods_id`       int(10)      DEFAULT '0' COMMENT '退款子订单编号',
     `real_refund_quantity` int(10)      DEFAULT '0' COMMENT '退款几个商品',
     `head_id`              int(10)      DEFAULT '0' COMMENT '团长id',
     `ref_type`             tinyint(1)   NOT NULL COMMENT '退款类型：1仅退款，2退款退货',
     `ref_money`            float(10, 2) NOT NULL COMMENT '退款金额',
     `ref_shipping_fare`    float(10, 2) DEFAULT '0.00' COMMENT '退款运费',
-    `ref_member_id`        int(10)      NOT NULL COMMENT '会员id',
+    `ref_member_id`        int(10)      NOT NULL COMMENT '客户id',
     `ref_name`             varchar(255) NOT NULL COMMENT '退款原因',
     `ref_mobile`           varchar(50)  NOT NULL COMMENT '联系人手机号',
     `complaint_name`       varchar(255) DEFAULT NULL COMMENT '联系人姓名',
@@ -13497,8 +13689,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='用户退款表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_disable`
 (
     `id`             int(10) NOT NULL COMMENT '自增id',
@@ -13509,8 +13699,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_disable`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='禁止申请退款的订单';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history`
 (
@@ -13525,8 +13713,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款订单处理历史表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history_image`
 (
     `id`      int(10)      NOT NULL COMMENT '自增id',
@@ -13537,8 +13723,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款处理记录图片表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_image`
 (
     `id`      int(10)      NOT NULL COMMENT '退款图片自增id',
@@ -13548,8 +13732,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_image`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='order_refund_image';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_reson`
 (
@@ -13562,8 +13744,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_reson`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单退款原因表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_relate`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
@@ -13572,19 +13752,14 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_relate`
     `addtime`      int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='订单总表跟商家订单关联表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球订单总表跟商家订单关联表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_status`
 (
     `order_status_id` int(11)     NOT NULL,
     `name`            varchar(32) NOT NULL
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 15
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='订单状态';
-
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球订单状态';
 
 
 INSERT INTO `eaterplanet_ecommerce_order_status` (`order_status_id`, `name`)
@@ -13601,9 +13776,8 @@ VALUES (1, '已付款待发货'),
        (11, '已完成'),
        (12, '申请退款中'),
        (13, '平台介入退款'),
-       (14, '配送中');
-
-
+       (14, '配送中'),
+       (15, '预售已付定金');
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_total`
 (
@@ -13615,10 +13789,23 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_total`
     `value`          decimal(15, 4) NOT NULL DEFAULT '0.0000',
     `sort_order`     int(3)         NOT NULL
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
+  DEFAULT CHARSET = utf8;
 
-
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_virtualcard`
+(
+    `id`             int(10)        NOT NULL COMMENT '自增id',
+    `code_id`        int(10)        NOT NULL COMMENT '兑换码id',
+    `code_sn`        varchar(200)   NOT NULL COMMENT '兑换码序号',
+    `state`          tinyint(1)     NOT NULL COMMENT '0未支付,1未使用，2已使用，3已失效',
+    `order_id`       int(10)        NOT NULL COMMENT '关联的订单id',
+    `user_user_id`   int(10)        NOT NULL COMMENT '使用人',
+    `buy_user_id`    int(10)        NOT NULL COMMENT '购买人',
+    `code_money`     decimal(10, 2) NOT NULL COMMENT '兑换码金额',
+    `addtime`        int(10)        NOT NULL COMMENT '添加时间',
+    `effect_type`    tinyint(1) DEFAULT NULL COMMENT '0 有效期类型，0无限期，1限制时间',
+    `effect_endtime` int(10)    DEFAULT NULL COMMENT '到期时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球订单兑换码表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_role`
 (
@@ -13629,11 +13816,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_role`
     `deleted`  tinyint(3)   DEFAULT '0',
     `perms2`   text
 ) ENGINE = MyISAM
-  AUTO_INCREMENT = 5
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_user`
 (
@@ -13653,17 +13836,13 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_user`
     `openid_wa`   varchar(50)  DEFAULT NULL,
     `member_nick` varchar(50)  DEFAULT NULL
 ) ENGINE = MyISAM
-  AUTO_INCREMENT = 2
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin`
 (
     `pin_id`           int(11)    NOT NULL COMMENT '拼团id，自增',
     `order_id`         int(11)    NOT NULL DEFAULT '0' COMMENT '订单id',
-    `user_id`          int(11)    NOT NULL DEFAULT '0' COMMENT '会员id',
+    `user_id`          int(11)    NOT NULL DEFAULT '0' COMMENT '客户id',
     `need_count`       int(11)    NOT NULL DEFAULT '0' COMMENT '拼团人数',
     `state`            tinyint(1) NOT NULL DEFAULT '0' COMMENT '拼团状态，0拼团中，1拼团成功，2拼团失败并退款',
     `is_commiss_tuan`  tinyint(1)          DEFAULT '0' COMMENT '是否佣金团',
@@ -13677,30 +13856,24 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin`
     `is_jiqi`          tinyint(1)          DEFAULT '0' COMMENT '是否机器人成团',
     `qrcode`           varchar(255)        DEFAULT NULL COMMENT '二维码'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_commiss`
 (
     `id`        int(10) NOT NULL COMMENT '自增ID',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
-    `member_id` int(10) NOT NULL COMMENT '会员ID',
+    `member_id` int(10) NOT NULL COMMENT '客户ID',
     `money`     float(10, 2) DEFAULT '0.00' COMMENT '可提现金额',
     `dongmoney` float(10, 2) DEFAULT '0.00' COMMENT '提现中金额',
     `getmoney`  float(10, 2) DEFAULT '0.00' COMMENT '已提现金额'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = FIXED;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_commiss_order`
 (
     `id`             int(10)      NOT NULL COMMENT '自增ID',
     `uniacid`        int(11)      NOT NULL COMMENT '公众号id',
-    `member_id`      int(10)      NOT NULL COMMENT '会员ID',
+    `member_id`      int(10)      NOT NULL COMMENT '客户ID',
     `order_id`       int(10)      NOT NULL COMMENT '订单ID',
     `order_goods_id` int(10)               DEFAULT '0' COMMENT '商品订单id',
     `type`           tinyint(1)            DEFAULT '1' COMMENT '1按照比例。2按照固定金额',
@@ -13711,16 +13884,13 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_commiss_order`
     `statement_time` int(10)               DEFAULT '0' COMMENT '结算时间',
     `addtime`        int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = FIXED;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_tixian_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `uniacid`              int(10)      NOT NULL,
-    `member_id`            int(10)      NOT NULL COMMENT '会员id',
+    `member_id`            int(10)      NOT NULL COMMENT '客户id',
     `money`                float(10, 2) NOT NULL COMMENT '提现金额',
     `service_charge`       float(10, 2) DEFAULT '0.00' COMMENT '提现手续费比例',
     `service_charge_money` float(10, 2) DEFAULT '0.00' COMMENT '提现后实际到账金额',
@@ -13735,8 +13905,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_tixian_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='分销佣金提现表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin_order`
 (
     `id`       int(11) NOT NULL,
@@ -13744,19 +13912,16 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin_order`
     `order_id` int(11) NOT NULL COMMENT '订单id',
     `add_time` int(11) NOT NULL
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = FIXED;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv`
 (
-    `id`              int(11) unsigned NOT NULL COMMENT '编号',
+    `id`              int(11) UNSIGNED NOT NULL COMMENT '编号',
     `adv_name`        varchar(50)      NOT NULL COMMENT '活动名称',
     `begin_time`      int(10)      DEFAULT '0' COMMENT '广告起始时间',
     `end_time`        int(100)     DEFAULT '0' COMMENT '广告结束时间',
     `send_person`     tinyint(1)   DEFAULT '0' COMMENT '投放类型：1、指定用户发送，2、按用户组等级发送，3、全部发送',
-    `member_id`       text COMMENT '关联会员编号',
+    `member_id`       text COMMENT '关联客户编号',
     `member_group_id` int(11)      DEFAULT '0' COMMENT '关联用户组',
     `pop_page`        tinyint(1)   DEFAULT '0' COMMENT '投放页面：0、商城首页，1、商品分类，2、商城购物车，3、商城个人中心',
     `is_index_show`   tinyint(1)   DEFAULT '0' COMMENT '首页访问页面时出现后，是否还出现：0、不再出现，1、再次出现',
@@ -13767,10 +13932,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv`
     `open_num`        int(10)      DEFAULT '0' COMMENT '打开次数',
     `addtime`         int(10)          NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 65
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城弹窗广告活动';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv_list`
 (
@@ -13782,10 +13944,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv_list`
     `appid`    varchar(255)     NOT NULL COMMENT '外部小程序appid',
     `addtime`  int(10)          NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 65
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城弹窗广告内容';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_printer`
 (
@@ -13802,8 +13961,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_printer`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城打印机表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
@@ -13812,7 +13969,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe`
     `sub_name`    varchar(255) DEFAULT NULL COMMENT '菜谱描述',
     `images`      varchar(255) DEFAULT NULL COMMENT '菜谱图片',
     `video`       varchar(255) DEFAULT NULL COMMENT '菜谱视频',
-    `member_id`   int(10)      NOT NULL COMMENT '会员id',
+    `member_id`   int(10)      NOT NULL COMMENT '客户id',
     `cate_id`     int(10)      NOT NULL COMMENT '分类id',
     `make_time`   varchar(100) DEFAULT NULL COMMENT '制作时间',
     `diff_type`   tinyint(1)   NOT NULL COMMENT '难易程度，1简单，2容易，3困难',
@@ -13824,20 +13981,16 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城菜谱表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe_fav`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
     `recipe_id` int(10) NOT NULL COMMENT '菜谱id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `addtime`   int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城菜谱喜欢表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe_ingredients`
 (
@@ -13850,8 +14003,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe_ingredients`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城食材表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom`
 (
@@ -13876,12 +14027,10 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom`
     `introduction`         text CHARACTER SET utf8mb4 NOT NULL COMMENT '门店介绍',
     `addtime`              int(10)                    NOT NULL COMMENT '添加时间',
     `disable_time`         int(10)      DEFAULT '0' COMMENT '禁用时间',
-    `displayorder`         int(10)      DEFAULT '0' COMMENT '排序，越大排序越前面'
+    `displayorder`         int(10)                    NOT NULL COMMENT '排序，越大排序越前面'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='核销门店';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球核销门店';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom_member`
 (
@@ -13890,30 +14039,26 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom_member`
     `supply_id`         int(10) DEFAULT '0' COMMENT '商户id',
     `username`          varchar(255) NOT NULL COMMENT '用户名',
     `mobile`            varchar(25)  NOT NULL COMMENT '手机号',
-    `member_id`         int(10)      NOT NULL COMMENT '会员id',
+    `member_id`         int(10)      NOT NULL COMMENT '客户id',
     `state`             tinyint(1)   NOT NULL COMMENT '状态，0禁用，1启用',
     `addtime`           int(10)      NOT NULL COMMENT '添加时间',
     `disable_time`      int(10) DEFAULT '0' COMMENT '禁用时间',
     `last_salesroom_id` int(10) DEFAULT '0' COMMENT '上次门店信息'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='门店核销人员表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球门店核销人员表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom_relative_member`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `uniacid`      int(10) NOT NULL COMMENT '公众号id',
     `salesroom_id` int(10) NOT NULL COMMENT '门店id',
-    `smember_id`   int(10) DEFAULT '0' COMMENT '核销会员id',
-    `member_id`    int(10) NOT NULL COMMENT '会员id',
+    `smember_id`   int(10) DEFAULT '0' COMMENT '核销客户id',
+    `member_id`    int(10) NOT NULL COMMENT '客户id',
     `addtime`      int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='门店核销人员跟门店关联表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_shipping`
 (
@@ -13936,13 +14081,11 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_shipping`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城运费模板表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_signinreward_record`
 (
     `id`             int(10) NOT NULL COMMENT '自增id',
     `uniacid`        int(10) NOT NULL COMMENT '公众号id',
-    `member_id`      int(10) NOT NULL COMMENT '会员id',
+    `member_id`      int(10) NOT NULL COMMENT '客户id',
     `continuity_day` int(10) NOT NULL COMMENT '连续签到几天',
     `reward_socre`   int(10) NOT NULL COMMENT '赠送积分数量',
     `signin_time`    int(10) NOT NULL COMMENT '签到时间',
@@ -13950,8 +14093,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_signinreward_record`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城签到奖励记录表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire`
 (
@@ -13973,8 +14114,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙活动表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_goods`
 (
     `id`       int(10) NOT NULL COMMENT '自增id',
@@ -13986,20 +14125,16 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城接龙活动商品表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_invite`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
     `soli_id`   int(10) NOT NULL COMMENT '群接龙id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `addtime`   int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙访问记录表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_order`
 (
@@ -14012,14 +14147,12 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙订单表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_post`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
     `soli_id`   int(10) NOT NULL COMMENT '群接龙id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `pid`       int(10) NOT NULL DEFAULT '0' COMMENT '回复id，默认0',
     `fav_count` int(10) NOT NULL COMMENT '点赞数',
     `content`   text    NOT NULL COMMENT '评论内容',
@@ -14028,21 +14161,17 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_post`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙评论表';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_post_fav`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `soli_id`   int(10) NOT NULL COMMENT '群接龙id',
     `post_id`   int(10) NOT NULL COMMENT '评论id',
     `addtime`   int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙点赞表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_spec`
 (
@@ -14054,8 +14183,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_spec`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城规格表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_special`
 (
@@ -14078,67 +14205,58 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_special`
     `addtime`       int(10)     NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='后台专题管理';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球后台专题管理';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_subscribe`
 (
-    `id`          int(10)                                                                                                                     NOT NULL COMMENT '自增id',
-    `uniacid`     int(10)                                                                                                                     NOT NULL COMMENT '公众号id',
-    `member_id`   int(10)                                                                                                                     NOT NULL COMMENT '会员id',
-    `template_id` varchar(255)                                                                                                                NOT NULL COMMENT '模板',
-    `type`        enum ('pay_order','send_order','hexiao_success','apply_community','open_tuan','take_tuan','pin_tuansuccess','apply_tixian') NOT NULL COMMENT '消息类型',
-    `addtime`     int(10)                                                                                                                     NOT NULL COMMENT '订阅时间'
+    `id`          int(10)                                                                                                                                                    NOT NULL COMMENT '自增id',
+    `uniacid`     int(10)                                                                                                                                                    NOT NULL COMMENT '公众号id',
+    `member_id`   int(10)                                                                                                                                                    NOT NULL COMMENT '客户id',
+    `template_id` varchar(255)                                                                                                                                               NOT NULL COMMENT '模板',
+    `type`        enum ('pay_order','send_order','hexiao_success','apply_community','open_tuan','take_tuan','pin_tuansuccess','apply_tixian','presale_ordercan_continuepay') NOT NULL COMMENT '消息类型',
+    `addtime`     int(10)                                                                                                                                                    NOT NULL COMMENT '订阅时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城用户订阅消息';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_supply`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `shopname`             varchar(255) NOT NULL COMMENT '店铺名称',
-    `name`                 varchar(100) NOT NULL COMMENT '供应商名称',
-    `member_id`            int(10)       DEFAULT '0' COMMENT '关联会员id',
+    `name`                 varchar(100) NOT NULL COMMENT '商户名称',
+    `member_id`            int(10)       DEFAULT '0' COMMENT '关联客户id',
     `logo`                 varchar(255)  DEFAULT NULL COMMENT 'logo',
     `storename`            varchar(255) NOT NULL COMMENT '店铺名称',
     `banner`               varchar(255)  DEFAULT NULL COMMENT '店铺顶部图',
     `product`              varchar(1000) DEFAULT NULL COMMENT '产品说明',
-    `mobile`               varchar(50)  NOT NULL COMMENT '供应商手机号',
-    `state`                tinyint(1)   NOT NULL COMMENT '供应商状态，0未审核，1已审核',
+    `mobile`               varchar(50)  NOT NULL COMMENT '商户手机号',
+    `state`                tinyint(1)   NOT NULL COMMENT '商户状态，0未审核，1已审核',
     `type`                 tinyint(1)    DEFAULT '0' COMMENT '0 平台自营，1入驻',
     `is_open_mobilemanage` tinyint(1)    DEFAULT '0' COMMENT '0关闭，1开启',
-    `commiss_bili`         int(10)       DEFAULT '0' COMMENT '供应商提成。百分比',
+    `commiss_bili`         int(10)       DEFAULT '0' COMMENT '商户提成。百分比',
     `apptime`              int(10)       DEFAULT NULL COMMENT '申请时间',
-    `login_name`           varchar(50)   DEFAULT NULL COMMENT '供应商登录名称',
-    `login_password`       varchar(100)  DEFAULT NULL COMMENT '供应商登录密码',
+    `login_name`           varchar(50)   DEFAULT NULL COMMENT '商户登录名称',
+    `login_password`       varchar(100)  DEFAULT NULL COMMENT '商户登录密码',
     `login_slat`           varchar(50)   DEFAULT NULL COMMENT '密码盐值',
     `qualifications`       text COMMENT '工商资质',
     `addtime`              int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购供应商表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购商户表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_supply_config`
 (
-    `id`        smallint(5) unsigned NOT NULL,
+    `id`        smallint(5) UNSIGNED NOT NULL,
     `name`      varchar(100)         NOT NULL,
     `value`     text                 NOT NULL,
-    `supply_id` int(10)              NOT NULL COMMENT '供应商id'
+    `supply_id` int(10)              NOT NULL COMMENT '商户id'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 1186
-  DEFAULT CHARSET = utf8 COMMENT ='吃货星球供应商配置表';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商户配置表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_systemoperation_log`
 (
     `id`                    int(10)                NOT NULL COMMENT '自增id',
-    `operation_type`        enum ('detailed_list') NOT NULL COMMENT '操作类型,detailed_list表示清单',
+    `operation_type`        enum ('detailed_list','order','goods','user','communityhead','supply','salesroom','article','group','marketing','generalmall','delivery','perm','attachment','config') NOT NULL COMMENT '操作类型，detailed_list清单，order订单，goods商品，user客户，communityhead团长，supply商户，salesroom门店，article文章，group拼团，marketing营销，generalmall仅快递,delivery配送，perm权限，attachment附件，config设置',
     `operation_seller_id`   int(10)                NOT NULL COMMENT '管理员id',
     `operation_seller_name` varchar(50)            NOT NULL COMMENT '管理员名称',
     `ip`                    varchar(50)            NOT NULL COMMENT 'ip',
@@ -14146,8 +14264,6 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_systemoperation_log`
     `addtime`               int(10)                NOT NULL COMMENT '操作时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城系统操作日志表';
-
-
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_templatemsg`
 (
@@ -14166,32 +14282,67 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_templatemsg`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群发模板消息';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_user_favgoods`
 (
     `id`        int(11) NOT NULL COMMENT '自增id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `goods_id`  int(10) NOT NULL COMMENT '商品id',
     `add_time`  int(10) NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品收藏表';
 
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_codes`
+(
+    `id`          int(10)        NOT NULL COMMENT '自增id',
+    `code_name`   varchar(255)   NOT NULL COMMENT '兑换码名称',
+    `effect_type` tinyint(1)     NOT NULL COMMENT '0 永久 ， 1限时',
+    `effect_days` int(10)        NOT NULL COMMENT '限时兑换购买后几天',
+    `code_money`  decimal(10, 2) NOT NULL COMMENT '兑换码金额',
+    `state`       tinyint(1)     NOT NULL COMMENT '状态，0禁用，1正常',
+    `addtime`     int(10)        NOT NULL COMMENT '添加时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球礼品兑换码表';
 
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_limituser_error`
+(
+    `id`      int(10) NOT NULL COMMENT '自增id',
+    `user_id` int(10) NOT NULL COMMENT '用户id',
+    `addtime` int(10) NOT NULL COMMENT '错误时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='兑换错误日志';
+
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_limit_user`
+(
+    `id`            int(10) NOT NULL COMMENT '自增id',
+    `user_id`       int(10) NOT NULL COMMENT '封禁用户id',
+    `limit_endtime` int(10) NOT NULL COMMENT '封禁截止时间',
+    `addtime`       int(11) NOT NULL COMMENT '添加时间'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='被封禁的用户';
+
+CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_userecord`
+(
+    `id`          int(10)        NOT NULL COMMENT '自增id',
+    `code_sn`     varchar(200)   NOT NULL COMMENT '兑换码序号',
+    `code_id`     int(10)        NOT NULL COMMENT '兑换码id',
+    `order_id`    int(10)        NOT NULL COMMENT '订单id',
+    `money`       decimal(10, 2) NOT NULL COMMENT '兑换码抵扣金额',
+    `addtime`     int(10)        NOT NULL COMMENT '添加时间',
+    `use_user_id` int(10)        NOT NULL COMMENT '使用人'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='兑换码使用记录表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_weprogram_token`
 (
     `id`          int(11)      NOT NULL COMMENT '自增id',
-    `token`       varchar(255) NOT NULL COMMENT '会员标识',
-    `member_id`   int(10)      NOT NULL COMMENT '会员id',
+    `token`       varchar(255) NOT NULL COMMENT '客户标识',
+    `member_id`   int(10)      NOT NULL COMMENT '客户id',
     `session_key` varchar(100) NOT NULL COMMENT '保持登录的session',
     `expires_in`  int(10)      NOT NULL COMMENT '过期时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城小程序会员token表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城小程序客户token表';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive`
 (
@@ -14210,9 +14361,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive`
     `is_top`      int(10)             DEFAULT '0' COMMENT '置顶',
     `is_show`     tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8mb4 COMMENT ='微信直播插件';
-
-
+  DEFAULT CHARSET = utf8mb4 COMMENT ='吃货星球微信直播插件';
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive_replay`
 (
@@ -14227,47 +14376,39 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive_replay`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='直播回放';
 
-
-
 CREATE TABLE IF NOT EXISTS `eaterplanet_supply_commiss`
 (
     `id`        int(10) NOT NULL COMMENT '自增ID',
-    `supply_id` int(10) NOT NULL COMMENT '供应商ID',
+    `supply_id` int(10) NOT NULL COMMENT '商户ID',
     `money`     float(10, 2) DEFAULT '0.00' COMMENT '可提现金额',
     `dongmoney` float(10, 2) DEFAULT '0.00' COMMENT '提现中金额',
     `getmoney`  float(10, 2) DEFAULT '0.00' COMMENT '已提现金额'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = FIXED;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_supply_commiss_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增ID',
-    `supply_id`            int(10)      NOT NULL COMMENT '供应商id',
+    `supply_id`            int(10)      NOT NULL COMMENT '商户id',
     `order_id`             int(10)      NOT NULL COMMENT '订单ID',
     `order_goods_id`       int(10)               DEFAULT '0' COMMENT '商品订单id',
     `total_money`          float(10, 2)          DEFAULT '0.00' COMMENT '总金额',
     `comunity_blili`       float(10, 2)          DEFAULT '0.00' COMMENT '服务费比例',
     `state`                tinyint(1)   NOT NULL DEFAULT '0' COMMENT '是否结算：0，待计算。1，已结算。2，订单取消',
     `head_commiss_money`   float(10, 2)          DEFAULT '0.00' COMMENT '团长分佣金额',
-    `member_commiss_money` float(10, 2)          DEFAULT '0.00' COMMENT '会员分销金额',
+    `member_commiss_money` float(10, 2)          DEFAULT '0.00' COMMENT '客户分销金额',
     `money`                float(10, 2) NOT NULL DEFAULT '0.00' COMMENT '分佣金额',
-    `shipping_fare`        float(10, 2)          DEFAULT '0.00' COMMENT '独立供应商有运费',
+    `shipping_fare`        float(10, 2)          DEFAULT '0.00' COMMENT '独立商户有运费',
     `addtime`              int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = FIXED;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `eaterplanet_supply_tixian_order`
 (
     `id`                int(10)      NOT NULL COMMENT '自增id',
     `supply_id`         int(10)      NOT NULL COMMENT '团长id',
     `money`             float(10, 2) NOT NULL COMMENT '提现金额',
-    `supply_apply_type` tinyint(1)   DEFAULT '0' COMMENT '供应商提现类型：0原来默认，1 微信 2 支付宝 3银行卡',
+    `supply_apply_type` tinyint(1)   DEFAULT '0' COMMENT '商户提现类型：0原来默认，1 微信 2 支付宝 3银行卡',
     `service_charge`    float(10, 2) DEFAULT '0.00' COMMENT '手续费',
     `server_bili`       float(10, 2) DEFAULT '0.00' COMMENT '服务费比例',
     `state`             tinyint(1)   NOT NULL COMMENT '提现状态，0申请中，1提现成功，2体现失败',
@@ -14282,17 +14423,12 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_supply_tixian_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='分销佣金提现表';
 
-
-
 CREATE TABLE IF NOT EXISTS `log`
 (
     `id`   int(10) NOT NULL,
     `text` text    NOT NULL
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `lottery_goods`
 (
@@ -14311,13 +14447,11 @@ CREATE TABLE IF NOT EXISTS `lottery_goods`
     `seller_id`         int(10)             DEFAULT '0' COMMENT '商家id'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `mb_special`
 (
-    `special_id`      int(10) unsigned NOT NULL COMMENT '专题编号',
+    `special_id`      int(10) UNSIGNED NOT NULL COMMENT '专题编号',
     `special_desc`    varchar(20)      NOT NULL COMMENT '专题描述',
     `special_bgcolor` varchar(20)      NOT NULL COMMENT '专题背景颜色',
     `share_image`     varchar(255) DEFAULT NULL COMMENT '分享图片',
@@ -14326,45 +14460,41 @@ CREATE TABLE IF NOT EXISTS `mb_special`
     `special_bgimage` varchar(255)     NOT NULL COMMENT '专题图片'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='专题表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球专题表';
 
 CREATE TABLE IF NOT EXISTS `mb_special_item`
 (
-    `item_id`     int(10) unsigned    NOT NULL COMMENT '专题项目编号',
-    `special_id`  int(10) unsigned    NOT NULL COMMENT '专题编号',
+    `item_id`     int(10) UNSIGNED    NOT NULL COMMENT '专题项目编号',
+    `special_id`  int(10) UNSIGNED    NOT NULL COMMENT '专题编号',
     `item_type`   varchar(50)         NOT NULL COMMENT '项目类型',
     `item_data`   varchar(2000)       NOT NULL COMMENT '项目内容',
-    `item_usable` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '项目是否可用 0-不可用 1-可用',
-    `item_sort`   tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '项目排序'
+    `item_usable` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '项目是否可用 0-不可用 1-可用',
+    `item_sort`   tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '项目排序'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='专题项目表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球专题项目表';
 
 CREATE TABLE IF NOT EXISTS `member`
 (
     `member_id`          int(11)      NOT NULL,
     `openid`             varchar(200) NOT NULL COMMENT '微信openid',
     `we_openid`          varchar(100)                DEFAULT NULL COMMENT '小程序openid',
-    `unionid`            varchar(200)                DEFAULT NULL COMMENT 'unionid 同步多个应用之间的会员信息',
+    `unionid`            varchar(200)                DEFAULT NULL COMMENT 'unionid 同步多个应用之间的客户信息',
     `reg_type`           enum ('weixin','weprogram') DEFAULT 'weixin' COMMENT '登录类型',
     `bindmobile`         varchar(50)                 DEFAULT NULL COMMENT '绑定手机号',
     `uname`              varchar(20)  NOT NULL COMMENT '用户名',
-    `username`           varchar(255)                DEFAULT NULL COMMENT '会员名称',
-    `full_user_name`     varchar(200)                DEFAULT NULL COMMENT '会员完成名称',
+    `username`           varchar(255)                DEFAULT NULL COMMENT '客户名称',
+    `full_user_name`     varchar(200)                DEFAULT NULL COMMENT '客户完成名称',
     `email`              varchar(255) NOT NULL,
     `name`               varchar(50)  NOT NULL COMMENT '姓名',
     `avatar`             varchar(255) NOT NULL,
     `pwd`                varchar(255) NOT NULL,
-    `account_money`      decimal(10, 2)              DEFAULT '0.00' COMMENT '会员余额',
+    `account_money`      decimal(10, 2)              DEFAULT '0.00' COMMENT '客户余额',
     `wepro_qrcode`       varchar(255)                DEFAULT NULL COMMENT '小程序个人二维码',
     `telephone`          varchar(32)  NOT NULL,
     `address_id`         int(11)      NOT NULL       DEFAULT '0' COMMENT '用户收货地址',
     `share_id`           int(11)      NOT NULL       DEFAULT '0' COMMENT '上级ID，0表示无上级，',
-    `score`              float(10, 2)                DEFAULT '0.00' COMMENT '会员积分',
+    `score`              float(10, 2)                DEFAULT '0.00' COMMENT '客户积分',
     `level_id`           int(10)                     DEFAULT '0' COMMENT '等级id',
     `comsiss_flag`       tinyint(1)   NOT NULL       DEFAULT '0' COMMENT '是否分销商，0非分销，1分销商',
     `bind_seller_id`     int(11)      NOT NULL       DEFAULT '0' COMMENT '接受商家通知的微信号',
@@ -14381,14 +14511,12 @@ CREATE TABLE IF NOT EXISTS `member`
     `status`             tinyint(2)   NOT NULL
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='网站会员';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='网站客户';
 
 CREATE TABLE IF NOT EXISTS `member_charge_flow`
 (
     `id`          int(10)        NOT NULL COMMENT '自增id',
-    `member_id`   int(10)        NOT NULL COMMENT '会员id',
+    `member_id`   int(10)        NOT NULL COMMENT '客户id',
     `trans_id`    varchar(100) DEFAULT NULL COMMENT '交易号',
     `money`       decimal(10, 2) NOT NULL COMMENT '充值金额',
     `state`       tinyint(1)     NOT NULL COMMENT '6 裂变红包',
@@ -14396,14 +14524,12 @@ CREATE TABLE IF NOT EXISTS `member_charge_flow`
     `add_time`    int(10)        NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城会员充值记录表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='吃货星球商城客户充值记录表';
 
 CREATE TABLE IF NOT EXISTS `member_commiss`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
-    `member_id`    int(10) NOT NULL COMMENT '会员ID',
+    `member_id`    int(10) NOT NULL COMMENT '客户ID',
     `money`        float(10, 2) DEFAULT '0.00' COMMENT '可提现金额',
     `dongmoney`    float(10, 2) DEFAULT '0.00' COMMENT '提现中金额',
     `getmoney`     float(10, 2) DEFAULT '0.00' COMMENT '已提现金额',
@@ -14412,27 +14538,22 @@ CREATE TABLE IF NOT EXISTS `member_commiss`
     `bankusername` varchar(200) DEFAULT NULL COMMENT '持卡人姓名'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `member_commiss_apply`
 (
     `id`        int(10)    NOT NULL COMMENT '自增id',
-    `member_id` int(10)    NOT NULL COMMENT '会员id',
+    `member_id` int(10)    NOT NULL COMMENT '客户id',
     `state`     tinyint(1) NOT NULL COMMENT '审核状态，0申请中，1已通过，2拒绝',
     `addtime`   int(10)    NOT NULL COMMENT '申请时间'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `member_commiss_order`
 (
     `id`              int(10)      NOT NULL COMMENT '自增ID',
-    `member_id`       int(10)      NOT NULL COMMENT '会员ID',
-    `child_member_id` int(10)      NOT NULL COMMENT '下级会员ID',
+    `member_id`       int(10)      NOT NULL COMMENT '客户ID',
+    `child_member_id` int(10)      NOT NULL COMMENT '下级客户ID',
     `order_id`        int(10)      NOT NULL COMMENT '订单ID',
     `order_goods_id`  int(10)               DEFAULT '0' COMMENT '商品订单id',
     `level`           int(10)               DEFAULT '1' COMMENT '第几层分佣',
@@ -14442,51 +14563,43 @@ CREATE TABLE IF NOT EXISTS `member_commiss_order`
     `addtime`         int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `member_common`
 (
-    `member_id`  int(10) NOT NULL COMMENT '会员id',
+    `member_id`  int(10) NOT NULL COMMENT '客户id',
     `qrcode_img` varchar(255) DEFAULT NULL COMMENT '团长二维码背景'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员公共信息表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='客户公共信息表';
 
 CREATE TABLE IF NOT EXISTS `member_formid`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
-    `member_id` int(10)      NOT NULL COMMENT '会员id',
+    `member_id` int(10)      NOT NULL COMMENT '客户id',
     `state`     tinyint(1)   NOT NULL COMMENT '状态，0未使用，已使用',
     `formid`    varchar(100) NOT NULL COMMENT '用来群发使用的',
     `addtime`   int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员的群发formid表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='客户的群发formid表';
 
 CREATE TABLE IF NOT EXISTS `member_level`
 (
     `id`          int(10)        NOT NULL COMMENT '自增id',
     `level`       int(11)        NOT NULL COMMENT '等级',
     `levelname`   varchar(100)   NOT NULL COMMENT '等级名称',
-    `level_money` decimal(10, 2)          DEFAULT '0.00' COMMENT '会员升级金额',
+    `level_money` decimal(10, 2)          DEFAULT '0.00' COMMENT '客户升级金额',
     `discount`    decimal(10, 2) NOT NULL DEFAULT '0.00' COMMENT '折扣',
-    `logo`        varchar(255)            DEFAULT NULL COMMENT '会员等级logo'
+    `logo`        varchar(255)            DEFAULT NULL COMMENT '客户等级logo'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='会员等级表';
-
-
+  ROW_FORMAT = COMPACT COMMENT ='客户等级表';
 
 CREATE TABLE IF NOT EXISTS `member_sharing`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
-    `member_id`    int(10) NOT NULL COMMENT '会员ID',
+    `member_id`    int(10) NOT NULL COMMENT '客户ID',
     `money`        float(10, 2) DEFAULT '0.00' COMMENT '可提现金额',
     `dongmoney`    float(10, 2) DEFAULT '0.00' COMMENT '提现中金额',
     `getmoney`     float(10, 2) DEFAULT '0.00' COMMENT '已提现金额',
@@ -14494,16 +14607,13 @@ CREATE TABLE IF NOT EXISTS `member_sharing`
     `bankaccount`  varchar(200) DEFAULT NULL COMMENT '卡号',
     `bankusername` varchar(200) DEFAULT NULL COMMENT '持卡人姓名'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = DYNAMIC;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `member_sharing_order`
 (
     `id`              int(10)      NOT NULL COMMENT '自增ID',
-    `member_id`       int(10)      NOT NULL COMMENT '会员ID',
-    `child_member_id` int(10)      NOT NULL COMMENT '下级会员ID',
+    `member_id`       int(10)      NOT NULL COMMENT '客户ID',
+    `child_member_id` int(10)      NOT NULL COMMENT '下级客户ID',
     `order_id`        int(10)      NOT NULL COMMENT '订单ID',
     `order_goods_id`  int(10)               DEFAULT '0' COMMENT '商品订单id',
     `level`           int(10)               DEFAULT '1' COMMENT '第几层分佣',
@@ -14512,10 +14622,7 @@ CREATE TABLE IF NOT EXISTS `member_sharing_order`
     `money`           float(10, 2) NOT NULL DEFAULT '0.00' COMMENT '分佣金额',
     `addtime`         int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = FIXED;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `menu`
 (
@@ -14526,50 +14633,7 @@ CREATE TABLE IF NOT EXISTS `menu`
     `icon`       varchar(20)      NOT NULL,
     `sort_order` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '排序（同级有效）'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 78
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='后台菜单';
-
-
-
-INSERT INTO `menu` (`id`, `pid`, `title`, `url`, `icon`, `sort_order`)
-VALUES (1, 0, '系统', '', 'icon-dashboard', 7),
-       (13, 0, '插件', '', 'icon-key', 6),
-       (19, 28, '商品分类', 'GoodsCategory/index', '', 2),
-       (20, 13, '广告位', 'PluginsSlider/index', '', 1),
-       (23, 13, '帮助列表', 'Blog/index', '', 1),
-       (28, 0, '商品', '', 'icon-gift', 1),
-       (29, 28, '商品管理', 'Goods/index', '', 1),
-       (35, 0, '订单', '', 'icon-credit-card', 2),
-       (36, 35, '订单管理', 'Order/index', '', 1),
-       (37, 1, '系统配置', '', '', 0),
-       (38, 37, '站点设置', 'settings/general', '', 1),
-       (43, 0, '用户', '', 'icon-group', 3),
-       (44, 43, '前台用户', 'member/index', '', 1),
-       (49, 0, '控制台', 'Index/index', 'icon-globe', 0),
-       (50, 47, '角色管理', 'Roles/index', '', 1),
-       (51, 1, '管理员信息', 'AdminUser/index', '', 0),
-       (53, 59, '卖家管理', 'SellerManage/index', '', 3),
-       (54, 58, '限时秒杀活动商品', 'Spike/index', '', 2),
-       (56, 58, '主题活动', 'Subject/index', '', 4),
-       (57, 58, '抽奖活动', 'Lottery/index', '', 5),
-       (58, 1000, '营销活动', '', 'icon-bookmark', 4),
-       (59, 0, '商家管理', '', 'icon-glass', 3),
-       (60, 0, '结算中心', '', 'icon-file-alt', 5),
-       (61, 60, '结算管理', 'Balance/index', '', 0),
-       (62, 0, '平台优惠券', '', 'icon-film', 3),
-       (63, 62, '平台券管理', 'Voucher/index', '', 0),
-       (64, 60, '申请提现', 'Balance/assets', '', 2),
-       (65, 28, '活动商品管理', 'Goods/activity', '', 2),
-       (67, 0, '入驻中心', '', 'icon-beer', 5),
-       (68, 67, '申请管理', 'SellerManage/apply', '', 0),
-       (70, 1, '微信模板消息', 'settings/wxtempmsg', '', 2),
-       (71, 0, '快递配置', 'SellerManage/express', 'icon-cogs', 6),
-       (75, 13, '专题管理', 'Special/index', '', 2),
-       (76, 35, '拼团管理', 'Pin/index', '', 3),
-       (77, 1, '微信小程序配置', 'settings/wxprogram', '', 3);
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='后台菜单';
 
 CREATE TABLE IF NOT EXISTS `node`
 (
@@ -14582,28 +14646,12 @@ CREATE TABLE IF NOT EXISTS `node`
     `created_at` int(11)     NOT NULL COMMENT '创建时间',
     `updated_at` int(11)     NOT NULL COMMENT '更新时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 9
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='节点表';
-
-
-
-INSERT INTO `node` (`id`, `pid`, `name`, `title`, `level`, `status`, `created_at`, `updated_at`)
-VALUES (1, 0, 'admin', '后台管理', 1, 1, 1470035346, 1470035346),
-       (2, 1, 'Index', '控制台', 2, 1, 1470035523, 1470035523),
-       (3, 2, 'index', '查看控制台', 3, 1, 1470035553, 1470035553),
-       (4, 1, 'Member', '用户', 2, 1, 1470035631, 1470035631),
-       (5, 4, 'index', '前台用户', 3, 1, 1470035681, 1470035681),
-       (6, 4, 'add', '新增用户', 3, 1, 1470035711, 1470035711),
-       (7, 1, 'SellerManage', '卖家管理', 2, 1, 1470315633, 1470315633),
-       (8, 7, 'add', '新增卖家', 3, 1, 1470315721, 1470315721);
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='节点表';
 
 CREATE TABLE IF NOT EXISTS `notify_order`
 (
     `id`         int(10)      NOT NULL,
-    `username`   varchar(255) NOT NULL COMMENT '会员名称',
+    `username`   varchar(255) NOT NULL COMMENT '客户名称',
     `member_id`  int(10) DEFAULT '0',
     `avatar`     varchar(255) NOT NULL COMMENT '头像',
     `order_time` int(10)      NOT NULL COMMENT '购买时间',
@@ -14614,8 +14662,6 @@ CREATE TABLE IF NOT EXISTS `notify_order`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='最新订单消息通知';
-
-
 
 CREATE TABLE IF NOT EXISTS `option`
 (
@@ -14629,8 +14675,6 @@ CREATE TABLE IF NOT EXISTS `option`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='产品选项';
 
-
-
 CREATE TABLE IF NOT EXISTS `option_value`
 (
     `option_value_id`  int(11)      NOT NULL,
@@ -14640,8 +14684,6 @@ CREATE TABLE IF NOT EXISTS `option_value`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='选项值';
-
-
 
 CREATE TABLE IF NOT EXISTS `order`
 (
@@ -14653,9 +14695,9 @@ CREATE TABLE IF NOT EXISTS `order`
     `is_pin`               tinyint(1)                                                         DEFAULT '0' COMMENT '是否拼团，0表示否，1表示是',
     `from_type`            enum ('weixin','wepro')                                            DEFAULT 'weixin' COMMENT '订单来源：weixin表示服务号，wepro表示小程序',
     `perpay_id`            varchar(255)                                                       DEFAULT NULL COMMENT '预支付id',
-    `name`                 varchar(32)    NOT NULL COMMENT '购买的会员名字',
+    `name`                 varchar(32)    NOT NULL COMMENT '购买的客户名字',
     `email`                varchar(96)    NOT NULL,
-    `telephone`            varchar(32)    NOT NULL COMMENT '下单会员电话',
+    `telephone`            varchar(32)    NOT NULL COMMENT '下单客户电话',
     `delivery`             enum ('express','pickup')                                          DEFAULT 'express' COMMENT '配送类型',
     `shipping_name`        varchar(32)    NOT NULL COMMENT '收货人姓名',
     `address_id`           int(11)        NOT NULL,
@@ -14687,15 +14729,12 @@ CREATE TABLE IF NOT EXISTS `order`
     `express_time`         int(10)                                                            DEFAULT '0' COMMENT '发货时间',
     `shipping_cha_time`    int(10)                                                            DEFAULT '0' COMMENT '查询时间'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `order_all`
 (
     `id`              int(10)    NOT NULL COMMENT '自增id，',
-    `member_id`       int(10)    NOT NULL COMMENT '所属会员',
+    `member_id`       int(10)    NOT NULL COMMENT '所属客户',
     `is_pin`          tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否拼团订单',
     `total_money`     float(10, 2)        DEFAULT '0.00' COMMENT '总需要支付金额',
     `order_num_alias` varchar(200)        DEFAULT NULL COMMENT '支付的订单号',
@@ -14707,15 +14746,13 @@ CREATE TABLE IF NOT EXISTS `order_all`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='订单总表，支付时候使用';
 
-
-
 CREATE TABLE IF NOT EXISTS `order_comment`
 (
     `comment_id`      int(10)    NOT NULL COMMENT '评论id',
     `order_id`        int(10)    NOT NULL DEFAULT '0' COMMENT '订单id',
     `goods_id`        int(10)    NOT NULL DEFAULT '0' COMMENT '商品id',
     `state`           tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示，0审核中，1：显示',
-    `member_id`       int(10)    NOT NULL DEFAULT '0' COMMENT '会员id',
+    `member_id`       int(10)    NOT NULL DEFAULT '0' COMMENT '客户id',
     `goods_name`      varchar(255)        DEFAULT NULL COMMENT '商品名称',
     `goods_image`     varchar(255)        DEFAULT NULL COMMENT '商品图片',
     `order_num_alias` varchar(100)        DEFAULT NULL COMMENT '订单编号',
@@ -14731,9 +14768,7 @@ CREATE TABLE IF NOT EXISTS `order_comment`
     `add_time`        int(10)    NOT NULL DEFAULT '0' COMMENT '评价时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `order_goods`
 (
@@ -14746,8 +14781,8 @@ CREATE TABLE IF NOT EXISTS `order_goods`
     `shipping_fare`            float(10, 2)              DEFAULT '0.00' COMMENT '运费',
     `name`                     varchar(255)   NOT NULL,
     `head_disc`                int(10)                   DEFAULT '100' COMMENT '团长折扣',
-    `member_disc`              int(10)                   DEFAULT '100' COMMENT '会员折扣，100 表示不打折',
-    `level_name`               varchar(200)              DEFAULT NULL COMMENT '会员折扣等级名称',
+    `member_disc`              int(10)                   DEFAULT '100' COMMENT '客户折扣，100 表示不打折',
+    `level_name`               varchar(200)              DEFAULT NULL COMMENT '客户折扣等级名称',
     `goods_images`             varchar(255)              DEFAULT NULL COMMENT '商品图片',
     `goods_type`               enum ('pintuan','normal') DEFAULT 'normal' COMMENT '商品类型',
     `model`                    varchar(64)    NOT NULL,
@@ -14755,7 +14790,7 @@ CREATE TABLE IF NOT EXISTS `order_goods`
     `price`                    decimal(15, 4) NOT NULL   DEFAULT '0.0000',
     `total`                    decimal(15, 4) NOT NULL   DEFAULT '0.0000',
     `rela_goodsoption_valueid` varchar(50)               DEFAULT NULL COMMENT '关联属性id',
-    `comment`                  varchar(255)              DEFAULT NULL COMMENT '会员留言',
+    `comment`                  varchar(255)              DEFAULT NULL COMMENT '客户留言',
     `commiss_one_money`        float(10, 2)              DEFAULT '0.00' COMMENT '一级分佣金额',
     `commiss_two_money`        float(10, 2)              DEFAULT '0.00' COMMENT '二级分佣金额',
     `commiss_three_money`      float(10, 2)              DEFAULT '0.00' COMMENT '三级分佣金额',
@@ -14763,10 +14798,7 @@ CREATE TABLE IF NOT EXISTS `order_goods`
     `commiss_fen_two_money`    float(10, 2)              DEFAULT '0.00' COMMENT '分享二级佣金',
     `commiss_fen_three_money`  float(10, 2)              DEFAULT '0.00' COMMENT '分享三级佣金'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `order_goods_haitao`
 (
@@ -14779,8 +14811,6 @@ CREATE TABLE IF NOT EXISTS `order_goods_haitao`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='订单海淘信息表';
 
-
-
 CREATE TABLE IF NOT EXISTS `order_history`
 (
     `order_history_id` int(11)    NOT NULL,
@@ -14790,10 +14820,7 @@ CREATE TABLE IF NOT EXISTS `order_history`
     `comment`          text       NOT NULL,
     `date_added`       int(11)    NOT NULL
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `order_option`
 (
@@ -14806,10 +14833,7 @@ CREATE TABLE IF NOT EXISTS `order_option`
     `value`                 text         NOT NULL,
     `type`                  varchar(32)  NOT NULL
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `order_quantity_order`
 (
@@ -14825,15 +14849,13 @@ CREATE TABLE IF NOT EXISTS `order_quantity_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='库存记录表';
 
-
-
 CREATE TABLE IF NOT EXISTS `order_refund`
 (
     `ref_id`          int(10)      NOT NULL COMMENT '退款自增id',
     `order_id`        int(10)      NOT NULL COMMENT '订单id',
     `ref_type`        tinyint(1)   NOT NULL COMMENT '退款类型：1仅退款，2退款退货',
     `ref_money`       float(10, 2) NOT NULL COMMENT '退款金额',
-    `ref_member_id`   int(10)      NOT NULL COMMENT '会员id',
+    `ref_member_id`   int(10)      NOT NULL COMMENT '客户id',
     `ref_name`        varchar(255) NOT NULL COMMENT '退款原因',
     `ref_mobile`      varchar(50)  NOT NULL COMMENT '联系人手机号',
     `ref_description` text COMMENT '问题描述',
@@ -14842,8 +14864,6 @@ CREATE TABLE IF NOT EXISTS `order_refund`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='用户退款表';
-
-
 
 CREATE TABLE IF NOT EXISTS `order_refund_history`
 (
@@ -14856,8 +14876,6 @@ CREATE TABLE IF NOT EXISTS `order_refund_history`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款订单处理历史表';
 
-
-
 CREATE TABLE IF NOT EXISTS `order_refund_history_image`
 (
     `id`      int(10)      NOT NULL COMMENT '自增id',
@@ -14867,8 +14885,6 @@ CREATE TABLE IF NOT EXISTS `order_refund_history_image`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款处理记录图片表';
-
-
 
 CREATE TABLE IF NOT EXISTS `order_refund_image`
 (
@@ -14880,8 +14896,6 @@ CREATE TABLE IF NOT EXISTS `order_refund_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='order_refund_image';
 
-
-
 CREATE TABLE IF NOT EXISTS `order_relate`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
@@ -14892,18 +14906,12 @@ CREATE TABLE IF NOT EXISTS `order_relate`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='订单总表跟商家订单关联表';
 
-
-
 CREATE TABLE IF NOT EXISTS `order_status`
 (
     `order_status_id` int(11)     NOT NULL,
     `name`            varchar(32) NOT NULL
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 14
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='订单状态';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='订单状态';
 
 INSERT INTO `order_status` (`order_status_id`, `name`)
 VALUES (1, '已付款待发货'),
@@ -14920,8 +14928,6 @@ VALUES (1, '已付款待发货'),
        (12, '申请退款中'),
        (13, '平台介入退款');
 
-
-
 CREATE TABLE IF NOT EXISTS `order_total`
 (
     `order_total_id` int(10)        NOT NULL,
@@ -14932,10 +14938,7 @@ CREATE TABLE IF NOT EXISTS `order_total`
     `value`          decimal(15, 4) NOT NULL DEFAULT '0.0000',
     `sort_order`     int(3)         NOT NULL
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `payment`
 (
@@ -14945,21 +14948,18 @@ CREATE TABLE IF NOT EXISTS `payment`
     `payment_config` text COMMENT '支付接口配置信息',
     `payment_state`  enum ('0','1') NOT NULL DEFAULT '0' COMMENT '接口状态0禁用1启用'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 2
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='支付方式表';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='支付方式表';
 
 INSERT INTO `payment` (`payment_id`, `payment_code`, `payment_name`, `payment_config`, `payment_state`)
-VALUES (1, 'wxpay', '微信支付', 'a:4:{s:14:"alipay_service";s:25:"create_direct_pay_by_user";s:14:"alipay_account";s:0:"";s:10:"alipay_key";s:0:"";s:14:"alipay_partner";s:0:"";}', '1');
-
+VALUES (1, 'wxpay', '微信支付',
+        'a:4:{s:14:\"alipay_service\";s:25:\"create_direct_pay_by_user\";s:14:\"alipay_account\";s:0:\"\";s:10:\"alipay_key\";s:0:\"\";s:14:\"alipay_partner\";s:0:\"\";}',
+        '1');
 
 
 CREATE TABLE IF NOT EXISTS `pick_member`
 (
     `id`         int(10)    NOT NULL COMMENT '自增id',
-    `member_id`  int(10)    NOT NULL COMMENT '会员id',
+    `member_id`  int(10)    NOT NULL COMMENT '客户id',
     `pick_up_id` int(10) DEFAULT NULL COMMENT '提货点id',
     `state`      tinyint(1) NOT NULL COMMENT '状态：0不能核销，1正常',
     `addtime`    int(10)    NOT NULL COMMENT '添加时间',
@@ -14967,8 +14967,6 @@ CREATE TABLE IF NOT EXISTS `pick_member`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='提货人员表';
-
-
 
 CREATE TABLE IF NOT EXISTS `pick_order`
 (
@@ -14987,8 +14985,6 @@ CREATE TABLE IF NOT EXISTS `pick_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='自提订单表';
 
-
-
 CREATE TABLE IF NOT EXISTS `pick_up`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
@@ -15005,13 +15001,11 @@ CREATE TABLE IF NOT EXISTS `pick_up`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='自提点表';
 
-
-
 CREATE TABLE IF NOT EXISTS `pin`
 (
     `pin_id`        int(11)    NOT NULL COMMENT '拼团id，自增',
     `order_id`      int(11)    NOT NULL DEFAULT '0' COMMENT '订单id',
-    `user_id`       int(11)    NOT NULL DEFAULT '0' COMMENT '会员id',
+    `user_id`       int(11)    NOT NULL DEFAULT '0' COMMENT '客户id',
     `need_count`    int(11)    NOT NULL DEFAULT '0' COMMENT '拼团人数',
     `state`         tinyint(1) NOT NULL DEFAULT '0' COMMENT '拼团状态，0拼团中，1拼团成功，2拼团失败并退款',
     `lottery_state` tinyint(1) NOT NULL DEFAULT '0' COMMENT '抽奖状态，0抽奖中，1可退款，2已退款送券。',
@@ -15022,9 +15016,7 @@ CREATE TABLE IF NOT EXISTS `pin`
     `is_jiqi`       tinyint(1)          DEFAULT '0' COMMENT '是否机器人成团'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `pin_goods`
 (
@@ -15042,10 +15034,7 @@ CREATE TABLE IF NOT EXISTS `pin_goods`
     `commiss_two_pin_disc`   float(10, 2)                       DEFAULT '0.00' COMMENT '二级分佣比例',
     `commiss_three_pin_disc` float(10, 2)                       DEFAULT '0.00' COMMENT '三级分佣比例'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `pin_order`
 (
@@ -15055,9 +15044,7 @@ CREATE TABLE IF NOT EXISTS `pin_order`
     `add_time` int(11) NOT NULL
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `plugins_slider`
 (
@@ -15072,8 +15059,6 @@ CREATE TABLE IF NOT EXISTS `plugins_slider`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='图片轮播器';
 
-
-
 CREATE TABLE IF NOT EXISTS `role`
 (
     `id`          int(11)     NOT NULL COMMENT 'ID',
@@ -15084,18 +15069,12 @@ CREATE TABLE IF NOT EXISTS `role`
     `created_at`  int(11)     NOT NULL COMMENT '创建时间',
     `updated_at`  int(11)     NOT NULL COMMENT '更新时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 4
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='角色表';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='角色表';
 
 INSERT INTO `role` (`id`, `pid`, `name`, `description`, `status`, `created_at`, `updated_at`)
 VALUES (1, 0, '超级管理员', '管理所有后台权限', 1, 0, 1476241011),
        (2, 0, '订单管理员', '查看订单的状态', 1, 0, 0),
        (3, 1, '商品管理员', '商品管理员', 1, 1470303850, 1470303850);
-
-
 
 CREATE TABLE IF NOT EXISTS `seller`
 (
@@ -15114,16 +15093,10 @@ CREATE TABLE IF NOT EXISTS `seller`
     `perms`             text COMMENT '权限',
     `deleted`           tinyint(1)            DEFAULT '0' COMMENT '是否禁用'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 2
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='卖家信息表';
+  DEFAULT CHARSET = utf8 COMMENT ='卖家信息表';
 
-
-
-INSERT INTO `seller` (`s_id`, `s_uname`, `s_true_name`, `s_mobile`, `s_passwd`, `s_role_id`, `s_login_count`, `s_last_login_ip`, `s_last_ip_region`, `s_create_time`, `s_last_login_time`, `s_status`, `perms`, `deleted`)
-VALUES (1, 'admin', '微司科技', '2265985', 'MDAwMDAwMDAwMJCMg9mTiWaXhaaXow', 0, 8, '36.27.212.11', '', 1470316613, 1607315825, 1, '', 0);
-
-
+INSERT INTO `seller` (`s_id`, `s_uname`, `s_true_name`, `s_mobile`, `s_passwd`, `s_role_id`, `s_login_count`, `s_last_login_ip`, `s_last_ip_region`, `s_create_time`, `s_last_login_time`, `s_status`, `perms`, `deleted`) VALUES
+(1, 'zhrrobert', '', '', 'MDAwMDAwMDAwMIpnnZqWiWPThLaJl4O4eak', 0, 22, '112.117.155.162', '', 1605732513, 1622836538, 1, '', 0);
 
 CREATE TABLE IF NOT EXISTS `seller_ad`
 (
@@ -15148,11 +15121,8 @@ CREATE TABLE IF NOT EXISTS `seller_balance`
     `hasgetmoney` float(10, 2) NOT NULL COMMENT '已提现金额',
     `dongmoney`   float(10, 2) NOT NULL COMMENT '提现中金额'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 3
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 INSERT INTO `seller_balance` (`id`, `seller_id`, `money`, `hasgetmoney`, `dongmoney`)
 VALUES (1, 1, 0.25, 0.01, 0.00),
@@ -15168,20 +15138,8 @@ CREATE TABLE IF NOT EXISTS `seller_express`
     `jianma`       varchar(100) DEFAULT NULL COMMENT '快递简码',
     `addtime`      int(11)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 18
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
-
-INSERT INTO `seller_express` (`id`, `express_name`, `store_id`, `jianma`, `addtime`)
-VALUES (10, '闪电快递', 3, NULL, 1474874645),
-       (14, '本地配送', 1, NULL, 1475403236),
-       (15, '商家1号快递1', 1, NULL, 1475918886),
-       (16, '顺丰快递', 2, NULL, 1476274796),
-       (17, '韵达', 9, NULL, 1476261538);
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `seller_express_relat`
 (
@@ -15189,16 +15147,8 @@ CREATE TABLE IF NOT EXISTS `seller_express_relat`
     `express_id` int(10) NOT NULL DEFAULT '0' COMMENT '快递id',
     `store_id`   int(10) NOT NULL DEFAULT '0' COMMENT '店铺ID'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 3
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='商家快递关联表';
-
-
-
-INSERT INTO `seller_express_relat` (`id`, `express_id`, `store_id`)
-VALUES (2, 15, 1);
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='商家快递关联表'
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `seller_log`
 (
@@ -15210,8 +15160,6 @@ CREATE TABLE IF NOT EXISTS `seller_log`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-
-
 CREATE TABLE IF NOT EXISTS `seller_menu`
 (
     `id`         int(10) unsigned NOT NULL COMMENT '文档ID',
@@ -15222,11 +15170,7 @@ CREATE TABLE IF NOT EXISTS `seller_menu`
     `sort_order` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '排序（同级有效）',
     `is_mall`    tinyint(1)                DEFAULT '1' COMMENT '是否多商户'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 204
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='后台菜单';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='后台菜单';
 
 INSERT INTO `seller_menu` (`id`, `pid`, `title`, `url`, `icon`, `sort_order`, `is_mall`)
 VALUES (28, 0, '商品', '', 'eaterplaneticon eaterplaneticon-goods', 2, 1),
@@ -15241,11 +15185,11 @@ VALUES (28, 0, '商品', '', 'eaterplaneticon eaterplaneticon-goods', 2, 1),
        (55, 35, '批量发货', 'Order/sendexpress', '', 3, 1),
        (57, 0, '团长管理', '', 'eaterplaneticon eaterplaneticon-communityhead', 7, 1),
        (59, 10000, '活动中心', 'Activity/subject', 'icon-bookmark', 5, 1),
-       (65, 0, '会员', '', 'eaterplaneticon eaterplaneticon-user', 4, 0),
+       (65, 0, '客户', '', 'eaterplaneticon eaterplaneticon-user', 4, 0),
        (67, 0, '设置', '', 'eaterplaneticon eaterplaneticon-setup', 10, 0),
        (68, 67, '基本设置', 'settings/general', '', 0, 0),
        (69, 67, '小程序配置', 'settings/wxprogram', '', 4, 0),
-       (70, 65, '会员列表', 'member/index', '', 0, 0),
+       (70, 65, '客户列表', 'member/index', '', 0, 0),
        (71, 28, '商品分类', 'GoodsCategory/index', '', 2, 0),
        (72, 65, '机器人管理', 'member/jiaindex', '', 2, 1),
        (76, 35, '评价列表', 'Goodscomment/index', '', 6, 1),
@@ -15272,9 +15216,7 @@ CREATE TABLE IF NOT EXISTS `seller_tixian`
     `addtime`   int(10)          NOT NULL COMMENT '申请时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `spike`
 (
@@ -15286,9 +15228,7 @@ CREATE TABLE IF NOT EXISTS `spike`
     `add_time`   int(11)      NOT NULL COMMENT '活动添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `spike_goods`
 (
@@ -15303,20 +15243,14 @@ CREATE TABLE IF NOT EXISTS `spike_goods`
     `seller_id`  int(10)             DEFAULT '0' COMMENT '商家id'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `stock_status`
 (
     `stock_status_id` int(11)     NOT NULL,
     `name`            varchar(32) NOT NULL
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 3
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='库存状态';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='库存状态';
 
 INSERT INTO `stock_status` (`stock_status_id`, `name`)
 VALUES (1, '有存货'),
@@ -15354,9 +15288,7 @@ CREATE TABLE IF NOT EXISTS `subject`
     `is_hot`       tinyint(1)                                           DEFAULT '1' COMMENT '是否推荐首页'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `subject_goods`
 (
@@ -15370,9 +15302,7 @@ CREATE TABLE IF NOT EXISTS `subject_goods`
     `seller_id`  int(10)             DEFAULT '0' COMMENT '商家id'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `super_spike`
 (
@@ -15383,9 +15313,7 @@ CREATE TABLE IF NOT EXISTS `super_spike`
     `add_time`   int(11)      NOT NULL COMMENT '活动添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `super_spike_goods`
 (
@@ -15399,16 +15327,14 @@ CREATE TABLE IF NOT EXISTS `super_spike_goods`
     `seller_id`      int(10) DEFAULT '0' COMMENT '商家id'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `template_msg_order`
 (
     `id`            int(10)      NOT NULL COMMENT '自增ID',
     `template_data` text         NOT NULL COMMENT '发送数据',
     `url`           varchar(255) NOT NULL COMMENT '点击URL',
-    `open_id`       varchar(255) NOT NULL COMMENT '会员OPENID',
+    `open_id`       varchar(255) NOT NULL COMMENT '客户OPENID',
     `template_id`   varchar(255) NOT NULL COMMENT '模板消息ID',
     `type`          tinyint(1)            DEFAULT '0' COMMENT '消息类型：0模板消息，1客服消息',
     `state`         tinyint(1)   NOT NULL DEFAULT '0' COMMENT '发送状态，0未发送，1已发送',
@@ -15422,7 +15348,7 @@ CREATE TABLE IF NOT EXISTS `template_msg_order`
 CREATE TABLE IF NOT EXISTS `tixian_order`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
-    `member_id` int(10)      NOT NULL COMMENT '会员id',
+    `member_id` int(10)      NOT NULL COMMENT '客户id',
     `money`     float(10, 2) NOT NULL COMMENT '提现金额',
     `state`     tinyint(1)   NOT NULL COMMENT '提现状态，0申请中，1提现成功，2体现失败',
     `shentime`  int(10)      NOT NULL COMMENT '审核时间',
@@ -15440,11 +15366,7 @@ CREATE TABLE IF NOT EXISTS `transport`
     `seller_id`   mediumint(8)          NOT NULL COMMENT '商家id',
     `update_time` int(10) unsigned DEFAULT '0' COMMENT '最后更新时间'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 3
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='运费模板';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='运费模板';
 
 INSERT INTO `transport` (`id`, `title`, `seller_id`, `update_time`)
 VALUES (1, '快递', 1, 1471146919),
@@ -15466,23 +15388,24 @@ CREATE TABLE IF NOT EXISTS `transport_extend`
     `transport_id`    mediumint(8) unsigned NOT NULL COMMENT '运费模板ID',
     `transport_title` varchar(60)           DEFAULT NULL COMMENT '运费模板'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 25
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='运费模板扩展表';
+  DEFAULT CHARSET = utf8 COMMENT ='运费模板扩展表';
 
-
-
-INSERT INTO `transport_extend` (`id`, `area_id`, `top_area_id`, `area_name`, `snum`, `sprice`, `xnum`, `xprice`, `is_default`, `transport_id`, `transport_title`)
+INSERT INTO `transport_extend` (`id`, `area_id`, `top_area_id`, `area_name`, `snum`, `sprice`, `xnum`, `xprice`,
+                                `is_default`, `transport_id`, `transport_title`)
 VALUES (19, '', '', '全国', 1, '5.00', 1, '2.00', '1', 1, '快递'),
        (20,
         ',5,95,106,96,97,98,99,100,101,102,103,104,105,4,84,85,86,87,88,89,90,91,92,93,94,1,36,3,83,82,81,80,73,74,75,76,77,78,79,2,40,17,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,16,243,257,256,255,254,244,245,246,247,248,249,250,251,252,253,242,240,241,18,283,284,285,286,287,288,282,281,280,275,276,277,278,279,20,310,311,312,313,314,315,316,317,318,319,320,321,322,323,21,334,335,336,337,338,339,340,341,342,343,333,332,331,324,325,326,327,328,329,330,344,19,294,308,309,307,306,305,295,296,297,298,299,300,301,302,303,304,289,290,291,292,293,13,205,206,207,208,209,210,211,204,203,',
         ',5,4,1,3,2,17,16,18,20,21,19,13,', '内蒙古,山西,北京,河北,天津,湖北,河南,湖南,广西,海南,广东,福建', 1, '6.00', 1, '2.00', '2', 1, '快递'),
-       (21, ',34,534,33,529,530,531,532,533,528,527,526,516,517,518,519,520,521,522,523,524,525,32,503,504,505,506,507,508,509,510,511,512,502,501,500,493,494,495,496,497,498,499,513,514,515,35,45055,', ',34,33,32,35,', '澳门,香港,台湾,海外', 1, '7.00', 1, '3.00', '2', 1, '快递'),
+       (21,
+        ',34,534,33,529,530,531,532,533,528,527,526,516,517,518,519,520,521,522,523,524,525,32,503,504,505,506,507,508,509,510,511,512,502,501,500,493,494,495,496,497,498,499,513,514,515,35,45055,',
+        ',34,33,32,35,', '澳门,香港,台湾,海外', 1, '7.00', 1, '3.00', '2', 1, '快递'),
        (22, '', '', '全国', 1, '2.00', 1, '2.00', '1', 2, '顺丰'),
        (23,
         ',5,95,106,96,97,98,99,100,101,102,103,104,105,4,84,85,86,87,88,89,90,91,92,93,94,1,36,3,83,82,81,80,73,74,75,76,77,78,79,2,40,17,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,16,243,257,256,255,254,244,245,246,247,248,249,250,251,252,253,242,240,241,18,283,284,285,286,287,288,282,281,280,275,276,277,278,279,20,310,311,312,313,314,315,316,317,318,319,320,321,322,323,21,334,335,336,337,338,339,340,341,342,343,333,332,331,324,325,326,327,328,329,330,344,19,294,308,309,307,306,305,295,296,297,298,299,300,301,302,303,304,289,290,291,292,293,13,205,206,207,208,209,210,211,204,203,',
         ',5,4,1,3,2,17,16,18,20,21,19,13,', '内蒙古,山西,北京,河北,天津,湖北,河南,湖南,广西,海南,广东,福建', 1, '3.00', 1, '2.00', '2', 2, '顺丰'),
-       (24, ',34,534,33,529,530,531,532,533,528,527,526,516,517,518,519,520,521,522,523,524,525,32,503,504,505,506,507,508,509,510,511,512,502,501,500,493,494,495,496,497,498,499,513,514,515,35,45055,', ',34,33,32,35,', '澳门,香港,台湾,海外', 1, '4.00', 1, '3.00', '2', 2, '顺丰');
+       (24,
+        ',34,534,33,529,530,531,532,533,528,527,526,516,517,518,519,520,521,522,523,524,525,32,503,504,505,506,507,508,509,510,511,512,502,501,500,493,494,495,496,497,498,499,513,514,515,35,45055,',
+        ',34,33,32,35,', '澳门,香港,台湾,海外', 1, '4.00', 1, '3.00', '2', 2, '顺丰');
 
 
 
@@ -15495,7 +15418,6 @@ CREATE TABLE IF NOT EXISTS `user_action`
     `add_time` varchar(40)  NOT NULL COMMENT '加入时间',
     `info`     varchar(255) NOT NULL COMMENT '行为描述'
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 29
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='用户行为';
 
@@ -15504,7 +15426,7 @@ CREATE TABLE IF NOT EXISTS `user_action`
 CREATE TABLE IF NOT EXISTS `user_favgoods`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `goods_id`  int(10) NOT NULL COMMENT '商品id',
     `add_time`  int(10) NOT NULL COMMENT '关注时间'
 ) ENGINE = InnoDB
@@ -15516,7 +15438,7 @@ CREATE TABLE IF NOT EXISTS `user_favgoods`
 CREATE TABLE IF NOT EXISTS `user_favstore`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
-    `member_id` int(10) NOT NULL COMMENT '会员id',
+    `member_id` int(10) NOT NULL COMMENT '客户id',
     `store_id`  int(10) NOT NULL COMMENT '店铺id',
     `add_time`  int(10) NOT NULL COMMENT '关注时间'
 ) ENGINE = InnoDB
@@ -15564,14 +15486,12 @@ CREATE TABLE IF NOT EXISTS `voucher`
     `add_time`           int(10)      NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `voucher_free`
 (
     `id`       int(10)    NOT NULL COMMENT '自增id',
-    `user_id`  int(10)    NOT NULL COMMENT '会员id',
+    `user_id`  int(10)    NOT NULL COMMENT '客户id',
     `order_id` int(10)    NOT NULL COMMENT '使用的订单id',
     `state`    tinyint(1) NOT NULL DEFAULT '0' COMMENT '0未使用，1已使用',
     `addtime`  int(10)    NOT NULL COMMENT '获得时间'
@@ -15609,9 +15529,7 @@ CREATE TABLE IF NOT EXISTS `voucher_list`
     `add_time`           int(10)        NOT NULL COMMENT '添加时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT;
-
-
+  ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE IF NOT EXISTS `weight_class`
 (
@@ -15620,11 +15538,7 @@ CREATE TABLE IF NOT EXISTS `weight_class`
     `title`           varchar(32)    NOT NULL,
     `unit`            varchar(4)     NOT NULL
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 3
-  DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='重量单位';
-
-
+  DEFAULT CHARSET = utf8 COMMENT ='重量单位';
 
 INSERT INTO `weight_class` (`weight_class_id`, `value`, `title`, `unit`)
 VALUES (1, '1.00000000', '千克', 'kg'),
@@ -15634,14 +15548,14 @@ VALUES (1, '1.00000000', '千克', 'kg'),
 
 CREATE TABLE IF NOT EXISTS `weprogram_token`
 (
-    `id`          int(10)      NOT NULL COMMENT '会员id',
-    `token`       varchar(100) NOT NULL COMMENT '会员标识',
-    `member_id`   int(10)      NOT NULL COMMENT '会员id',
+    `id`          int(10)      NOT NULL COMMENT '客户id',
+    `token`       varchar(100) NOT NULL COMMENT '客户标识',
+    `member_id`   int(10)      NOT NULL COMMENT '客户id',
     `session_key` varchar(100) NOT NULL COMMENT '保持登录的session',
     `expires_in`  int(10)      NOT NULL COMMENT '过期时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8
-  ROW_FORMAT = COMPACT COMMENT ='小程序会员token表';
+  ROW_FORMAT = COMPACT COMMENT ='小程序客户token表';
 
 
 
@@ -15916,6 +15830,9 @@ ALTER TABLE `eaterplanet_ecommerce_adv`
 ALTER TABLE `eaterplanet_ecommerce_advimg`
     ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `eaterplanet_ecommerce_adv_category`
+    ADD PRIMARY KEY (`id`) USING BTREE,
+    ADD KEY `cate_id` (`cate_id`) USING BTREE;
 
 ALTER TABLE `eaterplanet_ecommerce_area`
     ADD PRIMARY KEY (`id`) USING BTREE,
@@ -16057,6 +15974,9 @@ ALTER TABLE `eaterplanet_ecommerce_goods_option_item`
 ALTER TABLE `eaterplanet_ecommerce_goods_option_item_value`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
+ALTER TABLE `eaterplanet_ecommerce_goods_presale`
+    ADD PRIMARY KEY (`id`) USING BTREE,
+    ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 ALTER TABLE `eaterplanet_ecommerce_goods_relative_salesroom`
     ADD PRIMARY KEY (`id`),
@@ -16072,9 +15992,8 @@ ALTER TABLE `eaterplanet_ecommerce_goods_relative_smember`
 
 
 ALTER TABLE `eaterplanet_ecommerce_goods_salesroombase`
-    ADD PRIMARY KEY (`id`) USING BTREE,
-    ADD UNIQUE KEY `uniacid` (`uniacid`) USING BTREE,
-    ADD KEY `goods_id` (`goods_id`) USING BTREE;
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `goods_id` (`goods_id`);
 
 
 ALTER TABLE `eaterplanet_ecommerce_goods_salesroom_limit`
@@ -16097,6 +16016,13 @@ ALTER TABLE `eaterplanet_ecommerce_goods_tags`
 ALTER TABLE `eaterplanet_ecommerce_goods_to_category`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
+ALTER TABLE `eaterplanet_ecommerce_goods_tradecomponts`
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `goods_id` (`goods_id`);
+
+ALTER TABLE `eaterplanet_ecommerce_goods_virturalcard`
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `goods_id` (`goods_id`, `code_id`);
 
 ALTER TABLE `eaterplanet_ecommerce_good_commiss`
     ADD PRIMARY KEY (`id`) USING BTREE,
@@ -16116,6 +16042,8 @@ ALTER TABLE `eaterplanet_ecommerce_good_pin`
 ALTER TABLE `eaterplanet_ecommerce_imdada_area_code`
     ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `eaterplanet_ecommerce_invitegift_record`
+    ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `eaterplanet_ecommerce_jiapinorder`
     ADD PRIMARY KEY (`id`),
@@ -16190,6 +16118,8 @@ ALTER TABLE `eaterplanet_ecommerce_member_group`
 ALTER TABLE `eaterplanet_ecommerce_member_integral_flow`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
+ALTER TABLE `eaterplanet_ecommerce_member_invitegift`
+    ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `eaterplanet_ecommerce_member_level`
     ADD PRIMARY KEY (`id`) USING BTREE;
@@ -16251,6 +16181,8 @@ ALTER TABLE `eaterplanet_ecommerce_orderdistribution_order`
 ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_log`
     ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_query`
+    ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `eaterplanet_ecommerce_orderdistribution_tixian`
     ADD PRIMARY KEY (`id`),
@@ -16335,6 +16267,9 @@ ALTER TABLE `eaterplanet_ecommerce_order_kdniao_print_log`
 ALTER TABLE `eaterplanet_ecommerce_order_option`
     ADD PRIMARY KEY (`order_option_id`) USING BTREE;
 
+ALTER TABLE `eaterplanet_ecommerce_order_presale`
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `goods_id` (`goods_id`, `order_id`);
 
 ALTER TABLE `eaterplanet_ecommerce_order_quantity_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
@@ -16385,6 +16320,9 @@ ALTER TABLE `eaterplanet_ecommerce_order_total`
     ADD PRIMARY KEY (`order_total_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
+ALTER TABLE `eaterplanet_ecommerce_order_virtualcard`
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `code_id` (`code_id`, `order_id`, `user_user_id`);
 
 ALTER TABLE `eaterplanet_ecommerce_perm_role`
     ADD PRIMARY KEY (`id`) USING BTREE,
@@ -16561,6 +16499,19 @@ ALTER TABLE `eaterplanet_ecommerce_user_favgoods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `goods_id`) USING BTREE;
 
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_codes`
+    ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_limituser_error`
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `user_id` (`user_id`);
+
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_limit_user`
+    ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_userecord`
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `id` (`id`, `code_id`, `order_id`, `use_user_id`);
 
 ALTER TABLE `eaterplanet_ecommerce_weprogram_token`
     ADD PRIMARY KEY (`id`) USING BTREE,
@@ -16899,40 +16850,40 @@ ALTER TABLE `user_favgoods`
 
 
 ALTER TABLE `user_favstore`
-    ADD PRIMARY KEY (`id`) USING BTREE,
-    ADD KEY `member_id` (`member_id`, `store_id`) USING BTREE;
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `member_id` (`member_id`, `store_id`);
 
 
 ALTER TABLE `visitors_ip`
-    ADD PRIMARY KEY (`vi_id`) USING BTREE;
+    ADD PRIMARY KEY (`vi_id`);
 
 
 ALTER TABLE `voucher`
-    ADD PRIMARY KEY (`id`) USING BTREE;
+    ADD PRIMARY KEY (`id`);
 
 
 ALTER TABLE `voucher_free`
-    ADD PRIMARY KEY (`id`) USING BTREE;
+    ADD PRIMARY KEY (`id`);
 
 
 ALTER TABLE `voucher_goods`
-    ADD PRIMARY KEY (`id`) USING BTREE,
-    ADD KEY `voucher_id` (`voucher_id`, `goods_id`) USING BTREE;
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `voucher_id` (`voucher_id`, `goods_id`);
 
 
 ALTER TABLE `voucher_list`
-    ADD PRIMARY KEY (`id`) USING BTREE,
+    ADD PRIMARY KEY (`id`),
     ADD KEY `voucher_id` (`voucher_id`) USING BTREE,
     ADD KEY `store_id` (`store_id`) USING BTREE;
 
 
 ALTER TABLE `weight_class`
-    ADD PRIMARY KEY (`weight_class_id`) USING BTREE;
+    ADD PRIMARY KEY (`weight_class_id`);
 
 
 ALTER TABLE `weprogram_token`
-    ADD PRIMARY KEY (`id`) USING BTREE,
-    ADD KEY `token` (`token`) USING BTREE;
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `token` (`token`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -17224,6 +17175,9 @@ ALTER TABLE `eaterplanet_ecommerce_adv`
 ALTER TABLE `eaterplanet_ecommerce_advimg`
     MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号';
 --
+ALTER TABLE `eaterplanet_ecommerce_adv_category`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_area`
 --
 ALTER TABLE `eaterplanet_ecommerce_area`
@@ -17269,7 +17223,7 @@ ALTER TABLE `eaterplanet_ecommerce_community_pickup_member_record`
 --
 ALTER TABLE `eaterplanet_ecommerce_config`
     MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 98;
+    AUTO_INCREMENT = 908;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_coupon`
 --
@@ -17367,6 +17321,9 @@ ALTER TABLE `eaterplanet_ecommerce_goods_option_item`
 ALTER TABLE `eaterplanet_ecommerce_goods_option_item_value`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
+ALTER TABLE `eaterplanet_ecommerce_goods_presale`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_relative_salesroom`
 --
 ALTER TABLE `eaterplanet_ecommerce_goods_relative_salesroom`
@@ -17405,8 +17362,16 @@ ALTER TABLE `eaterplanet_ecommerce_goods_to_category`
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_good_commiss`
 --
+ALTER TABLE `eaterplanet_ecommerce_goods_tradecomponts`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
+ALTER TABLE `eaterplanet_ecommerce_goods_virturalcard`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 ALTER TABLE `eaterplanet_ecommerce_good_commiss`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+    AUTO_INCREMENT = 7;
+
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_good_common`
 --
@@ -17424,6 +17389,9 @@ ALTER TABLE `eaterplanet_ecommerce_imdada_area_code`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
     AUTO_INCREMENT = 301;
 --
+ALTER TABLE `eaterplanet_ecommerce_invitegift_record`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_jiapinorder`
 --
 ALTER TABLE `eaterplanet_ecommerce_jiapinorder`
@@ -17488,7 +17456,9 @@ ALTER TABLE `eaterplanet_ecommerce_member_commiss_order`
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_formid`
 --
 ALTER TABLE `eaterplanet_ecommerce_member_formid`
-    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+    AUTO_INCREMENT = 16;
+
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_group`
 --
@@ -17500,6 +17470,9 @@ ALTER TABLE `eaterplanet_ecommerce_member_group`
 ALTER TABLE `eaterplanet_ecommerce_member_integral_flow`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
+ALTER TABLE `eaterplanet_ecommerce_member_invitegift`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_level`
 --
 ALTER TABLE `eaterplanet_ecommerce_member_level`
@@ -17558,9 +17531,12 @@ ALTER TABLE `eaterplanet_ecommerce_orderdistribution_order`
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_thirth_log`
 --
 ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_log`
-    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id',
-    AUTO_INCREMENT = 781;
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 --
+ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_query`
+    MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '编号';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_tixian`
 --
 ALTER TABLE `eaterplanet_ecommerce_orderdistribution_tixian`
@@ -17631,6 +17607,9 @@ ALTER TABLE `eaterplanet_ecommerce_order_kdniao_print_log`
 ALTER TABLE `eaterplanet_ecommerce_order_option`
     MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+ALTER TABLE `eaterplanet_ecommerce_order_presale`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_quantity_order`
 --
 ALTER TABLE `eaterplanet_ecommerce_order_quantity_order`
@@ -17675,13 +17654,16 @@ ALTER TABLE `eaterplanet_ecommerce_order_relate`
 --
 ALTER TABLE `eaterplanet_ecommerce_order_status`
     MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 15;
+    AUTO_INCREMENT = 98;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_total`
 --
 ALTER TABLE `eaterplanet_ecommerce_order_total`
     MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT;
 --
+ALTER TABLE `eaterplanet_ecommerce_order_virtualcard`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_perm_role`
 --
 ALTER TABLE `eaterplanet_ecommerce_perm_role`
@@ -17718,139 +17700,100 @@ ALTER TABLE `eaterplanet_ecommerce_pintuan_tixian_order`
 --
 ALTER TABLE `eaterplanet_ecommerce_pin_order`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_pop_adv`
---
+
 ALTER TABLE `eaterplanet_ecommerce_pop_adv`
-    MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
-    AUTO_INCREMENT = 65;
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_pop_adv_list`
---
+    MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '编号';
+
 ALTER TABLE `eaterplanet_ecommerce_pop_adv_list`
-    MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
-    AUTO_INCREMENT = 65;
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_printer`
---
+    MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '编号';
+
 ALTER TABLE `eaterplanet_ecommerce_printer`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_recipe`
---
+
 ALTER TABLE `eaterplanet_ecommerce_recipe`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_recipe_fav`
---
+
 ALTER TABLE `eaterplanet_ecommerce_recipe_fav`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_recipe_ingredients`
---
+
 ALTER TABLE `eaterplanet_ecommerce_recipe_ingredients`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_salesroom`
---
+
 ALTER TABLE `eaterplanet_ecommerce_salesroom`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_salesroom_member`
---
+
 ALTER TABLE `eaterplanet_ecommerce_salesroom_member`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_salesroom_relative_member`
---
+
 ALTER TABLE `eaterplanet_ecommerce_salesroom_relative_member`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_shipping`
---
+
 ALTER TABLE `eaterplanet_ecommerce_shipping`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_signinreward_record`
---
+
 ALTER TABLE `eaterplanet_ecommerce_signinreward_record`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_solitaire`
---
+
 ALTER TABLE `eaterplanet_ecommerce_solitaire`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_solitaire_goods`
---
+
 ALTER TABLE `eaterplanet_ecommerce_solitaire_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_solitaire_invite`
---
+
 ALTER TABLE `eaterplanet_ecommerce_solitaire_invite`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_solitaire_order`
---
+
 ALTER TABLE `eaterplanet_ecommerce_solitaire_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_solitaire_post`
---
+
 ALTER TABLE `eaterplanet_ecommerce_solitaire_post`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_solitaire_post_fav`
---
+
 ALTER TABLE `eaterplanet_ecommerce_solitaire_post_fav`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_spec`
---
+
 ALTER TABLE `eaterplanet_ecommerce_spec`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_special`
---
+
 ALTER TABLE `eaterplanet_ecommerce_special`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '专题id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_subscribe`
---
+
 ALTER TABLE `eaterplanet_ecommerce_subscribe`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_supply`
---
+
 ALTER TABLE `eaterplanet_ecommerce_supply`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_supply_config`
---
+
 ALTER TABLE `eaterplanet_ecommerce_supply_config`
     MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 1186;
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_systemoperation_log`
---
+
 ALTER TABLE `eaterplanet_ecommerce_systemoperation_log`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_templatemsg`
---
+
 ALTER TABLE `eaterplanet_ecommerce_templatemsg`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
--- AUTO_INCREMENT for table `eaterplanet_ecommerce_user_favgoods`
---
+
 ALTER TABLE `eaterplanet_ecommerce_user_favgoods`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
---
+
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_codes`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_limituser_error`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_limit_user`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
+ALTER TABLE `eaterplanet_ecommerce_virtualcard_userecord`
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_weprogram_token`
 --
 ALTER TABLE `eaterplanet_ecommerce_weprogram_token`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+    AUTO_INCREMENT = 8;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_wxlive`
 --
@@ -17925,7 +17868,7 @@ ALTER TABLE `member_commiss_order`
 -- AUTO_INCREMENT for table `member_common`
 --
 ALTER TABLE `member_common`
-    MODIFY `member_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '会员id';
+    MODIFY `member_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '客户id';
 --
 -- AUTO_INCREMENT for table `member_formid`
 --
@@ -18209,7 +18152,7 @@ ALTER TABLE `transport_extend`
 --
 ALTER TABLE `user_action`
     MODIFY `ua_id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 29;
+    AUTO_INCREMENT = 121;
 --
 -- AUTO_INCREMENT for table `user_favgoods`
 --
@@ -18255,7 +18198,9 @@ ALTER TABLE `weight_class`
 -- AUTO_INCREMENT for table `weprogram_token`
 --
 ALTER TABLE `weprogram_token`
-    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '会员id';
+    MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '客户id';
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT = @OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS = @OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION = @OLD_COLLATION_CONNECTION */;
