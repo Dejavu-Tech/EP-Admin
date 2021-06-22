@@ -166,7 +166,7 @@ class ApicheckoutController extends CommonController {
 
 		$fee = $money;
 		$appid = $this->appid;
-		$body =         '会员升级';
+		$body =         '客户升级';
 		$mch_id =       $this->mch_id;
 		$nonce_str =    $this->nonce_str();
 		$notify_url =   C('SITE_URL').'notify.php';
@@ -254,7 +254,7 @@ class ApicheckoutController extends CommonController {
 	}
 
 	/**
-		获取会员团列表
+		获取客户团列表
 	**/
 	public function groups()
 	{
@@ -341,7 +341,7 @@ class ApicheckoutController extends CommonController {
 	}
 
 	/**
-		会员的支付地址
+		客户的支付地址
 	**/
 	public function addresses()
 	{
@@ -2460,7 +2460,7 @@ class ApicheckoutController extends CommonController {
 				if(!empty($member_formid_info))
 				{
 					$template_data['keyword1'] = array('value' => $data['name'], 'color' => '#030303');
-					$template_data['keyword2'] = array('value' => '普通会员', 'color' => '#030303');
+					$template_data['keyword2'] = array('value' => '普通客户', 'color' => '#030303');
 					$template_data['keyword3'] = array('value' => date('Y-m-d H:i:s'), 'color' => '#030303');
 					$template_data['keyword4'] = array('value' => '恭喜你，获得一位新成员', 'color' => '#030303');
 

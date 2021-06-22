@@ -701,7 +701,7 @@ class ApigoodsController extends CommonController {
 
 		if( !empty($old_zan_order) )
 		{
-			//一个会员当前一个商品 只能发出去一个二维码
+			//一个客户当前一个商品 只能发出去一个二维码
 			echo json_encode( array('code' => 0, 'id' => $old_zan_order['id']) );
 			die();
 		}
@@ -1231,14 +1231,14 @@ class ApigoodsController extends CommonController {
 				$goods[0]['share_title'] = $price.'元 '.$goods[0]['name'];
 			}
 		}
-		/** 商品会员折扣begin **/
+		/** 商品客户折扣begin **/
 		$is_show_member_disc = 0;
 
 		$member_disc = 100;
 		$level_info = M('config')->where( array('name' => 'member_level_is_open') )->find();
 		$member_level_info = array('is_show_member_disc' => $is_show_member_disc);
 
-		$member_level_list = array();//会员等级列表
+		$member_level_list = array();//客户等级列表
 		$max_level_logo = C('SITE_URL')."Common/images/plus.png";
 		$max_member_level = array('level' => 0,'logo'=>'');//最大等级
 
@@ -1286,7 +1286,7 @@ class ApigoodsController extends CommonController {
 		//$max_get_pin_money = 0;//最大折扣拼团省钱
 		//$max_get_dan_money = 0;//最大折扣单独购买省钱
 
-		/** 商品会员折扣end **/
+		/** 商品客户折扣end **/
 
 		$goods[0]['memberprice'] = sprintf('%.2f', round( ($goods[0]['danprice'] * $member_disc) / 100 ,2));
 		$max_get_dan_money = round( ($goods[0]['danprice'] * (100 - $max_member_level['discount']) ) / 100 ,2);

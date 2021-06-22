@@ -73,7 +73,7 @@ class OrderController extends CommonController {
 				$order_history['order_id'] = $order_id;
 				$order_history['order_status_id'] = 5;
 				$order_history['notify'] = 0;
-				$order_history['comment'] = '会员前台申请，直接取消已支付待发货订单';
+				$order_history['comment'] = '客户前台申请，直接取消已支付待发货订单';
 				$order_history['date_added'] = time();
 
 				M('eaterplanet_ecommerce_order_history')->add($order_history);
@@ -360,6 +360,7 @@ class OrderController extends CommonController {
 		$vi = 0;
 	    foreach($order_goods_list as $key => $order_goods)
 	    {
+	    	$order_goods['name'] = htmlspecialchars_decode($order_goods['name']);
 			$order_refund_goods = M('eaterplanet_ecommerce_order_refund')->where( array('order_id' =>$order_id,'order_goods_id' => $order_goods['order_goods_id'] ) )->order('ref_id desc')->find();
 
 			if(!empty($order_refund_goods))
@@ -771,9 +772,11 @@ class OrderController extends CommonController {
 
 
 		if($order_pay_after_share==1){
+			$order_pay_after_share_title = D('Home/Front')->get_config_by_name('order_pay_after_share_title');
 			$order_pay_after_share_img = D('Home/Front')->get_config_by_name('order_pay_after_share_img');
-			$order_pay_after_share_img = $order_pay_after_share_img ? tomedia($order_pay_after_share_img) : '';
+			$order_pay_after_share_img = !empty($order_pay_after_share_img) ? tomedia($order_pay_after_share_img) : '';
 			$need_data['share_img'] = empty($order_pay_after_share_img) ? $need_data['order_goods_list'][0]['image']: $order_pay_after_share_img;
+			$need_data['share_title'] = $order_pay_after_share_title;
 		}else{
 			if(empty($need_data['order_goods_list'][0]['goods_share_image']))
 			{
@@ -831,6 +834,26 @@ class OrderController extends CommonController {
 		if(!$result['is_comment_gift']){
 			$open_comment_gift = 0;
 		}
+		//预售信息数组 begin
+		$presale_info = [];
+		$presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $order_id );
+		if( $presale_result['code'] == 0 )
+        {
+            $presale_info = $presale_result['data'];
+        }
+		//end
+
+        //礼品卡订单信息 begin
+        $virtualcard_result = D('Seller/VirtualCard')->getVirtualCardOrderInfO( $order_id );
+		$virtualcard_info = [];
+		if( $virtualcard_result['code'] == 0 && $virtualcard_result['data']['state'] > 0 )
+        {
+            $virtualcard_info = $virtualcard_result['data'];
+        }
+
+        //end
+
+
 
 		echo json_encode(
 			array(
@@ -847,7 +870,9 @@ class OrderController extends CommonController {
 				'is_show_guess_like' => $is_show_guess_like,
 				'user_service_switch' => $user_service_switch,
 				'open_comment_gift' => $open_comment_gift,
-				'common_header_backgroundimage' => $common_header_backgroundimage
+				'common_header_backgroundimage' => $common_header_backgroundimage,
+                'presale_info' => $presale_info,//预售信息
+                'virtualcard_info' => $virtualcard_info,//礼品卡信息
 			)
 		);
 
@@ -1439,7 +1464,13 @@ class OrderController extends CommonController {
 				$val['order_status_id'] == 5;
 			}
 
-
+			$presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $val['order_id'] );
+			if( $presale_result['code'] == 0 )
+            {
+                $val['is_presale'] = 1;
+            }else{
+                $val['is_presale'] = 0;
+            }
 
 			if($val['delivery'] == 'pickup')
 			{
@@ -1453,7 +1484,7 @@ class OrderController extends CommonController {
 
 			if($val['shipping_fare']<=0.001 || $val['delivery'] == 'pickup')
 			{
-				$val['shipping_fare'] = '免运费';
+				$val['shipping_fare'] = 0.00;
 			}else{
 				$val['shipping_fare'] = ''.$val['shipping_fare'];
 			}
@@ -1844,7 +1875,7 @@ class OrderController extends CommonController {
 
 			$result['code'] = 1;
 
-	        $result['msg'] = '非法操作,会员不存在该订单';
+	        $result['msg'] = '非法操作,客户不存在该订单';
 
 	        echo json_encode($result);
 
@@ -1867,6 +1898,8 @@ class OrderController extends CommonController {
 				echo json_encode($result);
 				die();
 			}
+			M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id) )->save( array('state' => 4) );
+			D('Home/LocaltownDelivery')->write_distribution_log( $order_id, 0 , 4 , "用户确认收货" );
 		}
 		D('Home/Frontorder')->receive_order($order_id);
 
@@ -1919,7 +1952,7 @@ class OrderController extends CommonController {
 
 			$result['code'] = 1;
 
-	        $result['msg'] = '非法操作,会员不存在该订单';
+	        $result['msg'] = '非法操作,客户不存在该订单';
 
 	        echo json_encode($result);
 
@@ -2069,7 +2102,7 @@ class OrderController extends CommonController {
 
 	    foreach($order_goods_list as $key => $order_goods)
 	    {
-
+			$order_goods['name'] = htmlspecialchars_decode($order_goods['name']);
 			$order_option_info = M('eaterplanet_ecommerce_order_option')->field('value')->where( array('order_goods_id' => $order_goods['order_goods_id'],'order_id' => $order_id) )->select();
 
 
@@ -2503,7 +2536,7 @@ class OrderController extends CommonController {
 
 	    foreach($order_goods_list as $key => $order_goods)
 	    {
-
+			$order_goods['name'] = htmlspecialchars_decode($order_goods['name']);
 			$order_refund_goods = M('eaterplanet_ecommerce_order_refund')->where( array('order_id' => $order_id, 'order_goods_id' => $order_goods['order_goods_id']  ) )->order('ref_id desc')->find();
 
 
@@ -3261,5 +3294,136 @@ class OrderController extends CommonController {
 			echo json_encode( array('code' => 1, 'msg' => '已被分配，请刷新页面') );
 			die();
 		}
+	}
+
+	public function share_order(){
+		$gpc = I('request.');
+		$order_id = $gpc['order_id'];
+		$order_info = M('eaterplanet_ecommerce_order')->where( array('order_id' => $order_id) )->find();
+		$head_id = $order_info['head_id'];
+		$member_id = $order_info['member_id'];
+		if(empty($order_info)){
+
+			echo json_encode( array('code' => 3, 'msg' => '订单信息不存在') );
+
+			die();
+
+		}
+		$cart= D('Home/Car');
+		$order_array = array();
+		$order_status_id = $order_info['order_status_id'];
+
+		$order_goods_list = M('eaterplanet_ecommerce_order_goods')->where( array('order_id' => $order_id) )->order('order_goods_id asc')->select();
+		$order_goods_array = array();
+		$goods_quantity = 0;
+		foreach($order_goods_list as $k=>$val){
+			$goods_common_info = "";
+			$where='1=1';
+			if( $head_id > 0 )
+			{
+				$where .= " and (g.is_all_sale = 1 or g.id in (SELECT goods_id from ".C('DB_PREFIX')."eaterplanet_community_head_goods where head_id = {$head_id}) ) ";
+			}
+			$sql_pingoods = "select g.*,gc.begin_time,gc.end_time,gc.big_img,gc.is_take_fullreduction,gc.labelname,gc.video,gc.pick_up_type,gc.pick_up_modify,gc.oneday_limit_count, gc.total_limit_count, gc.one_limit_count,gc.goods_start_count  from " .C('DB_PREFIX')."eaterplanet_ecommerce_goods as g,".C('DB_PREFIX')."eaterplanet_ecommerce_good_common as gc where {$where} and g.id=gc.goods_id limit 1 ";
+			$goods_common_info = M()->query($sql_pingoods);
+			$goods_common_info = $goods_common_info[0];
+
+			$tmp_data = array();
+			$order_goods_array[$k]['actId'] = $goods_common_info['id'];
+			$order_goods_array[$k]['spuName'] = htmlspecialchars_decode($goods_common_info['goodsname']);
+			$order_goods_array[$k]['spuCanBuyNum'] = $goods_common_info['total'];
+			$order_goods_array[$k]['spuDescribe'] = $goods_common_info['subtitle'];
+			$order_goods_array[$k]['end_time'] = $goods_common_info['end_time'];
+			$order_goods_array[$k]['soldNum'] = $goods_common_info['seller_count'] + $goods_common_info['sales'];
+			$order_goods_array[$k]['oneday_limit_count'] = $goods_common_info['oneday_limit_count'];
+			$order_goods_array[$k]['total_limit_count'] = $goods_common_info['total_limit_count'];
+			$order_goods_array[$k]['one_limit_count'] = $goods_common_info['one_limit_count'];
+			$order_goods_array[$k]['goods_start_count'] = $goods_common_info['goods_start_count'];
+			$productprice = $goods_common_info['productprice'];
+			$order_goods_array[$k]['marketPrice'] = explode('.', $productprice);
+
+			if( !empty($goods_common_info['big_img']) )
+			{
+				$order_goods_array[$k]['bigImg'] = tomedia($goods_common_info['big_img']);
+			}
+
+			$good_image = D('Home/Pingoods')->get_goods_images($goods_common_info['id']);
+			if( !empty($good_image) )
+			{
+				$order_goods_array[$k]['skuImage'] = tomedia($good_image['image']);
+			}
+			$price_arr = D('Home/Pingoods')->get_goods_price($goods_common_info['id'], $member_id);
+			$price = $price_arr['price'];
+
+			$order_goods_array[$k]['actPrice'] = explode('.', $price);
+
+			//$tmp_data['skuList']= D('Home/Pingoods')->get_goods_options($val['id'], $member_id);
+			$order_goods_array[$k]['skuList']= D('Home/Pingoods')->get_goods_options_carquantity($goods_common_info['id'], $member_id, $head_id ,$token);
+			if( !empty($tmp_data['skuList']) )
+			{
+				$order_goods_array[$k]['car_count'] = 0;
+			}else{
+
+				$car_count = $cart->get_wecart_goods($val['id'],"",$head_id ,$token);
+
+				if( empty($car_count)  )
+				{
+					$order_goods_array[$k]['car_count'] = 0;
+				}else{
+					$order_goods_array[$k]['car_count'] = $car_count;
+				}
+			}
+			$goods_quantity = $goods_quantity + $val['quantity'];
+
+			if($order_status_id != 3 && $order_status_id != 5){//不是未付款和取消订单
+				$order_goods_array[$k]['price'] = $val['price'];
+				$order_goods_array[$k]['oldprice'] = $val['oldprice'];
+			}
+		}
+		if($order_status_id != 3 && $order_status_id != 5) {//不是未付款和取消订单
+			$order_array['goods_quantity'] = $goods_quantity;//商品数量
+			$order_array['goods_count'] = count($order_goods_list);//商品种类数
+			$order_array['order_total'] = $order_info['total'];//订单总金额
+			$order_array['old_order_total'] = $order_info['old_price'];//订单原金额
+			$order_array['save_money'] = $order_info['old_price'] - $order_info['total'];//省了多少钱
+		}
+		//用户信息
+		$member_id = $order_info['member_id'];
+		$member_info = M('eaterplanet_ecommerce_member')->where(array('member_id'=>$member_id))->find();
+		$member_array = [];
+		$member_array['avatar'] = $member_info['avatar'];//用户头像
+		$member_array['username'] = $member_info['username'];//用户昵称
+		//团长信息
+		if($order_info['delivery'] != 'hexiao'){
+			$head_id = $order_info['head_id'];
+			$head_info = M('eaterplanet_community_head')->where(array('id'=>$head_id))->field('id,member_id,community_name,head_name,head_mobile,province_id,city_id,country_id,area_id,address')->find();
+			$head_member_info = M('eaterplanet_ecommerce_member')->where(array('member_id'=>$head_info['member_id']))->find();
+			$head_info['province_name'] = D('Seller/area')->get_area_info($head_info['province_id']);
+			$head_info['city_name'] = D('Seller/area')->get_area_info($head_info['city_id']);
+			$head_info['area_name'] = D('Seller/area')->get_area_info($head_info['area_id']);
+			$head_info['country_name'] = D('Seller/area')->get_area_info($head_info['country_id']);
+			$head_info['fulladdress'] = $head_info['province_name'].$head_info['city_name'].$head_info['area_name'].$head_info['country_name'].$head_info['address'];
+			$head_info['head_images'] = $head_member_info['avatar'];
+			$order_array['head_info'] = $head_info;
+		}else{
+			//门店信息
+			$salesroom_list = D('Home/Salesroom')->get_order_salesroom($order_id,0);
+			$order_array['salesroom_info'] = array();
+			if(!empty($salesroom_list)){
+				$order_array['salesroom_info'] = $salesroom_list[0];
+			}
+		}
+
+
+		$need_data = array();
+		$need_data['orders'] = $order_array;
+		$need_data['order_goods_list'] = $order_goods_array;
+		$need_data['members'] = $member_array;
+
+		echo json_encode(
+				array(
+						'code' => 0,
+						'data' => $need_data
+				)
+		);
 	}
 }

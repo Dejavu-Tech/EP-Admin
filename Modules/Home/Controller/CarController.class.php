@@ -494,7 +494,16 @@ class CarController extends CommonController {
 		}else if( !empty($data['buy_type']) && $data['buy_type'] == 'pintuan' )
 		{
 			$data['buy_type'] = 'pintuan';
-		}else if( !empty($data['buy_type']) &&  $data['buy_type'] == 'integral' )
+		}
+		else if( !empty($data['buy_type']) && $data['buy_type'] == 'presale' )
+        {
+            $data['buy_type'] = 'presale';
+        }
+        else if( !empty($data['buy_type']) && $data['buy_type'] == 'virtualcard' )
+        {
+            $data['buy_type'] = 'virtualcard';
+        }
+		else if( !empty($data['buy_type']) &&  $data['buy_type'] == 'integral' )
 		{
 			$data['buy_type'] = 'integral';
 		}
@@ -509,18 +518,34 @@ class CarController extends CommonController {
 
 		$puis_not_buy =  D('Home/Front')->get_config_by_name('puis_not_buy');
 
-		if( !empty($puis_not_buy) && $puis_not_buy ==1 )
+        $member_info = M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->find();
+
+
+        if( !empty($puis_not_buy) && $puis_not_buy ==1 )
 		{
-			$member_info = M('eaterplanet_ecommerce_member')->field('level_id')->where( array('member_id' => $member_id) )->find();
 
 			if($member_info['level_id'] == 0)
 			{
 				$json['code'] =6;
-				$json['msg']='普通会员不能购买!';
+				$json['msg']='普通客户不能购买!';
 				echo json_encode($json);
 				die();
 			}
 		}
+
+        //1、判断是否开启审核，2、如果开启审核，判断会员状态是否审核
+        $is_user_shenhe = D('Home/Front')->get_config_by_name('is_user_shenhe');
+        //1
+        if( isset($is_user_shenhe) && $is_user_shenhe == 1 )
+        {
+            if( $member_info['is_apply_state'] != 1 )
+            {
+                $json['code'] = 6;
+                $json['msg'] = '会员未审核不能购买';
+                echo json_encode( $json );
+                die();
+            }
+        }
 
 
 		$is_just_addcar = empty($data['is_just_addcar']) ? 0: 1;
@@ -607,7 +632,7 @@ class CarController extends CommonController {
 				$json['code'] =7;
 
 
-				$json['msg']='付费会员专享，普通会员不能购买';
+				$json['msg']='付费会员专享，普通客户不能购买';
 				echo json_encode($json);
 				die();
 			}
@@ -625,6 +650,18 @@ class CarController extends CommonController {
 				$json['msg']='新人专享!';
 				echo json_encode($json);
 				die();
+			}
+
+			$is_new_buy_limit = D('Home/Front')->get_config_by_name('is_new_buy_limit');
+			$new_buy_limit_num = D('Home/Front')->get_config_by_name('new_buy_limit_num');
+			if(!empty($is_new_buy_limit) && $is_new_buy_limit == 1){//新人专享限制
+				$goods_cate_count = D('Home/Car')->get_new_goods_count($token,$goods_id,$data['sku_str']);
+				if($goods_cate_count >= $new_buy_limit_num){
+					$json['code'] = 6;
+					$json['msg']='超出新人专享限制!';
+					echo json_encode($json);
+					die();
+				}
 			}
 		}
 
@@ -715,7 +752,16 @@ class CarController extends CommonController {
 			else if( !empty($data['buy_type']) && $data['buy_type'] == 'pintuan' )
 			{
 				$car_prefix = 'pintuancart.';
-			}else if( !empty($data['buy_type']) && $data['buy_type'] == 'integral' ){
+			}
+            else if( !empty($data['buy_type']) && $data['buy_type'] == 'presale' )
+            {
+                $car_prefix = 'presalecart.';
+            }
+            else if( !empty($data['buy_type']) && $data['buy_type'] == 'virtualcard' )
+            {
+                $car_prefix = 'virtualcardcart.';
+            }
+			else if( !empty($data['buy_type']) && $data['buy_type'] == 'integral' ){
 				$car_prefix = 'integralcart.';
 			}
 
@@ -868,7 +914,7 @@ class CarController extends CommonController {
 			}
 
 			$can_buy_all_count =  D('Home/Front')->check_goods_user_canbuy_all_count($member_id, $goods_id);
-            if($data['buy_type'] == 'pintuan' || $data['buy_type'] == 'pindan'){
+            if($data['buy_type'] == 'pintuan' || $data['buy_type'] == 'pindan' || $data['buy_type'] == 'presale'){
                 $cart_goods_all_quantity = 0;
             }
 			//历史限购判断
@@ -1022,6 +1068,26 @@ class CarController extends CommonController {
 		        $cart->addwecar($token,$goods_id,$format_data_array,$data['sku_str'],$data['community_id'],$car_prefix);
 				$total=0;
 			}
+            else if( !empty($data['buy_type']) && $data['buy_type'] == 'presale' )
+            {
+                //清理预售的商品
+                $cart->removeActivityAllcar($token, 'presalecart.');
+                $format_data_array['is_just_addcar'] = 0;
+                $format_data_array['singledel'] = 1;
+
+                $cart->addwecar($token,$goods_id,$format_data_array,$data['sku_str'],$data['community_id'],$car_prefix);
+                $total=0;
+            }
+            else if( !empty($data['buy_type']) && $data['buy_type'] == 'virtualcard' )
+            {
+                //清理预售的商品
+                $cart->removeActivityAllcar($token, 'virtualcardcart.');
+                $format_data_array['is_just_addcar'] = 0;
+                $format_data_array['singledel'] = 1;
+
+                $cart->addwecar($token,$goods_id,$format_data_array,$data['sku_str'],$data['community_id'],$car_prefix);
+                $total=0;
+            }
 			else if( !empty($data['buy_type']) && $data['buy_type'] == 'integral' )
 			{
 
@@ -1235,7 +1301,7 @@ class CarController extends CommonController {
 		$vipcard_save_money = 0;
 
 		$level_save_money = 0;
-
+		//$max_can_orderbuy_money = 0 ;
 		foreach($seller_goodss_mult as $key => $seller_goodss_tp)
 		{
 
@@ -1277,7 +1343,7 @@ class CarController extends CommonController {
 
 					$tp_val['imgurl'] = $d_goods['image'];
 					$tp_val['edit'] = 'inline';
-					$tp_val['title'] = $d_goods['name'];
+					$tp_val['title'] = htmlspecialchars_decode($d_goods['name']);
 					$tp_val['finish'] = 'none';
 					$tp_val['description'] = 'description';
 
@@ -1308,8 +1374,8 @@ class CarController extends CommonController {
 					$tp_val['currntprice'] = $d_goods['price'];
 					$tp_val['card_price'] = $d_goods['card_price'];
 
-					$tp_val['levelprice'] = $d_goods['levelprice'];// 会员等级价格
-					$tp_val['is_mb_level_buy'] = $d_goods['is_mb_level_buy'];//是否可以会员等级价格购买
+					$tp_val['levelprice'] = $d_goods['levelprice'];// 客户等级价格
+					$tp_val['is_mb_level_buy'] = $d_goods['is_mb_level_buy'];//是否可以客户等级价格购买
 
 					$tp_val['is_take_vipcard'] = $d_goods['is_take_vipcard'];
 					$tp_val['price'] = $d_goods['shop_price'];
@@ -1395,6 +1461,10 @@ class CarController extends CommonController {
 						$storename = $supply_info_data['storename'];
 					}
 					$localtown_fixed_list['localtown_moneytype_fixed_deliverymoney'] = $localtown_moneytype_fixed_deliverymoney;
+					//if($localtown_moneytype_fixed_deliverymoney > $max_can_orderbuy_money){
+						//获取起送最大下单金额限制
+						//$max_can_orderbuy_money = $localtown_moneytype_fixed_deliverymoney;
+					//}
 					$localtown_fixed_list['localtown_moneytype_fixed_freemoney'] = $localtown_moneytype_fixed_freemoney;
 					$localtown_fixed_list['store_name'] = $storename;
 				}else if($key == 2){
@@ -1539,6 +1609,9 @@ class CarController extends CommonController {
 		$is_comunity_rest = D('Seller/Communityhead')->is_community_rest($community_id);
 		$open_man_orderbuy = D('Home/Front')->get_config_by_name('open_man_orderbuy');
 		$man_orderbuy_money = D('Home/Front')->get_config_by_name('man_orderbuy_money');
+		//if($man_orderbuy_money > $max_can_orderbuy_money){
+			//$max_can_orderbuy_money = $man_orderbuy_money;
+		//}
 		$is_show_guess_like = D('Home/Front')->get_config_by_name('is_show_guess_like');
 
 
@@ -1582,8 +1655,14 @@ class CarController extends CommonController {
 		$shopcar_tab_all_name = D('Home/Front')->get_config_by_name('shopcar_tab_all_name');
 		$shopcar_tab_express_name = D('Home/Front')->get_config_by_name('shopcar_tab_express_name');
 
-		$full_list = D('Home/Front')->get_fullreduction();
-        $is_open_fullreduction = D('Home/Front')->get_config_by_name('is_open_fullreduction');
+
+		$is_open_fullreduction = D('Home/Front')->get_config_by_name('is_open_fullreduction');
+        if($is_open_fullreduction){
+        	$full_list = D('Home/Front')->get_fullreduction();
+        }else{
+        	$full_list[0]['full_money']= 0 ;
+        	$full_list[0]['full_reducemoney']= 0 ;
+        }
 
         //同城配送信息
         //配送费类型:0、固定金额，1、按距离收取
@@ -1604,12 +1683,13 @@ class CarController extends CommonController {
 		$need_data['is_comunity_rest'] = $is_comunity_rest;
 		$need_data['open_man_orderbuy'] = $open_man_orderbuy;
 		$need_data['man_orderbuy_money'] = $man_orderbuy_money;
+		//$need_data['max_can_orderbuy_money'] = $max_can_orderbuy_money;
 		$need_data['is_show_guess_like'] = $is_show_guess_like;
 		$need_data['man_free_tuanzshipping'] = $man_free_tuanzshipping;
 		$need_data['delivery_tuanz_money'] = $delivery_tuanz_money;
 
-		$need_data['is_member_level_buy'] = $is_member_level_buy;//当前会员折扣 购买，1是，0否
-		$need_data['level_save_money'] = $level_save_money;//会员折扣省的钱
+		$need_data['is_member_level_buy'] = $is_member_level_buy;//当前客户折扣 购买，1是，0否
+		$need_data['level_save_money'] = $level_save_money;//客户折扣省的钱
 
 		$need_data['is_vip_card_member'] = $is_vip_card_member;//当前会员是否是 会员卡会员 0 不是，1是，2已过期
 		$need_data['vipcard_save_money'] = $vipcard_save_money;//vip能节约的金额
@@ -2194,7 +2274,12 @@ class CarController extends CommonController {
 				$is_member_level_buy = 1;
 			}
 		}
-
+        //预售不开启会员卡
+		if($buy_type == 'pesale')
+        {
+           $is_member_level_buy = 0;
+          $is_vip_card_member = 0;
+        }
 
 
 	  if( empty($member_id) )
@@ -2301,6 +2386,7 @@ class CarController extends CommonController {
 				$supply_id = 0;
 			}
 		}
+		$val['name'] = htmlspecialchars_decode($val['name']);
 		$seller_goodss[ $supply_id ]['goods'][$key] = $val;
 	}
 
@@ -2369,12 +2455,15 @@ class CarController extends CommonController {
 	$store_buy_total_money = 0;
 
 	$pin_id = 0;
+	$presale_goods_id = 0;//预售商品id
+    $presale_goods_total = 0;//预售商品价格
 
 	$is_zero_buy = 0;
 	$vipcard_save_money = 0;
 	$level_save_money = 0;
 
-
+	$today_time = time();
+	$arr = array('天','一','二','三','四','五','六');
 	//计算优惠券
 	foreach($seller_goodss as $store_id => $val)
 	{
@@ -2392,6 +2481,7 @@ class CarController extends CommonController {
 
 		foreach($val['goods'] as $kk =>$d_goods)
 		{
+		    //预售不参与会员卡
 			if($d_goods['is_take_vipcard'] == 1)
 			{
 				$vipcard_save_money += $d_goods['total'] - $d_goods['card_total'];
@@ -2452,12 +2542,17 @@ class CarController extends CommonController {
 				$is_zero_buy = $pin_model->check_goods_iszero_opentuan( $d_goods['goods_id'] );
 			}
 
+			if( $buy_type == 'presale' )
+            {
+                $presale_goods_id = $d_goods['goods_id'];
+                $presale_goods_total = $seller_total_fee;
+            }
 			$tp_goods_info = M('eaterplanet_ecommerce_goods')->field('type')->where( array('id' => $d_goods['goods_id']) )->find();
 
 			$vch_goods_ids[$d_goods['goods_id']] = $vch_goods_ids[$d_goods['goods_id']] + $d_goods['total'];
 			//$is_no_quan = true;
-
-			if($tp_goods_info['type'] == 'integral')
+			//预售不开启优惠券
+			if($tp_goods_info['type'] == 'integral' || $tp_goods_info['type'] == 'presale' )
 			{
 				$is_no_quan = true;
 			}
@@ -2489,20 +2584,76 @@ class CarController extends CommonController {
 			**/
 
 			$total_trans_free  += $d_goods[$kk]['trans_free'];
+			//自提时间
+			$goods_info = M('eaterplanet_ecommerce_good_common')->field('pick_up_type,pick_up_modify')->where( array('goods_id' => $d_goods['goods_id']) )->find();
+			$pick_up_type = -1;
+			if($pick_up_type == -1 || $goods_info['pick_up_type'] > $pick_up_type)
+			{
+				$pick_up_type = $goods_info['pick_up_type'];
+
+				if($pick_up_type == 0)
+				{
+					$pick_up_time = date('m-d', $today_time);
+					$pick_up_weekday = '周'.$arr[date('w',$today_time)];
+				}else if( $pick_up_type == 1 ){
+					$pick_up_time = date('m-d', $today_time+86400);
+					$pick_up_weekday = '周'.$arr[date('w',$today_time+86400)];
+				}else if( $pick_up_type == 2 )
+				{
+					$pick_up_time = date('m-d', $today_time+86400*2);
+					$pick_up_weekday = '周'.$arr[date('w',$today_time+86400*2)];
+				}else if($pick_up_type == 3)
+				{
+					$pick_up_time = $goods_info['pick_up_modify'];
+				}
+			}
+			$d_goods['pick_up_type'] = $pick_up_type;
+			$d_goods['pick_up_time'] = $pick_up_time;
+			$d_goods['pick_up_weekday'] = $pick_up_weekday;
+
 			$val['goods'][$kk] = $d_goods;
 
 		}
 
+		$val['reduce_money'] = 0;
+
+		//pindan （拼团商品单独购买）   pintuan （拼团）
+		//预售关闭满减
+		if($buy_type == 'pindan' || $buy_type == 'pintuan' || $buy_type == 'integral' || $buy_type == 'presale')
+		{
+			$is_open_fullreduction = 0;
+		}
+
+		//原来满级计算man_total_free
+		/*if($is_open_fullreduction == 1 && $man_total_free >= $full_money )
+		{
+			$val['reduce_money'] = $full_reducemoney;
+			$reduce_money = $full_reducemoney;
+		}else if($is_open_fullreduction == 1 && $man_total_free < $full_money)
+		{
+			$cha_reduce_money = $full_money - $man_total_free;
+		}*/
+        /**
+         * 新满减计算
+         */
+
+		if($is_open_fullreduction == 1)
+		{
+		    $reduce_result = D('Home/Front')->get_reduce_money($man_total_free);
+
+		    $val['reduce_money'] = $reduce_result['reduce_money'];
+		    $reduce_money = $reduce_result['reduce_money'];
+		    $cha_reduce_money = $reduce_result['cha_reduce_money'];
+		}
+
 		$chose_vouche = array();
-
-
-
 
 		if(!$is_no_quan)
 		{
 
 			$vouche_list = $quan_model->get_user_canpay_voucher($member_id,$store_id,$seller_total_fee,'',$vch_goods_ids);
 
+			$vouche_list = $quan_model->get_voucher_amout_bygoods($vouche_list,$val['goods'],$reduce_money);
 			//var_dump(  $vouche_list );
 			//die();
 
@@ -2515,9 +2666,11 @@ class CarController extends CommonController {
 					$show_voucher = 1;
 					reset($ling_vouche_list);
 					$chose_vouche = current($ling_vouche_list);
-					$voucher_price += $chose_vouche['credit'];
+					//$voucher_price += $chose_vouche['credit'];
+					$voucher_price += $chose_vouche['can_vouche_amount'];
 
-					$seller_total_fee = round( $seller_total_fee - $chose_vouche['credit'], 2);
+					//$seller_total_fee = round( $seller_total_fee - $chose_vouche['credit'], 2);
+					$seller_total_fee = round( $seller_total_fee - $chose_vouche['can_vouche_amount'], 2);
 				}
 
 			}else if( !empty($vouche_list) &&  !empty($use_quan_arr) )
@@ -2529,8 +2682,11 @@ class CarController extends CommonController {
 					{
 						$show_voucher = 1;
 						$chose_vouche = $tmp_voucher;
-						$seller_total_fee = round( $seller_total_fee - $chose_vouche['credit'], 2);
-						$voucher_price += $chose_vouche['credit'];
+						//$seller_total_fee = round( $seller_total_fee - $chose_vouche['credit'], 2);
+						//$voucher_price += $chose_vouche['credit'];
+						$seller_total_fee = round( $seller_total_fee - $chose_vouche['can_vouche_amount'], 2);
+						$voucher_price += $chose_vouche['can_vouche_amount'];
+
 						break;
 					}
 				}
@@ -2552,36 +2708,6 @@ class CarController extends CommonController {
 		}
 
 		$val['trans_free'] = $total_trans_free;
-
-		$val['reduce_money'] = 0;
-
-		//pindan （拼团商品单独购买）   pintuan （拼团）
-
-		if($buy_type == 'pindan' || $buy_type == 'pintuan' || $buy_type == 'integral')
-		{
-			$is_open_fullreduction = 0;
-		}
-
-		//原来满级计算man_total_free
-		/*if($is_open_fullreduction == 1 && $man_total_free >= $full_money )
-		{
-			$val['reduce_money'] = $full_reducemoney;
-			$reduce_money = $full_reducemoney;
-		}else if($is_open_fullreduction == 1 && $man_total_free < $full_money)
-		{
-			$cha_reduce_money = $full_money - $man_total_free;
-		}*/
-        /**
-         * 新满减计算
-         */
-
-        if($is_open_fullreduction == 1)
-        {
-            $reduce_result = D('Home/Front')->get_reduce_money($man_total_free);
-            $val['reduce_money'] = $reduce_result['reduce_money'];
-            $reduce_money = $reduce_result['reduce_money'];
-            $cha_reduce_money = $reduce_result['cha_reduce_money'];
-        }
 
 		$val['total_weight'] = $total_weight;
 		$val['total_quantity'] = $total_quantity;
@@ -2627,14 +2753,24 @@ class CarController extends CommonController {
 
 
 	if( empty($man_free_tuanzshipping) || $buy_type == 'integral')
-	{
-		$man_free_tuanzshipping = 0;
-	}
-
+    {
+        $man_free_tuanzshipping = 0;
+    }
+    //关闭团长配送费 免  预售
+    if( empty($man_free_tuanzshipping) || $buy_type == 'presale' )
+    {
+        $man_free_tuanzshipping = 0;
+    }
 	if( empty($man_free_shipping) || $buy_type == 'integral' )
 	{
 		$man_free_shipping = 0;
 	}
+        //关闭快递配送费 免  预售
+	if( empty($man_free_shipping) || $buy_type == 'presale' )
+	{
+		$man_free_shipping = 0;
+	}
+
 
 	//if( $buy_type == 'dan' )
 	if( $buy_type == 'dan'  || $buy_type == 'soitaire' || ($pintuan_model_buy == 1 && $buy_type != 'dan' && $buy_type != 'integral'  ) )
@@ -2789,6 +2925,11 @@ class CarController extends CommonController {
 			//$trans_free_toal = 0;
 		}
 	}
+	//礼品卡配送费0
+	if( $buy_type == 'virtualcard' )
+    {
+        $trans_free_toal = 0;
+    }
 	//---结束结算运费
 
 
@@ -2970,6 +3111,9 @@ class CarController extends CommonController {
 		//寻找上一个订单的自提电话 自提姓名
 
 		$last_order_info = M('eaterplanet_ecommerce_order')->where( array('member_id' => $member_id,'delivery' => 'pickup') )->order('order_id desc')->find();
+		if(empty($last_order_info)){
+			$last_order_info = M('eaterplanet_ecommerce_order')->where( array('member_id' => $member_id,'delivery' => 'hexiao') )->order('order_id desc')->find();
+		}
 		if(!empty($last_order_info))
 		{
 			$pick_up_name = $last_order_info['shipping_name'];
@@ -3034,6 +3178,35 @@ class CarController extends CommonController {
 
 	//open_score_buy_score $shop_limit_buy_distance = load_model_class('front')->get_config_by_name('shop_limit_buy_distance');
 
+
+	/**
+
+	$delivery_ziti_name = D('Home/Front')->get_config_by_name('delivery_ziti_name');
+	$delivery_tuanzshipping_name = D('Home/Front')->get_config_by_name('delivery_tuanzshipping_name');
+	$delivery_diy_sort = D('Home/Front')->get_config_by_name('delivery_diy_sort');
+
+	if(empty($delivery_diy_sort) || !isset($delivery_diy_sort)) $delivery_diy_sort = '0,1,2';
+
+
+	if( empty($tuan_send_address_info) )
+	{
+		$tuan_send_address_info = array();
+	}
+
+	//判断是否预售，给出预售的信息 begin todo
+    $presale_info = [];
+    if( $buy_type == 'presale' )
+    {
+        // $presale_goods_id
+        $presale_result = D('Home/PresaleGoods')->getCheckOutPresaleGoodsInfo( $presale_goods_id , $presale_goods_total );
+
+        if( $presale_result['code'] == 0 )
+        {
+            $presale_info = $presale_result['data'];
+        }
+    }
+	//end
+**/
 	$open_score_buy_score =  D('Home/Front')->get_config_by_name('open_score_buy_score');
 
 	if( empty($open_score_buy_score) || $buy_type == 'integral' )
@@ -3092,6 +3265,12 @@ class CarController extends CommonController {
 					$score_for_money = round($bue_use_score/$score_forbuy_money,2);
 				}
 			}
+
+
+			//预售
+			//if($buy_type == 'presale'){
+			//	$sum_deduction_money =  $goods[0]["quantity"] * $presale_info['deduction_money'] ;
+			//}
 		}
 	}
 	//score_forbuy_money score
@@ -3108,13 +3287,27 @@ class CarController extends CommonController {
 		$tuan_send_address_info = array();
 	}
 
+	//判断是否预售，给出预售的信息 begin todo
+    $presale_info = [];
+    if( $buy_type == 'presale' )
+    {
+        // $presale_goods_id
+        $presale_result = D('Home/PresaleGoods')->getCheckOutPresaleGoodsInfo( $presale_goods_id , $presale_goods_total );
+
+        if( $presale_result['code'] == 0 )
+        {
+            $presale_info = $presale_result['data'];
+        }
+    }
+	//end
+
 	$need_data = array();
 	$need_data['code'] = 1;
 
 	$need_data['open_score_buy_score'] = $open_score_buy_score;//1开启积分抵扣
-	$need_data['score'] = $member_info['score'];//会员持有的积分
-	$need_data['score_for_money'] = $score_for_money;//会员能抵扣的金额
-	$need_data['bue_use_score'] = $bue_use_score;//会员能抵扣的积分数
+	$need_data['score'] = $member_info['score'];//客户持有的积分
+	$need_data['score_for_money'] = $score_for_money;//客户能抵扣的金额
+	$need_data['bue_use_score'] = $bue_use_score;//客户能抵扣的积分数
 
 
 	$need_data['delivery_type_ziti'] = $delivery_type_ziti;
@@ -3128,6 +3321,8 @@ class CarController extends CommonController {
 	$need_data['delivery_ziti_name'] = $delivery_ziti_name;
 	$need_data['delivery_tuanzshipping_name'] = $delivery_tuanzshipping_name;
 	$need_data['delivery_diy_sort'] = $delivery_diy_sort;
+
+	$need_data['presale_info'] = $presale_info;//预售信息
 
 	$seller_goodss_keys = array_keys($seller_goodss);
 
@@ -3271,7 +3466,7 @@ class CarController extends CommonController {
 
 	//判断是否可以余额支付
 
-	//暂时关闭 会员余额功能
+	//暂时关闭 客户余额功能
 	/**
 	$is_yue_open_info =	M('config')->where( array('name' => 'is_yue_open') )->find();
 	$is_yue_open =  $is_yue_open_info['value'];
@@ -3290,7 +3485,7 @@ class CarController extends CommonController {
 
 	$need_data['can_yupay'] = 0;
 
-	//暂时关闭 会员余额功能
+	//暂时关闭 客户余额功能
 
 	if($is_yue_open == 1 && $need_data['total_free'] >=0 && $member_info['account_money'] >= $need_data['total_free'])
 	{
@@ -3435,6 +3630,9 @@ class CarController extends CommonController {
 	$need_data['localtown_moneytype_fixed_freemoney'] = $localtown_moneytype_fixed_freemoney;
 	$need_data['localtown_makeup_delivery_money'] = $localtown_makeup_delivery_money;
 
+	$need_data['order_lou_meng_hao'] = D('Home/Front')->get_config_by_name('order_lou_meng_hao');
+	$need_data['order_lou_meng_hao_placeholder'] = D('Home/Front')->get_config_by_name('order_lou_meng_hao_placeholder');
+
 	echo json_encode($need_data);
 	die();
 }
@@ -3442,6 +3640,8 @@ class CarController extends CommonController {
 public function sub_order()
 {
 	$gpc = I('request.');
+
+    $buy_type = isset($gpc['buy_type']) ? $gpc['buy_type'] : 'dan';
 
 	$token = $gpc['token'];
 
@@ -3485,6 +3685,11 @@ public function sub_order()
 		}
 	}
 
+	if($buy_type == 'presale')
+    {
+        $is_vip_card_member = 0;
+        $is_member_level_buy = 0;
+    }
 
 	//use_score = 1
 	$use_score = isset($gpc['use_score']) ? intval($gpc['use_score']) : 0;
@@ -3497,11 +3702,11 @@ public function sub_order()
 
 		if($member_info['level_id'] == 0)
 		{
-			echo json_encode( array('code' => 2, 'msg' => '普通会员不能购买') );
+			echo json_encode( array('code' => 2, 'msg' => '普通客户不能购买') );
 			die();
 		}
 	}
-
+		//$buy_type == 'presale'
 	$data_s  = array();
 	$data_s['pay_method'] = $gpc['wxpay'];
 	$data_s['buy_type'] = isset($gpc['buy_type']) ? $gpc['buy_type'] : 'dan';
@@ -3530,8 +3735,15 @@ public function sub_order()
 
 		//$data_s['pick_up_id']
 	}
+	//礼品卡不用配送地址begin
+	if( $data_s['buy_type'] == 'virtualcard' )
+    {
+        $data_s['dispatching'] = 'express';
+        $data_s['address_id'] = 0;
+    }
+    //end
 
-	if( $data_s['buy_type'] == 'dan' || $data_s['buy_type'] == 'soitaire' || ($pintuan_model_buy == 1 && $data_s['buy_type'] != 'dan' && $data_s['buy_type'] != 'integral'  ) )
+	if( $data_s['buy_type'] == 'dan' || $data_s['buy_type'] == 'soitaire' || $data_s['buy_type'] == 'presale' || ($pintuan_model_buy == 1 && $data_s['buy_type'] != 'dan' && $data_s['buy_type'] != 'integral'  ) )
 	{
 		D('Seller/Community')->in_community_history($member_id,$data_s['pick_up_id']);
 	}
@@ -3707,7 +3919,7 @@ public function sub_order()
 
 	//收货人
 	$addr_param = array();
-	$addr_param[':uniacid'] = $_W['uniacid'];
+
 	$addr_param[':member_id'] = $member_id;
 
 	//$addr_sql = "select * from ".tablename('eaterplanet_ecommerce_address')." where uniacid=:uniacid and member_id=:member_id order by  is_default desc,address_id desc limit 1";
@@ -3717,6 +3929,15 @@ public function sub_order()
 
 	/** 计算每个订单的优惠券占比begin */
 	$zanbi_total_money = 0;
+
+	//是否需要校验ticket 交易组件
+    $scene = $gpc['scene'];
+    $is_need_scene_check = 0;
+
+    if(!empty($scene))
+    {
+        $is_need_scene_check = D('Seller/MpModifyTradeComponts')->sceneCheck( $scene );
+    }
 
 	foreach($goodss as $key => $val) {
 		//单商户先屏蔽
@@ -3780,7 +4001,16 @@ public function sub_order()
 			$zanbi_total_money += $val['total'];
 		}
 
-
+		//检测是否场景符合begin
+		if( $is_need_scene_check == 1 )
+        {
+            if( $val['isTradeComponts'] == 0 )
+            {
+                echo json_encode( array('code' => 2,'msg' => $val['name'].':未提交小程序交易组件' ) );
+                die();
+            }
+        }
+        //检测是否场景符合end
 	}
 
 	//....看看有没有满多少才能下单begin
@@ -3901,6 +4131,13 @@ public function sub_order()
 		$man_free_shipping = 0;
 		$is_open_fullreduction = 0;
 	}
+	//预售不参与满减
+    if($buy_type == 'presale')
+    {
+        $man_free_tuanzshipping = 0;
+        $man_free_shipping = 0;
+        $is_open_fullreduction = 0;
+    }
 
 	$is_moban = false;
 
@@ -3922,8 +4159,8 @@ public function sub_order()
 		$open_score_buy_score = 0;
 	}
 
-
-	if($open_score_buy_score == 1 && $use_score == 1 && $payment['score'] > 0 )
+	//预售不参与积分抵扣
+	if($open_score_buy_score == 1 && $use_score == 1 && $payment['score'] > 0 && $buy_type != 'presale')
 	{
 		//计算能兑换多少钱
 		$score_forbuy_money = D('Home/Front')->get_config_by_name('score_forbuy_money');
@@ -4274,7 +4511,7 @@ public function sub_order()
 				$good['is_mb_level_buy'] == 0;
 			}
 
-            $localtown_superposition_pickingmoney = D('Home/Front')->get_config_by_name('localtown_delivery_packingmoney');
+            $localtown_superposition_pickingmoney = 0;
             $localtown_superposition_pickingmoney = isset($localtown_superposition_pickingmoney) ? $localtown_superposition_pickingmoney : 0;
 
             $gd_packing_fare = 0;
@@ -4434,6 +4671,12 @@ public function sub_order()
 			$is_pin = 0;
 		}
 
+        //礼品卡配送费0
+        if( $buy_type == 'virtualcard' )
+        {
+            $trans_free_toal = 0;
+        }
+
 		$data['shipping_fare'] = floatval($trans_free_toal);
 
 		if($is_free_shipping_fare == 1)
@@ -4499,8 +4742,14 @@ public function sub_order()
 			**/
 
 			$voucher_info = M('eaterplanet_ecommerce_coupon_list')->where( array('id' => $data['voucher_id']) )->find();
+			//检查优惠券指定商品或指定商品分类 优惠金额 begin
+			$voucher_list[0] = $voucher_info;
 
-			$data['voucher_credit'] = $voucher_info['credit'];
+			$voucher_list = D('Home/Voucher')->get_voucher_amout_bygoods($voucher_list,$goods_data, 0);
+
+			$voucher_info = $voucher_list[0];
+			//检查优惠券指定商品或指定商品分类 优惠金额 end
+			$data['voucher_credit'] = $voucher_info['can_vouche_amount'];
 
 			$bili = 1;
 
@@ -4542,7 +4791,7 @@ public function sub_order()
 
 				//var_dump($del_money, $score_for_money);die();
 
-				//score_for_money 会员能抵扣的最大金额
+				//score_for_money 客户能抵扣的最大金额
 
 
 
@@ -4565,7 +4814,7 @@ public function sub_order()
 				}
 				//$score_buy_money = 0;
 				$data['score_for_money'] = $score_for_money;
-				//TODO...扣除会员积分，将积分分拆入每个商品订单，写入日志
+				//TODO...扣除客户积分，将积分分拆入每个商品订单，写入日志
 
 				//var_dump($data['score_for_money'], $max_dikou_money);die();
 			}
@@ -4600,7 +4849,7 @@ public function sub_order()
 			$data['total'] = $order_total;
 
 		}
-
+        $data['buy_type'] = $buy_type;//判断预售使用
 
 
 		$oid=  D('Home/Frontorder')->addOrder($data);// D('Order')->addOrder($data);
@@ -4665,6 +4914,18 @@ public function sub_order()
 		}
 
 
+        if( $buy_type == 'presale' )
+        {
+            //如果是预售，此处支付的就是定金
+            $presale_order_info =  M('eaterplanet_ecommerce_order_presale')->where(['order_id' => $oid ])->find();
+            if( $presale_order_info['presale_type'] == 1 )
+            {
+                M('eaterplanet_ecommerce_order_presale')->where( ['id' => $presale_order_info['id'] ] )->save( ['presale_ding_money' => $pay_total ] );
+            }else{
+                $pay_total = $presale_order_info['presale_ding_money'];
+            }
+        }
+
 		$pay_total = round($pay_total, 2);
 
 		$order_relate_data = array();
@@ -4709,199 +4970,8 @@ public function sub_order()
 
 		if( $order['type'] == 'ignore' || $pay_total<=0 || ($is_yue_open == 1 && $ck_yupay == 1 && $member_info['account_money'] >= $pay_total) )
 		{
-			/****
-			//暂时关闭
-
-
-			//检测是否需要扣除积分
-			if($del_integral> 0 && $is_integral == 1)
-			{
-				$integral_model->charge_member_score( $member_id, $del_integral,'out', 'orderbuy', $oid);
-			}
-
-			***/
-
-			if($ck_yupay == 1 && $pay_total >0 && $order['type'] != 'ignore')
-			{
-				//开始余额支付
-				$member_charge_flow_data = array();
-				$member_charge_flow_data['formid'] = '';
-				$member_charge_flow_data['member_id'] = $member_id;
-				$member_charge_flow_data['trans_id'] = $oid;
-				$member_charge_flow_data['money'] = $pay_total;
-				$member_charge_flow_data['state'] = 3;
-				$member_charge_flow_data['charge_time'] = time();
-				$member_charge_flow_data['remark'] = '会员前台余额支付';
-				$member_charge_flow_data['add_time'] = time();
-
-				M('eaterplanet_ecommerce_member_charge_flow')->add($member_charge_flow_data);
-
-				$charge_flow_id = M('eaterplanet_ecommerce_member_charge_flow')->getLastInsID();
-
-
-
-				//开始处理扣钱
-				M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('account_money',-$pay_total);
-
-				$mb_info = M('eaterplanet_ecommerce_member')->field('account_money')->where( array('member_id' =>$member_id ) )->find();
-
-				M('eaterplanet_ecommerce_member_charge_flow')->where( array('id' => $charge_flow_id ) )->save( array('operate_end_yuer' => $mb_info['account_money']) );
-
-			}
-
-
-			//eaterplanet_ecommerce_order_all can_yupay
-
-			//开始处理订单状态
-			//$order_all = M('order_all')->where( array('id' => $order_all_id) )->find();
-
-			$order_all = M('eaterplanet_ecommerce_order_all')->where( array('id' => $order_all_id) )->find();
-
-
-			if( !empty($order)  )
-			{
-				//支付完成
-				$o = array();
-				$o['order_status_id'] =  $order['is_pin'] == 1 ? 2:1;
-				$o['paytime']=time();
-				$o['transaction_id'] = $transaction_id;
-
-				M('eaterplanet_ecommerce_order_all')->where( array('id' => $out_trade_no) )->save($o);
-
-				// ims_
-
-				$order_relate_list = M('eaterplanet_ecommerce_order_relate')->where( array('order_all_id' => $order_all['id']) )->select();
-
-				foreach($order_relate_list as $order_relate)
-				{
-					$order = M('eaterplanet_ecommerce_order')->where( array('order_id' => $order_relate['order_id'] ) )->find();
-
-					if( $order && $order['order_status_id'] == 3)
-					{
-						$o = array();
-						$o['payment_code'] = 'yuer';
-						$o['order_id']=$order['order_id'];
-						$o['order_status_id'] =  $order['is_pin'] == 1 ? 2:1;
-						$o['date_modified']=time();
-						$o['pay_time']=time();
-						$o['transaction_id'] = $is_integral ==1? '积分兑换':'余额支付';
-
-						if($order['delivery'] == 'hexiao'){//核销订单 支付完成状态改成  已发货待收货
-							$o['order_status_id'] =  4;
-						}
-
-						M('eaterplanet_ecommerce_order')->where( array('order_id' => $order['order_id'] ) )->save($o);
-
-
-						//暂时屏蔽
-
-						$kucun_method = D('Home/Front')->get_config_by_name('kucun_method');
-
-						if( empty($kucun_method) )
-						{
-							$kucun_method = 0;
-						}
-
-						if($kucun_method == 1)
-						{//支付完减库存，增加销量
-
-							$order_goods_list = M('eaterplanet_ecommerce_order_goods')->where( array('order_id' => $order['order_id']) )->select();
-
-							foreach($order_goods_list as $order_goods)
-							{
-								D('Home/Pingoods')->del_goods_mult_option_quantity($order['order_id'],$order_goods['rela_goodsoption_valueid'],$order_goods['goods_id'],$order_goods['quantity'],1);
-
-							}
-						}
-
-						$oh = array();
-						$oh['order_id']=$order['order_id'];
-						$oh['order_status_id']= $order['is_pin'] == 1 ? 2:1;
-						$oh['comment']='买家已付款';
-						$oh['date_added']=time();
-						$oh['notify']=1;
-
-						if($order['delivery'] == 'hexiao'){//核销订单 支付完成状态改成  已发货待收货
-							$oh['order_status_id'] =  4;
-						}
-
-						M('eaterplanet_ecommerce_order_history')->add($oh);
-
-						//订单自动配送
-						D('Home/Order')->order_auto_delivery($order);
-
-						//发送购买通知
-						//TODO 先屏蔽，等待调试这个消息
-						D('Home/Weixinnotify')->orderBuy($order['order_id'], true);
-						if($order['is_pin'] == 1)
-						{
-
-							$pin_order = M('eaterplanet_ecommerce_pin_order')->where( array('order_id' =>$order['order_id'] ) )->find();
-
-							D('Home/Pin')->insertNotifyOrder($order['order_id']);
-
-
-
-							$pin_info = M('eaterplanet_ecommerce_pin')->where(array('pin_id' => $pin_order['pin_id'])  )->find();//加锁查询
-
-							$pin_buy_count = D('Home/Pin')->get_tuan_buy_count($pin_order['pin_id']);
-
-							$res = $is_can_add = D('Seller/Redisorder')->add_pintuan_user( $pin_order['pin_id'] );
-
-							if( $pin_info['state']  == 1 && !$res )
-							{
-							    $order_goods_info = M('eaterplanet_ecommerce_order_goods')->where( array('order_id' => $order['order_id']) )->find();
-
-							    M('eaterplanet_ecommerce_pin_order')->where( array('pin_id' =>$pin_order['pin_id'],'order_id' => $order['order_id'] ) )->delete();
-
-							    $newpin_id = D('Home/Pin')->openNewTuan($order['order_id'],$order_goods_info['goods_id'],$order['member_id']);
-							    //插入拼团订单
-							    D('Home/Pin')->insertTuanOrder($newpin_id,$order['order_id']);
-							    unset($pin_info);
-
-							    $is_pin_success = D('Home/Pin')->checkPinSuccess($newpin_id);
-
-							    if($is_pin_success) {
-							        D('Home/Pin')->updatePintuanSuccess($newpin_id);
-							    }
-							}else{
-							    $is_pin_success = D('Home/Pin')->checkPinSuccess($pin_order['pin_id']);
-
-							    if($is_pin_success) {
-							        D('Home/Pin')->updatePintuanSuccess($pin_order['pin_id']);
-							    }
-							}
-
-
-
-
-							/**
-							$is_pin_success = D('Home/Pin')->checkPinSuccess($pin_order['pin_id']);
-
-							if($is_pin_success) {
-								//todo send pintuan success notify
-								D('Home/Pin')->updatePintuanSuccess($pin_order['pin_id']);
-							}
-							**/
-
-						}
-					}
-
-				}
-				//返回支付成功给app
-				$data = array();
-				$data['code'] = 0;
-				$data['has_yupay'] = 1;
-				$data['is_integral'] = $is_integral;
-				$data['is_spike'] = $is_spike;
-				$data['is_go_orderlist'] = $is_just_1;
-				$data['order_id'] = $oid;
-				$data['order_all_id'] = $order_all_id;
-
-				echo json_encode($data);
-				die();
-			}
-
+			//余额支付独立方法
+			D('Home/OrderV2')->carOrderYuerPay( $order_all_id, $order ,$pay_total , $ck_yupay ,$buy_type, $is_integral, $is_spike , $is_just_1 );
 		}
 		else if( isset($is_open_yinpay) && $is_open_yinpay == 3 )
 		{
@@ -5128,7 +5198,18 @@ public function sub_order()
 
 				$data['is_go_orderlist'] = $is_just_1;
 
-				if($is_pin == 1)
+                //如果是微信小程序交易组件begin---新支付方法 wx.requestOrderPayment
+                $data['order_info'] = [];
+                $data['isRequestOrderPayment'] = $is_need_scene_check;
+                if($is_need_scene_check == 1)
+                {
+                    $orderPamentResult = D('Seller/MpModifyTradeComponts')->getTradeOrderInfo( $oid , $time , $pay_total );
+                    //如果是微信小程序交易组件，提供订单信息 end
+                    $data['order_info'] = $orderPamentResult['order_info'];
+                }
+
+
+                if($is_pin == 1)
 				{
 					$data['redirect_url'] = '../groups/group?id='.$oid.'&is_show=1';
 				} else {
@@ -5224,6 +5305,18 @@ public function sub_order()
 			}
 
 			$money = $rech_info['money'];
+		}else{
+			$recharge_get_money = D('Home/Front')->get_config_by_name('recharge_get_money');
+
+			if(isset($recharge_get_money) && $recharge_get_money == 1){
+				$rech_info = M('eaterplanet_ecommerce_chargetype')->where( "money <= ".$money )->order('money desc')->limit(1)->find();
+
+				if( !empty($rech_info) )
+				{
+					$give_money = $rech_info['send_money'];
+				}
+			}
+
 		}
 
 
@@ -5234,7 +5327,7 @@ public function sub_order()
 		$member_charge_flow_data['state'] = 0;
 		$member_charge_flow_data['give_money'] = $give_money;
 		$member_charge_flow_data['charge_time'] = 0;
-		$member_charge_flow_data['remark'] = '会员前台微信充值';
+		$member_charge_flow_data['remark'] = '客户前台微信充值';
 		$member_charge_flow_data['add_time'] = time();
 
 		$order_id = M('eaterplanet_ecommerce_member_charge_flow')->add( $member_charge_flow_data );
@@ -5248,7 +5341,7 @@ public function sub_order()
 
 		$fee = $money;
 		$appid = D('Home/Front')->get_config_by_name('wepro_appid');
-		$body =         '会员充值';
+		$body =         '客户充值';
 		$mch_id =      D('Home/Front')->get_config_by_name('wepro_partnerid');
 		$nonce_str =    nonce_str();
 		$notify_url =   $shop_domain.'/notify.php';
@@ -5387,6 +5480,13 @@ public function sub_order()
 		$token = $gpc['token'];
 		$order_id = $gpc['order_id'];
 
+        $scene = $gpc['scene'];
+        $is_need_scene_check = 0;
+
+        if(!empty($scene))
+        {
+            $is_need_scene_check = D('Seller/MpModifyTradeComponts')->sceneCheck( $scene );
+        }
 
 		$weprogram_token = M('eaterplanet_ecommerce_weprogram_token')->field('member_id')->where( array('token' => $token) )->find();
 
@@ -5409,7 +5509,7 @@ public function sub_order()
 
 		//order_status_id
 
-		if( $order['order_status_id'] != 3)
+		if( $order['order_status_id'] != 3 && $order['order_status_id'] != 15 )
 		{
 			$json = array();
 
@@ -5450,13 +5550,18 @@ public function sub_order()
 		}
 
 		//检测商品是否下架end
-
-
+		//检测是否预售商品。预售商品不需要检测二次支付问题
+        $presale_info = [];
+        $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $order_id );
+        if( $presale_result['code'] == 0 )
+        {
+            $presale_info = $presale_result['data'];
+        }
 		//检测是否已经支付过了begin
 
 		$order_relate_info = M('eaterplanet_ecommerce_order_relate')->where( array('order_id' => $order_id ) )->order('id desc')->find();
 
-		if( !empty($order_relate_info) && $order_relate_info['order_all_id'] > 0 )
+		if( !empty($order_relate_info) && $order_relate_info['order_all_id'] > 0  && empty($presale_info) )
 		{
 			$order_all_info = M('eaterplanet_ecommerce_order_all')->where( array('id' => $order_relate_info['order_all_id'] ) )->find();
 
@@ -5521,7 +5626,7 @@ public function sub_order()
 			$kucun_method = 0;
 		}
 
-		if($kucun_method == 1)
+		if($kucun_method == 1 && ( empty($presale_info) || $presale_info['state'] != 1 ) )
 		{
 			/*** 检测商品库存begin  **/
 
@@ -5635,6 +5740,29 @@ public function sub_order()
 		}else {
 			$fee = $order['total']+ $order['shipping_fare']-$order['voucher_credit']-$order['fullreduction_money'] - $order['score_for_money'] - $order['fare_shipping_free'];
 		}
+
+		//如果是预售 begin
+
+        if( !empty($presale_info) )
+        {
+            if( $presale_info['state'] == 0 )
+            {
+                //首次支付，
+                $fee = $presale_info['presale_ding_money'];
+            }else if( $presale_info['state'] == 1 )
+            {
+                //第二次支付
+                if( !empty($presale_info['presale_deduction_money']) && false )
+                {
+                    $fee = $fee - $presale_info['presale_deduction_money'];
+                }else{
+                    $fee = $fee - $presale_info['presale_ding_money'];
+                }
+            }
+        }
+        //end
+
+
 		$fee = round($fee , 2);
 
 
@@ -5812,6 +5940,16 @@ public function sub_order()
 			$data['paySign'] = sign($tmp, $pay_key);
 			$data['out_trade_no'] = $out_trade_no;
 			$data['is_pin'] = $order['is_pin'];
+
+            //如果是微信小程序交易组件begin---新支付方法 wx.requestOrderPayment
+            $data['order_info'] = [];
+            $data['isRequestOrderPayment'] = $is_need_scene_check;
+            if($is_need_scene_check == 1)
+            {
+                $orderPamentResult = D('Seller/MpModifyTradeComponts')->getTradeOrderInfo( $order_id , $time , $fee );
+                //如果是微信小程序交易组件，提供订单信息 end
+                $data['order_info'] = $orderPamentResult['order_info'];
+            }
 
 			if($order['is_pin'] == 1)
 			{

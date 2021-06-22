@@ -95,14 +95,29 @@ class HexiaoController extends CommonController {
 			die();
 		}
 		$hexiao_info = D('Home/Salesroom')->get_hexiao_order_by_code($hexiao_volume_code,$salesmember_id);
+		$order_info = M('eaterplanet_ecommerce_order')->where( array('order_id' => $hexiao_info['orders']['order_id']) )->find();
+		if($order_info['order_status_id'] == 5){
+			echo json_encode( array('code' => 3, 'msg' => '订单已取消，无法核销' ) );
+			die();
+		}
+		if($order_info['order_status_id'] == 3){
+			echo json_encode( array('code' => 3, 'msg' => '订单未支付，无法核销' ) );
+			die();
+		}
+
 		if($hexiao_info['is_exist'] == 0){
-			echo json_encode( array('code' => 3, 'msg' => '请输入正确的券码' ) );
+			echo json_encode( array('code' => 3, 'msg' => '请输入正确的手机号/券码' ) );
 			die();
 		}
 		if($hexiao_info['is_exist'] == 2){
 			echo json_encode( array('code' => 3, 'msg' => '核销员无核销权限' ) );
 			die();
 		}
+		if($hexiao_info['is_exist'] == 4){
+			echo json_encode( array('code' => 3, 'msg' => '该手机号无到店核销订单' ) );
+			die();
+		}
+		
 		echo json_encode( array('code' => 0, 'data' => $hexiao_info) );
 	}
 
@@ -121,7 +136,12 @@ class HexiaoController extends CommonController {
 			die();
 		}
 		$member_id = $weprogram_token['member_id'];
-		$order_info = M('eaterplanet_ecommerce_order')->where( array('order_id' => $order_id) )->find();
+		if( empty($order_id) )
+		{
+			echo json_encode( array('code' => 3, 'msg' => '订单已全部核销，无法操作' ) );
+			die();
+		}
+		$order_info = M('eaterplanet_ecommerce_order')->where( 'order_id in('.$order_id.')' )->select();
 		if( empty($order_info) )
 		{
 			echo json_encode( array('code' => 3, 'msg' => '订单信息不存在' ) );
@@ -133,12 +153,36 @@ class HexiaoController extends CommonController {
 			echo json_encode( array('code' => 3, 'msg' => '不是核销员' ) );
 			die();
 		}
-		$hx_result = D('Home/Salesroom')->hexiao_all_orders($order_id,$salesmember_id,$salesroom_id);
-		if($hx_result['hx_goods_count'] > 0){
-			echo json_encode( array('code' => 0, 'data' => $hx_result) );
-		}else{
-			echo json_encode( array('code' => 3,  'msg' => '无核销商品') );
+		$hx_order_count = 0 ;
+		$oeders_hx_result = array();
+		foreach($order_info as $var){
+
+			if($var['order_status_id'] == 5){
+				echo json_encode( array('code' => 3, 'msg' => '订单已取消，无法核销' ) );
+				die();
+			}
+			if($var['order_status_id'] == 3){
+				echo json_encode( array('code' => 3, 'msg' => '订单未支付，无法核销' ) );
+				die();
+			}
+			if($var['order_status_id'] != 4){
+				echo json_encode( array('code' => 3, 'msg' => '订单状态不是核销阶段，无法核销' ) );
+				die();
+			}
+			$hx_result = D('Home/Salesroom')->hexiao_all_orders($var['order_id'],$salesmember_id,$salesroom_id);
+			if($hx_result['hx_goods_count'] > 0){
+				$hx_order_count += 1;
+			}else{
+				echo json_encode( array('code' => 3,  'msg' => '无核销商品') );
+			}
 		}
+		if($hx_order_count > 0 ){
+			$oeders_hx_result['hx_order_count'] = $hx_order_count;
+			echo json_encode( array('code' => 0, 'data' => $oeders_hx_result) );
+		}
+		
+		
+		
 	}
 
 	/**
@@ -166,6 +210,19 @@ class HexiaoController extends CommonController {
 		if( $salesmember_id <= 0 )
 		{
 			echo json_encode( array('code' => 3, 'msg' => '不是核销员' ) );
+			die();
+		}
+		$order_info = M('eaterplanet_ecommerce_order')->where( array('order_id' => $saleshexiao_info['order_id']) )->find();
+		if($order_info['order_status_id'] == 5){
+			echo json_encode( array('code' => 3, 'msg' => '订单已取消，无法核销' ) );
+			die();
+		}
+		if($order_info['order_status_id'] == 3){
+			echo json_encode( array('code' => 3, 'msg' => '订单未支付，无法核销' ) );
+			die();
+		}
+		if($order_info['order_status_id'] != 4){
+			echo json_encode( array('code' => 3, 'msg' => '订单状态不是核销阶段，无法核销' ) );
 			die();
 		}
 		$hx_result = D('Home/Salesroom')->saleshexiao_order_goods($saleshexiao_info,$salesmember_id,$salesroom_id, 0);
@@ -213,6 +270,59 @@ class HexiaoController extends CommonController {
 	}
 
 	/**
+	 * 按次核销商品一次性核销完成
+	 */
+	public function all_hx_order_goods_bytimes(){
+		$_GPC = I('request.');
+		$token =  $_GPC['token'];
+		//核销商品订单表id
+		$hexiao_id = $_GPC['hexiao_id'];
+		//门店id
+		$salesroom_id = $_GPC['salesroom_id'];
+
+		$weprogram_token = M('eaterplanet_ecommerce_weprogram_token')->field('member_id')->where( array('token' => $token) )->find();
+		if(  empty($weprogram_token) ||  empty($weprogram_token['member_id']) )
+		{
+			echo json_encode( array('code' => 1) );
+			die();
+		}
+		$member_id = $weprogram_token['member_id'];
+		$saleshexiao_info = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where( array('id' => $hexiao_id) )->find();
+		if( empty($saleshexiao_info) )
+		{
+			echo json_encode( array('code' => 3, 'msg' => '订单核销信息不存在' ) );
+			die();
+		}
+		$salesmember_id = D('Home/Salesroom')->get_salesmember_id_by_member_id($member_id);
+		if( $salesmember_id <= 0 )
+		{
+			echo json_encode( array('code' => 3, 'msg' => '不是核销员' ) );
+			die();
+		}
+		$order_info = M('eaterplanet_ecommerce_order')->where( array('order_id' => $saleshexiao_info['order_id']) )->find();
+		if($order_info['order_status_id'] == 5){
+			echo json_encode( array('code' => 3, 'msg' => '订单已取消，无法核销' ) );
+			die();
+		}
+		if($order_info['order_status_id'] == 3){
+			echo json_encode( array('code' => 3, 'msg' => '订单未支付，无法核销' ) );
+			die();
+		}
+		if($order_info['order_status_id'] != 4){
+			echo json_encode( array('code' => 3, 'msg' => '订单状态不是核销阶段，无法核销' ) );
+			die();
+		}
+		$hx_result = D('Home/Salesroom')->saleshexiao_order_goods($saleshexiao_info,$salesmember_id,$salesroom_id,0);
+		if($hx_result == 1){
+			echo json_encode( array('code' => 0) );
+		}else if($hx_result == 0){
+			echo json_encode( array('code' => 3,  'msg' => '核销商品失败') );
+		}else{
+			echo json_encode( array('code' => 3,  'msg' => '无核销权限') );
+		}
+	}
+
+	/**
 	 * 核销商品（按次数核销的商品）
 	 */
 	public function hx_order_goods_bytimes(){
@@ -249,6 +359,20 @@ class HexiaoController extends CommonController {
 			echo json_encode( array('code' => 3, 'msg' => '不是核销员' ) );
 			die();
 		}
+		$order_info = M('eaterplanet_ecommerce_order')->where( array('order_id' => $saleshexiao_info['order_id']) )->find();
+		if($order_info['order_status_id'] == 5){
+			echo json_encode( array('code' => 3, 'msg' => '订单已取消，无法核销' ) );
+			die();
+		}
+		if($order_info['order_status_id'] == 3){
+			echo json_encode( array('code' => 3, 'msg' => '订单未支付，无法核销' ) );
+			die();
+		}
+		if($order_info['order_status_id'] != 4){
+			echo json_encode( array('code' => 3, 'msg' => '订单状态不是核销阶段，无法核销' ) );
+			die();
+		}
+
 		$hx_result = D('Home/Salesroom')->saleshexiao_order_goods($saleshexiao_info,$salesmember_id,$salesroom_id,$hx_times);
 		if($hx_result == 1){
 			echo json_encode( array('code' => 0) );

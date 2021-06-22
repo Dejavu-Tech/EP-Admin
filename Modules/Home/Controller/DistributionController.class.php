@@ -80,7 +80,7 @@ class DistributionController extends CommonController {
 			//需要审核，成为分销，待审核状态
 			M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id ) )->save( array('comsiss_flag' => 1,'is_writecommiss_form' => 1,'commiss_formcontent' => $commiss_formcontent ) );
 
-			//将未 挪动上级的会员归到当前会员的下级去
+			//将未 挪动上级的客户归到当前客户的下级去
 			M('eaterplanet_ecommerce_member')->where( array('share_id' => $member_id ) )->save( array('agentid' => $member_id ) );
 
 			echo json_encode( array('code' =>0, 'msg' =>'申请成功，平台将尽快审核') );
@@ -93,7 +93,7 @@ class DistributionController extends CommonController {
 	}
 
 	/**
-		会员申请分销按钮确认
+		客户申请分销按钮确认
 	**/
 	public function sub_commission_info()
 	{
@@ -181,7 +181,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -234,7 +234,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -263,7 +263,7 @@ class DistributionController extends CommonController {
 
 
 	/**
-		会员分销提现 提交接口
+		客户分销提现 提交接口
 	**/
 	public function tixian_sub()
 	{
@@ -286,7 +286,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -431,7 +431,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -645,7 +645,7 @@ class DistributionController extends CommonController {
 
 
 	/**
-		获取会员粉丝列表接口
+		获取客户粉丝列表接口
 	**/
 	public function get_member_fanslist()
 	{
@@ -671,7 +671,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -780,7 +780,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -998,7 +998,7 @@ class DistributionController extends CommonController {
 	}
 
 	/**
-		获取会员分销基础数据
+		获取客户分销基础数据
 	**/
 	public function get_commission_info()
 	{
@@ -1022,7 +1022,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -1072,7 +1072,7 @@ class DistributionController extends CommonController {
 
 		//订单数量
 		$order_count = M('eaterplanet_ecommerce_member_commiss_order')->where( array('member_id' =>$member_id ) )->count();
-		//会员数量
+		//客户数量
 
 
 		$member_commiss['order_count'] = $order_count;
@@ -1206,7 +1206,7 @@ class DistributionController extends CommonController {
 
 		if( empty($member_info) )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '会员不存在') );
+			echo json_encode( array('code' => 1, 'msg' => '客户不存在') );
 			die();
 		}
 
@@ -1368,7 +1368,7 @@ class DistributionController extends CommonController {
 
 
 	/**
-		获取会员分享海报
+		获取客户分享海报
 	**/
 	public function get_haibao()
 	{

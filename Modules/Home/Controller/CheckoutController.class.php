@@ -186,16 +186,16 @@ class CheckoutController extends CommonController {
 			            'username'        => $d['uname'],
 					 );
 
-					storage_user_action($uid,$d['uname'],C('FRONTEND_USER'),'注册成为会员');
+					storage_user_action($uid,$d['uname'],C('FRONTEND_USER'),'注册成为客户');
 
-					$email_content='您好,感谢您注册成为'.C('SITE_NAME').'会员<br />'.
+					$email_content='您好,感谢您注册成为'.C('SITE_NAME').'客户<br />'.
 					'您的账号是 '.$d['uname'].'<br />'.
 					'邮箱是 '.$d['email'].'<br />'.
 					'密码是 '.$d['password'].'<br />'.
 					'您可以使用账号或者邮箱来进行网站的登录<a href="'.C('SITE_URL').U('/login').'">点此进行登录</a>';
 
 					//发送邮件
-					think_send_mail($d['email'],$d['uname'],C('SITE_NAME').'会员注册成功',$email_content);
+					think_send_mail($d['email'],$d['uname'],C('SITE_NAME').'客户注册成功',$email_content);
 
 
 				    session('user_auth', $auth);

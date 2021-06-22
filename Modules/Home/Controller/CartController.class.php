@@ -1004,7 +1004,7 @@ class CartController extends CommonController {
 
 	//判断是否可以余额支付
 
-	//暂时关闭 会员余额功能
+	//暂时关闭 客户余额功能
 	/**
 	$is_yue_open_info =	M('config')->where( array('name' => 'is_yue_open') )->find();
 	$is_yue_open =  $is_yue_open_info['value'];
@@ -1016,7 +1016,7 @@ class CartController extends CommonController {
 
 	$need_data['can_yupay'] = 0;
 
-	//暂时关闭 会员余额功能
+	//暂时关闭 客户余额功能
 	/**
 	if($is_yue_open == 1 && $need_data['total_free'] >=0 && $member_info['account_money'] >= $need_data['total_free'])
 	{

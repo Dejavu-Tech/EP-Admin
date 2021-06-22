@@ -50,7 +50,7 @@ class IndexController extends CommonController {
 	public function test()
 	{
 	    $order_id = 4042;
-		$order_info = D('Home/SzyOrder')->getOrderGoodsByOrderId( $order_id );
+		$order_info = D('Home/EpOrder')->getOrderGoodsByOrderId( $order_id );
 
 		var_dump( $order_info );
 		die();
@@ -101,6 +101,7 @@ class IndexController extends CommonController {
 			foreach($slider_list as $key => $val)
 			{
 				$val['image'] = tomedia($val['thumb']);
+				$val['link'] = htmlspecialchars_decode( $val['link'] );
 				$slider_list[$key] = $val;
 			}
 		}else{
@@ -122,6 +123,7 @@ class IndexController extends CommonController {
 			{
 				$val['image'] = tomedia($val['thumb']);
 				$val['name'] = $val['advname'];
+				$val['link'] = htmlspecialchars_decode($val['link']);
 				$nav_list[$key] = $val;
 			}
 		}else{
@@ -309,6 +311,28 @@ class IndexController extends CommonController {
                         if($coverItem) $coverItem = tomedia($coverItem);
                     }
                 }
+		if( !empty($thumb['link']) )
+		{
+			foreach($thumb['link'] as $kk => $links)
+			{
+				$thumb['link'][$kk] = htmlspecialchars_decode($links);
+			}
+		}
+		if( !empty($thumb['webview']) )
+		{
+			foreach($thumb['webview'] as $kkk => $webview)
+			{
+				$thumb['webview'][$kkk] = htmlspecialchars_decode($webview);
+			}
+		}
+
+		if( !empty($thumb['outlink']) )
+		{
+			foreach($thumb['outlink'] as $kkkk => $outlink)
+			{
+				$thumb['outlink'][$kkkk] = htmlspecialchars_decode($outlink);
+			}
+		}
                 $cubeItem['thumb'] = $thumb;
                 $cube[$k] = $cubeItem;
             }
@@ -393,7 +417,51 @@ class IndexController extends CommonController {
 
 		$can_index_notice_alert = D('Home/Front')->get_config_by_name('can_index_notice_alert');
 
+		//是否开启预售活动==begin
+        $show_presale_index_goods = D('Home/Front')->get_config_by_name('isopen_presale');
+        $show_presale_index_goods = !isset($show_presale_index_goods) || empty($show_presale_index_goods) ? 0 : 1;
 
+        $presale_index_info = [];
+        $presale_index_info['show_presale_index_goods'] = $show_presale_index_goods;
+        $presale_index_info['goods_list'] = [];
+
+        if( $show_presale_index_goods == 1 )
+        {
+            //1、获取封面
+            $presale_index_coming_img = D('Home/Front')->get_config_by_name('presale_index_coming_img');
+            if( isset($presale_index_coming_img) && !empty($presale_index_coming_img) )
+            {
+                $presale_index_info['presale_index_coming_img'] = tomedia($presale_index_coming_img);
+            }
+            //2、获取首页显示的商品。后台没有定义就显示5条最多
+            $presale_result = D('Home/PresaleGoods')->getIndexPresaleGoods(1);
+            if( $presale_result['code'] == 0 && !empty($presale_result['list']) )
+            {
+                $presale_index_info['goods_list'] = $presale_result['list'];
+            }
+        }
+        //首页预售活动end
+
+        //是否开启礼品卡 begin
+        $virtualcard_info = [];
+        $isopen_virtualcard = D('Home/Front')->get_config_by_name('isopen_virtualcard');
+        $isopen_virtualcard = !isset($isopen_virtualcard) ? 0 : $isopen_virtualcard;
+        $virtualcard_info['isopen_virtualcard'] = $isopen_virtualcard;
+        $virtualcard_info['goods_list'] = [];
+        if( $isopen_virtualcard == 1 )
+        {
+            //入口封面图
+            $virtualcard_index_coming_img = D('Home/Front')->get_config_by_name('virtualcard_index_coming_img');
+            $virtualcard_info['virtualcard_index_coming_img'] = empty($virtualcard_index_coming_img) ? '' : tomedia( tomedia($virtualcard_index_coming_img) );
+
+            //礼品卡商品
+            $virtualcard_result = D('Seller/VirtualCard')->getIndexVirturalCardGoods(1);
+            if( $virtualcard_result['code'] == 0 && !empty($virtualcard_result['list']) )
+            {
+                $virtualcard_info['goods_list'] = $virtualcard_result['list'];
+            }
+        }
+        //是否开启礼品卡 end
 		echo json_encode(array('code'=>0,
 						'category_list' =>$category_list,
 						'spike_data' => array(),
@@ -451,7 +519,9 @@ class IndexController extends CommonController {
 						'hide_index_type' => $hide_index_type,
 						'show_index_wechat_oa' => $show_index_wechat_oa,
 						'ishide_index_goodslist' => $ishide_index_goodslist,
-						'can_index_notice_alert' => $can_index_notice_alert
+						'can_index_notice_alert' => $can_index_notice_alert,
+						'presale_index_info' => $presale_index_info,//首页预售商品信息
+						'virtualcard_info' => $virtualcard_info,//礼品卡首页信息
 					)
 			);
 		die();
@@ -527,6 +597,7 @@ class IndexController extends CommonController {
 		{
 			foreach ($list as $key => &$val) {
 				$val['thumb'] = tomedia($val['thumb']);
+				$val['link'] = htmlspecialchars_decode($val['link']);
 			}
 		}
 
@@ -884,7 +955,8 @@ class IndexController extends CommonController {
 			{
 				$tmp_data = array();
 				$tmp_data['actId'] = $val['id'];
-				$tmp_data['spuName'] = $val['goodsname'];
+				$goodsname = htmlspecialchars_decode($val['goodsname']);
+				$tmp_data['spuName'] = $goodsname;
 				$tmp_data['spuCanBuyNum'] = $val['total'];
 				$tmp_data['spuDescribe'] = $val['subtitle'];
 				$tmp_data['actEnd'] = time()>$val['end_time'];
@@ -1161,7 +1233,8 @@ class IndexController extends CommonController {
 			{
 				$tmp_data = array();
 				$tmp_data['actId'] = $val['id'];
-				$tmp_data['spuName'] = $val['goodsname'];
+				$goodsname = htmlspecialchars_decode($val['goodsname']);
+				$tmp_data['spuName'] = $goodsname;
 				$tmp_data['spuCanBuyNum'] = $val['total'];
 				$tmp_data['spuDescribe'] = $val['subtitle'];
 				$tmp_data['end_time'] = $val['end_time'];
@@ -1214,8 +1287,8 @@ class IndexController extends CommonController {
 				$tmp_data['actPrice'] = explode('.', $price);
 				$tmp_data['card_price'] = $price_arr['card_price'];
 
-				$tmp_data['levelprice'] = $price_arr['levelprice']; // 会员等级价格
-				$tmp_data['is_mb_level_buy'] = $price_arr['is_mb_level_buy']; //是否 会员等级 可享受
+				$tmp_data['levelprice'] = $price_arr['levelprice']; // 客户等级价格
+				$tmp_data['is_mb_level_buy'] = $price_arr['is_mb_level_buy']; //是否 客户等级 可享受
 
 				//$tmp_data['skuList']= D('Home/Pingoods')->get_goods_options($val['id'], $member_id);
 				$tmp_data['skuList']= D('Home/Pingoods')->get_goods_options_carquantity($val['id'], $member_id, $head_id ,$token);
@@ -1563,7 +1636,8 @@ class IndexController extends CommonController {
 			{
 				$tmp_data = array();
 				$tmp_data['actId'] = $val['id'];
-				$tmp_data['spuName'] = $val['goodsname'];
+				$goodsname = htmlspecialchars_decode($val['goodsname']);
+				$tmp_data['spuName'] = $goodsname;
 				$tmp_data['spuCanBuyNum'] = $val['total'];
 				$tmp_data['spuDescribe'] = $val['subtitle'];
 				$tmp_data['end_time'] = $val['end_time'];
@@ -1726,7 +1800,8 @@ class IndexController extends CommonController {
 			{
 				$tmp_data = array();
 				$tmp_data['actId'] = $val['id'];
-				$tmp_data['spuName'] = $val['goodsname'];
+				$goodsname = htmlspecialchars_decode($val['goodsname']);
+				$tmp_data['spuName'] = $goodsname;
 				$tmp_data['spuCanBuyNum'] = $val['total'];
 				$tmp_data['spuDescribe'] = $val['subtitle'];
 				$tmp_data['end_time'] = $val['end_time'];
@@ -1933,7 +2008,8 @@ class IndexController extends CommonController {
 			{
 				$tmp_data = array();
 				$tmp_data['actId'] = $val['id'];
-				$tmp_data['spuName'] = $val['goodsname'];
+				$goodsname = htmlspecialchars_decode($val['goodsname']);
+				$tmp_data['spuName'] = $goodsname;
 				$tmp_data['spuCanBuyNum'] = $val['total'];
 				$tmp_data['spuDescribe'] = $val['subtitle'];
 				$tmp_data['end_time'] = $val['end_time'];
@@ -2135,7 +2211,7 @@ class IndexController extends CommonController {
 				$now_time = time();
 				if( $member_info['card_id'] >0 && $member_info['card_end_time'] > $now_time )
 				{
-					$is_vip_card_member = 1;//还是会员
+					$is_vip_card_member = 1;//还是客户
 				}else if( $member_info['card_id'] >0 && $member_info['card_end_time'] < $now_time ){
 					$is_vip_card_member = 2;//已过期
 				}
@@ -2266,7 +2342,8 @@ class IndexController extends CommonController {
 					{
 						$tmp_data = array();
 						$tmp_data['actId'] = $val['id'];
-						$tmp_data['spuName'] = $val['goodsname'];
+						$goodsname = htmlspecialchars_decode($val['goodsname']);
+						$tmp_data['spuName'] = $goodsname;
 						$tmp_data['spuCanBuyNum'] = $val['total'];
 						$tmp_data['spuDescribe'] = $val['subtitle'];
 						$tmp_data['end_time'] = $val['end_time'];
@@ -2557,7 +2634,8 @@ class IndexController extends CommonController {
 			{
 				$tmp_data = array();
 				$tmp_data['actId'] = $val['id'];
-				$tmp_data['spuName'] = $val['goodsname'];
+				$goodsname = htmlspecialchars_decode($val['goodsname']);
+				$tmp_data['spuName'] = $goodsname;
 				$tmp_data['spuCanBuyNum'] = $val['total'];
 				$tmp_data['spuDescribe'] = $val['subtitle'];
 				$tmp_data['end_time'] = $val['end_time'];
@@ -2609,8 +2687,8 @@ class IndexController extends CommonController {
 				$tmp_data['actPrice'] = explode('.', $price);
 				$tmp_data['card_price'] = $price_arr['card_price'];
 
-				$tmp_data['levelprice'] = $price_arr['levelprice']; // 会员等级价格
-				$tmp_data['is_mb_level_buy'] = $price_arr['is_mb_level_buy']; //是否 会员等级 可享受
+				$tmp_data['levelprice'] = $price_arr['levelprice']; // 客户等级价格
+				$tmp_data['is_mb_level_buy'] = $price_arr['is_mb_level_buy']; //是否 客户等级 可享受
 
 				//$tmp_data['skuList']= D('Home/Pingoods')->get_goods_options($val['id'], $member_id);
 
@@ -2694,6 +2772,55 @@ class IndexController extends CommonController {
 
 		echo json_encode( array('code' => 1, 'msg' => "无广告图片" ) );
 		die();
+	}
+
+	public function get_diy_info()
+	{
+		$index_diy_json = D('Home/Front')->get_config_by_name('index_diy_json');
+
+		if($index_diy_json) {
+			$data = unserialize($index_diy_json);
+			$diyData = htmlspecialchars_decode($data['value']);
+			$diyDataJson = json_decode($diyData, true);
+
+			$diyJson = $diyDataJson['value'];
+
+			if(!empty($diyJson)) {
+				foreach($diyJson as $k=>$v) {
+					$v['host'] = $this->staticHost();
+					if($v['type']=="RICH_TEXT") {
+						$v['html'] = $this->replaceRichtextImgSrc($v['html']);
+					}
+					$diyJson[$k] = $v;
+				}
+			}
+
+			echo json_encode( array('code' => 0, 'global' => $diyDataJson['global'], 'diyJson' => $diyJson ) );
+			die();
+		} else {
+			echo json_encode( array('code' => 1, 'msg' => 'DIY页面未设置' ) );
+			die();
+		}
+	}
+
+	public function staticHost() {
+		$port = isset($_SERVER['SERVER_PORT']) ? $_SERVER['SERVER_PORT'] : '80';
+		$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
+		return "https://" . $host;
+	}
+
+	public function replaceRichtextImgSrc($html) {
+		$pattern = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png|\.jpeg]))[\'|\"].*?[\/]?>/i";
+		$result = preg_replace_callback($pattern, function ($ma) {
+			$newUrl = $ma[1];
+			$port = isset($_SERVER['SERVER_PORT']) ? $_SERVER['SERVER_PORT'] : '80';
+			$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
+			if (strpos($ma[1], 'http') == false) {
+				$newUrl = "https://" . $host . $newUrl;
+			}
+			return str_replace($ma[1], tomedia($newUrl), $ma[0]);
+		}, $html);
+		return $result;
 	}
 
 }

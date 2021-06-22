@@ -1677,7 +1677,7 @@ class UserController extends CommonController {
 		{
 			$info = M('eaterplanet_ecommerce_subscribe')->where( array('member_id' => $member_id, 'type' => $type ) )->find();
 
-			if( !empty($info) )
+			if( !empty($info) && false )
 			{
 				continue;
 			}
@@ -1710,7 +1710,10 @@ class UserController extends CommonController {
 				case 'apply_tixian':
 					$template_id = D('Home/Front')->get_config_by_name('weprogram_subtemplate_apply_tixian');
 				break;
-			}
+                case 'presale_ordercan_continuepay':
+                    $template_id = D('Home/Front')->get_config_by_name('weprogram_subtemplate_presale_ordercan_continuepay');
+                    break;
+            }
 
 			if( empty($template_id) )
 			{
@@ -2019,7 +2022,7 @@ class UserController extends CommonController {
 	//begin....
 
 	/**
-		会员积分流水
+		客户积分流水
 		controller:  user.get_user_integral_flow
 
 		token,
@@ -2105,7 +2108,7 @@ class UserController extends CommonController {
 
 	//----begin---
 	/**
-		会员充值流水
+		客户充值流水
 		controller:  user.get_user_charge_flow
 
 		token,
@@ -2147,7 +2150,7 @@ class UserController extends CommonController {
 	    $list = array();
 
 		$sql = 'select * from  '.C('DB_PREFIX')."eaterplanet_ecommerce_member_charge_flow
-			where member_id = ".$member_id."  and (state=1 or state=3 or state=4 or state=5 or state=8  or state=9 or state=10  or state=11 or state=12) order by id desc limit {$offset},{$per_page}";
+			where member_id = ".$member_id."  and state in (1,3,4,5,8,9,10,11,12,20) order by id desc limit {$offset},{$per_page}";
 
 		$list = M()->query($sql);
 
@@ -2220,7 +2223,7 @@ class UserController extends CommonController {
 
 			$is_show_member_level = D('Home/Front')->get_config_by_name('is_show_member_level');
 			$member_level_arr = array(
-									0 => array('level_name' => '普通会员', 'discount' => 100),
+									0 => array('level_name' => '普通客户', 'discount' => 100),
 								);
 
 			$mb_level_list = M('eaterplanet_ecommerce_member_level')->where(1)->order('id asc')->select();
@@ -2237,7 +2240,7 @@ class UserController extends CommonController {
 				}
 			}
 
-			$member_info['is_show_member_level'] = $is_show_member_level;//是否显示会员等级信息
+			$member_info['is_show_member_level'] = $is_show_member_level;//是否显示客户等级信息
 			$member_info['member_level_info'] = $member_level_arr[ $member_info['level_id'] ];
 
 
@@ -2397,6 +2400,25 @@ class UserController extends CommonController {
 			{
 				$pintuan_unstatement_money = $tp_unstatement_money;
 			}
+			$isopen_presale = D('Home/Front')->get_config_by_name('isopen_presale');
+
+			$isopen_presale = empty($isopen_presale) ? 0 : 1;
+
+			//是否开启礼品卡活动 begin
+            $isopen_virtualcard = D('Home/Front')->get_config_by_name('isopen_virtualcard');
+            $is_open_virtualcard_show = D('Home/Front')->get_config_by_name('is_open_virtualcard_show');
+
+            //礼品卡中心
+            $virtualcard_name_modify = D('Home/Front')->get_config_by_name('virtualcard_name_modify');
+            $virtualcard_name_modify = !isset($virtualcard_name_modify) || empty($virtualcard_name_modify) ? '礼品卡中心' : $virtualcard_name_modify;
+
+            if( isset($isopen_virtualcard) && $isopen_virtualcard == 1 )
+            {
+                $is_open_virtualcard_show = !isset($is_open_virtualcard_show) ? 0 : $is_open_virtualcard_show;
+            }else{
+                $is_open_virtualcard_show = 0;
+            }
+            //end
 
 			$result = array();
 			$result['code'] = 0;
@@ -2423,6 +2445,9 @@ class UserController extends CommonController {
 			$result['pintuan_money'] = $pintuan_money;
 			$result['pintuan_hasstatement_money'] = $pintuan_hasstatement_money;
 			$result['pintuan_unstatement_money'] = $pintuan_unstatement_money;
+			$result['isopen_presale'] = $isopen_presale;
+			$result['is_open_virtualcard_show'] = $is_open_virtualcard_show;//是否开启 礼品卡客户中心入口
+			$result['virtualcard_name_modify'] = $virtualcard_name_modify;//礼品卡中心名称自定义
 
 			//是否开启商户手机端 member_id
 			$supply_is_open_mobilemanage = D('Home/Front')->get_config_by_name('supply_is_open_mobilemanage');
@@ -2452,7 +2477,7 @@ class UserController extends CommonController {
 		$modify_vipcard_name = D('Home/Front')->get_config_by_name('modify_vipcard_name');
 		$modify_vipcard_logo = D('Home/Front')->get_config_by_name('modify_vipcard_logo');
 
-		$modify_vipcard_name = empty($modify_vipcard_name) ? '天机会员': $modify_vipcard_name;
+		$modify_vipcard_name = empty($modify_vipcard_name) ? '吃货星球会员': $modify_vipcard_name;
 
 		if( !empty($modify_vipcard_logo) )
 		{
@@ -2484,7 +2509,7 @@ class UserController extends CommonController {
 		$modify_vipcard_name = D('Home/Front')->get_config_by_name('modify_vipcard_name');
 		$modify_vipcard_logo = D('Home/Front')->get_config_by_name('modify_vipcard_logo');
 
-		$modify_vipcard_name = empty($modify_vipcard_name) ? '天机会员': $modify_vipcard_name;
+		$modify_vipcard_name = empty($modify_vipcard_name) ? '吃货星球会员': $modify_vipcard_name;
 
 		if( !empty($modify_vipcard_logo) )
 		{
@@ -2554,6 +2579,11 @@ class UserController extends CommonController {
 		$result['user_tool_showtype'] = D('Home/Front')->get_config_by_name('user_tool_showtype');
 
 		$result['needAuth'] = $needAuth;
+
+		//判断是否开启邀新有礼begin
+		$is_open_invite_invitation = D('Home/Front')->get_config_by_name('is_invite_open_status');
+		$is_open_invite_invitation = !empty($is_open_invite_invitation) ? $is_open_invite_invitation : 0;
+		$result['is_open_invite_invitation'] = $is_open_invite_invitation;
 
 		echo json_encode(  $result );
 		die();
@@ -2820,6 +2850,10 @@ class UserController extends CommonController {
 		}
 
 		$isblack = 0;
+		//是否可以领取礼包： 1、可以，0、不可以，2、老用户, 3、老用户且有邀请人
+		$is_can_collect_gift = 0;
+
+		$is_invite_open_status = D('Home/Front')->get_config_by_name('is_invite_open_status');
 
 		if(!empty($member_info) )
 		{
@@ -2833,7 +2867,18 @@ class UserController extends CommonController {
 
 	         $data['last_login_time']	=	time();
 			 $data['last_login_ip']	=	get_client_ip();
-
+			if(!empty($is_invite_open_status) && $is_invite_open_status == 1) {
+				//邀新有礼
+				if (empty($member_info['share_id'])) {
+					if (intval($share_id) > 0 && $share_id != $member_info['member_id']) {
+						$data['share_id'] = intval($share_id);
+						//保存邀请记录
+						$is_can_collect_gift = D('Home/Invitegift')->insertInvitegiftRecord($share_id, $member_info['member_id'], 1);
+					}
+				} else {
+					$is_can_collect_gift = 3;
+				}
+			}
 			 M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_info['member_id'] ) )->save(  $data );
 
 			/**
@@ -2963,6 +3008,10 @@ class UserController extends CommonController {
 					}
 
 				}
+				if(!empty($is_invite_open_status) && $is_invite_open_status == 1){
+					//保存邀请记录
+					$is_can_collect_gift = D('Home/Invitegift')->insertInvitegiftRecord($share_id,$member_id, 0);
+				}
 			}
 
 
@@ -2976,7 +3025,7 @@ class UserController extends CommonController {
 				if(!empty($member_formid_info))
 				{
 					$template_data['keyword1'] = array('value' => $data['name'], 'color' => '#030303');
-					$template_data['keyword2'] = array('value' => '普通会员', 'color' => '#030303');
+					$template_data['keyword2'] = array('value' => '普通客户', 'color' => '#030303');
 					$template_data['keyword3'] = array('value' => date('Y-m-d H:i:s'), 'color' => '#030303');
 					$template_data['keyword4'] = array('value' => '恭喜你，获得一位新成员', 'color' => '#030303');
 
@@ -3027,7 +3076,7 @@ class UserController extends CommonController {
             }
         }
 
-        echo json_encode(array('code' =>1,'member_id' => $member_id ,'isblack' => $isblack , 'isparse_formdata' => $isparse_formdata ));
+        echo json_encode(array('code' =>1,'member_id' => $member_id ,'isblack' => $isblack , 'isparse_formdata' => $isparse_formdata, 'is_can_collect_gift'=>$is_can_collect_gift ));
         die();
 
 
@@ -3113,6 +3162,7 @@ class UserController extends CommonController {
 
 
 		$show_user_change_comunity = D('Home/Front')->get_config_by_name('show_user_change_comunity');
+		$show_user_change_comunity_map = D('Home/Front')->get_config_by_name('show_user_change_comunity_map');
 
 		//是否单团长模式begin
 
@@ -3139,13 +3189,13 @@ class UserController extends CommonController {
 		//是否单团长模式end
 
 
-		//会员中心群接龙开关begin
+		//客户中心群接龙开关begin
 		$is_open_solitaire  = D('Home/Front')->get_config_by_name('is_open_solitaire');
 		if( empty($is_open_solitaire) )
 		{
 			$is_open_solitaire = 0;
 		}
-		//会员中心群接龙开关 end
+		//客户中心群接龙开关 end
 
 		$user_top_font_color = D('Home/Front')->get_config_by_name('user_top_font_color');
 		$excharge_nav_name = D('Home/Front')->get_config_by_name('excharge_nav_name');
@@ -3174,6 +3224,7 @@ class UserController extends CommonController {
 				'show_user_pin' => $show_user_pin,
 				'commiss_diy_name' => $commiss_diy_name,
 				'show_user_change_comunity' => $show_user_change_comunity,
+				'show_user_change_comunity_map' => $show_user_change_comunity_map,
 				'open_danhead_model' => $open_danhead_model,
 				'default_head_info'  => $default_head_info,
 				'is_open_solitaire'  => $is_open_solitaire,
@@ -3282,10 +3333,9 @@ class UserController extends CommonController {
 			$result['data'] = $member_info['account_money'];
 
 			$result['chargetype_list'] = $chargetype_list;
-
 			$member_charge_publish = D('Home/Front')->get_config_by_name('member_charge_publish');
-
 			$result['member_charge_publish'] = htmlspecialchars_decode($member_charge_publish);
+			$result['recharge_get_money'] = D('Home/Front')->get_config_by_name('recharge_get_money');
 
 		}
 
@@ -3354,7 +3404,7 @@ class UserController extends CommonController {
 
 	}
 
-    //会员保存 收集表单信息
+    //客户保存 收集表单信息
     public function save_formData()
     {
         $gpc = I('request.');
@@ -3433,7 +3483,8 @@ class UserController extends CommonController {
 		{
 			$category[$val['id']] = $val;
 		}
-		$list = M('eaterplanet_ecommerce_coupon')->where('id in ('.$coupon_id.')')->order('add_time desc')->select();
+		$params = "id in (".$coupon_id.") and ((timelimit=1 and end_time>".time().") or timelimit=0)";
+		$list = M('eaterplanet_ecommerce_coupon')->where($params)->order('add_time desc')->select();
 
 		$result_list = array();
 		$k = 0;
@@ -3463,9 +3514,9 @@ class UserController extends CommonController {
 
 			//判断买家 获取的优惠券是否过期
 			//is_over 0、未过期，1、已过期，2 用户不存在优惠券数据
-			if($val['end_time'] < $nowtime){
-				$val['is_over'] = 1;
-			}else{
+			// if($val['end_time'] < $nowtime){
+			// 	$val['is_over'] = 1;
+			// }else{
 				if($val['is_collect'] == 1){
 					$no_over_count = M('eaterplanet_ecommerce_coupon_list')->where(array('voucher_id'=>$val['id'],'user_id'=>$member_id))->where('end_time > '.$nowtime)->count();
 					if($no_over_count > 0){
@@ -3476,7 +3527,7 @@ class UserController extends CommonController {
 				}else{
 					$val['is_over'] = 2;
 				}
-			}
+			// }
 
 			$val['tag'] = $category[$val['catid']]['name'];
 			$val['begin_time'] = date('Y.m.d H:i:s', $val['begin_time']);

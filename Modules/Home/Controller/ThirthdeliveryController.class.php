@@ -134,6 +134,99 @@ class ThirthdeliveryController extends CommonController {
 			$result_array = array();
 			$result_array['status'] = "ok";
 			echo  json_encode($result_array);
+		}else if(isset($json_data['app_id']) && isset($json_data['data']) && isset($json_data['salt']) && isset($json_data['signature'])){
+			//蜂鸟即配 订单状态变更回调
+			$app_id = D('Home/Front')->get_config_by_name('localtown_ele_app_id');
+			$secret_key = D('Home/Front')->get_config_by_name('localtown_ele_secret_key');
+			// 获取签名
+			$sig = $this->eleGenerateSign($app_id, $json_data['salt'], $secret_key);
+			if($sig == $json_data['signature']){
+				$data = urldecode($json_data['data']);
+				//商户自己的订单号
+				$partner_order_code = $data['partner_order_code'];
+				//状态码
+				$order_status = $data['order_status'];
+
+				$order_sn = $this->getOrderSnByThirdOrderId($partner_order_code);
+				if(!empty($order_sn)){
+					$other_data = [];
+					$other_data['data_type'] = 'ele';
+					if($order_status == 1){//系统已接单
+						$other_data['desc'] = '已接单';
+						$other_data['order_status'] = 2;
+						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
+					}else if($order_status == 20){//已分配骑手
+						//配送员姓名
+						$other_data['operator_name'] = $data['carrier_driver_name'];
+						//配送员电话
+						$other_data['operator_phone'] = $data['carrier_driver_phone'];
+						$other_data['desc'] = "已分配骑手：".$other_data['operator_name'];
+						$other_data['order_status'] = 3;
+						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
+					}else if($order_status == 80){//骑手已到店
+						//配送员姓名
+						$other_data['operator_name'] = $data['carrier_driver_name'];
+						//配送员电话
+						$other_data['operator_phone'] = $data['carrier_driver_phone'];
+						$other_data['desc'] = "骑手".$other_data['operator_name']."已到店";
+						$other_data['order_status'] = 3;
+						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
+					}else if($order_status == 2){//配送中
+						//配送员姓名
+						$other_data['operator_name'] = $data['carrier_driver_name'];
+						//配送员电话
+						$other_data['operator_phone'] = $data['carrier_driver_phone'];
+						$other_data['desc'] = "骑手".$other_data['operator_name']."配送中";
+						$other_data['order_status'] = 3;
+						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
+					}else if($order_status == 3){//已送达
+						//配送员姓名
+						$other_data['operator_name'] = $data['carrier_driver_name'];
+						//配送员电话
+						$other_data['operator_phone'] = $data['carrier_driver_phone'];
+						$other_data['desc'] = "骑手".$data['carrier_driver_name']."已送达";
+						$other_data['order_status'] = 4;
+						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,6,$other_data);
+					}else if($order_status == 5){//异常
+						$other_data['error_code'] = $data['error_code'];
+						$other_data['desc'] = $data['detail_description'];
+						$other_data['order_status'] = 100;
+						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
+					}
+				}
+			}
 		}
+	}
+
+	/**
+	 * @author Albert.Z
+	 * @desc 通过第三方商户获取订单号
+	 * @param $third_order_id
+	 * @return string
+	 */
+	public function getOrderSnByThirdOrderId($third_order_id){
+		$orders = M('eaterplanet_ecommerce_orderdistribution_order')->field('order_id')->where( array('third_order_id' => $third_order_id) )->find();
+		if(!empty($orders)){
+			$order_info = M('eaterplanet_ecommerce_order')->field('order_num_alias')->where( array('order_id' => $orders['order_id']) )->find();
+			if(!empty($order_info)){
+				return $order_info['order_num_alias'];
+			}else{
+				return '';
+			}
+		}else{
+			return '';
+		}
+	}
+	/**
+	 * @author Albert.Z
+	 * @desc 蜂鸟即配签名
+	 * @param $appId
+	 * @param $salt
+	 * @param $secretKey
+	 * @return string
+	 */
+	public function eleGenerateSign($appId, $salt, $secretKey) {
+		$seed = 'app_id=' . $appId . '&salt=' . $salt . '&secret_key=' . $secretKey;
+		return md5(urlencode($seed));
 	}
 }

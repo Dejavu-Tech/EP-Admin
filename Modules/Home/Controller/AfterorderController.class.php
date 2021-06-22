@@ -77,8 +77,13 @@ class AfterorderController extends CommonController {
 
 		$total = $order_goods['total'];
 
-
-
+		//判断是否预售 begin
+        $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $order_id );
+		if($presale_result['code'] == 0 )
+        {
+            $total = $total - $presale_result['data']['presale_for_ordermoney'];
+        }
+        //end
 		$order_option_info = M('eaterplanet_ecommerce_order_option')->field('value')->where( array('order_id' =>$order_id,'order_goods_id' => $order_goods_id ) )->select();
 
 		foreach($order_option_info as $option)

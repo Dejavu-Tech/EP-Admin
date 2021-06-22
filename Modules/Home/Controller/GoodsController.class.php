@@ -132,7 +132,7 @@ class GoodsController extends CommonController {
 
 		$where = "";
 
-		$where = " and (total_count =-1 or total_count>send_count) and is_index_alert =0 and  is_index_show=1 and (end_time>".time()." or timelimit =1 ) ";
+		$where = " and (total_count =-1 or total_count>send_count) and is_index_alert=0 and is_index_show=1 and ((timelimit=1 and end_time>".time().") or timelimit=0 ) ";
 
 
 		$quan_list = M()->query("select * from ".C('DB_PREFIX')."eaterplanet_ecommerce_coupon where 1 {$where} order by displayorder desc ,id asc limit 100 ");
@@ -750,6 +750,7 @@ class GoodsController extends CommonController {
 			$goods['video'] = tomedia($goods['video']);
 		}
 
+		$goods['goodsname'] = htmlspecialchars_decode($goods['goodsname']);
         $goods['description'] = htmlspecialchars_decode($goods['content']);
         $goods['description'] = htmlspecialchars_decode($goods['description']);
         $qian = array(
@@ -822,8 +823,8 @@ class GoodsController extends CommonController {
 		$goods['danprice'] = $goods_price_arr['danprice'];
 		$goods['card_price'] = $goods_price_arr['card_price'];//会员卡价格
 
-		$goods['levelprice'] = $goods_price_arr['levelprice']; // 会员等级价格
-		$goods['is_mb_level_buy'] = $goods_price_arr['is_mb_level_buy']; //是否 会员等级 可享受
+		$goods['levelprice'] = $goods_price_arr['levelprice']; // 客户等级价格
+		$goods['is_mb_level_buy'] = $goods_price_arr['is_mb_level_buy']; //是否 客户等级 可享受
 
 		if($goods['type'] == 'integral')
 		{
@@ -944,14 +945,14 @@ class GoodsController extends CommonController {
             }
 		}
 
-		/** 商品会员折扣begin **/
+		/** 商品客户折扣begin **/
 		$is_show_member_disc = 0;
 
 		$member_disc = 100;
 
 
 
-		/** 商品会员折扣end **/
+		/** 商品客户折扣end **/
 
 		$goods['memberprice'] = sprintf('%.2f', round( ($goods['danprice'] * $member_disc) / 100 ,2));
 		$max_get_dan_money = round( ($goods['danprice'] * (100 - $max_member_level['discount']) ) / 100 ,2);
@@ -978,7 +979,7 @@ class GoodsController extends CommonController {
 		}
 
 
-		//查看会员身份，是否有佣金显示到商品详细页begin
+		//查看客户身份，是否有佣金显示到商品详细页begin
 
 		$is_commiss_mb = 0;
 		$commiss_mb_money = 0;
@@ -1113,8 +1114,8 @@ class GoodsController extends CommonController {
 
         $need_data['pin_info'] = $pin_info;
 
-		$need_data['is_commiss_mb'] = $is_commiss_mb;//是否显示  会员分销 佣金 1 是，0否
-		$need_data['commiss_mb_money'] = $commiss_mb_money;// 会员分销佣金 是多少
+		$need_data['is_commiss_mb'] = $is_commiss_mb;//是否显示  客户分销 佣金 1 是，0否
+		$need_data['commiss_mb_money'] = $commiss_mb_money;// 客户分销佣金 是多少
 		$need_data['is_goods_head_mb'] = $is_goods_head_mb;// 是否团长 佣金， 1 是，0否
 		$need_data['goods_head_money'] = $goods_head_money;// 团长佣金 金额
 
@@ -1469,7 +1470,7 @@ class GoodsController extends CommonController {
 		$modify_vipcard_name = D('Home/Front')->get_config_by_name('modify_vipcard_name');
 		$modify_vipcard_logo = D('Home/Front')->get_config_by_name('modify_vipcard_logo');
 
-		$modify_vipcard_name = empty($modify_vipcard_name) ? '天机会员': $modify_vipcard_name;
+		$modify_vipcard_name = empty($modify_vipcard_name) ? '吃货星球会员': $modify_vipcard_name;
 		$is_open_vipcard_buy = !empty($is_open_vipcard_buy) && $is_open_vipcard_buy ==1 ? 1:0;
 		if( !empty($modify_vipcard_logo) )
 		{
@@ -1564,6 +1565,63 @@ class GoodsController extends CommonController {
 		if($is_only_hexiao == 1){
 			$hx_salesroom_list = D('Home/Salesroom')->get_goods_salesroom($id,$supply_id,'id,room_name,room_address');
 		}
+		//判断是否预售 begin
+        $need_data['presale_goods_info'] = ['is_presale_goods' => 0 ];
+        if($goods['type'] == 'presale')
+        {
+            $presale_goods_info = [];
+            $goods_presale = M('eaterplanet_ecommerce_goods_presale')->where(['goods_id' => $id ])->find();
+
+            $presale_goods_info['presale_type'] = $goods_presale['presale_type'];//0 定金， 1 全款支付
+            $presale_goods_info['presale_ding_money'] = $goods_presale['presale_ding_money'];//定金金额
+            $presale_goods_info['presale_deduction_money'] = $goods_presale['presale_deduction_money'];//定金抵扣金额
+            $presale_goods_info['presale_ding_time_start'] = $goods_presale['presale_ding_time_start'];//定金开始支付时间
+            $presale_goods_info['presale_ding_time_start_date'] = date('m月d日 H:i', $goods_presale['presale_ding_time_start'] );//定金支付格式化 开始时间
+            $presale_goods_info['presale_ding_time_start_date'] = date('m月d日 H:i', $goods_presale['presale_ding_time_start'] );//定金支付格式化 开始时间
+
+            $presale_goods_info['presale_ding_time_end'] =  $goods_presale['presale_ding_time_end'] ;//定金支付结束时间
+            $presale_goods_info['presale_ding_time_end_date'] = date('m月d日 H:i', $goods_presale['presale_ding_time_end'] );//定金支付格式化 结束时间
+
+            $presale_goods_info['presale_limit_balancepaytime'] = $goods_presale['presale_limit_balancepaytime'] ;//限制尾款支付时间，0不限制，1限制
+            $presale_goods_info['presale_balance_paytime'] = intval($goods_presale['presale_balance_paytime']);//限制尾款支付时间， 几天内
+
+            $presale_goods_info['presale_sendorder_type'] = ($goods_presale['presale_sendorder_type']);//预计发货时间，0 固定发货时间， 1购买后几日发货
+
+            $presale_goods_info['presale_sendorder_datetime'] = date('Y-m-d',$goods_presale['presale_sendorder_datetime'] );//固定发货时间 ，具体的固定日期
+            $presale_goods_info['presale_sendorder_afterday'] = intval( $goods_presale['presale_sendorder_afterday'] );//购买后几日发货
+
+            $presale_goods_info['is_presale_goods'] = 1;
+
+            $need_subscript_template = [];
+
+            $weprogram_subtemplate_send_order = D('Home/Front')->get_config_by_name('weprogram_subtemplate_presale_ordercan_continuepay');
+
+            if( !empty($weprogram_subtemplate_send_order) )
+            {
+                $need_subscript_template['presale_ordercan_continuepay'] = $weprogram_subtemplate_send_order;
+                $is_need_subscript = 1;
+            }
+
+            $presale_goods_info['need_subscript_template'] = $need_subscript_template;//预售订阅消息
+
+            $need_data['presale_goods_info'] = $presale_goods_info;
+
+        }
+        //预售end..
+        $need_data['virtualcard_goods_info'] = ['is_virtualcard_goods' => 0 ];
+        if($goods['type'] == 'virtualcard')
+        {
+            $goods_virturalcard = D('Seller/VirtualCard')->getGoodsVirtualCardInfoByGoodsId( $id );
+            $virturalcard_info = D('Seller/VirtualCard')->getCodeInfoByCodeId( $goods_virturalcard['code_id'] );
+            $code_money = $virturalcard_info['code_money'];
+
+            $need_data['virtualcard_goods_info']['is_virtualcard_goods'] = 1; //是否礼品卡商品
+            $need_data['virtualcard_goods_info']['code_money'] = round($code_money, 2); //兑换金额
+        }
+        //判断是否礼品卡 begin
+
+
+        //礼品卡end
 
         echo json_encode(array(
             'code' => 1,
@@ -1861,7 +1919,8 @@ class GoodsController extends CommonController {
 			{
 				$tmp_data = array();
 				$tmp_data['actId'] = $val['id'];
-				$tmp_data['spuName'] = $val['goodsname'];
+				$goodsname = htmlspecialchars_decode($val['goodsname']);
+				$tmp_data['spuName'] = $goodsname;
 
 				$tmp_data['spuCanBuyNum'] = $val['total'];
 				$tmp_data['spuDescribe'] = $val['subtitle'];
@@ -1973,6 +2032,18 @@ class GoodsController extends CommonController {
 		{
 			$show_goods_guess_like = 0;
 		}
+
+		$token =  $_GPC['token'];
+
+		$weprogram_token = M('eaterplanet_ecommerce_weprogram_token')->field('member_id')->where( array('token' => $token) )->find();
+
+		if(  empty($weprogram_token) ||  empty($weprogram_token['member_id']) )
+		{
+			$member_id = 0;
+		}else{
+			$member_id = $weprogram_token['member_id'];
+		}
+
 		//显示数量
 		$num_guess_like= D('Home/Front')->get_config_by_name('num_guess_like' );
 		if( empty($num_guess_like) )

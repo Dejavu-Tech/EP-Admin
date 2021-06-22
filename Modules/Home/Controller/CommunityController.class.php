@@ -587,7 +587,7 @@ class CommunityController extends CommonController {
 	}
 
 
-	//2、查看会员核销记录的
+	//2、查看客户核销记录的
 
 	public function get_member_hexiao_orderlist()
 	{
@@ -935,10 +935,16 @@ class CommunityController extends CommonController {
 		}
 
 
-		$sql = "select co.order_id,co.state,co.money,co.addtime ,og.total,og.name
-				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,
+        /*$sql = "select co.order_id,co.state,co.money,co.addtime ,og.total,og.name
+                from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,
                 ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og
-	                    where  co.order_goods_id = og.order_goods_id {$where}
+                        where  co.order_goods_id = og.order_goods_id {$where}
+                          order by co.id desc limit {$offset},{$size}";*/
+
+		$sql = "select co.order_id,co.state,co.money,co.addtime ,og.total,og.name,co.type
+				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co left join
+                ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og on co.order_goods_id = og.order_goods_id
+	                    where 1=1  {$where}
 	                      order by co.id desc limit {$offset},{$size}";
 
 	    $list =  M()->query($sql);
@@ -955,6 +961,9 @@ class CommunityController extends CommonController {
 				$order_info= M('eaterplanet_ecommerce_order')->field('order_num_alias')->where( array('order_id' => $val['order_id']) )->find();
 
 				$val['order_num_alias'] = $order_info['order_num_alias'];
+				if($val['type'] == 'tuijian'){
+					$val['name'] = "推荐团长现金奖励";
+				}
 				$list[$key] = $val;
 			}
 		}
@@ -1285,7 +1294,7 @@ class CommunityController extends CommonController {
 
 
 
-		//会员数量
+		//客户数量
 		$total_member_count = D('Seller/Community')->get_community_head_member_count($head_id);
 
 		//预计佣金 state=0
@@ -1334,7 +1343,7 @@ class CommunityController extends CommonController {
 
 		$head_today_pay_money = sprintf("%.2f",$head_today_pay_money);
 
-		//2、新增会员数：团长新增的用户统计  TODO..
+		//2、新增客户数：团长新增的用户统计  TODO..
 
 		$sql_count = "select count(h.id) as count from ".C('DB_PREFIX').
 					"eaterplanet_community_history as h, ".C('DB_PREFIX')."eaterplanet_ecommerce_member as m where m.member_id=h.member_id and h.head_id={$head_id} and m.create_time>={$today_time} ";
@@ -1572,7 +1581,7 @@ class CommunityController extends CommonController {
 		$result['has_success_count'] = $has_success_count;
 
 		$result['head_today_pay_money'] = $head_today_pay_money;//今日销售额
-		$result['today_add_head_member'] = $today_add_head_member;//今日新增会员数
+		$result['today_add_head_member'] = $today_add_head_member;//今日新增客户数
 		$result['today_after_sale_order_count'] = $today_after_sale_order_count;//今日售后订单
 		$result['today_invite_head_member'] = $today_invite_head_member;//今日访客
 		$result['is_show_community_ranking'] = $is_show_community_ranking;//团长排行
@@ -2299,7 +2308,7 @@ class CommunityController extends CommonController {
 			$parent_head_info = D('Home/Front')->get_member_community_info($member_info['share_id']);
 			if( !empty($parent_head_info) )
 			{
-				$parent_head_id = $head_info['id'];
+				$parent_head_id = $parent_head_info['id'];
 			}
 		}
 

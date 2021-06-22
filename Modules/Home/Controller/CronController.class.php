@@ -165,6 +165,33 @@ class CronController extends CommonController {
 
 	}
 
+    private function lock_thisfile($tmpFileStr,$locktype=false){
+        if($locktype == false)
+            $locktype = LOCK_EX|LOCK_NB;
+        $can_write = 0;
+        $lockfp = @fopen($tmpFileStr.".lock","w");
+        if($lockfp){
+            $can_write = @flock($lockfp,$locktype);
+        }
+        if($can_write){
+            return $lockfp;
+        }
+        else{
+            if($lockfp){
+                @fclose($lockfp);
+                @unlink($tmpFileStr.".lock");
+            }
+            return false;
+        }
+    }
+
+    private function unlock_thisfile($fp,$tmpFileStr){
+        @flock($fp,LOCK_UN);
+        @fclose($fp);
+        @fclose($fp);
+        @unlink($tmpFileStr.".lock");
+    }
+
 	public function statement()
 	{
 		ignore_user_abort();
@@ -172,13 +199,22 @@ class CronController extends CommonController {
 
 		//S('closeorder_lasttime');
 
-		$statementorder_flag = S('statementorder_flag');
-		if( !empty($statementorder_flag) && $statementorder_flag == 1 )
-		{
-         	 S('statementorder_flag', 0);
-			die();
-		}
-		 S('statementorder_flag', 1);
+        //文件锁begin
+        $data_path = dirname( dirname(dirname( dirname(__FILE__) )) ).'/Data/wxpaylogs/'.date('Y-m-d')."/";
+        RecursiveMkdir($data_path);
+        $file = $data_path.'lock.txt';
+
+        $lockhandle = $this->lock_thisfile($file,true);
+
+        if($lockhandle)   //锁定当前指针，，，
+        {
+            $statementorder_flag = S('statementorder_flag');
+            if( !empty($statementorder_flag) && $statementorder_flag == 1 )
+            {
+                S('statementorder_flag', 0);
+                die();
+            }
+            S('statementorder_flag', 1);
 
 
 		$shop_list = M('eaterplanet_ecommerce_config')->field('value')->where( array('name' => 'open_aftersale' ) )->select();
@@ -239,6 +275,9 @@ class CronController extends CommonController {
 			}
 		}
 
+            $this->unlock_thisfile($lockhandle,$file);
+        }
+		
 	}
 
 	private function clear_runtimelog()
@@ -533,6 +572,10 @@ class CronController extends CommonController {
 		D('Home/Salesroom')->hexiao_expire();
 		//核销商品过期处理
 		D('Home/Salesroom')->hexiao_goods_expire();
+
+		//预售发送消息处理 + 预售过期处理
+        D('Home/PresaleGoods')->cronPresaleMsg();
+
 
 		echo 'ok';
 		die();

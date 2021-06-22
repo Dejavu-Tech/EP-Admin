@@ -102,7 +102,7 @@ class SigninrewardController extends CommonController {
 		$result['signinreward_share_image'] = $signinreward_share_image;
 		$result['signinreward_pagenotice'] = $signinreward_pagenotice;
 
-		//会员积分
+		//客户积分
 		$score = $member_info['score'];
 		//今日是否签到了。昨天是否连续签到。
 
@@ -456,8 +456,8 @@ class SigninrewardController extends CommonController {
 				$tmp_data['actPrice'] = explode(' ', $price);
 				$tmp_data['card_price'] = $price_arr['card_price'];
 
-				$tmp_data['levelprice'] = $price_arr['levelprice']; // 会员等级价格
-				$tmp_data['is_mb_level_buy'] = $price_arr['is_mb_level_buy']; //是否 会员等级 可享受
+				$tmp_data['levelprice'] = $price_arr['levelprice']; // 客户等级价格
+				$tmp_data['is_mb_level_buy'] = $price_arr['is_mb_level_buy']; //是否 客户等级 可享受
 
 				//card_price
 

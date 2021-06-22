@@ -125,7 +125,7 @@ class BonusController extends CommonController {
 			$result['code'] = 0;
 			$result['activity_over'] = $activity_over;//活动是否结束，1已结束，0 未结束
 			$result['can_get'] = $activity_over == 1 ? 0 : 1;
-			//$result['has_get_count'] = $has_get_count;//这个券，该会员获取了几张，这个数字大于0表示会员有券，如果活动已经结束，还需要借助这个字段判断是否还有要展示的领取过的券
+			//$result['has_get_count'] = $has_get_count;//这个券，该客户获取了几张，这个数字大于0表示客户有券，如果活动已经结束，还需要借助这个字段判断是否还有要展示的领取过的券
 			$result['voucher_info'] = $voucher_info;//券的详细信息
 			$result['category_list'] = $category_list;
 			$result['cur_time'] = time();//服务器的当前时间戳，倒计时的时候可能会用到
@@ -183,7 +183,7 @@ class BonusController extends CommonController {
 	}
 
 	/**
-		会员抢券
+		客户抢券
 	**/
 	public function get_bonus_voucher()
 	{

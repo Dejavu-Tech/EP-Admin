@@ -20,7 +20,7 @@ class PaymentController extends CommonController {
     	parent::_initialize();
 	}
 
-	//会员中心页面，去付款
+	//客户中心页面，去付款
 	function confirm_pay(){
 		if(I('token')!=md5(session('pay_token'))){
 			$url=U('/checkout');

@@ -367,7 +367,7 @@ class SubjectController extends CommonController {
 
 		if( !empty($old_zan_order) )
 		{
-			//一个会员当前一个商品 只能发出去一个二维码
+			//一个客户当前一个商品 只能发出去一个二维码
 			echo json_encode( array('code' => 3, 'need_person' => $old_zan_order['need_person']) );
 			die();
 		}
@@ -734,7 +734,7 @@ class SubjectController extends CommonController {
 
 		if( !empty($old_zan_order) )
 		{
-			//一个会员当前一个商品 只能发出去一个二维码
+			//一个客户当前一个商品 只能发出去一个二维码
 			echo json_encode( array('code' => 0, 'id' => $old_zan_order['id']) );
 			die();
 		}

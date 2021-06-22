@@ -89,8 +89,12 @@ class LocaltownController extends CommonController {
             $redis = D('Seller/Redisorder')->get_redis_object_do();
 
         }
+        if(!empty($orderdistribution_info['store_id'])){//独立商户订单
+            $order_list = $redis->getRedis()->rawCommand('georadius', '_distributionorder_'.$orderdistribution_info['store_id'], $lon, $lat, '10000', 'km', 'ASC');
+        }else{
+            $order_list = $redis->getRedis()->rawCommand('georadius', '_distributionorder', $lon, $lat, '10000', 'km', 'ASC');
+        }
 
-        $order_list = $redis->getRedis()->rawCommand('georadius', '_distributionorder', $lon, $lat, '10000', 'km', 'ASC');
 
         if( count($order_list)  > 35 )
         {
@@ -260,7 +264,7 @@ class LocaltownController extends CommonController {
 		$distribution_info = D('Home/LocaltownSnatch')->get_distribution_info_by_memberid( $member_id );
 
 		//配送费收入
-		$commiss_info = D('Home/LocaltownSnatch')->get_commiss_by_member_id( $member_id );
+		$commiss_info = D('Home/LocaltownSnatch')->get_commiss_by_orderdistribution_id( $orderdistribution_id );
 		//return array('money' => 0, 'dongmoney' => 0, 'getmoney' => 0);
 
 		$total_commiss_money = round( ($commiss_info['money']+$commiss_info['dongmoney']+$commiss_info['getmoney']), 2 );
@@ -305,7 +309,7 @@ class LocaltownController extends CommonController {
 
 		$orderdistribution_info = D('Home/LocaltownSnatch')->get_distribution_info_by_memberid( $member_id );
 		//配送费收入
-		$commiss_info = D('Home/LocaltownSnatch')->get_commiss_by_member_id( $member_id );
+		$commiss_info = D('Home/LocaltownSnatch')->get_commiss_by_orderdistribution_id( $orderdistribution_id );
 
 		$need_data = array();
 
@@ -317,7 +321,7 @@ class LocaltownController extends CommonController {
 	}
 
     /**
-        获取会员配送佣金基础数据
+        获取客户配送佣金基础数据
      **/
     public function get_distribution_commission_info()
     {
@@ -364,7 +368,7 @@ class LocaltownController extends CommonController {
             $commiss_tixian_bili = 0;
         }
 
-        $member_commiss = M('eaterplanet_ecommerce_orderdistribution_commiss')->where( array('member_id' => $member_id ) )->find();
+        $member_commiss = M('eaterplanet_ecommerce_orderdistribution_commiss')->where( array('orderdistribution_id' => $orderdistribution_info['id'] ) )->find();
 
         $member_commiss['commiss_min_tixian_money'] = $commiss_min_tixian_money;//最小提现金额， 0标识不限制
 
@@ -389,11 +393,17 @@ class LocaltownController extends CommonController {
             $commiss_tixianway_bank = D('Home/Front')->get_supply_config_by_name('distribution_tixianway_bank',$store_id);
         }
 
-        $member_commiss['commiss_tixianway_yuer'] = empty($commiss_tixianway_yuer) ? 1 : ($commiss_tixianway_yuer == 2 ? 1:0);
-        $member_commiss['commiss_tixianway_weixin'] = empty($commiss_tixianway_weixin) ? 1 : ($commiss_tixianway_weixin == 2 ? 1:0);
-        $member_commiss['commiss_tixianway_alipay'] = empty($commiss_tixianway_alipay) ? 1 : ($commiss_tixianway_alipay == 2 ? 1:0);
-        $member_commiss['commiss_tixianway_bank'] = empty($commiss_tixianway_bank) ? 1 : ($commiss_tixianway_bank == 2 ? 1:0);
-
+        if($store_id > 0){
+            $member_commiss['commiss_tixianway_yuer'] = $commiss_tixianway_yuer == 2 ? 1:0;
+            $member_commiss['commiss_tixianway_weixin'] = $commiss_tixianway_weixin == 2 ? 1:0;
+            $member_commiss['commiss_tixianway_alipay'] = empty($commiss_tixianway_alipay) ? 1 : ($commiss_tixianway_alipay == 2 ? 1:0);
+            $member_commiss['commiss_tixianway_bank'] = $commiss_tixianway_bank == 2 ? 1:0;
+        }else{
+            $member_commiss['commiss_tixianway_yuer'] = empty($commiss_tixianway_yuer) ? 1 : ($commiss_tixianway_yuer == 2 ? 1:0);
+            $member_commiss['commiss_tixianway_weixin'] = empty($commiss_tixianway_weixin) ? 1 : ($commiss_tixianway_weixin == 2 ? 1:0);
+            $member_commiss['commiss_tixianway_alipay'] = empty($commiss_tixianway_alipay) ? 1 : ($commiss_tixianway_alipay == 2 ? 1:0);
+            $member_commiss['commiss_tixianway_bank'] = empty($commiss_tixianway_bank) ? 1 : ($commiss_tixianway_bank == 2 ? 1:0);
+        }
 
 
 
@@ -460,7 +470,7 @@ class LocaltownController extends CommonController {
 
     //begin
     /**
-    会员拼团佣金提现 提交接口
+    客户拼团佣金提现 提交接口
      **/
     public function tixian_sub()
     {
