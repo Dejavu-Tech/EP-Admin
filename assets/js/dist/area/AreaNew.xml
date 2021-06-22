@@ -177,13 +177,12 @@
             <county name="九龙坡区" code="500107" />
             <county name="南岸区" code="500108" />
             <county name="北碚区" code="500109" />
-            <county name="万盛区" code="500110" />
+            <county name="綦江区" code="500110" />
             <county name="双桥区" code="500111" />
             <county name="渝北区" code="500112" />
             <county name="巴南区" code="500113" />
             <county name="黔江区" code="500114" />
             <county name="长寿区" code="500115" />
-            <county name="綦江区" code="500222" />
             <county name="潼南区" code="500223" />
             <county name="铜梁县" code="500224" />
             <county name="大足区" code="500225" />
@@ -584,7 +583,6 @@
 			<county name="东部产业园片区" code="441905" />
 			<county name="东南临深片区" code="441906" />
 			<county name="东坑镇" code="441907" />
-			
         </city>
         <city name="中山市" code="442000">
             <county name="中山" code="442000001" />
@@ -1784,14 +1782,13 @@
             <county name="高淳区" code="320125" />
         </city>
         <city name="无锡市" code="320200">
-            <county name="崇安区" code="320202" />
-            <county name="南长区" code="320203" />
-            <county name="北塘区" code="320204" />
             <county name="锡山区" code="320205" />
             <county name="惠山区" code="320206" />
             <county name="滨湖区" code="320211" />
             <county name="江阴市" code="320281" />
             <county name="宜兴市" code="320282" />
+			<county name="梁溪区" code="320283" />
+			<county name="新吴区" code="320284" />
         </city>
         <city name="徐州市" code="320300">
             <county name="鼓楼区" code="320302" />
@@ -3195,7 +3192,7 @@
             <county name="鄯善县" code="652122" />
             <county name="托克逊县" code="652123" />
         </city>
-        <city name="哈密地区" code="652200">
+        <city name="哈密市" code="652200">
             <county name="哈密市" code="652201" />
             <county name="巴里坤哈萨克自治县" code="652222" />
             <county name="伊吾县" code="652223" />
@@ -3541,7 +3538,7 @@
             <county name="弥渡县" code="532925" />
             <county name="南涧彝族自治县" code="532926" />
             <county name="巍山彝族回族自治县" code="532927" />
-            <county name="永平下" code="532928" />
+            <county name="永平县" code="532928" />
             <county name="云龙县" code="532929" />
             <county name="洱源县" code="532930" />
             <county name="剑川县" code="532931" />

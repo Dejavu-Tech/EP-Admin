@@ -1,0 +1,86 @@
+<cm-construct v-bind:data="data[index]" class="component-store-show-info">
+	
+	<!-- 预览 -->
+	<template slot="preview">
+		
+		<div class="preview-box" v-bind:style="{ backgroundColor : nc.backgroundColor }">
+			<div class="info-list">
+				<div class="info-item style-one" v-if="nc.style == 1">
+					<div class="info-item">
+						<span class="store-name" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }">社区名称</span>
+						<span class="change" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }">切换 ></span>
+						<p :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }">这里展示社区地址</p>
+					</div>
+					<div class="info-item-r">
+						<div class="img-wrap">
+							<img src="{$resourceurl}/community_show/img/default_store.png" />
+						</div>
+						<div class="conmunity-name" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }">团长昵称</div>
+					</div>
+				</div>
+
+				<div class="info-item style-three" v-if="nc.style == 2">
+					<div class="info-item">
+						<div class="img-wrap">
+							<img src="{$resourceurl}/community_show/img/default_store.png" />
+						</div>
+						<span class="store-name" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }">门店名称</span>
+						<span class="change" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }">切换 ></span>
+					</div>
+					<div class="store-right-search">
+						<div><img src="{$resourceurl}/community_show/img/sousuo.png" /> 搜索</div>
+					</div>
+				</div>
+				
+				<div class="info-item style-four" v-if="nc.style == 3">
+					<div class="store-left-wrap">
+						<i class="iconfont iconweizhi" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }"></i>
+						<span class="store-name" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }">门店名称</span>
+						<i class="layui-icon layui-icon-down" :style="{ color: nc.textColor?nc.textColor:'rgba(0,0,0,0)' }"></i>
+					</div>
+					<div class="store-right-search">
+						<div>商品搜索<i class="iconfont iconsousuo2"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</template>
+	
+	<!-- 编辑 -->
+	<template slot="edit">
+		<template v-if="nc.lazyLoad">
+			<store-show-style></store-show-style>
+		</template>
+
+
+		<!-- 商品列表风格弹框 -->
+		<div class="goods-list-style" style="display: none;">
+			<div class="style-list-goods layui-form">
+				<div class="style-list-con-store">
+					<div class="style-li-goods" v-bind:class="{'selected ns-border-color': nc.style == 1}">
+						<img src="{$resourceurl}/community_show/img/style1.jpg" />
+						<span class="layui-hide">风格一</span>
+					</div>
+					<div class="style-li-goods" v-bind:class="{'selected ns-border-color': nc.style == 2}">
+						<img src="{$resourceurl}/community_show/img/style2.jpg" />
+						<span class="layui-hide">风格二</span>
+					</div>
+				</div>
+
+				<input type="hidden" name="style">
+				<input type="hidden" name="style_name" />
+
+			</div>
+		</div>
+	</template>
+	
+	<!-- 资源 -->
+	<template slot="resource">
+		
+		<css src="{$resourceurl}/community_show/css/style.css"></css>
+		<js src="{$resourceurl}/community_show/js/style.js"></js>
+	
+	</template>
+
+</cm-construct>

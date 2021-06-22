@@ -1,0 +1,298 @@
+﻿<cm-construct v-bind:data="data[index]" class="component-seckill">
+
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="preview-box" v-bind:style="{ backgroundColor : nc.backgroundColor, margin: nc.marginTop + 'px 15px 0' }">
+			<div class="marketing-wrap marketing-wrap-1" v-if="nc.style == 1">
+				<div class="seckill-list-preview marketing-box marketing-box-two">
+					<div class="seckill-time-list1" v-bind:style="{ backgroundColor : nc.backgroundColor }">
+						<div class="seckill-time-list1-tit">
+							<div>整点</div>
+							<div>秒杀</div>
+						</div>
+						<ul>
+							<li class="selected">
+								<p class="time">12:00</p>
+								<p class="desc">已开抢</p>
+							</li>
+							<li class="active">
+								<p class="time">14:00</p>
+								<p class="desc" v-bind:style="{ color : nc.backgroundColor }">疯抢中</p>
+							</li>
+							<li>
+								<p class="time">16:00</p>
+								<p class="desc">即将开抢</p>
+							</li>
+						</ul>
+						<div class="seckill-time-list1-more">更多</div>
+					</div>
+
+					<div class="list-wrap" style="position: relative;" v-if="nc.style==1">
+						<div class="item">
+							<div class="img-wrap">
+								<img src="/assets/ep/images/diy/crack_figure.png" />
+							</div>
+							<div class="content">
+								<div class="top">
+									<div class="content-desc">商品名称</div>
+									<div class="progress">
+										<div class="img">
+											<div class="img-con"></div>
+										</div>
+										<div class="num">已抢888件</div>
+									</div>
+								</div>
+
+								<div class="bot">
+									<div class="content-price">
+										<div>¥<span>99.00</span></div>
+										<div class="content-num">￥139.00</div>
+									</div>
+									<button class="layui-btn">马上抢</button>
+								</div>
+							</div>
+						</div>
+						<span class="current">1/3</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- 风格二/风格三 -->
+			<div class="seckill-list-preview marketing-box marketing-box-two" v-bind:class="'marketing-box-'+ nc.style" v-if="nc.style == 2 || nc.style == 3">
+				<template v-if="nc.lazyLoad">
+					<seckill-top-content></seckill-top-content>
+				</template>
+
+				<div class="list-wrap">
+					<div class="item">
+						<div class="img-wrap">
+							<img src="/assets/ep/images/diy/crack_figure.png" />
+						</div>
+						<div class="content">
+							<div class="top">
+								<div class="content-desc">商品名称</div>
+								<div class="progress">
+									<div class="img">
+										<div class="img-con"></div>
+									</div>
+									<div class="num">已抢65.32%</div>
+								</div>
+							</div>
+
+							<div class="bot">
+								<div class="content-price">
+									<div>¥<span>99.00</span></div>
+									<div class="content-num">￥139.00</div>
+								</div>
+								<button class="layui-btn">立即抢购</button>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="img-wrap">
+							<img src="/assets/ep/images/diy/crack_figure.png" />
+						</div>
+						<div class="content">
+							<div class="top">
+								<div class="content-desc">商品名称</div>
+								<div class="progress">
+									<div class="img">
+										<div class="img-con"></div>
+									</div>
+									<div class="num">已抢65.32%</div>
+								</div>
+							</div>
+
+							<div class="bot">
+								<div class="content-price">
+									<div>¥<span>99.00</span></div>
+									<div class="content-num">￥139.00</div>
+								</div>
+								<button class="layui-btn">立即抢购</button>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="img-wrap">
+							<img src="/assets/ep/images/diy/crack_figure.png" />
+						</div>
+						<div class="content">
+							<div class="top">
+								<div class="content-desc">商品名称</div>
+								<div class="progress">
+									<div class="img">
+										<div class="img-con"></div>
+									</div>
+									<div class="num">已抢65.32%</div>
+								</div>
+							</div>
+
+							<div class="bot">
+								<div class="content-price">
+									<div>¥<span>99.00</span></div>
+									<div class="content-num">￥139.00</div>
+								</div>
+								<button class="layui-btn">立即抢购</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="more" v-if="nc.style == 3">
+					<span>更多秒杀</span><i class="layui-icon layui-icon-right"></i>
+				</div>
+			</div>
+
+			<!-- 风格四 -->
+			<div class="marketing-wrap" v-if="nc.style == 4">
+				<img v-if="nc.bgSelect == 'red'" src="{$resourceurl}/seckill/img/red.png" />
+				<img v-if="nc.bgSelect == 'blue'" src="{$resourceurl}/seckill/img/blue.png" />
+				<img v-if="nc.bgSelect == 'yellow'" src="{$resourceurl}/seckill/img/yellow.png" />
+				<img v-if="nc.bgSelect == 'violet'" src="{$resourceurl}/seckill/img/violet.png" />
+
+				<div class="seckill-list-preview marketing-box">
+
+					<template v-if="nc.lazyLoad">
+						<seckill-top-content></seckill-top-content>
+					</template>
+
+					<div class="seckill-time-list">
+						<ul>
+							<li class="selected">
+								<p>12:00</p>
+								<p>抢购中</p>
+							</li>
+							<li>
+								<p>14:00</p>
+								<p>敬请期待</p>
+							</li>
+							<li>
+								<p>16:00</p>
+								<p>敬请期待</p>
+							</li>
+							<li>
+								<p>18:00</p>
+								<p>敬请期待</p>
+							</li>
+							<li>
+								<p>20:00</p>
+								<p>敬请期待</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="list-wrap" v-if="nc.style==1">
+						<div class="item">
+							<div class="img-wrap">
+								<img src="/assets/ep/images/diy/crack_figure.png" />
+							</div>
+							<div class="content">
+								<div class="content-desc">商品名称</div>
+								<div class="content-price">
+									¥<span>99.00</span>
+								</div>
+								<div class="content-num">￥139.00</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrap">
+								<img src="/assets/ep/images/diy/crack_figure.png" />
+							</div>
+							<div class="content">
+								<div class="content-desc">商品名称</div>
+								<div class="content-price">
+									¥<span>99.00</span>
+								</div>
+								<div class="content-num">￥139.00</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="img-wrap">
+								<img src="/assets/ep/images/diy/crack_figure.png" />
+							</div>
+							<div class="content">
+								<div class="content-desc">商品名称</div>
+								<div class="content-price">
+									¥<span>99.00</span>
+								</div>
+								<div class="content-num">￥139.00</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</template>
+
+	<!-- 编辑 -->
+	<template slot="edit">
+		<slide v-if="nc.style == 2 || nc.style == 3" v-bind:data="{ field : 'goodsCount', label: '商品数量', max: 9, min: 1}"></slide>
+
+		<template v-if="nc.lazyLoad">
+			<!-- <seckill-style></seckill-style>
+			<seckill-color v-if="nc.style == 1"></seckill-color> -->
+			<!-- <seckill-change-type v-if="nc.style == 1"></seckill-change-type> -->
+		</template>
+
+		<div class="template-edit-title">
+			<h3>顶部标题设置</h3>
+			<i class="layui-icon layui-icon-down" onclick="closeBox(this)"></i>
+		</div>
+		<div class="template-edit-wrap">
+			<template v-if="nc.lazyLoad">
+				<div v-if="nc.style == 1">
+					<color v-bind:data="{ field : 'titleTextColor', 'label' : '文本颜色', 'defaultcolor': '#333333' }"></color>
+					<color v-bind:data="{ field : 'backgroundColor', 'label' : '背景颜色' }"></color>
+				</div>
+				<seckill-top-list v-else="nc.style !== 1"></seckill-top-list>
+			</template>
+		</div>
+
+		<div class="template-edit-title">
+			<h3>其他设置</h3>
+			<i class="layui-icon layui-icon-down" onclick="closeBox(this)"></i>
+		</div>
+		<div class="template-edit-wrap">
+			<slide v-bind:data="{ field : 'marginTop', label : '页面间距' }"></slide>
+		</div>
+
+
+		<!-- 弹框 -->
+		<div class="seckill-list-style">
+			<div class="style-list-seckill layui-form">
+				<div class="style-list-con-seckill">
+					<div class="style-li-seckill" v-bind:class="{'selected ns-border-color': nc.style == 1}">
+						<img src="{$resourceurl}/seckill/img/seckill_style_1.png" />
+						<span class="layui-hide">风格一</span>
+					</div>
+
+					<div class="style-li-seckill" v-bind:class="{'selected ns-border-color': nc.style == 2}">
+						<img src="{$resourceurl}/seckill/img/seckill_style_2.png" />
+						<span class="layui-hide">风格二</span>
+					</div>
+
+					<div class="style-li-seckill" v-bind:class="{'selected ns-border-color': nc.style == 3}">
+						<img src="{$resourceurl}/seckill/img/seckill_style_3.png" />
+						<span class="layui-hide">风格三</span>
+					</div>
+				</div>
+
+				<input type="hidden" name="style">
+				<input type="hidden" name="style_name" />
+			</div>
+		</div>
+
+	</template>
+
+	<!-- 资源 -->
+	<template slot="resource">
+		<js>
+			var seckillResourcePath = "{$resourceurl}";
+		</js>
+		<js src="{$resourceurl}/seckill/js/style.js"></js>
+		<css src="{$resourceurl}/seckill/css/style.css"></css>
+
+	</template>
+
+</nc-component>

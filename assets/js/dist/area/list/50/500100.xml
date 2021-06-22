@@ -205,7 +205,7 @@
     <street name="三圣镇" code="500109113" />
     <street name="金刀峡镇" code="500109116" />
 </county>
-<county name="万盛" code="500110">
+<county name="綦江" code="500110">
     <street name="古南街道" code="500110001" />
     <street name="文龙街道" code="500110002" />
     <street name="三江街道" code="500110003" />
@@ -370,8 +370,7 @@
     <street name="洪湖镇" code="500115136" />
     <street name="万顺镇" code="500115137" />
 </county>
-<county name="綦江" code="500222">
-</county>
+
 <county name="潼南" code="500223">
     <street name="桂林街道" code="500223001" />
     <street name="梓潼街道" code="500223002" />

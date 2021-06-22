@@ -1,0 +1,74 @@
+<cm-construct v-bind:data="data[index]" class="top-search">
+
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="preview-box" v-bind:style="{background: nc.backgroundColor}">
+			<div class="top-search-form">
+				<input name="d_elem" type="hidden" value="{$shop_info.logo}" ref="d_elem" />
+				<div class="logo" v-if="nc.searchType == 2" :style="{backgroundImage:'url('+changeImgUrl(nc.searchImg)+')'}">
+				</div>
+				<div class="top-search-box" v-bind:class="{'border-circle': nc.borderType == 2}" v-bind:style="{background: nc.bgColor, textAlign: nc.textAlign}">
+					<span class="top-search-intro" v-bind:style="{color: nc.textColor?nc.textColor:'rgba(0,0,0,0)'}">{{ nc.title }}</span>
+					<span class="top-search-icon"><i class="iconfont iconsousuo" v-bind:style="{color: nc.textColor?nc.textColor:'rgba(0,0,0,0)'}"></i></span>
+				</div>
+			</div>
+		</div>
+
+	</template>
+
+	<!-- 编辑 -->
+	<template slot="edit">
+		<div class="form-group row">
+			<label class="layui-form-label sm">文本名</label>
+			<div class="col-sm-10">
+				<input type="text" v-model="nc.title" v-bind:id="'title_'+index" placeholder="请输入搜索内容" class="form-control">
+			</div>
+		</div>
+
+		<div class="search_h3">
+			<h3 class="ns-margin-left">搜索样式</h3>
+			<span class="layui-nav-more"></span>
+		</div>
+		<div class="line"></div>
+		<color class="ns-margin-top" v-bind:data="{ 'defaultcolor': '#999999' }"></color>
+		<color v-bind:data="{ field : 'backgroundColor', 'label' : '背景颜色' }"></color>
+		<color v-bind:data="{ field : 'bgColor', 'label' : '框体颜色' }"></color>
+
+		<template v-if="nc.lazyLoad">
+			<goods-search></goods-search>
+			<search-border></search-border>
+		</template>
+
+	</template>
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="search_style" >
+			<div class="sytle">
+				<!-- 图一 -->
+				<div class="text-title" data-index="1" v-if="nc.searchType == 1" :class="{active:nc.searchStyle == 1}">
+					<img src="{$resourceurl}/search/img/style3.png"/>
+				</div>
+				<div class="text-title" data-index="2" v-if="nc.searchType == 1" :class="{active:nc.searchStyle == 2}">
+					<img src="{$resourceurl}/search/img/style4.png"/>
+				</div>
+				<div class="text-title" data-index="1" v-if="nc.searchType == 2" :class="{active:nc.searchStyle == 1}">
+					<img src="{$resourceurl}/search/img/style1.png"/>
+				</div>
+				<div class="text-title" data-index="2" v-if="nc.searchType == 2" :class="{active:nc.searchStyle == 2}">
+					<img src="{$resourceurl}/search/img/style2.png"/>
+				</div>
+			</div>
+		</div>
+	</template>
+	<!-- 资源 -->
+	<template slot="resource">
+		<js>
+			var searchResourcePath = "{$resourceurl}";
+		</js>
+		<css src="{$resourceurl}/search/css/style.css"></css>
+		<css src="{$resourceurl}/search/css/iconfont.css"></css>
+		<js src="{$resourceurl}/search/js/style.js"></js>
+
+	</template>
+
+</cm-construct>

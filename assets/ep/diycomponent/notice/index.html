@@ -1,0 +1,85 @@
+<cm-construct v-bind:data="data[index]" class="notice">
+
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="preview-box" v-bind:style="{ backgroundColor : nc.backgroundColor, margin : nc.marginTop + 'px 15px 0' }">
+			<!-- style1 -->
+			<div class="notice-box" v-bind:class="'notice-box-'+ nc.style" v-if="nc.style == 1">
+				<div class="notice-con" v-for="(item, index) in nc.list" v-if="index < 1">
+					<div class="notice-con-icon" v-if="index == 0"><img v-bind:src="nc.leftImg" /></div>
+					<!-- <div class="notice-con-split"></div> -->
+					<span class="notice-con-font" v-bind:style="{color: nc.textColor?nc.textColor:'rgba(0,0,0,0)'}">{{ item.title }}</span>
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<!-- 编辑 -->
+	<template slot="edit">
+		<template v-if="nc.lazyLoad">
+			<notice-con></notice-con>
+			<notice-edit></notice-edit>
+			
+		</template>
+		
+		<color v-show="nc.isEdit == 1" v-bind:data="{ defaultcolor: '#333333' }"></color>
+		<div class="template-edit-title">
+			<h3>其他设置</h3>
+		</div>
+		<div class="template-edit-wrap">
+			<color v-bind:data="{ field : 'backgroundColor', label : '背景颜色' }"></color>
+			<slide v-bind:data="{ field : 'marginTop', label : '页面间距' }"></slide>
+		</div>
+
+		<!-- 网站公告弹框 -->
+		<div class="notice-list">
+			<table class="layui-table" id="notice_list"></table>
+			<div class="layui-form layui-border-box layui-table-view">
+				<div class="layui-table-box">
+					<div class="layui-table-header">
+						<table cellspacing="0" cellpadding="0" border="0" class="layui-table" lay-skin="line" lay-size="lg">
+							<thead>
+								<tr>
+									<th data-field="0" data-key="2-0-0" data-unresize="true" class=" layui-table-col-special">
+										<div class="layui-table-cell laytable-cell-2-0-0">
+											<span>公告标题</span>
+										</div>
+									</th>
+									<th data-field="1" data-key="2-0-1" data-unresize="true" class=" layui-table-col-special">
+										<div class="layui-table-cell laytable-cell-2-0-1">
+											<span>创建时间</span>
+										</div>
+									</th>
+									<th data-field="2" data-key="2-0-2" data-unresize="true" class=" layui-table-col-special">
+										<div class="layui-table-cell laytable-cell-2-0-2">
+											<span>操作</span>
+										</div>
+									</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="layui-table-body layui-table-main">
+						<table cellspacing="0" cellpadding="0" border="0" class="layui-table" lay-skin="line" lay-size="lg">
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</template>
+
+	<!-- 资源 -->
+	<template slot="resource">
+
+		<js>
+			var noticeResourcePath = "{$resourceurl}";
+		</js>
+		<css src="{$resourceurl}/notice/css/style.css"></css>
+		<js src="{$resourceurl}/notice/js/style.js"></js>
+
+	</template>
+
+</cm-construct>

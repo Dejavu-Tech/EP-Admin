@@ -50,6 +50,7 @@
     <street name="金桥经济技术开发区" code="150105400" />
     <street name="呼和浩特市如意开发区" code="150105401" />
     <street name="呼和浩特留学人员创业园" code="150105402" />
+	<street name="呼伦贝尔南路" code="150105403" />
 </county>
 <county name="土默特左" code="150121">
     <street name="察素齐镇" code="150121100" />

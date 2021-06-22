@@ -1,0 +1,639 @@
+@CHARSET "UTF-8";
+
+/*魔方*/
+.draggable-element .rubik-cube .preview-draggable .preview-box {
+	padding: 0;
+	margin: 0 15px;
+}
+
+.rubik-cube .preview-draggable div.tip {
+	background: #EBF8FD;
+	color: #88c4dc;
+	text-align: center;
+	height: 136px;
+	line-height: 136px;
+}
+
+.rubik-cube .preview-draggable ul {
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.rubik-cube .preview-draggable ul li {
+	/* float: left; */
+	text-align: center;
+}
+
+.rubik-cube .preview-draggable ul li img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*编辑值*/
+.rubik-cube .selected-template-list {
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.rubik-cube .selected-template-list ul {
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.rubik-cube .selected-template-list ul li {
+	width: 46px;
+	height: 32px;
+	text-align: center;
+	line-height: 29px;
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
+	background: #ffffff;
+	box-sizing: border-box;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .selected-template-list ul li:last-child {
+	border-right: 1px solid #e5e5e5;
+}
+
+.rubik-cube .selected-template-list ul li img {
+	display: inline-block;
+}
+
+.rubik-cube .selected-template-list ul li div {
+	font-size: 12px;
+}
+
+.selected-template-layout .layui-input-block {
+	margin-left: 15px;
+}
+
+.rubik-cube .layout {
+	/*clear:both;*/
+	position: relative;
+}
+
+.rubik-cube .layout ul {
+	overflow: hidden;
+}
+
+.rubik-cube .layout li {
+	float: left;
+	color: #909399;
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
+	font-size: 12px;
+	position: relative;
+}
+
+.rubik-cube .layout li div.empty {
+	left: 0;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -26px;
+}
+
+.rubik-cube .layout li div.empty p {
+	margin: 0;
+	line-height: 26px;
+}
+
+.rubik-cube .layui-form-item p {
+	margin: 10px 0 10px 15px;
+	color: #909399;
+	font-size: 12px;
+}
+
+.rubik-cube .image-ad-list {
+	/* margin-left: 10px;
+	margin-bottom: 20px; */
+	margin-top: 15px;
+}
+
+.rubik-cube .image-ad-list > ul > li {
+	width: 100%;
+	padding: 10px;
+	background: #ffffff;
+	border: 1px dashed #CCCCCC;
+	position: relative;
+	margin-top: 15px;
+	box-sizing: border-box;
+}
+
+.rubik-cube .image-ad-list > ul > li:first-child {
+	margin-top: 0;
+}
+
+.rubik-cube .image-ad-list > ul > li .content-block {
+	display: inline-block;
+	width: calc(100% - 74px);
+}
+
+.rubik-cube .image-ad-list > ul > li .content-block.textNavigation {
+	width: 100%;
+}
+
+.rubik-cube .image-ad-list > ul > li .content-block .layui-form-item {
+	margin: 0;
+}
+
+.rubik-cube .image-ad-list > ul > li .content-block .layui-form-label {
+	/* width: 60px;
+	padding: 9px 0;
+	line-height: 1; */
+}
+
+.rubik-cube .image-ad-list > ul > li .content-block div {
+	margin-top: 10px;
+}
+
+.rubik-cube .image-ad-list > ul > li .content-block div:last-child {
+	margin-top: 0;
+}
+
+.rubik-cube .layout li div.have-preview-image {
+	box-sizing: border-box;
+}
+
+.rubik-cube .layout li div.have-preview-image img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*1行2个*/
+/*预览*/
+.rubik-cube .preview-draggable ul li.row1-of2 {
+	width: 50%;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of2:nth-child(1) div {
+	padding-left: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of2:nth-child(2) div {
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/*编辑*/
+.rubik-cube .layout li.row1-of2 {
+	width: 49.2%;
+	height: 160px;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-of2:last-child {
+	border-right: 1px solid #e5e5e5;
+}
+
+.rubik-cube .layout li.row1-of2 div.empty {
+}
+
+.rubik-cube .layout li.row1-of2 div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+/*1行3个*/
+/*预览*/
+.rubik-cube .preview-draggable ul li.row1-of3 {
+	width: 33.33%;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of3:nth-child(1) div {
+	padding-left: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of3:nth-child(2) div {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of3:nth-child(3) div {
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/*编辑*/
+.rubik-cube .layout li.row1-of3 {
+	width: 32.5%;
+	height: 100px;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-of3:last-child {
+	border-right: 1px solid #bdf;
+}
+
+.rubik-cube .layout li.row1-of3 div.empty {
+}
+
+.rubik-cube .layout li.row1-of3 div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 100px;
+	background: #ffffff;
+}
+
+/*1行4个*/
+/*预览*/
+.rubik-cube .preview-draggable ul li.row1-of4 {
+	width: 25%;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of4:nth-child(1) div {
+	padding-left: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of4:nth-child(2) div {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of4:nth-child(3) div {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-of4:nth-child(4) div {
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/*编辑*/
+.rubik-cube .layout li.row1-of4 {
+	width: 24.2%;
+	height: 80px;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-of4:last-child {
+	border-right: 1px solid #bdf;
+}
+
+.rubik-cube .layout li.row1-of4 div.empty {
+}
+
+.rubik-cube .layout li.row1-of4 div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 80px;
+	background: #ffffff;
+}
+
+/*2左2右*/
+/*预览*/
+.rubik-cube .preview-draggable ul li.row2-lt-of2-rt {
+	width: 50%;
+	display: inline-block;
+}
+
+.rubik-cube .preview-draggable ul li.row2-lt-of2-rt:nth-child(1) div {
+	padding-top: 0 !important;
+	padding-left: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row2-lt-of2-rt:nth-child(2) div {
+	padding-top: 0 !important;
+	padding-right: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row2-lt-of2-rt:nth-child(3) div {
+	padding-bottom: 0 !important;
+	padding-left: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row2-lt-of2-rt:nth-child(4) div {
+	padding-bottom: 0 !important;
+	padding-right: 0 !important;
+}
+
+/*编辑*/
+.rubik-cube .layout li.row2-lt-of2-rt {
+	width: 49.2%;
+	height: 160px;
+}
+
+.rubik-cube .layout li.row2-lt-of2-rt:nth-child(1) {
+	border-right: 1px transparent solid;
+	border-bottom: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row2-lt-of2-rt:nth-child(2) {
+	border-bottom: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row2-lt-of2-rt:nth-child(3) {
+	border-right: 1px transparent solid;
+	clear: both;
+}
+
+.rubik-cube .layout li.row2-lt-of2-rt div.empty {
+}
+
+.rubik-cube .layout li.row2-lt-of2-rt div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+/*1左2右*/
+/*预览*/
+.rubik-cube .preview-draggable ul .template-left, .rubik-cube .preview-draggable ul .template-right {
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.rubik-cube .preview-draggable ul li.row1-lt-of2-rt {
+	width: 100%;
+}
+
+.rubik-cube .preview-draggable ul .template-left li div {
+	padding-left: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul .template-right li.row1-lt-of2-rt:nth-child(1) div {
+	padding-top: 0 !important;
+	padding-right: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul .template-right li.row1-lt-of2-rt:nth-child(2) div {
+	padding-right: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/*编辑*/
+.rubik-cube .layout li.row1-lt-of2-rt {
+	width: 49.2%;
+	font-size: 12px;
+}
+
+.rubik-cube .layout li.row1-lt-of2-rt:nth-child(1) {
+	height: 322px;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-lt-of2-rt:nth-child(2) {
+	height: 160px;
+	border-bottom: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-lt-of2-rt:nth-child(3) {
+	height: 160px;
+}
+
+.rubik-cube .layout li.row1-lt-of2-rt div.empty {
+}
+
+.rubik-cube .layout li.row1-lt-of2-rt:nth-child(1) div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 322px;
+	background: #ffffff;
+}
+
+.rubik-cube .layout li.row1-lt-of2-rt:nth-child(2) div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+.rubik-cube .layout li.row1-lt-of2-rt:nth-child(3) div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+/*1上2下*/
+/*预览*/
+/*.rubik-cube .preview-draggable ul li.row1-tp-of2-bm{height:130px;line-height: 130px;}*/
+.rubik-cube .preview-draggable ul li.row1-tp-of2-bm:nth-child(1) {
+	width: 100%;
+}
+
+.rubik-cube .preview-draggable ul li.row1-tp-of2-bm:nth-child(2),
+.rubik-cube .preview-draggable ul li.row1-tp-of2-bm:nth-child(3) {
+	width: 50%;
+}
+
+.rubik-cube .preview-draggable ul li.row1-tp-of2-bm:nth-child(1) div {
+	padding-top: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-tp-of2-bm:nth-child(2) div {
+	padding-left: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul li.row1-tp-of2-bm:nth-child(3) div {
+	padding-right: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/*编辑*/
+.rubik-cube .layout li.row1-tp-of2-bm {
+	height: 160px;
+}
+
+.rubik-cube .layout li.row1-tp-of2-bm:nth-child(1) {
+	width: 99.4%;
+	border-bottom: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-tp-of2-bm:nth-child(2) {
+	width: 49.2%;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-tp-of2-bm:nth-child(3) {
+	width: 49.2%;
+}
+
+.rubik-cube .layout li.row1-tp-of2-bm div.empty {
+}
+
+.rubik-cube .layout li.row1-tp-of2-bm div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+/*1左3右*/
+/*预览*/
+.rubik-cube .preview-draggable ul .template-left li.row1-lt-of1-tp-of2-bm {
+	width: 100%;
+}
+
+.rubik-cube .preview-draggable ul .template-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rubik-cube .preview-draggable ul .template-bottom li {
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.rubik-cube .preview-draggable ul .template-bottom li.row1-lt-of1-tp-of2-bm:nth-child(1) {
+	padding-left: 0 !important;
+}
+
+.rubik-cube .preview-draggable ul .template-bottom li.row1-lt-of1-tp-of2-bm:nth-child(2) {
+	padding-right: 0 !important;
+}
+
+/*编辑*/
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(1) {
+	height: 320px;
+	width: 49.2%;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(2) {
+	height: 160px;
+	width: 49.2%;
+	border-bottom: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(3) {
+	height: 160px;
+	width: 24.2%;
+	border-right: 1px transparent solid;
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(4) {
+	height: 160px;
+	width: 24.2%;
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm div.empty {
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(1) div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 320px;
+	background: #ffffff;
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(2) div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(3) div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+.rubik-cube .layout li.row1-lt-of1-tp-of2-bm:nth-child(4) div.have-preview-image {
+	text-align: center;
+	height: 100%;
+	line-height: 160px;
+	background: #ffffff;
+}
+
+/*自定义魔方*/
+.rubik-cube .layout li.custom-rubik-cube {
+	width: 25%;
+	height: 70px;
+	border: 1px solid #e5e5e5;
+	border-left: 1px transparent solid;
+	border-bottom: 1px transparent solid;
+	background: #f8f8f8;
+	box-sizing: border-box;
+}
+
+.rubik-cube .layout li.custom-rubik-cube.border-left {
+	border-left: 1px solid #e5e5e5;
+}
+
+.rubik-cube .layout li.custom-rubik-cube.border-bottom {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.rubik-cube .layout ul.custom-rubik-cube:last-child li {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.rubik-cube .layout li.custom-rubik-cube > div {
+	font-size: 20px;
+	color: #bbb;
+	text-align: center;
+}
+
+.rubik-cube .layout div.selected-rubik-cube {
+	position: absolute;
+	border: 1px solid #bdf;
+	background: #e8f7fd;
+	text-align: center;
+	color: #88c4dc;
+	font-size: 12px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.rubik-cube .layout div.selected-rubik-cube .image-url {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.rubik-cube .layout div.selected-rubik-cube .image-url img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.rubik-cube .layout div.selected-rubik-cube.selected:hover i {
+	display: block;
+}
+
+.rubik-cube .layout div.selected-rubik-cube.have-image {
+	background: #ffffff;
+}
+
+.rubik-cube .layout div.selected-rubik-cube span {
+	display: block;
+	line-height: 20px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	left: 0;
+	margin-top: -10px;
+}

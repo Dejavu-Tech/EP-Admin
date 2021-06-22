@@ -1,0 +1,32 @@
+<cm-construct v-bind:data="data[index]" v-bind:class="['graphic-navigation']">
+
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="preview-box" v-bind:style="{ background: nc.backgroundColor, marginTop : nc.marginTop + 'px', borderRadius: nc.navRadius == 'fillet' ? '5px' : '0px' }">
+			<template v-if="nc.lazyLoad">
+				<graphic-nav></graphic-nav>
+			</template>
+		</div>
+	</template>
+	
+	<!-- 编辑 -->
+	<template slot="edit">
+	
+		<template v-if="nc.lazyLoad">
+			<graphic-nav-list></graphic-nav-list>
+		</template>
+		
+	</template>
+	
+	<!-- 资源 -->
+	<template slot="resource">
+		
+		<js>
+			var graphicNavResourcePath = "{$resourceurl}";
+		</js>
+		<css src="{$resourceurl}/graphic_nav/css/style.css"></css>
+		<js src="{$resourceurl}/graphic_nav/js/style.js"></js>
+		
+	</template>
+
+</cm-construct>

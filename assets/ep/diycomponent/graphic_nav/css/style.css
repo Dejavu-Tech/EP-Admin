@@ -1,0 +1,188 @@
+@CHARSET "UTF-8";
+
+.graphic-navigation .edit-attribute .attr-wrap .restore-wrap .img-block.has-choose-image img {
+	width: 35px;
+	height: 35px;
+}
+
+
+/*图文导航组件*/
+.graphic-navigation .preview-draggable .preview-box {
+	padding: 8px 0;
+	margin: 0 15px;
+	border-radius: 5px;
+}
+
+.graphic-navigation .preview-draggable ul {
+	overflow: hidden;
+	list-style: none;
+}
+
+.graphic-navigation .preview-draggable ul.horizontal-scroll {
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.graphic-navigation .preview-draggable ul.horizontal-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.graphic-navigation .preview-draggable li {
+	width: 50%;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.graphic-navigation .preview-draggable li img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.graphic-navigation .preview-draggable li:last-child {
+	border: 0;
+}
+
+.graphic-navigation .preview-draggable li span {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 20px;
+	display: block;
+	line-height: 20px;
+}
+
+/*.graphic-navigation .preview-draggable .graphic-nav{visibility: hidden;}*/
+.graphic-navigation .preview-draggable .graphic-nav>.wrap {
+	/* overflow-x: hidden;white-space: nowrap; background: #ffffff; */
+	display: flex;
+	/* justify-content: space-around; */
+	flex-wrap: wrap;
+	padding: 0 5px;
+}
+
+.graphic-navigation .preview-draggable .graphic-nav .item {
+	text-align: center;
+	float: none;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 8px 5px;
+}
+
+.graphic-navigation .preview-draggable .graphic-nav .item a {
+	display: block;
+}
+
+.graphic-navigation .preview-draggable .graphic-nav .item a img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.graphic-navigation .preview-draggable .graphic-nav .item a span {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	font-size: 13px;
+}
+
+.graphic-navigation .graphic-nav-list .template-list .template-item {
+	float: left;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+	margin-right: 20px;
+	padding: 5px;
+	background: #ffffff;
+	cursor: pointer;
+}
+
+.graphic-navigation .graphic-nav-list .template-list .template-item img {
+	display: block;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul {
+	padding: 10px 0 10px 15px;
+	padding-top: 10px;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li {
+	padding: 10px;
+	background: #ffffff;
+	border: 1px dashed #e5e5e5;
+	position: relative;
+	margin-top: 16px;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li:first-child {
+	margin-top: 0;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li .content-block {
+	display: inline-block;
+	width: 71%;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li .content-block.textNavigation {
+	width: 100%;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li .content-block .layui-form-item {
+	margin: 0;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li .content-block .layui-form-label {
+	width: 60px;
+	padding: 9px 0;
+	line-height: 1;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li .content-block div {
+	margin-top: 10px;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li .content-block div:last-child {
+	margin-top: 0;
+}
+
+.graphic-navigation .graphic-nav-list>.template-edit-wrap>ul>li:hover .del {
+	display: block;
+}
+
+.graphic-navigation .add-item {
+	padding: 10px;
+	border: 1px dashed #e5e5e5;
+	margin: 16px 0 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.graphic-navigation .add-item i {
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	font-size: 18px;
+	margin-right: 10px;
+	font-style: normal;
+}
+
+.graphic-navigation .add-item span {
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+}
+
+.graphic-navigation p.hint {
+	font-size: 12px;
+	color: #909399;
+	line-height: 20px;
+}
+
+.graphic-navigation .error-msg {
+	margin-top: 5px;
+	color: #f44;
+	display: none;
+}

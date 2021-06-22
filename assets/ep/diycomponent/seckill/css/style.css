@@ -1,0 +1,457 @@
+@CHARSET "UTF-8";
+.component-seckill .marketing-wrap {
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	position: relative;
+	height: 280px;
+}
+
+.component-seckill .marketing-wrap img {
+	width: 100%;
+}
+
+.component-seckill .marketing-wrap .marketing-box {
+	width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 15px;
+}
+
+.component-seckill .goods-head .time {font-size: 14px; color: #777777;}
+.component-seckill .goods-head .time span {display: inline-block; width: 15px; height: 15px; line-height: 15px; text-align: center; background-color: #383838; color: #FFFFFF; border-radius: 3px; margin: 0 3px;}
+.component-seckill .goods-head .time .second {background-color: #FF4544;}
+
+
+/* 顶部标题 */
+.component-seckill .goods-head {width: 100%; display: -webkit-box;display: -webkit-flex;display: flex;-webkit-box-pack: justify;-webkit-justify-content: space-between;justify-content: space-between;-webkit-box-align: center;-webkit-align-items: center;align-items: center;height: 15px;line-height: 15px;}
+.component-seckill .goods-head .title-wrap {display: -webkit-box;display: -webkit-flex;display: flex;-webkit-box-align: center;-webkit-align-items: center;align-items: center;width: calc(100% - 80px);}
+.component-seckill .goods-head .left-icon {display: inline-block; width: 63px; height: 15px; flex-shrink: 0; margin-right: 10px;}
+.component-seckill .goods-head .left-icon img {width: 100%; height: 100%; vertical-align: top;}
+.component-seckill .goods-head .title-wrap .name {color: #909399; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.component-seckill .goods-head .more.violet span, .component-seckill .goods-head .more.violet .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #627BFD 0%, #8662FD 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.component-seckill .goods-head .more.yellow span, .component-seckill .goods-head .more.yellow .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #FEB632 0%, #FE6232 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.component-seckill .goods-head .more.blue span, .component-seckill .goods-head .more.blue .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #0ECFD3 0%, #12D0AE 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.component-seckill .goods-head .more.red span, .component-seckill .goods-head .more.red .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #FF5151 0%, #FF7B91 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* 秒杀时间段 */
+.component-seckill .seckill-time-list ul {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.component-seckill .seckill-time-list ul li {
+	flex: 1;
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.component-seckill .seckill-time-list ul li p:first-child {
+	font-size: 16px;
+	color: #606266;
+	line-height: 14px;
+}
+
+.component-seckill .seckill-time-list ul li p:last-child {
+	font-size: 12px;
+	color: #909399;
+	line-height: 12px;
+	margin-top: 5px;
+}
+
+.component-seckill .seckill-time-list ul li.selected {
+	border-bottom: 1px solid #FF4544;
+}
+
+.component-seckill .seckill-time-list ul li.selected p {
+	color: #FF4544;
+}
+
+
+/* 风格一 */
+/* 内容 */
+.component-seckill .list-wrap {display: flex; justify-content: space-between; margin-top: 10px;}
+.component-seckill .list-wrap .item {display: inline-block; width: 100px;}
+.component-seckill .list-wrap .item .img-wrap{width: 100px;height: 100px;border-radius: 5px; overflow: hidden;}
+.component-seckill .list-wrap .item .img-wrap img{max-width: 100%;max-height: 100%;}
+.component-seckill .list-wrap .item .content{width: 100%;}
+.component-seckill .list-wrap .item .content .content-desc {width: 100%; font-size: 14px; line-height: 14px; margin-top: 10px;}
+.component-seckill .list-wrap .item .content .content-price {font-size: 12px; color: #FF4544; margin-top: 10px; height: 16px; font-weight: 600;}
+.component-seckill .list-wrap .item .content .content-price span {font-size: 16px; line-height: 16px;}
+.component-seckill .list-wrap .item .content .content-num {font-size: 12px; line-height: 12px; margin-top: 10px; color: #909399; text-decoration: line-through;}
+
+/* 弹框 */
+/* 风格 */
+.component-seckill .seckill-list-style {
+	display: none;
+}
+
+.style-list-con-seckill {
+	display: flex;
+	flex-wrap: wrap;
+}
+.style-list-con-seckill .style-li-seckill {
+	width: 32%;
+	height: 300px;
+	line-height: 300px;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 2%;
+	margin-bottom: 15px;
+	cursor: pointer;
+	border: 1px solid #ededed;
+	background: #f7f8fa;
+	box-sizing: border-box;
+}
+
+.style-list-con-seckill .style-li-seckill:nth-child(3n) {
+	margin-right: 0;
+}
+
+.style-list-con-seckill .style-li-seckill img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.layui-layer-page .layui-layer-content {
+	overflow: auto !important;
+}
+
+.btn-box {
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* 风格二 */
+.component-seckill .marketing-box-two {
+	padding: 20px 15px 5px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+}
+
+.component-seckill .marketing-box-two .title-wrap {
+	padding-bottom: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.component-seckill .marketing-box-two .title-wrap-2 {
+	justify-content: space-between;
+}
+
+/* .component-seckill .marketing-box-two .title-wrap-2 .title-left .img {
+	display: inline-block;
+	width: 103px;
+	height: 16px;
+	line-height: 16px;
+} */
+
+.component-seckill .marketing-box-two .title-wrap .title-left img {
+	width: 103px;
+	height: 16px;
+}
+
+.component-seckill .marketing-box-two .title-wrap .title-left .time {
+	height: 16px;
+	line-height: 16px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.component-seckill .marketing-box-two .title-wrap .title-left .time {
+	color: rgba(255, 69, 68, .5);
+}
+
+.component-seckill .marketing-box-two .title-wrap .title-left .time .font {
+	margin-right: 6px;
+}
+
+.component-seckill .marketing-box-two .title-wrap .title-left .time span {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	background-color: #303133;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0 3px;
+}
+
+.component-seckill .marketing-box-two .title-wrap .title-right {
+	font-size: 12px;
+	color: #909399;
+}
+
+.component-seckill .marketing-box-two .title-wrap .title-right i {
+	font-size: 12px;
+}
+
+.component-seckill .marketing-box-two .list-wrap {
+	flex-wrap: wrap;
+}
+
+.component-seckill .marketing-box-two .list-wrap .item {
+	width: 100%;
+	display: flex;
+	height: 125px;
+	box-sizing: border-box;
+}
+
+.component-seckill .marketing-box-two .list-wrap .img-wrap {
+	width: 95px;
+	height: 95px;
+	border-radius: 5px;
+	overflow: hidden;
+	flex-shrink: 0;
+	margin-right: 9px;
+	margin-top: 15px;
+	position: relative;
+}
+
+.component-seckill .marketing-box-two .list-wrap .img-wrap>img {
+	width: 100%;
+	height: 100%;
+}
+
+.component-seckill .marketing-box-two .list-wrap .img-wrap .hot {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 30px;
+	height: 30px;
+}
+
+.component-seckill .marketing-box-two .list-wrap .img-wrap .hot div {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.component-seckill .marketing-box-two .list-wrap .img-wrap .hot div img {
+	width: 100%;
+	height: 100%;
+}
+
+.component-seckill .marketing-box-two .list-wrap .img-wrap .hot div span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.component-seckill .marketing-box-two .list-wrap .item .content {
+	padding: 15px 0;
+	border-bottom: 1px solid #EEEEEE;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.component-seckill .marketing-box-two .list-wrap .item:last-child .content {
+	border-bottom: 0px;
+}
+
+.component-seckill .marketing-box-two .list-wrap .item .content .content-desc {
+	height: 32px;
+	margin-top: 0;
+}
+
+.component-seckill .marketing-box-two .list-wrap .progress {
+	display: flex;
+	align-items: center;
+	height: initial;
+    margin-bottom: 0;
+    background-color: initial;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.component-seckill .marketing-box-two .list-wrap .progress .img {
+	width: 120px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #fba29b;
+	margin-right: 10px;
+}
+
+.component-seckill .marketing-box-two .list-wrap .progress .img .img-con {
+	width: 77px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #ff5041;
+}
+
+.component-seckill .marketing-box-two .list-wrap .progress .num {
+	font-size: 12px;
+	color: #909399;
+}
+
+.component-seckill .marketing-box-two .list-wrap .bot {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	line-height: 1;
+}
+
+.component-seckill .marketing-box-two .list-wrap .bot .content-price {
+	display: flex;
+	align-items: flex-end;
+	font-size: 12px;
+}
+
+.component-seckill .marketing-box-two .list-wrap .bot .content-price span {
+	font-size: 16px;
+	margin-right: 5px;
+}
+
+.component-seckill .marketing-box-two .list-wrap .bot .content-price .content-num {
+	font-weight: 500;
+	margin-top: 0;
+}
+
+.component-seckill .marketing-box-two .list-wrap .bot button {
+	background-color: #FF4544;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 12px;
+	border-radius: 25px;
+}
+
+/* 风格三 */
+.component-seckill .marketing-box-3 {
+	padding-bottom: 0;
+}
+
+.component-seckill .marketing-box-two .title-wrap-3 {
+	justify-content: center;
+}
+
+.component-seckill .marketing-box-two .title-wrap-3 .title-left .img img {
+	width: 174px;
+	height: 17px;
+}
+
+.component-seckill .marketing-box-two .title-wrap-3 .title-left .time {
+	text-align: center;
+}
+
+.component-seckill .marketing-box-two .more {
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	border-top: 1px solid #EEEEEE;
+}
+
+.component-seckill .marketing-box-two .more span, .component-seckill .marketing-box-two .more i {
+	font-size: 12px;
+	color: #909399;
+}
+
+.component-seckill .marketing-wrap.marketing-wrap-1 {
+	height: auto;
+	overflow: hidden;
+}
+
+.component-seckill .marketing-wrap.marketing-wrap-1 .marketing-box {
+	position: relative;
+	top: 0;
+	padding: 0;
+}
+
+.component-seckill .marketing-wrap.marketing-wrap-1 .marketing-box-two .list-wrap {
+	margin-top: 0;
+	padding: 0 15px;
+}
+
+.seckill-time-list1 {
+	display: flex;
+	color: #fff;
+    padding: 0 15px;
+    align-items: center;
+    height: 50px;
+    background: #ea404b;
+    line-height: 1.2;
+}
+
+.seckill-time-list1-tit {
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+    margin-right: 10px;
+}
+
+.seckill-time-list1 ul {
+	display: flex;
+	flex: 1;
+}
+
+.seckill-time-list1 ul li {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.seckill-time-list1 ul li .time {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.seckill-time-list1 ul li .desc {
+    font-size: 11px;
+}
+
+.seckill-time-list1 ul li.active .desc {
+    color: #ea474e;
+    padding: 1px 5px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.component-seckill .marketing-wrap.marketing-wrap-1 .current {
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    color: #c8c8c8;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    padding: 0 5px;
+}

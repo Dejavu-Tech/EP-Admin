@@ -1,0 +1,447 @@
+@CHARSET "UTF-8";
+
+/* 展示 */
+.component-pintuan .marketing-wrap.marketing-wrap-1 {
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	position: relative;
+	min-height: 240px;
+}
+
+.component-pintuan .marketing-wrap.marketing-wrap-1 img {
+	width: 100%;
+}
+
+.component-pintuan .marketing-wrap.marketing-wrap-1 .marketing-box {
+	width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 15px;
+}
+
+.component-pintuan .marketing-wrap.marketing-wrap-1.marketing-wrap-4 .marketing-box {
+	padding: 0;
+	position: relative;
+	top: 0;
+}
+
+.component-pintuan .marketing-wrap.marketing-wrap-4 .list-wrap {
+	padding: 0 15px 15px;
+}
+
+
+/* 顶部标题 */
+.component-pintuan .goods-head {
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 15px;
+	line-height: 15px;
+}
+
+.component-pintuan .goods-head .title-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	width: calc(100% - 80px);
+}
+
+.component-pintuan .goods-head .left-icon {
+	display: inline-block;
+	width: 63px;
+	height: 15px;
+	flex-shrink: 0;
+	margin-right: 10px;
+}
+
+.component-pintuan .goods-head .left-icon img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.component-pintuan .goods-head .title-wrap .name {
+	color: #909399;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.component-pintuan .goods-head .more.violet span,
+.component-pintuan .goods-head .more.violet .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #627BFD 0%, #8662FD 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.component-pintuan .goods-head .more.yellow span,
+.component-pintuan .goods-head .more.yellow .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #FEB632 0%, #FE6232 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.component-pintuan .goods-head .more.blue span,
+.component-pintuan .goods-head .more.blue .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #0ECFD3 0%, #12D0AE 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.component-pintuan .goods-head .more.red span,
+.component-pintuan .goods-head .more.red .iconfont {
+	font-size: 12px;
+	background: linear-gradient(-55deg, #FF5151 0%, #FF7B91 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+/* 内容 */
+.component-pintuan .list-wrap {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
+.component-pintuan .list-wrap .item {
+	display: inline-block;
+	width: 100px;
+}
+
+.component-pintuan .list-wrap .item .img-wrap {
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.component-pintuan .list-wrap .item .img-wrap img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.component-pintuan .list-wrap .item .content {
+	width: 100%;
+}
+
+.component-pintuan .list-wrap .item .content .content-desc {
+	width: 100%;
+	font-size: 14px;
+	line-height: 14px;
+	margin-top: 10px;
+}
+
+.component-pintuan .list-wrap .item .content .content-price {
+	font-size: 12px;
+	color: #FF4544;
+	margin-top: 10px;
+	height: 16px;
+	font-weight: 600;
+}
+
+.component-pintuan .list-wrap .item .content .content-price span {
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.component-pintuan .marketing-wrap-1 .list-wrap .item .content .content-num {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 4px 12px;
+	text-align: center;
+	margin-top: 10px;
+	color: #FF4544;
+	background-color: rgba(255, 69, 68, 0.06);
+}
+
+
+/* 编辑 */
+.component-pintuan .choose-style div {
+	cursor: pointer;
+}
+
+
+
+/* 弹框 */
+/* 商品列表风格 */
+.component-pintuan .pintuan-list-style {
+	display: none;
+}
+
+.style-list-con-pintuan {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.style-list-con-pintuan .style-li-pintuan {
+	width: 32%;
+	height: 300px;
+	line-height: 300px;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 2%;
+	margin-bottom: 15px;
+	cursor: pointer;
+	border: 1px solid #ededed;
+	background: #f7f8fa;
+	box-sizing: border-box;
+}
+
+.style-list-con-pintuan .style-li-pintuan:nth-child(3n) {
+	margin-right: 0;
+}
+
+.style-list-con-pintuan .style-li-pintuan img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.layui-layer-page .layui-layer-content {
+	overflow: auto !important;
+}
+
+.btn-box {
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* 风格二 */
+.component-pintuan .marketing-box-two {
+	padding: 20px 15px 5px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+}
+
+.component-pintuan .marketing-box-two .title-wrap {
+	padding-bottom: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.component-pintuan .marketing-box-two .title-wrap-2 {
+	justify-content: space-between;
+}
+
+.component-pintuan .marketing-box-two .title-wrap-2 .title-left {
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.component-pintuan .marketing-box-two .title-wrap .title-left img {
+	/* width: auto;
+	max-width: 100%;
+	max-height: 100%; */
+	width: 100%;
+	height: 100%;
+}
+
+.component-pintuan .marketing-box-two .title-wrap .title-right {
+	font-size: 12px;
+	color: #909399;
+}
+
+.component-pintuan .marketing-box-two .title-wrap .title-right i {
+	font-size: 12px;
+}
+
+.component-pintuan .marketing-box-two .list-wrap {
+	flex-wrap: wrap;
+	margin-top: 0;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .item {
+	width: 100%;
+	display: flex;
+	height: 125px;
+	box-sizing: border-box;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .img-wrap {
+	width: 95px;
+	height: 95px;
+	border-radius: 5px;
+	overflow: hidden;
+	flex-shrink: 0;
+	margin-right: 9px;
+	margin-top: 15px;
+	position: relative;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .img-wrap>img {
+	width: 100%;
+	height: 100%;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .img-wrap .hot {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 30px;
+	height: 30px;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .img-wrap .hot div {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .img-wrap .hot div img {
+	width: 100%;
+	height: 100%;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .img-wrap .hot div span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .item .content {
+	padding: 15px 0;
+	border-bottom: 1px solid #EEEEEE;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .item:last-child .content {
+	border-bottom: 0px;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .item .content .content-desc {
+	height: 32px;
+	margin-top: 0;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .label {
+	display: flex;
+	align-items: center;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .label div {
+	height: 15px;
+	line-height: 15px;
+	border: 1px solid #FF4544;
+	border-radius: 2px;
+	margin-right: 5px;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .label .label-person i {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #FF4544;
+	font-size: 9px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .label div span {
+	font-size: 10px;
+	padding: 0 5px;
+	color: #FF4544;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .progress .img .img-con {
+	width: 77px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #FDBE6C;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .progress .num {
+	font-size: 12px;
+	color: #909399;
+	margin-top: 9px;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .bot {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	line-height: 1;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .bot .content-price {
+	display: flex;
+	align-items: flex-end;
+	font-size: 12px;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .bot .content-price span {
+	font-size: 16px;
+	margin-right: 5px;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .bot .content-price .content-num {
+	font-weight: 500;
+	margin-top: 0;
+	font-size: 12px;
+	line-height: 12px;
+	color: #909399;
+	text-decoration: line-through;
+}
+
+.component-pintuan .marketing-box-two .list-wrap .bot button {
+	background-color: #FF4544;
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 25px;
+}
+
+/* 风格三 */
+.component-pintuan .marketing-box-3 {
+	padding-bottom: 0;
+}
+
+.component-pintuan .marketing-box-two .title-wrap-3 {
+	justify-content: center;
+}
+
+.component-pintuan .marketing-box-two .title-wrap-3 .title-left {
+	width: 174px;
+	height: 37px;
+	text-align: center;
+	line-height: 37px;
+}
+
+.component-pintuan .marketing-box-two .more {
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	border-top: 1px solid #EEEEEE;
+}
+
+.component-pintuan .marketing-box-two .more span,
+.component-pintuan .marketing-box-two .more i {
+	font-size: 12px;
+	color: #909399;
+}

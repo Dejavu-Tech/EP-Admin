@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <address>
 <city name="无锡" code="320200">
-<county name="崇安" code="320202">
-    <street name="崇安寺街道" code="320202001" />
-    <street name="通江街道" code="320202002" />
-    <street name="广瑞路街道" code="320202003" />
-    <street name="上马墩街道" code="320202004" />
-    <street name="江海街道" code="320202005" />
-    <street name="广益街道" code="320202006" />
-</county>
-<county name="南长" code="320203">
-    <street name="迎龙桥街道" code="320203001" />
-    <street name="南禅寺街道" code="320203002" />
-    <street name="清名桥街道" code="320203003" />
-    <street name="金星街道" code="320203004" />
-    <street name="金匮街道" code="320203005" />
-    <street name="扬名街道" code="320203006" />
-</county>
-<county name="北塘" code="320204">
-    <street name="黄巷街道" code="320204001" />
-    <street name="山北街道" code="320204002" />
-    <street name="北大街街道" code="320204003" />
-    <street name="惠山街道" code="320204004" />
-</county>
 <county name="锡山" code="320205">
     <street name="东亭街道" code="320205001" />
     <street name="安镇街道" code="320205002" />
@@ -52,12 +30,6 @@
     <street name="太湖街道" code="320211007" />
     <street name="雪浪街道" code="320211008" />
     <street name="马山街道" code="320211009" />
-    <street name="旺庄街道" code="320211050" />
-    <street name="硕放街道" code="320211051" />
-    <street name="江溪街道" code="320211052" />
-    <street name="新安街道" code="320211053" />
-    <street name="梅村街道" code="320211054" />
-    <street name="鸿山街道" code="320211055" />
     <street name="胡埭镇" code="320211101" />
     <street name="无锡新加坡工业园" code="320211450" />
     <street name="无锡高新技术产业开发区" code="320211451" />
@@ -104,6 +76,32 @@
     <street name="湖父镇" code="320282113" />
     <street name="环科园" code="320282400" />
     <street name="宜兴经济开发区" code="320282401" />
+</county>
+<county name="梁溪" code="320283">
+    <street name="崇安寺街道" code="320283001" />
+    <street name="通江街道" code="320283002" />
+    <street name="广瑞路街道" code="320283003" />
+    <street name="上马墩街道" code="320283004" />
+    <street name="江海街道" code="320283005" />
+    <street name="广益街道" code="320283006" />
+    <street name="迎龙桥街道" code="320283006" />
+    <street name="南禅寺街道" code="320283007" />
+    <street name="清名桥街道" code="320283008" />
+    <street name="金星街道" code="320283009" />
+    <street name="金匮街道" code="320283010" />
+    <street name="扬名街道" code="320283011" />
+    <street name="黄巷街道" code="320283012" />
+    <street name="山北街道" code="320283013" />
+    <street name="北大街街道" code="320283014" />
+    <street name="惠山街道" code="320283015" />	
+</county>
+<county name="新吴" code="320284">    
+    <street name="旺庄街道" code="320284001" />
+    <street name="硕放街道" code="320284002" />
+    <street name="江溪街道" code="320284003" />
+    <street name="新安街道" code="320284004" />
+    <street name="梅村街道" code="320284005" />
+    <street name="鸿山街道" code="320284006" />
 </county>
 </city>
 </address>

@@ -1,0 +1,26 @@
+<cm-construct v-bind:data="data[index]" class="rich-text">
+
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="preview-box" v-bind:style="{ margin: nc.marginTop + 'px 15px 0', backgroundColor: nc.backgroundColor }" style="padding: 10px; line-height: 1.5;">
+			<div v-html="nc.html"></div>
+		</div>
+	</template>
+
+	<!-- 编辑 -->
+	<template slot="edit">
+		<template v-if="nc.lazyLoad">
+			<rich-text></rich-text>
+		</template>
+
+	</template>
+	
+	<!-- 资源 -->
+	<template slot="resource">
+
+		<css src="{$resourceurl}/rich_text/css/style.css"></css>
+		<js src="{$resourceurl}/rich_text/js/style.js"></js>
+
+	</template>
+	
+</cm-construct>

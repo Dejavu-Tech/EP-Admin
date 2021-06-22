@@ -2,10 +2,24 @@
 <address>
 <city name="大兴安岭" code="232700">
 <county name="松岭" code="232702">
+    <street name="小扬气镇" code="232702001" />
+    <street name="劲松镇" code="232702002" />
+    <street name="古源镇" code="232702003" />
 </county>
 <county name="新林" code="232703">
+    <street name="新林镇" code="232703001" />
+    <street name="翠岗镇" code="232703002" />
+    <street name="塔源镇" code="232703003" />
+	<street name="大乌苏镇" code="232703004" />
+    <street name="塔尔根镇" code="232703005" />
+    <street name="碧洲镇" code="232703006" />
+	<street name="宏图镇" code="232703007" />
 </county>
 <county name="呼中" code="232704">
+    <street name="呼中镇" code="232704001" />
+    <street name="碧水镇" code="232704002" />
+    <street name="呼源镇" code="232704003" />
+	<street name="宏伟镇" code="232704004" />
 </county>
 <county name="呼玛" code="232721">
     <street name="呼玛镇" code="232721100" />
@@ -38,6 +52,14 @@
     <street name="阿木尔林业局" code="232723402" />
 </county>
 <county name="加格达奇" code="232724">
+    <street name="东山街道" code="232724001" />
+    <street name="卫东街道" code="232724002" />
+    <street name="红旗街道" code="232724003" />
+	<street name="长虹街道" code="232724004" />
+    <street name="曙光街道" code="232724005" />
+    <street name="光明街道" code="232724006" />
+	<street name="加北乡" code="232724007" />
+	<street name="白桦乡" code="232724008" />
 </county>
 </city>
 </address>

@@ -1,0 +1,65 @@
+<cm-construct v-bind:data="data[index]" class="component-title">
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="preview-box" v-bind:style="{textAlign: nc.alignStyle, backgroundColor : nc.backgroundColor, margin : nc.marginTop + 'px 15px 0'}">
+			<!-- Style1 -->
+			<div class="text-title" v-bind:class="'text-title-'+ nc.style" v-if="nc.style == 1">
+				<div class="text-title-box" v-show="nc.title">
+					<span class="text-title-con" v-bind:style="{ fontSize : nc.fontSize + 'px', color : nc.textColor, opacity: nc.textColor ? 1 : 0, padding: '0 7px' }">{{ nc.title }}</span>
+					<!-- <span class="line-left" v-bind:style="{ background: nc.textColor }"></span>
+					<span class="line-right" v-bind:style="{ background: nc.textColor }"></span> -->
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<!-- 编辑 -->
+	<template slot="edit">
+		<template v-if="nc.lazyLoad">
+			<!-- <text-style></text-style> -->
+		</template>
+
+		<div class="form-group row">
+			<label class="layui-form-label sm">文本名称</label>
+			<div class="col-sm-10">
+				<input type="text" v-model="nc.title" v-bind:id="'title_'+index" placeholder="请输入文本" class="form-control">
+			</div>
+		</div>
+		<nc-link v-bind:data="{ field : nc.link }"></nc-link>
+
+		<div class="template-edit-title">
+			<h3>文字显示样式</h3>
+			<i class="layui-icon layui-icon-down" onclick="closeBox(this)"></i>
+		</div>
+
+		<div class="template-edit-wrap">
+			<template v-if="nc.lazyLoad">
+				<text-font-size v-bind:data="{ field : 'fontSize', label : '文字大小', max: 16 }"></text-font-size>
+				<color v-bind:data="{ field : 'textColor', 'label' : '文本颜色', 'defaultcolor': '#333333' }"></color>
+				<font-weight v-show="nc.sub == 1"></font-weight>
+			</template>
+		</div>
+
+		<div class="template-edit-title">
+			<h3>其他设置</h3>
+			<i class="layui-icon layui-icon-down" onclick="closeBox(this)"></i>
+		</div>
+
+		<div class="template-edit-wrap">
+			<color v-bind:data="{ field : 'backgroundColor', 'label' : '背景颜色' }"></color>
+			<template v-if="nc.lazyLoad">
+				<text-empty></text-empty>
+			</template>
+		</div>
+	</template>
+
+	<!-- 资源 -->
+	<template slot="resource">
+		<js>
+			var textResourcePath = "{$resourceurl}";
+		</js>
+		<css src="{$resourceurl}/text/css/style.css"></css>
+		<js src="{$resourceurl}/text/js/style.js"></js>
+	</template>
+
+</cm-construct>

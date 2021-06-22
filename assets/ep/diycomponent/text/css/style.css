@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+/*标题组件*/
+.component-title h2 {margin: 0;font-size: 16px;overflow: hidden;text-overflow: ellipsis;}
+.component-title p {font-size: 12px;color: #8c8c8c;padding: 5px 0 0;overflow: hidden;text-overflow: ellipsis;}
+
+.component-title .style-list-box {
+	display: none;
+}
+.style-list-con {
+	display: flex;
+	flex-wrap: wrap;
+}
+.style-list-con .style-li {
+	margin-right: 12px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	border: 1px solid #ededed;
+	background: #f7f8fa;
+}
+
+.style-list-con .style-li:nth-child(3n) {
+	margin-right: 0;
+}
+
+.layui-layer-page .layui-layer-content {
+	overflow: auto !important;
+}
+.btn-box {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.component-title .text-title-img {
+	text-align: center;
+}
+
+/* 文本标题 */
+.component-title .text-title {
+	text-align: center;
+	position: relative;
+}
+
+.component-title .text-title .text-title-box {
+	position: relative;
+}
+
+.component-title .text-title-1 .text-title-box {
+	display: inline-block;
+}
+
+.component-title .text-title .line-left, .component-title .text-title .line-right {
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 1px;
+	top: 50%;
+}
+
+.component-title .text-title-1 .line-left {
+	left: 0;
+	margin-left: -30px;
+}
+
+.component-title .text-title-1 .line-right {
+	right: 0;
+	margin-right: -30px;
+}

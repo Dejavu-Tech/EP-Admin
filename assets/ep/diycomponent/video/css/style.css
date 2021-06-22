@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+.fillet.videobox {
+	border-radius: 24px;
+	overflow: hidden;
+}
+
+/* .video-list ul li {
+	margin-top: 15px;
+} */
+
+.videobox {
+	width: 343px;
+	margin: 0 auto;
+}
+
+.videobox video,
+.videobox img {
+	vertical-align: top;
+	width: 100%;
+}

@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+/*辅助线组件*/
+.draggable-element .auxiliary-line .preview-box div {height: 0;}
+.draggable-element .auxiliary-line .preview-draggable .preview-box {margin: 0 15px;}
+/* .draggable-element .auxiliary-line .preview-draggable {padding: 0;} */
+/* .draggable-element>div.auxiliary-line .preview{padding:0;}
+.draggable-element>div.auxiliary-line.no-padding .preview{padding:0;}
+.auxiliary-line hr{border-top:1px solid #e5e5e5;border-bottom:0;background :transparent;margin: 0;}
+.auxiliary-line hr.dashed{border-top-style:dashed;} */
