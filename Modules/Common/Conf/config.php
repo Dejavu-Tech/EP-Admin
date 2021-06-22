@@ -7,7 +7,7 @@ return array(
 	//加载扩展配置项
     'LOAD_EXT_CONFIG' => 'db',	
 	
-	'FRONTEND_USER'=>'网站会员',
+	'FRONTEND_USER'=>'网站客户',
 	
 	'BACKEND_USER'=>'后台系统用户',	
     'SELLER_USER'=>'网站卖家',

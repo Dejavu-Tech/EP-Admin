@@ -2618,6 +2618,26 @@ function resize($filename, $width, $height) {
     return 'Uploads/image/' . $new_image;
 }
 
+if (!function_exists('load_make_plug')) {
+    function load_make_plug($name = '')
+    {
+
+        static $_modules = array();
+
+        if (isset($_modules[$name])) {
+            return $_modules[$name];
+        }
+        $model = ROOT_PATH."/addons/eaterplanet_ecommerce_plugin_make/" . 'model/' . strtolower($name) . 'ModelClass.php';
+        if (!is_file($model)) {
+            exit(' Model ' . $name . ' Not Found!');
+        }
+        require_once $model;
+        $class_name = ucfirst($name) . '_EaterplanetShopModel';
+        $_modules[$name] = new $class_name();
+        return $_modules[$name];
+    }
+}
+
 /**
  * 商家账号操作日志
  * @author Albert.Z 2020-03-02
