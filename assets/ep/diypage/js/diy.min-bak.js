@@ -698,7 +698,7 @@ define(['jquery.ui', '../../js/web/goods_selector.js'], function (ui, gSelector)
                 style: {titlecolor: '#333333', remarkcolor: '#888888', titlebg: '#ffffff', background: '#ffffff'}
                 },
             member: {
-                name: '会员信息',
+                name: '客户信息',
                 type: 3,
                 max:1,
                 params: {
@@ -738,7 +738,7 @@ define(['jquery.ui', '../../js/web/goods_selector.js'], function (ui, gSelector)
                 params: {
                     linkurl: '',
                     title: '绑定手机号',
-                    text: '如果您用手机号注册过会员或您想通过微信外购物请绑定您的手机号码',
+                    text: '如果您用手机号注册过或您想通过微信外购物请绑定您的手机号码',
                     iconclass: 'icon-mobile'
                 },
                 style: {
@@ -757,7 +757,7 @@ define(['jquery.ui', '../../js/web/goods_selector.js'], function (ui, gSelector)
                 style: {subcolor: '#ffffff', maincolor: '#ff5555', margintop: '10'}
             },
             memberc: {
-                name: '会员信息',
+                name: '客户信息',
                 type: 4,
                 max:1,
                 params: {
@@ -1352,7 +1352,7 @@ define(['jquery.ui', '../../js/web/goods_selector.js'], function (ui, gSelector)
                     $("#page").trigger('click')
                 }
             })
-        }); 
+        });
         if (selected) {
             modal.selectedItem(selected)
         }
