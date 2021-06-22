@@ -20,6 +20,6 @@ $_GET['c'] = $wx_controller_arr[0];
 $_GET['a'] = $wx_controller_arr[1];
 unset($_GET['controller']);
 unset($_GET['m']);
-define('ROOT_PATH', str_replace('\\', '/', dirname(CCAFDBBFAED)) . '/');
+define('ROOT_PATH', str_replace('\\', '/', dirname(__FILE__)) . '/');
 define('RUNTIME_PATH', './Runtime/');
 require './ThinkPHP/ThinkPHP.php';
