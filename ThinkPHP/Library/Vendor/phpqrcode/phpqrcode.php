@@ -957,6 +957,26 @@
             
             ImageDestroy($image);
         }
+
+        public static function pngRgb($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4,$saveandprint=FALSE, $back_array, $line_array)
+        {
+            $image = self::imageRgb($frame, $pixelPerPoint, $outerFrame, $back_array, $line_array);
+
+            if ($filename === false) {
+                Header("Content-type: image/png");
+                ImagePng($image);
+            } else {
+                if($saveandprint===TRUE){
+                    ImagePng($image, $filename);
+                    header("Content-type: image/png");
+                    ImagePng($image);
+                }else{
+                    ImagePng($image, $filename);
+                }
+            }
+
+            ImageDestroy($image);
+        }
     
         //----------------------------------------------------------------------
         public static function jpg($frame, $filename = false, $pixelPerPoint = 8, $outerFrame = 4, $q = 85) 
@@ -1001,6 +1021,43 @@
             ImageCopyResized($target_image, $base_image, 0, 0, 0, 0, $imgW * $pixelPerPoint, $imgH * $pixelPerPoint, $imgW, $imgH);
             ImageDestroy($base_image);
             
+            return $target_image;
+        }
+
+        private static function imageRgb($frame, $pixelPerPoint = 4, $outerFrame = 4, $back_array=[], $line_array=[])
+        {
+            $h = count($frame);
+            $w = strlen($frame[0]);
+
+            $imgW = $w + 2*$outerFrame;
+            $imgH = $h + 2*$outerFrame;
+
+            $base_image =ImageCreate($imgW, $imgH);
+            if(!empty($back_array)){
+                $col[0] = ImageColorAllocate($base_image, $back_array[0], $back_array[1], $back_array[2]);
+            }else{
+                $col[0] = ImageColorAllocate($base_image, 255, 255, 255);
+            }
+            if(!empty($line_array)){
+                $col[1] = ImageColorAllocate($base_image, $line_array[0], $line_array[1], $line_array[2]);
+            }else{
+                $col[1] = ImageColorAllocate($base_image, 0, 0, 0);
+            }
+
+            imagefill($base_image, 0, 0, $col[0]);
+
+            for($y=0; $y<$h; $y++) {
+                for($x=0; $x<$w; $x++) {
+                    if ($frame[$y][$x] == '1') {
+                        ImageSetPixel($base_image,$x+$outerFrame,$y+$outerFrame,$col[1]);
+                    }
+                }
+            }
+
+            $target_image =ImageCreate($imgW * $pixelPerPoint, $imgH * $pixelPerPoint);
+            ImageCopyResized($target_image, $base_image, 0, 0, 0, 0, $imgW * $pixelPerPoint, $imgH * $pixelPerPoint, $imgW, $imgH);
+            ImageDestroy($base_image);
+
             return $target_image;
         }
     }
@@ -3107,6 +3164,12 @@
             $enc = QRencode::factory($level, $size, $margin);
             return $enc->encodeRAW($text, $outfile);
         }
+
+        public static function pngcolor($text, $outfile = false, $level = QR_ECLEVEL_L, $size = 3, $margin = 4, $saveandprint=false, $back_array, $line_array)
+        {
+            $enc = QRencode::factory($level, $size, $margin);
+            return $enc->encodePNGRgb($text, $outfile, $saveandprint=false, $back_array, $line_array);
+        }
     }
     
     //##########################################################################
@@ -3305,6 +3368,29 @@
             
                 QRtools::log($outfile, $e->getMessage());
             
+            }
+        }
+
+        public function encodePNGRgb($intext, $outfile = false,$saveandprint=false, $back_array, $line_array)
+        {
+            try {
+
+                ob_start();
+                $tab = $this->encode($intext);
+                $err = ob_get_contents();
+                ob_end_clean();
+
+                if ($err != '')
+                    QRtools::log($outfile, $err);
+
+                $maxSize = (int)(QR_PNG_MAXIMUM_SIZE / (count($tab)+2*$this->margin));
+
+                QRimage::pngRgb($tab, $outfile, min(max(1, $this->size), $maxSize), $this->margin,$saveandprint , $back_array, $line_array);
+
+            } catch (Exception $e) {
+
+                QRtools::log($outfile, $e->getMessage());
+
             }
         }
     }
