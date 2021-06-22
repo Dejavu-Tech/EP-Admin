@@ -12,11 +12,11 @@
 </div>
 </div>
 <div class="form-group row">
-    <label class="col-lg control-label">会员等级</label>
+    <label class="col-lg control-label">客户等级</label>
     <div class="col-sm-9 col-xs-12">
 
         <select name='data[level_id]' class='form-control'>
-            <option value=''>普通会员</option>
+            <option value=''>普通客户</option>
             <?php foreach( $level_list as $level ){ ?>
             <option value='{$level['id']}' <?php if($member['level_id']==$level['id']){ ?>selected<?php } ?>>{$level['levelname']}</option>
             <?php } ?>
@@ -25,7 +25,7 @@
     </div>
 </div>
 <div class="form-group row">
-    <label class="col-lg control-label">会员分组</label>
+    <label class="col-lg control-label">客户分组</label>
     <div class="col-sm-9 col-xs-12">
         <select name='data[groupid]' class='form-control select2'  placeholder="无分组">
 			<option value='' <?php if(empty($group['id'])){ ?>selected<?php } ?>>默认分组</option>
@@ -86,7 +86,7 @@
 
         <div class="radio radio-primary"><input type="radio" name="data[isblack]" value="1" <?php if($member['isblack']==1){ ?>checked<?php } ?>>禁用</div>
         <div class="radio radio-primary" ><input type="radio" name="data[isblack]" value="0" <?php if($member['isblack']==0){ ?>checked<?php } ?>>启用</div>
-        <small>设置禁用后，此会员无法访问商城</small>
+        <small>设置禁用后，此客户无法访问商城</small>
 
     </div>
 </div>

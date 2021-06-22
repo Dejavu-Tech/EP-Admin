@@ -18,13 +18,14 @@
 		<?php if($order_info['delivery'] == 'pickup'){ ?>取货地址：{$order_info['shipping_address']}<?php } ?>
 		<?php if($order_info['delivery'] == 'express'){ ?>收货人：{$province_info['name']}{$city_info['name']}{$area_info['name']}{$order_info['shipping_address']}, {$order_info['shipping_name']}, {$order_info['shipping_tel']} <?php } ?>
 		</td>
-        <td colspan="2">买家：{$member['username']}</td>
+        <td colspan="1">买家：{$member['username']}</td>
         <td colspan="1">收货人：{$order_info['shipping_name']} </td>
+		<td colspan="1">联系电话：{$order_info['shipping_tel']} </td>
       </tr>
       <tr  class="b">
-        <td colspan="3">订单备注：{$order_info['comment']}</td>
-        <td colspan="2">联系电话：{$order_info['shipping_tel']} </td>
-        <td colspan="1"></td>
+        <td colspan="2">买家备注：{$order_info['comment']}</td>
+        <td colspan="2">卖家备注：{$order_info['remarksaler']} </td>
+        <td colspan="2">{$order_note_name}：{$order_info['note_content']} </td>
       </tr>
       <tr class="a">
         <td class="td1">序号</td>
@@ -34,12 +35,12 @@
         <td class="td5">单价</td>
         <td class="td6">总价</td>
       </tr>
-	  <?php $i =0; $total_quantity =0;$total_money =0; ?>
+	  <?php $i =1; $total_quantity =0;$total_money =0; ?>
 	  <?php foreach($need_order_goods as $goods){ ?>
       <tr class="a">
         <td class="num"><?php echo $i; ?></td>
         <td>{$goods['name']}</td>
-		 <td>{$goods['quantity']}</td>
+		 <td>{$goods['quantity']} <?php if($goods['has_refund_quantity'] > 0){ ?> (已退{$goods['has_refund_quantity']})  <?php } ?> </td>
         <td>{$goods['option_sku']}</td>
         <?php if($order_info['type'] == "integral"){ ?>
         <td>{:round($goods['price'])}积分</td>
@@ -64,6 +65,10 @@
         <td><?php echo sprintf("%.2f",$total_money); ?></td>
         <?php } ?>
       </tr>
+	  <tr>
+	    <td colspan="2">大写金额：</td>
+        <td colspan="4" style='text-align:right;padding-right: 30px;'>{$legal_amount}</td>
+	  </tr>
       <tr>
         <td colspan="2">配货人签字：</td>
         <td colspan="2">送货人签字：</td>

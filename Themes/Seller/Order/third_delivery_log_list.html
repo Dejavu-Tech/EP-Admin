@@ -7,7 +7,7 @@
 <body style="width:100%;margin:0 auto;text-align: center;">
 <input type="hidden" id="order_id" name="order_id" value="{$orderdistribution_info['order_id']}"/>
 <input type="hidden" id="third_distribution_type" name="third_distribution_type" value="{$orderdistribution_info['third_distribution_type']}"/>
-<div class="layui-card-body" style="padding:15px 0 0 15px;">
+<div class="card-body" style="padding:15px;">
 	<?php if($orderdistribution_info['state'] == 0 || $orderdistribution_info['state'] == 1 || $orderdistribution_info['state'] == 2){ ?>
 	<a href="javascript:;" class="btn btn-primary cancelBtn">取消配送订单</a>
 	<?php } ?>
@@ -45,7 +45,7 @@
 			$.post("{:U('order/third_cancel_reason')}", {third_distribution_type:third_distribution_type,order_id:order_id}, function(shtml){
 				layer.open({
 					type: 1,
-					area: '600px',
+					area: '500px',
 					content: shtml //注意，如果str是object，那么需要字符拼接。
 				});
 			});

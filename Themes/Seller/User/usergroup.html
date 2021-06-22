@@ -98,11 +98,11 @@
 					<div class="row">
 						<div class="col-lg-6 main-header">
 							<h6 class="mb-0">当前位置 </h6>
-							<h2>会员<span>分组</span></h2>
+							<h2>客户<span>分组</span></h2>
 						</div>
 						<div class="col-lg-6 breadcrumb-right" style="float: right">
 							<ol class="breadcrumb">
-								<a href="javascript:;" data-href="{:U('user/addusergroup')}" class="btn btn-info btn-air-info ajaxModal"><i class="fa fa-plus"></i>添加会员分组</a>
+								<a href="javascript:;" data-href="{:U('user/addusergroup')}" class="btn btn-info btn-air-info ajaxModal"><i class="fa fa-plus"></i>添加客户分组</a>
 							</ol>
 						</div>
 					</div>
@@ -147,7 +147,7 @@
 													<th>选择</th>
 													<th>ID</th>
 													<th>分组名称</th>
-													<th>会员数量</th>
+													<th>客户数量</th>
 													<th>操作</th>
 												</tr>
 												</thead>
@@ -173,7 +173,7 @@
 												<td style="cursor: pointer;" onclick='location="{:U("user/index")}"'>{$row['membercount']}</td>
 
 												<td>
-													<a class='btn btn-pill btn-primary' href="{:U('user/index', array('groupid' => $row['id']))}"><span data-toggle="tooltip" data-placement="top" data-original-title="分组会员">分组会员</span></a>
+													<a class='btn btn-pill btn-primary' href="{:U('user/index', array('groupid' => $row['id']))}"><span data-toggle="tooltip" data-placement="top" data-original-title="分组客户">分组客户</span></a>
 													<?php if($row['id']!='default'){ ?>
 													<a href="javascript:;" data-href="{:U('user/addusergroup', array('id' => $row['id']))}" class="btn btn-pill btn-primary ajaxModal">编辑</a>
 													<a href="javascript:;" data-href="{:U('user/addusergroup', array('id' => $row['id']))}" data-confirm='确认要删除此分组吗?' class="btn btn-pill btn-primary deldom">删除</a>

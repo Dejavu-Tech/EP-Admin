@@ -142,7 +142,11 @@
 														<?php if (defined('ROLE') && ROLE == 'agenter' ){ ?>
 														{$member['username']}  ID：{$member['member_id']}<img class="b-r-8 height-50 m-l-10" src="{$member['avatar']}"  />
 														<?php }else{ ?>
+														<?php if($s_id == 1){ ?>
 														<a href="{:U('user/detail',array('id'=>$member['member_id']))}" target='_blank' class="text-primary">{$member['username']}</a>
+														<?php }else{ ?>
+														<a id="user" target='_blank' class="text-primary">{$member['username']}</a>
+														<?php } ?>
 														  ID：<a href="{:U('user/detail',array('id'=>$member['member_id']))}" target='_blank' class="text-primary">{$member['member_id']}</a>
 														<img class="b-r-8 height-50 m-l-10" src="{$member['avatar']}"  />
 
@@ -180,8 +184,12 @@
 														<?php if($item['delivery'] == 'pickup'){ ?>
 														自提
 														<?php }elseif( $item['delivery'] == 'express'  ){ ?>
+														<?php if( $is_virtualcard == 1 ){ ?>
+														礼品卡兑换余额
+														<?php }else{ ?>
 														快递<?php if(!empty($express_info['name'])){ ?>({$express_info['name']} <?php if(!empty($item['shipping_no'])){ ?>快递单号：{$item['shipping_no']}<?php } ?>)<?php } ?>
 														<a class="btn btn-info" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/express', array('order_id' => $item['order_id']))}" >查看物流</a>
+														<?php } ?>
 														<?php }elseif( $item['delivery'] == 'tuanz_send'  ){ ?>
 														团长配送
 														<?php  }elseif( $item['delivery'] == 'hexiao'  ){ ?>
@@ -190,8 +198,10 @@
 														同城配送
 														<?php } ?>
 													</label>
+													<?php if( $is_virtualcard == 0 ){ ?>
 													<label class="col-sm-3 col-form-label">收 货 人：</label>
 													<label class="col-sm-9 col-form-label">{$item['shipping_name']} {$item['shipping_tel']}</label>
+													<?php } ?>
 
 													<?php if($is_can_look_headinfo){ ?>
 													<?php if(  $item['type'] != 'integral' && ( $item['type'] != 'pintuan' || $item['head_id'] > 0 ) ){ ?>
@@ -213,7 +223,7 @@
 													<label class="col-sm-9 col-form-label">{$item['shipping_address']}</label>
 													<?php } ?>
 
-													<?php if(!empty($item['address_id'])){ ?>
+													<?php if( !empty($item['address_id']) &&  $is_virtualcard == 0 ){ ?>
 													<label class="col-sm-3 col-form-label">详细地址：</label>
 													<label class="col-sm-9 col-form-label">
 														{$province_info['name']}{$city_info['name']}{$area_info['name']}  <?php if( $item['delivery'] == 'tuanz_send'){ ?>{$item['tuan_send_address']}<?php }else{ ?> {$item['shipping_address']}<?php } ?>, {$item['shipping_name']}, {$item['shipping_tel']}
@@ -227,7 +237,7 @@
 													<?php } ?>
 
 													<?php if( $item['delivery'] == 'localtown_delivery'){ ?>
-													<?php if( !empty($item['expected_delivery_time'])){ ?>
+													<?php if( !empty($item['expected_delivery_time']) && empty($item['presale_info']) ){ ?>
 													<!--
                                                     <?php
                                                         $weekarray=array("日","一","二","三","四","五","六");
@@ -246,6 +256,34 @@
 
 													<?php if(!empty($item['transaction_id'])){ ?>
 													<label class="col-sm-3 col-form-label">交易单号：</label><label class="col-sm-9 col-form-label">{$item['transaction_id']}</label>
+													<?php } ?>
+
+
+													<?php if( !empty($item['presale_info'])){ ?>
+
+													<?php if( $item['presale_info']['presale_type'] == 0 ){  ?>
+													<label class="col-sm-3 col-form-label">预售方式：</label><label class="col-sm-9 col-form-label">定金预售</label>
+													<?php }else{ ?>
+													<label class="col-sm-3 col-form-label">预售方式：</label><label class="col-sm-9 col-form-label">全款预售</label>
+													<?php } ?>
+													<label class="col-sm-3 col-form-label">阶段一： </label><label class="col-sm-9 col-form-label">预付定金（定金 ￥{$item['presale_info']['presale_ding_money']} <?php echo !empty($item['presale_info']['presale_deduction_money']) && $item['presale_info']['presale_deduction_money'] > 0 ?  '抵扣 ￥'.$item['presale_info']['presale_deduction_money'] : ''; ?>）</label>
+													<?php if( $item['presale_info']['presale_type'] == 0 ){  ?>
+													<label class="col-sm-3 col-form-label">阶段二：</label><label class="col-sm-9 col-form-label">
+															<?php if( $item['presale_info']['state'] == 1 ){ ?>
+															支付尾款（未支付）
+															<?php }else if( $item['presale_info']['state'] == 2 ){ ?>
+															支付尾款（已支付）
+															<?php }else if( $item['presale_info']['state'] == 0 ){ ?>
+															定金还未支付
+															<?php } ?>
+													</label>
+													<?php } ?>
+
+													<?php if( $item['presale_info']['presale_limit_balancepaytime'] == 0 ){ ?>
+													<label class="col-sm-3 col-form-label">尾款支付时间：</label><label class="col-sm-9 col-form-label">不限制</label>
+													<?php }else if( $item['presale_info']['presale_limit_balancepaytime'] == 1 && $item['presale_info']['presale_type'] == 0 ){ ?>
+													<label class="col-sm-3 col-form-label">尾款支付时间：</label><label class="col-sm-9 col-form-label">{$item['presale_info']['balance_pay_begintime']} - {$item['presale_info']['balance_pay_endtime']}</label>
+													<?php } ?>
 													<?php } ?>
 
 													<?php if(!empty($item['expresssn']) && $item['delivery']=='express' && !empty($item['shipping_method'])){ ?>
@@ -325,7 +363,7 @@
 													<a class="btn btn-primary deldom" href="javascript:;" data-href="{:U('order/opreceive', array('id' => $item['order_id']))}" data-confirm="确认订单收货吗？">确认收货</a><br />
 													<?php }?>
 													<?php }?>
-													<?php if($item['delivery'] == 'express'){ ?>
+													<?php if( $item['delivery'] == 'express' &&  $is_virtualcard == 0 ){ ?>
 													<a class="btn btn-primary" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/opchangeexpress', array('id' => $item['order_id']))}">修改物流</a>
 													<?php } ?>
 													<?php }else{ ?>
@@ -337,7 +375,7 @@
 													<?php } ?>
 													<?php
 								if (!defined('ROLE')){
-								if( $item['order_status_id'] == 3 && $item['type'] != 'integral'){
+								if( $item['order_status_id'] == 3 && $item['type'] != 'integral' && $is_presale == 0 ){
 							?>
 													<a class="btn btn-primary" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/change_order', array('id' => $item['order_id']))}" >订单改价</a>
 													<?php }} ?>
@@ -376,6 +414,7 @@
 												<span class="txt-warning f-24 f-w-900">待付款</span>
 												<?php } ?>
 												<?php if($item['order_status_id'] == 4){ ?>
+												<span class="txt-warning f-24 f-w-900">已发货</span>
 												<?php if($item['delivery'] == 'hexiao'){ ?>
 												<span class="txt-warning f-24 f-w-900">待使用</span>
 												<?php }else{?>
@@ -396,6 +435,9 @@
 												<?php } ?>
 												<?php if($item['order_status_id'] == 5){ ?>
 												<span class="txt-twitter f-24 f-w-900">已关闭</span>
+												<?php } ?>
+												<?php if( $item['order_status_id'] == 15){ ?>
+												<span class="txt-success f-24 f-w-900">定金已支付，等待活动结束买家支付尾款</span>
 												<?php } ?>
 
 												<i>
@@ -420,6 +462,44 @@
 												</i>
 											</div>
 											<div class="price">
+												<?php if($item['type'] != 'integral'){ ?>
+												<label class="col-sm-12 col-form-label">订单结算状态：
+														<?php
+									$order_states = '';
+									switch($order_status)
+									{
+										case 0: $order_states='待结算'; break;
+										case 1: $order_states='已结算'; break;
+										case 2: $order_states='已失效'; break;
+									}
+								?><?php echo $order_states; ?>
+														<span onmouseover="overShow1()" onmouseout="outHide1()" ><i class="icon-help-alt"></i></span>
+												</label>
+												<?php } ?>
+												<div id="showDiv" class="alert alert-secondary dark" style="display: none">
+													-待结算：还在订单“售后期”。<br />
+													-已结算：已过订单“售后期”。<br />
+													-已失效：整单退款的订单。<br />
+													<?php if(($item['order_status_id'] ==6 || $item['order_status_id'] ==11) ){ ?>
+													<?php if($order_status == 0 && $open_aftersale == 1){ ?>
+													-订单预计结算时间：<?php echo date("Y-m-d H:i:s",$order_settlement); ?>，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													<?php }else{ ?>
+													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													<?php } ?>
+													<?php }else{ ?>
+													<?php if($order_status == 2){ ?>
+													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													<?php }else{ ?>
+
+													<?php if($open_aftersale == 1){ ?>
+													-订单预计结算时间：订单 “确认收货” 后，预计<?php echo $open_aftersale_time; ?>天后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													<?php }else{ ?>
+													-订单预计结算时间：订单 “确认收货” 后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													<?php } ?>
+													<?php } ?>
+													<?php } ?>
+												</div>
+
 
 												<label class="col-sm-12 col-form-label">商品合计：<?php if( $item['type'] == 'integral' ){ ?><?php }else{ ?>¥<?php } ?>{: round($item['total'],2)}<?php if( $item['type'] == 'integral' ){ ?>积分<?php } ?></label>
 
@@ -480,7 +560,7 @@
 
 												<?php if($item['shipping_fare'] <= 0 ){ $item['fare_shipping_free'] = 0; } ?>
 												<?php
-									$free_tongji = $item['total'] + $item['packing_fare'] +$item['shipping_fare']-$item['voucher_credit']-$item['fullreduction_money'] - $item['score_for_money'] + $item['localtown_add_shipping_fare']- $item['fare_shipping_free'];
+									$free_tongji = $item['total'] + $item['packing_fare'] +$item['shipping_fare']-$item['voucher_credit']-$item['fullreduction_money'] - $item['score_for_money'] + $item['localtown_add_shipping_fare']- $item['fare_shipping_free'] - $presale_for_ordermoney;
 									if($free_tongji < 0){
 										$free_tongji = 0;
 									}
@@ -497,7 +577,7 @@
 									if( $item['is_level_buy'] == 1 &&  $member_youhui >0  )
 												{
 												?>
-												<label class="col-sm-12 col-form-label">会员等级折扣优惠：</span><span class="text-danger">-¥{$member_youhui}</span></label>
+												<label class="col-sm-12 col-form-label">客户等级折扣优惠：</span><span class="text-danger">-¥{$member_youhui}</span></label>
 												<?php
 									}
 								?>
@@ -517,6 +597,11 @@
 												<label class="col-sm-12 col-form-label">退运费：¥{$total_refund_shipping_fare}</label>
 												<?php } ?>
 												<?php }else{ ?>
+												<?php
+											if( $presale_for_ordermoney > 0 ){
+												?>
+												<div class="col-sm-12"><span class="txt-warning f-24 f-w-900">定金抵扣：</span><span class="txt-danger f-24 f-w-900">-¥{$presale_for_ordermoney}</span></div>
+												<?php } ?>
 												<div class="col-sm-12"><span class="txt-warning f-24 f-w-900">实付款：</span><span class="txt-danger f-24 f-w-900">¥<?php echo round($free_tongji,2)?></span></div>
 												<?php
 										if( $total_refund_money > 0 ){
@@ -540,6 +625,61 @@
 								</div>
 							</div>
 						</form>
+					</div>
+					<div class="col-xl-12 xl-100 box-col-12">
+						<?php if( $is_virtualcard == 1 ){ ?>
+						<div class="card-header p-b-30">
+							<h5>礼品卡信息</h5>
+						</div>
+						<table class="table table-xs text-center" cellpadding="0" cellspacing="0" border="0" >
+							<thead>
+							<tr>
+								<th>兑换码</th>
+								<th>状态</th>
+								<th>有效期</th>
+								<th>可兑换余额</th>
+								<th>使用人</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>{$virtualcard_info['code_sn']}</td>
+								<td>
+									<?php
+									switch( $virtualcard_info['state'] )
+									{
+										case 0:
+											echo '未支付';
+										break;
+										case 1:
+											echo '未使用';
+										break;
+										case 2:
+											echo '已使用';
+										break;
+										case 3:
+											echo '已失效';
+										break;
+									}
+								?>
+								</td>
+								<td>
+									<?php if( $virtualcard_info['is_effect'] == 1 ){ ?>
+									<?php if( $virtualcard_info['effect_type'] == 0 ){ ?>
+									无限期
+									<?php }else{ ?>
+									{$virtualcard_info['effect_enddate']}
+									<?php } ?>
+									<?php }else{ ?>
+									已失效
+									<?php } ?>
+								</td>
+								<td>￥{:round($virtualcard_info['code_money'], 2)}</td>
+								<td>{$virtualcard_info['use_member_name']}</td>
+							</tr>
+							</tbody>
+						</table>
+						<?php } ?>
 					</div>
 					<div class="col-xl-12 xl-100 box-col-12">
 						<form action="" class="form theme-form layui-form" lay-filter="example" method="post" >
@@ -619,7 +759,7 @@
 											-商家改价：{$change_price}<br/>
 											<?php } ?>
 											<?php if( ($goods['is_level_buy']>0 && $mblevel_free_money > 0 ) ){ $item['is_level_buy'] = 1; ?>
-											-会员等级优惠：{$mblevel_free_money}<br/>
+											-客户等级优惠：{$mblevel_free_money}<br/>
 											<?php } ?>
 											<?php if( ($goods['is_vipcard_buy']>0 && $vip_free_money > 0 ) ){ $item['is_vipcard_buy'] = 1; ?>
 											-付费会员优惠：{$vip_free_money}<br/>
@@ -722,9 +862,11 @@
 											<?php if($item['order_status_id'] == 4){ ?>
 											<a class="btn btn-primary hxAction"  href="javascript:;" data-href="{:U('order/hexiao_times', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">确认使用</a>
 											<?php } ?>
-											<?php if($goods['hx_info']['remain_hexiao_count'] > 0 && $goods['hx_info']['remain_hexiao_count'] < $goods['hx_info']['hexiao_count']){ ?>
-											<br/>
+											<?php if($goods['hx_info']['remain_hexiao_count'] > 0 && $goods['hx_info']['remain_hexiao_count'] < $goods['hx_info']['hexiao_count'] && $goods['hx_info']['hexiao_count'] > 0 ){ ?>
 											<a class="btn btn-primary btn-xs hxBtn"  href="javascript:;" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">部分核销</a>
+											<?php } ?>
+											<?php if($goods['hx_info']['hexiao_count'] == 0 && $goods['hx_info']['record_count'] > 0){ ?>
+											<a class="btn btn-primary btn-xs hxBtn"  href="javascript:;" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">核销记录</a>
 											<?php } ?>
 											<?php } ?>
 											<?php } ?>
@@ -752,7 +894,7 @@
 											付费会员价格：{:round($goods['price'],2)}
 											<?php }else if($goods['is_level_buy'] == 1){ ?>
 											<?php if( $goods['member_disc'] < 100 ){ ?>
-											会员折扣：{$goods['member_disc']}%
+											客户折扣：{$goods['member_disc']}%
 											<?php } ?>
 											<?php } ?>
 										</td>
@@ -801,7 +943,7 @@
 									switch($mb_val['state'])
 									{
 										case 0: $str_state='待结算'; break;
-										case 1: $str_state='已结算'; break;
+										case 1: $str_state='已结算'; $order_status = 1; break;
 										case 2: $str_state='订单退款'; break;
 									}
 								?>(<?php echo $str_state; ?>)<br/>
@@ -884,7 +1026,12 @@ layui.use(['jquery', 'layer','form'], function(){
 			time: 10000
 		});
 	})
+	$('.layui-icon-about').mouseover(function(){
+		var that = this;
+		var _msg = $(this).attr('data-message');
+		layer.tips(_msg, that,{ tips:[1] });
 
+	})
 	$('.deldom').click(function(){
 		var s_url = $(this).attr('data-href');
 		layer.confirm($(this).attr('data-confirm'), function(index){
@@ -1273,8 +1420,24 @@ $(function(){
                 $('#export').val(0);
                 $('#search').submit();
             }
-        })
+        });
+
+		$('#user').click(function(){
+			layer.msg('权限不足!',{icon: 2,time: 1200});
+		});
     })
+</script>
+<script>
+	function overShow1() {
+		var showDiv = document.getElementById('showDiv');
+		showDiv.style.display = 'block';
+	}
+
+	function outHide1() {
+		var showDiv = document.getElementById('showDiv');
+		showDiv.style.display = 'none';
+
+	}
 </script>
 </body>
 

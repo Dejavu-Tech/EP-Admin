@@ -76,7 +76,7 @@
 									<div class="align-self-center text-center"><i data-feather="user-plus"></i></div>
 									<a href="<?php echo U('user/index'); ?>">
 										<div class="media-body">
-											<span class="m-0 text-white"><h6>今日新增会员</h6></span>
+											<span class="m-0 text-white"><h6>今日新增客户</h6></span>
 											<h5 class="text-white num today_member_count"></h5><i class="icon-bg" data-feather="user-plus"></i>
 										</div>
 									</a>
@@ -195,7 +195,7 @@
 										<?php if(D('Seller/Menu')->check_seller_perm('user/index')){ ?>
 										<div class="btc-sell text-center m-b-30" style="margin-left:-40px">
 											<a href="<?php echo U('user/index'); ?>">
-												<button class="btn btn-pill btn-secondary font-white f-w-700 " style="padding-left:30px!important;padding-right:30px!important;font-size:18px ">会员管理</button>
+												<button class="btn btn-pill btn-secondary font-white f-w-700 " style="padding-left:30px!important;padding-right:30px!important;font-size:18px ">客户管理</button>
 												<button class="btn btn-pill font-secondary f-w-700" style="padding-right:20px!important "><i class="icon-user f-20"></i></button>
 											</a>
 										</div>
@@ -560,7 +560,7 @@
 												<div class="media border-after-xs p-30">
 													<div class="align-self-center mr-3 text-left">
 														<h6 class="mb-1">总数</h6>
-														<h3 class="txt-primary f-w-600 mb-0">会员</h3>
+														<h3 class="txt-primary f-w-600 mb-0">客户</h3>
 													</div>
 
 													<div class="media-body text-right align-self-center">
@@ -692,7 +692,7 @@
 
 								<div class="card year-overview">
 									<div class="card-header no-border">
-										<h5 class="font-primary">近十日会员增长</h5>
+										<h5 class="font-primary">近十日客户增长</h5>
 										<ul class="creative-dots">
 											<li class="bg-primary big-dot"></li>
 											<li class="bg-secondary semi-big-dot"></li>
@@ -752,6 +752,99 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="col-xl-7 col-md-7 col-sm-12 box-col-7">
+						<div class="card">
+							<div class="card-header no-border">
+								<h5>Best Selling Product</h5>
+								<ul class="creative-dots">
+									<li class="bg-primary big-dot"></li>
+									<li class="bg-secondary semi-big-dot"></li>
+									<li class="bg-warning medium-dot"></li>
+									<li class="bg-info semi-medium-dot"></li>
+									<li class="bg-secondary semi-small-dot"></li>
+									<li class="bg-primary small-dot"></li>
+								</ul>
+								<div class="card-header-right">
+									<ul class="list-unstyled card-option">
+										<li><i class="icofont icofont-gear fa fa-spin font-primary"></i></li>
+										<li><i class="view-html fa fa-code font-primary"></i></li>
+										<li><i class="icofont icofont-maximize full-card font-primary"></i></li>
+										<li><i class="icofont icofont-minus minimize-card font-primary"></i></li>
+										<li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
+										<li><i class="icofont icofont-error close-card font-primary"></i></li>
+									</ul>
+								</div>
+							</div>
+							<div class="card-body pt-0">
+								<div class="activity-table table-responsive recent-table selling-product">
+									<table class="table table-bordernone">
+										<tbody>
+										<tr>
+											<td>
+												<div class="recent-images"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/1.png" alt=""></div>
+											</td>
+											<td>
+												<?php if (!defined('ROLE') || ROLE != 'agenter' ) {?>
+												<h5 class="default-text mb-0 f-w-700 f-18"><?php echo $version; ?></h5>
+												<?php } ?>
+											</td>
+											<td><span class="badge badge-pill recent-badge f-12">Men wear</span></td>
+											<td class="f-w-700">$45.00</td>
+											<td>
+												<h6 class="mb-0">Stock</h6>
+											</td>
+											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"></i></span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="recent-images-primary"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/2.png" alt=""></div>
+											</td>
+											<td>
+												<h5 class="font-primary mb-0 f-w-700 f-18">Kanvas Katha Women Bag</h5>
+											</td>
+											<td><span class="badge badge-pill recent-badge f-12">Brazil</span></td>
+											<td class="f-w-700">$78.00</td>
+											<td>
+												<h6 class="mb-0">Stock</h6>
+											</td>
+											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"></i></span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="recent-images-secondary"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/3.png" alt=""></div>
+											</td>
+											<td>
+												<h5 class="font-secondary mb-0 f-w-700 f-18">Unisex Aviator Sunglasses</h5>
+											</td>
+											<td><span class="badge badge-pill recent-badge f-12">London</span></td>
+											<td class="f-w-700">$50.00</td>
+											<td>
+												<h6 class="mb-0">Stock</h6>
+											</td>
+											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"></i></span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="recent-images-warning"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/4.png" alt=""></div>
+											</td>
+											<td>
+												<h5 class="font-warning mb-0 f-w-700 f-18">Men’s Cotton Round T-shirt</h5>
+											</td>
+											<td><span class="badge badge-pill recent-badge f-12">U.S.A</span></td>
+											<td class="f-w-700">$38.00</td>
+											<td>
+												<h6 class="mb-0">Stock</h6>
+											</td>
+											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"> </i></span></td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+
 					</div>
 					<div class="col-xl-5 col-md-5 col-sm-12 box-col-5">
 						<div class="card year-overview">
@@ -980,7 +1073,7 @@ function load_echat_member_incr()
 
 				series : [
 					{
-						name:'会员增长',
+						name:'客户增长',
 
 						data:data.member_count,
 					}

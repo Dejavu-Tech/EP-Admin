@@ -1,7 +1,7 @@
 <div class="modal-dialog modal-dialog-centered btn-showcase">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title"><?php if(!empty($group['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>会员等级</h5>
+            <h5 class="modal-title"><?php if(!empty($group['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>客户等级</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">
@@ -35,7 +35,7 @@
                     <label class="col-sm-3 col-form-label must">等级折扣</label>
                     <div class="col-sm-9">
                         <input type="text" name="discount" class="form-control" value="{$group['discount']}" data-rule-required="true" />
-                        <small>请填写1-99的<span style="color:red">整数</span>，100不打折。例如：80，打八折，该会员对应等级会员价=商品现价*80%</small>
+                        <small>请填写1-99的<span style="color:red">整数</span>，100不打折。例如：80，打八折，该客户对应等级会员价=商品现价*80%</small>
                     </div>
                 </div>
                 <div class="form-group row">

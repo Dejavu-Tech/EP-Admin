@@ -99,7 +99,7 @@
 					<div class="row">
 						<div class="col-lg-6 main-header">
 							<h6 class="mb-0">当前位置 </h6>
-							<h2>会员<span>余额流水</span></h2>
+							<h2>客户<span>余额流水</span></h2>
 						</div>
 					</div>
 				</div>
@@ -123,6 +123,7 @@
 													<th>交易类型</th>
 													<th>订单号</th>
 													<th>金额</th>
+													<th>赠送金额</th>
 													<th>余额</th>
 													<th>备注</th>
 													<th>操作时间</th>
@@ -160,6 +161,10 @@
 														拼团佣金提现到余额
 														<?php }else if( $row['state'] == 12 ){ ?>
 														配送佣金提现到余额
+														<?php }else if( $row['state'] == 20 ){ ?>
+														礼品卡兑换
+														<?php }else if( $row['state'] == 21 ){ ?>
+														<span class="line-text">拼团返利</span>
 														<?php } ?>
 													</td>
 													<td>
@@ -187,6 +192,13 @@
 														<?php }else if( $row['state'] == 12 ){ ?>
 														<span class="line-text">+{$row['money']}</span>
 														<?php } ?>
+													</td>
+													<td>
+														<?php if($row['give_money'] > 0){ ?>
+														<span class="line-text">{$row['give_money']}</span>
+														<?php }else{ ?>
+														{$row['give_money']}
+														<?php }?>
 													</td>
 													<td>
 														{$row['operate_end_yuer']}

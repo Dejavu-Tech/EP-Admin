@@ -281,7 +281,7 @@
 									</div>
 
 									<div class="form-group row" >
-										<label class="col-sm-2 col-form-label">更新会员核销二维码</label>
+										<label class="col-sm-2 col-form-label">更新客户核销二维码</label>
 										<div class="col-sm-10" style="padding-top:7px;">
 											<a id="clear_qrcode" href="javascript:;"  data-href="{:U('config/clearqrcode')}"  class="text-primary">立即更新</a>
 										</div>
@@ -383,7 +383,7 @@ layui.use(['jquery', 'layer','form','colorpicker'], function(){
 
 		console.log(s_url);
 
-		layer.confirm('确认更新会员核销二维码吗？', function(index){
+		layer.confirm('确认更新客户核销二维码吗？', function(index){
 		  //do something
 		  $.ajax({
 			url : s_url,

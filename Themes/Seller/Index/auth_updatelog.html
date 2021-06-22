@@ -50,13 +50,13 @@
 <script type="text/javascript" src="./resource/js/require.js?v=201903260001"></script>
 <script type="text/javascript" src="./resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
   <link rel="stylesheet" href="/layuiadmin/layui/css/layui.css" media="all">
-   <link href="/assets/css/ep/snailfish.css" rel="stylesheet">
+   <link href="/assets/css/ep/eaterplanet.css" rel="stylesheet">
 </head>
 <body layadmin-themealias="default">
 <div class="layui-fluid">
 	<div class="layui-card">
 		<div class="layui-card-header layui-elem-quote">当前位置：<span class="line-text">更新日志</span></div>
-		<div class="layui-card-body" style="padding:15px;">
+		<div class="card-body" style="padding:15px;">
 			<form action="" method="post" class="layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
 
 				<?php if(!empty($data['result']['version'])){ ?>
@@ -117,7 +117,7 @@ layui.use(['jquery', 'layer','form','colorpicker'], function(){
 
 		console.log(s_url);
 
-		layer.confirm('确认更新会员核销二维码吗？', function(index){
+		layer.confirm('确认更新客户核销二维码吗？', function(index){
 		  //do something
 		  $.ajax({
 			url : s_url,

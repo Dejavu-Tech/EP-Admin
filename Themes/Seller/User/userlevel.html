@@ -99,11 +99,11 @@
 					<div class="row">
 						<div class="col-lg-6 main-header">
 							<h6 class="mb-0">当前位置 </h6>
-							<h2>会员等级<span>列表</span></h2>
+							<h2>客户等级<span>列表</span></h2>
 						</div>
 						<div class="col-lg-6 breadcrumb-right" style="float: right">
 							<ol class="breadcrumb">
-								<a href="javascript:;" data-href="{:U('user/adduserlevel',array('ok' => 1))}" class="btn btn-info btn-air-info ajaxModal"><i class="fa fa-plus"></i> 添加会员等级</a>
+								<a href="javascript:;" data-href="{:U('user/adduserlevel',array('ok' => 1))}" class="btn btn-info btn-air-info ajaxModal"><i class="fa fa-plus"></i> 添加客户等级</a>
 							</ol>
 						</div>
 					</div>
@@ -150,7 +150,7 @@
 													<th>折扣</th>
 													<th>升级方式</th>
 													<th>升级条件</th>
-													<th>会员数量</th>
+													<th>客户数量</th>
 													<th>操作</th>
 												</tr>
 												</thead>
@@ -193,7 +193,7 @@
 													<td >
 														<?php
 															if($row['is_auto_grade'] == 1){
-																echo "会员消费金额满".floatval($row['level_money'])."元";
+																echo "客户消费金额满".floatval($row['level_money'])."元";
 															}else{
 																echo '无';
 															}
@@ -201,10 +201,10 @@
 													</td>
 													<td >{$row['membercount']}</td>
 													<td>
-														<a class="btn btn-pill btn-primary" href="{:U('user/index', array('level_id' => $row['id']))}"><span data-toggle="tooltip" data-placement="top" data-original-title="等级会员">等级会员</span></a>
+														<a class="btn btn-pill btn-primary" href="{:U('user/index', array('level_id' => $row['id']))}"><span data-toggle="tooltip" data-placement="top" data-original-title="等级客户">等级客户</span></a>
 														<?php if($row['id']!='default'){ ?>
 														<a href="javascript:;" data-href="{:U('user/adduserlevel', array('id' => $row['id'] , 'ok' => 1))}" class="btn btn-pill btn-primary ajaxModal">编辑</a>
-														<a href="javascript:;" data-href="{:U('user/deleteuserlevel', array('id' => $row['id']))}" class="btn btn-pill btn-primary deldom" data-confirm='确认要删除?<br /><br /><p style="color:red;">该等级涉及的所有会员都会变成默认等级？</p>'>删除</a>
+														<a href="javascript:;" data-href="{:U('user/deleteuserlevel', array('id' => $row['id']))}" class="btn btn-pill btn-primary deldom" data-confirm='确认要删除?<br /><br /><p style="color:red;">该等级涉及的所有客户都会变成默认等级？</p>'>删除</a>
 														<?php } ?>
 													</td>
 												</tr>

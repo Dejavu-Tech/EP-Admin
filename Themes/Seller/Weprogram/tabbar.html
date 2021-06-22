@@ -172,6 +172,12 @@
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
+												  	<input type='radio' name='parameter[tabbar_out_type]' title="本小程序链接" lay-filter="linktype" value="1" <?php if( $data['tabbar_out_type']==1 || empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="webview外链" lay-filter="linktype" value="0" <?php if( $data['tabbar_out_type']==0 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
 													<input type='radio' name='parameter[tabbar_out_type]' title="外部小程序链接" lay-filter="linktype" value="2" <?php if($data['tabbar_out_type']==2 && !empty($data) ){ ?>checked<?php } ?> />
 												</div>
 												<div class="radio radio-primary">
@@ -190,6 +196,13 @@
 													<input type='radio' name='parameter[tabbar_out_type]' title="直播列表" lay-filter="linktype" value="7" <?php if( $data['tabbar_out_type']==7 && !empty($data) ){ ?>checked<?php } ?> />
 												</div>
 												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="商城" lay-filter="linktype" value="8" <?php if( $data['tabbar_out_type']==8 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<div class="radio radio-primary">
+													<input type='radio' name='parameter[tabbar_out_type]' title="预售" lay-filter="linktype" value="9" <?php if( $data['tabbar_out_type']==9 && !empty($data) ){ ?>checked<?php } ?> />
+												</div>
+												<!--
+												<div class="radio radio-primary">
 													<input type='radio' name='parameter[tabbar_out_type]' title="付费会员卡页面" lay-filter="linktype" value="8" <?php if( $data['tabbar_out_type']==8 && !empty($data) ){ ?>checked<?php } ?> />
 												</div>
 												<div class="radio radio-primary">
@@ -203,7 +216,7 @@
 												</div>
 												<div class="radio radio-primary">
 													<input type='radio' name='parameter[tabbar_out_type]' title="整点秒杀" lay-filter="linktype" value="12" <?php if( $data['tabbar_out_type']==12 && !empty($data) ){ ?>checked<?php } ?> />
-												</div>
+												</div>-->
 											</div>
 										</div>
 									</div>
@@ -427,7 +440,7 @@ layui.use(['jquery', 'layer','form','colorpicker'], function(){
 		if (data.value == 2) {
 			$('#linkGroup').show();
 			$('#appidGroup').show();
-		} else if(data.value == 3 || data.value == 4 || data.value == 5 || data.value == 6 || data.value == 7 || data.value == 8 || data.value == 9 || data.value == 10 || data.value == 11 || data.value == 12){
+		} else if(data.value == 3 || data.value == 4 || data.value == 5 || data.value == 6 || data.value == 7 || data.value == 8){
 			$('#linkGroup').hide();
 			$('#appidGroup').hide();
 		} else {

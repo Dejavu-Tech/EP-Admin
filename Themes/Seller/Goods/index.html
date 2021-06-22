@@ -167,13 +167,9 @@
 												<?php } ?>
 												<?php if($is_updown){ ?>
 												<?php if( defined('ROLE') && ROLE == 'agenter'){ ?>
-												<?php if($is_supply_add_goods_shenhe){ ?>
 												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch' data-href="{:U('goods/change',array('type'=>'grounding','value'=>1))}">上架</button>
-												<?php } ?>
-												<?php }else{ ?>
-												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch' data-href="{:U('goods/change',array('type'=>'grounding','value'=>1))}">上架</button>
-												<?php } ?>
 												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch'  data-href="{:U('goods/change',array('type'=>'grounding','value'=>0))}">下架</button>
+												<?php } ?>
 												<?php } ?>
 												<?php if($is_open_fullreduction == 1 && $is_fullreduce ){ ?>
 												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch' data-href="{:U('goods/change_cm',array('type'=>'is_take_fullreduction','value'=>1))}">参加满减</button>
@@ -246,7 +242,7 @@
 													<?php if($is_open_fullreduction == 1 && $is_fullreduce){ ?>
 													<th>是否满减</th>
 													<?php } ?>
-													<?php if($is_updown == 1 && $is_fullreduce){ ?>
+													<?php if($is_updown == 1){ ?>
 													<th>是否上架<?php if($is_open_shenhe==1){ ?><br/>审核<?php } ?></th>
 													<?php }else{ ?>
 													<th></th>
@@ -447,14 +443,12 @@
 														<?php } ?>
 														<?php } ?>
 														<?php }else{ ?>
-														<?php if( defined('ROLE') && ROLE == 'agenter' && $is_open_shenhe == 1 && $is_updown ){ ?>
+														<?php if( defined('ROLE') && ROLE == 'agenter' && $is_open_shenhe == 1 && $is_updown == 0){ ?>
 														<?php if($item['grounding']==1){ ?>上架<?php }else{ ?>下架<?php } ?>
 														<?php }else{ ?>
-														<?php if($is_updown == 1 ){ ?>
 														<label class="switch" style="margin-bottom: 0">
 															<input type="checkbox"  name="" lay-filter="undowngroundingsitch" data-href="{:U('goods/change',array('type'=>'grounding','id'=>$item['id']))}" <?php if($item['grounding']==1){ ?>checked<?php }else{ ?><?php } ?> lay-skin="switch" >
 														</label>
-														<?php } ?>
 														<?php } ?>
 														<?php } ?>
 													</td>
@@ -537,13 +531,9 @@
 												<?php } ?>
 												<?php if($is_updown){ ?>
 												<?php if( defined('ROLE') && ROLE == 'agenter'){ ?>
-												<?php if($is_supply_add_goods_shenhe){ ?>
 												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch' data-href="{:U('goods/change',array('type'=>'grounding','value'=>1))}">上架</button>
-												<?php } ?>
-												<?php }else{ ?>
-												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch' data-href="{:U('goods/change',array('type'=>'grounding','value'=>1))}">上架</button>
-												<?php } ?>
 												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch'  data-href="{:U('goods/change',array('type'=>'grounding','value'=>0))}">下架</button>
+												<?php } ?>
 												<?php } ?>
 												<?php if($is_open_fullreduction == 1 && $is_fullreduce ){ ?>
 												<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch' data-href="{:U('goods/change_cm',array('type'=>'is_take_fullreduction','value'=>1))}">参加满减</button>
@@ -742,7 +732,7 @@
 <div id="excel_goods_edit" style="display:none;">
 	<form action="{:U('goods/excel_goodslist_edit')}" method="post"  enctype="multipart/form-data" >
 		<div class="layui-card">
-			<div class="layui-card-body">
+			<div class="card-body">
 				<div class="modal-body" >
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">excel文件</label>
@@ -1873,11 +1863,18 @@
 					ret = eval("(" + ret + ")");
 					if (ret.status == 1) {
 						obj.html(val).show()
+						input.remove();
+						location.reload();
+					}else if(ret.status == 3 ){
+						layer.msg('输入错误,请输入正确的数字', {icon: 2,time: 2000 }, function(){
+							location.reload();
+						});
+
 					} else {
-						layer.msg(ret.result.message, ret.result.url)
+						 layer.msg(ret.result.message, ret.result.url)
+						 input.remove();
+						 location.reload();
 					}
-					input.remove();
-					location.reload();
 				}).fail(function() {
 					input.remove(),  layer.msg(tip.lang.exception)
 				})

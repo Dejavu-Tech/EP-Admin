@@ -225,9 +225,9 @@
 			for( var i in  new_arr )
 			{
 				s_html+='	<div class="form-group row">';
-				s_html+='		<label class="layui-form-label">'+new_arr[i]+'内容</label>';
-				s_html+='		<div class="layui-input-block">';
-				s_html+='			<input type="text" name="datas['+new_arr[i]+']" class="layui-input" lay-required="true" value="" />';
+				s_html+='		<label class="col-sm-2 col-form-label">'+new_arr[i]+'内容</label>';
+				s_html+='		<div class="col-sm-10">';
+				s_html+='			<input type="text" name="datas['+new_arr[i]+']" class="form-control" lay-required="true" value="" />';
 				s_html+='		</div>';
 				s_html+='	</div>';
 
@@ -285,7 +285,7 @@
 					layer.close(loadingIndex); // 提交成功失败都需要关闭
 					if(info.status == 0)
 					{
-						layer.msg('请选择会员',{time: 1000});
+						layer.msg('请选择客户',{time: 1000});
 
 					}else if(info.status == 1){
 

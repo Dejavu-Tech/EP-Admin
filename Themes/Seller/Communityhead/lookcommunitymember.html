@@ -101,7 +101,7 @@
 						</div>
 						<div class="col-lg-6 breadcrumb-right" style="float: right">
 							<ol class="breadcrumb">
-								<a href="{:U('communityhead/addcommunitymember', array('community_id' =>$community_id, 'ok' => 1))}" class="btn btn-info btn-air-info"><i class="fa fa-plus"></i> 添加核销会员</a>
+								<a href="{:U('communityhead/addcommunitymember', array('community_id' =>$community_id, 'ok' => 1))}" class="btn btn-info btn-air-info"><i class="fa fa-plus"></i> 添加核销客户</a>
 							</ol>
 						</div>
 					</div>
@@ -119,7 +119,7 @@
 
 									<div class="form-row">
 										<div class="p-r-5" style="">
-											<input type="text" class="form-control"  name="keyword" value="{$_GPC['keyword']}" placeholder="会员名称"/>
+											<input type="text" class="form-control"  name="keyword" value="{$_GPC['keyword']}" placeholder="客户名称"/>
 										</div>
 										<div class="p-r-5" style="">
 											<button class="btn btn-primary" type="submit"> 搜索</button>
@@ -147,7 +147,7 @@
 											<tr>
 												<th>选择</th>
 												<th>ID</th>
-												<th>会员名称</th>
+												<th>客户名称</th>
 												<th>启用|禁用</th>
 												<th>核销数量</th>
 												<th>备注</th>

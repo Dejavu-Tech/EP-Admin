@@ -19,7 +19,7 @@
 <body style="width:100%;margin:0 auto;text-align: center;">
 <input type="hidden" id="order_id" name="order_id" value="{$order_id}"/>
 <input type="hidden" id="third_distribution_type" name="third_distribution_type" value="{$third_distribution_type}"/>
-<div class="layui-card-body" style="padding:15px 0 0 15px;">
+<div class="card-body" style="padding:15px;">
 	<?php if($third_distribution_type == 'imdada'){ ?>
 	<div class="form-group row">
 		<label class="col-sm-2 col-form-label">取消原因</label>
@@ -51,11 +51,41 @@
 				<input type="text" name="cancel_reason" id="cancel_reason_sf" class="form-control" value="" style="width: 80%;">
 			</div>
 		</div>
+	<?php }else if($third_distribution_type == 'make'){?>
+	<div class="form-group row">
+		<label class="col-sm-2 col-form-label">取消原因</label>
+		<div class="col-sm-10">
+			<input type="text" name="cancel_reason" id="cancel_reason_make" class="form-control" value="" style="width: 80%;">
+		</div>
+	</div>
+	<?php }else if($third_distribution_type == 'ele'){ ?>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">取消原因</label>
+			<div class="col-sm-10">
+				<select id="cancel_reason_id_ele" name="cancel_reason_id">
+					<option value="1">物流原因：订单长时间未分配骑手</option>
+					<option value="2">物流原因：分配骑手后，骑手长时间未取件</option>
+					<option value="3">物流原因：骑手告知不配送，让取消订单</option>
+					<option value="4">商品缺货/无法出货/已售完</option>
+					<option value="5">商户联系不上门店/门店关门了</option>
+					<option value="6">商户发错单</option>
+					<option value="7">商户/顾客自身定位错误</option>
+					<option value="8">商户改其他第三方配送</option>
+					<option value="9">顾客下错单/临时不想要了</option>
+					<option value="10">顾客自取/不在家/要求另改时间配送</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row" style="display: none;" id="cancel_reason_div_ele">
+			<label class="col-sm-2 col-form-label">取消原因</label>
+			<div class="col-sm-10">
+				<input type="text" name="cancel_reason" id="cancel_reason_ele" class="form-control" value="" style="width: 80%;">
+			</div>
+		</div>
 	<?php } ?>
 	<div class="form-group row">
-		<label class="col-sm-2 col-form-label"></label>
-		<div class="col-sm-10">
-			<a href="javascript:;" class="layui-btn layui-btn-sm cancelBtn">确认取消</a>
+		<div class="col-sm-12 text-center">
+			<a href="javascript:;" class="btn btn-primary btn-sm cancelBtn">确认取消</a>
 		</div>
 
 	</div>
@@ -93,8 +123,13 @@
 			}
 		}else if(third_distribution_type == 'sf'){
 			cancel_reason = $('#cancel_reason_sf').val();
+		}else if(third_distribution_type == 'make'){
+            cancel_reason = $('#cancel_reason_make').val();
+        }else if(third_distribution_type == 'ele'){
+			cancel_reason_id = $('#cancel_reason_id_ele').val();
+			cancel_reason = $('#cancel_reason_ele').val();
 		}
-		layer.confirm('确认取消配送订单吗', function(index){
+		layer.confirm('订单在“第三方配送平台”处于 待接单 或 待取货 情况下，取消订单可能会产生违约金，确认取消配送订单吗？', function(index){
 			$.ajax({
 				url:"{:U('order/thirth_cancel_delivery_order')}",
 				type:'post',

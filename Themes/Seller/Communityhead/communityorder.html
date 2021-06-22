@@ -170,15 +170,17 @@
 														{$row['name']}
 													</td>
 													<td>
+														<?php if(!empty($row['order_id'])){ ?>
 														{$row['total']}
+														<?php } ?>
 													</td>
 													<td>
 														<?php if( $row['type'] == 'orderbuy' ){ ?>
-														会员下单佣金
+														客户下单佣金
 														<?php }else if( $row['type'] == 'commiss' ){ ?>
 														团长分销佣金
 														<?php }else if( $row['type'] == 'tuijian' ){ ?>
-														推荐现金奖励
+														推荐团长现金奖励
 														<?php } ?>
 													</td>
 													<td>
@@ -203,11 +205,11 @@
 													</td>
 													<td style="overflow:visible;text-align: center;">
 														<div class="btn-group">
-
+															<?php if(!empty($row['order_id'])){ ?>
 															<a class="btn btn-primary btn-xs" href="{:U('order/detail',array('id' => $row['order_id']));}"  target='_blank'>
 																查看订单详情
 															</a>
-
+															<?php } ?>
 														</div>
 													</td>
 												</tr>
@@ -591,7 +593,7 @@ layui.use(['jquery', 'layer','form'], function(){
                 <div class="form-group batch-group" style="display: none;">
                     <label class="col-form-label must">团长分组</label>
                     <div class="col-sm-9 col-xs-12">
-                        <select name="batch-group[]" class="form-control select2" placeholder="会员会被加入指定的分组中"  style="position:absolute;">
+                        <select name="batch-group[]" class="form-control select2" placeholder="客户会被加入指定的分组中"  style="position:absolute;">
 							<option value="0">默认分组</option>
                             <?php foreach( $group_list as $group ){ ?>
                                 <option value="{$group['id']}">{$group['groupname']}</option>
@@ -611,7 +613,7 @@ layui.use(['jquery', 'layer','form'], function(){
 
     $("[data-toggle='batch-group'], [data-toggle='batch-level']").click(function () {
         var toggle = $(this).data('toggle');
-        $("#modal-change .modal-title").text(toggle=='batch-group'?"批量修改分组":"批量修改会员等级");
+        $("#modal-change .modal-title").text(toggle=='batch-group'?"批量修改分组":"批量修改客户等级");
         $("#modal-change").find("."+toggle).show().siblings().hide();
         $("#modal-change-btn").attr('data-toggle', toggle=='batch-group'?'group':'level');
         $("#modal-change").modal();

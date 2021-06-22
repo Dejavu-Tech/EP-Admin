@@ -133,7 +133,7 @@
 								</div>
 								<?php $commiss_level = D('Home/Front')->get_config_by_name('commiss_level');  ?>
 								<div class="stepwizard-step"><a class="btn btn-light" href="#step-4">4</a>
-									<p  <?php if($_GPC['tab']=='community_head_level'){ ?><?php } ?> >等级/分销</p>
+									<p  <?php if($_GPC['tab']=='community_head_level'){ ?><?php } ?> >提成/分销/等级</p>
 								</div>
 								<?php if( !empty($is_open_goods_relative_goods) && $is_open_goods_relative_goods == 1 ){ ?>
 								<div class="stepwizard-step"><a class="btn btn-light" href="#step-5">5</a>
@@ -534,6 +534,7 @@
 												<small>用户历史累积最多可购买数，不填写或填写0表示不限购</small>
 											</div>
 										</div>
+										<!--
 										<?php if(empty($community_head_level) || count($community_head_level) ==1 || $is_head_takegoods ==0){ ?>
 										<div class="form-group row">
 											<label class="col-sm-2 col-form-label">启用独立团长提成</label>
@@ -566,7 +567,7 @@
 											<?php } ?>
 										</div>
 										<?php } ?>
-
+                                        -->
 									    <?php if($supply_can_distribution_sale == 1){ ?>
 										<div class="form-group row">
 											<label class="col-sm-2 col-form-label">售卖团长</label>
@@ -936,10 +937,41 @@
 									<?php } ?>
 								    </div>
 									<?php } ?>
+								<?php if(empty($community_head_level) || count($community_head_level) ==1 || $is_head_takegoods ==0){ ?>
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">启用独立团长提成</label>
+									<div class="col-sm-10">
+										<div class="checkbox checkbox-primary m-t-10" >
+											<input type="checkbox" id="is_community_head_commission" lay-skin="primary" value="1" name="is_community_head_commission" lay-filter="is_community_head_commission" <?php if( $item['is_community_head_commission']==1){ ?>checked<?php } ?> title="" style="display: none"/>
+										</div>
+										<small>勾选使用 商品独立团长提成 计算佣金，不勾选则使用 后台——“团长设置”中团长提成比例 计算佣金</small>
+									</div>
 
+								</div>
+								<div class="form-group row" id="head_commission_div2" <?php if( empty($item['is_community_head_commission'])){ ?>style="display:none"<?php } ?>>
+								<label class="col-sm-2 col-form-label">商品独立团长提成</label>
+								<?php if(!empty($community_money_type) && $community_money_type ==1 ){ ?>
+								<div class="col-sm-2">
+									<div class="input-group pill-input-group m-b-10" style="display: flex; float: left;">
+										<input class="input-group-prepend form-control form-control-price" style="border-top-right-radius: 0;border-bottom-right-radius: 0;" type="text" name="community_head_commission" id="community_head_commission" value="<?php if(empty($item)){ ?>{$communityhead_commission}<?php }else{ ?>{$item['community_head_commission']}<?php } ?>" />
+										<div class="input-group-append"><span class="input-group-text">%</span></div>
+									</div>
+								</div>
+								<label class="col-form-label">预计团长可得佣金¥<font ><?php if(isset($item['community_head_commission'])){ ?>{:round( $item['community_head_commission'] ,2) }<?php }else{ ?>0.00<?php } ?></font></label>
+								<?php }else{ ?>
+								<div class="col-sm-2">
+									<div class="input-group pill-input-group m-b-10" style="display: flex; float: left;">
+										<input class="input-group-prepend form-control form-control-price" style="border-top-right-radius: 0;border-bottom-right-radius: 0;" type="text" name="community_head_commission" id="community_head_commission" value="<?php if(empty($item)){ ?>{$communityhead_commission}<?php }else{ ?>{$item['community_head_commission']}<?php } ?>" />
+										<div class="input-group-append"><span class="input-group-text">%</span></div>
+									</div>
+								</div>
+								<label class="col-form-label">预计团长可得佣金¥<font id="precommiss_head_money_tip"><?php if(isset($item['community_head_commission'])){ ?><?php echo round( ($item['community_head_commission']*$item['price'])/100 ,2); ?><?php }else{ ?>0.00<?php } ?></font>根据商品最终的成交价格来计算佣金</label>
+								<?php } ?>
+							</div>
+				<?php } ?>
 									<?php if($commiss_level > 0){ ?>
 								    <div class="col-sm-2 btc-table p-l-0 m-t-20">
-									    <div class="btc-amount font-primary f-w-700 f-18 text-center">会员分销/折扣</div>
+									    <div class="btc-amount font-primary f-w-700 f-18 text-center">客户分销/折扣</div>
 								    </div>
 											<div class="form-group row">
 											    <label class="col-sm-2 col-form-label">是否参与分销</label>
@@ -1026,7 +1058,7 @@
 
 									<?php } ?>
 									<div class="form-group row">
-										<label class="col-form-label col-sm-2">会员等级折扣</label>
+										<label class="col-form-label col-sm-2">客户等级折扣</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
@@ -1038,7 +1070,7 @@
 													<label class="mb-0" for="radioinline14">不参与</label>
 												</div>
 											</div>
-											<small>如果不参与会员折扣，则不打折</small>
+											<small>如果不参与客户折扣，则不打折</small>
 										</div>
 									</div>
 								    <div class="form-group row">
@@ -1047,7 +1079,7 @@
 											<div class="checkbox checkbox-primary m-t-10">
 										        <input type="checkbox"  lay-filter="has_mb_level_buy" id="has_mb_level_buy"  value="1" name="has_mb_level_buy" <?php if($item['has_mb_level_buy']==1){ ?>checked<?php } ?>   style="display: none"/>
 											</div>
-											<small>启用独立折扣设置，此商品拥有独立的会员等级折扣比例，不受会员等级折扣设置限制</small>
+											<small>启用独立折扣设置，此商品拥有独立的客户等级折扣比例，不受客户等级折扣设置限制</small>
 									    </div>
 								    </div>
 
@@ -1055,10 +1087,10 @@
 								    <div id="mb_level_div" <?php if(empty($item['has_mb_level_buy'])){ ?>style="display:none"<?php } ?> >
 								    <div id="mb_level_tip">
 									<div class='alert alert-danger'>
-										请填写1-99的<span style="color:red">整数</span>，100不打折。例如：80，打八折，该会员对应等级会员价=商品现价*80%
+										请填写1-99的<span style="color:red">整数</span>，100不打折。例如：80，打八折，该客户对应等级客户价=商品现价*80%
 										<?php if( empty($member_level_ist) ){ ?>
 										<br>
-										<span style="color:red">暂无会员等级，请前往会员--》会员等级 添加会员等级</span>
+										<span style="color:red">暂无客户等级，请前往客户--》客户等级 添加客户等级</span>
 										<?php } ?>
 									</div>
 								    </div>
@@ -1170,7 +1202,7 @@
 										<label class="col-sm-2 col-form-label">自定义核销次数</label>
 										<div class="col-sm-5">
 											<input type="text" name="hx_one_goods_time" id="hx_one_goods_time" class="form-control" value="{$item['hx_one_goods_time']}" />
-											<small>自定义到店核销次数,不填或填写0及以下为默认不限次数</small>
+											<small>自定义到店核销次数,不填或填写0及以下为默认不限次数，核销员 “全部核销”  为一次核销完成，管理员订单 “确认使用” 为一次核销完成。</small>
 										</div>
 									</div>
 									<div class="form-group row" id="hx_expire_type">
@@ -1906,6 +1938,14 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 		  var is_break = false;
 		  $('.option_stock').each(function(){
 			  t_val = $(this).val();
+			 if(!(/(^[1-9]\d*$)/.test(t_val)) && t_val != 0){
+				layer.msg('多规格商品库存输入错误,请输入正确的数字！',{icon:2});
+				$(this).focus();
+				$(this).css('border','red 2px solid');
+				layer.close(loadingIndex);
+				is_break = true;
+				return false;
+			}
 			  if( t_val == '' )
 			  {
 				  is_pos = true;
@@ -1974,6 +2014,11 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 			  return false;
 		  }
 
+		if(!(/(^[1-9]\d*$)/.test(s_total)) && s_total != 0){
+			layer.msg('多规格商品库存输入错误,请输入正确的数字！',{icon:2});
+			layer.close(loadingIndex);
+			return false;
+		}
 	  }else{
 		  var g_total = $('#total').val();
 
@@ -1984,13 +2029,19 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 			  return false;
 		  }
 
-	  }
+		if(!(/(^[1-9]\d*$)/.test(g_total)) && g_total != 0){
+			layer.msg('商品库存输入错误,请输入正确的数字！',{icon:2});
+			layer.close(loadingIndex);
+			return false;
+		}
+
+	}
 	  /**
 	   var supply_id = $('input[name=supply_id]').val();
 	   var is_only_distribution = $('input[name=is_only_distribution]').is(':checked');
 	   if(supply_id != '' && supply_id > 0){
 		  if(is_only_distribution){
-			  layer.msg('独立供应商不能开启同城配送');
+			  layer.msg('独立商户不能开启同城配送');
 			  layer.close(loadingIndex);
 			  return false;
 		  }

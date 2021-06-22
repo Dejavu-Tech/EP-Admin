@@ -99,11 +99,11 @@
 					<div class="row">
 						<div class="col-lg-6 main-header">
 							<h6 class="mb-0">当前位置 </h6>
-							<h2>虚拟会员<span>列表</span></h2>
+							<h2>虚拟客户<span>列表</span></h2>
 						</div>
 						<div class="col-lg-6 breadcrumb-right" style="float: right">
 							<ol class="breadcrumb">
-								<a href="{:U('user/adduserjia', array('ok' => 1))}" class="btn btn-info btn-air-info"><i class="fa fa-plus"></i> 添加虚拟会员</a>
+								<a href="{:U('user/adduserjia', array('ok' => 1))}" class="btn btn-info btn-air-info"><i class="fa fa-plus"></i> 添加虚拟客户</a>
 							</ol>
 						</div>
 					</div>
@@ -120,7 +120,7 @@
 
 									<div class="form-row">
 										<div class="p-r-5" style="">
-											<input type="text" class="form-control" name='keyword' value="{$_GPC['keyword']}" placeholder="输入会员名点击搜索">
+											<input type="text" class="form-control" name='keyword' value="{$_GPC['keyword']}" placeholder="输入客户名点击搜索">
 										</div>
 										<div class="p-r-5" style="">
 											<button class="btn btn-primary"  type="submit"> 搜索</button>
@@ -146,7 +146,7 @@
 												<tr>
 													<th>选择</th>
 													<th>ID</th>
-													<th>虚拟会员名</th>
+													<th>虚拟客户名</th>
 													<th>头像</th>
 													<th>手机号</th>
 													<th>操作</th>
@@ -170,7 +170,7 @@
 													<td >{$row['mobile']}</td>
 													<td>
 														<a href="{:U('user/adduserjia', array('id' => $row['id'] , 'ok' => 1))}" class="btn btn-pill btn-primary">编辑</a>
-														<a href="javascript:;" data-href="{:U('user/deleteuserjia', array('id' => $row['id']))}" data-confirm='确认要删除此虚拟会员吗?' class="btn btn-pill btn-primary deldom">删除</a>
+														<a href="javascript:;" data-href="{:U('user/deleteuserjia', array('id' => $row['id']))}" data-confirm='确认要删除此虚拟客户吗?' class="btn btn-pill btn-primary deldom">删除</a>
 													</td>
 												</tr>
 												<?php } ?>

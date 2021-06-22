@@ -1,14 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+ <body> 
 <style>
 .move_item{width:18%;}
 </style>
-<form action="{:U('order/order')}" method="post" id="export_form" class="form-horizontal form-search " role="form">
+<form action="{:U('order/index')}" method="post" id="export_form" class="form-horizontal form-search " role="form">
 
-<input type="hidden" name="controller" value="order.order" />
-<?php
+<input type="hidden" name="controller" value="order/order" />
+<?php 
 	foreach($post_data as $key => $val){
 ?>
 <input type="hidden" name="{$key}" value="{$val}" />
 <?php } ?>
+<input type="hidden" name="c" value="order" />
+<input type="hidden" name="a" value="index" />
 <div class="layui-fluid">
 	<div class="row layui-col-space15">
 		<div class="layui-col-md12">

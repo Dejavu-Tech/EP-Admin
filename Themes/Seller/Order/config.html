@@ -266,6 +266,12 @@
 											</div>
 										</div>
 									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">付款后分享标题</label>
+										<div class="col-sm-10">
+											<input type="text" name="data[order_pay_after_share_title]" class="form-control" value="{$data['order_pay_after_share_title']}" />
+										</div>
+									</div>
 									<div class="form-group row" >
 										<label class="col-sm-2 col-form-label">付款后分享图片</label>
 										<div class="col-sm-10">
@@ -340,18 +346,21 @@
 									</div>
 
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">打印隐藏会员手机</label>
+										<label class="col-sm-2 col-form-label">打印隐藏客户手机</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class='radio radio-primary'><input type='radio' id="radioinline23" name='data[is_printhide_membermobile]' value='0' <?php if( empty($data['is_printhide_membermobile']) || $data['is_printhide_membermobile'] ==0){ ?>checked<?php } ?>  title="否" /> <label class="mb-0" for="radioinline23">否</label></div>
 												<div class='radio radio-primary'><input type='radio' id="radioinline24" name='data[is_printhide_membermobile]' value='1' <?php if( $data['is_printhide_membermobile']=='1'){ ?>checked<?php } ?> title="是" /> <label class="mb-0" for="radioinline24">是</label></div>
 											</div>
-											<small>小票打印时，隐藏会员手机号，默认不隐藏</small>
+											<small>小票打印时，隐藏客户手机号，默认不隐藏</small>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">打印内容</label>
 										<div class="col-sm-10">
+											<div class="checkbox checkbox-primary m-l-0 row" >
+												<input type="checkbox" lay-skin="primary" name="data[is_print_auto]" class="form-control valid" <?php if( empty($data['is_print_auto']) && $data['is_print_auto'] ==0 ){ ?>checked<?php } ?> value="1" style="display: none"/><h7>下单自动打印</h7>
+											</div>
 											<div class="checkbox checkbox-primary m-l-0 row" >
 												<input type="checkbox" lay-skin="primary" name="data[is_print_cancleorder]" class="form-control valid" <?php if(!empty($data) && $data['is_print_cancleorder'] ==1 ){ ?>checked<?php } ?> value="1"  style="display: none" /><h7>取消订单打印</h7>
 											</div>
@@ -362,7 +371,7 @@
 												<input type="checkbox" lay-skin="primary" name="data[is_print_dansupply_order]" class="form-control valid" <?php if(!empty($data) && $data['is_print_dansupply_order'] ==1 ){ ?>checked<?php } ?> value="1" title="" style="display: none" /><h7>独立商户订单打印</h7>
 											</div>
 											<div class="checkbox checkbox-primary m-l-0 row" >
-												<input type="checkbox" lay-skin="primary" name="data[is_print_member_note]" class="form-control valid" <?php if( !empty($data) && $data['is_print_member_note'] ==1 ){ ?>checked<?php } ?> value="1" title=""  style="display: none"/><h7>小票打印内容包含“会员详情-备注信息”</h7>
+												<input type="checkbox" lay-skin="primary" name="data[is_print_member_note]" class="form-control valid" <?php if( !empty($data) && $data['is_print_member_note'] ==1 ){ ?>checked<?php } ?> value="1" title=""  style="display: none"/><h7>小票打印内容包含“客户详情-备注信息”</h7>
 											</div>
 											<div class="checkbox checkbox-primary m-l-0 row" >
 												<input type="checkbox" lay-skin="primary" name="data[is_print_order_note]" class="form-control valid" <?php if( !empty($data) && $data['is_print_order_note'] ==1 ){ ?>checked<?php } ?> value="1" title="" style="display: none"/><h7>小票打印内容包含“订单提交页自定义备注信息”</h7>
@@ -387,7 +396,7 @@
 												<div class="radio radio-primary"><input id="radioinline29" type='radio' name='data[is_open_yue_pay]' value='0' <?php if(empty($data['is_open_yue_pay']) || $data['is_open_yue_pay']==0){ ?>checked<?php } ?> title="关闭" /><label class="mb-0" for="radioinline29">关闭</label></div>
 												<div class="radio radio-primary"><input id="radioinline30" type='radio' name='data[is_open_yue_pay]' value='1' <?php if($data['is_open_yue_pay']=='1'){ ?>checked<?php } ?> title="开启" /><label class="mb-0" for="radioinline30">开启</label></div>
 											</div>
-											<small>开启后会员中心默认开启余额充值</small>
+											<small>开启后客户中心默认开启余额充值</small>
 										</div>
 									</div>
 									<div class="form-group row">
@@ -589,7 +598,7 @@ layui.use(['jquery', 'layer','form'], function(){
 
 				if(info.status == 0)
 				{
-					layer.msg(info.result.message,{icon: 1,time: 2000});
+					layer.msg(info.result.msg,{icon: 1,time: 2000});
 				}else if(info.status == 1){
 					var go_url = location.href;
 					if( info.result.hasOwnProperty("url") )

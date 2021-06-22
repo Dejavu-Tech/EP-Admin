@@ -149,7 +149,7 @@
 										<div class="p-r-5" style="">
 											<select name='searchfield' lay-ignore class='form-control'     >
 												<option value='ordersn' <?php if($searchfield=='ordersn'){ ?>selected<?php } ?>>订单号</option>
-												<option value='member' <?php if($searchfield=='member'){ ?>selected<?php } ?>>会员信息</option>
+												<option value='member' <?php if($searchfield=='member'){ ?>selected<?php } ?>>客户信息</option>
 												<option value='mobile' <?php if($searchfield=='mobile'){ ?>selected<?php } ?>>手机号</option>
 												<option value='address' <?php if($searchfield=='address'){ ?>selected<?php } ?>>收件人信息</option>
 												<option value='location' <?php if($searchfield=='location'){ ?>selected<?php } ?>>地址信息</option>
@@ -241,7 +241,11 @@
 														<div class="txt-danger">{$item['member_content']}</div>
 														<?php } ?>
 														<?php }else{ ?>
+														<?php if($s_id == 1){ ?>
 														<div>客户名：<a class="txt-primary" href="{:U('user/detail',array('id'=>$item['member_id']))}">{$item['nickname']}</a></div>
+														<?php }else{ ?>
+														<div>客户名：<a class="txt-primary user">{$item['nickname']}</a></div>
+														<?php } ?>
 														<?php if( !empty($item['member_content']) ){ ?>
 														<div class="text-danger">{$item['member_content']}</div>
 														<?php } ?>
@@ -672,6 +676,10 @@ layui.use(['jquery', 'layer','form'], function(){
 
 	  form.render('checkbox');
 	});
+
+  		$('.user').click(function(){
+				layer.msg('权限不足!',{icon: 2,time: 1200});
+		})
 
   //监听提交
   form.on('submit(formDemo)', function(data){

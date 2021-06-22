@@ -97,7 +97,7 @@
 					<div class="row">
 						<div class="col-lg-6 main-header">
 							<h6 class="mb-0">当前位置 </h6>
-							<?php if($is_showform ==0){ ?><h2>会员<span>详情</span></h2><?php } ?>
+							<?php if($is_showform ==0){ ?><h2>客户<span>详情</span></h2><?php } ?>
 							<?php if($member['is_writecommiss_form'] == 0){ ?>
 							<?php if($is_showform ==1){ ?><h2>分销<span>表单</span></h2><?php } ?>
 							<?php } ?>
@@ -116,7 +116,7 @@
 
 									<!--<div class="form-group row" lay-filter="docDemoTabBrief">
 										<ul class="col-sm-2 col-form-label">
-											<li class="nav-item <?php if($is_showform ==0){ ?>active show<?php } ?>">会员详情</li>
+											<li class="nav-item <?php if($is_showform ==0){ ?>active show<?php } ?>">客户详情</li>
 											<?php if($member['is_writecommiss_form'] == 0){ ?>
 											<li class="nav-item <?php if($is_showform ==1){ ?>active show<?php } ?>">分销表单</li>
 											<?php } ?>
@@ -139,10 +139,10 @@
 											</div>
 										</div>
 										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">会员等级</label>
+											<label class="col-sm-2 col-form-label">客户等级</label>
 											<div class="col-sm-10">
 												<select name='data[level_id]' class='form-control'>
-													<option value=''>普通会员</option>
+													<option value=''>普通客户</option>
 													<?php foreach( $level_list as $level ){ ?>
 													<option value='{$level['id']}' <?php if($member['level_id']==$level['id']){ ?>selected<?php } ?>>{$level['levelname']}</option>
 													<?php } ?>
@@ -150,7 +150,7 @@
 											</div>
 										</div>
 										<div class="row select2-drpdwn m-b-20">
-											<label class="col-sm-2 col-form-label">会员分组</label>
+											<label class="col-sm-2 col-form-label">客户分组</label>
 											<div class="col-sm-10">
 												<select name='data[groupid]' multiple="multiple"  class="js-example-basic-multiple col-sm-12 "  placeholder="无分组">
 													<option value='' <?php if(empty($group['id'])){ ?>selected<?php } ?>>默认分组</option>
@@ -168,7 +168,7 @@
 												<div class="input-group " style="margin: 0;">
 													<input type="text" disabled value="{$member['agentid']}" class="form-control valid" name="data[agentid]" placeholder="" id="member_id">
 													<div class="input-group-append">
-														<span data-input="#member_id" id="chose_member_id"  class="btn btn-pill btn-primary">选择会员</span>
+														<span data-input="#member_id" id="chose_member_id"  class="btn btn-pill btn-primary">选择客户</span>
 													</div>
 												</div>
 												<?php if($saler){ ?>
@@ -277,7 +277,7 @@
 													<div class="radio radio-primary"><input type="radio" name="data[isblack]" value="1" <?php if($member['isblack']==1){ ?>checked<?php } ?> title="禁用" ></div>
 													<div class="radio radio-primary"><input type="radio" name="data[isblack]" value="0" <?php if($member['isblack']==0){ ?>checked<?php } ?> title="启用" ></div>
 												</div>
-												<small>设置禁用后，此会员无法访问商城</small>
+												<small>设置禁用后，此客户无法访问商城</small>
 											</div>
 										</div>
 										<?php  if($is_user_shenhe == 1){ ?>
@@ -289,13 +289,13 @@
 													<div class="radio radio-primary"><input type="radio" name="data[is_apply_state]" value="0" <?php if( $member['is_apply_state']==0 ){ ?>checked<?php } ?> title="未审核" ></div>
 													<div class="radio radio-primary"><input type="radio" name="data[is_apply_state]" value="2" <?php if( $member['is_apply_state']==2){ ?>checked<?php } ?> title="拒绝审核" ></div>
 												</div>
-												<small>设置未审核、拒绝审核后，此会员无法下单</small>
+												<small>设置未审核、拒绝审核后，此客户无法下单</small>
 											</div>
 										</div>
 										<?php } ?>
 										<?php if($is_get_formdata == 1){ ?>
 										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">会员表单</label>
+											<label class="col-sm-2 col-form-label">客户表单</label>
 											<div class="col-sm-10">
 												<label class='col-form-label'>
 													<?php if($member['is_write_form'] == 0) { ?>

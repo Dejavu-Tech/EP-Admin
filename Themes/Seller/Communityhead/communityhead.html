@@ -127,7 +127,7 @@
 											</select>
 										</div>
 										<div class="p-r-5" style="">
-											<input type="text" class="form-control"  name="keyword" value="{$_GPC['keyword']}" placeholder="会员昵称/团长姓名/手机号/小区名称"/>
+											<input type="text" class="form-control"  name="keyword" value="{$_GPC['keyword']}" placeholder="客户昵称/团长姓名/手机号/小区名称"/>
 
 										</div>
 										<div class="p-r-5" style="">
@@ -281,7 +281,7 @@
 														<?php if( $row['state'] == 0  ){ ?>
 														<!--<a class='btn btn-primary btn-sm'  data-toggle="ajaxModal" href="javascript:;" data-href="{:U('communityhead/agent_check_first', array('id' => $row['id']))}" >
 
-															<i class="icow icow-yibiaoji" style="color: #999;display: inline-block;vertical-align: middle" title="点击审核，选择供应商类型" ></i>
+															<i class="icow icow-yibiaoji" style="color: #999;display: inline-block;vertical-align: middle" title="点击审核，选择商户类型" ></i>
 															通过
 
 														</a><br/>
@@ -793,7 +793,7 @@ layui.use(['jquery', 'layer','form'], function(){
                 <div class="form-group batch-group" style="display: none;">
                     <label class="col-form-label must">团长分组</label>
 
-                        <select name="batch-group[]" class="form-control select2" placeholder="会员会被加入指定的分组中">
+                        <select name="batch-group[]" class="form-control select2" placeholder="客户会被加入指定的分组中">
 							<option value="0">默认分组</option>
                             <?php foreach( $group_list as $group ){ ?>
                                 <option value="{$group['id']}">{$group['groupname']}</option>
@@ -813,7 +813,7 @@ layui.use(['jquery', 'layer','form'], function(){
 
     $("[data-toggle='batch-group'], [data-toggle='batch-level']").click(function () {
         var toggle = $(this).data('toggle');
-        $("#modal-change .modal-title").text(toggle=='batch-group'?"批量修改分组":"批量修改会员等级");
+        $("#modal-change .modal-title").text(toggle=='batch-group'?"批量修改分组":"批量修改客户等级");
         $("#modal-change").find("."+toggle).show().siblings().hide();
         $("#modal-change-btn").attr('data-toggle', toggle=='batch-group'?'group':'level');
         $("#modal-change").modal();

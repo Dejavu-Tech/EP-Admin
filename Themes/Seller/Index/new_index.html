@@ -235,11 +235,6 @@
                                         </a>
                                     </div>
                                 </li>
-                                <?php if (!defined('ROLE') || ROLE != 'agenter' ) { ?>
-                                <?php if($is_can_update == 1){ ?>
-
-                                <?php } ?>
-                                <?php } ?>
                             </ul>
                         </li>
                         <li id="orderdistribution1" class="onhover-dropdown"><img class="img-fluid img-shadow-warning" src="/assets/images/dashboard/notification.png" alt="">
@@ -330,7 +325,7 @@
                                 </li>
 
                                 <?php if( !empty($sub_menu['items']) ){ ?>
-                                <li class="third-menu active">
+                                <li class="third-menu active" style="cursor: pointer;">
                                     <?php foreach($sub_menu['items'] as $third_sub_menu){ ?>
                                     <ul data-name="list" ><a lay-href="{:U($third_sub_menu['route'])}">{$third_sub_menu['title']}</a></ul>
                                     <?php } ?>

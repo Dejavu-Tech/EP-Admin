@@ -167,7 +167,7 @@
 											</div>
 
 											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">会员下单成功提醒团长</label>
+												<label class="col-sm-2 col-form-label">客户下单成功提醒团长</label>
 												<div class="col-sm-10">
 													<input type="text" name="parameter[weixin_template_order_buy]" class="form-control" value="{$data['weixin_template_order_buy']}" />
 													<small>用户下单成功以后，消息通知团长</small>
@@ -219,34 +219,34 @@
 										</div>
 										<div id="analy_div"></div>
 										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">发送会员类型</label>
+											<label class="col-sm-2 col-form-label">发送客户类型</label>
 											<div class="col-sm-10">
 												<div class="form-group m-t-5 m-checkbox-inline mb-0 custom-radio-ml">
 													<div class="radio radio-primary">
-														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type"  title="指定会员" value=1 checked />
+														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type"  title="指定客户" value=1 checked />
 													</div>
 													<div class="radio radio-primary">
-														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type" title="某个会员组" value=2  />
+														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type" title="某个客户组" value=2  />
 													</div>
 													<div class="radio radio-primary">
-														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type"  title="全部会员" value=3  />
+														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type"  title="全部客户" value=3  />
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="form-group row" id="type_1">
-											<label class="col-sm-2 col-form-label">关联会员</label>
+											<label class="col-sm-2 col-form-label">关联客户</label>
 											<div class="col-sm-10">
 												<div class="input-group pill-input-group" style="margin: 0;">
 													<input type="text" disabled value="" class="form-control valid" name="" placeholder="" id="agent_id">
 													<span class="input-group-append">
-														<span data-input="#agent_id" id="col-sm-10"  class="btn btn-pill btn-primary">选择会员</span>
+														<span data-input="#agent_id" id="col-sm-10"  class="btn btn-pill btn-primary">选择客户</span>
 													</span>
 												</div>
 											</div>
 										</div>
 										<div class="form-group row" id="type_2" style="display:none;">
-											<label class="col-sm-2 col-form-label must">会员组</label>
+											<label class="col-sm-2 col-form-label must">客户组</label>
 											<div class="col-sm-10">
 												<select name="member_group_id">
 													<?php foreach($member_group_list as $val){ ?>
@@ -305,7 +305,7 @@
 														</div>
 													</div>
 													<?php }} ?>
-													<small>订单信息提示，平台用户下单后通知关联会员进行接单处理</small>
+													<small>订单信息提示，平台用户下单后通知关联客户进行接单处理</small>
 												</div>
 
 											</div>
@@ -483,7 +483,7 @@ layui.use(['jquery', 'layer','form'], function(){
 		   layer.close(loadingIndex); // 提交成功失败都需要关闭
 			if(info.status == 0)
 			{
-				layer.msg('请选择会员',{time: 1000});
+				layer.msg('请选择客户',{time: 1000});
 
 			}else if(info.status == 1){
 

@@ -124,7 +124,7 @@
 
         <%if page.visit==1%>
             <div class="form-group row">
-                <div class="col-sm-2 control-label">会员等级</div>
+                <div class="col-sm-2 control-label">客户等级</div>
                 <div class="col-sm-10">
                     <%each levels.member as level%>
                     <label class="checkbox-inline"><input type="checkbox" value="<%level.id%>" class="diy-bind" data-bind-child="visitlevel" data-bind="member" <%if inArray(page.visitlevel.member, level.id)%>checked="checked"<%/if%>> <%level.levelname%></label>
@@ -208,7 +208,7 @@
             </div>
             <div class="input-group " style="margin-top:.5em;">
                 <img src="<%params.iconurl%>" onerror="this.src='/assets/ep/images/nopic.jpg';" class="img-responsive img-thumbnail" width="150" id="iconimg">
-                <span class="close" style="position:absolute; top: -10px;" title="重置默认图片" onclick="$('#iconsrc').val('/assets/ep/images/hotdot.jpg').trigger('change');$(this).prev().attr('src', '../addons/Snailfish_shop/assets/ep/images/hotdot.jpg')">×</span>
+                <span class="close" style="position:absolute; top: -10px;" title="重置默认图片" onclick="$('#iconsrc').val('/assets/ep/images/hotdot.jpg').trigger('change');$(this).prev().attr('src', '../addons/eaterplanet_shop/assets/ep/images/hotdot.jpg')">×</span>
             </div>
         </div>
     </div>

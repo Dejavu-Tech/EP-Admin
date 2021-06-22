@@ -207,6 +207,102 @@ color:#555;
 		<script src="__PUBLIC__/js/dejavutech_common.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/swfobject.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/web_socket.js"></script>
+		<script type="text/javascript">
+			if (typeof console == "undefined") {    this.console = { log: function (msg) {  } };}
+			// 如果浏览器不支持websocket，会使用这个flash自动模拟websocket协议，此过程对开发者透明
+			WEB_SOCKET_SWF_LOCATION = "__PUBLIC__/swf/WebSocketMain.swf";
+			// 开启flash的websocket debug
+			WEB_SOCKET_DEBUG = true;
+			var ws, name, client_list={};
+			var domain = document.domain;
+
+			// 连接服务端
+			function connect() {
+			   // 创建websocket
+			   ws = new WebSocket("wss://demo.ch871.com/wss");
+			   // 当socket连接打开时，输入用户名
+			   ws.onopen = onopen;
+			   // 当有消息时根据消息类型显示不同信息
+			   ws.onmessage = onmessage;
+			   ws.onclose = function() {
+				  console.log("连接关闭，定时重连");
+				  connect();
+			   };
+			   ws.onerror = function() {
+				  console.log("出现错误");
+			   };
+			}
+
+			// 连接建立时发送登录信息
+			function onopen()
+			{
+				//document.domain
+				// 登录
+				var login_data = '{"type":"sellerlogin","domain":"'+domain+'"}';
+				console.log("websocket握手成功，发送登录数据:"+login_data);
+				ws.send(login_data);
+
+				//mseg_count
+				var seller_data = '{"type":"sellermsg_login","room_id":"<?php echo is_seller_login(); ?>","domain":"'+domain+'","uid":"<?php echo is_seller_login(); ?>"}';
+				console.log("登录卖家消息成功:"+seller_data);
+				ws.send(seller_data);
+
+			}
+
+			// 服务端发来消息时
+			function onmessage(e)
+			{
+				console.log('ddddd');
+				var data = eval("("+e.data+")");
+				switch(data['type']){
+					// 服务端ping客户端
+					case 'ping':
+						ws.send('{"type":"pong"}');
+						break;
+						//array('type'=>'resv_blog','blog_id'=>$blog_id);
+
+					// 登录 更新用户列表
+					case 'resv_blog':
+						//{"type":"login","client_id":xxx,"client_name":"xxx","client_list":"[...]","time":"xxx"}
+						var blog_id = data['blog_id'];
+						var title = data['title'];
+
+						var blog_count = $('.badge-important').html();
+
+						blog_count = parseInt(blog_count) + 1;
+						$('.badge-important').html(blog_count);
+
+						var new_blg_html = '';
+						new_blg_html= '';
+						new_blg_html +='<li>';
+						new_blg_html +='	<a href="/seller.php?s=/Blog/showdetail/blog_id/'+blog_id+'">';
+						new_blg_html +='		<i class="btn btn-xs btn-primary fa fa-user"></i>';
+						new_blg_html +='		'+title;
+						new_blg_html +='	</a>';
+						new_blg_html +='</li>';
+						$('#notify_blog').append(new_blg_html);
+						//console.log(data['client_name']+"登录成功");
+						break;
+					case 'seller_unread_count':
+
+						if(data['count']>0)
+						{
+							var audio = document.getElementById("bgMusic");
+							//播放(继续播放)
+							audio.play();
+							audio.currentTime = 0;
+							audio.play();
+						}
+						$('#mseg_count').html(data['count']);
+						break;
+					break;
+				}
+			}
+
+			$(function(){
+				connect();
+			})
+		</script>
 		<block name="javascript">
 
 		</block>

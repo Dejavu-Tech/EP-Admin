@@ -111,18 +111,18 @@
 								<div class="card-body">
 									<input type="hidden" name="id" value="{$item['id']}">
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label must">关联会员</label>
+										<label class="col-sm-2 col-form-label must">关联客户</label>
 
 										<div class="col-sm-10">
 											<div class="input-group " style="margin: 0;">
 												<input type="text" disabled value="{$item['member_id']}" class="form-control valid" name="member_id" placeholder="" id="member_id" >
 												<?php if(!empty($item['id'])){ ?>
 												<div class="input-group-append">
-													<span class="btn btn-pill btn-primary">会员</span>
+													<span class="btn btn-pill btn-primary">客户</span>
 												</div>
 												<?php }else{ ?>
 												<div class="input-group-append">
-													<span data-input="#member_id" id="chose_member_id"  class="btn btn-pill btn-primary">选择会员</span>
+													<span data-input="#member_id" id="chose_member_id"  class="btn btn-pill btn-primary">选择客户</span>
 												</div>
 												<?php } ?>
 											</div>
@@ -325,21 +325,21 @@
 										<label class="col-sm-2 col-form-label">银行卡名称</label>
 										<div class="col-sm-10">
 											<input type="text" name="bankname" class="form-control" value="{$item['bankname']}"   />
-											<small>例如农行、微信、支付宝，需有关联会员此处设置才有效</small>
+											<small>例如农行、微信、支付宝，需有关联客户此处设置才有效</small>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">卡号</label>
 										<div class="col-sm-10">
 											<input type="text" name="bankaccount"  class="form-control" value="{$item['bankaccount']}"   />
-											<small>需有关联会员此处设置才有效</small>
+											<small>需有关联客户此处设置才有效</small>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">持卡人姓名</label>
 										<div class="col-sm-10">
 											<input type="text" name="bankusername"  class="form-control" value="{$item['bankusername']}"   />
-											<small>需有关联会员此处设置才有效</small>
+											<small>需有关联客户此处设置才有效</small>
 										</div>
 									</div>
 
