@@ -109,7 +109,8 @@ class MemberModel{
 		$pay_money = empty($pay_money) ? 0 : $pay_money;
 
 		$mb_info = M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id ) )->find();
-
+		if( !empty($mb_info) )
+        {
 		$next_level = M('eaterplanet_ecommerce_member_level')->where( "id >".$mb_info['level_id']." and is_auto_grade =1 " )->order('id asc')->find();
 
 		if( !empty($next_level) && $pay_money >= $next_level['level_money'] )
@@ -118,9 +119,9 @@ class MemberModel{
 		}
 	}
 
-
+	}
 	/**
-		更改会员余额
+		更改客户余额
 	**/
 	public function sendMemberMoneyChange($member_id, $num, $changetype, $remark='')
 	{
@@ -133,7 +134,7 @@ class MemberModel{
 		$flow_data['member_id'] = $member_id;
 		$flow_data['trans_id'] = '';
 
-		//0，未支付，1已支付,3余额付款，4退款到余额，5后台充值 6 后台扣款
+		//0，未支付，1已支付,3余额付款，4退款到余额，5后台充值 6 后台扣款 11兑换卡兑换
 
 		//增加 operate_end_yuer
 		if($changetype == 0)
@@ -166,6 +167,12 @@ class MemberModel{
 		{
 			$up_sql = "update ".C('DB_PREFIX')."eaterplanet_ecommerce_member set account_money = account_money+ ".$num ." where  member_id=".$member_id;
 			$flow_data['state'] = '10';
+		}
+		else if( $changetype == 20 )
+		{
+            //11兑换卡兑换
+			$up_sql = "update ".C('DB_PREFIX')."eaterplanet_ecommerce_member set account_money = account_money+ ".$num ." where  member_id=".$member_id;
+			$flow_data['state'] = '20';
 		}
 
 		M()->execute($up_sql);

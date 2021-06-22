@@ -115,7 +115,7 @@ class VoucherController extends CommonController{
 	}
 
 	/**
-	 * 上传会员Excel批量赠送优惠券
+	 * 上传客户Excel批量赠送优惠券
 	 */
 	function sendvoucher_tomember_excel_done()
 	{

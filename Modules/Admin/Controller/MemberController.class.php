@@ -127,7 +127,7 @@ class MemberController extends CommonController{
 	 }
 
 	 /**
-	  * 导出会员名单
+	  * 导出客户名单
 	  */
 	function export()
 	{
@@ -197,7 +197,7 @@ class MemberController extends CommonController{
 	    }
 
 	    $xlsCell  = array(
-	        array('member_id','会员ID'),
+	        array('member_id','客户ID'),
 	        array('openid','OPENID'),
 	        array('name','昵称'),
 	        array('address_name','收件人姓名'),
@@ -207,7 +207,7 @@ class MemberController extends CommonController{
 	        array('country','区 '),
 	        array('address','详细地址 ')
 	    );
-	    $expTitle = '会员信息_'.date('Y-m-d H:i:s');
+	    $expTitle = '客户信息_'.date('Y-m-d H:i:s');
 	    export_excel($expTitle,$xlsCell,$need_data);
 
 	}

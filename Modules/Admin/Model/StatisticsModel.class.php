@@ -49,7 +49,7 @@ class StatisticsModel{
 	function get_visitors_ip_by_date($date){
 		return M()->query("SELECT DISTINCT ip from ".C('DB_PREFIX')."visitors_ip where last_visit_time='".$date."'");
 	}
-	//取得所有会员资料
+	//取得所有客户资料
 	function get_all_member(){
 		return M('member')->select();
 	}
@@ -66,7 +66,7 @@ class StatisticsModel{
 		//return M('member')->count();
 	}
 
-	//今日注册会员
+	//今日注册客户
 	function get_today_register_member(){
 		//时间大于零点时间戳
 		return M()->query("SELECT * from ".C('DB_PREFIX')."member where create_time>=".strtotime(date('Y-m-d')));
