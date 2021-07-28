@@ -15096,7 +15096,7 @@ CREATE TABLE IF NOT EXISTS `seller`
   DEFAULT CHARSET = utf8 COMMENT ='卖家信息表';
 
 INSERT INTO `seller` (`s_id`, `s_uname`, `s_true_name`, `s_mobile`, `s_passwd`, `s_role_id`, `s_login_count`, `s_last_login_ip`, `s_last_ip_region`, `s_create_time`, `s_last_login_time`, `s_status`, `perms`, `deleted`) VALUES
-(1, 'zhrrobert', '', '', 'MDAwMDAwMDAwMIpnnZqWiWPThLaJl4O4eak', 0, 22, '112.117.155.162', '', 1605732513, 1622836538, 1, '', 0);
+(1, 'epadmin', '', '', 'MDAwMDAwMDAwMIpnnZqWiWPThLaJl4O4eak', 0, 22, '112.117.155.162', '', 1605732513, 1622836538, 1, '', 0);
 
 CREATE TABLE IF NOT EXISTS `seller_ad`
 (
