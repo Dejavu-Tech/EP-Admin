@@ -99,7 +99,7 @@ class InstallController extends Controller{
         }
     }
 
-    //安装第二步，创建数据库
+    //安装第三步，创建数据库
     public function step3($db = null, $seller = null){
         if(IS_POST){
 
