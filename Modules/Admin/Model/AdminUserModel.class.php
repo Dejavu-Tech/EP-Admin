@@ -36,28 +36,28 @@ class AdminUserModel{
 		);
 
 	}
-
+	
 	function add_admin_user($data){
 			if(empty($data['a_uname'])){
-				$error="用户名不能为空！！";
+				$error="用户名不能为空！！";				
 			}elseif(M('Admin')->getByAUname(trim($data['a_uname']))){
-				$error="用户名已经存在！！";
+				$error="用户名已经存在！！";				
 			}elseif(empty($data['a_passwd'])){
-				$error="密码不能为空！！";
+				$error="密码不能为空！！";				
 			}
-
-			if($error){
+			
+			if($error){		
 				return array(
 					'status'=>'back',
-					'message'=>$error
+					'message'=>$error				
 				);
 			}
-
+			
 			$data['a_passwd']  =think_ucenter_encrypt($data['a_passwd'],C('PWD_KEY'));
 			$data['a_create_time']  =time();
 			$data['a_status']  =1;
-
-
+			
+			
 			if(M('Admin')->add($data)){
 				return array(
 				'status'=>'success',
@@ -68,18 +68,18 @@ class AdminUserModel{
 				return array(
 				'status'=>'back',
 				'message'=>'新增失败'
-
+				
 				);
 			}
 	}
-
-
+	
+	
 	function edit_admin_user($d){
 
 		$d['a_passwd']=think_ucenter_encrypt($d['a_passwd'],C('PWD_KEY'));
-
+		
 		$r=M('Admin')->where(array('a_id'=>$d['a_id']))->save($d);
-		if($r){
+		if($r){				
 			return array(
 				'status'=>'success',
 				'message'=>'修改成功',
