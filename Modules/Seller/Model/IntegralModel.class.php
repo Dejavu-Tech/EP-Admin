@@ -195,7 +195,7 @@ class IntegralModel{
 
 	/**
 		系统奖励或者扣除客户积分
-		CREATE TABLE IF NOT EXISTS `dejavutech_integral_flow` (
+		CREATE TABLE IF NOT EXISTS `integral_flow` (
 		  `id` int(10) NOT NULL COMMENT '自增id',
 		  `member_id` int(10) NOT NULL COMMENT '客户id',
 		  `in_out` enum('in','out') NOT NULL COMMENT '增加积分，还是减少积分',
