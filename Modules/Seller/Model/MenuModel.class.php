@@ -515,17 +515,6 @@ class MenuModel
                 'items' => array(
                     array('title' => '角色管理', 'route' => 'perm/index', 'desc' => ''),
                     array('title' => '后台管理员', 'route' => 'perm/user', 'desc' => ''),
-                    array('title' => '操作日志', 'route' => 'SellerLog/index', 'desc' => ''),
-                    array('title' => '系统日志', 'route' => 'operatelog/index', 'desc' => ''),
-                ),
-            ),
-            'attachment' => array(
-                'title' => '附件',
-                'subtitle' => '附件管理',
-                'icon' => 'attachment',
-                'route' => 'attachment/index',
-                'items' => array(
-                    array('title' => '附件设置', 'route' => 'attachment/index', 'desc' => ''),
                 ),
             ),
             'config' => array(
