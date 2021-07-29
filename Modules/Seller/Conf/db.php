@@ -7,7 +7,7 @@ return array(
 'DB_USER'   => 'root', // 用户名
 'DB_PWD'    => '123456',  // 密码
 'DB_PORT'   => '3306', // 端口
-'DB_PREFIX' => 'dejavutech_', // 数据库表前缀
+'DB_PREFIX' => 'eaterplanet_ecommerce_', // 数据库表前缀
 
 );
 ?>
