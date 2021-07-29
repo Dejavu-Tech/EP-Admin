@@ -1,11 +1,8 @@
 -- 吃货星球数据库文件
--- Generation Time: 2020-12-07 13:26:52
 -- 服务器版本： 5.6.49-log
 -- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -16,7 +13,7 @@ SET time_zone = "+00:00";
 
 
 
-CREATE TABLE IF NOT EXISTS `access`
+CREATE TABLE IF NOT EXISTS `dejavutech_access`
 (
     `id`      int(11) NOT NULL,
     `role_id` int(11) NOT NULL COMMENT '角色id',
@@ -25,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `access`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='结点权限访问表';
 
-CREATE TABLE IF NOT EXISTS `address`
+CREATE TABLE IF NOT EXISTS `dejavutech_address`
 (
     `address_id`   int(11)      NOT NULL,
     `member_id`    int(11)      NOT NULL,
@@ -41,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `address`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='用户收货地址';
 
-CREATE TABLE IF NOT EXISTS `admin`
+CREATE TABLE IF NOT EXISTS `dejavutech_admin`
 (
     `a_id`              mediumint(8) NOT NULL,
     `a_uname`           varchar(20)  NOT NULL COMMENT '用户名',
@@ -61,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `admin`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='后台管理员';
 
-CREATE TABLE IF NOT EXISTS `apply`
+CREATE TABLE IF NOT EXISTS `dejavutech_apply`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
     `username`    varchar(255) NOT NULL COMMENT '姓名',
@@ -78,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `apply`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
 
-CREATE TABLE IF NOT EXISTS `apply_relship`
+CREATE TABLE IF NOT EXISTS `dejavutech_apply_relship`
 (
     `id`        int(10) NOT NULL COMMENT '自增ID',
     `aid`       int(10) NOT NULL COMMENT '申请ID',
@@ -89,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `apply_relship`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='申请信息关联表';
 
-CREATE TABLE IF NOT EXISTS `area`
+CREATE TABLE IF NOT EXISTS `dejavutech_area`
 (
     `area_id`        int(11) UNSIGNED    NOT NULL COMMENT '索引ID',
     `area_name`      varchar(50)         NOT NULL COMMENT '地区名称',
@@ -99,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `area`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='地区表';
 
-INSERT INTO `area` (`area_id`, `area_name`, `area_parent_id`, `area_sort`, `area_deep`)
+INSERT INTO `dejavutech_area` (`area_id`, `area_name`, `area_parent_id`, `area_sort`, `area_deep`)
 VALUES (1, '北京', 0, 0, 1),
        (2, '天津', 0, 0, 1),
        (3, '河北省', 0, 0, 1),
@@ -3430,7 +3427,7 @@ VALUES (1, '北京', 0, 0, 1),
        (5024, '五家渠市', 492, 0, 3),
        (45055, '海外', 35, 0, 2);
 
-CREATE TABLE IF NOT EXISTS `bad_domain`
+CREATE TABLE IF NOT EXISTS `dejavutech_bad_domain`
 (
     `id`       int(10)      NOT NULL,
     `domain`   varchar(255) NOT NULL,
@@ -3439,7 +3436,7 @@ CREATE TABLE IF NOT EXISTS `bad_domain`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-INSERT INTO `bad_domain` (`id`, `domain`, `add_time`)
+INSERT INTO `dejavutech_bad_domain` (`id`, `domain`, `add_time`)
 VALUES (0, '/index.php?m=member&c=index&a=register&siteid=1', 1507905932),
        (0, '/index.php?g=Wap&m=Dining&a=ShowDetail&id=2%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),0)%23',
         1507907299),
@@ -3874,7 +3871,7 @@ VALUES (0, '/index.php?m=member&c=index&a=register&siteid=1', 1507905932),
        (0, '/index.php?c=utility&a=file&do=upload&upload_type=image&global=&dest_dir=&uniacid=-1&quality=0&group_id=-1',
         1545118404);
 
-CREATE TABLE IF NOT EXISTS `bad_word`
+CREATE TABLE IF NOT EXISTS `dejavutech_bad_word`
 (
     `bad_id`      int(8) unsigned NOT NULL,
     `badword`     varchar(20)     NOT NULL,
@@ -3883,7 +3880,7 @@ CREATE TABLE IF NOT EXISTS `bad_word`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='违规词过滤表';
 
-INSERT INTO `bad_word` (`bad_id`, `badword`, `replaceword`)
+INSERT INTO `dejavutech_bad_word` (`bad_id`, `badword`, `replaceword`)
 VALUES (1, '法轮功', ''),
        (2, '李洪志', ''),
        (3, '大纪元', ''),
@@ -6738,7 +6735,7 @@ VALUES (1, '法轮功', ''),
        (2852, '香港六和采', ''),
        (2853, '香港六合采', ''),
        (2854, '六合彩网', '');
-INSERT INTO `bad_word` (`bad_id`, `badword`, `replaceword`)
+INSERT INTO `dejavutech_bad_word` (`bad_id`, `badword`, `replaceword`)
 VALUES (2855, '六和彩网', ''),
        (2856, '六和采网', ''),
        (2857, '六合采网', ''),
@@ -6757,7 +6754,7 @@ VALUES (2855, '六和彩网', ''),
        (2870, '盛大私服', ''),
        (2871, '巨人私服', '巨人a');
 
-CREATE TABLE IF NOT EXISTS `balance`
+CREATE TABLE IF NOT EXISTS `dejavutech_balance`
 (
     `bid`          int(11)      NOT NULL COMMENT '自增id',
     `seller_id`    int(11)      NOT NULL COMMENT '卖家id',
@@ -6770,7 +6767,7 @@ CREATE TABLE IF NOT EXISTS `balance`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `balance_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_balance_order`
 (
     `boid`       int(10)      NOT NULL COMMENT '自增id',
     `bid`        int(10)      NOT NULL COMMENT '结算id',
@@ -6783,7 +6780,7 @@ CREATE TABLE IF NOT EXISTS `balance_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `bargain_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_bargain_goods`
 (
     `id`            int(10)      NOT NULL COMMENT '自增id',
     `goods_id`      int(10)      NOT NULL COMMENT '商品id',
@@ -6798,7 +6795,7 @@ CREATE TABLE IF NOT EXISTS `bargain_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='砍价商品表';
 
-CREATE TABLE IF NOT EXISTS `bargain_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_bargain_order`
 (
     `id`           int(10)      NOT NULL COMMENT '自增id',
     `member_id`    int(10)      NOT NULL COMMENT '客户id',
@@ -6819,7 +6816,7 @@ CREATE TABLE IF NOT EXISTS `bargain_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='好友砍价订单表';
 
-CREATE TABLE IF NOT EXISTS `bargain_order_detail`
+CREATE TABLE IF NOT EXISTS `dejavutech_bargain_order_detail`
 (
     `id`               int(10) NOT NULL COMMENT '自增id',
     `member_id`        int(10) NOT NULL COMMENT '砍价的客户id',
@@ -6833,7 +6830,7 @@ CREATE TABLE IF NOT EXISTS `bargain_order_detail`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='砍价详情表';
 
-CREATE TABLE IF NOT EXISTS `blog`
+CREATE TABLE IF NOT EXISTS `dejavutech_blog`
 (
     `blog_id`          int(11)      NOT NULL,
     `category_id`      int(11)      NOT NULL,
@@ -6852,7 +6849,7 @@ CREATE TABLE IF NOT EXISTS `blog`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `blog_category`
+CREATE TABLE IF NOT EXISTS `dejavutech_blog_category`
 (
     `id`         int(10) unsigned NOT NULL COMMENT '文档ID',
     `pid`        int(10) unsigned NOT NULL DEFAULT '0' COMMENT '上级分类ID',
@@ -6862,7 +6859,7 @@ CREATE TABLE IF NOT EXISTS `blog_category`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='后台菜单';
 
-CREATE TABLE IF NOT EXISTS `blog_content`
+CREATE TABLE IF NOT EXISTS `dejavutech_blog_content`
 (
     `blog_id` int(11)      NOT NULL,
     `summary` varchar(255) NOT NULL COMMENT '内容摘要',
@@ -6871,7 +6868,7 @@ CREATE TABLE IF NOT EXISTS `blog_content`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
 
-CREATE TABLE IF NOT EXISTS `blog_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_blog_image`
 (
     `blog_image_id` int(11)     NOT NULL,
     `blog_id`       int(11)     NOT NULL,
@@ -6882,7 +6879,7 @@ CREATE TABLE IF NOT EXISTS `blog_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
 
-CREATE TABLE IF NOT EXISTS `blog_reply`
+CREATE TABLE IF NOT EXISTS `dejavutech_blog_reply`
 (
     `reply_id`    int(11)      NOT NULL,
     `title`       varchar(255) NOT NULL COMMENT '标题',
@@ -6897,7 +6894,7 @@ CREATE TABLE IF NOT EXISTS `blog_reply`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `blog_seller_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_blog_seller_order`
 (
     `id`        int(10) NOT NULL,
     `blog_id`   int(10) NOT NULL,
@@ -6907,7 +6904,7 @@ CREATE TABLE IF NOT EXISTS `blog_seller_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='后台通知查看记录表';
 
-CREATE TABLE IF NOT EXISTS `car`
+CREATE TABLE IF NOT EXISTS `dejavutech_car`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
     `token`       varchar(200) NOT NULL COMMENT '客户端token,客户身份',
@@ -6918,7 +6915,7 @@ CREATE TABLE IF NOT EXISTS `car`
   DEFAULT CHARSET = utf8 COMMENT ='客户端购物车表'
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `comment`
+CREATE TABLE IF NOT EXISTS `dejavutech_comment`
 (
     `comment_id`       int(11)      NOT NULL,
     `name`             varchar(20)  NOT NULL COMMENT '姓名',
@@ -6936,7 +6933,7 @@ CREATE TABLE IF NOT EXISTS `comment`
 
 
 
-CREATE TABLE IF NOT EXISTS `config`
+CREATE TABLE IF NOT EXISTS `dejavutech_config`
 (
     `id`           int(10) unsigned     NOT NULL COMMENT '配置ID',
     `name`         varchar(100)         NOT NULL DEFAULT '' COMMENT '配置名称',
@@ -6951,7 +6948,7 @@ CREATE TABLE IF NOT EXISTS `config`
 
 
 
-INSERT INTO `config` (`id`, `name`, `config_group`, `create_time`, `value`, `info`, `sort`)
+INSERT INTO `dejavutech_config` (`id`, `name`, `config_group`, `create_time`, `value`, `info`, `sort`)
 VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
        (8, 'SMTP_PORT', 'smtp', 1448266020, '25', '', 0),
        (9, 'SMTP_USER', 'smtp', 1448266020, 'zhrrobert@hotmail.com', '', 0),
@@ -7003,7 +7000,7 @@ VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
        (63, 'APPID', 'site', 0, '', '微信APPID', 0),
        (64, 'APPSECRET', 'site', 0, '', '微信APPSECRET', 0),
        (65, 'MCHID', 'site', 0, '1246637501', '微信商户号', 0),
-       (66, 'VERSION', 'site', 0, 'V4.7.0', '系统版本', 0),
+       (66, 'VERSION', 'site', 0, 'V4.7.1', '系统版本', 0),
        (67, 'deliverNoticeId', 'weixin', 0, 'eGWpyoJInWgSNYdnkujvjAIF9hbJIGm4p4tDCwcmURI', '订单标记发货通知', 0),
        (68, 'groupResultId', 'weixin', 0, 'jfNyI5kK7X5pyAaxkCmU2gRqjLB91fl_u1X0FVNWC0A', '团购结果通知', 0),
        (69, 'expireId', 'weixin', 0, 'eceRXDPx1NnK7aR8Bp19hic0mcHMYl7rl74evMopxCU', '到期提醒', 0),
@@ -7110,7 +7107,7 @@ VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
 
 
 
-CREATE TABLE IF NOT EXISTS `core_attachment`
+CREATE TABLE IF NOT EXISTS `dejavutech_core_attachment`
 (
     `id`                int(10) unsigned    NOT NULL,
     `uniacid`           int(10) unsigned    NOT NULL,
@@ -7127,7 +7124,7 @@ CREATE TABLE IF NOT EXISTS `core_attachment`
 
 
 
-CREATE TABLE IF NOT EXISTS `core_attachment_group`
+CREATE TABLE IF NOT EXISTS `dejavutech_core_attachment_group`
 (
     `id`      int(10)      NOT NULL COMMENT '自增id',
     `name`    varchar(100) NOT NULL COMMENT '分类名称',
@@ -7140,7 +7137,7 @@ CREATE TABLE IF NOT EXISTS `core_attachment_group`
 
 
 
-CREATE TABLE IF NOT EXISTS `fen_tixian_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_fen_tixian_order`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `member_id` int(10)      NOT NULL COMMENT '客户id',
@@ -7154,7 +7151,7 @@ CREATE TABLE IF NOT EXISTS `fen_tixian_order`
 
 
 
-CREATE TABLE IF NOT EXISTS `fissionbonus`
+CREATE TABLE IF NOT EXISTS `dejavutech_fissionbonus`
 (
     `id`         int(10)    NOT NULL COMMENT '自增id',
     `member_id`  int(10)    NOT NULL COMMENT '客户id',
@@ -7169,7 +7166,7 @@ CREATE TABLE IF NOT EXISTS `fissionbonus`
 
 
 
-CREATE TABLE IF NOT EXISTS `fissionbonus_flow`
+CREATE TABLE IF NOT EXISTS `dejavutech_fissionbonus_flow`
 (
     `id`              int(10)        NOT NULL COMMENT '自增id',
     `fissionbonus_id` int(10)        NOT NULL COMMENT '来源订单id',
@@ -7184,7 +7181,7 @@ CREATE TABLE IF NOT EXISTS `fissionbonus_flow`
 
 
 
-CREATE TABLE IF NOT EXISTS `fissionbonus_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_fissionbonus_order`
 (
     `id`              int(10)        NOT NULL COMMENT '自增id',
     `fissionbonus_id` int(10)        NOT NULL COMMENT '订单id',
@@ -7199,7 +7196,7 @@ CREATE TABLE IF NOT EXISTS `fissionbonus_order`
 
 
 
-CREATE TABLE IF NOT EXISTS `fissionsharing_link`
+CREATE TABLE IF NOT EXISTS `dejavutech_fissionsharing_link`
 (
     `id`             int(10)               NOT NULL COMMENT '自增id',
     `type`           enum ('page','goods') NOT NULL COMMENT '记录类型',
@@ -7214,13 +7211,13 @@ CREATE TABLE IF NOT EXISTS `fissionsharing_link`
 
 
 
-INSERT INTO `fissionsharing_link` (`id`, `type`, `goods_id`, `member_id`, `share_one_id`, `share_two_id`,
+INSERT INTO `dejavutech_fissionsharing_link` (`id`, `type`, `goods_id`, `member_id`, `share_one_id`, `share_two_id`,
                                    `share_three_id`, `modify_time`)
 VALUES (1, 'page', 0, 0, 0, 0, 0, 1605324229);
 
 
 
-CREATE TABLE IF NOT EXISTS `goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods`
 (
     `goods_id`        int(11)        NOT NULL,
     `name`            varchar(255)   NOT NULL,
@@ -7261,7 +7258,7 @@ CREATE TABLE IF NOT EXISTS `goods`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_area`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_area`
 (
     `id`            int(10) NOT NULL,
     `goods_id`      int(10) NOT NULL DEFAULT '0',
@@ -7272,7 +7269,7 @@ CREATE TABLE IF NOT EXISTS `goods_area`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_category`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_category`
 (
     `id`           int(10) unsigned NOT NULL COMMENT 'ID',
     `pid`          int(10) unsigned NOT NULL DEFAULT '0' COMMENT '上级分类ID',
@@ -7289,7 +7286,7 @@ CREATE TABLE IF NOT EXISTS `goods_category`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_description`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_description`
 (
     `goods_id`           int(11)      NOT NULL,
     `summary`            varchar(255) NOT NULL COMMENT '产品简介',
@@ -7315,7 +7312,7 @@ CREATE TABLE IF NOT EXISTS `goods_description`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_discount`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_discount`
 (
     `product_discount_id` int(11)        NOT NULL,
     `goods_id`            int(11)        NOT NULL,
@@ -7327,7 +7324,7 @@ CREATE TABLE IF NOT EXISTS `goods_discount`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_image`
 (
     `goods_image_id` int(11) NOT NULL,
     `goods_id`       int(11) NOT NULL,
@@ -7340,7 +7337,7 @@ CREATE TABLE IF NOT EXISTS `goods_image`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_option`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_option`
 (
     `goods_option_id` int(11)     NOT NULL,
     `goods_id`        int(11)     NOT NULL,
@@ -7354,7 +7351,7 @@ CREATE TABLE IF NOT EXISTS `goods_option`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_option_mult_value`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_option_mult_value`
 (
     `id`                       int(10)      NOT NULL COMMENT '自增id',
     `rela_goodsoption_valueid` varchar(50)  NOT NULL COMMENT '关联属性id',
@@ -7370,7 +7367,7 @@ CREATE TABLE IF NOT EXISTS `goods_option_mult_value`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_option_value`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_option_value`
 (
     `goods_option_value_id` int(11)        NOT NULL,
     `goods_option_id`       int(11)        NOT NULL,
@@ -7390,7 +7387,7 @@ CREATE TABLE IF NOT EXISTS `goods_option_value`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_share_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_share_image`
 (
     `id`         int(10)      NOT NULL COMMENT '自增id',
     `member_id`  int(10)      NOT NULL COMMENT '客户id',
@@ -7403,7 +7400,7 @@ CREATE TABLE IF NOT EXISTS `goods_share_image`
 
 
 
-CREATE TABLE IF NOT EXISTS `goods_to_category`
+CREATE TABLE IF NOT EXISTS `dejavutech_goods_to_category`
 (
     `id`        int(11) NOT NULL,
     `goods_id`  int(11) NOT NULL,
@@ -7416,7 +7413,7 @@ CREATE TABLE IF NOT EXISTS `goods_to_category`
 
 
 
-CREATE TABLE IF NOT EXISTS `group`
+CREATE TABLE IF NOT EXISTS `dejavutech_group`
 (
     `id`                int(10)      NOT NULL COMMENT '自增id',
     `seller_id`         int(10)      NOT NULL COMMENT '所属商家',
@@ -7438,7 +7435,7 @@ CREATE TABLE IF NOT EXISTS `group`
 
 
 
-CREATE TABLE IF NOT EXISTS `group_lzl_reply`
+CREATE TABLE IF NOT EXISTS `dejavutech_group_lzl_reply`
 (
     `id`           int(10)    NOT NULL COMMENT '自增id',
     `post_id`      int(10)    NOT NULL COMMENT '贴子id',
@@ -7453,7 +7450,7 @@ CREATE TABLE IF NOT EXISTS `group_lzl_reply`
 
 
 
-CREATE TABLE IF NOT EXISTS `group_member`
+CREATE TABLE IF NOT EXISTS `dejavutech_group_member`
 (
     `id`          int(10)    NOT NULL COMMENT '自增主键',
     `group_id`    int(10)    NOT NULL COMMENT '群组id',
@@ -7468,7 +7465,7 @@ CREATE TABLE IF NOT EXISTS `group_member`
 
 
 
-CREATE TABLE IF NOT EXISTS `group_post`
+CREATE TABLE IF NOT EXISTS `dejavutech_group_post`
 (
     `id`              int(10)      NOT NULL COMMENT '自增id',
     `member_id`       int(10)      NOT NULL COMMENT '客户id',
@@ -7492,7 +7489,7 @@ CREATE TABLE IF NOT EXISTS `group_post`
 
 
 
-CREATE TABLE IF NOT EXISTS `group_post_fav`
+CREATE TABLE IF NOT EXISTS `dejavutech_group_post_fav`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `member_id` int(10) NOT NULL COMMENT '客户id',
@@ -7504,7 +7501,7 @@ CREATE TABLE IF NOT EXISTS `group_post_fav`
 
 
 
-CREATE TABLE IF NOT EXISTS `guobie`
+CREATE TABLE IF NOT EXISTS `dejavutech_guobie`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
     `name`     varchar(50)  NOT NULL COMMENT '国别名称',
@@ -7519,7 +7516,7 @@ CREATE TABLE IF NOT EXISTS `guobie`
 
 
 
-CREATE TABLE IF NOT EXISTS `integral_flow`
+CREATE TABLE IF NOT EXISTS `dejavutech_integral_flow`
 (
     `id`        int(10)                                                              NOT NULL COMMENT '自增id',
     `member_id` int(10)                                                              NOT NULL COMMENT '客户id',
@@ -7536,7 +7533,7 @@ CREATE TABLE IF NOT EXISTS `integral_flow`
 
 
 
-CREATE TABLE IF NOT EXISTS `integral_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_integral_order`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
     `order_id` int(10)      NOT NULL COMMENT '订单id',
@@ -7548,7 +7545,7 @@ CREATE TABLE IF NOT EXISTS `integral_order`
 
 
 
-CREATE TABLE IF NOT EXISTS `intgral_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_intgral_goods`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
     `goods_id`    int(10)      NOT NULL COMMENT '商品id',
@@ -7561,7 +7558,7 @@ CREATE TABLE IF NOT EXISTS `intgral_goods`
 
 
 
-CREATE TABLE IF NOT EXISTS `jiaorder`
+CREATE TABLE IF NOT EXISTS `dejavutech_jiaorder`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
     `goods_id` int(10)      NOT NULL COMMENT '商品id',
@@ -7576,7 +7573,7 @@ CREATE TABLE IF NOT EXISTS `jiaorder`
 
 
 
-CREATE TABLE IF NOT EXISTS `jiapinorder`
+CREATE TABLE IF NOT EXISTS `dejavutech_jiapinorder`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
     `pin_id`   int(10)      NOT NULL COMMENT '拼团id',
@@ -7591,7 +7588,7 @@ CREATE TABLE IF NOT EXISTS `jiapinorder`
 
 
 
-CREATE TABLE IF NOT EXISTS `jiauser`
+CREATE TABLE IF NOT EXISTS `dejavutech_jiauser`
 (
     `id`       bigint(20) unsigned NOT NULL,
     `username` varchar(32)  DEFAULT NULL,
@@ -7603,7 +7600,7 @@ CREATE TABLE IF NOT EXISTS `jiauser`
 
 
 
-CREATE TABLE IF NOT EXISTS `length_class`
+CREATE TABLE IF NOT EXISTS `dejavutech_length_class`
 (
     `length_class_id` int(11)        NOT NULL,
     `value`           decimal(15, 8) NOT NULL COMMENT '1厘米转换成该单位的值',
@@ -7616,13 +7613,13 @@ CREATE TABLE IF NOT EXISTS `length_class`
 
 
 
-INSERT INTO `length_class` (`length_class_id`, `value`, `title`, `unit`)
+INSERT INTO `dejavutech_length_class` (`length_class_id`, `value`, `title`, `unit`)
 VALUES (1, '100.00000000', '厘米', 'cm'),
        (2, '1.00000000', '米', 'm');
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_head`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_head`
 (
     `id`                        int(10)      NOT NULL COMMENT '自增id',
     `member_id`                 int(10)      NOT NULL COMMENT '客户id',
@@ -7655,7 +7652,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_commiss`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_head_commiss`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
     `member_id`    int(10) NOT NULL COMMENT '客户ID',
@@ -7676,7 +7673,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_commiss`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_commiss_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_head_commiss_order`
 (
     `id`                int(10)                               NOT NULL COMMENT '自增ID',
     `member_id`         int(10)                               NOT NULL COMMENT '客户ID',
@@ -7698,7 +7695,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_commiss_order`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_head_goods`
 (
     `id`       int(10) NOT NULL COMMENT '自增id',
     `head_id`  int(10) NOT NULL COMMENT '团长id',
@@ -7710,7 +7707,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_goods`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_group`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_head_group`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `groupname` varchar(255) NOT NULL COMMENT '分组名称'
@@ -7720,7 +7717,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_group`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_invite_recod`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_head_invite_recod`
 (
     `id`              int(10)      NOT NULL COMMENT '自增id',
     `head_id`         int(10)      NOT NULL COMMENT '团长id',
@@ -7733,7 +7730,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_invite_recod`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_tixian_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_head_tixian_order`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
     `uniacid`        int(10)      NOT NULL,
@@ -7756,7 +7753,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_head_tixian_order`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_community_history`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_community_history`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `member_id` int(10) NOT NULL COMMENT '客户id',
@@ -7768,7 +7765,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_community_history`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_address`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_address`
 (
     `address_id`   int(11)              NOT NULL COMMENT '自增id',
     `member_id`    int(11)              NOT NULL COMMENT '客户id',
@@ -7788,7 +7785,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_address`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_adv`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_adv`
 (
     `id`           int(11)                                            NOT NULL COMMENT '自增id',
     `advname`      varchar(200)                                       NOT NULL COMMENT '广告名称',
@@ -7806,7 +7803,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_adv`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_advimg`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_advimg`
 (
     `id`           int(11) unsigned NOT NULL COMMENT '编号',
     `thumb`        varchar(255)     NOT NULL COMMENT '广告图片地址',
@@ -7822,7 +7819,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_advimg`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_adv_category`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_adv_category`
 (
     `id`           int(11)                                            NOT NULL COMMENT '自增id',
     `cate_id`      int(10)                                            NOT NULL COMMENT '分类id',
@@ -7838,7 +7835,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_adv_category`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='吃货星球商城商品广告表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_area`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_area`
 (
     `id`   int(11)      NOT NULL COMMENT '11',
     `name` varchar(100) NOT NULL COMMENT '地区名称',
@@ -7850,7 +7847,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_area`
 
 
 
-INSERT INTO `eaterplanet_ecommerce_area` (`id`, `name`, `pid`, `code`)
+INSERT INTO `dejavutech_eaterplanet_ecommerce_area` (`id`, `name`, `pid`, `code`)
 VALUES (1, '安徽省', 0, '340000'),
        (2, '合肥市', 1, '340100'),
        (3, '瑶海区', 2, '340102'),
@@ -11489,7 +11486,7 @@ VALUES (1, '安徽省', 0, '340000'),
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_article`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_article`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
     `uniacid`      int(11)      NOT NULL COMMENT '公众号id',
@@ -11504,7 +11501,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_article`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_car`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_car`
 (
     `id`           int(10)      NOT NULL COMMENT '自增id',
     `token`        varchar(200) NOT NULL COMMENT '客户端token,客户身份',
@@ -11518,7 +11515,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_car`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_chargetype`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_chargetype`
 (
     `id`         int(10)      NOT NULL COMMENT '自增id',
     `money`      float(10, 2) NOT NULL COMMENT '充值金额',
@@ -11531,7 +11528,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_chargetype`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_commission_level`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_commission_level`
 (
     `id`          int(11)     NOT NULL COMMENT '自增id',
     `levelname`   varchar(50) NOT NULL,
@@ -11545,7 +11542,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_commission_level`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_head_level`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_community_head_level`
 (
     `id`                    int(10)      NOT NULL COMMENT '自增id',
     `levelname`             varchar(255) NOT NULL COMMENT '等级名称',
@@ -11561,7 +11558,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_head_level`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_pickup_member`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_community_pickup_member`
 (
     `id`           int(10)    NOT NULL COMMENT '自增id',
     `community_id` int(10)    NOT NULL COMMENT '社区id',
@@ -11575,7 +11572,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_pickup_member`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_pickup_member_record`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_community_pickup_member_record`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `order_id`     int(10) NOT NULL COMMENT '订单id',
@@ -11589,7 +11586,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_community_pickup_member_record
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_config`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_config`
 (
     `id`    smallint(5) unsigned NOT NULL,
     `name`  varchar(100)         NOT NULL,
@@ -11601,7 +11598,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_config`
 
 
 
-INSERT INTO `eaterplanet_ecommerce_config` (`id`, `name`, `value`)
+INSERT INTO `dejavutech_eaterplanet_ecommerce_config` (`id`, `name`, `value`)
 VALUES (1, 'goods_stock_notice', '100'),
        (2, 'instructions', '&amp;lt;p&amp;gt;我们竭诚为您服务&amp;lt;/p&amp;gt;'),
        (3, 'default_comunity_money', '10'),
@@ -11651,7 +11648,7 @@ VALUES (1, 'goods_stock_notice', '100'),
        (47, 'open_comment_shenhe', '1'),
        (48, 'shop_domain', 'https://demo.ch871.com/'),
        (49, 'supply_apply_page', ''),
-       (50, 'site_version', 'V4.7.0'),
+       (50, 'site_version', 'V4.7.1'),
        (51, 'cur_release', '202106030620'),
        (56, 'index_list_theme_type', '0'),
        (57, 'nav_bg_color', ''),
@@ -11793,7 +11790,7 @@ VALUES (1, 'goods_stock_notice', '100'),
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_coupon`
 (
     `id`                 int(11)      NOT NULL COMMENT '自增id',
     `catid`              int(10)               DEFAULT NULL COMMENT '分类id',
@@ -11824,7 +11821,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_category`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_coupon_category`
 (
     `id`           int(11) NOT NULL,
     `name`         varchar(255) DEFAULT '',
@@ -11834,7 +11831,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_category`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_list`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_coupon_list`
 (
     `id`                 int(11)        NOT NULL COMMENT '自增id',
     `voucher_id`         int(11)        NOT NULL COMMENT '优惠券id',
@@ -11859,7 +11856,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_coupon_list`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_cube`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_cube`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
     `name`         varchar(255) NOT NULL COMMENT '名称',
@@ -11875,7 +11872,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_cube`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='魔方图片';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryclerk`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_deliveryclerk`
 (
     `id`      int(10)      NOT NULL COMMENT '自增id',
     `uniacid` int(10)      NOT NULL COMMENT '公众号id',
@@ -11888,7 +11885,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryclerk`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购配送员表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_deliveryline`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
     `uniacid`  int(10)      NOT NULL COMMENT '公众号id',
@@ -11899,7 +11896,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购配送线路';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline_headrelative`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_deliveryline_headrelative`
 (
     `id`      int(10) NOT NULL COMMENT '自增id',
     `line_id` int(10) NOT NULL COMMENT '线路id',
@@ -11910,7 +11907,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliveryline_headrelative`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购线路团长关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_deliverylist`
 (
     `id`            int(10)      NOT NULL COMMENT '自增id',
     `uniacid`       int(10)      NOT NULL COMMENT '公众号id',
@@ -11934,7 +11931,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购清单表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_deliverylist_goods`
 (
     `id`                       int(10)      NOT NULL COMMENT '自增id',
     `uniacid`                  int(10)      NOT NULL COMMENT '公众号id',
@@ -11950,7 +11947,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_goods`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_deliverylist_order`
 (
     `id`       int(10) NOT NULL COMMENT '自增id',
     `uniacid`  int(10) NOT NULL COMMENT '公众号id',
@@ -11961,7 +11958,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_deliverylist_order`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购清单订单关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_express`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_express`
 (
     `id`            int(11)      NOT NULL COMMENT '自增id',
     `name`          varchar(100) NOT NULL COMMENT '快递名称',
@@ -11972,7 +11969,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_express`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城快递表';
 
-INSERT INTO `eaterplanet_ecommerce_express` (`id`, `name`, `simplecode`, `customer_name`, `customer_pwd`)
+INSERT INTO `dejavutech_eaterplanet_ecommerce_express` (`id`, `name`, `simplecode`, `customer_name`, `customer_pwd`)
 VALUES (1, '安捷快递', 'AJ', '', ''),
        (2, '安能物流', 'ANE', '', ''),
        (3, '安信达快递', 'AXD', '', ''),
@@ -12076,7 +12073,7 @@ VALUES (1, '安捷快递', 'AJ', '', ''),
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_generalmall_adv`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_generalmall_adv`
 (
     `id`           int(11)                                  NOT NULL COMMENT '自增id',
     `advname`      varchar(200)                             NOT NULL COMMENT '广告名称',
@@ -12091,7 +12088,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_generalmall_adv`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='吃货星球商城独立商城幻灯片表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_generalmall_navigat`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_generalmall_navigat`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
     `navname`      varchar(200) DEFAULT NULL COMMENT '名称',
@@ -12105,7 +12102,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_generalmall_navigat`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城独立商城导航图标';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods`
 (
     `id`                 int(11)        NOT NULL COMMENT '自增id',
     `goodsname`          varchar(255)   NOT NULL COMMENT '商品名称',
@@ -12144,7 +12141,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城普通商品表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_category`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_category`
 (
     `id`              int(11)      NOT NULL COMMENT '自增id',
     `pid`             int(11)      NOT NULL COMMENT '父类id',
@@ -12162,7 +12159,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_category`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品分类表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_images`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_images`
 (
     `id`       int(11)      NOT NULL COMMENT '自增id',
     `goods_id` int(11)      NOT NULL COMMENT '商品id',
@@ -12172,7 +12169,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_images`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品图片表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_option`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
     `goods_id`     int(11)      NOT NULL COMMENT '商品id',
@@ -12184,7 +12181,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option_item`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_option_item`
 (
     `id`              int(11)      NOT NULL COMMENT '自增id',
     `goods_id`        int(11)      NOT NULL COMMENT '商品id',
@@ -12198,7 +12195,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option_item`
 
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option_item_value`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_option_item_value`
 (
     `id`              int(11)        NOT NULL COMMENT '自增id',
     `goods_id`        int(11)        NOT NULL COMMENT '商品id',
@@ -12216,7 +12213,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_option_item_value`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品规格值关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_presale`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_presale`
 (
     `id`                           int(10)        NOT NULL COMMENT '自增id',
     `goods_id`                     int(10)        NOT NULL COMMENT '商品id',
@@ -12235,7 +12232,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_presale`
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商品预售属性表';
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_salesroom`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_relative_salesroom`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `salesroom_id` int(10) NOT NULL COMMENT '门店id',
@@ -12245,7 +12242,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_salesroom`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='商品门店关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_smember`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_relative_smember`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `salesroom_id` int(10) NOT NULL COMMENT '门店id',
@@ -12255,7 +12252,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_relative_smember`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球门店核销员关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroombase`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_salesroombase`
 (
     `id`                   int(10) NOT NULL COMMENT '自增id',
     `goods_id`             int(10) NOT NULL COMMENT '商品id',
@@ -12274,7 +12271,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroombase`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品核销基础表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroom_limit`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_salesroom_limit`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `uniacid`      int(10) NOT NULL COMMENT '公众号id',
@@ -12286,7 +12283,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_salesroom_limit`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品核销限制表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_share_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_share_image`
 (
     `id`         int(10)      NOT NULL COMMENT '自增id',
     `member_id`  int(10)      NOT NULL COMMENT '客户id',
@@ -12297,7 +12294,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_share_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球客户商品分享图';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_tags`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_tags`
 (
     `id`         int(11)      NOT NULL COMMENT '自增id',
     `tagname`    varchar(255) NOT NULL COMMENT '标签组名称',
@@ -12310,7 +12307,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_tags`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品标签表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_to_category`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_to_category`
 (
     `id`       int(11) NOT NULL COMMENT '自增id',
     `cate_id`  int(11) NOT NULL COMMENT '分类表',
@@ -12319,7 +12316,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_to_category`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品分类关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_tradecomponts`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_tradecomponts`
 (
     `id`                      int(10)    NOT NULL COMMENT '自增id',
     `goods_id`                int(10)    NOT NULL COMMENT '商品id',
@@ -12333,7 +12330,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_tradecomponts`
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商品交易组件';
 
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_virturalcard`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_goods_virturalcard`
 (
     `id`       int(10) NOT NULL COMMENT '自增id',
     `goods_id` int(10) NOT NULL,
@@ -12341,7 +12338,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_goods_virturalcard`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商品关联礼品兑换码表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_commiss`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_good_commiss`
 (
     `id`               int(11)        NOT NULL COMMENT '自增id',
     `goods_id`         int(11)        NOT NULL COMMENT '商品id',
@@ -12358,7 +12355,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_commiss`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品分销配置表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_common`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_good_common`
 (
     `id`                               int(11)      NOT NULL COMMENT '自增id',
     `goods_id`                         int(11)      NOT NULL COMMENT '商品id',
@@ -12411,7 +12408,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_common`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品详情表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_pin`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_good_pin`
 (
     `id`                    int(11)        NOT NULL COMMENT '自增id',
     `goods_id`              int(11)        NOT NULL COMMENT '商品id',
@@ -12434,7 +12431,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_good_pin`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城拼团商品表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_imdada_area_code`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_imdada_area_code`
 (
     `id`        int(10) UNSIGNED NOT NULL COMMENT '编号',
     `city_name` varchar(100)     NOT NULL COMMENT '城市名称',
@@ -12442,7 +12439,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_imdada_area_code`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城达达配送城市编号表';
 
-INSERT INTO `eaterplanet_ecommerce_imdada_area_code` (`id`, `city_name`, `city_code`)
+INSERT INTO `dejavutech_eaterplanet_ecommerce_imdada_area_code` (`id`, `city_name`, `city_code`)
 VALUES (1, '上海', '021'),
        (2, '北京', '010'),
        (3, '合肥', '0551'),
@@ -12744,7 +12741,7 @@ VALUES (1, '上海', '021'),
        (299, '盱眙', '0517'),
        (300, '温岭', '0576');
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_invitegift_record`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_invitegift_record`
 (
     `id`                                int(10)    NOT NULL COMMENT '自增id',
     `user_id`                           int(11)    NOT NULL COMMENT '邀请者客户id',
@@ -12767,7 +12764,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_invitegift_record`
     `addtime`                           int(10)    NOT NULL COMMENT '邀请时间'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球邀新有礼记录表';
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiapinorder`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_jiapinorder`
 (
     `id`       int(10)      NOT NULL COMMENT '自增id',
     `uniacid`  int(11)      NOT NULL COMMENT '公众号id',
@@ -12780,7 +12777,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiapinorder`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiauser`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_jiauser`
 (
     `id`       bigint(20) unsigned NOT NULL,
     `username` varchar(32)  DEFAULT NULL,
@@ -12789,7 +12786,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_jiauser`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_list`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_kdniao_list`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `express_name`         varchar(100) NOT NULL DEFAULT '' COMMENT '快递公司名称',
@@ -12815,7 +12812,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_list`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟电子面单列表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_template`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_kdniao_template`
 (
     `id`            int(11) UNSIGNED NOT NULL COMMENT '编号',
     `express_name`  varchar(100)     NOT NULL COMMENT '快递公司名称',
@@ -12827,7 +12824,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_kdniao_template`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟电子面单模板规格';
 
-INSERT INTO `eaterplanet_ecommerce_kdniao_template` (`id`, `express_name`, `express_code`, `template_name`,
+INSERT INTO `dejavutech_eaterplanet_ecommerce_kdniao_template` (`id`, `express_name`, `express_code`, `template_name`,
                                                      `template_spec`, `template_size`, `customer_area`)
 VALUES (1, '安能快递', 'ANE', '二联 180', '宽 100mm,高 180mm,切点 110/70', '0', 0),
        (2, '安能快运', 'ANEKY', '二联 180', '宽 100mm,高 180mm,切点 110/70', '0', 1),
@@ -12894,7 +12891,7 @@ VALUES (1, '安能快递', 'ANE', '二联 180', '宽 100mm,高 180mm,切点 110/
        (63, '中通快递', 'ZTO', '一联 130', '宽 76mm,高 130mm', '130', 1),
        (64, '中通快运', 'ZTOKY', '二联 180', '宽 100mm,高 180mm,切点 110/70', '0', 0);
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member`
 (
     `member_id`            int(11)                     NOT NULL COMMENT '自增id',
     `openid`               varchar(255)                NOT NULL COMMENT '微信openid',
@@ -12941,7 +12938,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城客户表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_card`
 (
     `id`         int(10)      NOT NULL COMMENT '自增id',
     `uniacid`    int(10)      NOT NULL COMMENT '公众号id',
@@ -12954,7 +12951,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球付费会员卡表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_equity`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_card_equity`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
     `uniacid`     int(10)      NOT NULL COMMENT '公众号id',
@@ -12965,7 +12962,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_equity`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球会员卡权益';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_card_order`
 (
     `id`         int(10)                        NOT NULL COMMENT '自增id',
     `order_sn`   varchar(50)                    NOT NULL COMMENT '订单编号',
@@ -12987,7 +12984,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_card_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='付费会员卡 购买订单表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_charge_flow`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_charge_flow`
 (
     `id`               int(10)        NOT NULL COMMENT '自增id',
     `formid`           varchar(255)   DEFAULT NULL COMMENT '充值时候的prepayid',
@@ -13005,7 +13002,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_charge_flow`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城客户充值记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_commiss`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
     `member_id`    int(10) NOT NULL COMMENT '客户ID',
@@ -13019,7 +13016,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss_apply`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_commiss_apply`
 (
     `id`        int(10)    NOT NULL COMMENT '自增id',
     `member_id` int(10)    NOT NULL COMMENT '客户id',
@@ -13028,7 +13025,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss_apply`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_commiss_order`
 (
     `id`                  int(10)      NOT NULL COMMENT '自增ID',
     `member_id`           int(10)      NOT NULL COMMENT '客户ID',
@@ -13046,7 +13043,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_commiss_order`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_formid`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_formid`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `member_id` int(10)      NOT NULL COMMENT '客户id',
@@ -13057,14 +13054,14 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_formid`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='客户的群发formid表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_group`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_group`
 (
     `id`        int(11) NOT NULL,
     `groupname` varchar(255) DEFAULT ''
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_integral_flow`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_integral_flow`
 (
     `id`                  int(10)           NOT NULL COMMENT '自增id',
     `member_id`           int(10)           NOT NULL COMMENT '客户id',
@@ -13081,7 +13078,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_integral_flow`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球积分流水记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_invitegift`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_invitegift`
 (
     `id`                int(10) NOT NULL COMMENT '自增id',
     `member_id`         int(11) NOT NULL COMMENT '客户id',
@@ -13090,7 +13087,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_invitegift`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球客户邀新有礼信息表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_level`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_level`
 (
     `id`            int(10)        NOT NULL COMMENT '自增id',
     `level`         int(11)        NOT NULL COMMENT '等级',
@@ -13103,7 +13100,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_level`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='客户等级表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_shopinfo`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_shopinfo`
 (
     `id`            int(10)      NOT NULL COMMENT '自增id',
     `member_id`     int(10)      NOT NULL COMMENT '客户id',
@@ -13117,7 +13114,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_shopinfo`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城用户店铺申请表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_tixian_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_member_tixian_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `member_id`            int(10)      NOT NULL COMMENT '客户id',
@@ -13135,7 +13132,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_member_tixian_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='分销佣金提现表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_navigat`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_navigat`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
     `navname`      varchar(200) DEFAULT NULL COMMENT '名称',
@@ -13150,7 +13147,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_navigat`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球导航图标';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notice`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_notice`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
     `content`      varchar(200) NOT NULL COMMENT '公告内容',
@@ -13161,7 +13158,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notice`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城公告表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notify_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_notify_order`
 (
     `id`         int(10)      NOT NULL,
     `username`   varchar(255) NOT NULL COMMENT '客户名称',
@@ -13176,7 +13173,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_notify_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='最新订单消息通知';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order`
 (
     `order_id`                        int(11)        NOT NULL,
     `order_num_alias`                 varchar(40)    NOT NULL COMMENT '订单编号',
@@ -13263,7 +13260,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
     `username`       varchar(100) NOT NULL COMMENT '配送员姓名',
@@ -13278,7 +13275,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城订单配送员表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_commiss`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_commiss`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `orderdistribution_id` int(10)      NOT NULL COMMENT '配送员id',
@@ -13290,7 +13287,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_commiss`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城配送员佣金账户表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_log`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_log`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `order_id`             int(10)      NOT NULL COMMENT '订单id',
@@ -13301,7 +13298,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_log`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城跑腿配送日志表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_order`
 (
     `id`                      int(10)      NOT NULL COMMENT '自增id',
     `order_id`                int(10)      NOT NULL COMMENT '订单id',
@@ -13331,7 +13328,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_order`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城骑手配送费订单表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_thirth_log`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_log`
 (
     `id`                      int(10)      NOT NULL COMMENT '自增id',
     `order_id`                int(10)      NOT NULL COMMENT '订单id',
@@ -13342,7 +13339,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_thirth_log`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城第三方配送日志表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_thirth_query`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_query`
 (
     `id`                      int(11) UNSIGNED NOT NULL COMMENT '编号',
     `order_id`                int(10)          NOT NULL COMMENT '订单id',
@@ -13357,7 +13354,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_thirth_query
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球第三方配送预查询费用表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_tixian`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `orderdistribution_id` int(10)      NOT NULL COMMENT '配送员id',
@@ -13374,7 +13371,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城配送员提现表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_tixian_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `uniacid`              int(10)      NOT NULL,
@@ -13392,7 +13389,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_orderdistribution_tixian_order
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='同城配送佣金提现表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_all`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_all`
 (
     `id`              int(10)    NOT NULL COMMENT '自增id，',
     `member_id`       int(10)    NOT NULL COMMENT '所属客户',
@@ -13408,7 +13405,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_all`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='IF NOT EXISTS 订单总表，支付时候使用';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_comment`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_comment`
 (
     `comment_id`      int(10)    NOT NULL COMMENT '评论id',
     `order_id`        int(10)    NOT NULL       DEFAULT '0' COMMENT '订单id',
@@ -13433,7 +13430,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_comment`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_goods`
 (
     `order_goods_id`           int(11)        NOT NULL,
     `order_id`                 int(11)        NOT NULL,
@@ -13486,7 +13483,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_goods_refund`
 (
     `id`                        int(10)      NOT NULL COMMENT '自增id',
     `order_goods_id`            int(10)      NOT NULL COMMENT '商品订单id',
@@ -13513,7 +13510,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单商品退款记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund_intrgral`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_goods_refund_intrgral`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
     `uniacid`        int(10)      NOT NULL COMMENT '公众号id',
@@ -13524,7 +13521,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_refund_intrgral`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城积分退款表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_relative_salesroom`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_goods_relative_salesroom`
 (
     `id`             int(10) NOT NULL COMMENT '自增id',
     `order_id`       int(10)    DEFAULT '0' COMMENT '订单id',
@@ -13537,7 +13534,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_relative_salesroom
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='商品门店关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_goods_saleshexiao`
 (
     `id`                  int(10) NOT NULL COMMENT '自增id',
     `uniacid`             int(10) NOT NULL COMMENT '公众号id',
@@ -13559,7 +13556,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单核销信息表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao_record`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_goods_saleshexiao_record`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
     `uniacid`        int(10)      NOT NULL COMMENT '公众号id',
@@ -13577,7 +13574,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_goods_saleshexiao_record
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单核销记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_history`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_history`
 (
     `order_history_id` int(11)    NOT NULL,
     `order_id`         int(11)    NOT NULL,
@@ -13589,7 +13586,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_history`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_info`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_kdniao_info`
 (
     `id`                   int(10)     NOT NULL COMMENT '自增id',
     `order_id`             int(10)     NOT NULL COMMENT '订单id',
@@ -13604,7 +13601,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_info`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟打印面单信息';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_print_log`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_kdniao_print_log`
 (
     `id`          int(10)    NOT NULL COMMENT '自增id',
     `print_count` int(10)    NOT NULL DEFAULT '0' COMMENT '打印总单数',
@@ -13616,7 +13613,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_kdniao_print_log`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城快递鸟电子面单打印日志';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_option`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_option`
 (
     `order_option_id` int(11)      NOT NULL,
     `order_id`        int(11)      NOT NULL,
@@ -13628,7 +13625,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_option`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_presale`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_presale`
 (
     `id`                           int(10)        NOT NULL COMMENT '自增id',
     `is_notify`                    tinyint(1)              DEFAULT '0' COMMENT '是否通知过，0否，1是',
@@ -13650,7 +13647,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_presale`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球预售订单记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_quantity_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_quantity_order`
 (
     `id`                        int(10)    NOT NULL COMMENT '自增id',
     `order_id`                  int(10)    NOT NULL COMMENT '订单id',
@@ -13665,7 +13662,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_quantity_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球库存记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_refund`
 (
     `ref_id`               int(10)      NOT NULL COMMENT '退款自增id',
     `order_id`             int(10)      NOT NULL COMMENT '订单id',
@@ -13689,7 +13686,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='用户退款表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_disable`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_refund_disable`
 (
     `id`             int(10) NOT NULL COMMENT '自增id',
     `ref_id`         int(10) NOT NULL COMMENT '退款的id',
@@ -13700,7 +13697,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_disable`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='禁止申请退款的订单';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_refund_history`
 (
     `id`             int(10)    NOT NULL COMMENT '自增id',
     `order_id`       int(10)    NOT NULL COMMENT '订单id',
@@ -13713,7 +13710,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款订单处理历史表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_refund_history_image`
 (
     `id`      int(10)      NOT NULL COMMENT '自增id',
     `orh_id`  int(10)      NOT NULL COMMENT '处理记录id',
@@ -13723,7 +13720,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_history_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款处理记录图片表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_refund_image`
 (
     `id`      int(10)      NOT NULL COMMENT '退款图片自增id',
     `ref_id`  int(10)      NOT NULL COMMENT '退款id',
@@ -13733,7 +13730,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='order_refund_image';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_reson`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_refund_reson`
 (
     `id`      int(11)      NOT NULL COMMENT '自增id',
     `title`   varchar(255) NOT NULL COMMENT '退款原因',
@@ -13744,7 +13741,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_refund_reson`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城订单退款原因表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_relate`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_relate`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `order_all_id` int(10) NOT NULL COMMENT '订单总表id',
@@ -13754,7 +13751,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_relate`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球订单总表跟商家订单关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_status`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_status`
 (
     `order_status_id` int(11)     NOT NULL,
     `name`            varchar(32) NOT NULL
@@ -13762,7 +13759,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_status`
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球订单状态';
 
 
-INSERT INTO `eaterplanet_ecommerce_order_status` (`order_status_id`, `name`)
+INSERT INTO `dejavutech_eaterplanet_ecommerce_order_status` (`order_status_id`, `name`)
 VALUES (1, '已付款待发货'),
        (2, '拼团中，已付款'),
        (3, '待付款'),
@@ -13779,7 +13776,7 @@ VALUES (1, '已付款待发货'),
        (14, '配送中'),
        (15, '预售已付定金');
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_total`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_total`
 (
     `order_total_id` int(10)        NOT NULL,
     `order_id`       int(11)        NOT NULL,
@@ -13791,7 +13788,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_total`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_virtualcard`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_order_virtualcard`
 (
     `id`             int(10)        NOT NULL COMMENT '自增id',
     `code_id`        int(10)        NOT NULL COMMENT '兑换码id',
@@ -13807,7 +13804,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_order_virtualcard`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球订单兑换码表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_role`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_perm_role`
 (
     `id`       int(11) NOT NULL,
     `rolename` varchar(255) DEFAULT '',
@@ -13818,7 +13815,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_role`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_user`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_perm_user`
 (
     `id`          int(11) NOT NULL,
     `uniacid`     int(11)      DEFAULT '0',
@@ -13838,7 +13835,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_perm_user`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_pin`
 (
     `pin_id`           int(11)    NOT NULL COMMENT '拼团id，自增',
     `order_id`         int(11)    NOT NULL DEFAULT '0' COMMENT '订单id',
@@ -13858,7 +13855,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_commiss`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_pintuan_commiss`
 (
     `id`        int(10) NOT NULL COMMENT '自增ID',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
@@ -13869,7 +13866,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_commiss`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_commiss_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_pintuan_commiss_order`
 (
     `id`             int(10)      NOT NULL COMMENT '自增ID',
     `uniacid`        int(11)      NOT NULL COMMENT '公众号id',
@@ -13886,7 +13883,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_commiss_order`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_tixian_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_pintuan_tixian_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `uniacid`              int(10)      NOT NULL,
@@ -13905,7 +13902,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pintuan_tixian_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='分销佣金提现表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_pin_order`
 (
     `id`       int(11) NOT NULL,
     `pin_id`   int(11) NOT NULL COMMENT '拼团id',
@@ -13914,7 +13911,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pin_order`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_pop_adv`
 (
     `id`              int(11) UNSIGNED NOT NULL COMMENT '编号',
     `adv_name`        varchar(50)      NOT NULL COMMENT '活动名称',
@@ -13934,7 +13931,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城弹窗广告活动';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv_list`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_pop_adv_list`
 (
     `id`       int(11) unsigned NOT NULL COMMENT '编号',
     `ad_id`    varchar(50)      NOT NULL COMMENT '所属广告活动编号',
@@ -13946,7 +13943,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_pop_adv_list`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城弹窗广告内容';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_printer`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_printer`
 (
     `id`           int(10)      NOT NULL COMMENT '自增id',
     `printer_name` varchar(100) NOT NULL COMMENT '打印机名称',
@@ -13961,7 +13958,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_printer`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城打印机表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_recipe`
 (
     `id`          int(10)      NOT NULL COMMENT '自增id',
     `uniacid`     int(10)      NOT NULL COMMENT '公众号id',
@@ -13981,7 +13978,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城菜谱表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe_fav`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_recipe_fav`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
@@ -13992,7 +13989,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe_fav`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城菜谱喜欢表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe_ingredients`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_recipe_ingredients`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `uniacid`   int(10)      NOT NULL COMMENT '公众号id',
@@ -14004,7 +14001,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_recipe_ingredients`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城食材表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_salesroom`
 (
     `id`                   int(10)                    NOT NULL COMMENT '自增id',
     `uniacid`              int(10)                    NOT NULL COMMENT '公众号id',
@@ -14032,7 +14029,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球核销门店';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom_member`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_salesroom_member`
 (
     `id`                int(10)      NOT NULL COMMENT '自增id',
     `uniacid`           int(10)      NOT NULL COMMENT '公众号id',
@@ -14048,7 +14045,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom_member`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球门店核销人员表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom_relative_member`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_salesroom_relative_member`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `uniacid`      int(10) NOT NULL COMMENT '公众号id',
@@ -14060,7 +14057,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_salesroom_relative_member`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='门店核销人员跟门店关联表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_shipping`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_shipping`
 (
     `id`             int(11)        NOT NULL COMMENT '自增id',
     `name`           varchar(100)   NOT NULL COMMENT '模板名称',
@@ -14081,7 +14078,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_shipping`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城运费模板表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_signinreward_record`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_signinreward_record`
 (
     `id`             int(10) NOT NULL COMMENT '自增id',
     `uniacid`        int(10) NOT NULL COMMENT '公众号id',
@@ -14094,7 +14091,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_signinreward_record`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城签到奖励记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_solitaire`
 (
     `id`             int(10)      NOT NULL COMMENT '自增id',
     `uniacid`        int(10)      NOT NULL COMMENT '公众号id',
@@ -14114,7 +14111,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙活动表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_solitaire_goods`
 (
     `id`       int(10) NOT NULL COMMENT '自增id',
     `uniacid`  int(10) NOT NULL COMMENT '公众号id',
@@ -14125,7 +14122,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城接龙活动商品表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_invite`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_solitaire_invite`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
@@ -14136,7 +14133,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_invite`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙访问记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_solitaire_order`
 (
     `id`       int(10) NOT NULL COMMENT '自增id',
     `uniacid`  int(10) NOT NULL COMMENT '公众号id',
@@ -14147,7 +14144,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙订单表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_post`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_solitaire_post`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
@@ -14161,7 +14158,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_post`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙评论表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_post_fav`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_solitaire_post_fav`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `uniacid`   int(10) NOT NULL COMMENT '公众号id',
@@ -14173,7 +14170,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_solitaire_post_fav`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群接龙点赞表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_spec`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_spec`
 (
     `id`        int(11)      NOT NULL COMMENT '自增id',
     `name`      varchar(255) NOT NULL COMMENT '规格名称',
@@ -14184,7 +14181,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_spec`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城规格表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_special`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_special`
 (
     `id`            int(11)     NOT NULL COMMENT '专题id',
     `uniacid`       int(11)              DEFAULT '0' COMMENT '小程序id',
@@ -14207,7 +14204,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_special`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球后台专题管理';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_subscribe`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_subscribe`
 (
     `id`          int(10)                                                                                                                                                    NOT NULL COMMENT '自增id',
     `uniacid`     int(10)                                                                                                                                                    NOT NULL COMMENT '公众号id',
@@ -14219,7 +14216,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_subscribe`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城用户订阅消息';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_supply`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_supply`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增id',
     `shopname`             varchar(255) NOT NULL COMMENT '店铺名称',
@@ -14244,7 +14241,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_supply`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球社区团购商户表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_supply_config`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_supply_config`
 (
     `id`        smallint(5) UNSIGNED NOT NULL,
     `name`      varchar(100)         NOT NULL,
@@ -14253,7 +14250,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_supply_config`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商户配置表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_systemoperation_log`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_systemoperation_log`
 (
     `id`                    int(10)                NOT NULL COMMENT '自增id',
     `operation_type`        enum ('detailed_list','order','goods','user','communityhead','supply','salesroom','article','group','marketing','generalmall','delivery','perm','attachment','config') NOT NULL COMMENT '操作类型，detailed_list清单，order订单，goods商品，user客户，communityhead团长，supply商户，salesroom门店，article文章，group拼团，marketing营销，generalmall仅快递,delivery配送，perm权限，attachment附件，config设置',
@@ -14265,7 +14262,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_systemoperation_log`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城系统操作日志表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_templatemsg`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_templatemsg`
 (
     `id`               int(10)      NOT NULL COMMENT '自增id',
     `uniacid`          int(10)      NOT NULL COMMENT '公众号id',
@@ -14282,7 +14279,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_templatemsg`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城群发模板消息';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_user_favgoods`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_user_favgoods`
 (
     `id`        int(11) NOT NULL COMMENT '自增id',
     `member_id` int(10) NOT NULL COMMENT '客户id',
@@ -14292,7 +14289,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_user_favgoods`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城商品收藏表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_codes`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_virtualcard_codes`
 (
     `id`          int(10)        NOT NULL COMMENT '自增id',
     `code_name`   varchar(255)   NOT NULL COMMENT '兑换码名称',
@@ -14304,7 +14301,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_codes`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球礼品兑换码表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_limituser_error`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_virtualcard_limituser_error`
 (
     `id`      int(10) NOT NULL COMMENT '自增id',
     `user_id` int(10) NOT NULL COMMENT '用户id',
@@ -14312,7 +14309,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_limituser_error`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='兑换错误日志';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_limit_user`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_virtualcard_limit_user`
 (
     `id`            int(10) NOT NULL COMMENT '自增id',
     `user_id`       int(10) NOT NULL COMMENT '封禁用户id',
@@ -14321,7 +14318,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_limit_user`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='被封禁的用户';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_userecord`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_virtualcard_userecord`
 (
     `id`          int(10)        NOT NULL COMMENT '自增id',
     `code_sn`     varchar(200)   NOT NULL COMMENT '兑换码序号',
@@ -14333,7 +14330,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_virtualcard_userecord`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='兑换码使用记录表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_weprogram_token`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_weprogram_token`
 (
     `id`          int(11)      NOT NULL COMMENT '自增id',
     `token`       varchar(255) NOT NULL COMMENT '客户标识',
@@ -14344,7 +14341,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_weprogram_token`
   DEFAULT CHARSET = utf8mb4
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城小程序客户token表';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_wxlive`
 (
     `id`          int(11)    NOT NULL,
     `share_img`   varchar(255)        DEFAULT NULL COMMENT '分享封面',
@@ -14363,7 +14360,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='吃货星球微信直播插件';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive_replay`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_ecommerce_wxlive_replay`
 (
     `id`          int(11) NOT NULL,
     `live_id`     int(11)      DEFAULT NULL COMMENT '列表id',
@@ -14376,7 +14373,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_wxlive_replay`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='直播回放';
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_supply_commiss`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_supply_commiss`
 (
     `id`        int(10) NOT NULL COMMENT '自增ID',
     `supply_id` int(10) NOT NULL COMMENT '商户ID',
@@ -14386,7 +14383,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_supply_commiss`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_supply_commiss_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_supply_commiss_order`
 (
     `id`                   int(10)      NOT NULL COMMENT '自增ID',
     `supply_id`            int(10)      NOT NULL COMMENT '商户id',
@@ -14403,7 +14400,7 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_supply_commiss_order`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `eaterplanet_supply_tixian_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_eaterplanet_supply_tixian_order`
 (
     `id`                int(10)      NOT NULL COMMENT '自增id',
     `supply_id`         int(10)      NOT NULL COMMENT '团长id',
@@ -14423,14 +14420,14 @@ CREATE TABLE IF NOT EXISTS `eaterplanet_supply_tixian_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='分销佣金提现表';
 
-CREATE TABLE IF NOT EXISTS `log`
+CREATE TABLE IF NOT EXISTS `dejavutech_log`
 (
     `id`   int(10) NOT NULL,
     `text` text    NOT NULL
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `lottery_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_lottery_goods`
 (
     `id`                int(11)    NOT NULL,
     `goods_id`          int(11)    NOT NULL COMMENT '商品id',
@@ -14449,7 +14446,7 @@ CREATE TABLE IF NOT EXISTS `lottery_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `mb_special`
+CREATE TABLE IF NOT EXISTS `dejavutech_mb_special`
 (
     `special_id`      int(10) UNSIGNED NOT NULL COMMENT '专题编号',
     `special_desc`    varchar(20)      NOT NULL COMMENT '专题描述',
@@ -14462,7 +14459,7 @@ CREATE TABLE IF NOT EXISTS `mb_special`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球专题表';
 
-CREATE TABLE IF NOT EXISTS `mb_special_item`
+CREATE TABLE IF NOT EXISTS `dejavutech_mb_special_item`
 (
     `item_id`     int(10) UNSIGNED    NOT NULL COMMENT '专题项目编号',
     `special_id`  int(10) UNSIGNED    NOT NULL COMMENT '专题编号',
@@ -14474,7 +14471,7 @@ CREATE TABLE IF NOT EXISTS `mb_special_item`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球专题项目表';
 
-CREATE TABLE IF NOT EXISTS `member`
+CREATE TABLE IF NOT EXISTS `dejavutech_member`
 (
     `member_id`          int(11)      NOT NULL,
     `openid`             varchar(200) NOT NULL COMMENT '微信openid',
@@ -14513,7 +14510,7 @@ CREATE TABLE IF NOT EXISTS `member`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='网站客户';
 
-CREATE TABLE IF NOT EXISTS `member_charge_flow`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_charge_flow`
 (
     `id`          int(10)        NOT NULL COMMENT '自增id',
     `member_id`   int(10)        NOT NULL COMMENT '客户id',
@@ -14526,7 +14523,7 @@ CREATE TABLE IF NOT EXISTS `member_charge_flow`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='吃货星球商城客户充值记录表';
 
-CREATE TABLE IF NOT EXISTS `member_commiss`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_commiss`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
     `member_id`    int(10) NOT NULL COMMENT '客户ID',
@@ -14540,7 +14537,7 @@ CREATE TABLE IF NOT EXISTS `member_commiss`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `member_commiss_apply`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_commiss_apply`
 (
     `id`        int(10)    NOT NULL COMMENT '自增id',
     `member_id` int(10)    NOT NULL COMMENT '客户id',
@@ -14549,7 +14546,7 @@ CREATE TABLE IF NOT EXISTS `member_commiss_apply`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `member_commiss_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_commiss_order`
 (
     `id`              int(10)      NOT NULL COMMENT '自增ID',
     `member_id`       int(10)      NOT NULL COMMENT '客户ID',
@@ -14565,7 +14562,7 @@ CREATE TABLE IF NOT EXISTS `member_commiss_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `member_common`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_common`
 (
     `member_id`  int(10) NOT NULL COMMENT '客户id',
     `qrcode_img` varchar(255) DEFAULT NULL COMMENT '团长二维码背景'
@@ -14573,7 +14570,7 @@ CREATE TABLE IF NOT EXISTS `member_common`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='客户公共信息表';
 
-CREATE TABLE IF NOT EXISTS `member_formid`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_formid`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `member_id` int(10)      NOT NULL COMMENT '客户id',
@@ -14584,7 +14581,7 @@ CREATE TABLE IF NOT EXISTS `member_formid`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='客户的群发formid表';
 
-CREATE TABLE IF NOT EXISTS `member_level`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_level`
 (
     `id`          int(10)        NOT NULL COMMENT '自增id',
     `level`       int(11)        NOT NULL COMMENT '等级',
@@ -14596,7 +14593,7 @@ CREATE TABLE IF NOT EXISTS `member_level`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='客户等级表';
 
-CREATE TABLE IF NOT EXISTS `member_sharing`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_sharing`
 (
     `id`           int(10) NOT NULL COMMENT '自增ID',
     `member_id`    int(10) NOT NULL COMMENT '客户ID',
@@ -14609,7 +14606,7 @@ CREATE TABLE IF NOT EXISTS `member_sharing`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `member_sharing_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_member_sharing_order`
 (
     `id`              int(10)      NOT NULL COMMENT '自增ID',
     `member_id`       int(10)      NOT NULL COMMENT '客户ID',
@@ -14624,7 +14621,7 @@ CREATE TABLE IF NOT EXISTS `member_sharing_order`
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `menu`
+CREATE TABLE IF NOT EXISTS `dejavutech_menu`
 (
     `id`         int(10) unsigned NOT NULL COMMENT '文档ID',
     `pid`        int(10) unsigned NOT NULL DEFAULT '0' COMMENT '上级分类ID',
@@ -14635,7 +14632,7 @@ CREATE TABLE IF NOT EXISTS `menu`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='后台菜单';
 
-CREATE TABLE IF NOT EXISTS `node`
+CREATE TABLE IF NOT EXISTS `dejavutech_node`
 (
     `id`         int(11)     NOT NULL COMMENT 'ID',
     `pid`        int(11)     NOT NULL COMMENT '父节点id',
@@ -14648,7 +14645,7 @@ CREATE TABLE IF NOT EXISTS `node`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='节点表';
 
-CREATE TABLE IF NOT EXISTS `notify_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_notify_order`
 (
     `id`         int(10)      NOT NULL,
     `username`   varchar(255) NOT NULL COMMENT '客户名称',
@@ -14663,7 +14660,7 @@ CREATE TABLE IF NOT EXISTS `notify_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='最新订单消息通知';
 
-CREATE TABLE IF NOT EXISTS `option`
+CREATE TABLE IF NOT EXISTS `dejavutech_option`
 (
     `option_id`   int(11)      NOT NULL,
     `type`        varchar(32)  NOT NULL,
@@ -14675,7 +14672,7 @@ CREATE TABLE IF NOT EXISTS `option`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='产品选项';
 
-CREATE TABLE IF NOT EXISTS `option_value`
+CREATE TABLE IF NOT EXISTS `dejavutech_option_value`
 (
     `option_value_id`  int(11)      NOT NULL,
     `option_id`        int(11)      NOT NULL,
@@ -14685,7 +14682,7 @@ CREATE TABLE IF NOT EXISTS `option_value`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='选项值';
 
-CREATE TABLE IF NOT EXISTS `order`
+CREATE TABLE IF NOT EXISTS `dejavutech_order`
 (
     `order_id`             int(11)        NOT NULL,
     `order_num_alias`      varchar(40)    NOT NULL COMMENT '订单编号',
@@ -14731,7 +14728,7 @@ CREATE TABLE IF NOT EXISTS `order`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `order_all`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_all`
 (
     `id`              int(10)    NOT NULL COMMENT '自增id，',
     `member_id`       int(10)    NOT NULL COMMENT '所属客户',
@@ -14746,7 +14743,7 @@ CREATE TABLE IF NOT EXISTS `order_all`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='订单总表，支付时候使用';
 
-CREATE TABLE IF NOT EXISTS `order_comment`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_comment`
 (
     `comment_id`      int(10)    NOT NULL COMMENT '评论id',
     `order_id`        int(10)    NOT NULL DEFAULT '0' COMMENT '订单id',
@@ -14770,7 +14767,7 @@ CREATE TABLE IF NOT EXISTS `order_comment`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `order_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_goods`
 (
     `order_goods_id`           int(11)        NOT NULL,
     `order_id`                 int(11)        NOT NULL,
@@ -14800,7 +14797,7 @@ CREATE TABLE IF NOT EXISTS `order_goods`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `order_goods_haitao`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_goods_haitao`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `order_id`  int(10)      NOT NULL COMMENT '订单id',
@@ -14811,7 +14808,7 @@ CREATE TABLE IF NOT EXISTS `order_goods_haitao`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='订单海淘信息表';
 
-CREATE TABLE IF NOT EXISTS `order_history`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_history`
 (
     `order_history_id` int(11)    NOT NULL,
     `order_id`         int(11)    NOT NULL,
@@ -14822,7 +14819,7 @@ CREATE TABLE IF NOT EXISTS `order_history`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `order_option`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_option`
 (
     `order_option_id`       int(11)      NOT NULL,
     `order_id`              int(11)      NOT NULL,
@@ -14835,7 +14832,7 @@ CREATE TABLE IF NOT EXISTS `order_option`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `order_quantity_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_quantity_order`
 (
     `id`                        int(10)    NOT NULL COMMENT '自增id',
     `order_id`                  int(10)    NOT NULL COMMENT '订单id',
@@ -14849,7 +14846,7 @@ CREATE TABLE IF NOT EXISTS `order_quantity_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='库存记录表';
 
-CREATE TABLE IF NOT EXISTS `order_refund`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_refund`
 (
     `ref_id`          int(10)      NOT NULL COMMENT '退款自增id',
     `order_id`        int(10)      NOT NULL COMMENT '订单id',
@@ -14865,7 +14862,7 @@ CREATE TABLE IF NOT EXISTS `order_refund`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='用户退款表';
 
-CREATE TABLE IF NOT EXISTS `order_refund_history`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_refund_history`
 (
     `id`       int(10)    NOT NULL COMMENT '自增id',
     `order_id` int(10)    NOT NULL COMMENT '订单id',
@@ -14876,7 +14873,7 @@ CREATE TABLE IF NOT EXISTS `order_refund_history`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款订单处理历史表';
 
-CREATE TABLE IF NOT EXISTS `order_refund_history_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_refund_history_image`
 (
     `id`      int(10)      NOT NULL COMMENT '自增id',
     `orh_id`  int(10)      NOT NULL COMMENT '处理记录id',
@@ -14886,7 +14883,7 @@ CREATE TABLE IF NOT EXISTS `order_refund_history_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='退款处理记录图片表';
 
-CREATE TABLE IF NOT EXISTS `order_refund_image`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_refund_image`
 (
     `id`      int(10)      NOT NULL COMMENT '退款图片自增id',
     `ref_id`  int(10)      NOT NULL COMMENT '退款id',
@@ -14896,7 +14893,7 @@ CREATE TABLE IF NOT EXISTS `order_refund_image`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='order_refund_image';
 
-CREATE TABLE IF NOT EXISTS `order_relate`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_relate`
 (
     `id`           int(10) NOT NULL COMMENT '自增id',
     `order_all_id` int(10) NOT NULL COMMENT '订单总表id',
@@ -14906,14 +14903,14 @@ CREATE TABLE IF NOT EXISTS `order_relate`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='订单总表跟商家订单关联表';
 
-CREATE TABLE IF NOT EXISTS `order_status`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_status`
 (
     `order_status_id` int(11)     NOT NULL,
     `name`            varchar(32) NOT NULL
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='订单状态';
 
-INSERT INTO `order_status` (`order_status_id`, `name`)
+INSERT INTO `dejavutech_order_status` (`order_status_id`, `name`)
 VALUES (1, '已付款待发货'),
        (2, '拼团中，已付款'),
        (3, '待付款'),
@@ -14928,7 +14925,7 @@ VALUES (1, '已付款待发货'),
        (12, '申请退款中'),
        (13, '平台介入退款');
 
-CREATE TABLE IF NOT EXISTS `order_total`
+CREATE TABLE IF NOT EXISTS `dejavutech_order_total`
 (
     `order_total_id` int(10)        NOT NULL,
     `order_id`       int(11)        NOT NULL,
@@ -14940,7 +14937,7 @@ CREATE TABLE IF NOT EXISTS `order_total`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `payment`
+CREATE TABLE IF NOT EXISTS `dejavutech_payment`
 (
     `payment_id`     int(11)        NOT NULL COMMENT '支付索引id',
     `payment_code`   char(10)       NOT NULL COMMENT '支付代码名称',
@@ -14950,13 +14947,13 @@ CREATE TABLE IF NOT EXISTS `payment`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='支付方式表';
 
-INSERT INTO `payment` (`payment_id`, `payment_code`, `payment_name`, `payment_config`, `payment_state`)
+INSERT INTO `dejavutech_payment` (`payment_id`, `payment_code`, `payment_name`, `payment_config`, `payment_state`)
 VALUES (1, 'wxpay', '微信支付',
         'a:4:{s:14:\"alipay_service\";s:25:\"create_direct_pay_by_user\";s:14:\"alipay_account\";s:0:\"\";s:10:\"alipay_key\";s:0:\"\";s:14:\"alipay_partner\";s:0:\"\";}',
         '1');
 
 
-CREATE TABLE IF NOT EXISTS `pick_member`
+CREATE TABLE IF NOT EXISTS `dejavutech_pick_member`
 (
     `id`         int(10)    NOT NULL COMMENT '自增id',
     `member_id`  int(10)    NOT NULL COMMENT '客户id',
@@ -14968,7 +14965,7 @@ CREATE TABLE IF NOT EXISTS `pick_member`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='提货人员表';
 
-CREATE TABLE IF NOT EXISTS `pick_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_pick_order`
 (
     `id`             int(10)     NOT NULL COMMENT '自增id',
     `pick_sn`        varchar(50) NOT NULL COMMENT '自提sn码，用于核销',
@@ -14985,7 +14982,7 @@ CREATE TABLE IF NOT EXISTS `pick_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='自提订单表';
 
-CREATE TABLE IF NOT EXISTS `pick_up`
+CREATE TABLE IF NOT EXISTS `dejavutech_pick_up`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `pick_name` varchar(255) NOT NULL COMMENT '自提点名称',
@@ -15001,7 +14998,7 @@ CREATE TABLE IF NOT EXISTS `pick_up`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='自提点表';
 
-CREATE TABLE IF NOT EXISTS `pin`
+CREATE TABLE IF NOT EXISTS `dejavutech_pin`
 (
     `pin_id`        int(11)    NOT NULL COMMENT '拼团id，自增',
     `order_id`      int(11)    NOT NULL DEFAULT '0' COMMENT '订单id',
@@ -15018,7 +15015,7 @@ CREATE TABLE IF NOT EXISTS `pin`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `pin_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_pin_goods`
 (
     `id`                     int(10) NOT NULL COMMENT '自增id',
     `goods_id`               int(10)                            DEFAULT NULL COMMENT '商品id',
@@ -15036,7 +15033,7 @@ CREATE TABLE IF NOT EXISTS `pin_goods`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `pin_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_pin_order`
 (
     `id`       int(11) NOT NULL,
     `pin_id`   int(11) NOT NULL COMMENT '拼团id',
@@ -15046,7 +15043,7 @@ CREATE TABLE IF NOT EXISTS `pin_order`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `plugins_slider`
+CREATE TABLE IF NOT EXISTS `dejavutech_plugins_slider`
 (
     `slider_id`   int(11)                                                                                                                                                                                                                                                                                                                                               NOT NULL,
     `slider_name` varchar(100)                                                                                                                                                                                                                                                                                                                                          NOT NULL COMMENT '广告位名称',
@@ -15059,7 +15056,7 @@ CREATE TABLE IF NOT EXISTS `plugins_slider`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = COMPACT COMMENT ='图片轮播器';
 
-CREATE TABLE IF NOT EXISTS `role`
+CREATE TABLE IF NOT EXISTS `dejavutech_role`
 (
     `id`          int(11)     NOT NULL COMMENT 'ID',
     `pid`         int(11)     NOT NULL COMMENT '父角色id',
@@ -15071,12 +15068,12 @@ CREATE TABLE IF NOT EXISTS `role`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='角色表';
 
-INSERT INTO `role` (`id`, `pid`, `name`, `description`, `status`, `created_at`, `updated_at`)
+INSERT INTO `dejavutech_role` (`id`, `pid`, `name`, `description`, `status`, `created_at`, `updated_at`)
 VALUES (1, 0, '超级管理员', '管理所有后台权限', 1, 0, 1476241011),
        (2, 0, '订单管理员', '查看订单的状态', 1, 0, 0),
        (3, 1, '商品管理员', '商品管理员', 1, 1470303850, 1470303850);
 
-CREATE TABLE IF NOT EXISTS `seller`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller`
 (
     `s_id`              mediumint(8) NOT NULL,
     `s_uname`           varchar(20)  NOT NULL COMMENT '用户名',
@@ -15095,10 +15092,10 @@ CREATE TABLE IF NOT EXISTS `seller`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='卖家信息表';
 
-INSERT INTO `seller` (`s_id`, `s_uname`, `s_true_name`, `s_mobile`, `s_passwd`, `s_role_id`, `s_login_count`, `s_last_login_ip`, `s_last_ip_region`, `s_create_time`, `s_last_login_time`, `s_status`, `perms`, `deleted`) VALUES
-(1, 'epadmin', '', '', 'MDAwMDAwMDAwMIpnnZqWiWPThLaJl4O4eak', 0, 22, '112.117.155.162', '', 1605732513, 1622836538, 1, '', 0);
+INSERT INTO `dejavutech_seller` (`s_id`, `s_uname`, `s_true_name`, `s_mobile`, `s_passwd`, `s_role_id`, `s_login_count`, `s_last_login_ip`, `s_last_ip_region`, `s_create_time`, `s_last_login_time`, `s_status`, `perms`, `deleted`) VALUES
+(2, 'zhrrobert', '', '', 'MDAwMDAwMDAwMIpnnZqWiWPThLaJl4O4eak', 0, 22, '112.117.155.162', '', 1605732513, 1622836538, 1, '', 0);
 
-CREATE TABLE IF NOT EXISTS `seller_ad`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller_ad`
 (
     `id`        int(11)      NOT NULL COMMENT '自增id',
     `seller_id` int(11)      NOT NULL COMMENT '卖家id',
@@ -15113,7 +15110,7 @@ CREATE TABLE IF NOT EXISTS `seller_ad`
 
 
 
-CREATE TABLE IF NOT EXISTS `seller_balance`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller_balance`
 (
     `id`          int(11)      NOT NULL,
     `seller_id`   int(10)      NOT NULL COMMENT '卖家id',
@@ -15124,13 +15121,13 @@ CREATE TABLE IF NOT EXISTS `seller_balance`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-INSERT INTO `seller_balance` (`id`, `seller_id`, `money`, `hasgetmoney`, `dongmoney`)
+INSERT INTO `dejavutech_seller_balance` (`id`, `seller_id`, `money`, `hasgetmoney`, `dongmoney`)
 VALUES (1, 1, 0.25, 0.01, 0.00),
        (2, 2, 0.00, 0.00, 0.00);
 
 
 
-CREATE TABLE IF NOT EXISTS `seller_express`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller_express`
 (
     `id`           int(11)      NOT NULL COMMENT '快递id，自增',
     `express_name` varchar(100) NOT NULL COMMENT '快递名称',
@@ -15141,7 +15138,7 @@ CREATE TABLE IF NOT EXISTS `seller_express`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `seller_express_relat`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller_express_relat`
 (
     `id`         int(10) NOT NULL COMMENT '自增id',
     `express_id` int(10) NOT NULL DEFAULT '0' COMMENT '快递id',
@@ -15150,7 +15147,7 @@ CREATE TABLE IF NOT EXISTS `seller_express_relat`
   DEFAULT CHARSET = utf8 COMMENT ='商家快递关联表'
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `seller_log`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller_log`
 (
     `id`      int(10) NOT NULL COMMENT '自增id',
     `s_id`    int(11) NOT NULL DEFAULT '0',
@@ -15160,7 +15157,7 @@ CREATE TABLE IF NOT EXISTS `seller_log`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE IF NOT EXISTS `seller_menu`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller_menu`
 (
     `id`         int(10) unsigned NOT NULL COMMENT '文档ID',
     `pid`        int(10) unsigned NOT NULL DEFAULT '0' COMMENT '上级分类ID',
@@ -15172,7 +15169,7 @@ CREATE TABLE IF NOT EXISTS `seller_menu`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='后台菜单';
 
-INSERT INTO `seller_menu` (`id`, `pid`, `title`, `url`, `icon`, `sort_order`, `is_mall`)
+INSERT INTO `dejavutech_seller_menu` (`id`, `pid`, `title`, `url`, `icon`, `sort_order`, `is_mall`)
 VALUES (28, 0, '商品', '', 'eaterplaneticon eaterplaneticon-goods', 2, 1),
        (29, 28, '普通商品信息', 'Goods/index', '', 1, 1),
        (35, 0, '订单中心', '', 'eaterplaneticon eaterplaneticon-order', 3, 1),
@@ -15207,7 +15204,7 @@ VALUES (28, 0, '商品', '', 'eaterplaneticon eaterplaneticon-goods', 2, 1),
 
 
 
-CREATE TABLE IF NOT EXISTS `seller_tixian`
+CREATE TABLE IF NOT EXISTS `dejavutech_seller_tixian`
 (
     `id`        int(10) unsigned NOT NULL COMMENT '自增id',
     `seller_id` int(10)          NOT NULL COMMENT '卖家id',
@@ -15218,7 +15215,7 @@ CREATE TABLE IF NOT EXISTS `seller_tixian`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `spike`
+CREATE TABLE IF NOT EXISTS `dejavutech_spike`
 (
     `id`         int(11)      NOT NULL COMMENT '自增id',
     `name`       varchar(255) NOT NULL COMMENT '限时秒杀活动名称',
@@ -15230,7 +15227,7 @@ CREATE TABLE IF NOT EXISTS `spike`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `spike_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_spike_goods`
 (
     `id`         int(11)    NOT NULL,
     `goods_id`   int(11)    NOT NULL COMMENT '商品id',
@@ -15245,20 +15242,20 @@ CREATE TABLE IF NOT EXISTS `spike_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `stock_status`
+CREATE TABLE IF NOT EXISTS `dejavutech_stock_status`
 (
     `stock_status_id` int(11)     NOT NULL,
     `name`            varchar(32) NOT NULL
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='库存状态';
 
-INSERT INTO `stock_status` (`stock_status_id`, `name`)
+INSERT INTO `dejavutech_stock_status` (`stock_status_id`, `name`)
 VALUES (1, '有存货'),
        (2, '备货中');
 
 
 
-CREATE TABLE IF NOT EXISTS `store_bind_class`
+CREATE TABLE IF NOT EXISTS `dejavutech_store_bind_class`
 (
     `bid`         int(10) unsigned    NOT NULL,
     `seller_id`   int(11) unsigned             DEFAULT '0' COMMENT '店铺ID',
@@ -15273,7 +15270,7 @@ CREATE TABLE IF NOT EXISTS `store_bind_class`
 
 
 
-CREATE TABLE IF NOT EXISTS `subject`
+CREATE TABLE IF NOT EXISTS `dejavutech_subject`
 (
     `id`           int(11)      NOT NULL COMMENT '自增id',
     `name`         varchar(255) NOT NULL COMMENT '活动名称',
@@ -15290,7 +15287,7 @@ CREATE TABLE IF NOT EXISTS `subject`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `subject_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_subject_goods`
 (
     `id`         int(11)    NOT NULL COMMENT '自增id',
     `subject_id` int(11)    NOT NULL COMMENT '主题id',
@@ -15304,7 +15301,7 @@ CREATE TABLE IF NOT EXISTS `subject_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `super_spike`
+CREATE TABLE IF NOT EXISTS `dejavutech_super_spike`
 (
     `id`         int(11)      NOT NULL COMMENT '自增id',
     `name`       varchar(255) NOT NULL COMMENT '超值大牌活动名称',
@@ -15315,7 +15312,7 @@ CREATE TABLE IF NOT EXISTS `super_spike`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `super_spike_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_super_spike_goods`
 (
     `id`             int(11)    NOT NULL COMMENT '自增id',
     `super_spike_id` int(11)    NOT NULL COMMENT '超值大牌活动id',
@@ -15329,7 +15326,7 @@ CREATE TABLE IF NOT EXISTS `super_spike_goods`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `template_msg_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_template_msg_order`
 (
     `id`            int(10)      NOT NULL COMMENT '自增ID',
     `template_data` text         NOT NULL COMMENT '发送数据',
@@ -15345,7 +15342,7 @@ CREATE TABLE IF NOT EXISTS `template_msg_order`
 
 
 
-CREATE TABLE IF NOT EXISTS `tixian_order`
+CREATE TABLE IF NOT EXISTS `dejavutech_tixian_order`
 (
     `id`        int(10)      NOT NULL COMMENT '自增id',
     `member_id` int(10)      NOT NULL COMMENT '客户id',
@@ -15359,7 +15356,7 @@ CREATE TABLE IF NOT EXISTS `tixian_order`
 
 
 
-CREATE TABLE IF NOT EXISTS `transport`
+CREATE TABLE IF NOT EXISTS `dejavutech_transport`
 (
     `id`          mediumint(8) unsigned NOT NULL COMMENT '运费模板ID',
     `title`       varchar(30)           NOT NULL COMMENT '运费模板名称',
@@ -15368,13 +15365,13 @@ CREATE TABLE IF NOT EXISTS `transport`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='运费模板';
 
-INSERT INTO `transport` (`id`, `title`, `seller_id`, `update_time`)
+INSERT INTO `dejavutech_transport` (`id`, `title`, `seller_id`, `update_time`)
 VALUES (1, '快递', 1, 1471146919),
        (2, '顺丰', 1, 1472021297);
 
 
 
-CREATE TABLE IF NOT EXISTS `transport_extend`
+CREATE TABLE IF NOT EXISTS `dejavutech_transport_extend`
 (
     `id`              mediumint(8) unsigned NOT NULL COMMENT '运费模板扩展ID',
     `area_id`         text COMMENT '市级地区ID组成的串，以，隔开，两端也有，',
@@ -15390,7 +15387,7 @@ CREATE TABLE IF NOT EXISTS `transport_extend`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='运费模板扩展表';
 
-INSERT INTO `transport_extend` (`id`, `area_id`, `top_area_id`, `area_name`, `snum`, `sprice`, `xnum`, `xprice`,
+INSERT INTO `dejavutech_transport_extend` (`id`, `area_id`, `top_area_id`, `area_name`, `snum`, `sprice`, `xnum`, `xprice`,
                                 `is_default`, `transport_id`, `transport_title`)
 VALUES (19, '', '', '全国', 1, '5.00', 1, '2.00', '1', 1, '快递'),
        (20,
@@ -15409,7 +15406,7 @@ VALUES (19, '', '', '全国', 1, '5.00', 1, '2.00', '1', 1, '快递'),
 
 
 
-CREATE TABLE IF NOT EXISTS `user_action`
+CREATE TABLE IF NOT EXISTS `dejavutech_user_action`
 (
     `ua_id`    int(11)      NOT NULL,
     `type`     varchar(40)  NOT NULL COMMENT 'frontend,backend',
@@ -15423,7 +15420,7 @@ CREATE TABLE IF NOT EXISTS `user_action`
 
 
 
-CREATE TABLE IF NOT EXISTS `user_favgoods`
+CREATE TABLE IF NOT EXISTS `dejavutech_user_favgoods`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `member_id` int(10) NOT NULL COMMENT '客户id',
@@ -15435,7 +15432,7 @@ CREATE TABLE IF NOT EXISTS `user_favgoods`
 
 
 
-CREATE TABLE IF NOT EXISTS `user_favstore`
+CREATE TABLE IF NOT EXISTS `dejavutech_user_favstore`
 (
     `id`        int(10) NOT NULL COMMENT '自增id',
     `member_id` int(10) NOT NULL COMMENT '客户id',
@@ -15447,7 +15444,7 @@ CREATE TABLE IF NOT EXISTS `user_favstore`
 
 
 
-CREATE TABLE IF NOT EXISTS `visitors_ip`
+CREATE TABLE IF NOT EXISTS `dejavutech_visitors_ip`
 (
     `vi_id`            int(11)      NOT NULL,
     `province`         varchar(40)  NOT NULL COMMENT '省',
@@ -15463,7 +15460,7 @@ CREATE TABLE IF NOT EXISTS `visitors_ip`
 
 
 
-CREATE TABLE IF NOT EXISTS `voucher`
+CREATE TABLE IF NOT EXISTS `dejavutech_voucher`
 (
     `id`                 int(11)      NOT NULL COMMENT '自增id',
     `voucher_title`      varchar(100) NOT NULL COMMENT '优惠券名称',
@@ -15488,7 +15485,7 @@ CREATE TABLE IF NOT EXISTS `voucher`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `voucher_free`
+CREATE TABLE IF NOT EXISTS `dejavutech_voucher_free`
 (
     `id`       int(10)    NOT NULL COMMENT '自增id',
     `user_id`  int(10)    NOT NULL COMMENT '客户id',
@@ -15501,7 +15498,7 @@ CREATE TABLE IF NOT EXISTS `voucher_free`
 
 
 
-CREATE TABLE IF NOT EXISTS `voucher_goods`
+CREATE TABLE IF NOT EXISTS `dejavutech_voucher_goods`
 (
     `id`         int(10) NOT NULL COMMENT '自增id',
     `voucher_id` int(10) NOT NULL COMMENT '优惠券id',
@@ -15512,7 +15509,7 @@ CREATE TABLE IF NOT EXISTS `voucher_goods`
 
 
 
-CREATE TABLE IF NOT EXISTS `voucher_list`
+CREATE TABLE IF NOT EXISTS `dejavutech_voucher_list`
 (
     `id`                 int(11)        NOT NULL COMMENT '自增id',
     `voucher_id`         int(11)        NOT NULL COMMENT '优惠券id',
@@ -15531,7 +15528,7 @@ CREATE TABLE IF NOT EXISTS `voucher_list`
   DEFAULT CHARSET = utf8
   ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE IF NOT EXISTS `weight_class`
+CREATE TABLE IF NOT EXISTS `dejavutech_weight_class`
 (
     `weight_class_id` int(11)        NOT NULL,
     `value`           decimal(15, 8) NOT NULL DEFAULT '0.00000000',
@@ -15540,13 +15537,13 @@ CREATE TABLE IF NOT EXISTS `weight_class`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='重量单位';
 
-INSERT INTO `weight_class` (`weight_class_id`, `value`, `title`, `unit`)
+INSERT INTO `dejavutech_weight_class` (`weight_class_id`, `value`, `title`, `unit`)
 VALUES (1, '1.00000000', '千克', 'kg'),
        (2, '1000.00000000', '克', 'g');
 
 
 
-CREATE TABLE IF NOT EXISTS `weprogram_token`
+CREATE TABLE IF NOT EXISTS `dejavutech_weprogram_token`
 (
     `id`          int(10)      NOT NULL COMMENT '客户id',
     `token`       varchar(100) NOT NULL COMMENT '客户标识',
@@ -15559,444 +15556,444 @@ CREATE TABLE IF NOT EXISTS `weprogram_token`
 
 
 
-ALTER TABLE `address`
+ALTER TABLE `dejavutech_address`
     ADD PRIMARY KEY (`address_id`) USING BTREE;
 
 
-ALTER TABLE `area`
+ALTER TABLE `dejavutech_area`
     ADD PRIMARY KEY (`area_id`) USING BTREE,
     ADD KEY `area_parent_id` (`area_parent_id`) USING BTREE;
 
 
-ALTER TABLE `balance`
+ALTER TABLE `dejavutech_balance`
     ADD PRIMARY KEY (`bid`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `balance_order`
+ALTER TABLE `dejavutech_balance_order`
     ADD PRIMARY KEY (`boid`) USING BTREE,
     ADD KEY `bid` (`bid`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `bargain_goods`
+ALTER TABLE `dejavutech_bargain_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `bargain_order`
+ALTER TABLE `dejavutech_bargain_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `bargain_order_detail`
+ALTER TABLE `dejavutech_bargain_order_detail`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `blog`
+ALTER TABLE `dejavutech_blog`
     ADD PRIMARY KEY (`blog_id`) USING BTREE;
 
 
-ALTER TABLE `blog_category`
+ALTER TABLE `dejavutech_blog_category`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pid` (`pid`) USING BTREE;
 
 
-ALTER TABLE `blog_content`
+ALTER TABLE `dejavutech_blog_content`
     ADD KEY `article_id` (`blog_id`) USING BTREE;
 
 
-ALTER TABLE `blog_image`
+ALTER TABLE `dejavutech_blog_image`
     ADD PRIMARY KEY (`blog_image_id`) USING BTREE;
 
 
-ALTER TABLE `blog_reply`
+ALTER TABLE `dejavutech_blog_reply`
     ADD PRIMARY KEY (`reply_id`) USING BTREE;
 
 
-ALTER TABLE `blog_seller_order`
+ALTER TABLE `dejavutech_blog_seller_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `blog_id` (`blog_id`, `seller_id`) USING BTREE;
 
 
-ALTER TABLE `car`
+ALTER TABLE `dejavutech_car`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `token` (`token`) USING BTREE;
 
 
-ALTER TABLE `comment`
+ALTER TABLE `dejavutech_comment`
     ADD PRIMARY KEY (`comment_id`) USING BTREE;
 
 
-ALTER TABLE `config`
+ALTER TABLE `dejavutech_config`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD UNIQUE KEY `uk_name` (`name`) USING BTREE,
     ADD KEY `group` (`config_group`) USING BTREE;
 
 
-ALTER TABLE `core_attachment`
+ALTER TABLE `dejavutech_core_attachment`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `core_attachment_group`
+ALTER TABLE `dejavutech_core_attachment_group`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `fen_tixian_order`
+ALTER TABLE `dejavutech_fen_tixian_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `fissionbonus`
+ALTER TABLE `dejavutech_fissionbonus`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `fissionbonus_flow`
+ALTER TABLE `dejavutech_fissionbonus_flow`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `fissionbonus_id` (`fissionbonus_id`, `member_id`) USING BTREE;
 
 
-ALTER TABLE `fissionbonus_order`
+ALTER TABLE `dejavutech_fissionbonus_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `fissionbonus_id` (`fissionbonus_id`, `member_id`) USING BTREE;
 
 
-ALTER TABLE `fissionsharing_link`
+ALTER TABLE `dejavutech_fissionsharing_link`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`, `member_id`) USING BTREE;
 
 
-ALTER TABLE `goods`
+ALTER TABLE `dejavutech_goods`
     ADD PRIMARY KEY (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `goods_area`
+ALTER TABLE `dejavutech_goods_area`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `goods_category`
+ALTER TABLE `dejavutech_goods_category`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pid` (`pid`) USING BTREE;
 
 
-ALTER TABLE `goods_description`
+ALTER TABLE `dejavutech_goods_description`
     ADD PRIMARY KEY (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `goods_discount`
+ALTER TABLE `dejavutech_goods_discount`
     ADD PRIMARY KEY (`product_discount_id`) USING BTREE,
     ADD KEY `product_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `goods_image`
+ALTER TABLE `dejavutech_goods_image`
     ADD PRIMARY KEY (`goods_image_id`) USING BTREE;
 
 
-ALTER TABLE `goods_option`
+ALTER TABLE `dejavutech_goods_option`
     ADD PRIMARY KEY (`goods_option_id`) USING BTREE;
 
 
-ALTER TABLE `goods_option_mult_value`
+ALTER TABLE `dejavutech_goods_option_mult_value`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `rela_goodsoption_valueid` (`rela_goodsoption_valueid`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `goods_option_value`
+ALTER TABLE `dejavutech_goods_option_value`
     ADD PRIMARY KEY (`goods_option_value_id`) USING BTREE;
 
 
-ALTER TABLE `goods_share_image`
+ALTER TABLE `dejavutech_goods_share_image`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `goods_id`) USING BTREE;
 
 
-ALTER TABLE `goods_to_category`
+ALTER TABLE `dejavutech_goods_to_category`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pk` (`goods_id`, `class_id1`, `class_id2`, `class_id3`) USING BTREE;
 
 
-ALTER TABLE `group`
+ALTER TABLE `dejavutech_group`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `group_lzl_reply`
+ALTER TABLE `dejavutech_group_lzl_reply`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `group_member`
+ALTER TABLE `dejavutech_group_member`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `group_post`
+ALTER TABLE `dejavutech_group_post`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `group_id`) USING BTREE,
     ADD KEY `group_id` (`group_id`) USING BTREE;
 
 
-ALTER TABLE `group_post_fav`
+ALTER TABLE `dejavutech_group_post_fav`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `post_id`) USING BTREE;
 
 
-ALTER TABLE `guobie`
+ALTER TABLE `dejavutech_guobie`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `integral_flow`
+ALTER TABLE `dejavutech_integral_flow`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `integral_order`
+ALTER TABLE `dejavutech_integral_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `intgral_goods`
+ALTER TABLE `dejavutech_intgral_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `jiaorder`
+ALTER TABLE `dejavutech_jiaorder`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `jiapinorder`
+ALTER TABLE `dejavutech_jiapinorder`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `jiauser`
+ALTER TABLE `dejavutech_jiauser`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `length_class`
+ALTER TABLE `dejavutech_length_class`
     ADD PRIMARY KEY (`length_class_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_head`
+ALTER TABLE `dejavutech_eaterplanet_community_head`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `lon` (`lon`, `lat`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `agent_id` (`agent_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_head_commiss`
+ALTER TABLE `dejavutech_eaterplanet_community_head_commiss`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_head_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_community_head_commiss_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_head_goods`
+ALTER TABLE `dejavutech_eaterplanet_community_head_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `head_id` (`head_id`, `goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_head_group`
+ALTER TABLE `dejavutech_eaterplanet_community_head_group`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_head_invite_recod`
+ALTER TABLE `dejavutech_eaterplanet_community_head_invite_recod`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE,
     ADD KEY `agent_member_id` (`agent_member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_head_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_community_head_tixian_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_community_history`
+ALTER TABLE `dejavutech_eaterplanet_community_history`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_address`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_address`
     ADD PRIMARY KEY (`address_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_adv`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_adv`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_advimg`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_advimg`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_adv_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_adv_category`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `cate_id` (`cate_id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_area`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_area`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pid` (`pid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_article`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_article`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_car`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_car`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `token` (`token`) USING BTREE,
     ADD KEY `community_id` (`community_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_chargetype`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_chargetype`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_commission_level`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_commission_level`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_community_head_level`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_community_head_level`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_community_pickup_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_community_pickup_member`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `community_id` (`community_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_community_pickup_member_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_community_pickup_member_record`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_config`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_config`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `name` (`name`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_coupon`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_coupon`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_coupon_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_coupon_category`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `idx_displayorder` (`displayorder`) USING BTREE,
     ADD KEY `idx_status` (`status`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_coupon_list`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_coupon_list`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `voucher_id` (`voucher_id`) USING BTREE,
     ADD KEY `user_id` (`user_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_cube`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_cube`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_deliveryclerk`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliveryclerk`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `line_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_deliveryline`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliveryline`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `clerk_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_deliveryline_headrelative`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliveryline_headrelative`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `line_id`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_deliverylist`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliverylist`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `line_id`) USING BTREE,
     ADD KEY `clerk_id` (`clerk_id`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_deliverylist_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliverylist_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `list_id` (`list_id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_deliverylist_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliverylist_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `list_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_express`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_express`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_generalmall_adv`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_generalmall_adv`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_generalmall_navigat`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_generalmall_navigat`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_category`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pid` (`pid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_images`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_images`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_option`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_option`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_option_item`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_option_item`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_option_id` (`goods_option_id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_option_item_value`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_option_item_value`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_goods_presale`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_presale`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_goods_relative_salesroom`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_relative_salesroom`
     ADD PRIMARY KEY (`id`),
     ADD KEY `salesroom_id` (`salesroom_id`),
     ADD KEY `goods_id` (`goods_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_relative_smember`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_relative_smember`
     ADD PRIMARY KEY (`id`),
     ADD KEY `salesroom_id` (`salesroom_id`),
     ADD KEY `gr_id` (`gr_id`),
     ADD KEY `smember_id` (`smember_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_salesroombase`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_salesroombase`
     ADD PRIMARY KEY (`id`),
     ADD KEY `goods_id` (`goods_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_salesroom_limit`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_salesroom_limit`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE,
@@ -16004,82 +16001,82 @@ ALTER TABLE `eaterplanet_ecommerce_goods_salesroom_limit`
     ADD KEY `smember_id` (`smember_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_share_image`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_share_image`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_tags`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_tags`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_goods_to_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_to_category`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_goods_tradecomponts`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_tradecomponts`
     ADD PRIMARY KEY (`id`),
     ADD KEY `goods_id` (`goods_id`);
 
-ALTER TABLE `eaterplanet_ecommerce_goods_virturalcard`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_virturalcard`
     ADD PRIMARY KEY (`id`),
     ADD KEY `goods_id` (`goods_id`, `code_id`);
 
-ALTER TABLE `eaterplanet_ecommerce_good_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_good_commiss`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_good_common`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_good_common`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE,
     ADD KEY `supply_id` (`supply_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_good_pin`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_good_pin`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_imdada_area_code`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_imdada_area_code`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_invitegift_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_invitegift_record`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_jiapinorder`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_jiapinorder`
     ADD PRIMARY KEY (`id`),
     ADD KEY `uniacid` (`uniacid`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_jiauser`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_jiauser`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_kdniao_list`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_kdniao_list`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_kdniao_template`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_kdniao_template`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member`
     ADD PRIMARY KEY (`member_id`) USING BTREE,
     ADD KEY `openid` (`openid`(191)) USING BTREE,
     ADD KEY `we_openid` (`we_openid`(191)) USING BTREE,
     ADD KEY `agentid` (`agentid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_card`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_card`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_card_equity`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_card_equity`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_card_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_card_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_sn` (`order_sn`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
@@ -16087,67 +16084,67 @@ ALTER TABLE `eaterplanet_ecommerce_member_card_order`
     ADD KEY `car_id` (`car_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_charge_flow`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_charge_flow`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_commiss`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_commiss_apply`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_commiss_apply`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_commiss_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_formid`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_formid`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_group`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_group`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_integral_flow`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_integral_flow`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_member_invitegift`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_invitegift`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_member_level`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_level`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_shopinfo`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_shopinfo`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_member_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_tixian_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_navigat`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_navigat`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_notice`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_notice`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_notify_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_notify_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order`
     ADD PRIMARY KEY (`order_id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `order_status_id` (`order_status_id`) USING BTREE,
@@ -16159,53 +16156,53 @@ ALTER TABLE `eaterplanet_ecommerce_order`
     ADD KEY `soli_id` (`soli_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution`
     ADD PRIMARY KEY (`id`),
     ADD KEY `member_id` (`member_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_commiss`
     ADD PRIMARY KEY (`id`),
     ADD KEY `orderdistribution_id` (`orderdistribution_id`, `member_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_log`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_order`
     ADD PRIMARY KEY (`id`),
     ADD KEY `order_id` (`order_id`, `orderdistribution_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_log`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_query`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_query`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_tixian`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_tixian`
     ADD PRIMARY KEY (`id`),
     ADD KEY `orderdistribution_id` (`orderdistribution_id`, `member_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_tixian_order`
     ADD PRIMARY KEY (`id`),
     ADD KEY `uniacid` (`uniacid`),
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_all`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_all`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_comment`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_comment`
     ADD PRIMARY KEY (`comment_id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods`
     ADD PRIMARY KEY (`order_goods_id`) USING BTREE,
     ADD KEY `store_id` (`store_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
@@ -16214,25 +16211,25 @@ ALTER TABLE `eaterplanet_ecommerce_order_goods`
     ADD KEY `goods_id` (`goods_id`, `rela_goodsoption_valueid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_goods_refund`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_refund`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_goods_id` (`order_goods_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_goods_refund_intrgral`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_refund_intrgral`
     ADD PRIMARY KEY (`id`),
     ADD KEY `uniacid` (`uniacid`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_goods_relative_salesroom`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_relative_salesroom`
     ADD PRIMARY KEY (`id`),
     ADD KEY `salesroom_id` (`salesroom_id`),
     ADD KEY `goods_id` (`goods_id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_goods_saleshexiao`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_saleshexiao`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
@@ -16240,7 +16237,7 @@ ALTER TABLE `eaterplanet_ecommerce_order_goods_saleshexiao`
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_goods_saleshexiao_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_saleshexiao_record`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
@@ -16251,86 +16248,86 @@ ALTER TABLE `eaterplanet_ecommerce_order_goods_saleshexiao_record`
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_history`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_history`
     ADD PRIMARY KEY (`order_history_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`, `order_goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_kdniao_info`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_kdniao_info`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_kdniao_print_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_kdniao_print_log`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_option`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_option`
     ADD PRIMARY KEY (`order_option_id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_order_presale`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_presale`
     ADD PRIMARY KEY (`id`),
     ADD KEY `goods_id` (`goods_id`, `order_id`);
 
-ALTER TABLE `eaterplanet_ecommerce_order_quantity_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_quantity_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_refund`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund`
     ADD PRIMARY KEY (`ref_id`) USING BTREE,
     ADD KEY `ref_member_id` (`ref_member_id`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_refund_disable`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_disable`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `ref_id` (`ref_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`, `order_goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_refund_history`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_history`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
     ADD KEY `ref_id` (`ref_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_refund_history_image`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_history_image`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `orh_id` (`orh_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_refund_image`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_image`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `ref_id` (`ref_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_refund_reson`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_reson`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_relate`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_relate`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_all_id` (`order_all_id`, `order_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_status`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_status`
     ADD PRIMARY KEY (`order_status_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_order_total`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_total`
     ADD PRIMARY KEY (`order_total_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_order_virtualcard`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_virtualcard`
     ADD PRIMARY KEY (`id`),
     ADD KEY `code_id` (`code_id`, `order_id`, `user_user_id`);
 
-ALTER TABLE `eaterplanet_ecommerce_perm_role`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_perm_role`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `idx_status` (`status`) USING BTREE,
     ADD KEY `idx_deleted` (`deleted`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_perm_user`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_perm_user`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `idx_uniacid` (`uniacid`) USING BTREE,
     ADD KEY `idx_uid` (`uid`) USING BTREE,
@@ -16339,549 +16336,549 @@ ALTER TABLE `eaterplanet_ecommerce_perm_user`
     ADD KEY `idx_deleted` (`deleted`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_pin`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pin`
     ADD PRIMARY KEY (`pin_id`) USING BTREE,
     ADD KEY `user_id` (`user_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_pintuan_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pintuan_commiss`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_pintuan_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pintuan_commiss_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_pintuan_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pintuan_tixian_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_pin_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pin_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pin_id` (`pin_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_pop_adv`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pop_adv`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_pop_adv_list`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pop_adv_list`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_printer`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_printer`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_recipe`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_recipe`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `cate_id` (`cate_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_recipe_fav`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_recipe_fav`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `recipe_id` (`recipe_id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_recipe_ingredients`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_recipe_ingredients`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `recipe_id` (`recipe_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_salesroom`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_salesroom`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `supply_id` (`supply_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_salesroom_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_salesroom_member`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_salesroom_relative_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_salesroom_relative_member`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `salesroom_id` (`salesroom_id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_shipping`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_shipping`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_signinreward_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_signinreward_record`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `head_id` (`head_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `soli_id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_invite`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_invite`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `soli_id` (`soli_id`, `member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `soli_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_post`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_post`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`, `soli_id`) USING BTREE,
     ADD KEY `pid` (`pid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_post_fav`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_post_fav`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `post_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_spec`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_spec`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_special`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_special`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_subscribe`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_subscribe`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `uniacid` (`uniacid`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE,
     ADD KEY `member_id_2` (`member_id`, `type`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_supply`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_supply`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_supply_config`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_supply_config`
     ADD PRIMARY KEY (`id`),
     ADD KEY `name` (`name`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_systemoperation_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_systemoperation_log`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_templatemsg`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_templatemsg`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_user_favgoods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_user_favgoods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `goods_id`) USING BTREE;
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_codes`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_codes`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_limituser_error`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_limituser_error`
     ADD PRIMARY KEY (`id`),
     ADD KEY `user_id` (`user_id`);
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_limit_user`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_limit_user`
     ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_userecord`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_userecord`
     ADD PRIMARY KEY (`id`),
     ADD KEY `id` (`id`, `code_id`, `order_id`, `use_user_id`);
 
-ALTER TABLE `eaterplanet_ecommerce_weprogram_token`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_weprogram_token`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_ecommerce_wxlive`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_wxlive`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_ecommerce_wxlive_replay`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_wxlive_replay`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `eaterplanet_supply_commiss`
+ALTER TABLE `dejavutech_eaterplanet_supply_commiss`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `supply_id` (`supply_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_supply_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_supply_commiss_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `supply_id` (`supply_id`) USING BTREE;
 
 
-ALTER TABLE `eaterplanet_supply_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_supply_tixian_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `supply_id` (`supply_id`) USING BTREE;
 
 
-ALTER TABLE `log`
+ALTER TABLE `dejavutech_log`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `lottery_goods`
+ALTER TABLE `dejavutech_lottery_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `state` (`state`, `quantity`, `begin_time`, `end_time`) USING BTREE;
 
 
-ALTER TABLE `mb_special`
+ALTER TABLE `dejavutech_mb_special`
     ADD PRIMARY KEY (`special_id`) USING BTREE;
 
 
-ALTER TABLE `mb_special_item`
+ALTER TABLE `dejavutech_mb_special_item`
     ADD PRIMARY KEY (`item_id`) USING BTREE;
 
 
-ALTER TABLE `member`
+ALTER TABLE `dejavutech_member`
     ADD PRIMARY KEY (`member_id`) USING BTREE,
     ADD UNIQUE KEY `openid` (`openid`) USING BTREE;
 
 
-ALTER TABLE `member_charge_flow`
+ALTER TABLE `dejavutech_member_charge_flow`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `member_commiss`
+ALTER TABLE `dejavutech_member_commiss`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `member_commiss_apply`
+ALTER TABLE `dejavutech_member_commiss_apply`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `member_commiss_order`
+ALTER TABLE `dejavutech_member_commiss_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `member_common`
+ALTER TABLE `dejavutech_member_common`
     ADD PRIMARY KEY (`member_id`) USING BTREE;
 
 
-ALTER TABLE `member_formid`
+ALTER TABLE `dejavutech_member_formid`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `member_level`
+ALTER TABLE `dejavutech_member_level`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `member_sharing`
+ALTER TABLE `dejavutech_member_sharing`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `member_sharing_order`
+ALTER TABLE `dejavutech_member_sharing_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `menu`
+ALTER TABLE `dejavutech_menu`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pid` (`pid`) USING BTREE;
 
 
-ALTER TABLE `node`
+ALTER TABLE `dejavutech_node`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `notify_order`
+ALTER TABLE `dejavutech_notify_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `option`
+ALTER TABLE `dejavutech_option`
     ADD PRIMARY KEY (`option_id`) USING BTREE;
 
 
-ALTER TABLE `option_value`
+ALTER TABLE `dejavutech_option_value`
     ADD PRIMARY KEY (`option_value_id`) USING BTREE;
 
 
-ALTER TABLE `order`
+ALTER TABLE `dejavutech_order`
     ADD PRIMARY KEY (`order_id`) USING BTREE;
 
 
-ALTER TABLE `order_all`
+ALTER TABLE `dejavutech_order_all`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `order_comment`
+ALTER TABLE `dejavutech_order_comment`
     ADD PRIMARY KEY (`comment_id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `order_goods`
+ALTER TABLE `dejavutech_order_goods`
     ADD PRIMARY KEY (`order_goods_id`) USING BTREE,
     ADD KEY `store_id` (`store_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
     ADD KEY `pin_id` (`pin_id`) USING BTREE;
 
 
-ALTER TABLE `order_goods_haitao`
+ALTER TABLE `dejavutech_order_goods_haitao`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `order_history`
+ALTER TABLE `dejavutech_order_history`
     ADD PRIMARY KEY (`order_history_id`) USING BTREE;
 
 
-ALTER TABLE `order_option`
+ALTER TABLE `dejavutech_order_option`
     ADD PRIMARY KEY (`order_option_id`) USING BTREE;
 
 
-ALTER TABLE `order_quantity_order`
+ALTER TABLE `dejavutech_order_quantity_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `order_refund`
+ALTER TABLE `dejavutech_order_refund`
     ADD PRIMARY KEY (`ref_id`) USING BTREE,
     ADD KEY `ref_member_id` (`ref_member_id`) USING BTREE;
 
 
-ALTER TABLE `order_refund_history`
+ALTER TABLE `dejavutech_order_refund_history`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `order_refund_history_image`
+ALTER TABLE `dejavutech_order_refund_history_image`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `orh_id` (`orh_id`) USING BTREE;
 
 
-ALTER TABLE `order_refund_image`
+ALTER TABLE `dejavutech_order_refund_image`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `ref_id` (`ref_id`) USING BTREE;
 
 
-ALTER TABLE `order_relate`
+ALTER TABLE `dejavutech_order_relate`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_all_id` (`order_all_id`, `order_id`) USING BTREE;
 
 
-ALTER TABLE `order_status`
+ALTER TABLE `dejavutech_order_status`
     ADD PRIMARY KEY (`order_status_id`) USING BTREE;
 
 
-ALTER TABLE `order_total`
+ALTER TABLE `dejavutech_order_total`
     ADD PRIMARY KEY (`order_total_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `payment`
+ALTER TABLE `dejavutech_payment`
     ADD PRIMARY KEY (`payment_id`) USING BTREE;
 
 
-ALTER TABLE `pick_member`
+ALTER TABLE `dejavutech_pick_member`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`) USING BTREE;
 
 
-ALTER TABLE `pick_order`
+ALTER TABLE `dejavutech_pick_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE,
     ADD KEY `pick_sn` (`pick_sn`) USING BTREE;
 
 
-ALTER TABLE `pick_up`
+ALTER TABLE `dejavutech_pick_up`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `store_id` (`store_id`) USING BTREE;
 
 
-ALTER TABLE `pin`
+ALTER TABLE `dejavutech_pin`
     ADD PRIMARY KEY (`pin_id`) USING BTREE,
     ADD KEY `user_id` (`user_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `pin_goods`
+ALTER TABLE `dejavutech_pin_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE,
     ADD KEY `customer_id` (`customer_id`) USING BTREE;
 
 
-ALTER TABLE `pin_order`
+ALTER TABLE `dejavutech_pin_order`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pin_id` (`pin_id`) USING BTREE,
     ADD KEY `order_id` (`order_id`) USING BTREE;
 
 
-ALTER TABLE `plugins_slider`
+ALTER TABLE `dejavutech_plugins_slider`
     ADD PRIMARY KEY (`slider_id`) USING BTREE;
 
 
-ALTER TABLE `role`
+ALTER TABLE `dejavutech_role`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `seller`
+ALTER TABLE `dejavutech_seller`
     ADD PRIMARY KEY (`s_id`) USING BTREE,
     ADD KEY `fk_seller_role` (`s_role_id`) USING BTREE;
 
 
-ALTER TABLE `seller_ad`
+ALTER TABLE `dejavutech_seller_ad`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `seller_balance`
+ALTER TABLE `dejavutech_seller_balance`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `seller_express`
+ALTER TABLE `dejavutech_seller_express`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `store_id` (`store_id`) USING BTREE;
 
 
-ALTER TABLE `seller_express_relat`
+ALTER TABLE `dejavutech_seller_express_relat`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `express_id, store_id` (`express_id`, `store_id`) USING BTREE;
 
 
-ALTER TABLE `seller_log`
+ALTER TABLE `dejavutech_seller_log`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `seller_menu`
+ALTER TABLE `dejavutech_seller_menu`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `pid` (`pid`) USING BTREE;
 
 
-ALTER TABLE `seller_tixian`
+ALTER TABLE `dejavutech_seller_tixian`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `spike`
+ALTER TABLE `dejavutech_spike`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `spike_goods`
+ALTER TABLE `dejavutech_spike_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `state` (`state`, `quantity`, `begin_time`, `end_time`) USING BTREE,
     ADD KEY `spike_id` (`spike_id`) USING BTREE;
 
 
-ALTER TABLE `stock_status`
+ALTER TABLE `dejavutech_stock_status`
     ADD PRIMARY KEY (`stock_status_id`) USING BTREE;
 
 
-ALTER TABLE `store_bind_class`
+ALTER TABLE `dejavutech_store_bind_class`
     ADD PRIMARY KEY (`bid`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `subject`
+ALTER TABLE `dejavutech_subject`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `subject_goods`
+ALTER TABLE `dejavutech_subject_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `subject_id` (`subject_id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `super_spike`
+ALTER TABLE `dejavutech_super_spike`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `super_spike_goods`
+ALTER TABLE `dejavutech_super_spike_goods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `super_spike_id` (`super_spike_id`) USING BTREE,
     ADD KEY `goods_id` (`goods_id`) USING BTREE;
 
 
-ALTER TABLE `template_msg_order`
+ALTER TABLE `dejavutech_template_msg_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `tixian_order`
+ALTER TABLE `dejavutech_tixian_order`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `transport`
+ALTER TABLE `dejavutech_transport`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `seller_id` (`seller_id`) USING BTREE;
 
 
-ALTER TABLE `transport_extend`
+ALTER TABLE `dejavutech_transport_extend`
     ADD PRIMARY KEY (`id`) USING BTREE;
 
 
-ALTER TABLE `user_action`
+ALTER TABLE `dejavutech_user_action`
     ADD PRIMARY KEY (`ua_id`) USING BTREE;
 
 
-ALTER TABLE `user_favgoods`
+ALTER TABLE `dejavutech_user_favgoods`
     ADD PRIMARY KEY (`id`) USING BTREE,
     ADD KEY `member_id` (`member_id`, `goods_id`) USING BTREE;
 
 
-ALTER TABLE `user_favstore`
+ALTER TABLE `dejavutech_user_favstore`
     ADD PRIMARY KEY (`id`),
     ADD KEY `member_id` (`member_id`, `store_id`);
 
 
-ALTER TABLE `visitors_ip`
+ALTER TABLE `dejavutech_visitors_ip`
     ADD PRIMARY KEY (`vi_id`);
 
 
-ALTER TABLE `voucher`
+ALTER TABLE `dejavutech_voucher`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `voucher_free`
+ALTER TABLE `dejavutech_voucher_free`
     ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `voucher_goods`
+ALTER TABLE `dejavutech_voucher_goods`
     ADD PRIMARY KEY (`id`),
     ADD KEY `voucher_id` (`voucher_id`, `goods_id`);
 
 
-ALTER TABLE `voucher_list`
+ALTER TABLE `dejavutech_voucher_list`
     ADD PRIMARY KEY (`id`),
     ADD KEY `voucher_id` (`voucher_id`) USING BTREE,
     ADD KEY `store_id` (`store_id`) USING BTREE;
 
 
-ALTER TABLE `weight_class`
+ALTER TABLE `dejavutech_weight_class`
     ADD PRIMARY KEY (`weight_class_id`);
 
 
-ALTER TABLE `weprogram_token`
+ALTER TABLE `dejavutech_weprogram_token`
     ADD PRIMARY KEY (`id`),
     ADD KEY `token` (`token`);
 
@@ -16892,1312 +16889,1312 @@ ALTER TABLE `weprogram_token`
 --
 -- AUTO_INCREMENT for table `address`
 --
-ALTER TABLE `address`
+ALTER TABLE `dejavutech_address`
     MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `area`
 --
-ALTER TABLE `area`
+ALTER TABLE `dejavutech_area`
     MODIFY `area_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '索引ID',
     AUTO_INCREMENT = 45056;
 --
 -- AUTO_INCREMENT for table `balance`
 --
-ALTER TABLE `balance`
+ALTER TABLE `dejavutech_balance`
     MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `balance_order`
 --
-ALTER TABLE `balance_order`
+ALTER TABLE `dejavutech_balance_order`
     MODIFY `boid` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `bargain_goods`
 --
-ALTER TABLE `bargain_goods`
+ALTER TABLE `dejavutech_bargain_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `bargain_order`
 --
-ALTER TABLE `bargain_order`
+ALTER TABLE `dejavutech_bargain_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `bargain_order_detail`
 --
-ALTER TABLE `bargain_order_detail`
+ALTER TABLE `dejavutech_bargain_order_detail`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `blog`
 --
-ALTER TABLE `blog`
+ALTER TABLE `dejavutech_blog`
     MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `blog_category`
 --
-ALTER TABLE `blog_category`
+ALTER TABLE `dejavutech_blog_category`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文档ID';
 --
 -- AUTO_INCREMENT for table `blog_image`
 --
-ALTER TABLE `blog_image`
+ALTER TABLE `dejavutech_blog_image`
     MODIFY `blog_image_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `blog_reply`
 --
-ALTER TABLE `blog_reply`
+ALTER TABLE `dejavutech_blog_reply`
     MODIFY `reply_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `blog_seller_order`
 --
-ALTER TABLE `blog_seller_order`
+ALTER TABLE `dejavutech_blog_seller_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `car`
 --
-ALTER TABLE `car`
+ALTER TABLE `dejavutech_car`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `comment`
 --
-ALTER TABLE `comment`
+ALTER TABLE `dejavutech_comment`
     MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `config`
 --
-ALTER TABLE `config`
+ALTER TABLE `dejavutech_config`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '配置ID',
     AUTO_INCREMENT = 168;
 --
 -- AUTO_INCREMENT for table `core_attachment`
 --
-ALTER TABLE `core_attachment`
+ALTER TABLE `dejavutech_core_attachment`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 18;
 --
 -- AUTO_INCREMENT for table `core_attachment_group`
 --
-ALTER TABLE `core_attachment_group`
+ALTER TABLE `dejavutech_core_attachment_group`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `fen_tixian_order`
 --
-ALTER TABLE `fen_tixian_order`
+ALTER TABLE `dejavutech_fen_tixian_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `fissionbonus`
 --
-ALTER TABLE `fissionbonus`
+ALTER TABLE `dejavutech_fissionbonus`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `fissionbonus_flow`
 --
-ALTER TABLE `fissionbonus_flow`
+ALTER TABLE `dejavutech_fissionbonus_flow`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `fissionbonus_order`
 --
-ALTER TABLE `fissionbonus_order`
+ALTER TABLE `dejavutech_fissionbonus_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `fissionsharing_link`
 --
-ALTER TABLE `fissionsharing_link`
+ALTER TABLE `dejavutech_fissionsharing_link`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id',
     AUTO_INCREMENT = 2;
 --
 -- AUTO_INCREMENT for table `goods`
 --
-ALTER TABLE `goods`
+ALTER TABLE `dejavutech_goods`
     MODIFY `goods_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `goods_area`
 --
-ALTER TABLE `goods_area`
+ALTER TABLE `dejavutech_goods_area`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `goods_category`
 --
-ALTER TABLE `goods_category`
+ALTER TABLE `dejavutech_goods_category`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID';
 --
 -- AUTO_INCREMENT for table `goods_discount`
 --
-ALTER TABLE `goods_discount`
+ALTER TABLE `dejavutech_goods_discount`
     MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `goods_image`
 --
-ALTER TABLE `goods_image`
+ALTER TABLE `dejavutech_goods_image`
     MODIFY `goods_image_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `goods_option`
 --
-ALTER TABLE `goods_option`
+ALTER TABLE `dejavutech_goods_option`
     MODIFY `goods_option_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `goods_option_mult_value`
 --
-ALTER TABLE `goods_option_mult_value`
+ALTER TABLE `dejavutech_goods_option_mult_value`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `goods_option_value`
 --
-ALTER TABLE `goods_option_value`
+ALTER TABLE `dejavutech_goods_option_value`
     MODIFY `goods_option_value_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `goods_share_image`
 --
-ALTER TABLE `goods_share_image`
+ALTER TABLE `dejavutech_goods_share_image`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `goods_to_category`
 --
-ALTER TABLE `goods_to_category`
+ALTER TABLE `dejavutech_goods_to_category`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `group`
 --
-ALTER TABLE `group`
+ALTER TABLE `dejavutech_group`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `group_lzl_reply`
 --
-ALTER TABLE `group_lzl_reply`
+ALTER TABLE `dejavutech_group_lzl_reply`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `group_member`
 --
-ALTER TABLE `group_member`
+ALTER TABLE `dejavutech_group_member`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增主键';
 --
 -- AUTO_INCREMENT for table `group_post`
 --
-ALTER TABLE `group_post`
+ALTER TABLE `dejavutech_group_post`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `group_post_fav`
 --
-ALTER TABLE `group_post_fav`
+ALTER TABLE `dejavutech_group_post_fav`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `guobie`
 --
-ALTER TABLE `guobie`
+ALTER TABLE `dejavutech_guobie`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `integral_flow`
 --
-ALTER TABLE `integral_flow`
+ALTER TABLE `dejavutech_integral_flow`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `integral_order`
 --
-ALTER TABLE `integral_order`
+ALTER TABLE `dejavutech_integral_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `intgral_goods`
 --
-ALTER TABLE `intgral_goods`
+ALTER TABLE `dejavutech_intgral_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `jiaorder`
 --
-ALTER TABLE `jiaorder`
+ALTER TABLE `dejavutech_jiaorder`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `jiapinorder`
 --
-ALTER TABLE `jiapinorder`
+ALTER TABLE `dejavutech_jiapinorder`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `jiauser`
 --
-ALTER TABLE `jiauser`
+ALTER TABLE `dejavutech_jiauser`
     MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `length_class`
 --
-ALTER TABLE `length_class`
+ALTER TABLE `dejavutech_length_class`
     MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 3;
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_head`
 --
-ALTER TABLE `eaterplanet_community_head`
+ALTER TABLE `dejavutech_eaterplanet_community_head`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_head_commiss`
 --
-ALTER TABLE `eaterplanet_community_head_commiss`
+ALTER TABLE `dejavutech_eaterplanet_community_head_commiss`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_head_commiss_order`
 --
-ALTER TABLE `eaterplanet_community_head_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_community_head_commiss_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_head_goods`
 --
-ALTER TABLE `eaterplanet_community_head_goods`
+ALTER TABLE `dejavutech_eaterplanet_community_head_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_head_group`
 --
-ALTER TABLE `eaterplanet_community_head_group`
+ALTER TABLE `dejavutech_eaterplanet_community_head_group`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_head_invite_recod`
 --
-ALTER TABLE `eaterplanet_community_head_invite_recod`
+ALTER TABLE `dejavutech_eaterplanet_community_head_invite_recod`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_head_tixian_order`
 --
-ALTER TABLE `eaterplanet_community_head_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_community_head_tixian_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_community_history`
 --
-ALTER TABLE `eaterplanet_community_history`
+ALTER TABLE `dejavutech_eaterplanet_community_history`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_address`
 --
-ALTER TABLE `eaterplanet_ecommerce_address`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_address`
     MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_adv`
 --
-ALTER TABLE `eaterplanet_ecommerce_adv`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_adv`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_advimg`
 --
-ALTER TABLE `eaterplanet_ecommerce_advimg`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_advimg`
     MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号';
 --
-ALTER TABLE `eaterplanet_ecommerce_adv_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_adv_category`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_area`
 --
-ALTER TABLE `eaterplanet_ecommerce_area`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_area`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '11',
     AUTO_INCREMENT = 3636;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_article`
 --
-ALTER TABLE `eaterplanet_ecommerce_article`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_article`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_car`
 --
-ALTER TABLE `eaterplanet_ecommerce_car`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_car`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_chargetype`
 --
-ALTER TABLE `eaterplanet_ecommerce_chargetype`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_chargetype`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_commission_level`
 --
-ALTER TABLE `eaterplanet_ecommerce_commission_level`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_commission_level`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_community_head_level`
 --
-ALTER TABLE `eaterplanet_ecommerce_community_head_level`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_community_head_level`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_community_pickup_member`
 --
-ALTER TABLE `eaterplanet_ecommerce_community_pickup_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_community_pickup_member`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_community_pickup_member_record`
 --
-ALTER TABLE `eaterplanet_ecommerce_community_pickup_member_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_community_pickup_member_record`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_config`
 --
-ALTER TABLE `eaterplanet_ecommerce_config`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_config`
     MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 908;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_coupon`
 --
-ALTER TABLE `eaterplanet_ecommerce_coupon`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_coupon`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_coupon_category`
 --
-ALTER TABLE `eaterplanet_ecommerce_coupon_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_coupon_category`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_coupon_list`
 --
-ALTER TABLE `eaterplanet_ecommerce_coupon_list`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_coupon_list`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_cube`
 --
-ALTER TABLE `eaterplanet_ecommerce_cube`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_cube`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_deliveryclerk`
 --
-ALTER TABLE `eaterplanet_ecommerce_deliveryclerk`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliveryclerk`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_deliveryline`
 --
-ALTER TABLE `eaterplanet_ecommerce_deliveryline`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliveryline`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_deliveryline_headrelative`
 --
-ALTER TABLE `eaterplanet_ecommerce_deliveryline_headrelative`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliveryline_headrelative`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_deliverylist`
 --
-ALTER TABLE `eaterplanet_ecommerce_deliverylist`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliverylist`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_deliverylist_goods`
 --
-ALTER TABLE `eaterplanet_ecommerce_deliverylist_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliverylist_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_deliverylist_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_deliverylist_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_deliverylist_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_express`
 --
-ALTER TABLE `eaterplanet_ecommerce_express`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_express`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
     AUTO_INCREMENT = 102;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_generalmall_adv`
 --
-ALTER TABLE `eaterplanet_ecommerce_generalmall_adv`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_generalmall_adv`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_generalmall_navigat`
 --
-ALTER TABLE `eaterplanet_ecommerce_generalmall_navigat`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_generalmall_navigat`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_category`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_category`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_images`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_images`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_images`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_option`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_option`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_option`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_option_item`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_option_item`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_option_item`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_option_item_value`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_option_item_value`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_option_item_value`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_presale`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_presale`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_relative_salesroom`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_relative_salesroom`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_relative_salesroom`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_relative_smember`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_relative_smember`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_relative_smember`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_salesroombase`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_salesroombase`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_salesroombase`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_salesroom_limit`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_salesroom_limit`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_salesroom_limit`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_share_image`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_share_image`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_share_image`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id',
     AUTO_INCREMENT = 13;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_tags`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_tags`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_tags`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_goods_to_category`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_to_category`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_to_category`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_good_commiss`
 --
-ALTER TABLE `eaterplanet_ecommerce_goods_tradecomponts`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_tradecomponts`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_goods_virturalcard`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_goods_virturalcard`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_good_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_good_commiss`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
     AUTO_INCREMENT = 7;
 
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_good_common`
 --
-ALTER TABLE `eaterplanet_ecommerce_good_common`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_good_common`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_good_pin`
 --
-ALTER TABLE `eaterplanet_ecommerce_good_pin`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_good_pin`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_imdada_area_code`
 --
-ALTER TABLE `eaterplanet_ecommerce_imdada_area_code`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_imdada_area_code`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
     AUTO_INCREMENT = 301;
 --
-ALTER TABLE `eaterplanet_ecommerce_invitegift_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_invitegift_record`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_jiapinorder`
 --
-ALTER TABLE `eaterplanet_ecommerce_jiapinorder`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_jiapinorder`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_jiauser`
 --
-ALTER TABLE `eaterplanet_ecommerce_jiauser`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_jiauser`
     MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_kdniao_list`
 --
-ALTER TABLE `eaterplanet_ecommerce_kdniao_list`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_kdniao_list`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_kdniao_template`
 --
-ALTER TABLE `eaterplanet_ecommerce_kdniao_template`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_kdniao_template`
     MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
     AUTO_INCREMENT = 65;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member`
 --
-ALTER TABLE `eaterplanet_ecommerce_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member`
     MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_card`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_card`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_card`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_card_equity`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_card_equity`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_card_equity`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_card_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_card_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_card_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_charge_flow`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_charge_flow`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_charge_flow`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_commiss`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_commiss`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_commiss_apply`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_commiss_apply`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_commiss_apply`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_commiss_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_commiss_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_formid`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_formid`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_formid`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id',
     AUTO_INCREMENT = 16;
 
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_group`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_group`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_group`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_integral_flow`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_integral_flow`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_integral_flow`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
-ALTER TABLE `eaterplanet_ecommerce_member_invitegift`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_invitegift`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_level`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_level`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_level`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_shopinfo`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_shopinfo`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_shopinfo`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_member_tixian_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_member_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_member_tixian_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_navigat`
 --
-ALTER TABLE `eaterplanet_ecommerce_navigat`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_navigat`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_notice`
 --
-ALTER TABLE `eaterplanet_ecommerce_notice`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_notice`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_notify_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_notify_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_notify_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order`
     MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution`
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_commiss`
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_commiss`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_log`
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_log`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_thirth_log`
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_log`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_thirth_query`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_query`
     MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '编号';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_tixian`
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_tixian`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_tixian`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_orderdistribution_tixian_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_orderdistribution_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_tixian_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_all`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_all`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_all`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id，';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_comment`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_comment`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_comment`
     MODIFY `comment_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '评论id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_goods`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods`
     MODIFY `order_goods_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_goods_refund`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_goods_refund`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_refund`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_goods_refund_intrgral`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_goods_refund_intrgral`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_refund_intrgral`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_goods_relative_salesroom`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_goods_relative_salesroom`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_relative_salesroom`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_goods_saleshexiao`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_goods_saleshexiao`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_saleshexiao`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_goods_saleshexiao_record`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_goods_saleshexiao_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_goods_saleshexiao_record`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_history`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_history`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_history`
     MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_kdniao_info`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_kdniao_info`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_kdniao_info`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_kdniao_print_log`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_kdniao_print_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_kdniao_print_log`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_option`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_option`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_option`
     MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT;
 --
-ALTER TABLE `eaterplanet_ecommerce_order_presale`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_presale`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_quantity_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_quantity_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_quantity_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_refund`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_refund`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund`
     MODIFY `ref_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '退款自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_refund_disable`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_refund_disable`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_disable`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_refund_history`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_refund_history`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_history`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_refund_history_image`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_refund_history_image`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_history_image`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_refund_image`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_refund_image`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_image`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '退款图片自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_refund_reson`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_refund_reson`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_refund_reson`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_relate`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_relate`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_relate`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_status`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_status`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_status`
     MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 98;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_order_total`
 --
-ALTER TABLE `eaterplanet_ecommerce_order_total`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_total`
     MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT;
 --
-ALTER TABLE `eaterplanet_ecommerce_order_virtualcard`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_order_virtualcard`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_perm_role`
 --
-ALTER TABLE `eaterplanet_ecommerce_perm_role`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_perm_role`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 5;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_perm_user`
 --
-ALTER TABLE `eaterplanet_ecommerce_perm_user`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_perm_user`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 2;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_pin`
 --
-ALTER TABLE `eaterplanet_ecommerce_pin`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pin`
     MODIFY `pin_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '拼团id，自增';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_pintuan_commiss`
 --
-ALTER TABLE `eaterplanet_ecommerce_pintuan_commiss`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pintuan_commiss`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_pintuan_commiss_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_pintuan_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pintuan_commiss_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_pintuan_tixian_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_pintuan_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pintuan_tixian_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_pin_order`
 --
-ALTER TABLE `eaterplanet_ecommerce_pin_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pin_order`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
-ALTER TABLE `eaterplanet_ecommerce_pop_adv`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pop_adv`
     MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '编号';
 
-ALTER TABLE `eaterplanet_ecommerce_pop_adv_list`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_pop_adv_list`
     MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '编号';
 
-ALTER TABLE `eaterplanet_ecommerce_printer`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_printer`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_recipe`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_recipe`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_recipe_fav`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_recipe_fav`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_recipe_ingredients`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_recipe_ingredients`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_salesroom`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_salesroom`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_salesroom_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_salesroom_member`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_salesroom_relative_member`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_salesroom_relative_member`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_shipping`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_shipping`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_signinreward_record`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_signinreward_record`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_goods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_invite`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_invite`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_order`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_post`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_post`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_solitaire_post_fav`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_solitaire_post_fav`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_spec`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_spec`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_special`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_special`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '专题id';
 
-ALTER TABLE `eaterplanet_ecommerce_subscribe`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_subscribe`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_supply`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_supply`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_supply_config`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_supply_config`
     MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 1186;
 
-ALTER TABLE `eaterplanet_ecommerce_systemoperation_log`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_systemoperation_log`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_templatemsg`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_templatemsg`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_user_favgoods`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_user_favgoods`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_codes`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_codes`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_limituser_error`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_limituser_error`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_limit_user`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_limit_user`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
-ALTER TABLE `eaterplanet_ecommerce_virtualcard_userecord`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_virtualcard_userecord`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_weprogram_token`
 --
-ALTER TABLE `eaterplanet_ecommerce_weprogram_token`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_weprogram_token`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
     AUTO_INCREMENT = 8;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_wxlive`
 --
-ALTER TABLE `eaterplanet_ecommerce_wxlive`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_wxlive`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_ecommerce_wxlive_replay`
 --
-ALTER TABLE `eaterplanet_ecommerce_wxlive_replay`
+ALTER TABLE `dejavutech_eaterplanet_ecommerce_wxlive_replay`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `eaterplanet_supply_commiss`
 --
-ALTER TABLE `eaterplanet_supply_commiss`
+ALTER TABLE `dejavutech_eaterplanet_supply_commiss`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_supply_commiss_order`
 --
-ALTER TABLE `eaterplanet_supply_commiss_order`
+ALTER TABLE `dejavutech_eaterplanet_supply_commiss_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `eaterplanet_supply_tixian_order`
 --
-ALTER TABLE `eaterplanet_supply_tixian_order`
+ALTER TABLE `dejavutech_eaterplanet_supply_tixian_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `log`
 --
-ALTER TABLE `log`
+ALTER TABLE `dejavutech_log`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `lottery_goods`
 --
-ALTER TABLE `lottery_goods`
+ALTER TABLE `dejavutech_lottery_goods`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `mb_special`
 --
-ALTER TABLE `mb_special`
+ALTER TABLE `dejavutech_mb_special`
     MODIFY `special_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '专题编号';
 --
 -- AUTO_INCREMENT for table `mb_special_item`
 --
-ALTER TABLE `mb_special_item`
+ALTER TABLE `dejavutech_mb_special_item`
     MODIFY `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '专题项目编号';
 --
 -- AUTO_INCREMENT for table `member`
 --
-ALTER TABLE `member`
+ALTER TABLE `dejavutech_member`
     MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `member_charge_flow`
 --
-ALTER TABLE `member_charge_flow`
+ALTER TABLE `dejavutech_member_charge_flow`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `member_commiss`
 --
-ALTER TABLE `member_commiss`
+ALTER TABLE `dejavutech_member_commiss`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `member_commiss_apply`
 --
-ALTER TABLE `member_commiss_apply`
+ALTER TABLE `dejavutech_member_commiss_apply`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `member_commiss_order`
 --
-ALTER TABLE `member_commiss_order`
+ALTER TABLE `dejavutech_member_commiss_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `member_common`
 --
-ALTER TABLE `member_common`
+ALTER TABLE `dejavutech_member_common`
     MODIFY `member_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '客户id';
 --
 -- AUTO_INCREMENT for table `member_formid`
 --
-ALTER TABLE `member_formid`
+ALTER TABLE `dejavutech_member_formid`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `member_level`
 --
-ALTER TABLE `member_level`
+ALTER TABLE `dejavutech_member_level`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `member_sharing`
 --
-ALTER TABLE `member_sharing`
+ALTER TABLE `dejavutech_member_sharing`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `member_sharing_order`
 --
-ALTER TABLE `member_sharing_order`
+ALTER TABLE `dejavutech_member_sharing_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `menu`
 --
-ALTER TABLE `menu`
+ALTER TABLE `dejavutech_menu`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文档ID',
     AUTO_INCREMENT = 78;
 --
 -- AUTO_INCREMENT for table `node`
 --
-ALTER TABLE `node`
+ALTER TABLE `dejavutech_node`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
     AUTO_INCREMENT = 9;
 --
 -- AUTO_INCREMENT for table `notify_order`
 --
-ALTER TABLE `notify_order`
+ALTER TABLE `dejavutech_notify_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `option`
 --
-ALTER TABLE `option`
+ALTER TABLE `dejavutech_option`
     MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `option_value`
 --
-ALTER TABLE `option_value`
+ALTER TABLE `dejavutech_option_value`
     MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `order`
 --
-ALTER TABLE `order`
+ALTER TABLE `dejavutech_order`
     MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `order_all`
 --
-ALTER TABLE `order_all`
+ALTER TABLE `dejavutech_order_all`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id，';
 --
 -- AUTO_INCREMENT for table `order_comment`
 --
-ALTER TABLE `order_comment`
+ALTER TABLE `dejavutech_order_comment`
     MODIFY `comment_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '评论id';
 --
 -- AUTO_INCREMENT for table `order_goods`
 --
-ALTER TABLE `order_goods`
+ALTER TABLE `dejavutech_order_goods`
     MODIFY `order_goods_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `order_goods_haitao`
 --
-ALTER TABLE `order_goods_haitao`
+ALTER TABLE `dejavutech_order_goods_haitao`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `order_history`
 --
-ALTER TABLE `order_history`
+ALTER TABLE `dejavutech_order_history`
     MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `order_option`
 --
-ALTER TABLE `order_option`
+ALTER TABLE `dejavutech_order_option`
     MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `order_quantity_order`
 --
-ALTER TABLE `order_quantity_order`
+ALTER TABLE `dejavutech_order_quantity_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `order_refund`
 --
-ALTER TABLE `order_refund`
+ALTER TABLE `dejavutech_order_refund`
     MODIFY `ref_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '退款自增id';
 --
 -- AUTO_INCREMENT for table `order_refund_history`
 --
-ALTER TABLE `order_refund_history`
+ALTER TABLE `dejavutech_order_refund_history`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `order_refund_history_image`
 --
-ALTER TABLE `order_refund_history_image`
+ALTER TABLE `dejavutech_order_refund_history_image`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `order_refund_image`
 --
-ALTER TABLE `order_refund_image`
+ALTER TABLE `dejavutech_order_refund_image`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '退款图片自增id';
 --
 -- AUTO_INCREMENT for table `order_relate`
 --
-ALTER TABLE `order_relate`
+ALTER TABLE `dejavutech_order_relate`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `order_status`
 --
-ALTER TABLE `order_status`
+ALTER TABLE `dejavutech_order_status`
     MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 14;
 --
 -- AUTO_INCREMENT for table `order_total`
 --
-ALTER TABLE `order_total`
+ALTER TABLE `dejavutech_order_total`
     MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `payment`
 --
-ALTER TABLE `payment`
+ALTER TABLE `dejavutech_payment`
     MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '支付索引id',
     AUTO_INCREMENT = 2;
 --
 -- AUTO_INCREMENT for table `pick_member`
 --
-ALTER TABLE `pick_member`
+ALTER TABLE `dejavutech_pick_member`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `pick_order`
 --
-ALTER TABLE `pick_order`
+ALTER TABLE `dejavutech_pick_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `pick_up`
 --
-ALTER TABLE `pick_up`
+ALTER TABLE `dejavutech_pick_up`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `pin`
 --
-ALTER TABLE `pin`
+ALTER TABLE `dejavutech_pin`
     MODIFY `pin_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '拼团id，自增';
 --
 -- AUTO_INCREMENT for table `pin_goods`
 --
-ALTER TABLE `pin_goods`
+ALTER TABLE `dejavutech_pin_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `pin_order`
 --
-ALTER TABLE `pin_order`
+ALTER TABLE `dejavutech_pin_order`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `plugins_slider`
 --
-ALTER TABLE `plugins_slider`
+ALTER TABLE `dejavutech_plugins_slider`
     MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `role`
 --
-ALTER TABLE `role`
+ALTER TABLE `dejavutech_role`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
     AUTO_INCREMENT = 4;
 --
 -- AUTO_INCREMENT for table `seller`
 --
-ALTER TABLE `seller`
+ALTER TABLE `dejavutech_seller`
     MODIFY `s_id` mediumint(8) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 2;
 --
 -- AUTO_INCREMENT for table `seller_ad`
 --
-ALTER TABLE `seller_ad`
+ALTER TABLE `dejavutech_seller_ad`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `seller_balance`
 --
-ALTER TABLE `seller_balance`
+ALTER TABLE `dejavutech_seller_balance`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 3;
 --
 -- AUTO_INCREMENT for table `seller_express`
 --
-ALTER TABLE `seller_express`
+ALTER TABLE `dejavutech_seller_express`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '快递id，自增',
     AUTO_INCREMENT = 18;
 --
 -- AUTO_INCREMENT for table `seller_express_relat`
 --
-ALTER TABLE `seller_express_relat`
+ALTER TABLE `dejavutech_seller_express_relat`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id',
     AUTO_INCREMENT = 3;
 --
 -- AUTO_INCREMENT for table `seller_log`
 --
-ALTER TABLE `seller_log`
+ALTER TABLE `dejavutech_seller_log`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `seller_menu`
 --
-ALTER TABLE `seller_menu`
+ALTER TABLE `dejavutech_seller_menu`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文档ID',
     AUTO_INCREMENT = 204;
 --
 -- AUTO_INCREMENT for table `seller_tixian`
 --
-ALTER TABLE `seller_tixian`
+ALTER TABLE `dejavutech_seller_tixian`
     MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `spike`
 --
-ALTER TABLE `spike`
+ALTER TABLE `dejavutech_spike`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `spike_goods`
 --
-ALTER TABLE `spike_goods`
+ALTER TABLE `dejavutech_spike_goods`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `stock_status`
 --
-ALTER TABLE `stock_status`
+ALTER TABLE `dejavutech_stock_status`
     MODIFY `stock_status_id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 3;
 --
 -- AUTO_INCREMENT for table `store_bind_class`
 --
-ALTER TABLE `store_bind_class`
+ALTER TABLE `dejavutech_store_bind_class`
     MODIFY `bid` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `subject`
 --
-ALTER TABLE `subject`
+ALTER TABLE `dejavutech_subject`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `subject_goods`
 --
-ALTER TABLE `subject_goods`
+ALTER TABLE `dejavutech_subject_goods`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `super_spike`
 --
-ALTER TABLE `super_spike`
+ALTER TABLE `dejavutech_super_spike`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `super_spike_goods`
 --
-ALTER TABLE `super_spike_goods`
+ALTER TABLE `dejavutech_super_spike_goods`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `template_msg_order`
 --
-ALTER TABLE `template_msg_order`
+ALTER TABLE `dejavutech_template_msg_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `tixian_order`
 --
-ALTER TABLE `tixian_order`
+ALTER TABLE `dejavutech_tixian_order`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `transport`
 --
-ALTER TABLE `transport`
+ALTER TABLE `dejavutech_transport`
     MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '运费模板ID',
     AUTO_INCREMENT = 3;
 --
 -- AUTO_INCREMENT for table `transport_extend`
 --
-ALTER TABLE `transport_extend`
+ALTER TABLE `dejavutech_transport_extend`
     MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '运费模板扩展ID',
     AUTO_INCREMENT = 25;
 --
 -- AUTO_INCREMENT for table `user_action`
 --
-ALTER TABLE `user_action`
+ALTER TABLE `dejavutech_user_action`
     MODIFY `ua_id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 121;
 --
 -- AUTO_INCREMENT for table `user_favgoods`
 --
-ALTER TABLE `user_favgoods`
+ALTER TABLE `dejavutech_user_favgoods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `user_favstore`
 --
-ALTER TABLE `user_favstore`
+ALTER TABLE `dejavutech_user_favstore`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `visitors_ip`
 --
-ALTER TABLE `visitors_ip`
+ALTER TABLE `dejavutech_visitors_ip`
     MODIFY `vi_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `voucher`
 --
-ALTER TABLE `voucher`
+ALTER TABLE `dejavutech_voucher`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `voucher_free`
 --
-ALTER TABLE `voucher_free`
+ALTER TABLE `dejavutech_voucher_free`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `voucher_goods`
 --
-ALTER TABLE `voucher_goods`
+ALTER TABLE `dejavutech_voucher_goods`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `voucher_list`
 --
-ALTER TABLE `voucher_list`
+ALTER TABLE `dejavutech_voucher_list`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id';
 --
 -- AUTO_INCREMENT for table `weight_class`
 --
-ALTER TABLE `weight_class`
+ALTER TABLE `dejavutech_weight_class`
     MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 3;
 --
 -- AUTO_INCREMENT for table `weprogram_token`
 --
-ALTER TABLE `weprogram_token`
+ALTER TABLE `dejavutech_weprogram_token`
     MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '客户id';
 COMMIT;
 
