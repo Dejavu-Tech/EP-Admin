@@ -17,8 +17,8 @@ return array(
     ),
 
 
-    'SESSION_PREFIX' => 'dejavutech_seller_s', //session前缀
-    'COOKIE_PREFIX'  => 'dejavutech_c_',
+    'SESSION_PREFIX' => 'seller_s', //session前缀
+    'COOKIE_PREFIX'  => 'c_',
 
   	'URL_ROUTER_ON'   => true,
 	'URL_ROUTE_RULES'=>array(
