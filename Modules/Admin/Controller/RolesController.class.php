@@ -109,7 +109,7 @@ class RolesController extends CommonController {
             return $this->errorReturn('需要分配权限的角色不存在！');
         }
 		 $role = M('Role')->getById($_GET['id']);
-        if (0 == $role['pid'] && 0 == $_SESSION['dejavutech_admin_s']['user_auth']['is_super']) {
+        if (0 == $role['pid'] && 0 == $_SESSION['dejavutech_seller_s']['user_auth']['is_super']) {
             return $this->error('您无权限进行该操作！');
         }
 
