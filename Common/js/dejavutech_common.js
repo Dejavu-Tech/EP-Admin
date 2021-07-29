@@ -59,7 +59,7 @@ $(function(){
 		});
 	});
 
-	var Osc = window.dejavutech={};
+	var Osc = window.eaterplanet_ecommerce={};
 
 		/* 设置表单的值 */
 		Osc.setValue = function(name, value){
