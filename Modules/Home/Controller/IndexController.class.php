@@ -33,11 +33,11 @@ class IndexController extends CommonController {
 	{
 		include ROOT_PATH .'Data/sql.php';
 		/**
-		$res =  check_db_field_exist( 'dejavutech_eaterplanet_community_head_commiss_order','fen_type' );
+		$res =  check_db_field_exist( 'eaterplanet_community_head_commiss_order','fen_type' );
 		if( !$res )
 		{
 			$sql_content ="
-			 ALTER TABLE `dejavutech_eaterplanet_community_head_commiss_order` ADD `fen_type` TINYINT(1) NULL DEFAULT '0' COMMENT '0,按照比例计算的，1按照实际金额计算的' AFTER `type`;
+			 ALTER TABLE `eaterplanet_community_head_commiss_order` ADD `fen_type` TINYINT(1) NULL DEFAULT '0' COMMENT '0,按照比例计算的，1按照实际金额计算的' AFTER `type`;
 			";
 			M()->execute($sql_content);
 		}
