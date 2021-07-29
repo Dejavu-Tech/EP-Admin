@@ -847,7 +847,7 @@ class TuanbonusController extends CommonController {
 
 		/**
 		SELECT a.goods_id, a.commiss_one_dan_disc, b.commiss_one_pin_disc
-		FROM `dejavutech_goods` as a left join dejavutech_pin_goods as b on a.goods_id = b.goods_id  WHERE  a.commiss_one_dan_disc >0  and a.status = 1 and a.quantity >0 order by a.goods_id desc
+		FROM `goods` as a left join pin_goods as b on a.goods_id = b.goods_id  WHERE  a.commiss_one_dan_disc >0  and a.status = 1 and a.quantity >0 order by a.goods_id desc
 		**/
 	}
 
