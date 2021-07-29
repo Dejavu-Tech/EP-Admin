@@ -35,7 +35,7 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/ionic-icon.css">
 	<!-- Plugins css Ends-->
@@ -725,7 +725,7 @@
 					<div class="col-xl-12 col-md-12 col-sm-12 box-col-12">
 						<div class="card year-overview">
 							<div class="card-header no-border pb-3">
-								<h5 class="font-primary">近十日交易统计</h5>
+								<h5 class="font-primary">近两周交易统计</h5>
 								<ul class="creative-dots">
 									<li class="bg-primary big-dot"></li>
 									<li class="bg-secondary semi-big-dot"></li>
@@ -747,13 +747,11 @@
 							</div>
 							<div class="card-body pb-0 pt-0 pl-5 pr-5">
 								<div class="ibox-loading" id="echarts-line-chart-loading"></div>
-								<div id="chartorder">
-
-								</div>
+								<div id="chartorder"></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-7 col-md-7 col-sm-12 box-col-7">
+					<div class="col-xl-7 col-md-7 col-sm-12 box-col-7" style="display: none">
 						<div class="card">
 							<div class="card-header no-border">
 								<h5>Best Selling Product</h5>
@@ -841,12 +839,10 @@
 										</tbody>
 									</table>
 								</div>
-
 							</div>
 						</div>
-
 					</div>
-					<div class="col-xl-5 col-md-5 col-sm-12 box-col-5">
+					<div class="col-xl-6 col-md-6 col-sm-12 box-col-6">
 						<div class="card year-overview">
 							<div class="card-header no-border d-flex pb-3">
 								<h5 class="font-primary">本月商品销售排行<span class="badge badge-pill pill-badge-secondary f-14 f-w-600 num month_count"><?php echo $date_month; ?></span></h5>
@@ -859,19 +855,19 @@
 									<li class="bg-primary small-dot"></li>
 								</ul>
 								<div class="header-right pull-right text-right">
-									<h5 class="mb-2" data-value="total">销售数量：<span class="num month_good_count"></span></h5>
-									<h6 class="f-w-700 mb-0 default-text">销售金额：¥<span class="num month_good_money"></span></h6>
+									<h5 class="mb-2" data-value="total">销售金额：¥<span class="num month_good_count"></span></h5>
+									<h6 class="f-w-700 mb-0 default-text" data-value="total">销售数量：<span class="month_good_money"></span></h6>
 								</div>
 
 							</div>
 							<div class="card-body pb-0 pt-0">
-								<div id="chartmonthgoods"></div>
+								<div id="echat_month_goods_sales" style="height:460px;"></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-7 col-md-7 col-sm-12 box-col-7">
+					<div class="col-xl-6 col-md-6 col-sm-12 box-col-6">
 						<div class="card year-overview">
-							<div class="card-header no-border">
+							<div class="card-header no-border d-flex pb-3">
 								<h5 class="font-primary">本月团长销售排行</h5>
 								<ul class="creative-dots">
 									<li class="bg-primary big-dot"></li>
@@ -881,15 +877,9 @@
 									<li class="bg-secondary semi-small-dot"></li>
 									<li class="bg-primary small-dot"></li>
 								</ul>
-								<div class="card-header-right">
-									<ul class="list-unstyled card-option">
-										<li><i class="icofont icofont-gear fa fa-spin font-warning"></i></li>
-										<li><i class="view-html fa fa-code font-warning"></i></li>
-										<li><i class="icofont icofont-maximize full-card font-warning"></i></li>
-										<li><i class="icofont icofont-minus minimize-card font-warning"></i></li>
-										<li><i class="icofont icofont-refresh reload-card font-warning"></i></li>
-										<li><i class="icofont icofont-error close-card font-warning"></i></li>
-									</ul>
+								<div class="header-right pull-right text-right">
+									<h5 class="mb-2" data-value="total">销售金额：¥<span class="num month_good_count"></span></h5>
+									<h6 class="f-w-700 mb-0 default-text">(<span class="last_month"></span>)</h6>
 								</div>
 							</div>
 							<div class="card-body pb-0 pt-0">
@@ -932,6 +922,7 @@
 <script src="/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
 <script src="/assets/js/chart/apex-chart/apex-chart.js"></script>
 <script src="/assets/js/chart/apex-chart/stock-prices.js"></script>
+<script src="/assets/js/chart/echarts/dist/echarts.js"></script>
 <script src="/assets/js/prism/prism.min.js"></script>
 <script src="/assets/js/clipboard/clipboard.min.js"></script>
 <script src="/assets/js/counter/jquery.counterup.min.js"></script>
@@ -946,7 +937,6 @@
 <!-- Theme js-->
 <script src="/assets/js/script.js"></script>
 <script src="/assets/js/theme-customizer/customizer1.js"></script>
-<script src="/layuiadmin/lib/extend/echarts.min.js"></script>
 <script src="/assets/js/roll/jquery.waypoints.min.js"></script>
 <script type="text/javascript" src="/assets/js/roll/jquery.countup.min.js"></script>
 <!-- Theme js-->
@@ -1034,24 +1024,25 @@
 	 showDiv.innerHTML = '';
  }
 </script>
+<script type="text/javascript">
 
+</script>
 <script>
 //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
 var layer = layui.layer;
 var $;
 var  cur_type = 'normal';
 
-layui.use(['jquery', 'layer'], function(){
+layui.use(['jquery'], function(){
   $ = layui.$;
   load_data();
-  //后面就跟你平时使用jQuery一样
   loadEchartsLine();
   load_echat_member_incr();
   load_echat_month_head_sales();
   load_echat_month_goods_sales();
-	load_echat_month_goods_sales1();
 });
 
+//十日客户增长
 function load_echat_member_incr()
 {
 	var hasLineChart = $("#echat_member_incr").length>0;
@@ -1070,11 +1061,9 @@ function load_echat_member_incr()
 		dataType: "json",
 		success: function (data) {
 			var options = {
-
 				series : [
 					{
 						name:'客户增长',
-
 						data:data.member_count,
 					}
 				],
@@ -1083,7 +1072,6 @@ function load_echat_member_incr()
 					type: 'bar',
 					events: {
 						click: function(chart, w, e) {
-// console.log(chart, w, e)
 						}
 					}
 				},
@@ -1095,7 +1083,6 @@ function load_echat_member_incr()
 						endingShape: 'rounded'
 					}
 				},
-
 				stroke: {
 					lineCap: "round",
 				},
@@ -1109,15 +1096,13 @@ function load_echat_member_incr()
 					categories : data.date_arr,
 				},
 			};
-
 			var chart = new ApexCharts(document.querySelector("#chartmember"), options);
 			chart.render();
 		}
 	})
-
-
 }
 
+//本月团长销售排行
 function load_echat_month_head_sales()
 {
 	var hasLineChart = $("#echat_month_head_sales").length>0;
@@ -1140,46 +1125,33 @@ function load_echat_month_head_sales()
 
 				var le_arr = [];
 				var data_obj_arr  = [];
-
 				for( var i in data.list )
 				{
 					le_arr.push(  data.list[i].head_name  );
 					data_obj_arr.push({value:data.list[i].total, name:data.list[i].head_name });
 				}
 
-
-
-
 				var option = null;
 				option = {
-					title : {
-						text: '销售金额'+data.total,
-						subtext: data.month,
-						x:'center'
-					},
 					tooltip : {
 						trigger: 'item',
 						formatter: "{a} <br/>{b} : {c} ({d}%)"
 					},
 					legend: {
-						orient: 'vertical',
-						left: 'left',
+
+						top: 'bottom',
 						data: le_arr
 					},
 					series : [
 						{
-							name: '销售金额',
 							type: 'pie',
-							radius : '55%',
-							center: ['50%', '60%'],
-							data:data_obj_arr,
+							radius: [30, 180],
+							center: ['75%', '50%'],
+							roseType: 'area',
 							itemStyle: {
-								emphasis: {
-									shadowBlur: 10,
-									shadowOffsetX: 0,
-									shadowColor: 'rgba(0, 0, 0, 0.5)'
-								}
-							}
+								borderRadius: 5
+							},
+							data: data_obj_arr
 						}
 					]
 				};
@@ -1194,18 +1166,10 @@ function load_echat_month_head_sales()
 
 
 }
-function load_echat_month_goods_sales1()
-{
-	var hasLineChart = $("#echat_month_goods_sales").length>0;
-	if(hasLineChart){
-		var lineChart = echarts.init(document.getElementById("echat_month_goods_sales"));
-	}
-	window.onresize = function () {
-		if(hasLineChart) {
-			lineChart.resize();
-		}
-	};
 
+//本月商品销售排行原
+function load_echat_month_goods_sales()
+{
 	$.ajax({
 		type: "GET",
 		url: "{:U('statistics/load_echat_month_goods_sales', array('type' => 1))}",
@@ -1213,6 +1177,8 @@ function load_echat_month_goods_sales1()
 		success: function (data) {
 			if(data.code == 0)
 			{
+				var dom = document.getElementById("echat_month_goods_sales");
+				var myChart = echarts.init(dom);
 
 				var le_arr = [];
 				var data_obj_arr  = [];
@@ -1223,180 +1189,56 @@ function load_echat_month_goods_sales1()
 					data_obj_arr.push({value:data.list[i].total, name:data.list[i].name });
 				}
 
-
-
-
-				var option = null;
+				var option;
 				option = {
-					title : {
-						text: '销售金额'+data.total,
-						subtext: '销售总数：'+data.total_quantity+' ('+data.month+')',
-						x:'center'
-					},
 					tooltip : {
 						trigger: 'item',
 						formatter: "{a} <br/>{b} : {c} ({d}%)"
 					},
 					legend: {
-						orient: 'vertical',
-						left: 'left',
+						top: '5%',
+						left: 'center',
 						data: le_arr
 					},
 					series : [
 						{
 							name: '销售金额',
 							type: 'pie',
-							radius : '55%',
-							center: ['50%', '60%'],
-							data:data_obj_arr,
+							radius: ['40%', '70%'],
 							itemStyle: {
-								emphasis: {
-									shadowBlur: 10,
-									shadowOffsetX: 0,
-									shadowColor: 'rgba(0, 0, 0, 0.5)'
+								borderRadius: 10,
+								borderColor: '#fff',
+								borderWidth: 2
+							},
+							label: {
+								show: false,
+								position: 'center'
+							},
+							emphasis: {
+								label: {
+									show: true,
+									fontSize: '30',
+									fontWeight: 'bold'
 								}
-							}
+							},
+							labelLine: {
+								show: false
+							},
+							data: data_obj_arr,
 						}
 					]
 				};
 
 
 				if (option && typeof option === "object") {
-					lineChart.setOption(option, true);
+					myChart.setOption(option, true);
 				}
 			}
 		}
 	})
-
-
 }
-function load_echat_month_goods_sales()
-{
-	var hasLineChart = $("#chartmonthgoods").length>0;
-	if(hasLineChart){
-		var lineChart = echarts.init(document.getElementById("chartmonthgoods"));
-	}
-	window.onresize = function () {
-		if(hasLineChart) {
-			lineChart.resize();
-		}
-	};
 
-	$.ajax({
-		type: "GET",
-		url: "{:U('statistics/load_echat_month_goods_sales', array('type' => 1))}",
-		dataType: "json",
-		success: function (data) {
-			var le_arr = [];
-			var data_obj_arr  = [];
-			var data_series_arr  = [];
-			for( var i in data.list )
-			{
-				le_arr.push(  data.list[i].name  );
-				data_obj_arr.push({value:data.list[i].total, name:data.list[i].name });
-				data_series_arr.push( data.list[i].total_quantity );
-			}
-
-			var options4 = {
-				chart: {
-					height: 372,
-					type: 'donut',
-					fullWidth: true,
-				},
-				plotOptions: {
-					padding: {
-						left: 0,
-						right: 0
-					},
-					radialBar: {
-						hollow: {
-							margin: 10,
-							size: "55%",
-							image: undefined,
-							imageOffsetX: 0,
-							imageOffsetY: 0,
-							position: 'front',
-						},
-						track: {
-							show: false,
-						},
-						dataLabels: {
-							name: {
-								fontSize: '22px',
-							},
-							value: {
-								fontSize: '16px',
-							},
-							total: {
-								show: true,
-								label: '共计',
-								formatter: function (w) {
-									return data_obj_arr
-								}
-							},
-							dropShadow: {
-								enabled: true,
-								top: 3,
-								left: 0,
-								blur: 4,
-								opacity: 0.24
-							}
-						}
-					}
-				},
-				fill: {
-					//pocoAdminConfig.primary
-					colors:[pocoAdminConfig.primary, pocoAdminConfig.secondary, '#168ef7'],
-					type: 'gradient',
-					gradient: {
-						shade: 'light',
-						type: 'horizontal',
-						shadeIntensity: 0.2,
-						inverseColors: true,
-						opacityFrom: 1,
-						opacityTo: 0.7,
-						stops: [0, 100]
-					}
-				},
-				colors: [pocoAdminConfig.primary, pocoAdminConfig.secondary, '#168ef7'],
-				series: [4, 4, 3],
-				labels: le_arr,
-				stroke: {
-					lineCap: "round",
-				},
-				tooltip : {
-					trigger: 'item',
-					formatter: "{a} <br/>{b} : {c} ({d}%)"
-				},
-				title : {
-					//text:  ['销售金额'+data.total],
-					text: ['销售总数：'+data.total_quantity+' ('+data.month+')'],
-					x:'center'
-				},
-				legend: {
-					show: true,
-					floating: true,
-					fontSize: '16px',
-					position: 'left',
-					offsetX: 0,
-					offsetY: 0,
-					labels: {
-						useSeriesColors: true,
-					},
-				},
-			}
-
-			var chart4 = new ApexCharts(
-					document.querySelector("#chartmonthgoods"),
-					options4
-			);
-
-			chart4.render();
-		}
-	})
-
-
-}
+//近两周交易统计
 function loadEchartsLine()
 {
 	var hasLineChart = $("#chartorder").length>0;
@@ -1408,7 +1250,6 @@ function loadEchartsLine()
 			lineChart.resize();
 		}
 	};
-
 	$.ajax({
 	    type: "GET",
 	    url: "<?php echo U('statistics/load_goods_chart'); ?>",
@@ -1510,6 +1351,9 @@ function loadEchartsLine()
 		}
 	})
 }
+
+
+
 function buildLine2(name, data, yIndex) {
     return {
         name: name,
@@ -1570,6 +1414,7 @@ function load_order_buy_data()
 		}
 	})
 }
+
 function load_data()
 {
 	cur_type = $('#select_type').val();
@@ -1584,6 +1429,7 @@ function load_data()
 			if(data.code ==0 )
 			{
 				$('.month_good_count').html( data.data.member_count );
+				$('.last_month').html( data.data.month );
 				$('.today_member_count').html( data.data.today_member_count );
 				$('.today_pay_order_count').html( data.data.today_pay_order_count );
 				$('.today_pay_money').html( '<em>¥</em><span class="counter">'+data.data.today_pay_money +'</span>' );
@@ -1626,23 +1472,7 @@ function load_data()
 				$('.goods_totals').html( data.data.goods_stock_notice_count );
 			}
 		}
-	})
-	$.ajax({
-		type: "GET",
-		url: "<?php echo U('statistics/index_data'); ?>",
-		data:{type:cur_type},
-		dataType: "json",
-		success: function (data) {
-
-			if(data.code ==0 )
-			{
-
-
-				$('.month_good_money').html( '<span class="counter">'+data.data.total +'</span>' );
-
-			}
-		}
-	})
+	});
 	load_order_buy_data();
 	load_goods_paihang();
 
