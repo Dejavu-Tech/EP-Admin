@@ -167,8 +167,8 @@ abstract class Driver {
         }
 
         $this->bind =   array();
-//        if($this->queryStr != 'SHOW COLUMNS FROM `dejavutech_role`' && 'SELECT * FROM `dejavutech_role` WHERE `id` = 1 LIMIT 1' != trim($this->queryStr)
-//        && 'SHOW COLUMNS FROM `dejavutech_access`' != trim($this->queryStr) )
+//        if($this->queryStr != 'SHOW COLUMNS FROM `eaterplanet_ecommerce_role`' && 'SELECT * FROM `eaterplanet_ecommerce_role` WHERE `id` = 1 LIMIT 1' != trim($this->queryStr)
+//        && 'SHOW COLUMNS FROM `eaterplanet_ecommerce_access`' != trim($this->queryStr) )
 //        {
 //        	var_dump($this->queryStr);die();
 //        }
