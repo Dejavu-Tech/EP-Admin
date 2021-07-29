@@ -12,6 +12,7 @@ return array(
 	'DEFAULT_THEME'			 => 'default',
 	'TMPL_TEMPLATE_SUFFIX'	 => '.html',
 	'VIEW_PATH'				 => './Themes/Install/',
+    'SELLER_PWD_KEY' => 'IA=~(D9-|.^k7JsP1p*nVa,W/t6O#KY:$05q3G;)',
 	'TMPL_PARSE_STRING'=>array(
 	'__PUBLIC__' => __ROOT__ . '/Common',
 	'__RES__' => __ROOT__.'/assets/theme',
@@ -20,7 +21,7 @@ return array(
     '__JS__'=> __ROOT__.'/Themes/'.MODULE_NAME.'/default/Public/js',
     '__NAME__'=>'吃货星球S2B2C商城系统',
     '__COMPANY__'=>'蒂佳芙科技（云南）有限公司',
-    '__VERSION__'=>'吃货星球v4.7.0',
+    '__VERSION__'=>'吃货星球v4.7.1',
     '__WEBSITE__'=>'www.ch871.com',
     '__COMPANY_WEBSITE__'=>'www.dejavu871.com'
     ),
