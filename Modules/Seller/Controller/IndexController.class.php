@@ -138,7 +138,7 @@ class IndexController extends CommonController {
 
 
 		//使用积分
-		
+
 		$sum_score = 0;
 
 		$sum_score = M('eaterplanet_ecommerce_member_integral_flow')->where(' addtime > '.$today_time.' and type = "orderbuy" and in_out = "out"  ')->sum('score');
