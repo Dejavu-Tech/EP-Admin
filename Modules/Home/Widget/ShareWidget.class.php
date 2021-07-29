@@ -259,7 +259,7 @@ class ShareWidget extends Controller{
 
 
 		/**
-			dejavutech_fissionsharing_link
+			fissionsharing_link
 			id,type(page,goods),goods_id,member_id,share_one_id,share_two_id,share_three_id,modify_time
 		**/
 
