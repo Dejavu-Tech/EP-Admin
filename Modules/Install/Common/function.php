@@ -31,7 +31,7 @@ function check_env()
 {
     $items = array(
         'os' => array('操作系统', '不限制', '类Unix', PHP_OS, 'success'),
-        'php' => array('PHP版本', '5.3', '5.3+', PHP_VERSION, 'success'),
+        'php' => array('PHP版本', '5.6', '5.6+', PHP_VERSION, 'success'),
         //'mysql'   => array('MYSQL版本', '5.0', '5.0+', '未知', 'success'), //PHP5.5不支持mysql版本检测
         'upload' => array('附件上传', '不限制', '2M+', '未知', 'success'),
         'gd' => array('GD库', '2.0', '2.0+', '未知', 'success'),
@@ -164,7 +164,7 @@ function write_config($config, $auth)
 
         }
 
-        $conf = str_replace('[AUTH_KEY]', seller, $conf);
+        $conf = str_replace('[AUTH_KEY]', $auth, $conf);
 
 
         //写入应用配置文件
@@ -223,16 +223,16 @@ function create_tables($db, $prefix = '')
 
 }
 
-function register_administrator($db, $prefix, $seller, $auth)
+function register_administrator($db, $prefix, $seller)
 {
     show_msg('开始注册初始管理员帐号...');
     /*插入用户*/
     $sql = <<<sql
-REPLACE INTO `[PREFIX]seller` (`s_id`,`s_uname`, `s_passwd`, `s_create_time`, `s_status`) VALUES
-(1,'[NAME]', '[PASS]', '[TIME]',1);
+REPLACE INTO `[PREFIX]seller` (`s_id`, `s_uname`, `s_passwd`, `s_create_time`, `s_status`) VALUES
+(1, '[NAME]', '[PASS]', '[TIME]', 1);
 sql;
 
-    $password = think_ucenter_encrypt($seller['password'], $auth);
+    $password = think_ucenter_encrypt($seller['password'],C('SELLER_PWD_KEY'));
     $sql = str_replace(
         array('[PREFIX]', '[NAME]', '[PASS]', '[TIME]'),
         array($prefix, $seller['username'], $password,  NOW_TIME),
@@ -248,7 +248,7 @@ sql;
 
     $sql = str_replace(
         array('[PREFIX]', '[NAME]', '[TIME]', '[PASS]'),
-        array($prefix,'SELLER_PWD_KEY', NOW_TIME, $auth),
+        array($prefix,'PWD_KEY', NOW_TIME, 'IA=~(D9-|.^k7JsP1p*nVa,W/t6O#KY:$05q3G;)'),
         $sql);
 
     $db->execute($sql);
