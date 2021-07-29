@@ -543,7 +543,7 @@ class UserController extends CommonController{
 		$up_data['state'] = $post_data['state'];
 
 		M('eaterplanet_ecommerce_member_shopinfo')->where( array('member_id' => $post_data['member_id'] ) )->save($up_data);
-		//dejavutech_ eaterplanet_ecommerce_member_shopinfo
+		// eaterplanet_ecommerce_member_shopinfo
 
 		if($post_data['state'] == 1)
 		{
