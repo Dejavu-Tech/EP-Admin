@@ -448,7 +448,7 @@ class IntegralmallController extends CommonController{
 			//避免二次开团
 			M('intgral_goods')->where( array('goods_id' => $goods_info[0]) )->delete();
 			/**
-				CREATE TABLE IF NOT EXISTS `dejavutech_intgral_goods` (
+				CREATE TABLE IF NOT EXISTS `eaterplanet_ecommerce_intgral_goods` (
 				  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '自增id',
 				  `goods_id` int(10) NOT NULL COMMENT '商品id',
 				  `customer_id` int(10) NOT NULL COMMENT '所属商家',
