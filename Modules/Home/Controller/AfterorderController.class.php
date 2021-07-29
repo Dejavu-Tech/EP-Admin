@@ -552,7 +552,7 @@ class AfterorderController extends CommonController {
 
 					//$weopenid = M('eaterplanet_ecommerce_member')->where( array('member_id' => $platform_send_info_member_id ) )->find();
                     //dump($weopenid);die;
-					$sql = "select * from dejavutech_eaterplanet_ecommerce_member where member_id in ( ".$platform_send_info_member_id.")";
+					$sql = "select * from eaterplanet_ecommerce_member where member_id in ( ".$platform_send_info_member_id.")";
 					$we_openid = M()->query($sql);
 					foreach($we_openid as $k=>$v){
 
@@ -593,7 +593,7 @@ class AfterorderController extends CommonController {
 
 	public function test(){
 		$platform_send_info_member_id = D('Home/Front')->get_config_by_name('platform_send_info_member');
-		$sql = "select * from dejavutech_eaterplanet_ecommerce_member where member_id in (".$platform_send_info_member_id.")";
+		$sql = "select * from eaterplanet_ecommerce_member where member_id in (".$platform_send_info_member_id.")";
 		$we_openid = M()->query($sql);
 		dump($we_openid);
 	}
