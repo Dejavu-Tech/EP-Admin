@@ -99,160 +99,147 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="card">
-
-									<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
-										<div class="card-body">
-                                            <div class="form-group row" >
-                                                <label class="col-sm-2 col-form-label">支付模式</label>
-                                                <div class="col-sm-10" id="is_open_yinpay">
-                                                    <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
-                                                        <div class="radio radio-primary">
-                                                            <input id="radioinline1" type="radio" name="parameter[is_open_yinpay]" value="0" title="" <?php if(empty($data) || $data['is_open_yinpay'] ==0){ ?>checked  <?php } ?> />
-															<label class="mb-0" for="radioinline1">微信支付商户</label>
-														</div>
-                                                        <div class="radio radio-primary">
-                                                            <input id="radioinline2" type="radio" name="parameter[is_open_yinpay]" value="3" title="" <?php if( !empty($data) && $data['is_open_yinpay'] ==3 ){ ?>checked <?php } ?>  />
-															<label class="mb-0" for="radioinline2">服务商+特约商户</label>
-														</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">小程序APPID</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[wepro_appid]" class="form-control" value="{$data['wepro_appid']}" />
-													<small>mp.weixin.qq.com 开发-开发配置</small>
+							<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
+								<div class="card-body">
+									<div class="form-group row" >
+										<label class="col-sm-2 col-form-label">支付模式</label>
+										<div class="col-sm-10" id="is_open_yinpay">
+											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+												<div class="radio radio-primary">
+													<input id="radioinline1" type="radio" name="parameter[is_open_yinpay]" value="0" title="" <?php if(empty($data) || $data['is_open_yinpay'] ==0){ ?>checked  <?php } ?> />
+													<label class="mb-0" for="radioinline1">微信支付商户</label>
 												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">小程序APPSECRET</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[wepro_appsecret]" class="form-control" value="{$data['wepro_appsecret']}" />
-												</div>
-											</div>
-
-
-
-
-
-
-
-											<div  id="wepro3" style="<?php if( !empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==3 ){ ?>display:none;<?php } ?>">
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">商户ID</label>
-													<div class="col-sm-10">
-														<input type="text" name="parameter[wepro_partnerid]" class="form-control" value="{$data['wepro_partnerid']}" />
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">支付秘钥</label>
-													<div class="col-sm-10">
-														<input type="text" name="parameter[wepro_key]" class="form-control" value="{$data['wepro_key']}" />
-														<small>pay.weixin.qq.com 账户中心-api安全</small>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">CERT证书文件</label>
-													<div class="col-sm-10">
-														<textarea style="height:100px;" name="parameter[wechat_apiclient_cert_pem]" class="form-control" rows="5" placeholder="<?php if($data[wechat_apiclient_cert_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
-														<small>
-															<?php if($data[wechat_apiclient_cert_pem]){ ?>
-															<span class="btn btn-xs btn-success">已上传</span>
-															<?php }else{ ?>
-															<span class="btn btn-xs btn-danger">未上传</span>
-															<?php } ?>
-															从商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_cert.pem</span>用记事本打开并复制文件内容，填至此处
-														</small>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">KEY证书秘钥</label>
-													<div class="col-sm-10">
-														<textarea style="height:120px;" name="parameter[wechat_apiclient_key_pem]" class="form-control" rows="5" placeholder="<?php if($data[wechat_apiclient_key_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
-														<small>
-															<?php if($data[wechat_apiclient_key_pem]){ ?>
-															<span class="btn btn-xs btn-success">已上传</span>
-															<?php }else{ ?>
-															<span class="btn btn-xs btn-danger">未上传</span>
-															<?php } ?>从商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_key.pem</span>用记事本打开并复制文件内容，填至此处
-														</small>
-													</div>
-												</div>
-											</div>
-
-
-											<div id="wepro_sub3" style="<?php if( empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==0 ){ ?>display:none;<?php } ?>">
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">特约商户商户号</label>
-													<div class="col-sm-10">
-														<input type="text" name="parameter[wepro_sub_mch_id]" class="form-control" value="{$data['wepro_sub_mch_id']}" />
-													</div>
-												</div>
-
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">特约商户秘钥</label>
-													<div class="col-sm-10">
-														<input type="text" name="parameter[sup_wepro_key]" class="form-control" value="{$data['sup_wepro_key']}" />
-														<small>pay.weixin.qq.com 账户中心-api安全，特约商户提现必须填写特约商户秘钥，CERT证书文件，KEY证书秘钥。</small>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">服务商公众号AppID</label>
-													<div class="col-sm-10">
-														<input type="text" name="parameter[wepro_fuwu_appid]" class="form-control" value="{$data['wepro_fuwu_appid']}" />
-													</div>
-												</div>
-
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">服务商商户号</label>
-													<div class="col-sm-10">
-														<input type="text" name="parameter[wepro_fuwu_partnerid]" class="form-control" value="{$data['wepro_fuwu_partnerid']}" />
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">服务商秘钥</label>
-													<div class="col-sm-10">
-														<input type="text" name="parameter[wepro_key]" class="form-control" value="{$data['wepro_key']}" />
-														<small>pay.weixin.qq.com 账户中心-api安全</small>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">服务商证书CERT证书文件</label>
-													<div class="col-sm-10">
-														<textarea style="height:120px;" name="parameter[sup_wechat_apiclient_cert_pem]" class="form-control" rows="5" placeholder="<?php if( $data[sup_wechat_apiclient_cert_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
-														<small>
-															<?php if( $data[sup_wechat_apiclient_cert_pem]){ ?>
-															<span class="btn btn-xs btn-success">已上传</span>
-															<?php  }else{  ?>
-															<span class="btn btn-xs btn-danger">未上传</span>
-															<?php } ?>从服务商商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_cert.pem</span>用记事本打开并复制文件内容，填至此处
-														</small>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-sm-2 col-form-label">服务商证书KEY证书秘钥</label>
-													<div class="col-sm-10">
-														<textarea style="height:120px;" name="parameter[sup_wechat_apiclient_key_pem]" class="form-control" rows="5" placeholder="<?php if( $data[sup_wechat_apiclient_key_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
-														<small>
-															<?php if( $data[sup_wechat_apiclient_key_pem]){ ?>
-															<span class="btn btn-xs btn-success">已上传</span>
-															<?php  }else{  ?>
-															<span class="btn btn-xs btn-danger">未上传</span>
-															<?php } ?>从服务商商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_key.pem</span>用记事本打开并复制文件内容，填至此处
-														</small>
-													</div>
+												<div class="radio radio-primary">
+													<input id="radioinline2" type="radio" name="parameter[is_open_yinpay]" value="3" title="" <?php if( !empty($data) && $data['is_open_yinpay'] ==3 ){ ?>checked <?php } ?>  />
+													<label class="mb-0" for="radioinline2">服务商+特约商户</label>
 												</div>
 											</div>
 										</div>
-										<div class="card-footer">
-											<input type="submit" lay-submit lay-filter="formDemo"  value="提交" class="btn btn-pill btn-primary"  />
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">小程序APPID</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_appid]" class="form-control" value="{$data['wepro_appid']}" />
+											<small>mp.weixin.qq.com 开发-开发配置</small>
 										</div>
-									</form>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">小程序APPSECRET</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_appsecret]" class="form-control" value="{$data['wepro_appsecret']}" />
+										</div>
+									</div>
+									<div class="form-group row" id="wepro" style="<?php if( !empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==3 ){ ?>display:none;<?php } ?>">
+										<label class="col-sm-2 col-form-label">商户ID</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_partnerid]" class="form-control" value="{$data['wepro_partnerid']}" />
+										</div>
+									</div>
+									<div id="wepro_sub" style="<?php if( empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==0 ){ ?>display:none;<?php } ?>">
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">服务商公众号AppID</label>
+											<div class="col-sm-10">
+												<input type="text" name="parameter[wepro_fuwu_appid]" class="form-control" value="{$data['wepro_fuwu_appid']}" />
+											</div>
+										</div>
+										<div class="form-group row" >
+											<label class="col-sm-2 col-form-label">服务商商户号</label>
+											<div class="col-sm-10">
+												<input type="text" name="parameter[wepro_fuwu_partnerid]" class="form-control" value="{$data['wepro_fuwu_partnerid']}" />
+											</div>
+										</div>
+									</div>
+									<div class="form-group row" >
+										<label class="col-sm-2 col-form-label" id="wepro1" style="<?php if( !empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==3 ){ ?>display:none;<?php } ?>">支付秘钥</label>
+										<label class="col-sm-2 col-form-label" id="wepro_sub1" style="<?php if( empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==0 ){ ?>display:none;<?php } ?>">服务商秘钥</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[wepro_key]" class="form-control" value="{$data['wepro_key']}" />
+											<small>pay.weixin.qq.com 账户中心-api安全</small>
+										</div>
+									</div>
+
+									<div id="wepro2" style="<?php if( !empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==3 ){ ?>display:none;<?php } ?>">
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">CERT证书文件</label>
+											<div class="col-sm-10">
+												<textarea style="height:100px;" name="parameter[wechat_apiclient_cert_pem]" class="form-control" rows="5" placeholder="<?php if($data[wechat_apiclient_cert_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
+												<small>
+													<?php if($data[wechat_apiclient_cert_pem]){ ?>
+													<span class="btn btn-xs btn-success">已上传</span>
+													<?php }else{ ?>
+													<span class="btn btn-xs btn-danger">未上传</span>
+													<?php } ?>
+													从商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_cert.pem</span>用记事本打开并复制文件内容，填至此处
+												</small>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">KEY证书秘钥</label>
+											<div class="col-sm-10">
+												<textarea style="height:120px;" name="parameter[wechat_apiclient_key_pem]" class="form-control" rows="5" placeholder="<?php if($data[wechat_apiclient_key_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
+												<small>
+													<?php if($data[wechat_apiclient_key_pem]){ ?>
+													<span class="btn btn-xs btn-success">已上传</span>
+													<?php }else{ ?>
+													<span class="btn btn-xs btn-danger">未上传</span>
+													<?php } ?>从商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_key.pem</span>用记事本打开并复制文件内容，填至此处
+												</small>
+											</div>
+										</div>
+									</div>
+
+
+									<div id="wepro_sub2" style="<?php if( empty($data['is_open_yinpay']) || $data['is_open_yinpay'] ==0 ){ ?>display:none;<?php } ?>">
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">特约商户商户号</label>
+											<div class="col-sm-10">
+												<input type="text" name="parameter[wepro_sub_mch_id]" class="form-control" value="{$data['wepro_sub_mch_id']}" />
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">特约商户秘钥</label>
+											<div class="col-sm-10">
+												<input type="text" name="parameter[sup_wepro_key]" class="form-control" value="{$data['sup_wepro_key']}" />
+												<small>pay.weixin.qq.com 账户中心-api安全，特约商户提现必须填写特约商户秘钥，CERT证书文件，KEY证书秘钥。</small>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">服务商证书CERT证书文件</label>
+											<div class="col-sm-10">
+												<textarea style="height:120px;" name="parameter[sup_wechat_apiclient_cert_pem]" class="form-control" rows="5" placeholder="<?php if( $data[sup_wechat_apiclient_cert_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
+												<small>
+													<?php if( $data[sup_wechat_apiclient_cert_pem]){ ?>
+													<span class="btn btn-xs btn-success">已上传</span>
+													<?php  }else{  ?>
+													<span class="btn btn-xs btn-danger">未上传</span>
+													<?php } ?>从服务商商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_cert.pem</span>用记事本打开并复制文件内容，填至此处
+												</small>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">服务商证书KEY证书秘钥</label>
+											<div class="col-sm-10">
+												<textarea style="height:120px;" name="parameter[sup_wechat_apiclient_key_pem]" class="form-control" rows="5" placeholder="<?php if( $data[sup_wechat_apiclient_key_pem]){ ?>为保证安全性，不显示证书内容。若要修改请直接输入<?php } ?>"></textarea>
+												<small>
+													<?php if( $data[sup_wechat_apiclient_key_pem]){ ?>
+													<span class="btn btn-xs btn-success">已上传</span>
+													<?php  }else{  ?>
+													<span class="btn btn-xs btn-danger">未上传</span>
+													<?php } ?>从服务商商户平台上下载支付证书，解压并取得其中的<span class="bg-danger">apiclient_key.pem</span>用记事本打开并复制文件内容，填至此处
+												</small>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<input type="submit" lay-submit lay-filter="formDemo"  value="提交" class="btn btn-pill btn-primary"  />
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -346,11 +333,19 @@ layui.use(['jquery', 'layer','form','colorpicker'], function(){
 $('#is_open_yinpay input[type=radio]').click(function(){
 	var a_val = $(this).val();
 	if(a_val == 0) {
-		$('#wepro3').show();
-		$('#wepro_sub3').hide();
+		$('#wepro').show();
+		$('#wepro1').show();
+		$('#wepro2').show();
+		$('#wepro_sub').hide();
+		$('#wepro_sub1').hide();
+		$('#wepro_sub2').hide();
 	} else {
-		$('#wepro_sub3').show();
-		$('#wepro3').hide();
+		$('#wepro').hide();
+		$('#wepro1').hide();
+		$('#wepro2').hide();
+		$('#wepro_sub').show();
+		$('#wepro_sub1').show();
+		$('#wepro_sub2').show();
 	}
 })
 

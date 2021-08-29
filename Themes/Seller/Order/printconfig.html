@@ -122,7 +122,7 @@
 				<div class="form-group row" id="feier_print" style="<?php if( empty($data['open_feier_print'.$supper_info['id']]) || $data['open_feier_print'.$supper_info['id']] ==2 ){ ?>display:none;<?php } ?>">
 					<label class="col-sm-2 col-form-label"></label>
 					<div class="col-sm-10">
-						<div class="input-group fixsingle-input-group">
+						<div class="input-group pill-input-group">
 							<div class="input-group-addon"><b>sn:</b></div>
 							<input type="text" name="data[feier_print_sn{$supper_info['id']}]" class="form-control" value="<?php echo $data['feier_print_sn'.$supper_info['id']]; ?>" />
 							<div class="input-group-addon"><b>key:</b></div>
@@ -138,13 +138,13 @@
 					<label class="col-sm-2 col-form-label"></label>
 					<div class="col-sm-10">
 
-						<div class="input-group fixsingle-input-group">
+						<div class="input-group pill-input-group">
 							<div class="input-group-addon"><b>应用id:</b></div>
 							<input type="text" name="data[yilian_client_id{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_client_id'.$supper_info['id']]; ?>" />
 							<div class="input-group-addon"><b>应用密钥:</b></div>
 							<input type="text" name="data[yilian_client_key{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_client_key'.$supper_info['id']]; ?>" />
 						</div>
-						<div class="input-group fixsingle-input-group">
+						<div class="input-group pill-input-group">
 							<div class="input-group-addon"><b>打印机终端号:</b></div>
 							<input type="text" name="data[yilian_machine_code{$supper_info['id']}]" class="form-control" value="<?php echo $data['yilian_machine_code'.$supper_info['id']]; ?>" />
 							<div class="input-group-addon"><b>终端密钥:</b></div>

@@ -169,6 +169,7 @@
 														<?php if($item['payment_code'] == 'admin'){ ?>后台付款<?php } ?>
 														<?php if($item['payment_code'] == 'weixin'){ ?>微信支付<?php } ?>
 														<?php if( $item['payment_code'] == 'supply_mobile'){ ?>商户手机端付款<?php } ?>
+														<?php if( $item['payment_code'] == 'cashon_delivery'){ ?>货到付款<?php } ?>
 													</label>
 													<?php if($is_order_note_open == 1){ ?>
 													<?php if(!($item['delivery'] == 'express' && ($item['type'] == 'normal' || $item['type'] == 'pintuan'))){ ?>
@@ -266,7 +267,7 @@
 													<?php }else{ ?>
 													<label class="col-sm-3 col-form-label">预售方式：</label><label class="col-sm-9 col-form-label">全款预售</label>
 													<?php } ?>
-													<label class="col-sm-3 col-form-label">阶段一： </label><label class="col-sm-9 col-form-label">预付定金（定金 ￥{$item['presale_info']['presale_ding_money']} <?php echo !empty($item['presale_info']['presale_deduction_money']) && $item['presale_info']['presale_deduction_money'] > 0 ?  '抵扣 ￥'.$item['presale_info']['presale_deduction_money'] : ''; ?>）</label>
+													<label class="col-sm-3 col-form-label">阶段一： </label><label class="col-sm-9 col-form-label">预付定金（定金 ¥{$item['presale_info']['presale_ding_money']} <?php echo !empty($item['presale_info']['presale_deduction_money']) && $item['presale_info']['presale_deduction_money'] > 0 ?  '抵扣 ¥'.$item['presale_info']['presale_deduction_money'] : ''; ?>）</label>
 													<?php if( $item['presale_info']['presale_type'] == 0 ){  ?>
 													<label class="col-sm-3 col-form-label">阶段二：</label><label class="col-sm-9 col-form-label">
 															<?php if( $item['presale_info']['state'] == 1 ){ ?>
@@ -674,12 +675,45 @@
 									已失效
 									<?php } ?>
 								</td>
-								<td>￥{:round($virtualcard_info['code_money'], 2)}</td>
+								<td>¥{:round($virtualcard_info['code_money'], 2)}</td>
 								<td>{$virtualcard_info['use_member_name']}</td>
 							</tr>
 							</tbody>
 						</table>
 						<?php } ?>
+		<?php
+                if( !empty($order_form_data) && !empty($order_form_data['form_list']) ){
+                    $form_list = $order_form_data['form_list'];
+            ?>
+				<div class="form-title">
+					关联表单信息：
+				</div>
+				<div class="form row">
+					<ul class="form_list">
+						<?php
+                        foreach($form_list as $k => $v){
+						?>
+						<li>
+							<?php if($v['type'] == 'image'){ ?>
+							{$v['item_name']}：
+							<?php if(!empty($v['item_val'])){ ?>
+							<?php foreach($v['item_val'] as $ik=>$iv){ ?>
+							<?php if( empty($iv) ){ ?>
+							暂无
+							<?php }else{ ?>
+							<img src="{$iv}" style="width:52px;height:52px;border:1px solid #efefef; padding:1px;">
+							<?php } ?>
+
+							<?php } ?>
+							<?php } ?>
+							<?php }else{ ?>
+							{$v['item_name']}：{$v['item_val']}
+							<?php } ?>
+						</li>
+						<?php } ?>
+					</ul>
+				</div>
+				<?php } ?>
 					</div>
 					<div class="col-xl-12 xl-100 box-col-12">
 						<form action="" class="form theme-form layui-form" lay-filter="example" method="post" >

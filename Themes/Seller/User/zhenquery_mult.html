@@ -45,7 +45,7 @@ $(document).delegate(".choose_dan_link","click",function(){
 	//data-json
 	var json_obj = JSON.parse($(this).attr('data-json'));
 	var p_html = '';
-	p_html+= '<div class="input-group mult_choose_member_id m-t-5" data-member-id="'+json_obj.member_id+'" style="border-radius: 0;float: left;margin: 10px;margin-left:0px;width: 22%;">';
+	p_html+= '<div class="input-group mult_choose_member_id m-t-5" data-member-id="'+json_obj.member_id+'" >';
 	p_html+= '	<div class="layadmin-text-center choose_user">';
 	p_html+= '		<img class="img-responsive img-thumbnail m-r-10" src="'+json_obj.avatar+'">';
 	p_html+= '		<div class="layadmin-maillist-img" style="">'+json_obj.username+'</div>';

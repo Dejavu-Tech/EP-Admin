@@ -11,7 +11,13 @@
       <tr class="b">
         <td colspan="3">订单编号：{$order_info.order_num_alias}</td>
         <td colspan="2">交易单号：{$order_info.transaction_id}</td>
-        <td colspan="1">付款方式：<?php if($order_info['payment_code'] == ''){ ?>未付款<?php } ?><?php if($order_info['payment_code'] == 'yuer'){ ?>余额支付 <?php } ?><?php if($order_info['payment_code'] == 'admin'){ ?>后台付款 <?php } ?><?php if($order_info['payment_code'] == 'weixin'){ ?>微信支付 <?php } ?></td>
+        <td colspan="1">付款方式：
+          <?php if($order_info['payment_code'] == ''){ ?>未付款<?php } ?>
+          <?php if($order_info['payment_code'] == 'yuer'){ ?>余额支付 <?php } ?>
+          <?php if($order_info['payment_code'] == 'admin'){ ?>后台付款 <?php } ?>
+          <?php if($order_info['payment_code'] == 'weixin'){ ?>微信支付 <?php } ?>
+          <?php if($order_info['payment_code'] == 'cashon_delivery'){ ?>货到付款 <?php } ?>
+        </td>
       </tr>
       <tr class="b">
         <td colspan="3"><?php if($order_info['delivery'] == 'tuanz_send'){ ?>送货地址：{$order_info['tuan_send_address']}<?php } ?>

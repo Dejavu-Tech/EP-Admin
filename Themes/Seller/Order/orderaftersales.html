@@ -127,7 +127,7 @@
 
 									<div class="form-row p-b-20">
 										<div class="p-r-5" style="">
-											<select name='searchtime' lay-ignore  class='form-control'   id="searchtime">
+											<select name='searchtime'  class='form-control'   id="searchtime">
 												<option value=''>不按时间</option>
 												<option value='create' <?php if($searchtime=='create'){ ?>selected<?php } ?>>下单时间</option>
 												<option value='pay' <?php if($searchtime=='pay'){ ?>selected<?php } ?>>付款时间</option>
@@ -139,7 +139,7 @@
 											{:tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
 										</div>
 										<div class="p-r-5" style="">
-											<select name='delivery' lay-ignore class='form-control'   id="type">
+											<select name='delivery' class='form-control'   id="type">
 												<option value=''>配送方式</option>
 												<option value='pickup' <?php if($delivery=='pickup'){ ?>selected<?php } ?>>自提</option>
 												<option value='tuanz_send' <?php if($delivery=='tuanz_send'){ ?>selected<?php } ?>>团长配送</option>
@@ -147,7 +147,7 @@
 											</select>
 										</div>
 										<div class="p-r-5" style="">
-											<select name='searchfield' lay-ignore class='form-control'     >
+											<select name='searchfield' class='form-control'     >
 												<option value='ordersn' <?php if($searchfield=='ordersn'){ ?>selected<?php } ?>>订单号</option>
 												<option value='member' <?php if($searchfield=='member'){ ?>selected<?php } ?>>客户信息</option>
 												<option value='mobile' <?php if($searchfield=='mobile'){ ?>selected<?php } ?>>手机号</option>

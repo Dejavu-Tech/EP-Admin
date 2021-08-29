@@ -170,7 +170,7 @@
 													</td>
 													<td>
 														<div rel="pop" style="display: flex;justify-content: center" title="">
-															<img class="img-40" src="{: tomedia($row['goods_image']);}" style="border-radius:50%;border:1px solid #efefef;">
+															<img class="img-40" src="{: tomedia($row['goods_image']);}" style="border-radius:5px;">
 															<span style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding-left: 5px">
 																<span class="nickname">
 																	{$row['goods_name']}
@@ -180,7 +180,7 @@
 													</td>
 													<td>
 														<div rel="pop" style="display: flex;justify-content: center" title="">
-															<img class="img-40" src="{: tomedia($row['avatar']);}" style="border-radius:50%;border:1px solid #efefef;">
+															<img class="img-40" src="{: tomedia($row['avatar']);}" style="border-radius:5px;">
 															<span style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding-left: 5px">
 																<span class="nickname">
 																	{$row['user_name']}
@@ -195,7 +195,7 @@
 														<?php $arr = unserialize($row['images']); $arr = explode(',', $arr); ?>
 														<?php foreach( $arr as $img ){ ?>
 														<?php if(!empty($img)){ ?>
-														<img class="img-40" src="{: tomedia($img);}" style="border-radius:50%;border:1px solid #efefef;">
+														<img class="img-40" src="{: tomedia($img);}" style="border-radius:5px;">
 														<?php } ?>
 														<?php } ?>
 													</td>

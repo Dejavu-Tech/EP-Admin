@@ -7,7 +7,7 @@
 				<h5 class="modal-title">退款</h5>
 				<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 			</div>
-			<div class="modal-body">
+			<span class="modal-body">
 				<div class="table-responsive table-bordered">
 					<table class="display text-center" style="width:100%;">
 						<tr>
@@ -23,7 +23,9 @@
 					</table>
 
 				</div>
-				<div style="clear:both;"></div>
+				<?php if($payment_code == 'cashon_delivery'){ ?>
+				<span style="color:red;">该订单为“货到付款”订单，订单退款金额只保留记录到订单操作中不作实际退款（不退至用户余额或微信账户），实际退款金额请线下和用户协商解决</span>
+				<?php } ?>
 
 
 

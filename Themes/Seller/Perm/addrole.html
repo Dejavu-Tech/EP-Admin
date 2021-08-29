@@ -213,14 +213,14 @@
 
 																<?php if($kk != 'text'){ ?>
 																<div class="checkbox checkbox-primary m-l-0 m-r-20 row" style="margin-top: 0!important;">
-																	<input type='checkbox' lay-ignore   name='perms[]'  value='{$key}.{$ke}.{$k}.{$kk}' class='perm-item'
+																	<input type='checkbox'   name='perms[]'  value='{$key}.{$ke}.{$k}.{$kk}' class='perm-item'
 																		   data-group='{$key}' data-parent='{$ke}' data-son="{$k}" data-grandson="{$kk}"
 																	<?php if(in_array($key.".".$ke.".".$k.".".$kk,$role_perms) || in_array($key.".".$ke.".".$k.".".$kk,$user_perms)){ ?> checked<?php } ?>
 																	<?php if(in_array($key.".".$ke.".".$k.".".$kk,$role_perms) && $action =='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $vv); ?>
 																</div>
 																<?php }else{ ?>
 																<div class="checkbox checkbox-primary m-l-0 m-r-20 row" style="margin-top: 0!important;">
-																	<input type='checkbox' lay-ignore   name='perms[]'  value='{$key}.{$ke}.{$k}' class='perm-all-item'
+																	<input type='checkbox'   name='perms[]'  value='{$key}.{$ke}.{$k}' class='perm-all-item'
 																		   data-group='{$key}' data-parent='{$ke}' data-son="{$k}" data-grandson="{$kk}"
 																	<?php if( in_array($key.".".$ke.".".$k,$role_perms) || in_array($key.".".$ke.".".$k,$user_perms) ){ ?> checked<?php } ?>
 																	<?php if(in_array($key.".".$ke.".".$k,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $vv); ?>
