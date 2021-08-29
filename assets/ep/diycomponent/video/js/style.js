@@ -6,7 +6,7 @@ videoPreviewHtml += '			<img src="/assets/ep/images/diy/crack_figure.png" style=
 videoPreviewHtml += '		</div>';
 videoPreviewHtml += '</div>';
 
-Vue.component("ep-video", {
+Vue.component("szy-video", {
 	data: function () {
 		return {
 			id: "video_" + get_math_rant(10),

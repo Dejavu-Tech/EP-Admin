@@ -186,3 +186,20 @@
 	color: #f44;
 	display: none;
 }
+
+.navigation-indicator {
+	text-align: center;
+	margin: 5px 0 10px;
+}
+
+.navigation-indicator span {
+	display: inline-block;
+	width: 15px;
+	height: 3px;
+	background: #ccc;
+	margin: 0 3px;
+}
+
+.navigation-indicator span:first-child {
+	background: rgb(255, 84, 68);
+}

@@ -4,29 +4,29 @@
 	<template slot="preview">
 		<div class="preview-box" v-bind:style="{ background: nc.backgroundColor, marginTop : nc.marginTop + 'px', borderRadius: nc.navRadius == 'fillet' ? '5px' : '0px' }">
 			<template v-if="nc.lazyLoad">
-				<ep-video></ep-video>
+				<szy-video></szy-video>
 			</template>
 		</div>
 	</template>
-
+	
 	<!-- 编辑 -->
 	<template slot="edit">
-
+	
 		<template v-if="nc.lazyLoad">
 			<video-list></video-list>
 		</template>
-
+		
 	</template>
-
+	
 	<!-- 资源 -->
 	<template slot="resource">
-
+		
 		<js>
 			var videoResourcePath = "{$resourceurl}";
 		</js>
 		<css src="{$resourceurl}/video/css/style.css"></css>
 		<js src="{$resourceurl}/video/js/style.js"></js>
-
+		
 	</template>
 
 </cm-construct>

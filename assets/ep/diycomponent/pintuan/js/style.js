@@ -68,6 +68,50 @@ var pintuanTopConHtml = '<div>';
 	pintuanTopConHtml +=			'</div>';
 	pintuanTopConHtml +=		'</div>';
 	pintuanTopConHtml +=	'</template>';
+
+	pintuanTopConHtml += 	'<template v-if="data.style == 4">';
+	pintuanTopConHtml += 		'<div class="goods-head">';
+	pintuanTopConHtml +=			'<div class="title-wrap">';
+	pintuanTopConHtml +=				'<template v-for="(item, index) in list" v-if="item.style == 4">';
+	pintuanTopConHtml +=					'<div class="left-icon" v-if="item.imageUrl && item.imageUrl.split(\'/\')[0] == \'public\'"><img v-bind:src="imgUrl1" /></div>';
+	pintuanTopConHtml +=					'<div class="left-icon" v-if="item.imageUrl && item.imageUrl.split(\'/\')[0] != \'public\'"><img v-bind:src="$parent.$parent.changeImgUrl(item.imageUrl)" /></div>';
+	pintuanTopConHtml +=					'<span class="name">{{item.title}}</span>';
+	pintuanTopConHtml +=				'</template>';
+	pintuanTopConHtml +=			'</div>';
+	
+	pintuanTopConHtml +=			'<div class="more violet" v-if="data.bgSelect==\'violet\'">';
+	pintuanTopConHtml +=				'<span>';
+	pintuanTopConHtml +=					'<span style="color: #8662FD;">更多</span>';
+	pintuanTopConHtml +=					'<span style="color: #627BFD;">拼团</span>';
+	pintuanTopConHtml +=				'</span>';
+	pintuanTopConHtml +=				'<i class="iconfont iconyoujiantou" style="color: #627BFD;"></i>';
+	pintuanTopConHtml +=			'</div>';
+	
+	pintuanTopConHtml +=			'<div class="more red" v-if="data.bgSelect==\'red\'">';
+	pintuanTopConHtml +=				'<span>';
+	pintuanTopConHtml +=					'<span style="color: #FF7B91;">更多</span>';
+	pintuanTopConHtml +=					'<span style="color: #FF5151;">拼团</span>';
+	pintuanTopConHtml +=				'</span>';
+	pintuanTopConHtml +=				'<i class="iconfont iconyoujiantou" style="color: #FF5151;"></i>';
+	pintuanTopConHtml +=			'</div>';
+	
+	pintuanTopConHtml +=			'<div class="more blue" v-if="data.bgSelect==\'blue\'">';
+	pintuanTopConHtml +=				'<span>';
+	pintuanTopConHtml +=					'<span style="color: #12D0AE;">更多</span>';
+	pintuanTopConHtml +=					'<span style="color: #0ECFD3;">拼团</span>';
+	pintuanTopConHtml +=				'</span>';
+	pintuanTopConHtml +=				'<i class="iconfont iconyoujiantou" style="color: #0ECFD3;"></i>';
+	pintuanTopConHtml +=			'</div>';
+	
+	pintuanTopConHtml +=			'<div class="more yellow" v-if="data.bgSelect==\'yellow\'">';
+	pintuanTopConHtml +=				'<span>';
+	pintuanTopConHtml +=					'<span style="color: #FEB632;">更多</span>';
+	pintuanTopConHtml +=					'<span style="color: #FE6232;">拼团</span>';
+	pintuanTopConHtml +=				'</span>';
+	pintuanTopConHtml +=				'<i class="iconfont iconyoujiantou" style="color: #FE6232;"></i>';
+	pintuanTopConHtml +=			'</div>';
+	pintuanTopConHtml +=		'</div>';
+	pintuanTopConHtml +=	'</template>';
 	/* pintuanTopConHtml +=	'<div class="more ns-red-color" v-if="listMore.title">';
 	pintuanTopConHtml +=		'<span v-bind:style="{color: data.moreTextColor?data.moreTextColor:\'rgba(0,0,0,0)\'}">{{listMore.title}}</span>';
 	pintuanTopConHtml +=		'<div class="right-icon" v-if="listMore.imageUrl"><img v-bind:src="$parent.$parent.changeImgUrl(listMore.imageUrl)" /></div>';
@@ -83,13 +127,15 @@ Vue.component("pintuan-top-content", {
 			listMore: this.$parent.data.listMore,
 			imgUrl1: "",
 			imgUrl2: "",
-			imgUrl3: ""
+			imgUrl3: "",
+			imgUrl4: ""
 		}
 	},
 	created: function () {
 		this.imgUrl1 = this.list[0].imageUrl;
 		this.imgUrl2 = this.list[1].imageUrl;
 		this.imgUrl3 = this.list[2].imageUrl;
+		this.imgUrl4 = this.list[3].imageUrl;
 		
 		if(!this.$parent.data.verify) this.$parent.data.verify = [];
 		this.$parent.data.verify.push(this.verify);//加载验证方法

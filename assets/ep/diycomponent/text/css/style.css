@@ -1,15 +1,29 @@
 @CHARSET "UTF-8";
-/*标题组件*/
-.component-title h2 {margin: 0;font-size: 16px;overflow: hidden;text-overflow: ellipsis;}
-.component-title p {font-size: 12px;color: #8c8c8c;padding: 5px 0 0;overflow: hidden;text-overflow: ellipsis;}
+
+.component-title h2 {
+	margin: 0;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.component-title p {
+	font-size: 12px;
+	color: #8c8c8c;
+	padding: 5px 0 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 .component-title .style-list-box {
 	display: none;
 }
+
 .style-list-con {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .style-list-con .style-li {
 	margin-right: 12px;
 	margin-bottom: 15px;
@@ -25,6 +39,7 @@
 .layui-layer-page .layui-layer-content {
 	overflow: auto !important;
 }
+
 .btn-box {
 	margin-top: 30px;
 	text-align: center;
@@ -48,7 +63,8 @@
 	display: inline-block;
 }
 
-.component-title .text-title .line-left, .component-title .text-title .line-right {
+.component-title .text-title .line-left,
+.component-title .text-title .line-right {
 	position: absolute;
 	display: inline-block;
 	width: 30px;
@@ -64,4 +80,379 @@
 .component-title .text-title-1 .line-right {
 	right: 0;
 	margin-right: -30px;
+}
+
+/* 图二 */
+.text-title-con2 {
+	width: 100%;
+	height: 6px;
+	margin-top: 3px;
+	position: relative;
+}
+
+.component-title .text-title .inner-line {
+	display: inline-block;
+	width: 100%;
+	height: 1px;
+	vertical-align: top;
+}
+
+.component-title .text-title-2 .line-triangle {
+	background: transparent !important;
+	position: absolute;
+	display: inline-block;
+	border: 6px solid #000;
+	border-top-color: transparent !important;
+	border-left-color: transparent !important;
+	left: 50%;
+	bottom: 0;
+	margin-left: -6px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* 图三 */
+.text-title-con3 {
+	width: 100%;
+	height: 1px;
+	margin-top: 5px;
+	position: relative;
+}
+
+.component-title .line-short {
+	width: 162px;
+	height: 3px;
+	background: #000;
+	position: absolute;
+	display: inline-block;
+	bottom: 0;
+	left: 50%;
+	margin-left: -81px;
+}
+
+/* 图四 */
+.component-title .text-title-4 .text-title-line {
+	height: 5px;
+	position: relative;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.component-title .text-title-4 .line-left {
+	display: inline-block;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: calc((100% - 22px) / 2);
+	height: 1px;
+}
+
+.component-title .text-title-4 .line-center {
+	width: 6px;
+	height: 6px;
+	border: 1px solid #000;
+	display: inline-block;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+.component-title .text-title-4 .line-right {
+	display: inline-block;
+	position: absolute;
+	top: 4px;
+	right: 0;
+	width: calc((100% - 22px) / 2);
+	height: 1px;
+}
+
+/* 图五 */
+.component-title .text-title-5 .text-title-con {
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1px solid;
+}
+
+.text-title-border {
+	position: absolute;
+	top: -5px;
+	bottom: -5px;
+	left: -5px;
+	right: -5px;
+	border: 1px solid;
+}
+
+.component-title .text-title-5 .text-title-block {
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid;
+	position: relative;
+}
+
+.component-title .text-title-5 .line-left {
+	height: 5px;
+	position: absolute;
+	width: 40px;
+	top: 50%;
+	margin-top: -2px;
+	left: 0;
+	margin-left: -30px;
+}
+
+.component-title .text-title-5 .line-right {
+	height: 5px;
+	position: absolute;
+	width: 40px;
+	top: 50%;
+	margin-top: -2px;
+	right: 0;
+	margin-right: -30px;
+}
+
+/* 图六 */
+.component-title .text-title .text-title-outer {
+	display: inline-block;
+	position: relative;
+}
+
+.component-title .text-title .text-title-outer .text-title-con {
+	display: inline-block;
+	padding: 3px 25px;
+	border: 1px solid;
+	position: relative;
+	z-index: 2;
+}
+
+.component-title .text-title .text-title-outer .text-title-con-2 {
+	position: absolute;
+	display: inline-block;
+	top: 5px;
+	right: -5px;
+	bottom: -5px;
+	left: 5px;
+	border: 1px solid;
+	z-index: 0;
+}
+
+/* 图八 */
+.component-title .text-title-8 .text-title-con {
+	margin-left: 10px;
+}
+
+.component-title .text-title-8 .line-left {
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 2px;
+}
+
+/* 图九 */
+.component-title .text-title-9 .text-title-box {
+	position: relative;
+}
+
+.component-title .text-title-9 .text-title-box span {
+	padding: 0 8px;
+}
+
+.component-title .text-title-9 .text-title-box .left {
+	position: absolute;
+	left: 0;
+	width: 66px;
+	height: 20px;
+	top: 0;
+}
+
+.component-title .text-title-9 .text-title-box .more {
+	font-size: 12px;
+	width: 66px;
+	text-align: right;
+	position: absolute;
+	top: 2px;
+	right: 0;
+}
+
+.component-title .text-title-9 .text-title-box .center {
+	width: calc(100% - 132px);
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.component-title .text-title-9 .text-title-box .center div {
+	width: 20px;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+.component-title .text-title-9 .text-title-box .center img {
+	max-width: 100%;
+}
+
+.component-title .text-title-9 .text-title-box .center span {
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.component-title .text-title-9 .text-title-box i {
+	font-size: 14px;
+}
+
+.component-title .text-title-9 .text-subTitle-box p {
+	/*letter-spacing: 7px;*/
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 图十 */
+.component-title .text-title-10 .text-title-box {
+	position: relative;
+}
+
+.component-title .text-title-10 .text-title-box span {
+	padding: 0 8px;
+}
+
+.component-title .text-title-10 .text-title-box .left {
+	position: absolute;
+	left: 0;
+	width: 66px;
+	height: 20px;
+	top: 0;
+}
+
+.component-title .text-title-10 .text-title-box .more {
+	font-size: 12px;
+	width: 66px;
+	text-align: right;
+	position: absolute;
+	top: 2px;
+	right: 0;
+}
+
+.component-title .text-title-10 .text-title-box .center {
+	width: calc(100% - 132px);
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.component-title .text-title-10 .text-title-box .center div {
+	width: 20px;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+.component-title .text-title-10 .text-title-box .center img {
+	max-width: 100%;
+}
+
+.component-title .text-title-10 .text-title-box .center span {
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	z-index: 5;
+}
+
+.component-title .text-title-10 .text-title-box .center>img {
+	width: 99px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -50px;
+	z-index: 0;
+}
+
+.component-title .text-title-10 .text-title-box i {
+	font-size: 14px;
+}
+
+.component-title .text-title-10 .text-subTitle-box p {
+	letter-spacing: 7px;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 图十一 */
+.component-title .text-title-11 {
+	text-align: unset;
+}
+
+.component-title .text-title-11 .text-title-box {
+	position: relative;
+	margin: 5px 0;
+	padding-left: 17px;
+}
+
+.component-title .text-title-11 .text-title-box .left {
+	width: calc(100% - 66px);
+	text-align: left;
+}
+
+.component-title .text-title-11 .text-title-box .more {
+	font-size: 12px;
+	width: 68px;
+	text-align: right;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+
+.component-title .text-title-11 .text-title-box i {
+	font-size: 14px;
+}
+
+.component-title .text-title-11 .text-title-box .text-title-con {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: relative;
+	z-index: 5;
+}
+
+.component-title .text-title-11 .text-subTitle-box {
+	position: relative;
+	z-index: 5;
+}
+
+.component-title .text-title-11 .text-subTitle-box p {
+	letter-spacing: 7px;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.component-title .text-title-11 .left-img {
+	width: 30.5px;
+	position: absolute;
+	bottom: -13px;
+	left: 8px;
+	z-index: 0;
+}
+
+.component-title .text-title-11 .right-img {
+	width: 17.5px;
+	position: absolute;
+	top: -7px;
+	left: 86px;
+	z-index: 0;
 }

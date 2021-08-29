@@ -130,7 +130,7 @@
 							<div class="bot">
 								<div class="content-price">
 									<div>¥<span>99.00</span></div>
-									<div class="content-num">￥139.00</div>
+									<div class="content-num">¥139.00</div>
 								</div>
 								<button class="layui-btn">去拼团</button>
 							</div>
@@ -152,7 +152,7 @@
 							<div class="bot">
 								<div class="content-price">
 									<div>¥<span>99.00</span></div>
-									<div class="content-num">￥139.00</div>
+									<div class="content-num">¥139.00</div>
 								</div>
 								<button class="layui-btn">去拼团</button>
 							</div>
@@ -174,7 +174,7 @@
 							<div class="bot">
 								<div class="content-price">
 									<div>¥<span>99.00</span></div>
-									<div class="content-num">￥139.00</div>
+									<div class="content-num">¥139.00</div>
 								</div>
 								<button class="layui-btn">去拼团</button>
 							</div>
@@ -193,12 +193,12 @@
 	<template slot="edit">
 		<template v-if="nc.lazyLoad">
 			<!-- <pintuan-list></pintuan-list> -->
-			<!-- <pintuan-style></pintuan-style> -->
+			<pintuan-style></pintuan-style>
 		</template>
 
 		<template v-if="nc.lazyLoad">
-			<!-- <pintuan-color v-if="nc.style == 1"></pintuan-color> -->
-			<!-- <change-type v-if="nc.style == 1"></change-type> -->
+			<pintuan-color v-if="nc.style == 4"></pintuan-color>
+			<!-- <change-type v-if="nc.style == 4"></change-type> -->
 		</template>
 
 		<div class="template-edit-title">
@@ -233,6 +233,10 @@
 						<img src="{$resourceurl}/pintuan/img/pintuan_style_3.png" />
 						<span class="layui-hide">风格三</span>
 					</div>
+					<!-- <div class="style-li-pintuan" v-bind:class="{'selected ns-border-color': nc.style == 4}">
+						<img src="{$resourceurl}/pintuan/img/pintuan_style_4.png" />
+						<span class="layui-hide">风格四</span>
+					</div> -->
 				</div>
 
 				<input type="hidden" name="style">

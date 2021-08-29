@@ -46,7 +46,7 @@
 								<div class="bot">
 									<div class="content-price">
 										<div>¥<span>99.00</span></div>
-										<div class="content-num">￥139.00</div>
+										<div class="content-num">¥139.00</div>
 									</div>
 									<button class="layui-btn">马上抢</button>
 								</div>
@@ -82,7 +82,7 @@
 							<div class="bot">
 								<div class="content-price">
 									<div>¥<span>99.00</span></div>
-									<div class="content-num">￥139.00</div>
+									<div class="content-num">¥139.00</div>
 								</div>
 								<button class="layui-btn">立即抢购</button>
 							</div>
@@ -106,7 +106,7 @@
 							<div class="bot">
 								<div class="content-price">
 									<div>¥<span>99.00</span></div>
-									<div class="content-num">￥139.00</div>
+									<div class="content-num">¥139.00</div>
 								</div>
 								<button class="layui-btn">立即抢购</button>
 							</div>
@@ -130,7 +130,7 @@
 							<div class="bot">
 								<div class="content-price">
 									<div>¥<span>99.00</span></div>
-									<div class="content-num">￥139.00</div>
+									<div class="content-num">¥139.00</div>
 								</div>
 								<button class="layui-btn">立即抢购</button>
 							</div>
@@ -191,7 +191,7 @@
 								<div class="content-price">
 									¥<span>99.00</span>
 								</div>
-								<div class="content-num">￥139.00</div>
+								<div class="content-num">¥139.00</div>
 							</div>
 						</div>
 						<div class="item">
@@ -203,7 +203,7 @@
 								<div class="content-price">
 									¥<span>99.00</span>
 								</div>
-								<div class="content-num">￥139.00</div>
+								<div class="content-num">¥139.00</div>
 							</div>
 						</div>
 						<div class="item">
@@ -215,7 +215,7 @@
 								<div class="content-price">
 									¥<span>99.00</span>
 								</div>
-								<div class="content-num">￥139.00</div>
+								<div class="content-num">¥139.00</div>
 							</div>
 						</div>
 					</div>
@@ -227,11 +227,11 @@
 
 	<!-- 编辑 -->
 	<template slot="edit">
-		<slide v-if="nc.style == 2 || nc.style == 3" v-bind:data="{ field : 'goodsCount', label: '商品数量', max: 9, min: 1}"></slide>
+		<!-- <slide v-if="nc.style == 2 || nc.style == 3" v-bind:data="{ field : 'goodsCount', label: '商品数量', max: 9, min: 1}"></slide> -->
 
 		<template v-if="nc.lazyLoad">
-			<!-- <seckill-style></seckill-style>
-			<seckill-color v-if="nc.style == 1"></seckill-color> -->
+			<seckill-style></seckill-style>
+			<!-- <seckill-color v-if="nc.style == 1"></seckill-color> -->
 			<!-- <seckill-change-type v-if="nc.style == 1"></seckill-change-type> -->
 		</template>
 

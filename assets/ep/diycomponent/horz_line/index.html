@@ -13,8 +13,8 @@
 
 		<color v-bind:data="{ field : 'color', label : '线条颜色', defaultcolor: '#000000' }"></color>
 
-		<div class="layui-form-item ns-icon-radio">
-			<label class="layui-form-label sm">线条样式</label>
+		<div class="form-group row ns-icon-radio">
+			<label class="col-sm-2 col-form-label sm">线条样式</label>
 			<div class="col-sm-10">
 				<span :class="{'layui-hide': nc.borderStyle!='solid'}">实线</span>
 				<span :class="{'layui-hide': nc.borderStyle!='dashed'}">虚线</span>

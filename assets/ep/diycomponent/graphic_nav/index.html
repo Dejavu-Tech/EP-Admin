@@ -5,6 +5,9 @@
 		<div class="preview-box" v-bind:style="{ background: nc.backgroundColor, marginTop : nc.marginTop + 'px', borderRadius: nc.navRadius == 'fillet' ? '5px' : '0px' }">
 			<template v-if="nc.lazyLoad">
 				<graphic-nav></graphic-nav>
+				<div class="navigation-indicator" v-if="(Math.ceil(nc.list.length/(nc.showType*2))>1)&&(nc.selectedTemplate =='imageNavigation')">
+					<span v-for="(item, index) in Math.ceil(nc.list.length/(nc.showType*2))" :key="index"></span>
+				</div>
 			</template>
 		</div>
 	</template>

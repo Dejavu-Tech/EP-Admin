@@ -1,7 +1,7 @@
 // 图文导航·组件
 var graphicNavPreviewHtml = '<div v-bind:id="id" class="graphic-nav">';
 		graphicNavPreviewHtml += '<div class="wrap" v-bind:style="{}">';
-			graphicNavPreviewHtml += '<div v-for="(item, index) in list" class="item" :style="{width: 333/data.showType + \'px\'}">';
+			graphicNavPreviewHtml += '<div v-for="(item, index) in list" v-if="index<data.showType*2" class="item" :style="{width: 333/data.showType + \'px\'}">';
 				graphicNavPreviewHtml += '<a href="javascript:;">';
 					graphicNavPreviewHtml += '<div v-show="data.selectedTemplate ==\'imageNavigation\'" style="width: 35px; height: 35px; line-height: 35px; display: inline-block;"><img style="max-width: 100%; max-height: 100%;" v-bind:src="item.imageUrl? $parent.$parent.changeImgUrl(item.imageUrl) : \'' + '' + "/assets/ep/images/diy/crack_figure.png" + '\'" /></div>';
 					graphicNavPreviewHtml += '<span v-show="item.title" v-bind:style="{ color: data.textColor, opacity: data.textColor ? 1 : 0, marginTop: data.selectedTemplate ==\'imageNavigation\' ? \'10px\' : \'\' }">{{item.title}}</span>';

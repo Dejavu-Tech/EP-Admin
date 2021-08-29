@@ -90,7 +90,7 @@
 	font-size: 13px;
 }
 
-.slider .graphic-nav-list .template-list .template-item {
+.slider .slider-list .template-list .template-item {
 	float: left;
 	text-align: center;
 	border: 1px solid #e5e5e5;
@@ -100,16 +100,16 @@
 	cursor: pointer;
 }
 
-.slider .graphic-nav-list .template-list .template-item img {
+.slider .slider-list .template-list .template-item img {
 	display: block;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul {
+.slider .slider-list>.template-edit-wrap>ul {
 	padding: 10px 0 10px 15px;
 	padding-top: 10px;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li {
+.slider .slider-list>.template-edit-wrap>ul>li {
 	padding: 10px;
 	background: #ffffff;
 	border: 1px dashed #e5e5e5;
@@ -117,38 +117,38 @@
 	margin-top: 16px;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li:first-child {
+.slider .slider-list>.template-edit-wrap>ul>li:first-child {
 	margin-top: 0;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li .content-block {
+.slider .slider-list>.template-edit-wrap>ul>li .content-block {
 	display: inline-block;
 	width: 71%;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li .content-block.textNavigation {
+.slider .slider-list>.template-edit-wrap>ul>li .content-block.textNavigation {
 	width: 100%;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li .content-block .layui-form-item {
+.slider .slider-list>.template-edit-wrap>ul>li .content-block .layui-form-item {
 	margin: 0;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li .content-block .layui-form-label {
+.slider .slider-list>.template-edit-wrap>ul>li .content-block .layui-form-label {
 	width: 60px;
 	padding: 9px 0;
 	line-height: 1;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li .content-block div {
+.slider .slider-list>.template-edit-wrap>ul>li .content-block div {
 	margin-top: 10px;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li .content-block div:last-child {
+.slider .slider-list>.template-edit-wrap>ul>li .content-block div:last-child {
 	margin-top: 0;
 }
 
-.slider .graphic-nav-list>.template-edit-wrap>ul>li:hover .del {
+.slider .slider-list>.template-edit-wrap>ul>li:hover .del {
 	display: block;
 }
 
