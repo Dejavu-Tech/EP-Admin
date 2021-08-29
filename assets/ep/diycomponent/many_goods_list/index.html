@@ -1,0 +1,91 @@
+
+<cm-construct v-bind:data="data[index]" class="many-goods-list">
+
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="goods-list-preview" v-bind:style="{ marginTop: nc.marginTop + 'px' }" style="padding: 0 15px;">
+			<template v-if="nc.style == 1">
+				<div class="goods-cate-list">
+					<template v-for="(item, index) in nc.list">
+						<div class="split-line" v-if="index > 0"></div>
+						<div class="goods-cate-item" :class="{'active': index == 0}">
+							<p>{{item.title}}</p>
+							<p :style="{background: index == 0 && item.desc ? nc.selectColor : ''}">{{item.desc}}</p>
+						</div>
+					</template>
+				</div>
+			</template>
+		</div>
+	</template>
+
+	<!-- 编辑 -->
+	<template slot="edit">
+		<!-- <div class="form-group row">
+			<label class="col-sm-2 col-form-label sm">名称</label>
+			<div class="col-sm-10">
+				<input type="text" v-model="nc.goodsGroupTitle" v-bind:id="'title_'+index" placeholder="请输入商品组名称" class="layui-input">
+			</div>
+		</div> -->
+
+		<template v-if="nc.lazyLoad">
+			<many-goods-list-style></many-goods-list-style>
+		</template>
+
+		<template v-if="nc.lazyLoad">
+			<many-goods-list></many-goods-list>
+		</template>
+
+		<div class="template-edit-title"><h3>其他设置</h3></div>
+		<slide v-bind:data="{ field : 'marginTop', label : '页面间距' }"></slide>
+
+		<!-- 商品组风格弹框 -->
+		<div class="goods-cate-style">
+			<div class="style-cate-goods layui-form">
+				<div class="style-cate-con-goods">
+					<div class="style-li-goods" v-bind:class="{'selected ns-border-color': nc.style == 1}">
+						<img src="{$resourceurl}/many_goods_list/img/cate_style_1.png" />
+					</div>
+				</div>
+
+				<input type="hidden" name="style">
+
+			</div>
+		</div>
+
+		<!-- 商品分类选择弹框 -->
+		<div class="goods-category-layer">
+			<notempty name="goods_category_list">
+				<div class="category-head">分类名称</div>
+				<div class="category-wrap">
+				<foreach name="goods_category_list" item="vo">
+					<div class="category-item" data-id="{$vo.id}">{$vo.name}</div>
+				</foreach>
+				</div>
+			</notempty>
+		</div>
+
+		<!-- 商品列表风格弹框 -->
+		<!-- <div class="goods-list-style">
+			<div class="style-list-goods layui-form">
+				<div class="style-list-con-goods">
+					<div class="style-li-goods" v-bind:class="{'selected ns-border-color': nc.style == 1}">
+						<img src="{$resourceurl}/many_goods_list/img/style3.png" />
+					</div>
+				</div>
+
+				<input type="hidden" name="style">
+
+			</div>
+		</div> -->
+	</template>
+
+	<!-- 资源 -->
+	<template slot="resource">
+		<js>
+		var goodsListResourcePath = "{$resourceurl}";
+		</js>
+		<css src="{$resourceurl}/many_goods_list/css/style.css"></css>
+		<js src="{$resourceurl}/many_goods_list/js/style.js"></js>
+	</template>
+
+</cm-construct>

@@ -1,0 +1,220 @@
+@CHARSET "UTF-8";
+
+.align-right {
+	text-align: right;
+}
+
+.lineheight-clear {
+	line-height: 1 !important;
+}
+
+/* 分类 */
+.many-goods-list .goods-cate-list {
+	display: flex;
+	align-items: center;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.many-goods-list .goods-cate-list .split-line {
+	width: 1px;
+	height: 15px;
+	background-color: #E5E5E5;
+	margin-right: calc((100% - 61px * 4) / 6);
+	margin-left: calc((100% - 61px * 4) / 6);
+}
+
+.many-goods-list .goods-cate-list .goods-cate-item {
+	width: 60px;
+	flex-shrink: 0;
+	text-align: center;
+}
+
+.many-goods-list .goods-cate-list .goods-cate-item p:first-child {
+	font-size: 16px;
+	color: #303133;
+	line-height: 1;
+}
+
+.many-goods-list .goods-cate-list .goods-cate-item p:nth-child(2) {
+	font-size: 12px;
+	color: #909399;
+	margin-top: 5px;
+	line-height: 18px;
+}
+
+.many-goods-list .goods-cate-list .goods-cate-item.active p:first-child {
+	font-weight: 600;
+}
+
+.many-goods-list .goods-cate-list .goods-cate-item.active p:nth-child(2) {
+	color: #FFFFFF;
+	border-radius: 10px;
+}
+
+
+/* 显示内容 */
+.goods-show-box .layui-input-inline {
+	padding-left: 20px;
+}
+
+.control-goods-list-small .control-goods-sellnum-abs {
+	position: absolute;
+	right: 5px;
+	bottom: 10px;
+	line-height: 25px;
+}
+
+/* 商品来源选择 */
+.source-selected {
+	display: flex;
+}
+
+.source-selected .source {
+	flex: 1;
+}
+
+.source-selected .source-item {
+	display: inline-block;
+	width: 50px;
+	height: 32px;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+	padding: 5px;
+	cursor: pointer;
+	background: #ffffff;
+	box-sizing: border-box;
+	border-right: 1px transparent solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.source-selected .source-item img {
+	display: inline-block;
+}
+
+.source-selected .source-item:last-child {
+	border-right: 1px solid #e5e5e5;
+}
+
+
+
+/* 商品列表风格 */
+.goods-list-style, .goods-cate-style {
+	display: none;
+}
+
+.style-list-con-goods, .style-cate-con-goods {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.style-list-con-goods .style-li-goods, .style-cate-con-goods .style-li-goods {
+	width: 32%;
+	height: 465px;
+	line-height: 465px;
+	margin-right: 2%;
+	margin-bottom: 15px;
+	cursor: pointer;
+	border: 1px solid #ededed;
+	background: #f7f8fa;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.style-cate-con-goods .style-li-goods {
+	height: 220px;
+	line-height: 220px;
+}
+
+.style-list-con-goods .style-li-goods:nth-child(3n),
+.style-cate-con-goods .style-li-goods:nth-child(3n) {
+	margin-right: 0;
+}
+
+.style-list-con-goods .style-li-goods img,
+.style-cate-con-goods .style-li-goods img {
+	width: 100%;
+}
+
+.goods-category-layer {
+	display: none;
+}
+
+
+.layui-layer-content .category-wrap .category-item,
+.layui-layer-content .category-head {
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ededed;
+	border-radius: 5px;
+	padding: 0 15px;
+	margin: 0 15px 10px 0;
+	box-sizing: border-box;
+	color: #666;
+	font-size: 12px;
+}
+
+.layui-layer-content .category-head {
+	background: #eee;
+	height: 40px;
+	line-height: 40px;
+}
+
+.layui-layer-content .category-wrap {
+	overflow-y: scroll;
+	height: calc(100% - 45px);
+}
+
+.layui-layer-content .category-wrap::-webkit-scrollbar {
+	display: none;
+}
+
+.layui-layer-content .category-wrap .category-item {
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* 编辑内容 */
+.many-goods-list-edit li {
+	border: 1px dashed #e5e5e5;
+	position: relative;
+	padding: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.many-goods-list-edit li:hover .content-block + .del {
+	display: inline-block;
+}
+
+.many-goods-list-edit .add-item {
+    padding: 10px;
+    border: 1px dashed #FF6A00;
+    margin: 16px 0 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.many-goods-list-edit .add-item i {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    font-style: normal;
+    margin-right: 10px;
+}
+
+.many-goods-list-edit .add-item span {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+}
+
+.many-goods-list-edit ul li .content-block + .del {
+	left: unset;
+	right: 10px;
+}

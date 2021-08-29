@@ -1,0 +1,32 @@
+<cm-construct v-bind:data="data[index]" v-bind:class="['single_img']">
+
+	<!-- 预览 -->
+	<template slot="preview">
+		<div class="preview-box" v-bind:style="{ background: nc.backgroundColor, marginTop : nc.marginTop + 'px' }">
+			<template v-if="nc.lazyLoad">
+				<single-img></single-img>
+			</template>
+		</div>
+	</template>
+	
+	<!-- 编辑 -->
+	<template slot="edit">
+	
+		<template v-if="nc.lazyLoad">
+			<single-img-list></single-img-list>
+		</template>
+		
+	</template>
+	
+	<!-- 资源 -->
+	<template slot="resource">
+		
+		<js>
+			var singleImgResourcePath = "{$resourceurl}";
+		</js>
+		<css src="{$resourceurl}/single_img/css/style.css"></css>
+		<js src="{$resourceurl}/single_img/js/style.js"></js>
+		
+	</template>
+
+</cm-construct>

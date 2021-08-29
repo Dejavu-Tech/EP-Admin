@@ -1,0 +1,208 @@
+@CHARSET "UTF-8";
+
+.single_img .edit-attribute .attr-wrap .restore-wrap .img-block.has-choose-image img {
+	width: 35px;
+	height: 35px;
+}
+
+
+/*单图片组件*/
+.single_img .preview-draggable .preview-box {
+	padding: 8px 0;
+	margin: 0 15px;
+	border-radius: 5px;
+}
+
+.single_img .preview-draggable ul {
+	overflow: hidden;
+	list-style: none;
+}
+
+.single_img .preview-draggable ul.horizontal-scroll {
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.single_img .preview-draggable ul.horizontal-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.single_img .preview-draggable li {
+	width: 50%;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.single_img .preview-draggable li img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.single_img .preview-draggable li:last-child {
+	border: 0;
+}
+
+.single_img .preview-draggable li span {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 20px;
+	display: block;
+	line-height: 20px;
+}
+
+/*.single_img .preview-draggable .graphic-nav{visibility: hidden;}*/
+.single_img .preview-draggable .graphic-nav>.wrap {
+	/* overflow-x: hidden;white-space: nowrap; background: #ffffff; */
+	display: flex;
+	/* justify-content: space-around; */
+	flex-wrap: wrap;
+	padding: 0 5px;
+}
+
+.single_img .preview-draggable .graphic-nav .item {
+	text-align: center;
+	float: none;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 8px 5px;
+}
+
+.single_img .preview-draggable .graphic-nav .item a {
+	display: block;
+}
+
+.single_img .preview-draggable .graphic-nav .item a img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.single_img .preview-draggable .graphic-nav .item a span {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	font-size: 13px;
+}
+
+.single_img .graphic-nav-list .template-list .template-item {
+	float: left;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+	margin-right: 20px;
+	padding: 5px;
+	background: #ffffff;
+	cursor: pointer;
+}
+
+.single_img .graphic-nav-list .template-list .template-item img {
+	display: block;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul {
+	padding: 10px 0 10px 15px;
+	padding-top: 10px;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li {
+	padding: 10px;
+	background: #ffffff;
+	border: 1px dashed #e5e5e5;
+	position: relative;
+	margin-top: 16px;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li:first-child {
+	margin-top: 0;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li .content-block {
+	display: inline-block;
+	width: 71%;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li .content-block.textNavigation {
+	width: 100%;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li .content-block .layui-form-item {
+	margin: 0;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li .content-block .layui-form-label {
+	width: 60px;
+	padding: 9px 0;
+	line-height: 1;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li .content-block div {
+	margin-top: 10px;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li .content-block div:last-child {
+	margin-top: 0;
+}
+
+.single_img .graphic-nav-list>.template-edit-wrap>ul>li:hover .del {
+	display: block;
+}
+
+.single_img .add-item {
+	padding: 10px;
+	border: 1px dashed #e5e5e5;
+	margin: 16px 0 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.single_img .add-item i {
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	font-size: 18px;
+	margin-right: 10px;
+	font-style: normal;
+}
+
+.single_img .add-item span {
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+}
+
+.single_img p.hint {
+	font-size: 12px;
+	color: #909399;
+	line-height: 20px;
+}
+
+.single_img .error-msg {
+	margin-top: 5px;
+	color: #f44;
+	display: none;
+}
+
+.single_img-list ul li {
+	margin-top: 15px;
+}
+
+.single-img-item img {
+	width: 100%;
+}
+
+.single_img .single-img-list>.template-edit-wrap>ul>li {
+    padding: 10px;
+    background: #ffffff;
+    border: 1px dashed #e5e5e5;
+    position: relative;
+    margin-top: 16px;
+}
+
+.single_img .single-img-list>.template-edit-wrap>ul>li:hover .del {
+    display: block;
+}
