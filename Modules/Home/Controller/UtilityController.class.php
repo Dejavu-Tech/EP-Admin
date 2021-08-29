@@ -93,6 +93,21 @@ class UtilityController extends CommonController{
 
 	    file_put_contents($image_dir.$file_name, $data);
 
+        //fileinfo 检测begin
+        $fip = finfo_open(FILEINFO_MIME_TYPE);
+        $min_result = finfo_file($fip , $image_dir.$file_name );
+        fclose( $fip );
+        $min_type_arr = array();
+        $min_type_arr[] = 'image/jpeg';
+        $min_type_arr[] = 'image/gif';
+        $min_type_arr[] = 'image/jpg';
+        $min_type_arr[] = 'image/png';
+        $min_type_arr[] = 'video/mp4';
+        if( !in_array($min_result , $min_type_arr ) )
+        {
+            die();
+        }
+
 	    $image = new \Think\Image();
 	    $image->open($image_dir.$file_name);
 	    //按照原图的比例生成一个最大为400*400的缩略图并保存为thumb.jpg, 实际会按比例自动缩放
@@ -328,6 +343,9 @@ class UtilityController extends CommonController{
 			{
 			    $where .= " and group_id = {$groupid} ";
 			}
+			if($groupid == 0 ){
+				$where .= " and group_id = -1 ";
+			}
 
 			if ($year || $month) {
 				$start_time = strtotime("{$year}-{$month}-01");
@@ -395,8 +413,7 @@ class UtilityController extends CommonController{
 			$ext = strtolower($ext);
 			$size = intval($_FILES['file']['size']);
 			$originname = $_FILES['file']['name'];
-
-
+            // fix 20210825
 			$upload = new \Think\Upload();// 实例化上传类
 
 			$upload->maxSize   =     31457280 ;// 设置附件上传大小
@@ -413,6 +430,19 @@ class UtilityController extends CommonController{
 			$filename = $dir.date('Y-m-d').'/'.$info['file']['savename'];
 
 			$fullname = ATTACHMENT_ROOT . $filename;
+			//ext
+			if($ext == 'mp4'){
+				if(filesize($fullname)>31457280){
+					$result['message'] = '上传失败, 上传的视频应不大于30M！';
+					die(json_encode($result));
+				}
+			}else{
+				if(filesize($fullname)>10485760){
+					$result['message'] = '上传失败, 上传的图片应不大于10M！';
+					die(json_encode($result));
+				}
+			}
+
 
 			//attachment_type
 
@@ -500,10 +530,18 @@ class UtilityController extends CommonController{
 
 	    RecursiveMkdir($image_dir);
 
+        $min_type_arr = array();
+        $min_type_arr[] = 'image/jpeg';
+        $min_type_arr[] = 'image/gif';
+        $min_type_arr[] = 'image/jpeg';
+        $min_type_arr[] = 'image/png';
+        $min_type_arr[] = 'video/mp4';
+
 
 	    $upload->autoSub   =	 false;
 	    $upload->maxSize   =     3145728 ;// 设置附件上传大小
 	    $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+	    $upload->mimes      =     $min_type_arr;// 设置附件上传类型
 	    $upload->rootPath  =	 $image_dir.'/';
 
 	    $info   =   $upload->upload();

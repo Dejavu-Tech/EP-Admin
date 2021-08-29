@@ -272,6 +272,51 @@ class PermController extends CommonController{
 		);
 	}
 
+	//小程序货到付款
+	protected function cashon_delivery()
+	{
+		return array(
+				'text'       => '小程序货到付款',
+				'application'     => array(
+						'index'   => '应用管理',
+				),
+				'mptradecomponts'     => array(
+						'config'   => '设置',
+
+				)
+		);
+	}
+
+    //小程序货到付款
+    protected function platformmobile_config()
+    {
+        return array(
+            'text'       => '平台手机端',
+            'application'     => array(
+                'index'   => '应用管理',
+            ),
+            'platformmobile'     => array(
+                'config'   => '设置',
+
+            )
+        );
+    }
+
+	//小程序万能表单
+	protected function allform_config()
+	{
+		return array(
+				'text'       => '小程序万能表单',
+				'application'     => array(
+						'index'   => '应用管理',
+				),
+				'mptradecomponts'     => array(
+						'index'   => '表单列表',
+						'config'   => '表单设置',
+				)
+		);
+	}
+
 	protected function perm_delivery()
 	{
 		return array(
@@ -450,6 +495,7 @@ class PermController extends CommonController{
 			'virtualcard' => array(
                 'index'   => '礼品卡管理',
 				'exchange_code'   => '兑换码管理',
+				'exchange_offline'   => '线下兑换码',
 				'orderlist'   => '订单管理',
 				'exchangerecord'   => '兑换记录',
 				'config'   => '活动设置',
@@ -481,6 +527,9 @@ class PermController extends CommonController{
 						'article' => $this->perm_article(),
 						//'application' => $this->application_group(),
 						'mptradecomponts' => $this->mptrade_group(),
+						'cashondelivery' => $this->cashon_delivery(),
+						'platformmobile_config' => $this->platformmobile_config(),
+						'allform' => $this->allform_config(),
 						'delivery' => $this->perm_delivery(),
 						'reports' => $this->perm_data_static(),
 						'group' => $this->perm_group(),

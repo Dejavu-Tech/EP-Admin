@@ -434,7 +434,16 @@ class OrderController extends CommonController{
 
 					}
 
-					$city_info = M('eaterplanet_ecommerce_area')->where("name like '%{$city}%'")->find();
+					//$city_info = M('eaterplanet_ecommerce_area')->where("name like '%{$city}%'")->find();
+
+                    $guding_arr = ['鞍山市'];
+
+                    if( in_array($city , $guding_arr) )
+                    {
+                        $city_info = M('eaterplanet_ecommerce_area')->where("name = '{$city}'")->find();
+                    }else{
+                        $city_info = M('eaterplanet_ecommerce_area')->where("name like '%{$city}%'")->find();
+                    }
 
 					if( !empty($city_info))
 					{
@@ -739,6 +748,7 @@ class OrderController extends CommonController{
 
 		$this->commiss_info  =$commiss_info;
 		$this->commiss_state = $commiss_state;
+		$this->payment_code = $item['payment_code'];
 
 		if ( IS_POST ) {
 
@@ -1516,10 +1526,7 @@ class OrderController extends CommonController{
 				array('title' => '订单流水号', 'field' => 'day_paixu', 'width' => 24, 'sort' => 0, 'is_check' => 1),
 				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 24, 'sort' => 0, 'is_check' => 1),
 				array('title' => '客户昵称', 'field' => 'name', 'width' => 12, 'sort' => 0, 'is_check' => 1),
-
-
-            array('title' => '客户手机号', 'field' => 'telephone', 'width' => 12, 'sort' => 0, 'is_check' => 1),
-
+                                array('title' => '客户手机号', 'field' => 'telephone', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 				array('title' => '客户备注', 'field' => 'member_content', 'width' => 24, 'sort' => 0, 'is_check' => 1),
 				array('title' => '收货姓名(或自提人)', 'field' => 'shipping_name', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 
@@ -1535,7 +1542,7 @@ class OrderController extends CommonController{
 				array('title' => '商品数量', 'field' => 'quantity', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 				array('title' => '支付方式', 'field' => 'paytype', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 				array('title' => '配送方式', 'field' => 'delivery', 'width' => 12, 'sort' => 0, 'is_check' => 1),
-
+				array('title' => '预计送达时间', 'field' => 'expected_delivery_time', 'width' => 12, 'sort' => 0, 'is_check' => 1),
 				array('title' => '团长配送送货详细地址', 'field' => 'tuan_send_address', 'width' => 22, 'sort' => 0, 'is_check' => 1),
 
 				array('title' => '商品规格', 'field' => 'goods_optiontitle', 'width' => 12, 'sort' => 0, 'is_check' => 1),
@@ -1701,7 +1708,7 @@ class OrderController extends CommonController{
 		foreach($order_goods as $key => $value)
 		{
 			// eaterplanet_community_head_commiss_order
-
+			$value['name'] = htmlspecialchars_decode(stripslashes($value['name']));
 			$head_commission_order_info = M('eaterplanet_community_head_commiss_order')->where( array('order_goods_id' => $value['order_goods_id'],'order_id' => $item['order_id']) )->select();
 
 			if( !empty($head_commission_order_info) )
@@ -2079,6 +2086,9 @@ class OrderController extends CommonController{
 
         //礼品卡end
 
+		//订单表单信息
+		$order_form_data = D('Home/Allform')->getOrderFormInfo($id, $item['member_id']);
+		$this->order_form_data = $order_form_data;
 
 		$is_order_note_open = D('Home/Front')->get_config_by_name('order_note_open');
 

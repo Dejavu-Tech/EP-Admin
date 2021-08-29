@@ -499,6 +499,24 @@ class GoodsController extends CommonController {
 
 		RecursiveMkdir($destination_folder);
 
+        //fileinfo 检测begin
+        $fip = finfo_open(FILEINFO_MIME_TYPE);
+        $min_result = finfo_file($fip , $_FILES['upfile']['tmp_name']);
+        fclose( $fip );
+        $min_type_arr = array();
+        $min_type_arr[] = 'image/jpeg';
+        $min_type_arr[] = 'image/gif';
+        $min_type_arr[] = 'image/jpg';
+        $min_type_arr[] = 'image/png';
+        $min_type_arr[] = 'video/mp4';
+
+
+        if( !in_array($min_result , $min_type_arr ) )
+        {
+            die();
+        }
+        //fileinfo 检测end
+
         if (!is_uploaded_file($_FILES["upfile"]['tmp_name']))
         //是否存在文件
         {

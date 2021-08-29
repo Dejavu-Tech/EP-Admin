@@ -66,7 +66,7 @@ class CommunityController extends CommonController {
 		$where .= ' and o.order_status_id = 4 ';
 
 
-		$sql = "select o.order_id,o.order_num_alias,o.date_added,o.delivery,o.is_pin,o.is_zhuli,o.shipping_fare,o.voucher_credit,o.store_id,o.total,o.order_status_id,o.lottery_win,o.type,os.name as status_name,o.shipping_name,o.shipping_tel "
+		$sql = "select o.order_id,o.order_num_alias,o.date_added,o.delivery,o.is_pin,o.is_zhuli,o.shipping_fare,o.voucher_credit,o.store_id,o.total,o.order_status_id,o.lottery_win,o.type,os.name as status_name,o.shipping_name,o.shipping_tel,o.payment_code "
 			 . " from ".C('DB_PREFIX')."eaterplanet_ecommerce_order as o ,
                 ".C('DB_PREFIX')."eaterplanet_ecommerce_order_status as os
 	                    where     o.delivery != 'express' and o.delivery != 'hexiao' and o.order_status_id = os.order_status_id {$where}
@@ -254,6 +254,12 @@ class CommunityController extends CommonController {
 			}
 
 			$val['total'] = round($val['total'],2);
+
+			//货到付款订单
+			if($val['payment_code'] == 'cashon_delivery'){
+				$val['cashondelivery_code_img'] = D('Home/Front')->getCashonDeliveryCode();
+			}
+
 	        $list[$key] = $val;
 	    }
 

@@ -49,7 +49,8 @@ class IndexController extends CommonController {
 
 	public function test()
 	{
-	    $order_id = 4042;
+	    echo get_client_ip();
+	    die();
 		$order_info = D('Home/EpOrder')->getOrderGoodsByOrderId( $order_id );
 
 		var_dump( $order_info );
@@ -2781,21 +2782,43 @@ class IndexController extends CommonController {
 		if($index_diy_json) {
 			$data = unserialize($index_diy_json);
 			$diyData = htmlspecialchars_decode($data['value']);
-			$diyDataJson = json_decode($diyData, true);
 
-			$diyJson = $diyDataJson['value'];
+			if(!$diyData) {
+				$newdata = D('Seller/Diydata')->get_all_config();
+				if(!empty($newdata)) $diyJson = $newdata;
 
-			if(!empty($diyJson)) {
-				foreach($diyJson as $k=>$v) {
-					$v['host'] = $this->staticHost();
-					if($v['type']=="RICH_TEXT") {
-						$v['html'] = $this->replaceRichtextImgSrc($v['html']);
+				if(!empty($diyJson)) {
+					foreach($diyJson as $k=>$v) {
+						$v->host = $this->staticHost();
+						if($v->type=="RICH_TEXT") {
+							$v->html= $this->replaceRichtextImgSrc($v->html);
+						}
+						$diyJson[$k] = $v;
 					}
-					$diyJson[$k] = $v;
+				}
+
+				if($data) {
+					$global = json_decode(htmlspecialchars_decode($data["global"]));
+					// var_dump($global);die();
+				}
+			} else {
+				$diyDataJson = json_decode($diyData, true);
+
+				$diyJson = $diyDataJson['value'];
+				$global = $diyDataJson['global'];
+
+				if(!empty($diyJson)) {
+					foreach($diyJson as $k=>$v) {
+						$v['host'] = $this->staticHost();
+						if($v['type']=="RICH_TEXT") {
+							$v['html'] = $this->replaceRichtextImgSrc($v['html']);
+						}
+						$diyJson[$k] = $v;
+					}
 				}
 			}
 
-			echo json_encode( array('code' => 0, 'global' => $diyDataJson['global'], 'diyJson' => $diyJson ) );
+			echo json_encode( array('code' => 0, 'global' => $global, 'diyJson' => $diyJson ) );
 			die();
 		} else {
 			echo json_encode( array('code' => 1, 'msg' => 'DIY页面未设置' ) );

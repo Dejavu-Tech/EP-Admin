@@ -360,7 +360,7 @@ class OrderController extends CommonController {
 		$vi = 0;
 	    foreach($order_goods_list as $key => $order_goods)
 	    {
-	    	$order_goods['name'] = htmlspecialchars_decode($order_goods['name']);
+	    	$order_goods['name'] = htmlspecialchars_decode(stripslashes($order_goods['name']));
 			$order_refund_goods = M('eaterplanet_ecommerce_order_refund')->where( array('order_id' =>$order_id,'order_goods_id' => $order_goods['order_goods_id'] ) )->order('ref_id desc')->find();
 
 			if(!empty($order_refund_goods))
@@ -455,7 +455,12 @@ class OrderController extends CommonController {
 				}
 			}
 
-
+			//无售后期
+			$open_aftersale = D('Home/Front')->get_config_by_name('open_aftersale');
+			if( empty($open_aftersale) )
+			{
+				$order_goods['is_statements_state'] = 1;
+			}
 			//ims_
 
 			$goods_info = M('eaterplanet_ecommerce_goods')->field('productprice as price')->where( array('id' => $order_goods['goods_id']) )->find();
@@ -724,6 +729,36 @@ class OrderController extends CommonController {
 			$delivery_tuanzshipping_name = D('Home/Front')->get_config_by_name('delivery_tuanzshipping_name' );
 			$order_info['delivery_name'] = $delivery_tuanzshipping_name?$delivery_tuanzshipping_name:'团长配送';
 		}
+		$pin_rebate = [];
+		//拼团获取返利信息
+		if($order_info['type'] == 'pintuan'){
+			$pin_rebate['reward_amount'] = 0;
+			$pin_rebate['rebate_reward'] = 0;
+
+			$pin_order = M('eaterplanet_ecommerce_pin_order')->where( array('order_id' => $order_id ) )->find();
+			//获取拼团信息
+			$pin_info = M('eaterplanet_ecommerce_pin')->where( array('pin_id' =>$pin_order['pin_id']  ) )->find();
+
+			if($pin_info['is_pintuan_rebate'] == 1){
+				if($pin_info['rebate_reward'] == 1){//积分
+					$integral_flow = M('eaterplanet_ecommerce_member_integral_flow')->where( array('order_id' => $order_id,'type'=>'pintuan_rebate') )->find();
+					if(!empty($integral_flow)){
+						$pin_rebate['reward_amount'] = $integral_flow['score'];
+						$pin_rebate['rebate_reward'] = 1;
+					}
+				}else if($pin_info['rebate_reward'] == 2){//余额
+					$charge_flow = M('eaterplanet_ecommerce_member_charge_flow')->where( array('trans_id' => $order_id,'state'=>21) )->find();
+					if(!empty($charge_flow)){
+						$pin_rebate['reward_amount'] = $charge_flow['money'];
+						$pin_rebate['rebate_reward'] = 2;
+					}
+				}
+			}
+		}
+
+		//获取订单表单信息
+		$order_form = D('Home/Allform')->getOrderFormInfo($order_id, $member_id);
+		$need_data['order_form'] = $order_form;
 
 		$need_data['order_info'] = $order_info;
 		$need_data['order_status_info'] = $order_status_info;
@@ -733,6 +768,7 @@ class OrderController extends CommonController {
 		$need_data['order_goods_list'] = $order_goods_list;
 
 		$need_data['goods_count'] = count($order_goods_list);
+		$need_data['pin_rebate'] = $pin_rebate;
 
 		//$order_info['order_status_id'] 13  平台介入退款
 		$order_refund_historylist = array();
@@ -1435,7 +1471,7 @@ class OrderController extends CommonController {
 			//$where .= ' and o.type != "ignore" ';
 		}
 
-	    $sql = "select o.order_id,o.order_num_alias,o.date_added,o.delivery,o.is_pin,{$fields} o.is_zhuli,o.packing_fare,o.shipping_fare,o.shipping_tel,o.shipping_name,o.voucher_credit,o.score_for_money,o.fullreduction_money,o.store_id,o.total,o.order_status_id,o.lottery_win,o.type,os.name as status_name,o.ziti_mobile,o.localtown_add_shipping_fare,o.fare_shipping_free,o.third_distribution_type "
+	    $sql = "select o.order_id,o.order_num_alias,o.date_added,o.delivery,o.is_pin,{$fields} o.is_zhuli,o.packing_fare,o.shipping_fare,o.shipping_tel,o.shipping_name,o.voucher_credit,o.score_for_money,o.fullreduction_money,o.store_id,o.total,o.order_status_id,o.lottery_win,o.type,os.name as status_name,o.ziti_mobile,o.localtown_add_shipping_fare,o.fare_shipping_free,o.third_distribution_type,o.payment_code "
 			 . " from ".C('DB_PREFIX')."eaterplanet_ecommerce_order as o {$left_join}, {$join}
                 ".C('DB_PREFIX')."eaterplanet_ecommerce_order_status as os ".$sqlcondition."
 	                    where   o.order_status_id = os.order_status_id {$where}
@@ -2368,6 +2404,11 @@ class OrderController extends CommonController {
 		$order_info['receive_date'] = date('Y-m-d H:i:s', $order_info['receive_time']);
 
 		if($is_share==1){ $order_info['shipping_tel'] = substr_replace($order_info['shipping_tel'],'****',3,4); }
+
+		//货到付款订单
+		if($order_info['payment_code'] == 'cashon_delivery'){
+			$order_info['cashondelivery_code_img'] = D('Home/Front')->getCashonDeliveryCode();
+		}
 
 		$need_data['order_info'] = $order_info;
 		$need_data['order_status_info'] = $order_status_info;

@@ -2548,6 +2548,7 @@ class CommunityheadController extends CommonController {
 		    $data['head_name'] = I('request.head_name');
 		    $data['head_mobile'] = I('request.head_mobile');
 		    $data['community_name'] = I('request.community_name');
+		    $data['head_doorphoto'] = save_media(I('request.head_doorphoto'));
 		    $data['wechat'] = I('request.wechat');
 			$province_id = I('request.province_id');
 		    $data['province_id'] = D('Seller/Area')->get_area_id_by_name($province_id);

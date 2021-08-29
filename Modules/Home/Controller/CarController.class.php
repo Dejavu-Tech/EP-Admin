@@ -547,6 +547,22 @@ class CarController extends CommonController {
             }
         }
 
+		//团长休息
+		$community_id = $gpc['community_id'];
+		$group_name = D('Home/Front')->get_config_by_name('group_name');
+		if( isset($community_id) && $community_id > 0 )
+		{
+			$is_can_buy = D('Seller/Communityhead')-> check_goods_can_community($gpc['goods_id'], $community_id);
+
+			if( !$is_can_buy )
+			{
+				$json['code'] =6;
+				$json['msg']='此商品在您所属'.$group_name.'不可参与!';
+				echo json_encode($json);
+				die();
+			}
+			// is_all_sale
+		}
 
 		$is_just_addcar = empty($data['is_just_addcar']) ? 0: 1;
 
@@ -2065,7 +2081,16 @@ class CarController extends CommonController {
 
 		}
 
-		$city_info = M('eaterplanet_ecommerce_area')->where("name like '%{$cityName}%'")->find();
+        $guding_arr = ['鞍山市'];
+
+        if( in_array($cityName , $guding_arr) )
+        {
+            $city_info = M('eaterplanet_ecommerce_area')->where("name = '{$cityName}'")->find();
+        }else{
+            $city_info = M('eaterplanet_ecommerce_area')->where("name like '%{$cityName}%'")->find();
+        }
+
+		//$city_info = M('eaterplanet_ecommerce_area')->where("name like '%{$cityName}%'")->find();
 
 		if( !empty($city_info))
 		{
@@ -3591,6 +3616,13 @@ class CarController extends CommonController {
 			$is_need_subscript = 1;
 		}
 
+	//下单万能表单
+	$need_data['allform'] = D('Home/Allform')->getOrderForms();
+
+	//判断是否使用货到付款
+	$cashondelivery_data = D('Home/Front')->getCashonDeliveryAction($buy_type, $seller_goodss);
+	$need_data['cashondelivery_data'] = $cashondelivery_data;
+
 	//订阅消息end
 	$need_data['is_need_subscript'] = $is_need_subscript;
 	$need_data['need_subscript_template'] = $need_subscript_template;
@@ -3649,6 +3681,9 @@ public function sub_order()
 	$member_id = $weprogram_token['member_id'];
 
 	$pintuan_model_buy = D('Home/Front')->get_config_by_name('pintuan_model_buy');
+
+	$allform_id = $gpc['allform_id'];
+	$allform_list = $gpc['allform_list'];
 
 	if( empty($pintuan_model_buy) || $pintuan_model_buy ==0 )
 	{
@@ -3758,7 +3793,8 @@ public function sub_order()
 	$data_s['ziti_mobile'] = $gpc['ziti_mobile'];
 	$data_s['tuan_send_address'] = $gpc['tuan_send_address'];
 	$data_s['ck_yupay'] = $gpc['ck_yupay'];
-
+	//是否货到付款
+	$data_s['cashon_delivery'] = $gpc['cashon_delivery'];
 
 
 	$data_s['province_name'] = isset($gpc['province_name']) ? $gpc['province_name']:'' ;
@@ -3834,7 +3870,7 @@ public function sub_order()
 
 
 	$ck_yupay = $data_s['ck_yupay'];
-
+	$cashon_delivery = $data_s['cashon_delivery'];
 	if($dispatching == 'express')
 	{
 		$data_s['address_id'] = $this->_add_address($token,$ziti_name,$ziti_mobile,$province_name,$city_name, $country_name,$address_name);
@@ -3919,7 +3955,7 @@ public function sub_order()
 
 	//收货人
 	$addr_param = array();
-
+	$addr_param[':uniacid'] = $_W['uniacid'];
 	$addr_param[':member_id'] = $member_id;
 
 	//$addr_sql = "select * from ".tablename('eaterplanet_ecommerce_address')." where uniacid=:uniacid and member_id=:member_id order by  is_default desc,address_id desc limit 1";
@@ -4011,6 +4047,32 @@ public function sub_order()
             }
         }
         //检测是否场景符合end
+	}
+
+	//判断是否可以货到付款
+	if($cashon_delivery == 1){
+		$cashondelivery_data = D('Home/Front')->getCashonDeliveryAction($buy_type, $seller_goodss);
+		if($cashondelivery_data['isopen_cashondelivery'] == 1){
+			if($dispatching == 'express' && $cashondelivery_data['isopen_cashondelivery_express'] == 0){
+				echo json_encode( array('code' => 3,'msg' => '货到付款未开启' ) );
+				die();
+			}else if($dispatching == 'tuanz_send' && $cashondelivery_data['isopen_cashondelivery_communityhead'] == 0){
+				echo json_encode( array('code' => 3,'msg' => '货到付款未开启' ) );
+				die();
+			}else if($dispatching == 'localtown_delivery' && $cashondelivery_data['isopen_cashondelivery_localtown'] == 0){
+				echo json_encode( array('code' => 3,'msg' => '货到付款未开启' ) );
+				die();
+			}else if($dispatching == 'hexiao' && $cashondelivery_data['isopen_cashondelivery_hexiao'] == 0){
+				echo json_encode( array('code' => 3,'msg' => '货到付款未开启' ) );
+				die();
+			}else if($dispatching == 'pickup' && $cashondelivery_data['isopen_cashondelivery_ziti'] == 0){
+				echo json_encode( array('code' => 3,'msg' => '货到付款未开启' ) );
+				die();
+			}
+		}else{
+			echo json_encode( array('code' => 3,'msg' => '货到付款未开启' ) );
+			die();
+		}
 	}
 
 	//....看看有没有满多少才能下单begin
@@ -4850,7 +4912,9 @@ public function sub_order()
 
 		}
         $data['buy_type'] = $buy_type;//判断预售使用
-
+		//万能表单数据
+		$data['allform_id'] = $allform_id;
+		$data['allform_list'] = $allform_list;
 
 		$oid=  D('Home/Frontorder')->addOrder($data);// D('Order')->addOrder($data);
 
@@ -4972,6 +5036,9 @@ public function sub_order()
 		{
 			//余额支付独立方法
 			D('Home/OrderV2')->carOrderYuerPay( $order_all_id, $order ,$pay_total , $ck_yupay ,$buy_type, $is_integral, $is_spike , $is_just_1 );
+		}else if($buy_type == 'dan' && $cashon_delivery == 1){//货到付款订单
+			//货到付款支付独立方法
+			D('Home/OrderV2')->carOrderCashonPay( $order_all_id, $order ,$pay_total , $cashon_delivery , $buy_type , $is_spike , $is_just_1);
 		}
 		else if( isset($is_open_yinpay) && $is_open_yinpay == 3 )
 		{
@@ -5056,6 +5123,8 @@ public function sub_order()
 		    $array = xml($xml);
 
 		    if($array['RETURN_CODE'] == 'SUCCESS' && $array['RESULT_CODE'] == 'SUCCESS'){
+
+				D('Home/Pin')->insertNotifyOrder($order['order_id']);
 
 				$time = time();
 				$tmp=array();
@@ -5170,6 +5239,7 @@ public function sub_order()
 			$array = xml($xml);
 
 			if($array['RETURN_CODE'] == 'SUCCESS' && $array['RESULT_CODE'] == 'SUCCESS'){
+				D('Home/Pin')->insertNotifyOrder($order['order_id']);
 				$time = time();
 				$tmp=array();
 				$tmp['appId'] = $appid;

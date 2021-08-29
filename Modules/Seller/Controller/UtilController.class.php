@@ -79,6 +79,8 @@ class UtilController extends CommonController{
 					array('name' => '直播列表', 'title' => "LIVE_INDEX", 'url' => '/eaterplanet_ecommerce/moduleB/live/index', 'url_wxapp' => '/eaterplanet_ecommerce/moduleB/live/index'),
                     array('name' => '商品预售', 'title' => "PRESALE_INDEX", 'url' => '/eaterplanet_ecommerce/moduleB/presale/index', 'url_wxapp' => '/eaterplanet_ecommerce/moduleB/presale/index'),
                     array('name' => '礼品卡中心', 'title' => "VIRTUALCARD_INDEX", 'url' => '/eaterplanet_ecommerce/moduleB/virtualcard/index', 'url_wxapp' => '/eaterplanet_ecommerce/moduleB/virtualcard/index'),
+                    array('name' => '分销中心', 'title' => "DISTRIBUTION_CENTER", 'url' => '/eaterplanet_ecommerce/distributionCenter/pages/me', 'url_wxapp' => '/eaterplanet_ecommerce/distributionCenter/pages/me'),
+                    array('name' => '邀请有礼', 'title' => "INVITE_INDEX", 'url' => '/eaterplanet_ecommerce/moduleB/invite/index', 'url_wxapp' => '/eaterplanet_ecommerce/moduleB/invite/index'),
 				)
             )
         );

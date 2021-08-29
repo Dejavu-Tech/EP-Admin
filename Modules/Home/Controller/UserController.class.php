@@ -2079,7 +2079,7 @@ class UserController extends CommonController {
 
 				$value['addtime'] = date('Y-m-d H:i:s', $value['addtime']);
 
-				if( in_array($value['type'], array('goodsbuy','refundorder','orderbuy') ))
+				if( in_array($value['type'], array('goodsbuy','refundorder','orderbuy','pintuan_rebate') ))
 				{
 					$od_info = M('eaterplanet_ecommerce_order')->field('order_num_alias')->where( array('order_id' => $value['order_id'] ) )->find();
 
@@ -2149,8 +2149,8 @@ class UserController extends CommonController {
 
 	    $list = array();
 
-		$sql = 'select * from  '.C('DB_PREFIX')."eaterplanet_ecommerce_member_charge_flow
-			where member_id = ".$member_id."  and state in (1,3,4,5,8,9,10,11,12,20) order by id desc limit {$offset},{$per_page}";
+		$sql = 'select * from  '.C('DB_PREFIX')."eaterplanet_ecommerce_member_charge_flow  
+			where member_id = ".$member_id."  and state in (1,3,4,5,8,9,10,11,12,20,21) order by id desc limit {$offset},{$per_page}";
 
 		$list = M()->query($sql);
 
@@ -2160,7 +2160,7 @@ class UserController extends CommonController {
 			{
 				$value['current_yuer'] = $value['operate_end_yuer'];
 				$value['charge_time'] = date('Y-m-d H:i:s', $value['charge_time']);
-				if($value['state'] == 3  || $value['state'] == 4)
+				if($value['state'] == 3  || $value['state'] == 4 || $value['state'] == 21)
 				{
 					$od_info = M('eaterplanet_ecommerce_order')->field('order_num_alias')->where( array('order_id' => $value['trans_id'] ) )->find();
 
@@ -2315,6 +2315,9 @@ class UserController extends CommonController {
 			}else{
 				$member_info['is_hexiao_member'] = 0;
 			}
+
+			$is_show_member_id = D('Home/Front')->get_config_by_name('is_show_member_id');
+			$member_info['is_show_member_id'] = $is_show_member_id;
 
 			$supp_info = M('eaterplanet_ecommerce_supply')->where( array('member_id' => $member_id) )->find();
 
@@ -2584,6 +2587,30 @@ class UserController extends CommonController {
 		$is_open_invite_invitation = D('Home/Front')->get_config_by_name('is_invite_open_status');
 		$is_open_invite_invitation = !empty($is_open_invite_invitation) ? $is_open_invite_invitation : 0;
 		$result['is_open_invite_invitation'] = $is_open_invite_invitation;
+
+		//end
+
+        //判断是否开启平台入口
+        $isopen_admin_managefront = D('Home/Front')->get_config_by_name('isopen_admin_managefront');
+        $isopen_admin_managefront = isset($isopen_admin_managefront) ? $isopen_admin_managefront : 0;
+        if($isopen_admin_managefront == 1)
+        {
+            //检测是否平台管理员
+            $platform_admin_member = D('Home/Front')->get_config_by_name('platform_admin_member');
+
+            $platform_admin_member_arr = explode(',', $platform_admin_member );
+            if( !empty($platform_admin_member_arr) &&  in_array( $member_id , $platform_admin_member_arr ) )
+            {
+                $isopen_admin_managefront = 1;
+            }else{
+                $isopen_admin_managefront = 0;
+            }
+        }
+
+        $result['isopen_admin_managefront'] = $isopen_admin_managefront;
+
+        //end..
+
 
 		echo json_encode(  $result );
 		die();
@@ -3545,5 +3572,55 @@ class UserController extends CommonController {
 			echo json_encode( array('code' =>0, 'list' => $result_list) );
 		}
 
+	}
+
+	/**
+	 * 获取用户真实姓名和手机号
+	 */
+	public function get_realname_tel() {
+		$_GPC = I('request.');
+		$token = $_GPC['token'];
+
+		$weprogram_token = M('eaterplanet_ecommerce_weprogram_token')->field('member_id')->where( array('token' => $token) )->find();
+		if(empty($weprogram_token) || empty($weprogram_token['member_id']))
+		{
+			echo json_encode( array('code' => 1) );
+			die();
+		}
+		$member_id = $weprogram_token['member_id'];
+
+		$member_info = M('eaterplanet_ecommerce_member')->field('realname,telephone')->where( array('member_id' => $member_id) )->find();
+
+		$result = array('code' => 0, 'data' =>$member_info);
+		echo json_encode($result);
+		die();
+	}
+
+	public function update_realname_tel() {
+		$_GPC = I('request.');
+		$token = $_GPC['token'];
+
+		$weprogram_token = M('eaterplanet_ecommerce_weprogram_token')->field('member_id')->where( array('token' => $token) )->find();
+		if(empty($weprogram_token) || empty($weprogram_token['member_id']))
+		{
+			echo json_encode( array('code' => 1) );
+			die();
+		}
+		$member_id = $weprogram_token['member_id'];
+		$result['code'] = 2;
+
+		$param = array();
+		$param['realname'] = $_GPC['realname'];
+		$param['telephone'] = $_GPC['telephone'];
+
+		if( $member_id ){
+			M('eaterplanet_ecommerce_member')->where(  array('member_id' => $member_id) )->save($param);
+			$result['code'] = 0;
+		} else {
+			$result['message'] = "用户不存在";
+		}
+
+		echo json_encode($result);
+		die();
 	}
 }

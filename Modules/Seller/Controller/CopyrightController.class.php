@@ -149,7 +149,10 @@ class CopyrightController extends CommonController{
 
 			$param['user_tool_icons']['i10'] = trim($data['user_tool_icon10']);
 			$param['user_tool_icons']['i11'] = trim($data['user_tool_icon11']);
-
+			$param['user_tool_icons']['i12'] = trim($data['user_tool_icon12']);
+			$param['user_tool_icons']['i13'] = trim($data['user_tool_icon13']);
+			$param['user_tool_icons']['i14'] = trim($data['user_tool_icon14']);
+			$param['user_tool_icons']['i15'] = trim($data['user_tool_icon15']);
 			$param['user_tool_icons'] = serialize($param['user_tool_icons']);
 			$param['user_tool_showtype'] = $data['user_tool_showtype'];
 

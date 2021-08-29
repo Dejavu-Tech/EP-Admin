@@ -458,8 +458,9 @@ class UserController extends CommonController{
 		foreach( $list as $key => $val )
 		{
 			$val['add_time'] = date('Y-m-d H:i:s',$val['add_time'] );
-
-            $val['trans_id'] = '--';
+			if($val['state'] != 21){
+				$val['trans_id'] = '--';
+			}
 			if($val['state'] == 3 || $val['state'] == 4)
 			{
 
