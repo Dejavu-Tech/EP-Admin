@@ -2,7 +2,7 @@
 namespace Home\Model;
 
 /**
- * 拼团模型模型
+ * 拼团模型
  * @author Albert.Z
  *
  */

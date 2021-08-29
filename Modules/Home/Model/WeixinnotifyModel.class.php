@@ -304,7 +304,7 @@ class WeixinnotifyModel {
                 if( $order_info['order_status_id'] == 15 )
                 {
                     //预售第一次付款
-                    $template_data['thing7'] = array('value' => '预售订单下单成功!' );
+                    $template_data['thing7'] = array('value' => '预售订单下单成功，待支付尾款!' );
                 }
 
 
@@ -326,7 +326,7 @@ class WeixinnotifyModel {
                 if( $order_info['order_status_id'] == 15 )
                 {
                     //预售第一次付款
-                    $remark = array('value' => '预售订单下单成功!' );
+                    $remark = '预售订单下单成功，待支付尾款!';
                 }
 
                 $wx_template_data = array(
@@ -356,7 +356,7 @@ class WeixinnotifyModel {
 
 
             //客户下单成功发送公众号提醒给客户
-
+/*
             $rember_send_info =array();
             $weixin_appid = D('Home/Front')->get_config_by_name('weixin_appid');
             $weixin_template_order_buy = D('Home/Front')->get_config_by_name('weixin_template_order_buy');
@@ -403,7 +403,7 @@ class WeixinnotifyModel {
 
 
             $res =  D('Seller/User')->send_wxtemplate_msg(array() ,$url,$head_pathinfo,$weopenid['we_openid'],$template_id,$mnzember_formid_info['formid'], 0,$rember_send_info);
-
+*/
 
             //客户下单成功发送公众号提醒给团长  weixin_template_order_buy
 
@@ -419,16 +419,22 @@ class WeixinnotifyModel {
 
 
 
-                if( !empty($weixin_appid) && !empty($weixin_template_order_buy)  && $order_info['order_status_id'] != 15 )
+                if( !empty($weixin_appid) && !empty($weixin_template_order_buy))
                 {
                     $head_pathinfo = "eaterplanet_ecommerce/moduleA/groupCenter/groupDetail?groupOrderId=".$order['order_id'];
+
+                    $first = '您好团长，您收到了一个新订单，请尽快接单处理';
+                    if( $order_info['order_status_id'] == 15 )
+                    {
+                        $first = '您好,团长收到了一个新预售订单';
+                    }
 
                     $weixin_template_order = array(
                         'appid' => $weixin_appid,
                         'template_id' => $weixin_template_order_buy,
                         'pagepath' => $head_pathinfo,
                         'data' => array(
-                            'first' => array('value' => '您好团长，您收到了一个新订单，请尽快接单处理','color' => '#030303'),
+                            'first' => array('value' => $first,'color' => '#030303'),
                             'tradeDateTime' => array('value' => date('Y-m-d H:i:s'),'color' => '#030303'),
                             'orderType' => array('value' => '用户购买','color' => '#030303'),
                             'customerInfo' => array('value' => $member_info['username'],'color' => '#030303'),
@@ -441,8 +447,7 @@ class WeixinnotifyModel {
                     );
                 }
 
-                if( $order_info['order_status_id'] != 15 )
-                {
+
                     $headid = $order_info['head_id'];
 
                     $head_info = M('eaterplanet_community_head')->field('member_id')->where( array('id' => $headid ) )->find();
@@ -456,7 +461,7 @@ class WeixinnotifyModel {
 
                     $res =  D('Seller/User')->send_wxtemplate_msg(array() ,$url,$head_pathinfo,$weopenid['we_openid'],$template_id,$mnzember_formid_info['formid'], 0,$weixin_template_order);
 
-                }
+
 
             }
 

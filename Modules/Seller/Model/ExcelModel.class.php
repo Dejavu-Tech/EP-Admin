@@ -438,7 +438,7 @@ class ExcelModel{
 
 //ThinkPHP\Library\Vendor\ROOT_PATH
 
-		require_once ROOT_PATH . '/ThinkPHP/Library/Vendor/phpexcel/PHPExcel.php';
+		require_once ROOT_PATH . '/ThinkPHP/Library/Vendor/PHPExcel/PHPExcel.php';
 		$excel = new \PHPExcel();
 
 		$excel->getProperties()->setCreator('吃货星球商城')->setLastModifiedBy('吃货星球商城')->setTitle('Office 2007 XLSX Test Document')->setSubject('Office 2007 XLSX Test Document')->setDescription('Test document for Office 2007 XLSX, generated using PHP classes.')->setKeywords('office 2007 openxml php')->setCategory('report file');
@@ -612,7 +612,7 @@ class ExcelModel{
         if (PHP_SAPI == 'cli') {
             exit('This example should only be run from a Web Browser');
         }
-        require_once ROOT_PATH . '/ThinkPHP/Library/Vendor/phpexcel/PHPExcel.php';
+        require_once ROOT_PATH . '/ThinkPHP/Library/Vendor/PHPExcel/PHPExcel.php';
         $excel = new \PHPExcel();
         $excel->getProperties()->setCreator('吃货星球商城')->setLastModifiedBy('吃货星球商城')->setTitle('Office 2007 XLSX Test Document')->setSubject('Office 2007 XLSX Test Document')->setDescription('Test document for Office 2007 XLSX, generated using PHP classes.')->setKeywords('office 2007 openxml php')->setCategory('report file');
         $sheet = $excel->setActiveSheetIndex(0);

@@ -280,7 +280,11 @@ class OrderModel{
 
 		if( !empty($delivery) )
 		{
-			$condition .= " and o.delivery ='{$delivery}'  ";
+			if($delivery == 'cashon_delivery'){
+				$condition .= " and o.payment_code = '{$delivery}'  ";
+			}else{
+				$condition .= " and o.delivery ='{$delivery}'  ";
+			}
 		}
 
 
@@ -558,7 +562,7 @@ class OrderModel{
 
             $columns = array(
 				array('title' => '订单流水号', 'field' => 'day_paixu', 'width' => 24),
-				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 24),
+				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 36),
 				array('title' => '昵称', 'field' => 'name', 'width' => 12),
 				//array('title' => '客户姓名', 'field' => 'mrealname', 'width' => 12),
 				array('title' => 'openid', 'field' => 'openid', 'width' => 24),
@@ -587,6 +591,7 @@ class OrderModel{
 				array('title' => '商品价格', 'field' => 'goods_rprice2', 'width' => 12),
 				array('title' => '支付方式', 'field' => 'paytype', 'width' => 12),
 				array('title' => '配送方式', 'field' => 'delivery', 'width' => 12),
+				array('title' => '预计送达时间', 'field' => 'expected_delivery_time', 'width' => 24),
 				//array('title' => '自提门店', 'field' => 'pickname', 'width' => 24),
 				//array('title' => '商品小计', 'field' => 'goodsprice', 'width' => 12),
 				array('title' => '运费', 'field' => 'dispatchprice', 'width' => 12),
@@ -865,7 +870,7 @@ class OrderModel{
 
 								$tmp_exval['tuan_send_address'] = $val['tuan_send_address'];
 
-								$tmp_exval['goods_title'] = $val['goods_title'];
+								$tmp_exval['goods_title'] = htmlspecialchars_decode(stripslashes($val['goods_title']));
 								if($val['supply_id'] == 0){
 									$tmp_exval['supply_name'] = '平台自营(自营)';
 								}else{
@@ -948,6 +953,8 @@ class OrderModel{
 								}elseif($val['delivery'] == 'tuanz_send'){
 									$tmp_exval['delivery'] = '团长配送';
 								}
+
+								$tmp_exval['expected_delivery_time'] =$val['expected_delivery_time'];
 
 								if ($_GPC['export'] == 1 ) {
 
@@ -1137,21 +1144,21 @@ class OrderModel{
 
 					$imdada_data =  M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where( array('order_id' => $value['order_id'], 'third_distribution_type'=>'imdada' ) )->find();
 					if($imdada_data['status'] == 1){
-						$value['pre_imdada_delivery_fee'] = "￥".$imdada_data['shipping_fee'];
+						$value['pre_imdada_delivery_fee'] = "¥".$imdada_data['shipping_fee'];
 					}else{
 						$value['pre_imdada_delivery_fee'] = $imdada_data['message'];
 					}
 
 					$mk_data =  M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where( array('order_id' => $value['order_id'], 'third_distribution_type'=>'mk' ) )->find();
 					if($mk_data['status'] == 1){
-                        $value['pre_mk_delivery_fee'] = "￥".$mk_data['shipping_fee'];
+                        $value['pre_mk_delivery_fee'] = "¥".$mk_data['shipping_fee'];
                     }else{
                         $value['pre_mk_delivery_fee'] = $mk_data['message'];
                     }
 
 					$sf_data =  M('eaterplanet_ecommerce_orderdistribution_thirth_query')->where( array('order_id' => $value['order_id'], 'third_distribution_type'=>'sf' ) )->find();
 					if($sf_data['status'] == 1){
-						$value['pre_sf_delivery_fee'] = "￥".$sf_data['shipping_fee'];
+						$value['pre_sf_delivery_fee'] = "¥".$sf_data['shipping_fee'];
 					}else{
 						$value['pre_sf_delivery_fee'] = $sf_data['message'];
 					}
@@ -1174,6 +1181,7 @@ class OrderModel{
 
 				foreach($goods as $key =>$goods_val)
 				{
+					$goods_val['name'] = htmlspecialchars_decode(stripslashes($goods_val['name']));
 					if( $goods_val['is_statements_state'] == 1 )
 					{
 						$value['is_statements_state'] = 1;
@@ -1680,7 +1688,7 @@ class OrderModel{
 			@set_time_limit(0);
 			$columns = array(
 
-				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 24),
+				array('title' => '订单编号', 'field' => 'order_num_alias', 'width' => 36),
 				array('title' => '订单流水号', 'field' => 'day_paixu', 'width' => 24),
 				array('title' => '昵称', 'field' => 'name', 'width' => 12),
 				//array('title' => '客户姓名', 'field' => 'mrealname', 'width' => 12),
@@ -1706,6 +1714,8 @@ class OrderModel{
 				array('title' => '商品价格', 'field' => 'goods_rprice2', 'width' => 12),
 				array('title' => '支付方式', 'field' => 'paytype', 'width' => 12),
 				array('title' => '配送方式', 'field' => 'delivery', 'width' => 12),
+				array('title' => '预计送达时间', 'field' => 'expected_delivery_time', 'width' => 24),
+
 				//array('title' => '自提门店', 'field' => 'pickname', 'width' => 24),
 				//array('title' => '商品小计', 'field' => 'goodsprice', 'width' => 12),
 				array('title' => '运费', 'field' => 'dispatchprice', 'width' => 12),
@@ -1871,8 +1881,7 @@ class OrderModel{
 							}
 							$tmp_exval['tuan_send_address'] = $val['tuan_send_address'];
 
-							$tmp_exval['goods_title'] = $val['goods_title'];
-
+							$tmp_exval['goods_title'] = htmlspecialchars_decode(stripslashes($val['goods_title']));
 							$goods_optiontitle = $this->get_order_option_sku($val['order_id'], $val['order_goods_id']);
 							$tmp_exval['goods_optiontitle'] = $goods_optiontitle;
 							$tmp_exval['quantity'] = $val['ogc_quantity'];
@@ -1921,6 +1930,8 @@ class OrderModel{
 							}elseif($val['delivery'] == 'tuanz_send'){
 								$tmp_exval['delivery'] = '团长配送';
 							}
+
+							$tmp_exval['expected_delivery_time'] =$val['expected_delivery_time'];  //date("Y-m-d H:i:s",time())
 							$tmp_exval['dispatchprice'] = $val['g_shipping_fare'];
 							$tmp_exval['score_for_money'] = $val['g_score_for_money'];
 
@@ -2044,6 +2055,7 @@ class OrderModel{
 
 				foreach($goods as $key =>$goods_val)
 				{
+					$goods_val['name'] = htmlspecialchars_decode(stripslashes($goods_val['name']));
 					$goods_val['option_sku'] = $this->get_order_option_sku($value['order_id'], $goods_val['order_goods_id']);
 
 					$goods_val['commisson_info'] = array();
@@ -2873,22 +2885,29 @@ class OrderModel{
 	    if(empty($member_score)){
 	        $member_score = 0;
 	    }
-	    $log_data['after_operate_score'] = $member_score+$score;
-	    if($type == 'goodscomment'){
-	        //增加积分
-	        $log_data['state'] = 1;
-	        $log_data['remark'] = "评价有礼,增加积分";
-	        M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
-	    }else if($type == 'invitegift'){
-			//邀请者赠送积分
-			$log_data['state'] = 1;
-			$log_data['remark'] = "邀请者邀请成功，增加积分".$score;
-			M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
-		}else if($type == 'invitegift_new'){
-			//被邀请者赠送积分
-			$log_data['state'] = 1;
-			$log_data['remark'] = "被邀请者邀请成功，增加积分".$score;
-			M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
+		if($in_out == 'in'){
+			$log_data['after_operate_score'] = $member_score+$score;
+			if($type == 'goodscomment'){
+				//增加积分
+				$log_data['state'] = 1;
+				$log_data['remark'] = "评价有礼,增加积分";
+				M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
+			}else if($type == 'invitegift'){
+				//邀请者赠送积分
+				$log_data['state'] = 1;
+				$log_data['remark'] = "邀请者邀请成功，增加积分".$score;
+				M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
+			}else if($type == 'invitegift_new'){
+				//被邀请者赠送积分
+				$log_data['state'] = 1;
+				$log_data['remark'] = "被邀请者邀请成功，增加积分".$score;
+				M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
+			}else if($type == 'pintuan_rebate'){
+				//拼团返利
+				$log_data['state'] = 1;
+				$log_data['remark'] = "拼团返利，赠送积分".$score;
+				M('eaterplanet_ecommerce_member')->where( array('member_id' => $member_id) )->setInc('score',$score);
+			}
 		}
 	    M('eaterplanet_ecommerce_member_integral_flow')->add($log_data);
 	}
@@ -3172,13 +3191,13 @@ class OrderModel{
 		if(!empty($other_data['now_deduct_fee']) && $other_data['now_deduct_fee'] > 0){
 			$log_mgs = "";
 			if($data_type == 'imdada'){
-				$log_mgs = "第三方达达取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+				$log_mgs = "第三方达达取消订单，产生违约费：¥".$other_data['now_deduct_fee'];
 			}else if($data_type == 'sf'){
-				$log_mgs = "第三方顺丰取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+				$log_mgs = "第三方顺丰取消订单，产生违约费：¥".$other_data['now_deduct_fee'];
 			}else if($data_type == 'make'){
-                $log_mgs = "码科配送取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+                $log_mgs = "码科配送取消订单，产生违约费：¥".$other_data['now_deduct_fee'];
             }else if($data_type == 'ele'){
-				$log_mgs = "蜂鸟即配取消订单，产生违约费：￥".$other_data['now_deduct_fee'];
+				$log_mgs = "蜂鸟即配取消订单，产生违约费：¥".$other_data['now_deduct_fee'];
 			}
 			$oh = array();
 			$oh['order_id'] = $order_id;

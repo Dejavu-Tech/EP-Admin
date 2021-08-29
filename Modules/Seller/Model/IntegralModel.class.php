@@ -323,6 +323,12 @@ class IntegralModel{
 				$log_data['remark'] = "被邀请者邀请成功，增加积分".$score;
 
 				$this->_do_charge_score($member_id, $score,0);
+			}else if($type == 'pintuan_rebate'){
+				//拼团返利
+				$log_data['state'] = 1;
+				$log_data['remark'] = "拼团返利，赠送积分".$score;
+
+				$this->_do_charge_score($member_id, $score,0);
 			}
 		}else if($in_out == 'out'){
 			if( $type =='refundorder' )
