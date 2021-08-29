@@ -98,7 +98,8 @@ var vue = new Vue({
                 selectedSrc: "/assets/ep/images/diy/nav/text_right_hover.png"
             }
         ],
-        data: []
+        data: [],
+        loaded: false
     },
     components: {
         'cm-construct': commonComponent, //剥离当前data. 循环时这么处理佳
@@ -108,6 +109,7 @@ var vue = new Vue({
 	},
     mounted: function () {
 		this.refreshSort();
+        this.loaded = true;
 	},
     methods: {
         /**

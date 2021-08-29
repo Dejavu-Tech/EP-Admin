@@ -215,11 +215,11 @@ body.jconfirm-noscroll {
           transition: background .1s;
   color: white;
 }
-.jconfirm.jconfirm-white .jconfirm-box .buttons button.btn-primary {
+.jconfirm.jconfirm-white .jconfirm-box .buttons button.btn-default {
   box-shadow: none;
   color: #333;
 }
-.jconfirm.jconfirm-white .jconfirm-box .buttons button.btn-primary:hover {
+.jconfirm.jconfirm-white .jconfirm-box .buttons button.btn-default:hover {
   background: #ddd;
 }
 .jconfirm.jconfirm-black .jconfirm-bg {
@@ -245,12 +245,12 @@ body.jconfirm-noscroll {
           transition: background .1s;
   color: white;
 }
-.jconfirm.jconfirm-black .jconfirm-box .buttons button.btn-primary {
+.jconfirm.jconfirm-black .jconfirm-box .buttons button.btn-default {
   box-shadow: none;
   color: #fff;
   background: none;
 }
-.jconfirm.jconfirm-black .jconfirm-box .buttons button.btn-primary:hover {
+.jconfirm.jconfirm-black .jconfirm-box .buttons button.btn-default:hover {
   background: #666;
 }
 .jconfirm .jconfirm-box.hilight {

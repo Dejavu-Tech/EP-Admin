@@ -209,12 +209,12 @@ imageSecHtml += '<div>';
 imageSecHtml += '<template v-if="myData.data[myData.field]">';
 imageSecHtml += '<img v-bind:src="changeImgUrl(myData.data[myData.field])" />';
 imageSecHtml += '<span>更换图片</span>';
-imageSecHtml += '<i class="del" v-on:click.stop="del()" data-disabled="1" v-if = "isShow == true">x</i>';
+// imageSecHtml += '<i class="del" v-on:click.stop="del()" data-disabled="1" v-if = "isShow == true">x</i>';
 imageSecHtml += '</template>';
 
 imageSecHtml += '<template v-else>';
 imageSecHtml += '<i class="add">+</i>';
-imageSecHtml += '<i class="del" v-on:click.stop="del()" data-disabled="1">x</i>';
+// imageSecHtml += '<i class="del" v-on:click.stop="del()" data-disabled="1">x</i>';
 imageSecHtml += '</template>';
 
 imageSecHtml += '</div>';

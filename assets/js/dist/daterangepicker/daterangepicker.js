@@ -120,7 +120,7 @@
 
 			this.buttonClasses = ['btn', 'btn-small btn-sm'];
 			this.applyClass = 'btn-success';
-			this.cancelClass = 'btn-primary';
+			this.cancelClass = 'btn-default';
 
 			this.format = 'MM/DD/YYYY';
 			this.separator = ' - ';
@@ -415,7 +415,7 @@
 		updateFormInputs: function () {
 			this.container.find('input[name=daterangepicker_start]').val(this.startDate.format(this.format));
 			this.container.find('input[name=daterangepicker_end]').val(this.endDate.format(this.format));
-
+			
 			if (this.startDate.isSame(this.endDate) || this.startDate.isBefore(this.endDate)) {
 				this.container.find('button.applyBtn').removeAttr('disabled');
 			} else {
@@ -602,7 +602,7 @@
 			} else if (this.element.is('input')) {
 				this.element.val(this.startDate.format(this.format));
 			} else {
-
+				
 			}
 		},
 		addDate: function(date, count) {
@@ -1094,7 +1094,7 @@
 						fromLabel: "从",
 						toLabel: "至",
 						weekLabel: "周",
-						customRangeLabel: "日期范围2",
+						customRangeLabel: "日期范围",
 						daysOfWeek: moment()._lang._weekdaysMin.slice(),
 						monthNames: moment()._lang._monthsShort.slice(),
 						firstDay: 0

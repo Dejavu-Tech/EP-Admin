@@ -124,28 +124,28 @@ a {
 	font-size: 0.65rem;
 }
 
-.btn.btn-primary {
+.btn.btn-default {
 	background: #f7f7f7;
 	color: #333;
 	border: 1px solid #dfdfdf
 }
 
-.btn.btn-primary:active {
+.btn.btn-default:active {
 	background: #dedede;
 	color: #a1a1a1;
 	border: 1px solid #c8c8c8;
 }
 
-.btn.btn-primary.disabled {
+.btn.btn-default.disabled {
 	background: #f7f7f7;
 	color: #b2b2b2;
 	border: 1px solid #dfdfdf
 }
-.option-picker .option-picker-cell.option .btn.btn-primary.disabled{
+.option-picker .option-picker-cell.option .btn.btn-default.disabled{
 	color: #b2b2b2;
 }
 
-.btn.btn-primary.disabled:active {
+.btn.btn-default.disabled:active {
 	background: #f7f7f7;
 	color: #c9c9c9;
 	border: 1px solid #dfdfdf
@@ -212,19 +212,19 @@ a {
 	color: #fff;
 	border: 1px solid #ccc;
 }
-.btn.btn-primary-o {
+.btn.btn-default-o {
 	background: transparent;
 	color: #666;
 	border: 1px solid #666
 }
 
-.btn.btn-primary-o:active {
+.btn.btn-default-o:active {
 	background: transparent;
 	color: #666;
 	border: 1px solid #666
 }
 
-.btn.btn-primary-o.disabled,
+.btn.btn-default-o.disabled,
 .btn.btn-success-o.disabled,
 .btn.btn-primary-o.disabled,
 .btn.btn-warning-o.disabled,

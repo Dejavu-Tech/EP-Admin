@@ -13,7 +13,7 @@
             "max_count": 0,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/text.png",
-            "icon_selected": "/assets/ep/images/diy/text.png"
+            "icon_selected": "/assets/ep/images/diy/text_selected.png"
         }, {
             "id": 3,
             "name": "NOTICE",
@@ -26,7 +26,7 @@
             "max_count": 0,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/notice.png",
-            "icon_selected": "/assets/ep/images/diy/notice.png"
+            "icon_selected": "/assets/ep/images/diy/notice_selected.png"
         },
         {
             "id": 4,
@@ -40,7 +40,7 @@
             "max_count": 0,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/graphic_nav.png",
-            "icon_selected": "/assets/ep/images/diy/graphic_nav.png"
+            "icon_selected": "/assets/ep/images/diy/graphic_nav_selected.png"
         },
         {
             "id": 5,
@@ -54,7 +54,7 @@
             "max_count": 1,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/search.png",
-            "icon_selected": "/assets/ep/images/diy/search.png"
+            "icon_selected": "/assets/ep/images/diy/search_selected.png"
         }, {
             "id": 6,
             "name": "HORZ_LINE",
@@ -132,7 +132,7 @@
             "max_count": 1,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/store_show.png",
-            "icon_selected": "/assets/ep/images/diy/store_show.png"
+            "icon_selected": "/assets/ep/images/diy/store_show_selected.png"
         }, {
             "id": 12,
             "name": "SLIDER",
@@ -145,7 +145,7 @@
             "max_count": 1,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/slider.png",
-            "icon_selected": "/assets/ep/images/diy/slider.png"
+            "icon_selected": "/assets/ep/images/diy/slider_selected.png"
         }, {
             "id": 16,
             "name": "FLOAT_BTN",
@@ -171,7 +171,33 @@
             "max_count": 1,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/video.png",
-            "icon_selected": "/assets/ep/images/diy/video.png"
+            "icon_selected": "/assets/ep/images/diy/video_selected.png"
+        }, {
+            "id": 20,
+            "name": "MANY_GOODS_LIST",
+            "title": "多商品",
+            "type": "SYSTEM",
+            "controller": "ManyGoodsList",
+            "value": "{\"title\": \"商品组1\",\"selectColor\": \"#FF4544\",\"nsSelectColor\": \"#303133\",\"list\": [{\"goodsStyle\": 1,\"title\": \"特价\",\"desc\": \"精选好货\",\"link\": {},\"sources\": \"category\", \"categoryId\": 0,\"categoryName\": \"请选择\",\"goodsId\": []}],\"goodsCount\": \"6\",\"style\": 1,\"backgroundColor\": \"\",\"marginTop\": 0}",
+            "addon_name": "",
+            "support_diy_view": "",
+            "max_count": 1,
+            "is_delete": 0,
+            "icon": "/assets/ep/images/diy/many_goods.png",
+            "icon_selected": "/assets/ep/images/diy/many_goods_selected.png"
+        }, {
+            "id": 21,
+            "name": "SINGLE_IMG",
+            "title": "单图组",
+            "type": "SYSTEM",
+            "controller": "SingleImg",
+            "value": "{ \"topRadius\": 12,\"bottomRadius\": 12, \"imageGap\": 0, \"backgroundColor\": \"\", paddingLeftRight : 0, \"marginTop\": 0, \"list\": [{\"imageUrl\": \"\",\"title\": \"\",\"link\": {}, \"imgWidth\": 0, \"imgHeight\": 0}]}",
+            "addon_name": "singleimg",
+            "support_diy_view": "",
+            "max_count": 0,
+            "is_delete": 0,
+            "icon": "/assets/ep/images/diy/single_img.png",
+            "icon_selected": "/assets/ep/images/diy/single_img_selected.png"
         }
     ]
 }, {
@@ -197,13 +223,13 @@
             "title": "拼团",
             "type": "ADDON",
             "controller": "Pintuan",
-            "value": "{\"sources\": \"default\",\"categoryId\": 0,\"goodsCount\": \"6\",\"goodsId\": [],\"style\": 1,\"changeType\": 1,\"styleName\": \"风格一\",\"backgroundColor\": \"\",\"bgSelect\": \"blue\",\"marginTop\": 0,\"list\": [{\"style\": 1,\"imageUrl\": \"\",\"title\": \"拼团专区\"}, {\"style\": 2,\"imageUrl\": \"/assets/ep/diycomponent/pintuan/img/pintuan_style2_title.png\"}, {\"style\": 3,\"imageUrl\": \"/assets/ep/diycomponent/pintuan/img/pintuan_style3_title.png\"}],\"listMore\": {\"imageUrl\": \"\",\"title\": \"好友都在拼\"},\"titleTextColor\": \"#000\",\"defaultTitleTextColor\": \"#000\",\"moreTextColor\": \"#858585\",\"defaultMoreTextColor\": \"#858585\"}",
+            "value": "{\"sources\": \"default\",\"categoryId\": 0,\"goodsCount\": \"6\",\"goodsId\": [],\"style\": 1,\"changeType\": 1,\"styleName\": \"风格一\",\"backgroundColor\": \"\",\"bgSelect\": \"blue\",\"marginTop\": 0,\"list\": [{\"style\": 1,\"imageUrl\": \"\",\"title\": \"拼团专区\"}, {\"style\": 2,\"imageUrl\": \"/assets/ep/diycomponent/pintuan/img/pintuan_style2_title.png\"}, {\"style\": 3,\"imageUrl\": \"/assets/ep/diycomponent/pintuan/img/pintuan_style3_title.png\"},{\"style\": 4,\"imageUrl\": \"/assets/ep/diycomponent/pintuan/img/pintuan_style4_title.png\",\"title\": \"拼团专区\"}],\"listMore\": {\"imageUrl\": \"\",\"title\": \"好友都在拼\"},\"titleTextColor\": \"#000\",\"defaultTitleTextColor\": \"#000\",\"moreTextColor\": \"#858585\",\"defaultMoreTextColor\": \"#858585\"}",
             "addon_name": "pintuan",
             "support_diy_view": "",
             "max_count": 1,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/pintuan.png",
-            "icon_selected": "/assets/ep/images/diy/pintuan.png"
+            "icon_selected": "/assets/ep/images/diy/pintuan_selected.png"
         },
         {
             "id": 15,
@@ -217,7 +243,7 @@
             "max_count": 1,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/seckill.png",
-            "icon_selected": "/assets/ep/images/diy/seckill.png"
+            "icon_selected": "/assets/ep/images/diy/seckill_selected.png"
         },
         {
             "id": 18,
@@ -231,7 +257,21 @@
             "max_count": 1,
             "is_delete": 0,
             "icon": "/assets/ep/images/diy/new_come.png",
-            "icon_selected": "/assets/ep/images/diy/new_come.png"
+            "icon_selected": "/assets/ep/images/diy/new_come_selected.png"
+        },
+        {
+            "id": 19,
+            "name": "SPECIAL_LIST",
+            "title": "专题",
+            "type": "ADDON",
+            "controller": "Special",
+            "value": "{\"sources\": \"default\",\"specialName\": \"\",\"goodsCount\": \"6\",\"specialId\": [],\"style\": 1,\"changeType\": 1,\"styleName\": \"风格一\",\"backgroundColor\": \"\",\"bgSelect\": \"blue\",\"marginTop\": 0,\"list\": [{\"style\": 1,\"imageUrl\": \"/assets/ep/images/diy/crack_figure.png\",\"title\": \"专题频道\"}, {\"style\": 2,\"imageUrl\": \"/assets/ep/diycomponent/special/img/special_style2_title.png\"}, {\"style\": 3,\"imageUrl\": \"/assets/ep/diycomponent/special/img/special_style3_title.png\"},{\"style\": 4,\"imageUrl\": \"/assets/ep/diycomponent/special/img/special_style4_title.png\",\"title\": \"专题频道\"}],\"listMore\": {\"imageUrl\": \"\",\"title\": \"专题频道\"},\"titleTextColor\": \"#000\",\"defaultTitleTextColor\": \"#000\",\"moreTextColor\": \"#858585\",\"defaultMoreTextColor\": \"#858585\"}",
+            "addon_name": "special",
+            "support_diy_view": "",
+            "max_count": 0,
+            "is_delete": 0,
+            "icon": "/assets/ep/images/diy/special.png",
+            "icon_selected": "/assets/ep/images/diy/special_selected.png"
         }
     ]
 }]
