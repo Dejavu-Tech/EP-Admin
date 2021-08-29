@@ -87,6 +87,7 @@ function check_dirfile()
     $items = array(
         array('dir', '可写', 'ok', './Uploads/image'),
         array('dir', '可写', 'ok', './Runtime'),
+        array('dir', '可写', 'ok', './Data/wxpaylogs'),
         array('file', '可写', 'ok', './Modules/Common/Conf/')
 	);
 
