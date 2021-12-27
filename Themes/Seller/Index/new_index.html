@@ -52,7 +52,7 @@
                 <div class="content-panel-close">
                     <i class="os-icon os-icon-close"></i>
                 </div>
-                <div class="modal-header p-l-20 p-r-20">
+                <div class="modal-header p-20">
                     <div class="col-sm-8 p-0">
                         <h6 class="modal-title font-weight-bold">版本信息</h6>
                     </div>
@@ -60,44 +60,41 @@
                 <!--------------------
                 START - Support Agents
                 -------------------->
-                <div class="card-body btn-showcase">
-                    <div class="btn btn-light" href="#">当前版本：DEJAVU EP Menager __VERSION__</div><div class="btn btn-light">基于框架：Bootstrap-v4.3</div>
+                <div class="card-body">
+                    <div class="btn btn-light m-b-10" href="#">当前版本：EP Admin __VERSION__</div><div class="btn btn-light">UI框架：DT Admin Dashboard-v0.1.3</div>
                 </div>
-                <div class="modal-header p-l-20 p-r-20">
+                <div class="modal-header p-20">
                     <div class="col-sm-8 p-0">
                         <h6 class="modal-title font-weight-bold">联系授权</h6>
                     </div>
                 </div>
-                <div class="p-l-30 p-r-30">
-                    <div class="card-body btn-showcase">
-                        <ul>
-                            <h6>
-                                <strong>Arthur：Albert.Z</strong>
-                            </h6>
-                        </ul>
-                        <div class="pt-btn">
-                            <a class="btn btn-primary" href="https://github.com/zhrrobert/dejavu">Git项目仓库</a>
-                        </div>
-                        <div class="pt-btn">
-                            <a class="btn btn-primary" href="http://wpa.qq.com/msgrd?v=3&amp;uin=142997&amp;site=qq&amp;menu=yes">QQ: 142997</a>
-                        </div>
+                <div class="card-body btn-showcase">
+                    <ul>
+                        <h6>
+                            <strong>Arthur：Albert.Z</strong>
+                        </h6>
+                    </ul>
+                    <div class="pt-btn">
+                        <a class="btn btn-primary" href="https://github.com/Dejavu-Tech/EP-Admin">Git项目仓库</a>
+                    </div>
+                    <div class="pt-btn">
+                        <a class="btn btn-primary" href="http://wpa.qq.com/msgrd?v=3&amp;uin=142997&amp;site=qq&amp;menu=yes">QQ: 142997</a>
                     </div>
                 </div>
-                <div class="modal-header p-l-20 p-r-20">
+
+
+                <div class="modal-header p-20">
                     <div class="col-sm-8 p-0">
                         <h6 class="modal-title font-weight-bold">版权所有</h6>
                     </div>
                 </div>
-                <div class="p-l-30 p-r-30">
+                <div class="p-20">
                     <div class="users-list-w">
-                        <h6>
-                            DEJAVU EP Menager
-                        </h6>
                         <div>
-                            <h6>吃货星球©商城APP、微信小程序、支付宝小程序、商城后台管理系统，受国家计算机软件著作权保护，必须联系作者授权才可获得源文件使用权。不得恶意分享产品源代码、二次转售等，违者将承担相应的法律责任。</h6>
+                            <h6>吃货星球©商城微信小程序、商城后台管理系统，受国家计算机软件著作权保护，必须联系作者授权才可获得源文件使用权。不得恶意分享产品源代码、二次转售等，违者将承担相应的法律责任。</h6>
                         </div>
                         <img src="https://image.ch871.com/companyx.png" width="40px" style="width:40px;margin:0px 10px 0px 0px;color:#ccd9e8 " align="left">
-                        Copyright © 2020 Dejavu Technology (YN) Co., Ltd. <a class="btn btn-primary btn-sm" href="https://www.dejavu871.com" style="margin-top: 10px">dejavu871.com</a>
+                        Copyright © 2022 Dejavu Technology (YN) Co., Ltd. <a class="btn btn-primary m-t-10" href="https://www.dejavu871.com">dejavu871.com</a>
                     </div>
                 </div>
                 <!--------------------
@@ -222,7 +219,7 @@
                         <li id="neworder1" class="onhover-dropdown"><img class="img-fluid img-shadow-warning" src="/assets/images/dashboard/chat.png" alt="">
                             <ul  class="onhover-show-div notification-dropdown">
                                 <li class="gradient-primary">
-                                    <h5 class="f-w-700">订单消息</h5><span>您有<span id="notice">{$order_count}</span>个新的订单</span>
+                                    <h5 class="f-w-700">订单消息</h5><span>您有<span>{$order_count}</span>个新的订单</span>
                                 </li>
                                 <li>
                                     <div class="media">
@@ -240,7 +237,7 @@
                         <li id="orderdistribution1" class="onhover-dropdown"><img class="img-fluid img-shadow-warning" src="/assets/images/dashboard/notification.png" alt="">
                             <ul  class="onhover-show-div notification-dropdown">
                                 <li class="gradient-primary">
-                                    <h5 class="f-w-700">配送员消息</h5><span>您有<span id="distributionnotice"></span>个新的配送信息</span>
+                                    <h5 class="f-w-700">配送员消息</h5><span>您有新的配送信息</span>
                                 </li>
                                 <li>
                                     <div class="media">
@@ -345,7 +342,7 @@
                             <div class="contain p-30">
                                 <div class="text-center">
                                     <h3>欢迎体验吃货星球电商后台系统DEMO</h3>
-                                    <p>v2.4.6test</p>
+                                    <p>__VERSION__</p>
                                     <button class="btn btn-primary btn-lg txt-white" type="button" data-dismiss="modal" aria-label="Close">开始</button>
                                 </div>
                             </div>
@@ -365,7 +362,24 @@
         </div>
     </div>
 </div>
-
+<div id="neworder" data-notify="container" class="col-xs-11 col-sm-4 alert alert-theme notify-alert animated fadeInDown" role="alert" data-notify-position="top-right" style="display:none; margin: 0px auto; position: fixed; transition: all 0.5s ease-in-out 0s; z-index: 1031; top: 20px; right: 20px;">
+    <button type="button" aria-hidden="true" class="close" data-notify="dismiss" style="position: absolute; right: 10px; top: 5px; z-index: 1033;">
+        ×
+    </button>
+    <a href="javascript:void(0)" data-href="{:U('order/index')}">
+        <span data-notify="icon" class="0"></span> <span data-notify="title"></span>
+        <span data-notify="message" id="notice"><img src="/assets/images/alert.png" alt=""><strong>您有新订单</strong>{$order_count}条</span>
+    </a>
+</div>
+<div id="orderdistribution" data-notify="container" class="col-xs-11 col-sm-4 alert alert-theme notify-alert animated fadeInDown" role="alert" data-notify-position="top-right" style="display:none; margin: 0px auto; position: fixed; transition: all 0.5s ease-in-out 0s; z-index: 1031; top: 20px; right: 20px;">
+    <button type="button" aria-hidden="true" class="close" data-notify="dismiss" style="position: absolute; right: 10px; top: 5px; z-index: 1033;">
+        ×
+    </button>
+    <a href="javascript:void(0)">
+        <span data-notify="icon" class="0"></span> <span data-notify="title"></span>
+        <span data-notify="message" id="distributionnotice"><img src="/assets/images/alert.png" alt=""><strong>您有配送员消息</strong>{$order_count}条</span>
+    </a>
+</div>
 <!-- latest jquery-->
 <script src="/assets/js/jquery-3.5.1.min.js"></script>
 <!-- Bootstrap js-->
@@ -378,7 +392,9 @@
 <script src="/assets/js/sidebar-menu.js"></script>
 <script src="/assets/js/config.js"></script>
 <!-- Plugins JS start-->
-<script src="/assets/js/dashboard/default.js"></script>
+<script src="/assets/js/chat-menu.js"></script>
+<script src="/assets/js/notify/bootstrap-notify.min.js"></script>
+<script src="/assets/js/notify/index.js"></script>
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="/assets/js/theme-customizer/customizer1.js"></script>
@@ -394,8 +410,6 @@
 	}).extend({
 	index: 'lib/index' //主入口模块
 	}).use('index');
-
-
 </script>
 <audio id="musicClick" src="/assets/ep/mp3/click.mp3" preload="auto"></audio>
 <script>
