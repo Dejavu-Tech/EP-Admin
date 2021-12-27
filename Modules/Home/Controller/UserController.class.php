@@ -2608,6 +2608,9 @@ class UserController extends CommonController {
         }
 
         $result['isopen_admin_managefront'] = $isopen_admin_managefront;
+        //fixed 20211228
+		$result['isopen_virtualcard'] = D('Home/Front')->get_config_by_name('isopen_virtualcard');
+		$result['isopen_virtualcard'] = $isopen_virtualcard;
 
         //end..
 
