@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      http://www.ch871.com/
- * @copyright Copyright (c) 2019-2021 ch871.com.
- * @license   http://www.ch871.com/license.html License
+ * @link      https://www.eaterplanet.com/
+ * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
+ * @license   https://www.eaterplanet.com/license.html License
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -50,7 +50,7 @@ class GroupController extends CommonController{
 
 		$type =  I('get.type','all');
 		$goods_type =  I('get.goods_type','0');
-		
+
 		//---begin
 
 		$count_common_where ="";
@@ -166,11 +166,11 @@ class GroupController extends CommonController{
 		        $condition .= ' and gp.is_pintuan_rebate = 0 ';
 		    }
 		}
-		
+
 		$keyword = I('get.keyword','','addslashes');
 		$keyword2 = stripslashes($keyword);
 		$this->keyword = $keyword2;
-		
+
 		if (!(empty($keyword))) {
 			$condition .= " AND (g.`id` = '{$keyword}' or g.`goodsname` LIKE '%{$keyword}%' or g.`codes` LIKE '%{$keyword}%' ) ";
 		}
@@ -251,9 +251,9 @@ class GroupController extends CommonController{
 
 
 			foreach ($list as $key => &$value ) {
-				
+
 				$price_arr = D('Home/Pingoods')->get_goods_price($value['id'],-888);
-				
+
 				$value['price_arr'] = $price_arr;
 
 				$thumb = M('eaterplanet_ecommerce_goods_images')->where( array('goods_id' => $value['id']) )->order('id asc')->find();
@@ -312,7 +312,7 @@ class GroupController extends CommonController{
 
 				$rebate_common = M('eaterplanet_ecommerce_good_pin')->field('is_pintuan_rebate')->where( array('goods_id' => $value['id']) )->find();
 				$value['is_pintuan_rebate'] = $rebate_common['is_pintuan_rebate'];
-				
+
 			}
 
 		}
@@ -588,16 +588,16 @@ class GroupController extends CommonController{
 		$pintuan_model_buy = isset($config_data['pintuan_model_buy']) ? intval( $config_data['pintuan_model_buy'] ) : 0;
 		//商户权限begin community_head_level
 		$this->pintuan_model_buy  = $pintuan_model_buy;
-		
+
 		// $is_head_takegoods
 		$is_head_takegoods = isset($config_data['is_head_takegoods']) && $config_data['is_head_takegoods'] == 1 ? 1 : 0;
-		
+
 		$this->is_head_takegoods = $is_head_takegoods;
 
 		// $is_open_pintuan_rebate 拼团返利是否开启
 		$is_open_pintuan_rebate = isset($config_data['is_open_pintuan_rebate']) && $config_data['is_open_pintuan_rebate'] == 1 ? 1 : 0;
 		$this->is_open_pintuan_rebate = $is_open_pintuan_rebate;
-		
+
 		include $this->display('Group/addgoods');
 	}
 
@@ -756,16 +756,16 @@ class GroupController extends CommonController{
 		$pintuan_model_buy = isset($config_data['pintuan_model_buy']) ? intval( $config_data['pintuan_model_buy'] ) : 0;
 
 		$this->pintuan_model_buy = $pintuan_model_buy;
-		
+
 		// $is_head_takegoods
 		$is_head_takegoods = isset($config_data['is_head_takegoods']) && $config_data['is_head_takegoods'] == 1 ? 1 : 0;
-		
+
 		$this->is_head_takegoods = $is_head_takegoods;
 
 		// $is_open_pintuan_rebate 拼团返利是否开启
 		$is_open_pintuan_rebate = isset($config_data['is_open_pintuan_rebate']) && $config_data['is_open_pintuan_rebate'] == 1 ? 1 : 0;
 		$this->is_open_pintuan_rebate = $is_open_pintuan_rebate;
-		
+
 		$this->display();
 
 	}
@@ -1679,17 +1679,17 @@ class GroupController extends CommonController{
 		}
 
 		$this->open_feier_print = $open_feier_print;
-		
+
 		$s_id = 1 ;
 
 		if(SELLERUID != 1)
 		{
 			$seller_info = M('seller')->field('s_role_id')->where( array('s_id' => SELLERUID ) )->find();
-			
+
 			$perms_arr = M('eaterplanet_ecommerce_perm_role')->where( array('id' => $seller_info['s_role_id']) )->find();
 
 			$perms1 = str_replace('.','/',$perms_arr['perms2']);
-				 
+
 			$perms2 = explode(",", $perms1);
 
 			if(in_array("user/user/index", $perms2)){
@@ -1700,7 +1700,7 @@ class GroupController extends CommonController{
 
 		}
 		$this->s_id = $s_id;
-		
+
 		$is_can_look_headinfo = true;
 		$is_can_nowrfund_order = true;
 
@@ -1879,17 +1879,17 @@ class GroupController extends CommonController{
 		}
 
 		$this->open_feier_print = $open_feier_print;
-		
+
 		$s_id = 1 ;
 
 		if(SELLERUID != 1)
 		{
 			$seller_info = M('seller')->field('s_role_id')->where( array('s_id' => SELLERUID ) )->find();
-			
+
 			$perms_arr = M('eaterplanet_ecommerce_perm_role')->where( array('id' => $seller_info['s_role_id']) )->find();
 
 			$perms1 = str_replace('.','/',$perms_arr['perms2']);
-				 
+
 			$perms2 = explode(",", $perms1);
 
 			if(in_array("user/user/index", $perms2)){
@@ -1900,7 +1900,7 @@ class GroupController extends CommonController{
 
 		}
 		$this->s_id = $s_id;
-		
+
 		//退款状态：0申请中，1商家拒绝，2平台介入，3退款成功，4退款失败,5:撤销申请
 		$order_refund_state = array(0=>'申请中',1=>'商家拒绝', 2=>'平台介入',3=>'退款成功',4=>'退款失败',5=>'撤销申请');
 
@@ -1942,7 +1942,7 @@ class GroupController extends CommonController{
 		$pindex = max(1, intval($_GPC['page']));
 		$psize = 20;
 		$_GPC['keyword'] = I('get.keyword','','addslashes');
-		if (!empty($_GPC['keyword'])) {					
+		if (!empty($_GPC['keyword'])) {
 			$condition .= " and (  m.username like '%".$_GPC['keyword']."%' ) ";
 			$_GPC['keyword'] = stripslashes($_GPC['keyword']);
 		}

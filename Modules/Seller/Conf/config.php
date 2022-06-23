@@ -17,9 +17,9 @@ $app_config = array(
         '__JS__'=> './Themes/'.BIND_MODULE.'/Public/js',
             '__NAME__'=>'吃货星球S2B2C商城系统',
             '__COMPANY__'=>'蒂佳芙科技（云南）有限公司',
-            '__VERSION__'=>'吃货星球v4.13.0',
-            '__WEBSITE__'=>'www.ch871.com',
-            '__COMPANY_WEBSITE__'=>'www.dejavu871.com'
+            '__VERSION__'=>'吃货星球v4.14.0',
+            '__WEBSITE__'=>'www.eaterplanet.com',
+            '__COMPANY_WEBSITE__'=>'www.rexo-tech.cn'
     ),
 
     'SESSION_PREFIX' => 'dejavutech_seller_s', //session前缀

@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      http://www.ch871.com/
- * @copyright Copyright (c) 2019-2021 ch871.com.
- * @license   http://www.ch871.com/license.html License
+ * @link      https://www.eaterplanet.com/
+ * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
+ * @license   https://www.eaterplanet.com/license.html License
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -752,8 +752,8 @@ class OrderModel{
 
 
 						if ($_GPC['export'] == 1 ) {
-						$sql = 'SELECT o.*,ogc.name as goods_title,ogc.supply_id,ogc.goods_id,ogc.order_goods_id ,ogc.quantity as ogc_quantity,ogc.price,ogc.statements_end_time, 
-									ogc.total as goods_total ,ogc.score_for_money as g_score_for_money, ogc.fullreduction_money as g_fullreduction_money,ogc.voucher_credit as g_voucher_credit ,ogc.has_refund_money,ogc.has_refund_quantity , ogc.shipping_fare as g_shipping_fare,ogc.model as model ,ogc.cost_price 
+						$sql = 'SELECT o.*,ogc.name as goods_title,ogc.supply_id,ogc.goods_id,ogc.order_goods_id ,ogc.quantity as ogc_quantity,ogc.price,ogc.statements_end_time,
+									ogc.total as goods_total ,ogc.score_for_money as g_score_for_money, ogc.fullreduction_money as g_fullreduction_money,ogc.voucher_credit as g_voucher_credit ,ogc.has_refund_money,ogc.has_refund_quantity , ogc.shipping_fare as g_shipping_fare,ogc.model as model ,ogc.cost_price
 								FROM ' . C('DB_PREFIX') . 'eaterplanet_ecommerce_order as o  '.$sqlcondition.' where '  . $condition . ' ORDER BY o.head_id asc,ogc.goods_id desc,  o.`order_id` DESC  limit '."{$offset},500";
 
 						}else{

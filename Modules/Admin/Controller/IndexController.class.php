@@ -6,7 +6,7 @@ class IndexController extends CommonController {
 		parent::_initialize();
 		$this->breadcrumb1='首页';
 		$this->breadcrumb2='首页';
-		$this->admin_domain = 'http://pinduoduo.ch871.com';
+		$this->admin_domain = 'http://pinduoduo.eaterplanet.com';
 		$this->host = base64_encode( strtolower(strval($_SERVER['HTTP_HOST'])));
 	}
 	function duoduo_action($action, $version='V1.0') {

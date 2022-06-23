@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      http://www.ch871.com/
- * @copyright Copyright (c) 2019-2021 ch871.com.
- * @license   http://www.ch871.com/license.html License
+ * @link      https://www.eaterplanet.com/
+ * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
+ * @license   https://www.eaterplanet.com/license.html License
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -124,10 +124,10 @@ class UserController extends CommonController{
 
 
 		if ($gpc['export'] == '1') {
-			$list = M()->query('SELECT * FROM ' .C('DB_PREFIX') . "eaterplanet_ecommerce_member \r\n                
+			$list = M()->query('SELECT * FROM ' .C('DB_PREFIX') . "eaterplanet_ecommerce_member \r\n
 						WHERE 1=1 " . $condition . ' order by '. $orderby .' member_id desc');
 		}else{
-			$list = M()->query('SELECT * FROM ' .C('DB_PREFIX') . "eaterplanet_ecommerce_member \r\n                
+			$list = M()->query('SELECT * FROM ' .C('DB_PREFIX') . "eaterplanet_ecommerce_member \r\n
 						WHERE 1=1 " . $condition . ' order by '. $orderby .' member_id desc limit ' . (($pindex - 1) * $psize) . ',' . $psize);
 		}
 
@@ -322,7 +322,7 @@ class UserController extends CommonController{
 
         $is_apply_state = intval($_GPC['state']);
 
-        $apply_list = M()->query('SELECT * FROM ' . C('DB_PREFIX'). 'eaterplanet_ecommerce_member_tixian_order  
+        $apply_list = M()->query('SELECT * FROM ' . C('DB_PREFIX'). 'eaterplanet_ecommerce_member_tixian_order
 						WHERE id in( ' . $id . ' ) ');
 
 
@@ -345,7 +345,7 @@ class UserController extends CommonController{
 
         $is_apply_state = intval($_GPC['state']);
 
-        $apply_list = M()->query('SELECT * FROM ' . C('DB_PREFIX'). 'eaterplanet_ecommerce_member_tixian_order  
+        $apply_list = M()->query('SELECT * FROM ' . C('DB_PREFIX'). 'eaterplanet_ecommerce_member_tixian_order
 						WHERE id in( ' . $id . ' ) ');
 
 

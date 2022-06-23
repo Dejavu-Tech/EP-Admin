@@ -5,9 +5,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      http://www.ch871.com/
- * @copyright Copyright (c) 2019-2021 ch871.com.
- * @license   http://www.ch871.com/license.html License
+ * @link      https://www.eaterplanet.com/
+ * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
+ * @license   https://www.eaterplanet.com/license.html License
  * ==========================================================================
  *
  * @author    Albert.Z

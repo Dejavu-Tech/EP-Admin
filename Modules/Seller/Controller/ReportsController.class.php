@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      http://www.ch871.com/
- * @copyright Copyright (c) 2019-2021 ch871.com.
- * @license   http://www.ch871.com/license.html License
+ * @link      https://www.eaterplanet.com/
+ * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
+ * @license   https://www.eaterplanet.com/license.html License
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -129,25 +129,25 @@ class ReportsController extends CommonController{
 
 
 					//退款中 金额
-					$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+					$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 							where state =0 and addtime >= ".$day['egt']." and addtime < ".$day['lt']."  ");
 
 					$daywait_refund_money = $daywait_refund_money_arr[0]['total_money'];
 
 					//退款中  订单数量
-					$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']." 
+					$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."   ");
 
 					$daywait_refund_count = count($daywait_refund_arr);
 
 					//已退款 金额
-					$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+					$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."  ");
 
 					$dayhas_refund_money = $dayhas_refund_money_arr[0]['total_money'];
 
 					//已退款 订单数量
-					$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+					$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."  group by order_id ");
 
 					$dayhas_refund_count = count($dayhas_refund_arr);
@@ -175,25 +175,25 @@ class ReportsController extends CommonController{
 
 
 			//退款中 金额
-			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 					where state =0 and addtime > ".$thisweek['egt']." and addtime < ".$thisweek['lt']."  ");
 
 			$wait_refund_money = $wait_refund_money_arr[0]['total_money'];
 
 			//退款中  订单数量
-			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$thisweek['egt']." 
+			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$thisweek['egt']."
 				and addtime < ".$thisweek['lt']."   ");
 
 			$wait_refund_count = count($wait_refund_arr);
 
 			//已退款 金额
-			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thisweek['egt']." 
+			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thisweek['egt']."
 				and addtime < ".$thisweek['lt']."  ");
 
 			$has_refund_money = $has_refund_money_arr[0]['total_money'];
 
 			//已退款 订单数量
-			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thisweek['egt']." 
+			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thisweek['egt']."
 				and addtime < ".$thisweek['lt']."  group by order_id ");
 
 			$has_refund_count = count($has_refund_arr);
@@ -331,25 +331,25 @@ class ReportsController extends CommonController{
 
 
 						//退款中 金额
-						$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+						$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 								where state =0 and addtime >= ".$day['egt']." and addtime < ".$day['lt']."  ");
 
 						$daywait_refund_money = $daywait_refund_money_arr[0]['total_money'];
 
 						//退款中  订单数量
-						$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']." 
+						$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']."
 							and addtime < ".$day['lt']."   ");
 
 						$daywait_refund_count = count($daywait_refund_arr);
 
 						//已退款 金额
-						$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+						$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 							and addtime < ".$day['lt']."  ");
 
 						$dayhas_refund_money = $dayhas_refund_money_arr[0]['total_money'];
 
 						//已退款 订单数量
-						$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+						$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 							and addtime < ".$day['lt']."  group by order_id ");
 
 						$dayhas_refund_count = count($dayhas_refund_arr);
@@ -374,25 +374,25 @@ class ReportsController extends CommonController{
 			}
 
 			//退款中 金额
-			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 					where state =0 and addtime > ".$lastweek['egt']." and addtime < ".$lastweek['lt']."  ");
 
 			$wait_refund_money = $wait_refund_money_arr[0]['total_money'];
 
 			//退款中  订单数量
-			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$lastweek['egt']." 
+			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$lastweek['egt']."
 				and addtime < ".$lastweek['lt']."   ");
 
 			$wait_refund_count = count($wait_refund_arr);
 
 			//已退款 金额
-			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastweek['egt']." 
+			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastweek['egt']."
 				and addtime < ".$lastweek['lt']."  ");
 
 			$has_refund_money = $has_refund_money_arr[0]['total_money'];
 
 			//已退款 订单数量
-			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastweek['egt']." 
+			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastweek['egt']."
 				and addtime < ".$lastweek['lt']."  group by order_id ");
 
 			$has_refund_count = count($has_refund_arr);
@@ -538,25 +538,25 @@ class ReportsController extends CommonController{
 
 
 					//退款中 金额
-					$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+					$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 							where state =0 and addtime >= ".$day['egt']." and addtime < ".$day['lt']."  ");
 
 					$daywait_refund_money = $daywait_refund_money_arr[0]['total_money'];
 
 					//退款中  订单数量
-					$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']." 
+					$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."   ");
 
 					$daywait_refund_count = count($daywait_refund_arr);
 
 					//已退款 金额
-					$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+					$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."  ");
 
 					$dayhas_refund_money = $dayhas_refund_money_arr[0]['total_money'];
 
 					//已退款 订单数量
-					$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+					$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."  group by order_id ");
 
 					$dayhas_refund_count = count($dayhas_refund_arr);
@@ -584,25 +584,25 @@ class ReportsController extends CommonController{
 
 
 			//退款中 金额
-			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 					where state =0 and addtime > ".$thismonth['egt']." and addtime < ".$thismonth['lt']."  ");
 
 			$wait_refund_money = $wait_refund_money_arr[0]['total_money'];
 
 			//退款中  订单数量
-			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$thismonth['egt']." 
+			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$thismonth['egt']."
 				and addtime < ".$thismonth['lt']."   ");
 
 			$wait_refund_count = count($wait_refund_arr);
 
 			//已退款 金额
-			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thismonth['egt']." 
+			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thismonth['egt']."
 				and addtime < ".$thismonth['lt']."  ");
 
 			$has_refund_money = $has_refund_money_arr[0]['total_money'];
 
 			//已退款 订单数量
-			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thismonth['egt']." 
+			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$thismonth['egt']."
 				and addtime < ".$thismonth['lt']."  group by order_id ");
 
 			$has_refund_count = count($has_refund_arr);
@@ -769,25 +769,25 @@ class ReportsController extends CommonController{
 
 
 					//退款中 金额
-					$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+					$daywait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 							where state =0 and addtime >= ".$day['egt']." and addtime < ".$day['lt']."  ");
 
 					$daywait_refund_money = $daywait_refund_money_arr[0]['total_money'];
 
 					//退款中  订单数量
-					$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']." 
+					$daywait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."   ");
 
 					$daywait_refund_count = count($daywait_refund_arr);
 
 					//已退款 金额
-					$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+					$dayhas_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."  ");
 
 					$dayhas_refund_money = $dayhas_refund_money_arr[0]['total_money'];
 
 					//已退款 订单数量
-					$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']." 
+					$dayhas_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime >= ".$day['egt']."
 						and addtime < ".$day['lt']."  group by order_id ");
 
 					$dayhas_refund_count = count($dayhas_refund_arr);
@@ -815,25 +815,25 @@ class ReportsController extends CommonController{
 
 
 			//退款中 金额
-			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund 
+			$wait_refund_money_arr = M()->query("select sum(ref_money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund
 					where state =0 and addtime > ".$lastmonth['egt']." and addtime < ".$lastmonth['lt']."  ");
 
 			$wait_refund_money = $wait_refund_money_arr[0]['total_money'];
 
 			//退款中  订单数量
-			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$lastmonth['egt']." 
+			$wait_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_refund where state =0 and addtime > ".$lastmonth['egt']."
 				and addtime < ".$lastmonth['lt']."   ");
 
 			$wait_refund_count = count($wait_refund_arr);
 
 			//已退款 金额
-			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastmonth['egt']." 
+			$has_refund_money_arr = M()->query("select sum(money) as total_money from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastmonth['egt']."
 				and addtime < ".$lastmonth['lt']."  ");
 
 			$has_refund_money = $has_refund_money_arr[0]['total_money'];
 
 			//已退款 订单数量
-			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastmonth['egt']." 
+			$has_refund_arr = M()->query("select order_id from ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods_refund where addtime > ".$lastmonth['egt']."
 				and addtime < ".$lastmonth['lt']."  group by order_id ");
 
 			$has_refund_count = count($has_refund_arr);

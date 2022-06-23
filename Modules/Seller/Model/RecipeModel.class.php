@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      http://www.ch871.com/
- * @copyright Copyright (c) 2019-2021 ch871.com.
- * @license   http://www.ch871.com/license.html License
+ * @link      https://www.eaterplanet.com/
+ * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
+ * @license   https://www.eaterplanet.com/license.html License
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -30,7 +30,7 @@ class RecipeModel{
 		$ins_data['images'] =  save_media($data['data']['images']);
 		$ins_data['video'] =  save_media($data['data']['video']);
 		$ins_data['video'] = D('Seller/Goods')->check_douyin_video($ins_data['video']);
-		
+
 		$ins_data['member_id'] =  save_media($data['data']['member_id']);
 		$ins_data['cate_id'] =  $data['data']['cate_id'];
 		$ins_data['make_time'] = $data['data']['make_time'];
@@ -147,6 +147,6 @@ class RecipeModel{
 
 		}
 	}
-	
+
 }
 ?>

@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      http://www.ch871.com/
- * @copyright Copyright (c) 2019-2021 ch871.com.
- * @license   http://www.ch871.com/license.html License
+ * @link      https://www.eaterplanet.com/
+ * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
+ * @license   https://www.eaterplanet.com/license.html License
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -1440,8 +1440,8 @@ class CommunityController extends CommonController {
 		/**待确认佣金*/
 
 		//$wait_sub_total_money = M('eaterplanet_community_head_commiss_order')->where( "head_id={$head_id} and state=0" )->sum('money');
-		$sql = "select sum( co.money ) as money from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,  
-                ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og  
+		$sql = "select sum( co.money ) as money from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,
+                ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og
 	                    where  co.order_goods_id = og.order_goods_id and  og.is_refund_state = 0 and co.state = 0 and co.head_id = ".$head_id." order by co.id desc ";
 
 		$pre_total_money_list = M()->query($sql);
