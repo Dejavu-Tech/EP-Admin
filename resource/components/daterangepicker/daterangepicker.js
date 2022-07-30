@@ -119,8 +119,8 @@
 				this.opens = 'left';
 
 			this.buttonClasses = ['btn', 'btn-small btn-sm'];
-			this.applyClass = 'btn-primary';
-			this.cancelClass = 'btn-secondary';
+			this.applyClass = 'btn-success';
+			this.cancelClass = 'btn-primary';
 
 			this.format = 'MM/DD/YYYY';
 			this.separator = ' - ';
@@ -1080,10 +1080,10 @@
 					var year = now.getFullYear();
 					var month = now.getMonth();
 					var day = now.getDate();
-					//options.ranges['今天'] = [new Date(year, month, day, 0, 0, 0), moment()];
-					//options.ranges['一周内'] = [moment().subtract('days', 6), moment()];
-					//options.ranges['二周内'] = [moment().subtract('days', 13), moment()];
-					//options.ranges['一月内'] = [moment().subtract('days', 29), moment()];
+					options.ranges['今天'] = [new Date(year, month, day, 0, 0, 0), moment()];
+					options.ranges['一周内'] = [moment().subtract('days', 6), moment()];
+					options.ranges['二周内'] = [moment().subtract('days', 13), moment()];
+					options.ranges['一月内'] = [moment().subtract('days', 29), moment()];
 				}
 				if(typeof(options.locale) != 'object') {
 					options.locale = {
