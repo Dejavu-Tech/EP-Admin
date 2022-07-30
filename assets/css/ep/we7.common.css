@@ -770,8 +770,8 @@ select.we7-select[multiple=multiple], select[multiple=multiple] {
 
 @font-face {
     font-family: we7icon;
-    src: url(../../../../web/resource/fonts/we7icon.eot?ceg6l3);
-    src: url(../../../../web/resource/fonts/we7icon.eot?ceg6l3#iefix) format("embedded-opentype"), url(../../../../web/resource/fonts/we7icon.ttf?ceg6l3) format("truetype"), url(../../../../web/resource/fonts/we7icon.woff?ceg6l3) format("woff"), url(../../../../web/resource/fonts/we7icon.svg?ceg6l3#we7icon) format("svg");
+    src: url(../../../../resource/fonts/we7icon.eot?ceg6l3);
+    src: url(../../../../resource/fonts/we7icon.eot?ceg6l3#iefix) format("embedded-opentype"), url(../../../../resource/fonts/we7icon.ttf?ceg6l3) format("truetype"), url(../../../../resource/fonts/we7icon.woff?ceg6l3) format("woff"), url(../../../../resource/fonts/we7icon.svg?ceg6l3#we7icon) format("svg");
     font-weight: 400;
     font-style: normal
 }
