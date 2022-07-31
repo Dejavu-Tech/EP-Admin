@@ -108,14 +108,14 @@
 									<div class="form-group row" >
 										<label class="col-sm-2 col-form-label">后台登录背景图片</label>
 										<div class="col-sm-10" >
-											{:tpl_form_field_image2('parameter[seller_backimage]', $data['seller_backimage'], "Common/image/ep.png")}
-											<small>商家后台登录定制图（尺寸：200*230）。手动FTP替换地址：Common/image/ep-2.png</small>
+											{:tpl_form_field_image2('parameter[seller_backimage]', $data['seller_backimage'], "/resource/images/ep.png")}
+											<small>商家后台登录定制图（尺寸：200*230）。手动FTP替换地址：/resource/images/ep-2.png</small>
 										</div>
 									</div>
 									<div class="form-group row" >
 										<label class="col-sm-2 col-form-label">后台登录LOGO</label>
 										<div class="col-sm-10">
-											{:tpl_form_field_image2('parameter[admin_login_image]', $data['admin_login_image'], "Common/image/ep-2.png")}
+											{:tpl_form_field_image2('parameter[admin_login_image]', $data['admin_login_image'], "/resource/images/ep-2.png")}
 											<small>商家后台登录页面左上角LOGO（尺寸：高50，宽120~500）。</small>
 										</div>
 									</div>
@@ -313,7 +313,7 @@
 </div>
 
 
-<script src="/layuiadmin/layui/layui1.js"></script>
+<script src="/resource/layuiadmin/layui/layui1.js"></script>
 <script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <!-- latest jquery-->
@@ -339,7 +339,7 @@
 <script src="/assets/js/theme-customizer/customizer1.js"></script>
 <script>
 	layui.config({
-		base: '/layuiadmin/' //静态资源所在路径
+		base: '/resource/layuiadmin/' //静态资源所在路径
 	}).extend({
 		index: 'lib/index' //主入口模块
 	}).use('index');

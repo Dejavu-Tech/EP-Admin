@@ -238,7 +238,7 @@
 														<?php if (defined('ROLE') && ROLE == 'agenter' ){ ?>
 														<div>客户名：{$item['nickname']}</div>
 														<?php if( !empty($item['member_content']) ){ ?>
-														<div class="txt-danger">{$item['member_content']}</div>
+														<div class="txt-danger">客户备注：{$item['member_content']}</div>
 														<?php } ?>
 														<?php }else{ ?>
 														<?php if($s_id == 1){ ?>
@@ -247,7 +247,7 @@
 														<div>客户名：<a class="txt-primary user">{$item['nickname']}</a></div>
 														<?php } ?>
 														<?php if( !empty($item['member_content']) ){ ?>
-														<div class="text-danger">{$item['member_content']}</div>
+														<div class="txt-danger">客户备注：{$item['member_content']}</div>
 														<?php } ?>
 														<?php } ?>
 													</td>
@@ -383,7 +383,7 @@
 
 
 
-<script src="/layuiadmin/layui/layui2.js"></script>
+<script src="/resource/layuiadmin/layui/layui2.js"></script>
 <script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 
@@ -406,7 +406,7 @@
 
 <script>
 	layui.config({
-		base: '/layuiadmin/' //静态资源所在路径
+		base: '/resource/layuiadmin/' //静态资源所在路径
 	}).extend({
 		index: 'lib/index' //主入口模块
 	}).use('index');
