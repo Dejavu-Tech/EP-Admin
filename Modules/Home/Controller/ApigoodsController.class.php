@@ -1239,7 +1239,7 @@ class ApigoodsController extends CommonController {
 		$member_level_info = array('is_show_member_disc' => $is_show_member_disc);
 
 		$member_level_list = array();//客户等级列表
-		$max_level_logo = C('SITE_URL')."Common/images/plus.png";
+		$max_level_logo = C('SITE_URL')."/resource/images/plus.png";
 		$max_member_level = array('level' => 0,'logo'=>'');//最大等级
 
 		$max_get_money = 0;//
@@ -1683,7 +1683,7 @@ class ApigoodsController extends CommonController {
 
 		if( empty($seller_info['s_banner']) )
 		{
-			$seller_info['s_banner'] = C('SITE_URL').'Common/mogu/image/170923_1bk3970j2eb9jia57aa8k3i661ck5_750x270.jpg';
+			$seller_info['s_banner'] = C('SITE_URL').'resource/images/170923_1bk3970j2eb9jia57aa8k3i661ck5_750x270.jpg';
 		} else{
 			$seller_info['s_banner'] = C('SITE_URL').'Uploads/image/'.$seller_info['s_banner'];
 		}

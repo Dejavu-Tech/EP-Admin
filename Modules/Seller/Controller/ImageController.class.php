@@ -175,7 +175,7 @@ class ImageController extends CommonController{
     	 }else if($org_dir == 'video')
 		 {
 			$filename=$dir.'/'.$info['file']['savepath'].$info['file']['savename'];
-			$data['image_thumb'] = '/Common/image/video.jpg';
+			$data['image_thumb'] = '/resource/images/video.jpg';
 			$data['image'] = $filename;
 			$data['code'] = 0;
     	    $this->ajaxReturn($data);

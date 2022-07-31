@@ -14,14 +14,14 @@ return array(
 	'VIEW_PATH'				 => './Themes/Install/',
     'SELLER_PWD_KEY' => 'IA=~(D9-|.^k7JsP1p*nVa,W/t6O#KY:$05q3G;)',
 	'TMPL_PARSE_STRING'=>array(
-	'__PUBLIC__' => __ROOT__ . '/Common',
+	'__PUBLIC__' => __ROOT__ . '/resource',
 	'__RES__' => __ROOT__.'/assets/theme',
     '__IMG__'=>__ROOT__.'/Themes/'.MODULE_NAME.'/default/Public/images',
     '__CSS__'=>__ROOT__.'/Themes/'.MODULE_NAME.'/default/Public/css',
     '__JS__'=> __ROOT__.'/Themes/'.MODULE_NAME.'/default/Public/js',
     '__NAME__'=>'吃货星球S2B2C商城系统',
     '__COMPANY__'=>'蒂佳芙科技（云南）有限公司',
-    '__VERSION__'=>'吃货星球v4.14.0',
+    '__VERSION__'=>'吃货星球v4.15.0',
     '__WEBSITE__'=>'www.eaterplanet.com',
     '__COMPANY_WEBSITE__'=>'www.rexo-tech.cn'
     ),

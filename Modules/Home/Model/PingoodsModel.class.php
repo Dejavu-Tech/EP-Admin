@@ -1424,7 +1424,7 @@ class PingoodsModel {
 		//imagecopymerge($dst, $avatar_src, 24, 615, 0, 0, $avatar_w, $avatar_h, 100);
 
 		//IA_ROOT."/addons/eaterplanet_ecommerce/assets/ep/fonts/simhei.ttf"
-		//$ttf_path = ROOT_PATH."Common/js/simhei.ttf";
+		//$ttf_path = ROOT_PATH."resource/js/simhei.ttf";
 
 		$ttf_path = ROOT_PATH."/assets/ep/fonts/simhei.ttf";
 		$msyh_path = ROOT_PATH."/assets/ep/fonts/msyh.ttf";
