@@ -414,23 +414,19 @@ class UserModel{
 		$result_category_json = $this->curl_category($category_url);
 
 		$result_category = json_decode($result_category_json, true);
-		// {"id":670,"name":"线下超市/便利店"},{"id":307,"name":"服装/鞋/箱包"}
-
 
 		$name = array_column($result_category['data'], 'name');
 
-		$found_supermarket = in_array("线下超市/便利店", $name);
-		$found_clothing = in_array("服装/鞋/箱包", $name);
+		$found_supermarket = in_array("百货/超市/便利店", $name);
+		$found_clothing = in_array("服饰内衣", $name);
 
 		if( empty($found_supermarket) && empty($found_clothing) ){
 			if(empty($found_supermarket)){
-				//show_json(0, array('message' => '请在微信公众平台添加 "线下超市/便利店" 类目') );
-				show_json(0, array('message' => '请在微信公众平台添加商家自营--->服装/鞋/箱包 、 生活服务--->百货/线下超市/便利店') );
+				show_json(0, array('message' => '请在微信公众平台添加商家自营--->服饰内衣 、 生活服务--->百货/超市/便利店') );
 				die();
 			}
 			if(empty($found_clothing)){
-				//show_json(0, array('message' => '请在微信公众平台添加 "服装/鞋/箱包" 类目' ) );
-				show_json(0, array('message' => '请在微信公众平台添加商家自营--->服装/鞋/箱包 、 生活服务--->百货/线下超市/便利店' ) );
+				show_json(0, array('message' => '请在微信公众平台添加商家自营--->服饰内衣 、 生活服务--->百货/超市/便利店' ) );
 				die();
 			}
 		}else{
