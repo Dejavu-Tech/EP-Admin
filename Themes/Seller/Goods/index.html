@@ -339,10 +339,10 @@
 														<?php } ?>
 
 														<?php if( $item['is_all_sale'] == 1 ){ ?>
-														<span >[所有团长{$item['head_count']}]</span>
+														<span >[所有团长({$item['head_count']})]</span>
 														<?php }else if( $item['head_count'] >0 ){ ?>
 														<!--<span class="text-green">[部分团长{$item['head_count']}]</span>-->
-														<a href="{:U('goods/goods_head',array('id'=>$item['id']))}" style="color:#428bca;"><span class="text-green">[部分团长可售 {$item['head_count']}]</span></a>
+														<a href="{:U('goods/goods_head',array('id'=>$item['id']))}" style="color:#428bca;"><span class="text-green">[部分团长可售({$item['head_count']})]</span></a>
 														<?php }else if( $item['head_count'] == 0 ){ ?>
 														<span>[无团长0]</span>
 														<?php } ?>
