@@ -834,10 +834,10 @@
 																	<input type="hidden" class="form-control spec_item_id" name="spec_item_id_{$spec['id']}[]" value="{$specitem['id']}" />
 																	<div class="input-group mb-3">
 																		<!--<div class="input-group-prepend">
-        <span class="input-group-text">
-        <input type="checkbox" <?php if($specitem['id']>0){ ?>checked<?php } ?> value="1" onclick='showItem(this)'>
-        </span>
-    </div>-->
+																				<span class="input-group-text">
+																				<input type="checkbox" <?php if($specitem['id']>0){ ?>checked<?php } ?> value="1" onclick='showItem(this)'>
+																				</span>
+																		</div>-->
 																		<input type="text" class="form-control spec_item_title" onblur="refreshOptions()" name="spec_item_title_{$spec['id']}[]" VALUE="{$specitem['title']}" />
 																		<div class="input-group-append spec_item_thumb <?php if(!empty($specitem['thumb'])){ ?>has_thumb<?php } ?>">
 																			<input type='hidden'  name="spec_item_thumb_{$spec['id']}[]" value="{$specitem['thumb']}"/>
