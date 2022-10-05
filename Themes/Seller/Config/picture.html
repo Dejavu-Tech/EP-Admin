@@ -108,14 +108,14 @@
 									<div class="form-group row" >
 										<label class="col-sm-2 col-form-label">后台登录背景图片</label>
 										<div class="col-sm-10" >
-											{:tpl_form_field_image2('parameter[seller_backimage]', $data['seller_backimage'], "/resource/images/ep.png")}
-											<small>商家后台登录定制图（尺寸：200*230）。手动FTP替换地址：/resource/images/ep-2.png</small>
+											{:tpl_form_field_image2('parameter[seller_backimage]', $data['seller_backimage'], "Common/image/ep.png")}
+											<small>商家后台登录定制图（尺寸：200*230）。手动FTP替换地址：Common/image/ep-2.png</small>
 										</div>
 									</div>
 									<div class="form-group row" >
 										<label class="col-sm-2 col-form-label">后台登录LOGO</label>
 										<div class="col-sm-10">
-											{:tpl_form_field_image2('parameter[admin_login_image]', $data['admin_login_image'], "/resource/images/ep-2.png")}
+											{:tpl_form_field_image2('parameter[admin_login_image]', $data['admin_login_image'], "Common/image/ep-2.png")}
 											<small>商家后台登录页面左上角LOGO（尺寸：高50，宽120~500）。</small>
 										</div>
 									</div>
@@ -235,7 +235,7 @@
 											<small>包括订单详情页头和社区选择页头，尺寸：750*340</small>
 										</div>
 									</div>
-									<div class="form-group row" style="display: none">
+									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">首页页头背景图</label>
 										<div class="col-sm-10">
 											{:tpl_form_field_image2('parameter[index_header_backgroundimage]', $data['index_header_backgroundimage'], "/assets/ep/placeholder/TOP_background@2x.png")}
