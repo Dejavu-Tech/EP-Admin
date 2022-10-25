@@ -103,223 +103,136 @@
 				</div>
 			</div>
 			<div class="container-fluid">
-				<ul class="nav nav-pills m-b-20" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-					<li class="nav-item"  ><a class="nav-link active"  id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">公众号模板消息</a></li>
-					<li class="nav-item"  ><a class="nav-link"  id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">平台订单通知</a></li>
+				<ul class="nav nav-pills m-b-20">
+					<li class="nav-item"><a class="nav-link <?php if( $type==1 ){ ?>active<?php } ?>" href="{:U('weprogram/templateconfig', array('type' => 1))}">公众号模板消息</a></li>
+					<li class="nav-item"><a class="nav-link <?php if( $type==2 ){ ?>active<?php } ?>" href="{:U('weprogram/templateconfig', array('type' => 2))}">平台订单通知</a></li>
 				</ul>
 			</div>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="card">
-							<div class="tab-content" id="v-pills-tabContent">
-								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-									<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
-										<div class="card-body">
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">公众号APPID</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_appid]" class="form-control" value="{$data['weixin_appid']}" />
-													<small>登录微信公众号平台，在管理中心->应用详情中查看</small>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">订单支付成功通知</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_pay_order]" class="form-control" value="{$data['weixin_template_pay_order']}" />
-													<small>用户订单支付成功，消息通知用户</small>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">订单发货通知</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_send_order]" class="form-control" value="{$data['weixin_template_send_order']}" />
-													<small>商品订单发货成功，消息通知用户</small>
-												</div>
-											</div>
-											<div class="form-group row" >
-												<label class="col-sm-2 col-form-label">核销成功通知</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_hexiao_success]" class="form-control" value="{$data['weixin_template_hexiao_success']}" />
-													<small>商品订单核销成功，消息通知用户</small>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">团长申请成功发送通知</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_apply_community]" class="form-control" value="{$data['weixin_template_apply_community']}" />
-													<small>用户申请团长，平台通过审核以后，消息通知用户团长申请成功</small>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">售后订单申请通知(平台)</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_apply_refund]" class="form-control" value="{$data['weixin_template_apply_refund']}" />
-													<small>消息通知平台管理人员，有“售后订单"需要处理</small>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">取消订单通知(平台)</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_cancle_order]" class="form-control" value="{$data['weixin_template_cancle_order']}" />
-													<small>消息通知平台管理人员，有“取消订单需要处理</small>
-												</div>
-											</div>
 
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">客户下单成功提醒团长</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_order_buy]" class="form-control" value="{$data['weixin_template_order_buy']}" />
-													<small>用户下单成功以后，消息通知团长</small>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">同城配送骑手接单通知</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_order_riders_receive]" class="form-control" value="{$data['weixin_template_order_riders_receive']}" />
-													<small>同城配送订单，消息通知骑手进行接单</small>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-sm-2 col-form-label">团长提现到账提醒</label>
-												<div class="col-sm-10">
-													<input type="text" name="parameter[weixin_template_apply_tixian]" class="form-control" value="{$data['weixin_template_apply_tixian']}" />
-													<small>团长申请提现，消息通知团长提现申请成功</small>
-												</div>
-											</div>
-											<div class="alert alert-primary" role="alert">
-												<p>注意，公众号需要是小程序的关联主体。(未填写appid 即不发送模板消息)<a href="https://demo.ch871.com/公众号模板消息.docx" class="txt-warning">点击下载设置教程</a></p>
-											</div>
-										</div>
-										<div class="card-footer">
-											<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
-										</div>
-									</form>
-								</div>
-								<form style="display: none" action="{:U('weprogram/templateconfig_fenxi', array('type' => 3))}" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
-									<div class="card-body">
-										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">示例：</label>
-											<div class="col-sm-10">
-												<div class="alert alert-primary" role="alert">
-													<p>
-														{{first.DATA}}<br/>
-														产品名称：{{hotelName.DATA}}<br/>
-														团购券号:{{voucher_number.DATA}}<br/>
-														{{remark.DATA}}<br/>
-														小程序后台——模板消息——我的模板——某模板详情——详细内容（复制粘粘到此处）</p>
-												</div>
-											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">模板详细内容</label>
-											<div class="col-sm-10">
-												<textarea  name="subtitle" id="subtitle" rows="8"  class="form-control"  ></textarea>
-											</div>
-										</div>
-										<div id="analy_div"></div>
-										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">发送客户类型</label>
-											<div class="col-sm-10">
-												<div class="form-group m-t-5 m-checkbox-inline mb-0 custom-radio-ml">
-													<div class="radio radio-primary">
-														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type"  title="指定客户" value=1 checked />
-													</div>
-													<div class="radio radio-primary">
-														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type" title="某个客户组" value=2  />
-													</div>
-													<div class="radio radio-primary">
-														<input type='radio' name='all_msg_send_type' lay-filter="all_msg_send_type"  title="全部客户" value=3  />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="form-group row" id="type_1">
-											<label class="col-sm-2 col-form-label">关联客户</label>
-											<div class="col-sm-10">
-												<div class="input-group pill-input-group" style="margin: 0;">
-													<input type="text" disabled value="" class="form-control valid" name="" placeholder="" id="agent_id">
-													<span class="input-group-append">
-														<span data-input="#agent_id" id="col-sm-10"  class="btn btn-pill btn-primary">选择客户</span>
-													</span>
-												</div>
-											</div>
-										</div>
-										<div class="form-group row" id="type_2" style="display:none;">
-											<label class="col-sm-2 col-form-label must">客户组</label>
-											<div class="col-sm-10">
-												<select name="member_group_id">
-													<?php foreach($member_group_list as $val){ ?>
-													<option value="{$val['id']}">{$val['groupname']}</option>
-													<?php } ?>
-												</select>
-											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">模板ID</label>
-											<div class="col-sm-10">
-												<input type="text" name="all_send_template_id" class="form-control" value="" />
-												<small>开发者调用模板消息接口时需提供模板ID</small>
-											</div>
-
-										</div>
-										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">点击链接</label>
-											<div class="col-sm-10">
-												<div class="input-group pill-input-group">
-													<input type="text" value="" class="form-control valid" name="link" placeholder="" id="advlink">
-													<span class="input-group-append">
-														<span data-input="#advlink" id="chose_link"  class="btn btn-pill btn-primary">选择链接</span>
-													</span>
-												</div>
-											</div>
+							<?php if( $type == 1 ){ ?>
+							<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
+								<div class="card-body">
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">公众号APPID</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_appid]" class="form-control" value="{$data['weixin_appid']}" />
+											<small>登录微信公众号平台，在管理中心->应用详情中查看</small>
 										</div>
 									</div>
-									<div class="card-footer">
-										<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">订单支付成功通知</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_pay_order]" class="form-control" value="{$data['weixin_template_pay_order']}" />
+											<small>用户订单支付成功，消息通知用户</small>
+										</div>
 									</div>
-								</form>
-								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-									<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
-										<div class="card-body">
-											<div class="form-group row" id="user_form_item">
-												<label class="col-sm-2 col-form-label">关联用户</label>
-												<div class="col-sm-10">
-													<div class="input-group pill-input-group" style="margin: 0;">
-														<input type="text" disabled value="" class="form-control valid" name="" placeholder="" id="agent_id">
-														<div class="input-group-append">
-															<span data-input="#agent_id" id="chose_agent_id"  class="btn btn-pill btn-primary">选择用户</span>
-														</div>
-													</div>
-
-
-													<?php if(!empty($user_list)){ ?>
-													<?php foreach( $user_list as $a ){ ?>
-													<div class="input-group mult_choose_member_id m-t-5" data-member-id="{$a['member_id']}" >
-														<div class="layadmin-text-center choose_user">
-															<img class="img-responsive img-thumbnail" src="{$a['avatar']}">
-															<div class="layadmin-maillist-img" style="">{$a['nickname']}</div>
-															<button type="button" class="btn btn-primary" onclick="cancle_bind(this)">
-																<i class="mdi mdi-delete-forever-outline"></i>
-															</button>
-														</div>
-													</div>
-													<?php }} ?>
-													<small>订单信息提示，平台用户下单后通知关联客户进行接单处理</small>
-												</div>
-
-											</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">订单发货通知</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_send_order]" class="form-control" value="{$data['weixin_template_send_order']}" />
+											<small>商品订单发货成功，消息通知用户</small>
 										</div>
-										<div class="card-footer">
-											<?php if( $_GPC['type']!='0' && $_GPC['type']!='1' ){ ?>
-											<input type="hidden" name="limit_user_list" value="" id="limit_user_list" />
-											<?php } ?>
-											<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
+									</div>
+									<div class="form-group row" >
+										<label class="col-sm-2 col-form-label">核销成功通知</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_hexiao_success]" class="form-control" value="{$data['weixin_template_hexiao_success']}" />
+											<small>商品订单核销成功，消息通知用户</small>
 										</div>
-									</form>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">团长申请成功发送通知</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_apply_community]" class="form-control" value="{$data['weixin_template_apply_community']}" />
+											<small>用户申请团长，平台通过审核以后，消息通知用户团长申请成功</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">售后订单申请通知(平台)</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_apply_refund]" class="form-control" value="{$data['weixin_template_apply_refund']}" />
+											<small>消息通知平台管理人员，有“售后订单"需要处理</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">取消订单通知(平台)</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_cancle_order]" class="form-control" value="{$data['weixin_template_cancle_order']}" />
+											<small>消息通知平台管理人员，有“取消订单需要处理</small>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">客户下单成功提醒团长</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_order_buy]" class="form-control" value="{$data['weixin_template_order_buy']}" />
+											<small>用户下单成功以后，消息通知团长</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">同城配送骑手接单通知</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_order_riders_receive]" class="form-control" value="{$data['weixin_template_order_riders_receive']}" />
+											<small>同城配送订单，消息通知骑手进行接单</small>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">团长提现到账提醒</label>
+										<div class="col-sm-10">
+											<input type="text" name="parameter[weixin_template_apply_tixian]" class="form-control" value="{$data['weixin_template_apply_tixian']}" />
+											<small>团长申请提现，消息通知团长提现申请成功</small>
+										</div>
+									</div>
+									<div class="alert alert-primary" role="alert">
+										<p>注意，公众号需要是小程序的关联主体。(未填写appid 即不发送模板消息)<a href="https://demo.ch871.com/公众号模板消息.docx" class="txt-warning">点击下载设置教程</a></p>
+									</div>
 								</div>
-							</div>
+								<div class="card-footer">
+									<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
+								</div>
+							</form>
+
+							<?php }else{ ?>
+							<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
+								<div class="card-body">
+									<div class="form-group row" id="user_form_item">
+										<label class="col-sm-2 col-form-label">关联用户</label>
+										<div class="col-sm-10">
+											<div class="input-group pill-input-group" style="margin: 0;">
+												<input type="text" disabled value="" class="form-control valid" name="" placeholder="" id="agent_id">
+												<div class="input-group-append">
+													<span data-input="#agent_id" id="chose_agent_id"  class="btn btn-pill btn-primary">选择用户</span>
+												</div>
+											</div>
+											<?php if(!empty($user_list)){ ?>
+											<?php foreach( $user_list as $a ){ ?>
+											<div class="input-group mult_choose_member_id m-t-5" data-member-id="{$a['member_id']}" >
+												<div class="layadmin-text-center choose_user">
+													<img class="img-responsive img-thumbnail" src="{$a['avatar']}">
+													<div class="layadmin-maillist-img" style="">{$a['nickname']}</div>
+													<button type="button" class="btn btn-primary" onclick="cancle_bind(this)">
+														<i class="mdi mdi-delete-forever-outline"></i>
+													</button>
+												</div>
+											</div>
+											<?php }} ?>
+											<small>订单信息提示，平台用户下单后通知关联客户进行接单处理</small>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<?php if( $_GPC['type']!='0' && $_GPC['type']!='1' ){ ?>
+									<input type="hidden" name="limit_user_list" value="" id="limit_user_list" />
+									<?php } ?>
+									<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
+								</div>
+							</form>
 						</div>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
