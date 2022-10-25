@@ -41,7 +41,7 @@ class SellerLogController extends CommonController {
             $condition . '  ORDER BY id DESC limit ' . (($pindex - 1) * $psize) . ',' . $psize);
         foreach($list as &$value){
             if($value['type'] == 1){
-                $value['type'] = '登录平台';
+                $value['types'] = '登录平台';
             }else if($value['type'] == 0){
                 $value['types'] = '退出平台';
             }else if($value['type'] == 2){
