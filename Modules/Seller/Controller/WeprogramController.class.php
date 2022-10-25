@@ -141,12 +141,7 @@ class WeprogramController extends CommonController{
 
 
 		}
-		else if( $_GPC['type']=='3' )
-		{
-			$member_group_list = M('eaterplanet_ecommerce_member_group')->order('id asc')->select();
 
-			$this->member_group_list = $member_group_list;
-		}
 		else{
 			if ( IS_POST ) {
 
