@@ -15,8 +15,7 @@
 	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
 
-	<!-- Google font-->
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
 	<!-- Font Awesome-->
 	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
 	<!-- ico-font-->
@@ -108,14 +107,14 @@
 									<div class="form-group row" >
 										<label class="col-sm-2 col-form-label">后台登录背景图片</label>
 										<div class="col-sm-10" >
-											{:tpl_form_field_image2('parameter[seller_backimage]', $data['seller_backimage'], "Common/image/ep.png")}
-											<small>商家后台登录定制图（尺寸：200*230）。手动FTP替换地址：Common/image/ep-2.png</small>
+											{:tpl_form_field_image2('parameter[seller_backimage]', $data['seller_backimage'], "assets/images/ep.png")}
+											<small>商家后台登录定制图（尺寸：200*230）。手动FTP替换地址：assets/images/ep-2.png</small>
 										</div>
 									</div>
 									<div class="form-group row" >
 										<label class="col-sm-2 col-form-label">后台登录LOGO</label>
 										<div class="col-sm-10">
-											{:tpl_form_field_image2('parameter[admin_login_image]', $data['admin_login_image'], "Common/image/ep-2.png")}
+											{:tpl_form_field_image2('parameter[admin_login_image]', $data['admin_login_image'], "assets/images/ep-2.png")}
 											<small>商家后台登录页面左上角LOGO（尺寸：高50，宽120~500）。</small>
 										</div>
 									</div>
@@ -245,7 +244,7 @@
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">广告页背景图</label>
 										<div class="col-sm-10">
-											{:tpl_form_field_image2('parameter[user_header_backgroundimage]', $data['user_header_backgroundimage'], "/assets/ep/placeholder/TOP_background@2x.png")}
+											{:tpl_form_field_image2('parameter[common_header_backgroundimage]', $data['common_header_backgroundimage'])}
 											<small>建议尺寸：750*1500</small>
 										</div>
 									</div>
@@ -301,7 +300,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 footer-copyright">
-						<p class="mb-0">Copyright © 2019-2022 Dejavu.Tech. All rights reserved.</p>
+						<p class="mb-0">Copyright © __YEARS__ Dejavu.Tech. All rights reserved.</p>
 					</div>
 					<div class="col-md-6">
 						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
@@ -313,7 +312,7 @@
 </div>
 
 
-<script src="/resource/layuiadmin/layui/layui1.js"></script>
+<script src="/resource/layuiadmin/layui/layui-form.js"></script>
 <script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <!-- latest jquery-->

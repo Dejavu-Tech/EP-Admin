@@ -15,8 +15,7 @@
 	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
 
-	<!-- Google font-->
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
 	<!-- Font Awesome-->
 	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
 	<!-- ico-font-->
@@ -138,37 +137,35 @@
 												<?php foreach($perms['parent'] as $key => $value){ ?>
 												<div class='card' >
 													<div class='card-header'>
-														<h5 class="mb-0">
-															<button class="btn btn-link pl-0" data-toggle="collapse"  data-parent="#accordion" href="#collapse{$key}">
-																<div class="checkbox checkbox-primary m-l-0 row" style="margin-top: 0!important;">
-																	<input type='checkbox' id="perm_{$key}" name='perms[]' value='{$key}' class='perm-all' data-group='{$key}'
-																	<?php if(in_array($key,$role_perms) || in_array($key,$user_perms)){ ?> checked<?php } ?>
-																	<?php if(in_array($key,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?>
-																	title="" />
-																	<h7>{$value['text']}</h7>
-																</div>
-															</button>
-														</h5>
+															<a class="btn btn-link btn-sm pull-right" data-toggle="collapse"  data-parent="#accordion" href="#collapse{$key}">展开</a>
+															<label class='checkbox-inline'>
+
+														 	<input type='checkbox' lay-ignore  id="perm_{$key}" name='perms[]' value='{$key}' class='perm-all' data-group='{$key}'
+																<?php if(in_array($key,$role_perms) || in_array($key,$user_perms)){ ?> checked<?php } ?>
+																<?php if(in_array($key,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?>
+																/ title=""> {$value['text']}
+
+															</label>
 													</div>
 													<div id="collapse{$key}" class="panel-collapse <?php if($i == 0){ ?>in<?php }else{ ?>collapse<?php } ?>">
-														<div class='card-body panel-epbody perm-group'>
+														<div class='card-body panel-body perm-group'>
 															<?php if( count($perms['parent'][$key]) >=1 ){ ?>
 															<span>
 																<?php foreach($perms['parent'][$key] as $ke => $val){ ?>
 																<?php if($ke != 'text'){ ?>
-																<div class="checkbox checkbox-primary m-l-0 row" style="margin-top: 0!important;">
-																	<input type='checkbox' name='perms[]'  value='{$key}.{$ke}' class='perm-item'
-																		   data-group='{$key}' data-parent='text'
-																	<?php if(in_array($key.".".$ke,$role_perms) || in_array($key.".".$ke,$user_perms)){ ?> checked<?php } ?>
-																	<?php if(in_array($key.".".$ke,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title="" /><h7><?php echo str_replace("-log", "", $val); ?></h7>
-																</div>
-																<?php }else{ ?>
-																<div class="checkbox checkbox-primary m-l-0 row" style="margin-top: 0!important;">
-																	<input type='checkbox' name='perms[]'  value='{$key}' class='perm-all-item'
-																		   data-group='{$key}' data-parent='text'
-																	<?php if(in_array($key,$role_perms) || in_array($key,$user_perms)){ ?> checked<?php } ?>
-																	<?php if(in_array($key,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title="" /><h7><?php echo str_replace("-log", "", $val); ?></h7>
-																</div>
+													 <label class='checkbox-inline'>
+														 <input type='checkbox' lay-ignore   name='perms[]'  value='{$key}.{$ke}' class='perm-item'
+																data-group='{$key}' data-parent='text'
+																<?php if(in_array($key.".".$ke,$role_perms) || in_array($key.".".$ke,$user_perms)){ ?> checked<?php } ?>
+														 <?php if(in_array($key.".".$ke,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title=""/>  <?php echo str_replace("-log", "", $val); ?>
+													 </label>
+												<?php }else{ ?>
+													 <label class='checkbox-inline'>
+														 <input type='checkbox' lay-ignore   name='perms[]'  value='{$key}' class='perm-all-item'
+																data-group='{$key}' data-parent='text'
+																<?php if(in_array($key,$role_perms) || in_array($key,$user_perms)){ ?> checked<?php } ?>
+														 <?php if(in_array($key,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $val); ?>
+													 </label>
 																<?php } ?>
 															</span>
 															<br>
@@ -181,26 +178,26 @@
 
 																<?php foreach($val as $k => $v){ ?>
 
-																<?php if($k != 'text'){ ?>
-																<div class="checkbox checkbox-primary m-l-0 m-r-20 row" style="margin-top: 0!important;">
-																	<input type='checkbox' name='perms[]'  value='{$key}.{$ke}.{$k}' class='perm-item'
-																		   data-group='{$key}' data-parent='{$ke}' data-son="{$k}"
+													<?php if($k != 'text'){ ?>
+														 <label class='checkbox-inline'>
+															 <input type='checkbox' lay-ignore   name='perms[]'  value='{$key}.{$ke}.{$k}' class='perm-item'
+																	data-group='{$key}' data-parent='{$ke}' data-son="{$k}"
 																	<?php if( in_array($key.".".$ke.".".$k,$role_perms) || in_array($key.".".$ke.".".$k,$user_perms) ){ ?> checked<?php } ?>
-																	<?php if(in_array($key.".".$ke.".".$k,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title="" /><?php echo str_replace("-log", "", $v); ?>
-																</div>
-																<?php }else{ ?>
-																<div class="checkbox checkbox-primary m-l-0 m-r-20 row" style="margin-top: 0!important;">
-																	<input type='checkbox' name='perms[]'  value='{$key}.{$ke}' class='perm-all-item'
-																		   data-group='{$key}' data-parent='{$ke}' data-son="{$k}"
+															 <?php if(in_array($key.".".$ke.".".$k,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $v); ?>
+														 </label>
+													<?php }else{ ?>
+														 <label class='checkbox-inline'>
+															 <input type='checkbox' lay-ignore   name='perms[]'  value='{$key}.{$ke}' class='perm-all-item'
+																	data-group='{$key}' data-parent='{$ke}' data-son="{$k}"
 																	<?php if( in_array($key.".".$ke,$role_perms) || in_array($key.".".$ke,$user_perms) ){ ?> checked<?php } ?>
-																	<?php if(in_array($key.".".$ke,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title="" /> <?php echo str_replace("-log", "", $v); ?>
-																</div>
-																<?php } ?>
-																<?php } ?>
-															</span>
-															<br>
-															<?php } ?>
-															<?php } ?>
+															 <?php if(in_array($key.".".$ke,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title=""/> <?php echo str_replace("-log", "", $v); ?>
+														 </label>
+													<?php } ?>
+													<?php } ?>
+													</span>
+												<br>
+												<?php } ?>
+												<?php } ?>
 
 
 															<?php foreach($perms['grandson'][$key] as $ke => $val){ ?>
@@ -212,19 +209,19 @@
 																<?php foreach($v as $kk => $vv){ ?>
 
 																<?php if($kk != 'text'){ ?>
-																<div class="checkbox checkbox-primary m-l-0 m-r-20 row" style="margin-top: 0!important;">
-																	<input type='checkbox'   name='perms[]'  value='{$key}.{$ke}.{$k}.{$kk}' class='perm-item'
-																		   data-group='{$key}' data-parent='{$ke}' data-son="{$k}" data-grandson="{$kk}"
+														 <label class='checkbox-inline'>
+															 <input type='checkbox' lay-ignore   name='perms[]'  value='{$key}.{$ke}.{$k}.{$kk}' class='perm-item'
+																	data-group='{$key}' data-parent='{$ke}' data-son="{$k}" data-grandson="{$kk}"
 																	<?php if(in_array($key.".".$ke.".".$k.".".$kk,$role_perms) || in_array($key.".".$ke.".".$k.".".$kk,$user_perms)){ ?> checked<?php } ?>
-																	<?php if(in_array($key.".".$ke.".".$k.".".$kk,$role_perms) && $action =='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $vv); ?>
-																</div>
-																<?php }else{ ?>
-																<div class="checkbox checkbox-primary m-l-0 m-r-20 row" style="margin-top: 0!important;">
-																	<input type='checkbox'   name='perms[]'  value='{$key}.{$ke}.{$k}' class='perm-all-item'
-																		   data-group='{$key}' data-parent='{$ke}' data-son="{$k}" data-grandson="{$kk}"
+															 <?php if(in_array($key.".".$ke.".".$k.".".$kk,$role_perms) && $action =='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $vv); ?>
+														 </label>
+												<?php }else{ ?>
+														 <label class='checkbox-inline'>
+															 <input type='checkbox' lay-ignore   name='perms[]'  value='{$key}.{$ke}.{$k}' class='perm-all-item'
+																	data-group='{$key}' data-parent='{$ke}' data-son="{$k}" data-grandson="{$kk}"
 																	<?php if( in_array($key.".".$ke.".".$k,$role_perms) || in_array($key.".".$ke.".".$k,$user_perms) ){ ?> checked<?php } ?>
-																	<?php if(in_array($key.".".$ke.".".$k,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $vv); ?>
-																</div>
+															 <?php if(in_array($key.".".$ke.".".$k,$role_perms) && $action=='perm.user'){ ?> disabled<?php } ?> title=""/><?php echo str_replace("-log", "", $vv); ?>
+														 </label>
 																<?php } ?>
 																<?php } ?>
 															</span>
@@ -254,7 +251,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 footer-copyright">
-						<p class="mb-0">Copyright © 2019-2022 Dejavu.Tech. All rights reserved.</p>
+						<p class="mb-0">Copyright © __YEARS__ Dejavu.Tech. All rights reserved.</p>
 					</div>
 					<div class="col-md-6">
 						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
@@ -265,7 +262,7 @@
 	</div>
 </div>
 
-<script src="/resource/layuiadmin/layui/layui2.js"></script>
+<script src="/resource/layuiadmin/layui/layui-common.js"></script>
 <script src="/assets/js/sidebar-menu.js"></script>
 
 <!-- feather icon js-->
@@ -343,7 +340,8 @@
 
 						layer.msg('操作成功',{time: 1000,
 							end:function(){
-								location.href = info.result.url;
+								var backurl = "{:U('perm/index',array('ok'=>'1'))}";
+								location.href = backurl;
 							}
 						});
 					}
@@ -394,15 +392,15 @@
 
 		});
 
-		$(".panel-epbody").find("span").each(function (index, item) {
-			if ($(this).find(".checkbox").length != 1) {
-				$($(this).find(".checkbox").get(0)).wrap("<div class='form-row m-l-0' style='white-space:nowrap;'></div>");
-				$($(this).find(".checkbox").not($(this).find("label").get(0))).wrapAll("<div class='form-row m-l-0'></div>");
-			}
-			else {
-				$($(this).find(".checkbox").get(0)).wrap("<div class='form-row m-l-0'></div>");
-			}
-		});
+			$(".panel-body").find("span").each(function (index, item) {
+				if ($(this).find("label").length != 1) {
+					$($(this).find("label").get(0)).wrap("<div class='col-sm-2' style='white-space:nowrap;'></div>");
+					$($(this).find("label").not($(this).find("label").get(0))).wrapAll("<div class='col-sm-10'></div>");
+				}
+				else {
+					$($(this).find("label").get(0)).wrap("<div class='col-sm-12'></div>");
+				}
+			});
 
 	});
 

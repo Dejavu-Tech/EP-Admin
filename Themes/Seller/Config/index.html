@@ -15,8 +15,7 @@
 	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
 
-	<!-- Google font-->
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
 	<!-- Font Awesome-->
 	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
 	<!-- ico-font-->
@@ -128,6 +127,16 @@
 											<small>示例：https://域名/ ，网址最后的“/”必填，未配置https的，需要配置https</small>
 										</div>
 									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">腾讯地图AppKey</label>
+										<div class="col-sm-10">
+											<input type="password" name="parameter[tx_map_key]" class="form-control" value="{$data['tx_map_key']}" autocomplete="new-tx_map_key"/>
+											<small><a href="https://lbs.qq.com/console/key.html" class="text-primary" target="_blank">点击申请</a>&nbsp;用于地图定位、显示社区团长位置
+												<a href="/assets/ep/images/tx_key_demo.png" class="text-primary" title="点击查看" target="_balnk">地图申请示例</a>
+												<a href="/assets/ep/images/tx_map_request_demo.png" class="text-primary" title="点击查看" target="_balnk">小程序域名设置示例</a>
+											</small>
+										</div>
+									</div>
 									<div class="form-group row" style="display: none">
 										<label class="col-sm-2 col-form-label">首页DIY</label>
 										<div class="col-sm-10">
@@ -196,7 +205,6 @@
 											<small>背景颜色值，有效值为十六进制颜色。默认色值：<font color="#F75451">#F75451</font></small>
 										</div>
 									</div>
-
 									<div class="form-group row" style="display:none;">
 										<label class="col-sm-2 col-form-label">页面标题文字颜色</label>
 										<div class="col-sm-10">
@@ -205,9 +213,7 @@
 											<hr >
 											<small>前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000 <br/>为避免重复请求，采用缓存机制，有效时长为十分钟，如需马上生效可删除小程序重新进入</small>
 										</div>
-
 									</div>
-
 									<div class="form-group row" style="display:none;">
 										<label class="col-sm-2 col-form-label">主题颜色</label>
 										<div class="col-sm-10">
@@ -222,44 +228,27 @@
 											<small>全局主题颜色(页面导航条背景颜色,<a lay-href="{:U('config.weprogram.tabbar')}" title="去设置" class="text-primary">底部菜单</a>需单独设置)，有效值为十六进制颜色。默认色值：<font color="#F75451">#F75451</font></small>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">腾讯地图AppKey</label>
-										<div class="col-sm-10">
-											<input type="text" name="parameter[tx_map_key]" class="form-control" value="{$data['tx_map_key']}" />
-											<small><a href="https://lbs.qq.com/console/key.html" class="text-primary" target="_blank">点击申请</a>&nbsp;用于地图定位、显示社区团长位置
-
-												<a href="/assets/ep/images/tx_key_demo.png" class="text-primary" title="点击查看" target="_balnk">地图申请示例</a>
-												<a href="/assets/ep/images/tx_map_request_demo.png" class="text-primary" title="点击查看" target="_balnk">小程序域名设置示例</a>
-											</small>
-										</div>
-
-									</div>
-
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">群体名称</label>
+										<label class="col-sm-2 col-form-label">社区自定义名称</label>
 										<div class="col-sm-10">
 											<input type="text" name="parameter[group_name]" class="form-control" value="{$data['group_name']}" />
 											<small>默认：社区</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">群主名称</label>
+										<label class="col-sm-2 col-form-label">团长自定义名称</label>
 										<div class="col-sm-10">
 											<input type="text" name="parameter[owner_name]" class="form-control" value="{$data['owner_name']}" />
 											<small>默认：团长</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">小区团长：</label>
+										<label class="col-sm-2 col-form-label">海报团长自定义名称</label>
 										<div class="col-sm-10">
 											<input type="text" name="parameter[haibao_group_name]" class="form-control" value="{$data['haibao_group_name']}" />
-											<small>默认：小区团长，首页海报上文字</small>
+											<small>默认：小区团长，首页分享海报团长名称</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">首页顶部背景</label>
 										<div class="col-sm-10">
@@ -275,7 +264,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">首页分享按钮</label>
 										<div class="col-sm-10">
@@ -291,7 +279,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">首页抢购切换</label>
 										<div class="col-sm-10">
@@ -307,7 +294,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">首页客服按钮</label>
 										<div class="col-sm-10">
@@ -323,7 +309,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">其他页面客服按钮</label>
 										<div class="col-sm-10">
@@ -341,7 +326,6 @@
 											<small>商品详情、个人中心、订单中心等页面联系客服按钮</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">首页搜索框</label>
 										<div class="col-sm-10">
@@ -357,7 +341,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row" style="display:none;">
 										<label class="col-sm-2 col-form-label">首页页头文字颜色</label>
 										<div class="col-sm-10">
@@ -372,7 +355,6 @@
 											<small>默认：#ffffff</small>
 										</div>
 									</div>
-
 									<div class="form-group row" style="display:none;">
 										<label class="col-sm-2 col-form-label">个人中心页头文字颜色</label>
 										<div class="col-sm-10">
@@ -387,9 +369,8 @@
 											<small>默认：#ffffff</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">首页显示“切换”二字</label>
+										<label class="col-sm-2 col-form-label">首页切换小区按钮</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
@@ -420,7 +401,6 @@
 											<small>备注：选择“禁止”，用户无论点击哪个团长分享出来的链接，都是直接进入原绑定小区，无提示 。</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">首页团长信息开关</label>
 										<div class="col-sm-10">
@@ -436,7 +416,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">简洁模式团长与搜索</label>
 										<div class="col-sm-10">
@@ -451,18 +430,67 @@
 												</div>
 											</div>
 										</div>
+									</div><div class="form-group row">
+									<label class="col-sm-2 col-form-label">首页公众号关注组件</label>
+									<div class="col-sm-10">
+										<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+											<div class="radio radio-primary">
+												<input id="radioinline39" type="radio" name="parameter[show_index_wechat_oa]" value="0" <?php if(empty($data) || $data['show_index_wechat_oa'] ==0 ){ ?>checked <?php } ?> />
+												<label class="mb-0" for="radioinline39">隐藏</label>
+											</div>
+											<div class="radio radio-primary">
+												<input id="radioinline40" type="radio" name="parameter[show_index_wechat_oa]" value="1" <?php if(!empty($data) && $data['show_index_wechat_oa'] ==1 ){ ?>checked <?php } ?> />
+												<label class="mb-0" for="radioinline40">显示</label>
+											</div>
+										</div>
+										<small>1.使用组件前，需前往小程序后台，在“设置”->“关注公众号”中设置要展示的公众号。设置的公众号需与小程序主体一致。</small>
+										<br>
+										<small>2.只有从“扫小程序码”、“聊天顶部场景”、“其他小程序返回小程序”进入时才会显示。</small>
 									</div>
-
+								</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">分类栏所有商品项文字</label>
+										<label class="col-sm-2 col-form-label">首页分类列表</label>
+										<div class="col-sm-10">
+											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+												<div class="radio radio-primary">
+													<input id="radioinline44" type="radio" name="parameter[ishide_index_goodslist]" value="1" <?php if( !empty($data) || $data['ishide_index_goodslist'] ==1 ){ ?>checked <?php } ?> />
+													<label class="mb-0" for="radioinline44">隐藏</label>
+												</div>
+												<div class="radio radio-primary">
+													<input id="radioinline45" type="radio" name="parameter[ishide_index_goodslist]" value="0" <?php if( !empty($data) && $data['ishide_index_goodslist'] ==0 ){ ?>checked <?php } ?> />
+													<label class="mb-0" for="radioinline45">显示</label>
+												</div>
+												<br />
+												<small>首页分类商品列表，开启隐藏则分类商品列表、切换按钮和分类导航一并隐藏，默认显示。</small>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">首页公告弹窗</label>
+										<div class="col-sm-10">
+											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+												<div class="radio radio-primary">
+													<input id="radioinline46" type="radio" name="parameter[can_index_notice_alert]" value="1" title="" <?php if( !empty($data) && $data['can_index_notice_alert']==1 ){ ?>checked <?php } ?> />
+													<label class="mb-0" for="radioinline46">开启</label>
+												</div>
+												<div class="radio radio-primary">
+													<input id="radioinline47" type="radio" name="parameter[can_index_notice_alert]" value="0" title="" <?php if( empty($data) || $data['can_index_notice_alert']==0 ){ ?>checked <?php } ?> />
+													<label class="mb-0" for="radioinline47">关闭</label>
+												</div>
+												<br />
+												<small>首页公告点击弹窗显示详情，默认关闭。</small>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">首页分类自定义”所有商品“</label>
 										<div class="col-sm-10">
 											<input type="text" name="parameter[index_type_first_name]" class="form-control" value="{$data['index_type_first_name']}" />
 											<small>默认：“全部”</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">一键复制开关</label>
+										<label class="col-sm-2 col-form-label">一键复制按钮</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
@@ -476,9 +504,8 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">返回顶部开关</label>
+										<label class="col-sm-2 col-form-label">返回顶部按钮</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
@@ -494,7 +521,6 @@
 											<small>首页返回顶部浮动按钮，默认：隐藏。</small>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">专题分享按钮</label>
 										<div class="col-sm-10">
@@ -510,7 +536,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">个人中心退出登录按钮</label>
 										<div class="col-sm-10">
@@ -526,7 +551,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">个人中心提货码显示方式</label>
 										<div class="col-sm-10">
@@ -546,9 +570,8 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">个人中心拼团</label>
+										<label class="col-sm-2 col-form-label">个人中心拼团按钮</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
@@ -562,9 +585,8 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">个人中心自提点</label>
+										<label class="col-sm-2 col-form-label">个人中心自提点模块</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
@@ -579,7 +601,7 @@
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">自提点路线按钮</label>
+										<label class="col-sm-2 col-form-label">个人中心自提点路线按钮</label>
 										<div class="col-sm-10">
 											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
 												<div class="radio radio-primary">
@@ -610,60 +632,15 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">首页公众号关注组件</label>
+									<div class="form-group row" style="display: none">
+										<label class="col-sm-2 col-form-label">个人中心充值名称自定义</label>
 										<div class="col-sm-10">
-											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
-												<div class="radio radio-primary">
-													<input id="radioinline39" type="radio" name="parameter[show_index_wechat_oa]" value="0" <?php if(empty($data) || $data['show_index_wechat_oa'] ==0 ){ ?>checked <?php } ?> />
-													<label class="mb-0" for="radioinline39">隐藏</label>
-												</div>
-												<div class="radio radio-primary">
-													<input id="radioinline40" type="radio" name="parameter[show_index_wechat_oa]" value="1" <?php if(!empty($data) && $data['show_index_wechat_oa'] ==1 ){ ?>checked <?php } ?> />
-													<label class="mb-0" for="radioinline40">显示</label>
-												</div>
-											</div>
-											<small>1.使用组件前，需前往小程序后台，在“设置”->“关注公众号”中设置要展示的公众号。设置的公众号需与小程序主体一致。</small>
-											<br>
-											<small>2.只有从“扫小程序码”、“聊天顶部场景”、“其他小程序返回小程序”进入时才会显示。</small>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">首页分类列表</label>
-										<div class="col-sm-10">
-											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
-												<div class="radio radio-primary">
-													<input id="radioinline44" type="radio" name="parameter[ishide_index_goodslist]" value="1" <?php if( !empty($data) || $data['ishide_index_goodslist'] ==1 ){ ?>checked <?php } ?> />
-													<label class="mb-0" for="radioinline44">隐藏</label>
-												</div>
-												<div class="radio radio-primary">
-													<input id="radioinline45" type="radio" name="parameter[ishide_index_goodslist]" value="0" <?php if( !empty($data) && $data['ishide_index_goodslist'] ==0 ){ ?>checked <?php } ?> />
-													<label class="mb-0" for="radioinline45">显示</label>
-												</div>
-												<br />
-												<small>首页分类商品列表，开启隐藏则分类商品列表、切换按钮和分类导航一并隐藏，默认显示。</small>
-											</div>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">公告点击弹窗</label>
-										<div class="col-sm-10">
-											<div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
-												<div class="radio radio-primary">
-													<input id="radioinline46" type="radio" name="parameter[can_index_notice_alert]" value="1" title="" <?php if( !empty($data) && $data['can_index_notice_alert']==1 ){ ?>checked <?php } ?> />
-													<label class="mb-0" for="radioinline46">开启</label>
-												</div>
-												<div class="radio radio-primary">
-													<input id="radioinline47" type="radio" name="parameter[can_index_notice_alert]" value="0" title="" <?php if( empty($data) || $data['can_index_notice_alert']==0 ){ ?>checked <?php } ?> />
-													<label class="mb-0" for="radioinline47">关闭</label>
-												</div>
-												<br />
-												<small>首页公告点击弹窗显示详情，默认关闭。</small>
-											</div>
+											<input type="text" name="parameter[excharge_nav_name]" class="form-control" value="{$data['excharge_nav_name']}" />
+											<small>充值页面和个人中心余额“查看”文字</small>
 										</div>
 									</div>
 									<div class="form-group row" >
-										<label class="col-sm-2 col-form-label">技术支持</label>
+										<label class="col-sm-2 col-form-label">版权所有</label>
 										<div class="col-sm-10">
 											<input type="text" name="parameter[technical_support]" class="form-control" value="{$data['technical_support']}" />
 											<small>首页显示"***版权所有"。与备案号一起显示在网站登录界面下方</small>
@@ -676,13 +653,7 @@
 											<small>点击备案号会链接到工信部官网首页（beian.miit.gov.cn）</small>
 										</div>
 									</div>
-									<div class="form-group row" >
-										<label class="col-sm-2 col-form-label">充值名称自定义</label>
-										<div class="col-sm-10">
-											<input type="text" name="parameter[excharge_nav_name]" class="form-control" value="{$data['excharge_nav_name']}" />
-											<small>充值页面顶部导航名称和个人中心余额“查看”文字</small>
-										</div>
-									</div>
+
 								</div>
 								<div class="card-footer">
 									<input type="submit" value="提交" lay-submit lay-filter="formDemo" class="btn btn-pill btn-primary"/>
@@ -697,7 +668,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 footer-copyright">
-						<p class="mb-0">Copyright © 2019-2022 Dejavu.Tech. All rights reserved.</p>
+						<p class="mb-0">Copyright © __YEARS__ Dejavu.Tech. All rights reserved.</p>
 					</div>
 					<div class="col-md-6">
 						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
@@ -708,7 +679,7 @@
 	</div>
 </div>
 
-<script src="/resource/layuiadmin/layui/layui1.js"></script>
+<script src="/resource/layuiadmin/layui/layui-form.js"></script>
 <script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <!-- latest jquery-->

@@ -13,8 +13,7 @@
 	<meta name="author" content="Dejavu.Tech.">
 	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
-	<!-- Google font-->
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
 	<!-- Font Awesome-->
 	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
 	<!-- ico-font-->
@@ -745,100 +744,9 @@
 									</ul>
 								</div>
 							</div>
-							<div class="card-body pb-0 pt-0 pl-5 pr-5">
+							<div class="card-body pb-0 pt-0 pl-0 pr-3">
 								<div class="ibox-loading" id="echarts-line-chart-loading"></div>
 								<div id="chartorder"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-7 col-md-7 col-sm-12 box-col-7" style="display: none">
-						<div class="card">
-							<div class="card-header no-border">
-								<h5>Best Selling Product</h5>
-								<ul class="creative-dots">
-									<li class="bg-primary big-dot"></li>
-									<li class="bg-secondary semi-big-dot"></li>
-									<li class="bg-warning medium-dot"></li>
-									<li class="bg-info semi-medium-dot"></li>
-									<li class="bg-secondary semi-small-dot"></li>
-									<li class="bg-primary small-dot"></li>
-								</ul>
-								<div class="card-header-right">
-									<ul class="list-unstyled card-option">
-										<li><i class="icofont icofont-gear fa fa-spin font-primary"></i></li>
-										<li><i class="view-html fa fa-code font-primary"></i></li>
-										<li><i class="icofont icofont-maximize full-card font-primary"></i></li>
-										<li><i class="icofont icofont-minus minimize-card font-primary"></i></li>
-										<li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
-										<li><i class="icofont icofont-error close-card font-primary"></i></li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-body pt-0">
-								<div class="activity-table table-responsive recent-table selling-product">
-									<table class="table table-bordernone">
-										<tbody>
-										<tr>
-											<td>
-												<div class="recent-images"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/1.png" alt=""></div>
-											</td>
-											<td>
-												<?php if (!defined('ROLE') || ROLE != 'agenter' ) {?>
-												<h5 class="default-text mb-0 f-w-700 f-18"><?php echo $version; ?></h5>
-												<?php } ?>
-											</td>
-											<td><span class="badge badge-pill recent-badge f-12">Men wear</span></td>
-											<td class="f-w-700">$45.00</td>
-											<td>
-												<h6 class="mb-0">Stock</h6>
-											</td>
-											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"></i></span></td>
-										</tr>
-										<tr>
-											<td>
-												<div class="recent-images-primary"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/2.png" alt=""></div>
-											</td>
-											<td>
-												<h5 class="font-primary mb-0 f-w-700 f-18">Kanvas Katha Women Bag</h5>
-											</td>
-											<td><span class="badge badge-pill recent-badge f-12">Brazil</span></td>
-											<td class="f-w-700">$78.00</td>
-											<td>
-												<h6 class="mb-0">Stock</h6>
-											</td>
-											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"></i></span></td>
-										</tr>
-										<tr>
-											<td>
-												<div class="recent-images-secondary"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/3.png" alt=""></div>
-											</td>
-											<td>
-												<h5 class="font-secondary mb-0 f-w-700 f-18">Unisex Aviator Sunglasses</h5>
-											</td>
-											<td><span class="badge badge-pill recent-badge f-12">London</span></td>
-											<td class="f-w-700">$50.00</td>
-											<td>
-												<h6 class="mb-0">Stock</h6>
-											</td>
-											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"></i></span></td>
-										</tr>
-										<tr>
-											<td>
-												<div class="recent-images-warning"><img class="img-fluid" src="../assets/images/dashboard-ecommerce/4.png" alt=""></div>
-											</td>
-											<td>
-												<h5 class="font-warning mb-0 f-w-700 f-18">Men’s Cotton Round T-shirt</h5>
-											</td>
-											<td><span class="badge badge-pill recent-badge f-12">U.S.A</span></td>
-											<td class="f-w-700">$38.00</td>
-											<td>
-												<h6 class="mb-0">Stock</h6>
-											</td>
-											<td><span class="badge badge-pill recent-badge"><i data-feather="more-horizontal"> </i></span></td>
-										</tr>
-										</tbody>
-									</table>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -896,7 +804,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 footer-copyright">
-						<p class="mb-0">Copyright © 2019-2022 Dejavu.Tech. All rights reserved.</p>
+						<p class="mb-0">Copyright © __YEARS__ Dejavu.Tech. All rights reserved.</p>
 					</div>
 					<div class="col-md-6">
 						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
@@ -906,7 +814,7 @@
 		</footer>
 	</div>
 </div>
-<script src="/resource/layuiadmin/layui/layui1.js"></script>
+<script src="/resource/layuiadmin/layui/layui-form.js"></script>
 <script src="/assets/js/jquery-3.5.1.min.js"></script>
 <!-- Bootstrap js-->
 <script src="/assets/js/bootstrap/popper.min.js"></script>
@@ -930,7 +838,6 @@
 <script src="/assets/js/custom-card/custom-card.js"></script>
 <script src="/assets/js/notify/bootstrap-notify.min.js"></script>
 <script src="/assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="/assets/js/datepicker/date-picker/datepicker.en.js"></script>
 <script src="/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
 <script src="/assets/js/chat-menu.js"></script>
 <script src="/assets/js/tooltip-init.js"></script>
