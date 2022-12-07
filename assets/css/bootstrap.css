@@ -2130,7 +2130,7 @@ mark,
 .table-responsive {
   display: block;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: visible;
   -webkit-overflow-scrolling: touch; }
   .table-responsive > .table-bordered {
     border: 0; }

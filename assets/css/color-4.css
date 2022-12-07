@@ -100,14 +100,14 @@ body {
   background-color: rgba(246, 246, 246, 0.6);
   font-size: 14px;
   overflow-x: hidden;
-  font-family: Nunito, "PingFang SC";
+
   color: #242934; }
 
 ul {
-  padding-left: 0px;
+  padding-left: 0;
   list-style-type: none;
   margin-bottom: 0;
-  padding-right: 0px; }
+  padding-right: 0; }
 
 * a {
   color: #4c2fbf; }
@@ -2081,8 +2081,7 @@ table tbody .border-bottom-warning td {
       margin-bottom: 0;
       text-transform: capitalize;
       font-weight: 800;
-      line-height: 1;
-      font-family: Nunito, "PingFang SC"; }
+      line-height: 1; }
     .card .card-header > span {
       font-size: 12px;
       color: #6e7e96;
@@ -7846,7 +7845,6 @@ strong {
   .authentication-main {
     padding: 30px; }
     .authentication-main .auth-innerright .card-body .theme-form {
-      margin-bottom: 280px;
       width: 100%; }
     .authentication-main .auth-innerright .card-body .s--signup .theme-form {
       margin-top: 280px;
@@ -13518,6 +13516,7 @@ body.dark-only {
           background-color: #333a62;
           border: 1px solid #374558; }
     body.dark-only .page-wrapper .page-body-wrapper {
+      background-color: #374558;
       /* sidebar start */
       /* sidebar end */
       /* body start*/ }
@@ -16240,7 +16239,6 @@ body.sidebar-dark .page-body-wrapper .iconsidebar-menu .sidebar .iconMenu-bar {
   right: -334px;
   background-color: #fff;
   z-index: 99;
-  font-family: Nunito, "PingFang SC";
   transition: all 0.3s ease;
   border-radius: 25px;
   overflow: hidden; }
