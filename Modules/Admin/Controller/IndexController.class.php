@@ -6,12 +6,12 @@ class IndexController extends CommonController {
 		parent::_initialize();
 		$this->breadcrumb1='首页';
 		$this->breadcrumb2='首页';
-		$this->admin_domain = 'http://pinduoduo.eaterplanet.com';
+		$this->admin_domain = 'http://epapi.eaterplanet.com';
 		$this->host = base64_encode( strtolower(strval($_SERVER['HTTP_HOST'])));
 	}
 	function duoduo_action($action, $version='V1.0') {
 	    $host = base64_encode( strtolower(strval($_SERVER['HTTP_HOST'])));
-	    $url = $this->admin_domain."/seller.php?s=/Upgrade/req_version/version/{$version}/host/{$host}";
+	    $url = $this->admin_domain."/ep.php?s=/Upgrade/req_version/version/{$version}/host/{$host}";
 
 	    $r = sendhttp_get($url);
 	    return json_decode($r, true);

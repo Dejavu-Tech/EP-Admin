@@ -439,19 +439,16 @@ class ApiController extends CommonController {
 		//gallery =>img_url
 		//goods goods.goods_desc  goods_name group_price  market_price  sell_count group_number
 
-		$sql="select g.*,gd.description,gd.summary,gd.tag from ".
-		C('DB_PREFIX')."goods g,".C('DB_PREFIX')."goods_description gd where g.goods_id=gd.goods_id and g.goods_id=".$goods_id;
-
-		$goods_arr=M()->query($sql);
+        $goods_arr=M()->query("select g.*,gd.description,gd.summary,gd.tag from ".
+            C('DB_PREFIX')."goods g,".C('DB_PREFIX')."goods_description gd where g.goods_id=gd.goods_id and g.goods_id=%d", $goods_id);
 
 		$qian=array("\r\n");
 		$hou=array("<br/>");
 		$goods_arr[0]['summary'] = str_replace($qian,$hou,$goods_arr[0]['summary']);
 
-		$sql="select image from ".C('DB_PREFIX')."goods_image where goods_id=".$goods_id;
-		$goods_image=M()->query($sql);
+        $goods_image=M()->query("select image from ".C('DB_PREFIX')."goods_image where goods_id=%d", $goods_id);
 
-		$gallery = array();
+        $gallery = array();
 		$default_image = '';
 		foreach($goods_image as $val)
 		{

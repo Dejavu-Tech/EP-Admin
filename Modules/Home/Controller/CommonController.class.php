@@ -74,7 +74,7 @@ class CommonController extends Controller{
 		//die('空操作');
 
 
-		 header('Location: seller.php');
+		 header('Location: ep.php');
  die();
 
 		var_dump($_SERVER['REQUEST_URI']);die();
