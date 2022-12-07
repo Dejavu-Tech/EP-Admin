@@ -15,11 +15,12 @@ $app_config = array(
         '__IMG__'=>'./Themes/'.BIND_MODULE.'/Public/img',
         '__CSS__'=>'./Themes/'.BIND_MODULE.'/Public/css',
         '__JS__'=> './Themes/'.BIND_MODULE.'/Public/js',
-            '__NAME__'=>'吃货星球S2B2C商城系统',
-            '__COMPANY__'=>'蒂佳芙科技（云南）有限公司',
-            '__VERSION__'=>'吃货星球v4.16.0',
-            '__WEBSITE__'=>'www.eaterplanet.com',
-            '__COMPANY_WEBSITE__'=>'www.rexo-tech.cn'
+        '__NAME__'=>'吃货星球S2B2C商城系统',
+        '__COMPANY__'=>'蒂佳芙科技（云南）有限公司',
+        '__YEARS__'=>'2019-2023',
+        '__VERSION__'=>'吃货星球v5.0.0',
+        '__WEBSITE__'=>'www.eaterplanet.com',
+        '__COMPANY_WEBSITE__'=>'www.rexotech.cn'
     ),
 
     'SESSION_PREFIX' => 'dejavutech_seller_s', //session前缀

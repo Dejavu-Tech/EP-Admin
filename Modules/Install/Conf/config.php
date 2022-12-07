@@ -21,14 +21,14 @@ return array(
     '__JS__'=> __ROOT__.'/Themes/'.MODULE_NAME.'/default/Public/js',
     '__NAME__'=>'吃货星球S2B2C商城系统',
     '__COMPANY__'=>'蒂佳芙科技（云南）有限公司',
-    '__VERSION__'=>'吃货星球v4.16.0',
+    '__YEARS__'=>'2019-2023',
+    '__VERSION__'=>'吃货星球v5.0.0',
     '__WEBSITE__'=>'www.eaterplanet.com',
-    '__COMPANY_WEBSITE__'=>'www.rexo-tech.cn'
+    '__COMPANY_WEBSITE__'=>'www.rexotech.cn'
     ),
 
     /* URL配置 */
     'URL_MODEL' => 3, //URL模式
-    'DEFAULT_THEME' =>  'default',  // 默认模板主题名称
     'SESSION_PREFIX' => 'dejavutech', //session前缀
     'COOKIE_PREFIX' => 'dejavutech_', // Cookie前缀 避免冲突
 
