@@ -229,8 +229,8 @@ function register_administrator($db, $prefix, $seller)
     show_msg('开始注册初始管理员帐号...');
     /*插入用户*/
     $sql = <<<sql
-REPLACE INTO `[PREFIX]seller` (`s_id`, `s_uname`, `s_passwd`, `s_create_time`, `s_status`) VALUES
-(1, '[NAME]', '[PASS]', '[TIME]', 1);
+REPLACE INTO `[PREFIX]seller` (`s_id`, `s_uname`, `s_passwd`, `s_create_time`, `s_status`, `s_true_name`, `s_mobile`) VALUES
+(1, '[NAME]', '[PASS]', '[TIME]', 1, '', '');
 sql;
 
     $password = think_ucenter_encrypt($seller['password'],C('SELLER_PWD_KEY'));
@@ -243,8 +243,8 @@ sql;
     $db->execute($sql);
     /*插入pwd_key资料*/
     $sql = <<<sql
-REPLACE INTO `[PREFIX]config` (`name`, `config_group`, `create_time`, `value`) VALUES
-('[NAME]','site','[TIME]','[PASS]');
+REPLACE INTO `[PREFIX]config` (`name`, `config_group`, `create_time`, `value`, `info`) VALUES
+('[NAME]','site','[TIME]','[PASS]', '');
 sql;
 
     $sql = str_replace(
