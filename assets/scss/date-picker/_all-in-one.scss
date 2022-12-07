@@ -271,10 +271,9 @@ $datepickerTransitionOffset: 8px !default;
 }
 
 .datepicker {
-  background: #fff; 
+  background: #fff;
   border-radius: $datepickerBorderRadius;
   box-sizing: content-box;
-  font-family: $font-nunito;
   font-size: $datepickerFontSize;
   color: map_get($datepickerTextColor, common);
   width: $datepickerWidth;

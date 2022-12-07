@@ -12,8 +12,8 @@
   }
   .weather-widget{
     .weather-widget-top {
-      height: 230px; 
-      .location { 
+      height: 230px;
+      .location {
         top: 50px;
         right: 30px;
       }
@@ -54,14 +54,14 @@
       .box{
         &:before{
           left: 20px;
-        } 
+        }
       }
     }
   }
 }
 .browser-widget{
   img {
-    height: 60px; 
+    height: 60px;
   }
 }
 
@@ -1142,13 +1142,13 @@
       }
     }
     .page-body-wrapper {
-      .page-body, footer {        
+      .page-body, footer {
         &.vertical-menu-mt {
           margin-left: 0 !important;
         }
       }
       .iconsidebar-menu {
-        .iconMenu-bar {          
+        .iconMenu-bar {
           .iconbar-mainmenu {
             .iconbar-header {
               padding: 21px 0 21px 20px;
@@ -1848,13 +1848,13 @@
   .browser-widget{
     .media{
       .media-img {
-        width: unset; 
+        width: unset;
       }
     }
   }
   .weather-widget{
     .weather-widget-top {
-      height: 240px; 
+      height: 240px;
     }
     .weather-widget-bottom{
       .col {
@@ -2971,7 +2971,7 @@
   .navbar-toggler {
     position: absolute;
     right: 0;
-  }  
+  }
   .landing-page{
     .navbar{
      padding-left: 0;
@@ -3018,7 +3018,7 @@
   .weather-widget-top {
     height: 170px;
     .location {
-     top: 40px; 
+     top: 40px;
      right: 40px;
    }
  }
@@ -3029,7 +3029,7 @@
   }
 }
 .card {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 .document {
   .page-main-header {
@@ -3091,9 +3091,6 @@
   // main header css
   .page-wrapper {
     .page-main-header {
-      .main-header-left {
-        width: 18%;
-      }
       .main-header-right {
         .nav-right{
           > ul {
@@ -4052,7 +4049,7 @@
       margin-bottom: 20px;
     }
   }
-  
+
   // forget-password page
   .reset-password-box{
     .theme-form{
@@ -4090,7 +4087,7 @@
   top: 61px;
 }
 .btc-earning {
-  height: 250px;   
+  height: 250px;
   padding-top: 0px;
 }
 .btc-overview span {
@@ -4132,8 +4129,7 @@
   .page-wrapper {
     .page-main-header {
       .main-header-left {
-        padding: 20px 0 20px 15px;
-        width: 20%;
+        padding: 0 0 0 15px;
         .logo-wrapper {
           img {
             width: 60px;
@@ -5832,7 +5828,7 @@
       margin-left: 15px !important;
     }
   }
- 
+
   .modal-footer  {
     .btn {
       padding: 6px;
@@ -5850,7 +5846,7 @@
     padding: 0 !important;
   }
   .mobile-clock-widget {
-   height: 260px; 
+   height: 260px;
    .clock-details {
     margin-top: 60px;
     text-align: center;
@@ -5859,7 +5855,7 @@
 
 .weather-widget{
   .weather-widget-bottom {
-    padding: 0 25px !important; 
+    padding: 0 25px !important;
   }
   .col .box{
     padding: 10px 3px !important;
