@@ -345,9 +345,9 @@ class PermController extends CommonController{
 	protected function perm_perm()
 	{
 		return array(
-			'text'          => '角色管理',
+			'text'          => '权限组',
 				'perm'     => array(
-					'index'   => '角色管理',
+					'index'   => '权限组',
 					'user'   => '后台用户管理',
 				)
 		);
@@ -371,7 +371,7 @@ class PermController extends CommonController{
 					'picture'   => '图片设置',
 				),
 				'weprogram'     => array(
-					'index'   => '参数设置',
+					'index'   => '支付设置',
 					'templateconfig'   => '模板消息设置',
 					'tabbar'   => '底部菜单设置',
 				),
