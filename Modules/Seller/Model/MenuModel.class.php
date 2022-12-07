@@ -513,7 +513,7 @@ class MenuModel
                 'icon' => 'ui-lock',
                 'route' => 'perm/index',
                 'items' => array(
-                    array('title' => '角色管理', 'route' => 'perm/index', 'desc' => ''),
+                    array('title' => '权限组', 'route' => 'perm/index', 'desc' => ''),
                     array('title' => '后台管理员', 'route' => 'perm/user', 'desc' => ''),
                 ),
             ),
@@ -529,7 +529,7 @@ class MenuModel
                         'title' => '小程序设置',
                         'route' => 'weprogram/index',
                         'items' => array(
-                            array('title' => '参数设置', 'route' => 'weprogram/index', 'desc' => ''),
+                            array('title' => '支付设置', 'route' => 'weprogram/index', 'desc' => ''),
                             array('title' => '模板消息', 'route' => 'weprogram/templateconfig', 'desc' => ''),
                             array('title' => '订阅消息', 'route' => 'weprogram/subscribetemplateconfig', 'desc' => ''),
                             array('title' => '底部菜单', 'route' => 'weprogram/tabbar', 'desc' => ''),
