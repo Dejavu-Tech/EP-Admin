@@ -667,7 +667,7 @@ define(['jquery', 'bootstrap'], function($, bs) {
 			editor.find(".form-editor-text").text(value)
 		})
 	}
-	$("img").on(‘error’, function() {
+	$("img").error(function() {
 		$(this).attr('src', '/assets/ep/images/nopic.png')
 	})
 });
