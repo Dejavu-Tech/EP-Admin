@@ -120,8 +120,7 @@ git@github.com:Dejavu-Tech/EP-Admin.git
 ## 👽联系
 全功能版商用授权及部署请联系
 - QQ:`142997`<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=142997&site=qq&menu=yes"><img width=80px align=center src="https://image.ch871.com/qq-contact .png"/></a>
-- 企业微信:
-<br/>
+- 企业微信:  
 <img src="https://image.ch871.com/qywx-contact .png" width="300px" />
 
 ## 📜许可证 [GPL-3.0](https://github.com/Dejavu-Tech/EP-Admin/License)
