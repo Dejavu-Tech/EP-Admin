@@ -128,4 +128,4 @@ git@github.com:Dejavu-Tech/EP-Admin.git
 
 ## 🌎️软件著作权及其他版权所有
 <img src="https://image.ch871.com/rexotech.png" width="25px" align="left"/> 
-&nbsp;&nbsp;Copyright © 2019-2023 Dejavu Tech. (YN) Co., Ltd. <a href="https://www.rexotech.cn">官网</a>
+&nbsp;Copyright © 2019-2023 Dejavu Tech. (YN) Co., Ltd. <a href="https://www.rexotech.cn">官网</a>
