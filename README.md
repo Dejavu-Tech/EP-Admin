@@ -123,7 +123,7 @@ git@github.com:Dejavu-Tech/EP-Admin.git
 - 企业微信:  
 <img src="https://image.ch871.com/qywx-contact .png" width="300px" />
 
-## 📜许可证 [GPL-3.0](https://github.com/Dejavu-Tech/EP-Admin/License)
+## 📜许可证 [AGPL-3.0](https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE)
 
 ## 🌎️软件著作权及其他版权所有
 <img src="https://image.ch871.com/rexotech.png" width="25px" align="left"/> 
