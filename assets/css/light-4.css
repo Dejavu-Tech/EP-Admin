@@ -2224,7 +2224,7 @@ table tbody .border-bottom-warning td {
         border-left: 1px solid #efefef; }
       .custom-card .card-footer > div h3 {
         margin-bottom: 0;
-        font-family: work-Sans, sans-serif, "PingFang SC";
+        font-family: work-Sans, sans-serif;
         font-size: 24px; }
       .custom-card .card-footer > div h6 {
         font-size: 14px;
@@ -7003,7 +7003,7 @@ strong {
       margin-left: -1px;
       position: relative; }
 .bootstrap-touchspin .input-group {
-  font-family: work-Sans, sans-serif, "PingFang SC"; }
+  font-family: work-Sans, sans-serif; }
   .bootstrap-touchspin .input-group .btn {
     border-radius: 0 !important; }
 .bootstrap-touchspin .dropdown-basic .dropdown .dropbtn {
@@ -8284,7 +8284,7 @@ input[type=file] {
       .layui-form-checkbox input[type="checkbox"]:focus + label::before {
         outline-offset: -2px; }
   .layui-form-checkbox input[type="checkbox"]:checked + label::before {
-    font-family: themify, "PingFang SC";
+    font-family: themify;
     content: "\e64c";
     text-align: center;
     line-height: 1.2; }
@@ -8299,7 +8299,7 @@ input[type=file] {
     margin-top: 0; }
 
 .layui-form-checked label::before {
-  font-family: themify, "PingFang SC";
+  font-family: themify;
   content: "\e64c";
   text-align: center;
   line-height: 1.2; }
@@ -10872,7 +10872,7 @@ table.dataTable.display tbody tr.odd > .sorting_1 {
     color: #898989;
     background: #fff;
     border: solid 1px #e8ebf2;
-    font-family: sans-serif, "PingFang SC";
+    font-family: sans-serif;
     font-size: 12px;
     text-align: center; }
     .morris-hover.morris-default-style .morris-hover-row-label {
@@ -15936,7 +15936,7 @@ body.sidebar-dark .page-body-wrapper .iconsidebar-menu .sidebar .iconMenu-bar {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-family: work-Sans, sans-serif, "PingFang SC"; }
+  font-family: work-Sans, sans-serif; }
   .u-step-number ~ .u-step-desc {
     min-height: 40px;
     margin-left: 50px; }
@@ -21324,7 +21324,7 @@ form.form-inline.support-res .nav-link {
   margin-bottom: 0;
   line-height: 1; }
 .cal-date-widget .cal-datepicker .datepicker--nav {
-  font-family: work-Sans, sans-serif, "PingFang SC"; }
+  font-family: work-Sans, sans-serif; }
 
 .mobile-clock-widget {
   background: url(../images/other-images/mobile-clock-wallpaper.jpg);
@@ -21366,7 +21366,7 @@ form.form-inline.support-res .nav-link {
     display: block;
     background: url(../images/other-images/clock-face.png) 5% center no-repeat; }
   .mobile-clock-widget .date {
-    font-family: work-Sans, sans-serif, "PingFang SC"; }
+    font-family: work-Sans, sans-serif; }
   .mobile-clock-widget .sec {
     background: url(../images/sec.svg);
     z-index: 3; }
@@ -21390,7 +21390,7 @@ form.form-inline.support-res .nav-link {
   border-top-right-radius: 4px;
   height: 300px; }
 .calender-widget .cal-date {
-  font-family: work-Sans, sans-serif, "PingFang SC";
+  font-family: work-Sans, sans-serif;
   width: 100px;
   height: 100px;
   margin: 0 auto;

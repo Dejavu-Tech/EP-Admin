@@ -1072,7 +1072,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
     box-sizing: content-box;
     text-align: center;
     text-indent: 0 !important;
-    font-family: 'Courier New', Courier, monospace, "PingFang SC";
+    font-family: 'Courier New', Courier, monospace;
     line-height: 14px;
     content: '+';
     background-color: #31b131; }
@@ -1113,7 +1113,7 @@ table.dataTable.dtr-column > tbody > tr > th.control {
     box-sizing: content-box;
     text-align: center;
     text-indent: 0 !important;
-    font-family: 'Courier New', Courier, monospace, "PingFang SC";
+    font-family: 'Courier New', Courier, monospace;
     line-height: 14px;
     content: '+';
     background-color: #31b131; }

@@ -1269,8 +1269,8 @@ padding: 20px;
 }
 @font-face {
 	font-family:we7icon;
-	src:url(/resource/fonts/we7icon.eot?v=0103);
-	src:url(/resource/fonts/we7icon.eot?v=0103) format("embedded-opentype"),url(/resource/fonts/we7icon.ttf?v=0103) format("truetype"),url(/resource/fonts/we7icon.woff?v=0103) format("woff"),url(/resource/fonts/we7icon.svg?v=0103) format("svg");
+	src:url(/assets/fonts/we7icon.eot?v=0103);
+	src:url(/assets/fonts/we7icon.eot?v=0103) format("embedded-opentype"),url(/assets/fonts/we7icon.ttf?v=0103) format("truetype"),url(/assets/fonts/we7icon.woff?v=0103) format("woff"),url(/assets/fonts/we7icon.svg?v=0103) format("svg");
 	font-weight:400;
 	font-style:normal
 }

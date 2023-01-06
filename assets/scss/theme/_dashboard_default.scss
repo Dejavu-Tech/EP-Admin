@@ -1342,7 +1342,7 @@ img {
     line-height: 1;
   }
   .cal-datepicker .datepicker--nav {
-    font-family: $font-work-sans, $font-serif, "PingFang SC";
+    font-family: $font-work-sans, $font-serif;
   }
 }
 .mobile-clock-widget {
@@ -1390,7 +1390,7 @@ img {
     background: url(../images/other-images/clock-face.png) 5% center no-repeat;
   }
   .date {
-    font-family: $font-work-sans, $font-serif, "PingFang SC";
+    font-family: $font-work-sans, $font-serif;
   }
   .sec {
     @extend %clock-widget;
@@ -1432,7 +1432,7 @@ img {
     height: 300px;
   }
   .cal-date {
-    font-family: $font-work-sans, $font-serif, "PingFang SC";
+    font-family: $font-work-sans, $font-serif;
     width: 100px;
     height: 100px;
     margin: 0 auto;

@@ -244,7 +244,7 @@
         &:checked{
             & + label{
                 &::before{
-                    font-family: $font-themify, "PingFang SC";
+                    font-family: $font-themify;
                     content: "\e64c";
                     text-align: center;
                     line-height: 1.2;
@@ -275,7 +275,7 @@
 .layui-form-checked{
             label{
                 &::before{
-                    font-family: $font-themify, "PingFang SC";
+                    font-family: $font-themify;
                     content: "\e64c";
                     text-align: center;
                     line-height: 1.2;

@@ -83,7 +83,7 @@ Vue.component("rich-text", {
 							'music'//音乐
 						]
 					],
-					serverUrl: "/resource/ueditor/php/controller.php",
+					serverUrl: "/assets/ep/components/ueditor/php/controller.php",
 					scaleEnabled:true
 				});
 			self.editor.ready(function () {

@@ -12,7 +12,7 @@
 .phone-body{width: 375px;height: auto;min-height: 100%;transform: scale(0.8);-webkit-transform-origin: top;}
 .phone-top{height: 64px;background: #fff;background-size: 100% auto;text-align: center;cursor: pointer;
     display: block;text-overflow: ellipsis;position: relative;border: 1px solid #f7f7f7;}
-.phone-title{position: absolute;z-index: 100;font-family: PingFang SC;font-style: normal;
+.phone-title{position: absolute;z-index: 100;font-style: normal;
     font-weight: 600;font-size: 18px;line-height: 25px;display: -webkit-box;display: -ms-flexbox;
     display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;text-align: center;
     color: #212121;left: 50%;-webkit-transform: translate(-50%, 0);transform: translate(-50%, 0);bottom: 8px;}
@@ -28,7 +28,7 @@
     width: 82px;height: 82px;-webkit-box-sizing: border-box;box-sizing: border-box;padding: 0;
     background: #f4f6f8;border-radius: 2px;border: none;position: relative;}
 .form-item-adder .btn .ivu-btn span {
-    font-family: PingFang SC;font-style: normal;font-weight: bold;font-size: 14px;
+    font-style: normal;font-weight: bold;font-size: 14px;
     line-height: 20px;color: #636669;display: -webkit-box;display: -ms-flexbox;display: flex;
     -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
 }
