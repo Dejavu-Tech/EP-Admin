@@ -24,7 +24,7 @@ class PinModel extends Model{
 	}
 
 	/***
-		机器人成团
+		虚拟客户成团
 	**/
 	public function jia_over_order( $pin_id )
 	{

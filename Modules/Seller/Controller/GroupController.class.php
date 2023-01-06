@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -1557,7 +1557,7 @@ class GroupController extends CommonController{
 
 			if( empty($jia_id) )
 			{
-				show_json(0, array('message' => '请选择机器人!'));
+				show_json(0, array('message' => '请选择虚拟客户!'));
 			}
 
 			$goods_info = M('eaterplanet_ecommerce_goods')->field('goodsname')->where( array('id' => $goods_id) )->find();

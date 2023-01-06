@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -413,33 +413,11 @@ class UtilityController extends CommonController{
 			$ext = strtolower($ext);
 			$size = intval($_FILES['file']['size']);
 			$originname = $_FILES['file']['name'];
+            		// fix 20221216
+			$upload = new \Think\Upload();// 实例化上传类
 
-			//fileinfo 检测begin
-            $fip = finfo_open(FILEINFO_MIME_TYPE);
-            $min_result = finfo_file($fip , $_FILES['file']['tmp_name']);
-            fclose( $fip );
-            $min_type_arr = array();
-            $min_type_arr[] = 'image/jpeg';
-            $min_type_arr[] = 'image/gif';
-            $min_type_arr[] = 'image/jpg';
-            $min_type_arr[] = 'image/png';
-            $min_type_arr[] = 'video/mp4';
-            if( !in_array($min_result , $min_type_arr ) )
-            {
-                die();
-            }
-            //fileinfo 检测end
-
-
-			if( !in_array($ext, array('jpg', 'gif', 'png', 'jpeg','mp4') ) )
-            {
-                die();
-            }
-
-			$upload = new \Think\Upload();// 实例化上传类    
-			
-			$upload->maxSize   =     31457280 ;// 设置附件上传大小   
-			$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg','mp4');// 设置附件上传类型   
+			$upload->maxSize   =     31457280 ;// 设置附件上传大小
+			$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg','mp4');// 设置附件上传类型
 			$upload->rootPath  =	 ATTACHMENT_ROOT.$dir;
 			RecursiveMkdir($upload->rootPath);
 

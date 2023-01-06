@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -2112,30 +2112,16 @@ class CarController extends CommonController {
 			M('eaterplanet_ecommerce_area')->where( array('id' => $city_id ) )->save($up_data);
 
 		}
-
-		//city_name: 东莞市
+        //fixed 20221229
 		if( empty($countyName)   )
 		{
-			if( $cityName == '东莞市' )
+			if( $cityName == '东莞市' || '中山市' || '儋州市' || '嘉峪关市' )
 			{
-				$countyName = '东莞';
-			}
-			if( $cityName == '中山市' )
-			{
-				$countyName = '中山';
-				//453
+				$countyName = '市辖区';
 			}
 		}
 
 		$country_info = M('eaterplanet_ecommerce_area')->where( "name like '%{$countyName}%' " )->find();
-
-		if( $countyName == '中山' )
-		{
-
-			$country_info = M('eaterplanet_ecommerce_area')->where( array('id' => 453 ) )->find();
-			//
-		}
-
 
 		if( !empty($country_info))
 		{
@@ -2369,7 +2355,7 @@ class CarController extends CommonController {
 	$seller_goodss = array();
 	$show_voucher = 0;
 
-	//判断是否仅快递的配送方式  is_only_express
+	//判断是否网商的配送方式  is_only_express
 
 	$is_open_only_express = D('Home/Front')->get_config_by_name('is_open_only_express');
 

@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -272,7 +272,7 @@ $this->ds = $ds;
 			$data['list'][$key] = $val;
 		}
 
-		$this->breadcrumb2='机器人管理';
+		$this->breadcrumb2='虚拟客户管理';
 		$this->assign('empty',$data['empty']);// 赋值数据集
 		$this->assign('list',$data['list']);// 赋值数据集
 		$this->assign('page',$data['page']);// 赋值分页输出
@@ -343,7 +343,7 @@ $this->ds = $ds;
 
 			$this->osc_alert($return);
 		 }
-		 $this->breadcrumb2='机器人管理';
+		 $this->breadcrumb2='虚拟客户管理';
 		 $this->action = U('Member/jiaadd');
 		 $this->display('jiaedit');
 	 }
@@ -372,7 +372,7 @@ $this->ds = $ds;
 
 		 $id = I('get.id');
 		 $jiauser =  M('jiauser')->where( array('id' => $id) )->find();
-		 $this->breadcrumb2='机器人管理';
+		 $this->breadcrumb2='虚拟客户管理';
 		 $this->jiauser = $jiauser;
 		 $this->action = U('Member/jiaedit');
 		 $this->display('jiaedit');

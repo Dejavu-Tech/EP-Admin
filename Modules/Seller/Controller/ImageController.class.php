@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -175,7 +175,7 @@ class ImageController extends CommonController{
     	 }else if($org_dir == 'video')
 		 {
 			$filename=$dir.'/'.$info['file']['savepath'].$info['file']['savename'];
-			$data['image_thumb'] = '/resource/images/video.jpg';
+			$data['image_thumb'] = '/assets/images/video.jpg';
 			$data['image'] = $filename;
 			$data['code'] = 0;
     	    $this->ajaxReturn($data);

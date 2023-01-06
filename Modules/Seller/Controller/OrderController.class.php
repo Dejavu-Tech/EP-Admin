@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -13,6 +13,11 @@
  */
 namespace Seller\Controller;
 use Admin\Model\OrderModel;
+use Lib\KdApiEOrder;
+use Lib\Localtown\EleDistribution;
+use Lib\Localtown\Imdada;
+use Lib\Localtown\Sfexpress;
+
 class OrderController extends CommonController{
 
 	protected function _initialize(){
@@ -466,17 +471,12 @@ class OrderController extends CommonController{
 
 					}
 
-					//city_name: 东莞市
+					//fixed 20221229
 					if( empty($area)   )
 					{
-						if( $city == '东莞市' )
+						if( $city == '东莞市' || '中山市' || '儋州市' || '嘉峪关市' )
 						{
-							$area = '东莞';
-						}
-						if( $city == '中山市' )
-						{
-							$area = '中山';
-							//453
+							$area = '市辖区';
 						}
 					}
 
@@ -484,9 +484,8 @@ class OrderController extends CommonController{
 
 					if( $area == '中山' )
 					{
-
 						$country_info = M('eaterplanet_ecommerce_area')->where( array('id' => 453 ) )->find();
-						//
+
 					}
 
 
@@ -4444,7 +4443,7 @@ class OrderController extends CommonController{
         }else{
 			$sender_result = $this->check_kdn_sender($express_code);
 			if($sender_result['status'] == 1){
-				$kdNiao = new \Lib\KdApiEOrder();
+				$kdNiao = new KdApiEOrder();
 				$config_data = D('Seller/Config')->get_all_config();
 				$result = $kdNiao->printOrder($order_id,$express_code,$config_data);
 			}else{
@@ -4481,7 +4480,7 @@ class OrderController extends CommonController{
 		$succ_count = 0;
 		$fail_count = 0;
 		$fail_result = array();
-		$kdNiao = new \Lib\KdApiEOrder();
+		$kdNiao = new KdApiEOrder();
 		$config_data = D('Seller/Config')->get_all_config();
 		$sender_result = $this->check_kdn_sender($express_code);
 		if($sender_result['status'] == 1){
@@ -4793,7 +4792,7 @@ class OrderController extends CommonController{
 		$shoname = D('Home/Front')->get_config_by_name('shoname');
 		$order_info['shoname'] = $shoname;
 		if($data_type == 'imdada'){
-			$imdada = new \Lib\Localtown\Imdada();
+			$imdada = new Imdada();
 			$result = $imdada->addOrder($order_info);
 			if($result['status'] == 1){//成功
 				//配送费用
@@ -4808,7 +4807,7 @@ class OrderController extends CommonController{
 				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
 			}
 		}else if($data_type == 'sf'){
-			$sfexpress = new \Lib\Localtown\Sfexpress();
+			$sfexpress = new Sfexpress();
 			$result = $sfexpress->addOrder($order_info);
 			if($result['status'] == 1){//成功
 				//配送费用
@@ -4858,7 +4857,7 @@ class OrderController extends CommonController{
 			}
 
 		}else if($data_type == 'ele'){//蜂鸟即配
-			$eleDistribution = new \Lib\Localtown\EleDistribution();
+			$eleDistribution = new EleDistribution();
 
 			$order_code = build_order_no(session('user_auth.uid'));
 			//保存蜂鸟即配商户订单号
@@ -4959,7 +4958,7 @@ class OrderController extends CommonController{
 		$shoname = D('Home/Front')->get_config_by_name('shoname');
 		$order_info['shoname'] = $shoname;
 		if($data_type == 'imdada'){
-			$imdada = new \Lib\Localtown\Imdada();
+			$imdada = new Imdada();
 			$result = $imdada->reAddOrder($order_info);
 			if($result['status'] == 1){//成功
 				//配送费用
@@ -4973,7 +4972,7 @@ class OrderController extends CommonController{
 				show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
 			}
 		}else if($data_type == 'sf'){
-			$sfexpress = new \Lib\Localtown\Sfexpress();
+			$sfexpress = new Sfexpress();
 			$result = $sfexpress->addOrder($order_info);
 			if($result['status'] == 1){//成功
 				//配送费用
@@ -5017,7 +5016,7 @@ class OrderController extends CommonController{
                 show_json(0,  array('msg' => $result['message'] ) );
             }
 		}else if($data_type == 'ele'){//蜂鸟即配
-			$eleDistribution = new \Lib\Localtown\EleDistribution();
+			$eleDistribution = new EleDistribution();
 			$order_code = build_order_no(session('user_auth.uid'));
 			//保存蜂鸟即配商户订单号
 			M('eaterplanet_ecommerce_orderdistribution_order')->where( array('order_id' => $order_id ) )->save(['order_code'=>$order_code]);
@@ -5079,7 +5078,7 @@ class OrderController extends CommonController{
 		$data_type = $orderdistribution_info['third_distribution_type'];
 		if($orderdistribution_info['state'] == 0 || $orderdistribution_info['state'] == 1 || $orderdistribution_info['state'] == 2){
 			if($data_type == 'imdada'){
-				$imdada = new \Lib\Localtown\Imdada();
+				$imdada = new Imdada();
 				$result = $imdada->cancelOrder($order_info,$cancel_reason_id,$cancel_reason);
 				if($result['status'] == 1){//成功
 					$deduct_fee = $result['result']['deduct_fee'];
@@ -5096,7 +5095,7 @@ class OrderController extends CommonController{
 					show_json(0,  array('msg' => $result['code'].':'.$result['message'] ) );
 				}
 			}else if($data_type == 'sf'){
-				$sfexpress = new \Lib\Localtown\Sfexpress();
+				$sfexpress = new Sfexpress();
 				$result = $sfexpress->cancelOrder($orderdistribution_info,$cancel_reason);
 				if($result['status'] == 1){//成功
 					$other_data = array();
@@ -5144,7 +5143,7 @@ class OrderController extends CommonController{
                     show_json(0,  array('msg' => $result['message'] ) );
 				}
 			}else if($data_type == 'ele'){
-				$eleDistribution = new \Lib\Localtown\EleDistribution();
+				$eleDistribution = new EleDistribution();
 				$result = $eleDistribution->cancelOrder($orderdistribution_info,$cancel_reason_id,$cancel_reason);
 				if($result['status'] == 1){//成功
 					$other_data = array();
@@ -5179,7 +5178,7 @@ class OrderController extends CommonController{
 		$_GPC = I('request.');
 		$order_sn = $_GPC['order_sn'];
 		$type = $_GPC['type'];
-		$imdada = new \Lib\Localtown\Imdada();
+		$imdada = new Imdada();
 		if($type == 1){
 			$imdada->orderFetch($order_sn);//模拟取货
 		}else if($type == 2){

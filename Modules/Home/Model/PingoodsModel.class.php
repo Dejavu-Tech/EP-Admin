@@ -114,12 +114,7 @@ class PingoodsModel {
 
 		list($dst_w, $dst_h, $dst_type) = getimagesize($bg_img);
 
-
 		$ttf_path = ROOT_PATH."/assets/ep/fonts/simhei.ttf";
-		$msyh_path = ROOT_PATH."/assets/ep/fonts/msyh.ttf";
-		$pingfang_path = ROOT_PATH."/assets/ep/fonts/PingFang_Bold.ttf";
-		$pingfang_med_path = ROOT_PATH."/assets/ep/fonts/PingFang_Medium.ttf";
-
 
 		//打上文字
 
@@ -158,7 +153,7 @@ class PingoodsModel {
 		//$col = imagecolorallocate($dst,248, 136, 161);
 
 
-		imagefttext($dst, 20, 0, $distribution_username_left, $distribution_username_top, $col, $pingfang_med_path, $nickname );
+		imagefttext($dst, 20, 0, $distribution_username_left, $distribution_username_top, $col, $ttf_path, $nickname );
 
 		list($avatar_img_img_w, $avatar_img_img_h, $avatar_img_img_type) = getimagesize(ROOT_PATH.$avatar);
 
@@ -349,12 +344,7 @@ class PingoodsModel {
 
 		list($dst_w, $dst_h, $dst_type) = getimagesize($bg_img);
 
-
 		$ttf_path = ROOT_PATH."/assets/ep/fonts/simhei.ttf";
-		$msyh_path = ROOT_PATH."/assets/ep/fonts/msyh.ttf";
-		$pingfang_path = ROOT_PATH."/assets/ep/fonts/PingFang_Bold.ttf";
-		$pingfang_med_path = ROOT_PATH."/assets/ep/fonts/PingFang_Medium.ttf";
-
 
 		//打上文字
 
@@ -373,7 +363,7 @@ class PingoodsModel {
 
 
 		//开始在图上画物体
-		imagefttext($dst, 29, 0, 254, 228, $chengse, $pingfang_med_path, date('m月d日').'爆款');
+		imagefttext($dst, 29, 0, 254, 228, $chengse, $ttf_path, date('m月d日').'爆款');
 
 		// 小区名称
 		$haibao_group_name = D('Home/Front')->get_config_by_name('haibao_group_name');
@@ -381,7 +371,7 @@ class PingoodsModel {
 		{
 			$haibao_group_name = '小区团长：';
 		}
-		imagefttext($dst, 20, 0, 32, 1130, $chengse, $pingfang_med_path, $haibao_group_name);
+		imagefttext($dst, 20, 0, 32, 1130, $chengse, $ttf_path, $haibao_group_name);
 		$group_name_len = mb_strlen($haibao_group_name, 'utf-8');
 		$group_left = 0;
 		if($group_name_len>4) {
@@ -409,7 +399,7 @@ class PingoodsModel {
 		{
 			$xin_str = '*'.mb_substr($community_info['disUserName'],-1,1,'utf-8');
 		}
-		imagefttext($dst, 20, 0, 198+$group_left, 1130, $chengse, $pingfang_med_path, mb_substr($community_info['disUserName'],0,1,'utf-8').$xin_str );
+		imagefttext($dst, 20, 0, 198+$group_left, 1130, $chengse, $ttf_path, mb_substr($community_info['disUserName'],0,1,'utf-8').$xin_str );
 
 		$modify_index_share_time = D('Home/Front')->get_config_by_name('modify_index_share_time');
 
@@ -418,7 +408,7 @@ class PingoodsModel {
 			$modify_index_share_time = date('H:00:00');
 		}
 
-		imagefttext($dst, 20, 0, 32, 1170, $chengse, $pingfang_med_path, '抢购时间：'.date('Y-m-d').' '.$modify_index_share_time);
+		imagefttext($dst, 20, 0, 32, 1170, $chengse, $ttf_path, '抢购时间：'.date('Y-m-d').' '.$modify_index_share_time);
 
 
 		$open_danhead_model = D('Home/Front')->get_config_by_name('open_danhead_model');
@@ -435,8 +425,8 @@ class PingoodsModel {
 				$need_fullAddress2 .= '...';
 			}
 
-			imagefttext($dst, 20, 0, 32, 1203, $chengse, $pingfang_med_path, '提货地址：'.$need_fullAddress);
-			imagefttext($dst, 20, 0, 160, 1233, $chengse, $pingfang_med_path, $need_fullAddress2);
+			imagefttext($dst, 20, 0, 32, 1203, $chengse, $ttf_path, '提货地址：'.$need_fullAddress);
+			imagefttext($dst, 20, 0, 160, 1233, $chengse, $ttf_path, $need_fullAddress2);
 		}
 
 		$i = 1;
@@ -497,9 +487,9 @@ class PingoodsModel {
 			{
 				$need_goods_title .= '...';
 			}
-			imagefttext($dst, 18, 0, 208+$del_x, 315+$del_y, $gray1, $pingfang_med_path, $need_goods_title );
+			imagefttext($dst, 18, 0, 208+$del_x, 315+$del_y, $gray1, $ttf_path, $need_goods_title );
 
-			imagefttext($dst, 14, 0, 208+$del_x, 375+$del_y, $gray4, $pingfang_med_path, '¥'.$goods['productprice'] );
+			imagefttext($dst, 14, 0, 208+$del_x, 375+$del_y, $gray4, $ttf_path, '¥'.$goods['productprice'] );
 
 			$size_12 = strlen($goods['productprice']);
 			$pos = 225 + intval(13  * ($size_12 -1) -3 );
@@ -507,7 +497,7 @@ class PingoodsModel {
 			imageline($dst, 225+$del_x, 368+$del_y, $pos+$del_x, 368+$del_y, $gray3); //画线
 
 
-			imagefttext($dst, 18, 0, 208+$del_x, 410+$del_y, $red_2, $pingfang_path, '¥'.$price );
+			imagefttext($dst, 18, 0, 208+$del_x, 410+$del_y, $red_2, $ttf_path, '¥'.$price );
 
 			//break;
 			$i++;
@@ -1115,22 +1105,18 @@ class PingoodsModel {
 
 		$last_img = $image_dir;
 
-
-		$pingfang_path = ROOT_PATH."/assets/ep/fonts/PingFang_Bold.ttf";
-		$pingfang_med_path = ROOT_PATH."/assets/ep/fonts/PingFang_Medium.ttf";
-
 		$gray1 = imagecolorallocate($dst, 23, 23, 23); //#333 51, 51, 51
 		$white = imagecolorallocate($dst, 255, 255, 255); //#333 51, 51, 51
 		$yellow = imagecolorallocate($dst, 255, 255, 0); //#333 51, 51, 51
 
-		imagefttext($dst, 20, 0, 470, 1297, $gray1, $pingfang_med_path, '长按识别小程序');
+		imagefttext($dst, 20, 0, 470, 1297, $gray1, $ttf_path, '长按识别小程序');
 
 		// $username = "试试我可以有多长，好长好长好长好长好长好长";
 		$username = mb_substr($username,0,12,'utf-8');
-		imagefttext($dst, 30, 0, 212, 94, $white, $pingfang_med_path, '@'.$username);
+		imagefttext($dst, 30, 0, 212, 94, $white, $ttf_path, '@'.$username);
 
 		$desc_txt = "分享了一个好东西";
-		imagefttext($dst, 26, 0, 212, 148, $yellow, $pingfang_med_path, $desc_txt);
+		imagefttext($dst, 26, 0, 212, 148, $yellow, $ttf_path, $desc_txt);
 
 
 
@@ -1421,17 +1407,7 @@ class PingoodsModel {
 
 		imagecopymerge($dst, $goods_src, 25, 215, 0, 0, $goods_src_w, $goods_src_h, 100);
 
-		//imagecopymerge($dst, $avatar_src, 24, 615, 0, 0, $avatar_w, $avatar_h, 100);
-
-		//IA_ROOT."/addons/eaterplanet_ecommerce/assets/ep/fonts/simhei.ttf"
-		//$ttf_path = ROOT_PATH."resource/js/simhei.ttf";
-
 		$ttf_path = ROOT_PATH."/assets/ep/fonts/simhei.ttf";
-		$msyh_path = ROOT_PATH."/assets/ep/fonts/msyh.ttf";
-		$pingfang_path = ROOT_PATH."/assets/ep/fonts/PingFang_Bold.ttf";
-		$pingfang_med_path = ROOT_PATH."/assets/ep/fonts/PingFang_Medium.ttf";
-
-
 
 		//打上文字
 
@@ -1463,21 +1439,21 @@ class PingoodsModel {
 
 		//imagefttext($dst, 25, 0, 120, 660, $black, $ttf_path, $username);
 		//imagefttext($dst, 15, 0, 518, 920, $huise, $ttf_path, '长按二维码领取'); 65 955
-		imagefttext($dst, 26, 0, 64, 987, $gray1, $pingfang_med_path, $need_goods_title);
+		imagefttext($dst, 26, 0, 64, 987, $gray1, $ttf_path, $need_goods_title);
 		// imagefttext($dst, 15, 0, 25, 1040, $fense, $ttf_path, "限时爆款价");
 
 		if($type=='integral') {
-			imagefttext($dst, 22, 0, 64, 1165, $chengse, $pingfang_path, "团购价:");
-			imagefttext($dst, 32, 0, 178, 1168, $chengse, $pingfang_path, $goods_price['price'].'积分');
+			imagefttext($dst, 22, 0, 64, 1165, $chengse, $ttf_path, "团购价:");
+			imagefttext($dst, 32, 0, 178, 1168, $chengse, $ttf_path, $goods_price['price'].'积分');
 
 			$size_1 = sprintf('%.2f',$goods_price['market_price']);
-			imagefttext($dst, 18, 0, 64, 1115, $gray3, $pingfang_med_path, "原价: ¥".$size_1 );
+			imagefttext($dst, 18, 0, 64, 1115, $gray3, $ttf_path, "原价: ¥".$size_1 );
 		} else {
-			imagefttext($dst, 22, 0, 64, 1165, $chengse, $pingfang_path, "团购价:");
-			imagefttext($dst, 32, 0, 178, 1168, $chengse, $pingfang_path, '¥'.$goods_price['price']);
+			imagefttext($dst, 22, 0, 64, 1165, $chengse, $ttf_path, "团购价:");
+			imagefttext($dst, 32, 0, 178, 1168, $chengse, $ttf_path, '¥'.$goods_price['price']);
 
 			$size_1 = sprintf('%.2f',$goods_price['market_price']);
-			imagefttext($dst, 18, 0, 64, 1115, $gray3, $pingfang_med_path, "原价:¥".$size_1 );
+			imagefttext($dst, 18, 0, 64, 1115, $gray3, $ttf_path, "原价:¥".$size_1 );
 		}
 		$size_12 = strlen($size_1);
 
@@ -1487,8 +1463,8 @@ class PingoodsModel {
 		//imageline($dst, 122, 1105, $pos, 1105, $gray3); //画线
 
 
-		imagefttext($dst, 16, 0, 64, 1270, $chengse, $pingfang_med_path, "已售{$seller_count}件");
-		imagefttext($dst, 16, 0, 212, 1270, $chengse, $pingfang_med_path, "仅剩{$quantity}件");
+		imagefttext($dst, 16, 0, 64, 1270, $chengse, $ttf_path, "已售{$seller_count}件");
+		imagefttext($dst, 16, 0, 212, 1270, $chengse, $ttf_path, "仅剩{$quantity}件");
 
 		//$seller_count,$quantity  已售10件
 

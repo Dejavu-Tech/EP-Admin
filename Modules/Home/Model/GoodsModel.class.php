@@ -793,7 +793,7 @@ class GoodsModel extends Model{
 
 		// 70 70 /alidata/www/pinduoduo/Common/img/bg.jpg
 		// Common/img/bg.png 590 460 11258
-		$bg_img = ROOT_PATH."/resource/images/bg.jpg";
+		$bg_img = ROOT_PATH."/assets/images/bg.jpg";
 		//$goods_img = ROOT_PATH."Uploads/image/goods/2017-11-25/1511619168701f098ef1190364f8beb079a306673c.jpg";
 
 		$thumb_goods_name = "thumb_img".md5($goods_img).'.png';
@@ -844,7 +844,7 @@ class GoodsModel extends Model{
 
 		//imagecopymerge($dst, $avatar_src, 24, 615, 0, 0, $avatar_w, $avatar_h, 100);
 
-		$ttf_path = ROOT_PATH."resource/js/simhei.ttf";
+		$ttf_path = ROOT_PATH."/assets/ep/fonts/simhei.ttf";
 
 		//打上文字
 

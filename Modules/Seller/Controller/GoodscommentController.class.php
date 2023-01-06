@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -178,7 +178,7 @@ class GoodscommentController extends CommonController{
 		$jia_id = I('post.jia_id',0);
 		if( empty($jia_id) || $jia_id <= 0 )
 		{
-			echo json_encode( array('code' => 1, 'msg' => '请选择评价的机器人') );
+			echo json_encode( array('code' => 1, 'msg' => '请选择评价的虚拟客户') );
 			die();
 		}
 

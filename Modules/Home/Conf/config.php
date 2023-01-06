@@ -7,7 +7,7 @@ return array(
 	'TMPL_TEMPLATE_SUFFIX'	 => '.html',
 	'VIEW_PATH'				 => './Themes/Home/',
 	 'TMPL_PARSE_STRING'=>array(
-	'__PUBLIC__' => __ROOT__ . '/resource',
+	'__PUBLIC__' => __ROOT__ . '/assets',
 	'__UPLOAD__' => __ROOT__ . '/Uploads/image',
 	'__DATA__' =>  __ROOT__ . '/Data',
 	'__RES__' => __ROOT__.'/assets/theme',

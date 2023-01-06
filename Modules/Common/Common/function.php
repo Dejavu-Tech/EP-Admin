@@ -2466,7 +2466,7 @@ if (!function_exists('tpl_form_field_image_sin')) {
     function tpl_form_field_image_sin($name, $value = '', $default = '', $options = array()) {
         global $_W;
         if (empty($default)) {
-            $default = './resource/images/nopic.jpg';
+            $default = './assets/images/nopic.jpg';
         }
         $val = $default;
         if (!empty($value)) {
@@ -2552,7 +2552,7 @@ if (!function_exists('tpl_form_field_image_sin')) {
 
 				function deleteImage(elm){
 
-					$(elm).prev().attr("src", "./resource/images/nopic.jpg");
+					$(elm).prev().attr("src", "./assets/images/nopic.jpg");
 
 					$(elm).parent().find("input").val("");
 

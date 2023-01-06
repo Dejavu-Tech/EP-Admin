@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://www.eaterplanet.com/
- * @copyright Copyright (c) 2019-2022 Dejavu.Tech.
- * @license   https://www.eaterplanet.com/license.html License
+ * @link      https://e-p.io/
+ * @copyright Copyright (c) 2019-2023 Dejavu Tech.
+ * @license   https://e-p.io/license
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -1012,7 +1012,7 @@ class GoodsController extends CommonController{
 
 			if( empty($jia_id) )
 			{
-				show_json(0, array('message' => '请选择机器人!'));
+				show_json(0, array('message' => '请选择虚拟客户!'));
 			}
 
 			$goods_info = M('eaterplanet_ecommerce_goods')->field('goodsname')->where( array('id' => $goods_id) )->find();
@@ -1810,7 +1810,7 @@ class GoodsController extends CommonController{
 
 		foreach ($items as $item) {
 			M('eaterplanet_ecommerce_goods_category')->where( array('id' => $item['id']) )->save( array('is_express_show' => intval($_GPC['enabled']))  );
-			D('Seller/Operatelog')->addOperateLog('goods','修改分类仅快递商品页显示--'.$item['name']);
+			D('Seller/Operatelog')->addOperateLog('goods','修改分类网商模式商品页显示--'.$item['name']);
 		}
 		show_json(1, array('url' => $_SERVER['HTTP_REFERER']));
 	}
