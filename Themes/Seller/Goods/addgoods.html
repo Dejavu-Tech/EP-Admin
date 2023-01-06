@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
 	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-	<meta name="author" content="Dejavu.Tech.">
+	<meta name="author" content="Dejavu Tech.">
 	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
 
@@ -74,24 +74,24 @@
 	};
 </script>
 
-	<script type="text/javascript" src="/resource/js/lib/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="/resource/js/lib/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/resource/js/app/util.js?v=201903260001"></script>
-	<script type="text/javascript" src="/resource/js/app/common.min.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app/util.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/app/common.min.js?v=201903260001"></script>
 	<script type="text/javascript" src="/assets/js/select2/select2.full.min.js"></script>
 	<script type="text/javascript" src="/assets/js/select2/select2-custom.js"></script>
 
 
-	<script type="text/javascript" src="/resource/js/require.js?v=201903260001"></script>
-	<script type="text/javascript" src="/resource/js/lib/jquery.nice-select.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/require.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/lib/jquery.nice-select.js?v=201903260001"></script>
 	<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
 	<script type="text/javascript" src="/assets/js/dist/area/cascade.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="/assets/css/select2.css">
 	<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
-	<script type="text/javascript" src="/resource/js/lib/moment.js"></script>
-	<link rel="stylesheet" href="/resource/components/datetimepicker/jquery.datetimepicker.css">
-	<link rel="stylesheet" href="/resource/components/daterangepicker/daterangepicker.css">
+	<script type="text/javascript" src="/assets/js/lib/moment.js"></script>
+	<link rel="stylesheet" href="/assets/ep/components/datetimepicker/jquery.datetimepicker.css">
+	<link rel="stylesheet" href="/assets/ep/components/daterangepicker/daterangepicker.css">
 
 
 </head>
@@ -841,7 +841,7 @@
 																		<div class="input-group-append spec_item_thumb <?php if(!empty($specitem['thumb'])){ ?>has_thumb<?php } ?>">
 																			<input type='hidden'  name="spec_item_thumb_{$spec['id']}[]" value="{$specitem['thumb']}"/>
 																			<img onclick="selectSpecItemImage(this)" onerror="this.src='/assets/ep/images/nopic100.jpg'"
-																				 src="<?php if(empty($specitem['thumb'])){ ?>/assets/ep/images/nopic100.jpg<?php }else{ ?>{: tomedia( file_image_thumb_resize($specitem['thumb'],100) )}<?php } ?>" style='width:38px;height: 38px;'
+																				 src="<?php if( empty($specitem['thumb'])){ ?><?php  }else{  ?>{:resize($specitem['thumb'],100)}<?php } ?>" style='width:38px;height: 38px;'
 																			<?php if(!empty($specitem['thumb'])){ ?>
 																			data-toggle='popover'
 																			data-html ='true'
@@ -1148,7 +1148,7 @@
 											<div class="checkbox checkbox-primary m-t-0" >
 												<input type="checkbox"  lay-skin="primary" id="is_only_distribution" name="is_only_distribution" lay-filter="is_only_distribution" <?php if(isset($item['is_only_distribution']) && $item['is_only_distribution'] ==1 ){ ?> checked <?php } ?> value="1" style="display:none"/>
 											</div>
-											<small>勾选后该商品会在购物车中显示同城配送，所有同城配送的商品单独结算，订单提交只有同城配送方式，会自动取消仅快递和到店核销的勾选</small>
+											<small>勾选后该商品会在购物车中显示同城配送，所有同城配送的商品单独结算，订单提交只有同城配送方式，会自动取消网商模式和到店核销的勾选</small>
 										</div>
 									</div>
 									<div class="form-group row">
@@ -1177,7 +1177,7 @@
 											<div class="checkbox checkbox-primary m-t-10">
 												<input type="checkbox" lay-skin="primary"  name="is_only_hexiao" id="is_only_hexiao" lay-filter="is_only_hexiao" <?php if(isset($item['is_only_hexiao']) && $item['is_only_hexiao'] ==1 ){ ?> checked <?php } ?> value="1" style="display: none"/>
 											</div>
-											<small>勾选后该商品会在购物车中显示核销商品，所有核销商品单独结算，订单提交只有到店核销方式，且会自动取消仅快递和同城配送的勾选</small>
+											<small>勾选后该商品会在购物车中显示核销商品，所有核销商品单独结算，订单提交只有到店核销方式，且会自动取消网商模式和同城配送的勾选</small>
 										</div>
 									</div>
 									<div class="form-group row">
@@ -1352,7 +1352,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 footer-copyright">
-					<p class="mb-0">Copyright © __YEARS__ Dejavu.Tech. All rights reserved.</p>
+					<p class="mb-0">Copyright © __YEARS__ Dejavu Tech. All rights reserved.</p>
 				</div>
 				<div class="col-md-6">
 					<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
@@ -1440,7 +1440,7 @@
 </div>
 
 
-<script src="/resource/layuiadmin/layui/layui-form.js"></script>
+<script src="/assets/layuiadmin/layui/layui-form.js"></script>
 
 <script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
@@ -1470,7 +1470,7 @@
 
 <script>
 	layui.config({
-		base: '/resource/layuiadmin/' //静态资源所在路径
+		base: '/assets/layuiadmin/' //静态资源所在路径
 	}).extend({
 		index: 'lib/index' //主入口模块
 	}).use('index');
@@ -1507,11 +1507,9 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 	form.on('checkbox(is_modify_sendscore)', function(data){
 		console.log(data.elem.checked)
 		if (data.elem.checked) {
-			console.log(12);
 			$("#send_score_divTip").css('display','inline');
 			$("#send_score_divTip2").css('display','inline');
 		} else {
-			console.log(33);
 			$("#send_score_divTip").hide();
 			$("#send_score_divTip2").hide();
 		}
@@ -1608,7 +1606,7 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 		}
 		form.render('checkbox');
 	});
-	//仅快递
+	//网商模式
 	form.on('checkbox(is_only_express)', function (data) {
 		if (data.elem.checked) {
 			$("#is_only_distribution").removeAttr("checked");
@@ -1653,7 +1651,7 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 	form.on('checkbox(is_only_express111)', function(data){
 		if (data.elem.checked) {
 			$('#is_only_express').removeAttr("checked");
-			layer.msg("启用仅快递配送模式，请在物流设置开启快递配送方式！",{icon: 2,time: 3000});
+			layer.msg("启用网商仅快递配送模式，请在物流设置开启快递配送方式！",{icon: 2,time: 3000});
 		}
 		form.render('checkbox');
 	})
@@ -1746,7 +1744,6 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 	  }
 
 	  if($('#hasoption').get(0).checked == false){
-		  console.log(222);
 		  var total =$('#total').val();
 		  if(total == ''){
 			  layer.msg('库存必须填写',{icon: 1,time: 2000});
@@ -1954,7 +1951,6 @@ layui.use(['jquery', 'layer','form', 'laydate'], function(){
 				  layer.msg('多规格商品库存未填写',{icon:2});
 				  $(this).focus();
 				  $(this).css('border','red 2px solid');
-				  console.log(888);
 				  layer.close(loadingIndex);
 				  is_break = true;
 				  return false;
@@ -3264,7 +3260,7 @@ function cancle_room_bind(obj){
 						}
 						function nofind(){
 							var img=event.srcElement;
-							img.src="./resource/image/module-nopic-small.jpg";
+							img.src="./assets/images/module-nopic-small.jpg";
 							img.onerror=null;
 						}
 

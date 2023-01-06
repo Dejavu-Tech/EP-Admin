@@ -28,7 +28,7 @@
 	  		<thead>
 			    <tr>
 			      <th colspan="3" style="color:#000000;font-weight:bold;">商品使用次数（<?php echo $order_hexiao_info['hexiao_count']; ?>次）：</th>
-			    </tr> 
+			    </tr>
 			</thead>
 	  		<tbody>
 			<?php foreach($hx_list as $k=>$v){ ?>
@@ -38,7 +38,7 @@
 				<td><?php echo date('Y-m-d H:i:s',$v['addtime']); ?></td>
 			</tr>
 			<?php } ?>
-			<?php 
+			<?php
 				$count = $order_hexiao_info['hexiao_count'] - $hx_count;
 				for($i = 0;$i < $count;$i++){
 			?>
@@ -55,7 +55,7 @@
 	  </div>
 	</div>
 </div>
-<script type="text/javascript" src="./resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="./assets/js/lib/jquery-1.11.1.min.js"></script>
 <script>
 	function hexiao_goods(){
 		var hx_count = 0;
@@ -85,14 +85,14 @@
 							end:function(){
 								location.href = info.result.url;
 							}
-						}); 
+						});
 					}
 				}
 			})
-		}); 
+		});
 	}
 </script>
 </body>
 </html>
-	
-			
+
+

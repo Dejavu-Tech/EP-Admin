@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
     <meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-    <meta name="author" content="Dejavu.Tech.">
+    <meta name="author" content="Dejavu Tech.">
     <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
 
@@ -93,7 +93,7 @@
                             <h6>吃货星球©商城微信小程序、商城后台管理系统，受国家计算机软件著作权保护，必须联系作者授权才可获得源文件使用权。不得恶意分享产品源代码、二次转售等，违者将承担相应的法律责任。</h6>
                         </div>
                         <img src="https://image.ch871.com/rexotech.png" width="40px" style="width:40px;margin:0px 10px 0px 0px;color:#ccd9e8 " align="left">
-                        Copyright © 2022 Dejavu Technology (YN) Co., Ltd. <a class="btn btn-primary m-t-10" href="https://www.rexotech.cn">rexotech.cn</a>
+                        Copyright © 2023 Dejavu Technology (YN) Co., Ltd. <a class="btn btn-primary m-t-10" href="https://www.rexotech.cn">rexotech.cn</a>
                     </div>
                 </div>
                 <!--------------------
@@ -400,12 +400,12 @@
 <!-- login js-->
 <script src="/assets/js/script.js"></script>
 <!-- Plugin used-->
-<script src="/resource/layuiadmin/layui/layui-form.js"></script>
+<script src="/assets/layuiadmin/layui/layui-form.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/assets/js/diy/vue.min.js" defer="defer"></script>
 <script>
 	layui.config({
-	base: '/resource/layuiadmin/' //静态资源所在路径
+	base: '/assets/layuiadmin/' //静态资源所在路径
 	}).extend({
 	index: 'lib/index' //主入口模块
 	}).use('index');
@@ -528,8 +528,6 @@ layui.use(['jquery', 'layer','form'], function(){
         }else{
             var s_index = $(this).parent().parent().index();
             par_index = s_index;
-
-            console.log(12);
         }
     })
 
