@@ -8,8 +8,8 @@
 <h1 align="center">社区团购后端/CMS</h1>
 <p align="center">
   <a href="http://wpa.qq.com/msgrd?v=3&uin=142997&site=qq&menu=yes"><img alt="Albert.Z" src="https://img.shields.io/badge/Author-Albert.Z-blue.svg"></a>
-  <a href="[https://github.com/Dejavu-Tech/EP-Admin/License](https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE)"><img alt="GPL-v3协议" src="https://img.shields.io/badge/GPL-v3-red"></a>
-  <a href="https://github.com/Dejavu-Tech/EP-Admin/releases"><img alt="最新版本" src="https://img.shields.io/badge/version-5.0.0-brightgreen"></a>
+  <a href="https://github.com/Dejavu-Tech/EP-Admin/License"><img alt="GPL-v3协议" src="https://img.shields.io/badge/GPL-v3-red"></a>
+  <a href="https://github.com/Dejavu-Tech/EP-Admin/releases"><img alt="最新版本" src="https://img.shields.io/badge/version-5.1.0-brightgreen"></a>
   <a href="https://img.shields.io/github/stars/Dejavu-Tech/EP-Admin.svg?style=social&label=Stars"><img alt="笔芯" src="https://img.shields.io/github/stars/Dejavu-Tech/EP-Admin.svg?style=social&label=Stars"></a>
 
   <br/>
@@ -81,7 +81,6 @@ EP-Admin
 ## 📺DEMO
 #### 后端 ➡️<a href="https://demo.ch871.com">https://demo.ch871.com</a>
 
-
 #### 前端 微信搜索`霸气妖吃货星球`或扫码：
 <img src="https://image.ch871.com/ep-qrcode.png" width="300px" /> 
 
@@ -123,7 +122,7 @@ git@github.com:Dejavu-Tech/EP-Admin.git
 - 企业微信:  
 <img src="https://image.ch871.com/qywx-contact .png" width="300px" />
 
-## 📜许可证 [AGPL-3.0](https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE)
+## 📜许可证 [AGPL-3.0](https://github.com/Dejavu-Tech/EP-Admin/License)
 
 ## 🌎️软件著作权及其他版权所有
 <img src="https://image.ch871.com/rexotech.png" width="25px" align="left"/> 
