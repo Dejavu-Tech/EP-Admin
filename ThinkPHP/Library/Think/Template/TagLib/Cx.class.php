@@ -438,7 +438,7 @@ class Cx extends TagLib {
     }
 
     /**
-     * import 标签解析 <import file="Js.Base" /> 
+     * import 标签解析 <import file="Js.Base" />
      * <import file="Css.Base" type="css" />
      * @access public
      * @param array $tag 标签属性
@@ -512,17 +512,14 @@ class Cx extends TagLib {
         return $parseStr.$endStr;
     }
 
-    // import别名 采用文件方式加载(要使用命名空间必须用import) 例如 <load file="__PUBLIC__/Js/Base.js" />
     public function _load($tag,$content) {
         return $this->_import($tag,$content,true);
     }
 
-    // import别名使用 导入css文件 <css file="__PUBLIC__/Css/Base.css" />
     public function _css($tag,$content) {
         return $this->_import($tag,$content,true,'css');
     }
 
-    // import别名使用 导入js文件 <js file="__PUBLIC__/Js/Base.js" />
     public function _js($tag,$content) {
         return $this->_import($tag,$content,true,'js');
     }
@@ -566,7 +563,7 @@ class Cx extends TagLib {
         $parseStr   =   '<?php define('.$name.', '.$value.'); ?>';
         return $parseStr;
     }
-    
+
     /**
      * for标签解析
      * 格式： <for start="" end="" comparison="" step="" name="" />
@@ -591,11 +588,11 @@ class Cx extends TagLib {
             elseif('$'==substr($value,0,1))
                 $value = $this->autoBuildVar(substr($value,1));
             switch ($key){
-                case 'start':   
+                case 'start':
                     $start      = $value; break;
-                case 'end' :    
+                case 'end' :
                     $end        = $value; break;
-                case 'step':    
+                case 'step':
                     $step       = $value; break;
                 case 'comparison':
                     $comparison = $value; break;
@@ -603,7 +600,7 @@ class Cx extends TagLib {
                     $name       = $value; break;
             }
         }
-        
+
         $parseStr   = '<?php $__FOR_START_'.$rand.'__='.$start.';$__FOR_END_'.$rand.'__='.$end.';';
         $parseStr  .= 'for($'.$name.'=$__FOR_START_'.$rand.'__;'.$this->parseCondition('$'.$name.' '.$comparison.' $__FOR_END_'.$rand.'__').';$'.$name.'+='.$step.'){ ?>';
         $parseStr  .= $content;
