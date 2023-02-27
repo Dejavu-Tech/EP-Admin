@@ -2829,7 +2829,8 @@ class UserController extends CommonController {
 		$werp_data = array();
 		$werp_data['token'] = $token;
 
-		$result = array('code' => 0, 'token' => $token,'openid' =>$data['openid']);
+        	$member_info = M('eaterplanet_ecommerce_member')->where( array('we_openid' => $data['openid']) )->find();
+		$result = array('code' => 0, 'token' => $token,'openid' =>$data['openid'],'member_info'=>$member_info,);
 		echo json_encode($result);
 		die();
 	}
