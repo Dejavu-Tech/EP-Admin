@@ -54,32 +54,27 @@
 <script type="text/javascript">
             window.sysinfo = {
             <?php if(!empty($_W['uniacid'])){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
-
             <?php if(!empty($_W['acid'])){ ?>'acid': '{$_W['acid']}',<?php } ?>
-
             <?php if(!empty($_W['openid'])){ ?>'openid': '{$_W['openid']}',<?php } ?>
-
             <?php if(!empty($_W['uid'])){ ?>'uid': '{$_W['uid']}',<?php } ?>
-
             'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
-
             'siteroot': '{$_W['siteroot']}',
-                    'siteurl': '{$_W['siteurl']}',
-                    'attachurl': '{$_W['attachurl']}',
-                    'attachurl_local': '{$_W['attachurl_local']}',
-                    'attachurl_remote': '{$_W['attachurl_remote']}',
-                    'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
+            'siteurl': '{$_W['siteurl']}',
+            'attachurl': '{$_W['attachurl']}',
+            'attachurl_local': '{$_W['attachurl_local']}',
+            'attachurl_remote': '{$_W['attachurl_remote']}',
+            'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
             'cookie' : {'pre': ''},
             'account' : {:json_encode($_W['account'])},
             };
         </script>
 
-<script type="text/javascript" src="/assets/js/lib/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
-<script type="text/javascript" src="/assets/js/app/util.js?v=201903260001"></script>
-<script type="text/javascript" src="/assets/js/app/common.min.js?v=201903260001"></script>
-<script type="text/javascript" src="/assets/js/require.js?v=201903260001"></script>
-<script type="text/javascript" src="/assets/js/lib/jquery.nice-select.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app/util.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/app/common.min.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/require.js?v=201903260001"></script>
+	<script type="text/javascript" src="/assets/js/lib/jquery.nice-select.js?v=201903260001"></script>
 	<script type="text/javascript" src="/assets/ep/components/colpick/colpick.js"></script>
    <link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
 	<link href="/assets/ep/components/colpick/colpick.css" rel="stylesheet">
@@ -93,7 +88,7 @@
 					<div class="row">
 						<div class="col-lg-6 main-header">
 							<h6 class="mb-0">当前位置</h6>
-							<h2>小程序<span>图片设置</span> </h2>
+							<h2>小程序<span>图片设置</span></h2>
 						</div>
 					</div>
 				</div>
