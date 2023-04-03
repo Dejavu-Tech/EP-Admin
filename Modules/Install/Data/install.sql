@@ -7042,7 +7042,7 @@ VALUES (7, 'SMTP_HOST', 'smtp', 1448266020, 'smtp.qq.com', '', 0),
        (63, 'APPID', 'site', 0, '', '微信APPID', 0),
        (64, 'APPSECRET', 'site', 0, '', '微信APPSECRET', 0),
        (65, 'MCHID', 'site', 0, '1246637501', '微信商户号', 0),
-       (66, 'VERSION', 'site', 0, 'V5.2.1', '系统版本', 0),
+       (66, 'VERSION', 'site', 0, 'V5.2.2', '系统版本', 0),
        (67, 'deliverNoticeId', 'weixin', 0, 'eGWpyoJInWgSNYdnkujvjAIF9hbJIGm4p4tDCwcmURI', '订单标记发货通知', 0),
        (68, 'groupResultId', 'weixin', 0, 'jfNyI5kK7X5pyAaxkCmU2gRqjLB91fl_u1X0FVNWC0A', '团购结果通知', 0),
        (69, 'expireId', 'weixin', 0, 'eceRXDPx1NnK7aR8Bp19hic0mcHMYl7rl74evMopxCU', '到期提醒', 0),
@@ -11685,7 +11685,7 @@ VALUES (1, 'goods_stock_notice', '100'),
        (47, 'open_comment_shenhe', '1'),
        (48, 'shop_domain', 'https://后台备案域名/'),
        (49, 'supply_apply_page', ''),
-       (50, 'site_version', 'V5.2.1'),
+       (50, 'site_version', 'V5.2.2'),
        (51, 'cur_release', '202106030620'),
        (56, 'index_list_theme_type', '0'),
        (57, 'nav_bg_color', ''),
@@ -12665,7 +12665,7 @@ CREATE TABLE `dejavutech_eaterplanet_ecommerce_imdada_area_code`
     PRIMARY KEY (`id`)
 ) ENGINE = MyISAM
   AUTO_INCREMENT = 301
-  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城达达配送城市编号表';
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城达达快送城市编号表';
 
 LOCK TABLES `dejavutech_eaterplanet_ecommerce_imdada_area_code` WRITE;
 INSERT INTO `dejavutech_eaterplanet_ecommerce_imdada_area_code`
@@ -13539,7 +13539,7 @@ CREATE TABLE `dejavutech_eaterplanet_ecommerce_order`
     `localtown_free_shipping_fare`    float(10, 2)                                                                            DEFAULT '0.00' COMMENT '减免的同城配送费',
     `localtown_add_shipping_fare`     float(10, 2)                                                                            DEFAULT '0.00' COMMENT '加价配送费',
     `expected_delivery_time`          varchar(20)                                                                             DEFAULT '' COMMENT '指定配送时间',
-    `third_distribution_type`         varchar(20)                                                                             DEFAULT '' COMMENT '第三方配送类型：达达配送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
+    `third_distribution_type`         varchar(20)                                                                             DEFAULT '' COMMENT '第三方配送类型：达达快送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
     `hexiao_volume_code`              varchar(18)                                                                             DEFAULT '' COMMENT '核销卷码',
     `hexiao_qr_code`                  varchar(255)                                                                            DEFAULT '' COMMENT '核销二维码',
     PRIMARY KEY (`order_id`),
@@ -14093,7 +14093,7 @@ CREATE TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_order`
 (
     `id`                      int(10)      NOT NULL AUTO_INCREMENT COMMENT '自增id',
     `order_id`                int(10)      NOT NULL COMMENT '订单id',
-    `orderdistribution_id`    int(10)      NOT NULL COMMENT '骑手id',
+    `orderdistribution_id`    int(10)      NOT NULL COMMENT '配送员id',
     `distance`                float(10, 2) NOT NULL DEFAULT '0.00' COMMENT '距离: 单位KM',
     `shop_lon`                float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '店家经度',
     `shop_lat`                float(10, 6) NOT NULL DEFAULT '0.000000' COMMENT '店家纬度',
@@ -14107,7 +14107,7 @@ CREATE TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_order`
     `is_statement`            tinyint(1)   NOT NULL DEFAULT '0' COMMENT '是否结算，0未结算，1已结算',
     `delivery_type`           tinyint(1)            DEFAULT '0' COMMENT '配送方式：0 默认，1、平台配送，2,、第三方配送',
     `addtime`                 int(10)      NOT NULL COMMENT '添加时间',
-    `third_distribution_type` varchar(20)           DEFAULT '' COMMENT '第三方配送类型：达达配送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
+    `third_distribution_type` varchar(20)           DEFAULT '' COMMENT '第三方配送类型：达达快送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
     `dm_id`                   int(10)               DEFAULT '0' COMMENT '第三方配送员编号',
     `dm_name`                 varchar(20)           DEFAULT '' COMMENT '第三方配送员姓名',
     `dm_mobile`               varchar(20)           DEFAULT '' COMMENT '第三方配送员手机号',
@@ -14119,14 +14119,14 @@ CREATE TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_order`
     PRIMARY KEY (`id`),
     KEY `order_id` (`order_id`, `orderdistribution_id`)
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城骑手配送费订单表';
+  DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城配送员配送费订单表';
 
 DROP TABLE IF EXISTS `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_log`;
 CREATE TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_log`
 (
     `id`                      int(10)      NOT NULL AUTO_INCREMENT COMMENT '自增id',
     `order_id`                int(10)      NOT NULL COMMENT '订单id',
-    `third_distribution_type` varchar(20)  NOT NULL COMMENT '第三方配送类型：达达配送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
+    `third_distribution_type` varchar(20)  NOT NULL COMMENT '第三方配送类型：达达快送：imdada；顺丰同城：sf；UU跑腿：uupt；点我达：dianwoda',
     `state`                   tinyint(1)   NOT NULL DEFAULT '0' COMMENT '状态：1、待接单，2、待取货，3、配送中，4、已完成，5、已取消，8、指派单，9、妥投异常之物品返回中，10、妥投异常之物品返回完成，11、订单异常，100、骑士到店，1000、创建达达运单失败',
     `remark`                  varchar(255) NOT NULL COMMENT '备注',
     `addtime`                 int(10)      NOT NULL COMMENT '添加时间',
@@ -14139,7 +14139,7 @@ CREATE TABLE `dejavutech_eaterplanet_ecommerce_orderdistribution_thirth_query`
 (
     `id`                      int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
     `order_id`                int(10)          NOT NULL COMMENT '订单id',
-    `third_distribution_type` varchar(20)      NOT NULL COMMENT '第三方配送公司（达达配送：imdada；顺丰同城：sf；）',
+    `third_distribution_type` varchar(20)      NOT NULL COMMENT '第三方配送公司（达达快送：imdada；顺丰同城：sf；）',
     `distance`                decimal(11, 2)   NOT NULL DEFAULT '0.00' COMMENT '配送距离(单位：米)',
     `shipping_fee`            decimal(10, 2)   NOT NULL DEFAULT '0.00' COMMENT '实际运费(最终运费)',
     `shipping_delivery_fee`   decimal(10, 2)   NOT NULL DEFAULT '0.00' COMMENT '运费',
