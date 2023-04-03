@@ -126,7 +126,7 @@ class ThirthdeliveryController extends CommonController {
 			$other_data['order_status'] = 5;
 			//订单取消原因
 			$other_data['cancel_reason'] = $messageBody['cancelReason'];
-			//订单取消原因来源 11:达达骑手取消订单
+			//订单取消原因来源 11:达达快送员取消订单
 			$other_data['cancel_from'] = 11;
 
 			D('Seller/Order')->do_localtown_thirth_delivery_return($messageBody['orderId'],0,$other_data);
@@ -155,20 +155,20 @@ class ThirthdeliveryController extends CommonController {
 						$other_data['desc'] = '已接单';
 						$other_data['order_status'] = 2;
 						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
-					}else if($order_status == 20){//已分配骑手
+					}else if($order_status == 20){//已分配配送员
 						//配送员姓名
 						$other_data['operator_name'] = $data['carrier_driver_name'];
 						//配送员电话
 						$other_data['operator_phone'] = $data['carrier_driver_phone'];
-						$other_data['desc'] = "已分配骑手：".$other_data['operator_name'];
+						$other_data['desc'] = "已分配配送员：".$other_data['operator_name'];
 						$other_data['order_status'] = 3;
 						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
-					}else if($order_status == 80){//骑手已到店
+					}else if($order_status == 80){//配送员已到店
 						//配送员姓名
 						$other_data['operator_name'] = $data['carrier_driver_name'];
 						//配送员电话
 						$other_data['operator_phone'] = $data['carrier_driver_phone'];
-						$other_data['desc'] = "骑手".$other_data['operator_name']."已到店";
+						$other_data['desc'] = "配送员".$other_data['operator_name']."已到店";
 						$other_data['order_status'] = 3;
 						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
 					}else if($order_status == 2){//配送中
@@ -176,7 +176,7 @@ class ThirthdeliveryController extends CommonController {
 						$other_data['operator_name'] = $data['carrier_driver_name'];
 						//配送员电话
 						$other_data['operator_phone'] = $data['carrier_driver_phone'];
-						$other_data['desc'] = "骑手".$other_data['operator_name']."配送中";
+						$other_data['desc'] = "配送员".$other_data['operator_name']."配送中";
 						$other_data['order_status'] = 3;
 						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,0,$other_data);
 					}else if($order_status == 3){//已送达
@@ -184,7 +184,7 @@ class ThirthdeliveryController extends CommonController {
 						$other_data['operator_name'] = $data['carrier_driver_name'];
 						//配送员电话
 						$other_data['operator_phone'] = $data['carrier_driver_phone'];
-						$other_data['desc'] = "骑手".$data['carrier_driver_name']."已送达";
+						$other_data['desc'] = "配送员".$data['carrier_driver_name']."已送达";
 						$other_data['order_status'] = 4;
 						D('Seller/Order')->do_localtown_thirth_delivery_return($order_sn,6,$other_data);
 					}else if($order_status == 5){//异常

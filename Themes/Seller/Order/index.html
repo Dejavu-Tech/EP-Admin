@@ -684,7 +684,7 @@
 															<?php
 												$third_name = "";
 												if($item['third_distribution_type'] == 'imdada'){
-													$third_name = '达达配送';
+													$third_name = '达达快送';
 												}else if($item['third_distribution_type'] == 'sf'){
 													$third_name = '顺丰同城';
 												}else if($item['third_distribution_type'] == 'make'){
@@ -736,7 +736,7 @@
 															<?php } ?>
 															<?php if($is_localtown_imdada_status == 1){ ?>
 															<li>
-																<a class="btn btn-info btn-xs ts_delivery_btn" data-type="imdada" data-order-id="<?php echo $item['order_id']?>">推送到达达配送</a>
+																<a class="btn btn-info btn-xs ts_delivery_btn" data-type="imdada" data-order-id="<?php echo $item['order_id']?>">推送到达达快送</a>
 																<?php if($is_imdada_prequery_status == 1){ ?>
 																<br/>
 																<span class="txt-info">>预计配送费：<?php echo !empty($item['pre_imdada_delivery_fee']) ? $item['pre_imdada_delivery_fee'] : 0; ?></span>
@@ -765,7 +765,7 @@
 															<?php if($is_localtown_imdada_status == 1){ ?>
 															<?php if($item['third_distribution_type'] == 'imdada'){ ?>
 															<li>
-																<a class="btn btn-info btn-xs ts_delivery_error_btn" style="color:red;">达达配送：{$item['orderdistribution_order']['cancel_reason']}</a>
+																<a class="btn btn-info btn-xs ts_delivery_error_btn" style="color:red;">达达快送：{$item['orderdistribution_order']['cancel_reason']}</a>
 																<?php if($is_imdada_prequery_status == 1){ ?>
 																<br/>
 																<span class="txt-info">预计配送费：<?php echo !empty($item['pre_imdada_delivery_fee']) ? $item['pre_imdada_delivery_fee'] : 0; ?></span>
@@ -773,7 +773,7 @@
 															</li>
 															<?php }else{ ?>
 															<li>
-																<a class="btn btn-info btn-xs ts_delivery_btn" data-type="imdada" data-order-id="<?php echo $item['order_id']?>">推送到达达配送</a>
+																<a class="btn btn-info btn-xs ts_delivery_btn" data-type="imdada" data-order-id="<?php echo $item['order_id']?>">推送到达达快送</a>
 																<?php if($is_imdada_prequery_status == 1){ ?>
 																<br/>
 																<span class="txt-info">预计配送费：<?php echo !empty($item['pre_imdada_delivery_fee']) ? $item['pre_imdada_delivery_fee'] : 0; ?></span>
@@ -1556,10 +1556,10 @@ $(function(){
 	})
 
 	function thirth_delivery_order(data_type,order_id,state){
-		var thirth_name = "达达配送";
+		var thirth_name = "达达快送";
 		var has_send = 0;
 		if(data_type == 'imdada'){
-			thirth_name = "达达配送";
+			thirth_name = "达达快送";
 			has_send = $('#order_delivery_'+order_id).find('.imdada_has_send').val();
 		}else if(data_type == 'sf'){
 			thirth_name = "顺丰同城";

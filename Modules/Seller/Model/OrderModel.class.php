@@ -1163,7 +1163,7 @@ class OrderModel{
 						$value['pre_sf_delivery_fee'] = $sf_data['message'];
 					}
 
-					//达达配送是否已发过
+					//达达快送是否已发过
 					$imdada_count = M('eaterplanet_ecommerce_orderdistribution_thirth_log')->where(array('order_id'=>$value['order_id'],'third_distribution_type'=>'imdada'))->count();
 					$imdada_has_send = 0;
 					if($imdada_count > 0){
@@ -2946,7 +2946,7 @@ class OrderModel{
 								//下单时间
 								'keyword5' => array('value' => $order_info['create_time'],'color' => '#030303'),
 
-								'remark' => array('value' => '请骑手们尽快接单','color' => '#030303'),
+								'remark' => array('value' => '请配送员们尽快接单','color' => '#030303'),
 						)
 				);
 				$res =  D('Seller/User')->send_wxtemplate_msg(array() , $url ,$head_pathinfo,$we_openid,$template_id,"", 0,$weixin_template_order);
@@ -3089,7 +3089,7 @@ class OrderModel{
 				}else if($other_data['order_status'] == 5){//已取消
 					D('Home/LocaltownDelivery')->change_thirth_distribution_order_state( $order_id, 5, $other_data);
 					$cancel_reason = "";
-					if($other_data['cancel_from'] == 11){//达达骑手取消订单
+					if($other_data['cancel_from'] == 11){//达达快送员取消订单
 						$cancel_reason = "骑士取消订单:".$other_data['cancel_reason'];
 					}else{
 						$cancel_reason = "订单取消原因:".$other_data['cancel_reason'];

@@ -13,7 +13,7 @@
  */
 
 /*
- * 达达配送接口
+ * 达达快送接口
  */
 namespace Lib\Localtown;
 class Imdada
@@ -226,7 +226,7 @@ class Imdada
     }
 
     /**
-     * 取消达达配送订单
+     * 取消达达快送订单
      * @param $orderdistribution_info
      */
     public function cancelOrder($order_info,$cancel_reason_id,$cancel_reason){

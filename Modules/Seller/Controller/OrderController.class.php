@@ -2690,7 +2690,7 @@ class OrderController extends CommonController{
 		$step_array[1]['time'] = $ref_info['addtime'];
 		$step_array[1]['done'] = 1;
 		$step_array[2]['step'] = 2;
-		$step_array[2]['title'] = '平台处理维权申请';
+		$step_array[2]['title'] = '平台处理售后申请';
 		$step_array[2]['done'] = 0;
 		$step_array[2]['time'] = '';
 		$step_array[3]['step'] = 3;
@@ -4697,7 +4697,7 @@ class OrderController extends CommonController{
 			if(isset($config_data['localtown_imdada_merchant_id']) && !empty($config_data['localtown_imdada_shop_no']) && isset($config_data['localtown_imdada_appkey']) && !empty($config_data['localtown_imdada_appsecret'])){
 				show_json(1);
 			}else{
-				show_json(0,  array('msg' => '达达配送平台参数未配置！' ) );
+				show_json(0,  array('msg' => '达达快送平台参数未配置！' ) );
 			}
 		}else if($data_type == 'sf'){
 			if(isset($config_data['localtown_sf_dev_id']) && !empty($config_data['localtown_sf_dev_key']) && isset($config_data['localtown_sf_store_id'])){

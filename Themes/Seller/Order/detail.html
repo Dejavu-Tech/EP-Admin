@@ -456,7 +456,7 @@
 													<?php if($item['order_status_id'] == 14){ ?>（商家已发货，正在配送给团长途中）<?php } ?>
 
 													<?php if($item['order_status_id'] == 12){ ?>
-													（已维权<?php if(!empty($refund['refundtime'])){ ?>维权时间: {:date('Y-m-d H:i:s',$refund['refundtime'])}<?php } ?>）
+													（已售后完成<?php if(!empty($refund['refundtime'])){ ?>售后时间: {:date('Y-m-d H:i:s',$refund['refundtime'])}<?php } ?>）
 
 													<?php } ?>
 												</i>

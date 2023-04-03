@@ -924,7 +924,7 @@ class OrderModel extends Model{
 		$shoname = D('Home/Front')->get_config_by_name('shoname');
 		$order_info['shoname'] = $shoname;
 
-		//达达配送
+		//达达快送
 		if($is_localtown_imdada_status == 1 && $is_imdada_prequery_status == 1){
 			$imdada = new \Lib\Localtown\Imdada();
 			$result = $imdada->queryDeliverFee($order_info);

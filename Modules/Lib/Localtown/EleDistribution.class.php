@@ -94,7 +94,7 @@ class EleDistribution
     }
 
     /**
-     * 创建蜂鸟配送订单接口
+     * 创建蜂鸟即配订单接口
      */
     public function addOrder($order_info){
         //门店信息
@@ -168,7 +168,7 @@ class EleDistribution
         return $result;
     }
     /**
-     * 取消蜂鸟配送订单接口
+     * 取消蜂鸟即配订单接口
      */
     public function cancelOrder($orderdistribution_info,$cancel_reason_id,$cancel_reason){
         $data = array(
