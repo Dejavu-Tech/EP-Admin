@@ -1,6 +1,4 @@
-html,body {
-	font-family: 微软雅黑;
-}
+
 .checkbox input[type=checkbox],
 .checkbox-inline input[type=checkbox],
 .radio input[type=radio],
@@ -162,9 +160,6 @@ select.input-sm { line-height:18px; padding-top:0; padding-bottom: 0}
 
 .select2-container { float:left;}
 
-.form-horizontal .form-group::after {
-	clear:disabled;
-}
 table  tr td {
     position: relative;
     white-space: nowrap;
@@ -337,7 +332,7 @@ table  tr td {
 .history .img-list .img-item .img-container:hover .img-meta{display:none; }
 .history .img-list .img-item .img-container .img-meta { width:100%; position: absolute; bottom: 0; z-index:1; background:rgba(0,0,0,0.5); color:#eee;}
 .history .img-list .img-item .img-container .select-status {display:inline-block; width:50px; height:50px; position: absolute; bottom:0; right:0; z-index:2;}
-.history .img-list .img-item-selected .img-container .select-status {display:inline-block; width:50px; height:50px; position: absolute; bottom:0; right:0; background: url('../images/success-small.png') no-repeat right bottom; z-index:2;}
+.history .img-list .img-item-selected .img-container .select-status {display:inline-block; width:50px; height:50px; position: absolute; bottom:0; right:0; z-index:2;}
 .history .img-list .img-item-selected .img-container .img-meta {display:none;}
 .history .img-list .img-item .btnClose{text-align:right; position:absolute; top:-10px; right:-5px; display:none; z-index:10;}
 .history .img-list .img-item:hover .btnClose{display:block;}
