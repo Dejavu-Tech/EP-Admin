@@ -158,11 +158,7 @@ class UserController extends CommonController{
 			}
 		}
 
-
 		$this->group_list = $group_list;
-
-
-		//会员卡 $keys_card
 
 		$card_list = M('eaterplanet_ecommerce_member_card')->order('id asc')->select();
 		$keys_card = array();
