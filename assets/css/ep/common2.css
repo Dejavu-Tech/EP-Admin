@@ -1,6 +1,3 @@
-html,body {
-	font-family: 微软雅黑;
-}
 .checkbox input[type=checkbox],
 .checkbox-inline input[type=checkbox],
 .radio input[type=radio],
@@ -162,9 +159,6 @@ select.input-sm { line-height:18px; padding-top:0; padding-bottom: 0}
 
 .select2-container { float:left;}
 
-.form-horizontal .form-group::after {
-	clear:disabled;
-}
 table  tr td {
     position: relative;
     white-space: nowrap;
