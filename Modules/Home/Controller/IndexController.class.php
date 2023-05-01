@@ -350,7 +350,7 @@ class IndexController extends CommonController {
 
 		if( empty($seckill_bg_color) )
 		{
-			$seckill_bg_color = '#25d6e6';
+			$seckill_bg_color = '#ea404b';
 		}
 
 		if( empty($seckill_is_open) )
