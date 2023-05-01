@@ -1,4 +1,4 @@
-<div class="modal-dialog modal-dialog-centered btn-showcase">
+<div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">客户充值</h5>
@@ -29,8 +29,8 @@
                 <div class="tabs-container">
                     <div class="tabs">
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                            <li class="nav-item <?php if($type=='score'){ ?>active<?php } ?>"><a class="nav-link " data-toggle="tab" href="#tab-1" data-rechargetype="score" aria-expanded="true"> 充值积分</a></li>
-                            <li class="nav-item <?php if($type=='account_money'){ ?>active<?php } ?>"><a class="nav-link " data-toggle="tab" href="#tab-2"  data-rechargetype="account_money" aria-expanded="false"> 充值余额</a></li>
+                            <li class="nav-item <?php if($type=='score'){ ?>active show<?php } ?>"><a class="nav-link " data-toggle="tab" href="#tab-1" data-rechargetype="score" aria-expanded="true"> 充值积分</a></li>
+                            <li class="nav-item <?php if($type=='account_money'){ ?>active show<?php } ?>"><a class="nav-link " data-toggle="tab" href="#tab-2"  data-rechargetype="account_money" aria-expanded="false"> 充值余额</a></li>
                         </ul>
                         <div class="tab-content col-sm-12 border-top m-t-10">
                             <div id="tab-1" class="tab-pane <?php if($type=='score'){ ?>active<?php } ?>">
@@ -54,7 +54,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 control-label">变化</label>
                                 <div class="col-sm-9">
-                                    <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+                                    <div class="form-group m-checkbox-inline custom-radio-ml m-l-5 mb-0">
                                         <div class="radio radio-primary">
                                             <input id="radioinline" type='radio' name='changetype' value='0' checked title=" "/>
                                             <label class="mb-0" for="radioinline">增加</label>
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 control-label mustl">充值数目</label>
+                                <label class="col-sm-3 control-label mustl">充值金额</label>
                                 <div class="col-sm-9">
                                     <input type="text" name="num" class="form-control" value="" data-rule-number='true' data-rule-required='true' data-rule-min='0.01' />
                                 </div>
