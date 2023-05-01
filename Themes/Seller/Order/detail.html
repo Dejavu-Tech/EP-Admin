@@ -482,19 +482,19 @@
 													-已失效：整单退款的订单。<br />
 													<?php if(($item['order_status_id'] ==6 || $item['order_status_id'] ==11) ){ ?>
 													<?php if($order_status == 0 && $open_aftersale == 1){ ?>
-													-订单预计结算时间：<?php echo date("Y-m-d H:i:s",$order_settlement); ?>，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													-订单预计结算时间：<?php echo date("Y-m-d H:i:s",$order_settlement); ?>，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
 													<?php }else{ ?>
-													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
 													<?php } ?>
 													<?php }else{ ?>
 													<?php if($order_status == 2){ ?>
-													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
 													<?php }else{ ?>
 
 													<?php if($open_aftersale == 1){ ?>
-													-订单预计结算时间：订单 “确认收货” 后，预计<?php echo $open_aftersale_time; ?>天后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													-订单预计结算时间：订单 “确认收货” 后，预计<?php echo $open_aftersale_time; ?>天后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
 													<?php }else{ ?>
-													-订单预计结算时间：订单 “确认收货” 后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长佣金为已结算状态。
+													-订单预计结算时间：订单 “确认收货” 后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
 													<?php } ?>
 													<?php } ?>
 													<?php } ?>
@@ -634,7 +634,7 @@
 						<table class="table table-xs text-center" cellpadding="0" cellspacing="0" border="0" >
 							<thead>
 							<tr>
-								<th>兑换码</th>
+								<th>线上兑换码</th>
 								<th>状态</th>
 								<th>有效期</th>
 								<th>可兑换余额</th>
@@ -730,7 +730,7 @@
 										<th>规格/编号</th>
 										<th>基数</th>
 										<?php if(  $item['type'] != 'integral' ){ ?>
-										<th>团长佣金</th>
+										<th>团长提成</th>
 										<?php } ?>
 										<th>是否退款</th>
 										<?php if($item['delivery'] == 'hexiao'){ ?>
@@ -819,16 +819,16 @@
 											(<?php echo $vvv['level']; ?>级)
 											<br/>
 											<?php if($vvv['fen_type'] == 0){ ?>
-											分佣比例：<?php echo $vvv['bili']; ?>%
+											提成比例：<?php echo $vvv['bili']; ?>%
 											<?php }else{  ?>
-											固定团长分佣金额：<?php echo $vvv['bili']; ?>
+											固定团长提成金额：<?php echo $vvv['bili']; ?>
 											<?php } ?>
 											<?php }else{ ?>
 											<br/>
 											<?php if($vvv['fen_type'] == 0){ ?>
 											提成比例：<?php echo $vvv['bili']; ?>%
 											<?php }else{  ?>
-											固定团长分佣金额：<?php echo $vvv['bili']; ?>
+											固定团长提成金额：<?php echo $vvv['bili']; ?>
 											<?php } ?>
 											<?php } ?>
 											<?php } ?>
@@ -959,7 +959,7 @@
                                                     &nbsp;*&nbsp;数量：{$goods['quantity']}
                                         <?php } ?>
                                         =&nbsp;具体佣金：<?php echo $mb_val['money']; ?>元 &nbsp;-->
-										分销员：<span><?php echo $mb_val['username']; ?></span>（<?php echo $mb_val['level']; ?>级上线）
+										分销商：<span><?php echo $mb_val['username']; ?></span>（<?php echo $mb_val['level']; ?>级上线）
 										佣金比例：
 										<?php if($mb_val['type'] == 1){
 									$jishu = $goods['total'] -$goods['fullreduction_money']-$goods['voucher_credit']-$goods['has_refund_money'];
@@ -1052,7 +1052,7 @@ layui.use(['jquery', 'layer','form'], function(){
 
 
 	$('.tip_headcommiss').click(function(){
-		var s_str = '团长佣金结算状态： 待结算<br/>团长佣金结算金额：2.40<br/>佣金预计结算时间：2016-09-14 16:04:05  <br>结算说明：结算前商品退款会改变佣金计算情况，佣金结算后商品进行退款不改变佣金计算情况。';
+		var s_str = '团长提成结算状态： 待结算<br/>团长提成结算金额：2.40<br/>佣金预计结算时间：2016-09-14 16:04:05  <br>结算说明：结算前商品退款会改变佣金计算情况，佣金结算后商品进行退款不改变佣金计算情况。';
 
 		layer.tips( s_str ,this, {
 			tips:[1,'#000'],

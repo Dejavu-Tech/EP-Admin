@@ -93,7 +93,7 @@
 					<div class="row">
 						<div class="col-lg-6 main-header">
 							<h6 class="mb-0">当前位置 </h6>
-							<h2>团长佣金<span>提现设置</span></h2>
+							<h2>团长提成<span>提现设置</span></h2>
 						</div>
 					</div>
 				</div>
@@ -111,7 +111,7 @@
 												<input type="text" name="data[community_min_money]" class="form-control" value="<?php echo $data['community_min_money'];?>" required min="0.01" />
 												<div class="input-group-append"><span class="input-group-text">元</span></div>
 											</div>
-											<small>分销商的佣金达到此额度时才能提现,最低0.01元</small>
+											<small>团长提成达到此额度时才能提现,最低0.01元</small>
 										</div>
 									</div>
 									<div class="form-group row">
@@ -143,7 +143,7 @@
 										<label class="col-sm-2 col-form-label">提现方式设置</label>
 										<div class="col-sm-10">
 											<div class="checkbox checkbox-primary m-t-10 row"><input type="checkbox" name="data[head_commiss_tixianway_yuer]" value="2" <?php if( !isset($data['head_commiss_tixianway_yuer']) || ( isset($data['head_commiss_tixianway_yuer']) &&  $data['head_commiss_tixianway_yuer'] ==2) ){ ?> checked="checked" <?php } ?> title="" style="display: none"/> 系统余额（只能用于小程序消费）</div><br />
-											<div class="checkbox checkbox-primary m-t-10 row"><input type="checkbox" name="data[head_commiss_tixianway_weixin]" value="2" <?php if( !isset($data['head_commiss_tixianway_weixin']) || (isset($data['head_commiss_tixianway_weixin']) &&  $data['head_commiss_tixianway_weixin'] ==2) ){ ?> checked="checked" <?php } ?> title="" style="display: none"/> 微信零钱（需先开通企业付款接口，一般实时到账）</div><br />
+											<div class="checkbox checkbox-primary m-t-10 row"><input type="checkbox" name="data[head_commiss_tixianway_weixin]" value="2" <?php if( !isset($data['head_commiss_tixianway_weixin']) || (isset($data['head_commiss_tixianway_weixin']) &&  $data['head_commiss_tixianway_weixin'] ==2) ){ ?> checked="checked" <?php } ?> title="" style="display: none"/> 微信零钱（实时到账，需开通企业付款接口）</div><br />
 											<div class="checkbox checkbox-primary m-t-10 row"><input type="checkbox" name="data[head_commiss_tixianway_alipay]" value="2" <?php if( !isset($data['head_commiss_tixianway_alipay']) || (isset($data['head_commiss_tixianway_alipay']) &&  $data['head_commiss_tixianway_alipay'] ==2) ){ ?> checked="checked" <?php } ?> title="" style="display: none"/> 支付宝（手动）</div><br />
 											<div class="checkbox checkbox-primary m-t-10 row"><input type="checkbox" name="data[head_commiss_tixianway_bank]" value="2" <?php if( !isset($data['head_commiss_tixianway_bank']) || (isset($data['head_commiss_tixianway_bank']) &&  $data['head_commiss_tixianway_bank'] ==2 ) ){ ?> checked="checked" <?php } ?> title="" style="display: none"/> 银行卡（手动）</div>
 
