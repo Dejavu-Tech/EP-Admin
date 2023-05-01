@@ -105,7 +105,7 @@
 			<div class="row">
 				<div class="col-lg-6 main-header">
 					<h6 class="mb-0">当前位置</h6>
-					<h2><?php if(!empty($item['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?><span>商品</span> <?php if(!empty($item['id'])){ ?>修改<span>【{$item['goodsname']}】</span><?php } ?></h2>
+					<h2><?php if(!empty($item['id'])){ ?>编辑<?php }else{ ?>添加<span>商品</span> <?php } ?><?php if(!empty($item['id'])){ ?><span>【{$item['goodsname']}】</span><?php } ?></h2>
 				</div>
 			</div>
 		</div>
@@ -533,40 +533,7 @@
 												<small>用户历史累积最多可购买数，不填写或填写0表示不限购</small>
 											</div>
 										</div>
-										<!--
-										<?php if(empty($community_head_level) || count($community_head_level) ==1 || $is_head_takegoods ==0){ ?>
-										<div class="form-group row">
-											<label class="col-sm-2 col-form-label">启用独立团长提成</label>
-											<div class="col-sm-10">
-												<div class="checkbox checkbox-primary m-t-10" >
-												<input type="checkbox" id="is_community_head_commission" lay-skin="primary" value="1" name="is_community_head_commission" lay-filter="is_community_head_commission" <?php if( $item['is_community_head_commission']==1){ ?>checked<?php } ?> title="" style="display: none"/>
-												</div>
-												<small>勾选使用 商品独立团长提成 计算佣金，不勾选则使用 后台——“团长设置”中团长提成比例 计算佣金</small>
-											</div>
 
-										</div>
-										<div class="form-group row" id="head_commission_div2" <?php if( empty($item['is_community_head_commission'])){ ?>style="display:none"<?php } ?>>
-											<label class="col-sm-2 col-form-label">商品独立团长提成</label>
-											<?php if(!empty($community_money_type) && $community_money_type ==1 ){ ?>
-											<div class="col-sm-2">
-												<div class="input-group pill-input-group m-b-10" style="display: flex; float: left;">
-													<input class="input-group-prepend form-control form-control-price" style="border-top-right-radius: 0;border-bottom-right-radius: 0;" type="text" name="community_head_commission" id="community_head_commission" value="<?php if(empty($item)){ ?>{$communityhead_commission}<?php }else{ ?>{$item['community_head_commission']}<?php } ?>" />
-													<div class="input-group-append"><span class="input-group-text">%</span></div>
-												</div>
-											</div>
-											<label class="col-form-label">预计团长可得佣金¥<font ><?php if(isset($item['community_head_commission'])){ ?>{:round( $item['community_head_commission'] ,2) }<?php }else{ ?>0.00<?php } ?></font></label>
-											<?php }else{ ?>
-											<div class="col-sm-2">
-												<div class="input-group pill-input-group m-b-10" style="display: flex; float: left;">
-													<input class="input-group-prepend form-control form-control-price" style="border-top-right-radius: 0;border-bottom-right-radius: 0;" type="text" name="community_head_commission" id="community_head_commission" value="<?php if(empty($item)){ ?>{$communityhead_commission}<?php }else{ ?>{$item['community_head_commission']}<?php } ?>" />
-													<div class="input-group-append"><span class="input-group-text">%</span></div>
-												</div>
-											</div>
-											<label class="col-form-label">预计团长可得佣金¥<font id="precommiss_head_money_tip"><?php if(isset($item['community_head_commission'])){ ?><?php echo round( ($item['community_head_commission']*$item['price'])/100 ,2); ?><?php }else{ ?>0.00<?php } ?></font>根据商品最终的成交价格来计算佣金</label>
-											<?php } ?>
-										</div>
-										<?php } ?>
-                                        -->
 									    <?php if($supply_can_distribution_sale == 1){ ?>
 										<div class="form-group row">
 											<label class="col-sm-2 col-form-label">售卖团长</label>
@@ -594,7 +561,6 @@
 													<input type='checkbox' id="xinrenckbox" lay-filter="xinrenckbox" name="is_new_buy" class="checkone" lay-skin="primary"  <?php if(!empty($item) && $item['is_new_buy'] ==1 ){ ?>checked<?php } ?> value="1" style="display: none"/>
 												</div>
 												<small for="xinrenckbox">未付过款的用户专享。勾选后，只在首页新人专区可见</small>
-
 											</div>
 										</div>
 										<?php } ?>
@@ -604,7 +570,6 @@
 											<div class="col-sm-10">
 												<div class="checkbox checkbox-primary m-t-10">
 													<input type='checkbox' id="is_seckill" lay-filter="is_seckill" name="is_seckill" class="checkone" lay-skin="primary"  <?php if(!empty($item) && $item['is_seckill'] ==1 ){ ?>checked<?php } ?> value="1" style="display: none"/>
-
 												</div>
 												<small>后台整点秒杀功能需开启，勾选后，系统会自动调用该商品显示到“整点秒杀”模块中。在设置时间开始前整点设置好才会调用。</small>
 											</div>
@@ -943,7 +908,7 @@
 										<div class="checkbox checkbox-primary m-t-10" >
 											<input type="checkbox" id="is_community_head_commission" lay-skin="primary" value="1" name="is_community_head_commission" lay-filter="is_community_head_commission" <?php if( $item['is_community_head_commission']==1){ ?>checked<?php } ?> title="" style="display: none"/>
 										</div>
-										<small>勾选使用 商品独立团长提成 计算佣金，不勾选则使用 后台——“团长设置”中团长提成比例 计算佣金</small>
+										<small>勾选使用 商品独立团长提成 计算，不勾选则使用 后台——“团长设置”中团长提成比例 计算</small>
 									</div>
 
 								</div>
@@ -956,7 +921,7 @@
 										<div class="input-group-append"><span class="input-group-text">%</span></div>
 									</div>
 								</div>
-								<label class="col-form-label">预计团长可得佣金¥<font ><?php if(isset($item['community_head_commission'])){ ?>{:round( $item['community_head_commission'] ,2) }<?php }else{ ?>0.00<?php } ?></font></label>
+								<label class="col-form-label">预计团长可得提成¥<font ><?php if(isset($item['community_head_commission'])){ ?>{:round( $item['community_head_commission'] ,2) }<?php }else{ ?>0.00<?php } ?></font></label>
 								<?php }else{ ?>
 								<div class="col-sm-2">
 									<div class="input-group pill-input-group m-b-10" style="display: flex; float: left;">
@@ -964,7 +929,7 @@
 										<div class="input-group-append"><span class="input-group-text">%</span></div>
 									</div>
 								</div>
-								<label class="col-form-label">预计团长可得佣金¥<font id="precommiss_head_money_tip"><?php if(isset($item['community_head_commission'])){ ?><?php echo round( ($item['community_head_commission']*$item['price'])/100 ,2); ?><?php }else{ ?>0.00<?php } ?></font>根据商品最终的成交价格来计算佣金</label>
+								<label class="col-form-label">预计团长可得提成¥<font id="precommiss_head_money_tip"><?php if(isset($item['community_head_commission'])){ ?><?php echo round( ($item['community_head_commission']*$item['price'])/100 ,2); ?><?php }else{ ?>0.00<?php } ?></font>根据商品最终的成交价格来计算佣金</label>
 								<?php } ?>
 							</div>
 				<?php } ?>
