@@ -54,7 +54,7 @@ class InvitegiftController extends CommonController{
 			$invitation_limit_person = isset($_GPC['invitation_limit_person']) ? $_GPC['invitation_limit_person'] : 0;
 			//邀新有礼活动顶部背景图
 			$invite_activity_topback_img = isset($_GPC['invite_activity_topback_img']) ? $_GPC['invite_activity_topback_img'] : '';
-			//活动打开页面顶部背景图
+			//被邀请者打开页面顶部背景图
 			$invite_activity_open_topback_img = isset($_GPC['invite_activity_open_topback_img']) ? $_GPC['invite_activity_open_topback_img'] : '';
 			//活动积分/优惠卷使用规则
 			$invite_activity_use_rules = isset($_GPC['invite_activity_use_rules']) ? $_GPC['invite_activity_use_rules'] : '';
@@ -218,43 +218,16 @@ class InvitegiftController extends CommonController{
 	}
 
 	/**
-	 * @author cy 2021-03-09
-	 * @desc 邀新海报背景配置
+	 * @author Albert.Z 2023-04-10
+	 * @desc 邀新海报配置
 	 */
-	public function poster_background(){
+	public function poster_qrcode(){
 		if (IS_POST) {
 			$_GPC = I('request.');
 			$invite_poster_back_type = isset($_GPC['invite_poster_back_type']) ? $_GPC['invite_poster_back_type'] : 0;
 			$invite_poster_back_color = isset($_GPC['invite_poster_back_color']) ? $_GPC['invite_poster_back_color'] : '#ffffff';
 			$invite_poster_back_img = isset($_GPC['invite_poster_back_img']) ? $_GPC['invite_poster_back_img'] : '';
 
-			$parameter = array();
-			$parameter['invite_poster_back_type'] = $invite_poster_back_type;
-			$parameter['invite_poster_back_color'] = $invite_poster_back_color;
-			$parameter['invite_poster_back_img'] = $invite_poster_back_img;
-
-			D('Seller/Config')->update($parameter);
-			show_json(1,  array('url' => $_SERVER['HTTP_REFERER']) );
-			die();
-		}else{
-			$data = D('Seller/Config')->get_all_config();
-
-			$need_data = array();
-			$need_data['invite_poster_back_type'] = isset( $data['invite_poster_back_type'] ) ? $data['invite_poster_back_type']: 0;
-			$need_data['invite_poster_back_color'] = isset( $data['invite_poster_back_color'] ) ? $data['invite_poster_back_color']: '#ffffff';
-			$need_data['invite_poster_back_img'] = isset( $data['invite_poster_back_img'] ) ? $data['invite_poster_back_img']: '';
-			$this->data = $need_data;
-			$this->display();
-		}
-	}
-
-	/**
-	 * @author cy 2021-03-10
-	 * @desc 邀新海报二维码配置
-	 */
-	public function poster_qrcode(){
-		if (IS_POST) {
-			$_GPC = I('request.');
 			$invite_poster_qrcode_backcolor = isset($_GPC['invite_poster_qrcode_backcolor']) ? $_GPC['invite_poster_qrcode_backcolor'] : 0;
 			$invite_poster_qrcode_linecolor = isset($_GPC['invite_poster_qrcode_linecolor']) ? $_GPC['invite_poster_qrcode_linecolor'] : '';
 			$invite_poster_qrcode_corner_type = isset($_GPC['invite_poster_qrcode_corner_type']) ? $_GPC['invite_poster_qrcode_corner_type'] : '';
@@ -267,6 +240,10 @@ class InvitegiftController extends CommonController{
 			$invite_poster_qrcode_left = isset($_GPC['invite_poster_qrcode_left']) ? $_GPC['invite_poster_qrcode_left'] : '';
 
 			$parameter = array();
+			$parameter['invite_poster_back_type'] = $invite_poster_back_type;
+			$parameter['invite_poster_back_color'] = $invite_poster_back_color;
+			$parameter['invite_poster_back_img'] = $invite_poster_back_img;
+
 			$parameter['invite_poster_qrcode_img'] = empty($invite_poster_qrcode_img) ? '' : $invite_poster_qrcode_img;
 			$parameter['invite_poster_qrcode_backcolor'] = empty($invite_poster_qrcode_backcolor) ? '#323233' : $invite_poster_qrcode_backcolor;
 			$parameter['invite_poster_qrcode_linecolor'] = empty($invite_poster_qrcode_linecolor) ? '#323233' : $invite_poster_qrcode_linecolor;
@@ -320,6 +297,7 @@ class InvitegiftController extends CommonController{
 			$this->display();
 		}
 	}
+
 	/**
 	 * @author cy 2021-03-10
 	 * @desc 修改二维码背景色
@@ -366,8 +344,8 @@ class InvitegiftController extends CommonController{
 			$condition .= " and m.username like '%".$_GPC['keyword']."%' ";
 		}
 		$sql = 'SELECT distinct(r.user_id) as user_id,m.username,count(r.invitee_userid) as invite_count,m.share_status FROM '. C('DB_PREFIX'). "eaterplanet_ecommerce_invitegift_record r "
-			 . " left join ".C('DB_PREFIX')."eaterplanet_ecommerce_member m on r.user_id = m.member_id "
-			 . " where ". $condition . ' group by r.user_id ';
+			. " left join ".C('DB_PREFIX')."eaterplanet_ecommerce_member m on r.user_id = m.member_id "
+			. " where ". $condition . ' group by r.user_id ';
 		$query_sql = " select * from (".$sql.") as t order by invite_count desc limit ".(($pindex - 1) * $psize).",".$psize;
 		$list = M()->query($query_sql);
 
@@ -440,8 +418,8 @@ class InvitegiftController extends CommonController{
 			$condition .= " and m.username like '%".$keyword."%' ";
 		}
 		$sql = "select r.invitee_userid,m.username,r.addtime,r.invitee_status from ".C('DB_PREFIX')."eaterplanet_ecommerce_invitegift_record r "
-				. " left join ".C('DB_PREFIX')."eaterplanet_ecommerce_member m on r.invitee_userid=m.member_id "
-				. " where ".$condition;
+			. " left join ".C('DB_PREFIX')."eaterplanet_ecommerce_member m on r.invitee_userid=m.member_id "
+			. " where ".$condition;
 
 		$query_sql = $sql." order by r.addtime desc limit ".(($pindex - 1) * $psize).",".$psize;
 		$list = M()->query($query_sql);
