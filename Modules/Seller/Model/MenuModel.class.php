@@ -477,7 +477,6 @@ class MenuModel
                 'route' => 'user/index',
                 'items' => array(
                     array('title' => '客户列表', 'route' => 'user/index', 'desc' => ''),
-                    array('title' => '虚拟客户', 'route' => 'user/userjia', 'desc' => ''),
                     array('title' => '客户设置', 'route' => 'user/config', 'desc' => ''),
                     array('title' => '客户分组', 'route' => 'user/usergroup', 'desc' => ''),
                     array('title' => '客户等级', 'route' => 'user/userlevel', 'desc' => ''),
@@ -547,7 +546,6 @@ class MenuModel
                             array('title' => '关于我们', 'route' => 'copyright/about', 'desc' => ''),
                         )
                     ),
-                    //array('title' => '后台账户', 'route' => 'copyright/account', 'desc' => ''),
                 )
             ),
         );
