@@ -9,7 +9,7 @@
 <p align="center">
   <a href="http://wpa.qq.com/msgrd?v=3&uin=142997&site=qq&menu=yes"><img alt="Albert.Z" src="https://img.shields.io/badge/Author-Albert.Z-blue.svg"></a>
   <a href="https://github.com/Dejavu-Tech/EP-Admin/License"><img alt="GPL-v3协议" src="https://img.shields.io/badge/GPL-v3-red"></a>
-  <a href="https://github.com/Dejavu-Tech/EP-Admin/releases"><img alt="最新版本" src="https://img.shields.io/badge/version-5.2.1-brightgreen"></a>
+  <a href="https://github.com/Dejavu-Tech/EP-Admin/releases"><img alt="最新版本" src="https://img.shields.io/badge/version-5.3.0-brightgreen"></a>
   <a href="https://img.shields.io/github/stars/Dejavu-Tech/EP-Admin.svg?style=social&label=Stars"><img alt="笔芯" src="https://img.shields.io/github/stars/Dejavu-Tech/EP-Admin.svg?style=social&label=Stars"></a>
 
   <br/>
