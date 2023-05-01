@@ -95,14 +95,14 @@ class OrderV3Model {
         $yes_begin_time = $today_begin_time - 86400;
         $yes_end_time = $today_begin_time;
 
-        //1、今日新增会员
+        //1、今日新增客户
         $condition = " create_time >= {$today_begin_time} and create_time < {$today_end_time} ";
         $today_user_count = M('eaterplanet_ecommerce_member')->where($condition)->count();
 
-        //2、昨日新增会员
+        //2、昨日新增客户
         $yes_condition = " create_time >= {$yes_begin_time} and create_time < {$yes_end_time} ";
         $yes_user_count = M('eaterplanet_ecommerce_member')->where($yes_condition)->count();
-        //3、总会员数
+        //3、总客户数
         $total_user_count = M('eaterplanet_ecommerce_member')->count();
         //4、今日新增团长
         $condition_today_head = " addtime >= {$today_begin_time} and addtime < {$today_end_time} ";
@@ -155,7 +155,7 @@ class OrderV3Model {
      */
     public function getBusinessData()
     {
-        //1、团长总佣金
+        //1、团长总提成
         $head_commiss_money = M('eaterplanet_community_head_commiss_order')->where( array( 'state' => 1 ) )->sum('money');
 
         //2、今日利润 （今日利润：今日商城商品销量的全部金额       -     今日商城商品销量的全部成本金额     =     今日商品利润  ）

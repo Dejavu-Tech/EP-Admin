@@ -639,7 +639,7 @@ class PinModel extends Model{
 	}
 
 	/**
-	 * @desc 判断会员是否新人（新人指未付款过的客户）
+	 * @desc 判断客户是否新人（新人指未付款过的客户）
 	 * @param $member_id
 	 * @return int
 	 */
@@ -1032,7 +1032,7 @@ class PinModel extends Model{
 
 
 	/**
-		拼团成功后，给团长发放订单佣金到记录表
+		拼团成功后，给团长发放订单提成到记录表
 		拼团成功后，可以发送佣金
 		@param $member_id 团长的id
 	**/

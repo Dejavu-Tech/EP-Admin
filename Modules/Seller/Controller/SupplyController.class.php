@@ -415,7 +415,7 @@ class SupplyController extends CommonController {
 					array('title' => '运费', 'field' => 'shipping_fare', 'width' => 16),
 					array('title' => '包装费', 'field' => 'packing_fare', 'width' => 16),
 					array('title' => '配送员佣金', 'field' => 'shipping_money', 'width' => 16),
-					array('title' => '团长佣金', 'field' => 'head_commiss_money', 'width' => 16),
+					array('title' => '团长提成', 'field' => 'head_commiss_money', 'width' => 16),
 					array('title' => '服务费比例', 'field' => 'comunity_blili', 'width' => 16),
 					array('title' => '服务费金额', 'field' => 'fuwu_money', 'width' => 16),
 					array('title' => '实收金额', 'field' => 'money', 'width' => 16),

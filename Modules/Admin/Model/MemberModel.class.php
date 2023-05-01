@@ -195,7 +195,7 @@ class MemberModel{
 	}
 
 	/**
-		更新会员积分
+		更新客户积分
 	**/
 	public function sendMemberPointChange($member_id,$num, $changetype ,$remark ='',$type='system_add', $order_id =0 ,$order_goods_id = 0)
 	{

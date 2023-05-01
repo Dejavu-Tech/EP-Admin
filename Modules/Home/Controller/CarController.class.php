@@ -533,7 +533,7 @@ class CarController extends CommonController {
 			}
 		}
 
-        //1、判断是否开启审核，2、如果开启审核，判断会员状态是否审核
+        //1、判断是否开启审核，2、如果开启审核，判断客户状态是否审核
         $is_user_shenhe = D('Home/Front')->get_config_by_name('is_user_shenhe');
         //1
         if( isset($is_user_shenhe) && $is_user_shenhe == 1 )
@@ -541,7 +541,7 @@ class CarController extends CommonController {
             if( $member_info['is_apply_state'] != 1 )
             {
                 $json['code'] = 6;
-                $json['msg'] = '会员未审核不能购买';
+                $json['msg'] = '客户未审核不能购买';
                 echo json_encode( $json );
                 die();
             }
@@ -1707,7 +1707,7 @@ class CarController extends CommonController {
 		$need_data['is_member_level_buy'] = $is_member_level_buy;//当前客户折扣 购买，1是，0否
 		$need_data['level_save_money'] = $level_save_money;//客户折扣省的钱
 
-		$need_data['is_vip_card_member'] = $is_vip_card_member;//当前会员是否是 会员卡会员 0 不是，1是，2已过期
+		$need_data['is_vip_card_member'] = $is_vip_card_member;//当前客户是否是 会员卡会员 0 不是，1是，2已过期
 		$need_data['vipcard_save_money'] = $vipcard_save_money;//vip能节约的金额
 		$need_data['is_open_vipcard_buy'] = $is_open_vipcard_buy;//vip能节约的金额
 		$need_data['modify_vipcard_name'] = $modify_vipcard_name;

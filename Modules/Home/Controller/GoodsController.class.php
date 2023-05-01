@@ -1062,7 +1062,7 @@ class GoodsController extends CommonController {
 
 				if( $is_commu_sale )
 				{
-					//计算团长佣金
+					//计算团长提成
 					$head_commission_info = D('Home/Front')->get_goods_common_field($id , 'community_head_commission');
 
 					$head_level_arr = D('Seller/Communityhead')->get_goods_head_level_bili( $id );
@@ -1152,8 +1152,8 @@ class GoodsController extends CommonController {
 
 		$need_data['is_commiss_mb'] = $is_commiss_mb;//是否显示  客户分销 佣金 1 是，0否
 		$need_data['commiss_mb_money'] = $commiss_mb_money;// 客户分销佣金 是多少
-		$need_data['is_goods_head_mb'] = $is_goods_head_mb;// 是否团长 佣金， 1 是，0否
-		$need_data['goods_head_money'] = $goods_head_money;// 团长佣金 金额
+		$need_data['is_goods_head_mb'] = $is_goods_head_mb;// 是否团长 提成， 1 是，0否
+		$need_data['goods_head_money'] = $goods_head_money;// 团长提成 金额
 
 		/**
 		if(!empty($member_id) && $member_id > 0 && $goods[0]['type'] == 'integral')

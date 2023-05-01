@@ -105,7 +105,7 @@ class WeixinModel{
 			//余额支付的，退款到余额
 			//退款到余额
 
-			//增加会员余额
+			//增加客户余额
 			$refund_fee = $refund_fee / 100;
 
 			if( $refund_fee > 0 )
@@ -942,7 +942,7 @@ class WeixinModel{
 			$member_charge_flow_data['add_time'] = time();
 
 			M('member_charge_flow')->add($member_charge_flow_data);
-			//增加会员余额
+			//增加客户余额
 			M('member')->where( array('member_id'=> $order_info['member_id'] ) )->setInc('account_money',$order_info["total"] );
 
 
@@ -1120,7 +1120,7 @@ class WeixinModel{
 				$order_history['order_id'] = $order_id;
 				$order_history['order_status_id'] = 5;
 				$order_history['notify'] = 0;
-				$order_history['comment'] = '会员前台申请取消订单，取消成功，并退款。';
+				$order_history['comment'] = '客户前台申请取消订单，取消成功，并退款。';
 				$order_history['date_added'] = time();
 
 				M('eaterplanet_ecommerce_order_history')->add( $order_history );

@@ -1566,7 +1566,7 @@ class OrderController extends CommonController{
 				array('title' => '优惠券优惠', 'field' => 'voucher_credit', 'width' => 12, 'sort' => 0, 'is_check' => 0),
 				array('title' => '应收款(该笔订单总款)', 'field' => 'price', 'width' => 12, 'sort' => 0, 'is_check' => 0),
 				array('title' => '状态', 'field' => 'status', 'width' => 12, 'sort' => 0, 'is_check' => 0),
-				array('title' => '团长佣金', 'field' => 'head_money', 'width' => 12, 'sort' => 0, 'is_check' => 0),
+				array('title' => '团长提成', 'field' => 'head_money', 'width' => 12, 'sort' => 0, 'is_check' => 0),
 				array('title' => '客户佣金', 'field' => 'member_commissmoney', 'width' => 12, 'sort' => 0, 'is_check' => 0),
 				array('title' => '付款时间', 'field' => 'paytime', 'width' => 24, 'sort' => 0, 'is_check' => 0),
 				array('title' => '发货时间', 'field' => 'sendtime', 'width' => 24, 'sort' => 0, 'is_check' => 0),

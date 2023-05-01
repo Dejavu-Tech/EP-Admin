@@ -1838,7 +1838,7 @@ class ReportsController extends CommonController{
 						array('title' => '提现到帐佣金(元)', 'field' => 'getmoney', 'width' => 32),
 				);
 
-				$title = '团长佣金金额统计';
+				$title = '团长提成金额统计';
 
 				D('Seller/Excel')->export($data, array('title' => $title, 'columns' => $columns));
 

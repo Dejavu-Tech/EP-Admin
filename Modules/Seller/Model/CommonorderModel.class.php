@@ -342,11 +342,11 @@ class CommonorderModel{
 		//---  以下需要计算了 refundorder
 		$refund_data['back_score_for_money'] = 0;//退还积分兑换商品的积分 orderbuy
 		$refund_data['back_send_score'] = 0; //退还赠送积分 goodsbuy
-		$refund_data['back_head_orderbuycommiss'] = 0; //退还团长佣金
+		$refund_data['back_head_orderbuycommiss'] = 0; //退还团长提成
 		$refund_data['back_head_supplycommiss'] = 0; //退还商户佣金
-		$refund_data['back_head_commiss_1'] = 0; //退1级团长佣金
-		$refund_data['back_head_commiss_2'] = 0; //退2级团长佣金
-		$refund_data['back_head_commiss_3'] = 0; //退3级团长佣金
+		$refund_data['back_head_commiss_1'] = 0; //退1级团长提成
+		$refund_data['back_head_commiss_2'] = 0; //退2级团长提成
+		$refund_data['back_head_commiss_3'] = 0; //退3级团长提成
 		$refund_data['back_member_commiss_1'] = 0; //退客户1级佣金
 		$refund_data['back_member_commiss_2'] = 0; //退客户2级佣金
 		$refund_data['back_member_commiss_3'] = 0; //退客户3级佣金
@@ -409,7 +409,7 @@ class CommonorderModel{
 
 			}
 
-			//$refund_data['back_head_orderbuycommiss'] = 0; //退还团长佣金
+			//$refund_data['back_head_orderbuycommiss'] = 0; //退还团长提成
 
 			$head_commisslist = M('eaterplanet_community_head_commiss_order')->where( " type in ('orderbuy','commiss') and order_id={$order_id} and order_goods_id={$order_goods_id} and state=0 " )->select();
 

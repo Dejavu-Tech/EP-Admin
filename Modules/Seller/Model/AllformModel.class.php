@@ -141,7 +141,7 @@ class AllformModel{
 	public function getDataList($gpc){
 		$page =  isset($gpc['page']) ? intval($gpc['page']) : 1;
 		$page_size = 10;
-		//会员昵称
+		//客户昵称
 		$keyword = $gpc['keyword'];
 		//表单id
 		$id = $gpc['id'];
