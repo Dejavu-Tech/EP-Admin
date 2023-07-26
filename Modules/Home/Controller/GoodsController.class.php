@@ -480,114 +480,84 @@ class GoodsController extends CommonController {
 	}
 
 	public function doPageUpload(){
+		$uptypes = array('image/jpg', 'image/jpeg', 'image/png', 'image/pjpeg', 'image/gif', 'image/bmp', 'image/x-png');
+        	$max_file_size = 10000000; //上传文件大小限制, 单位BYTE
+		$send_path = "Uploads/image/goods/".date('Y-m-d')."/";
+		$send_path_re = "goods/".date('Y-m-d')."/";
+        	$destination_folder = ROOT_PATH.$send_path; //上传文件路径 
+
+        	$result = array();
+        	$result['code'] = 1;
+		
+		RecursiveMkdir($destination_folder);
+
+	        //fileinfo 检测begin
+	        $fip = finfo_open(FILEINFO_MIME_TYPE);
+	        $min_result = finfo_file($fip , $_FILES['upfile']['tmp_name']);
+	        fclose( $fip );
+	        $min_type_arr = array();
+	        $min_type_arr[] = 'image/jpeg';
+	        $min_type_arr[] = 'image/gif';
+	        $min_type_arr[] = 'image/jpg';
+	        $min_type_arr[] = 'image/png';
+	        $min_type_arr[] = 'video/mp4';
 
 
-        $result = array();
-        $result['code'] = 1;
-        $data = file_get_contents("php://input");
-        $dir = I('get.dir','goods');
-        $type = I('get.type');
-        $name = I('get.name');
-        $max_file_size = 10485760;
+	        if( !in_array($min_result , $min_type_arr ) )
+	        {
+	            die();
+	        }
+	        //fileinfo 检测end
 
-        $image_dir = ROOT_PATH.'Uploads/image/'.$dir;
-        $image_dir .= '/'.date('Y-m-d').'/';
+	        if (!is_uploaded_file($_FILES["upfile"]['tmp_name']))
+	        //是否存在文件
+	        {
+	        	$result['msg'] = "图片不存在!";
+	            echo json_encode($result);
+	            exit;
+	        }
+	        $file = $_FILES["upfile"];
+	        if ($max_file_size < $file["size"])
+	        //检查文件大小
+	        {
+	            $result['msg'] = "文件太大!";
+	            echo json_encode($result);
+	            exit;
+	        }
+	        if (!in_array($file["type"], $uptypes))
+	        //检查文件类型
+	        {
+	        	$result['msg'] = "文件类型不符!" . $file["type"];
+	            echo json_encode($result);
+	            exit;
+	        }
+		
+        
+	        $filename = $file["tmp_name"];
+	        $pinfo = pathinfo($file["name"]);
+	        $ftype = $pinfo['extension'];
+		
+		$file_name = str_shuffle(time() . rand(111111, 999999)) . "." . $ftype;
+	        $destination = $destination_folder . $file_name;
+        
+	        if (!move_uploaded_file($filename, $destination)) {
+	            $result['msg'] = "移动文件出错!";
+	            echo json_encode($result);
+	            exit;
+	        }
+	        $pinfo = pathinfo($destination);
+	        $fname = $pinfo['basename'];
 
-        $file_path = C('SITE_URL').'/Uploads/image/'.$dir.'/'.date('Y-m-d').'/';
-        $kufile_path = $dir.'/'.date('Y-m-d').'/';
-
-        RecursiveMkdir($image_dir);
-        $file_name = md5($name.time()).'.png';
-
-        switch($type)
-        {
-            case 'image/jpg':
-                $file_name = md5($name.time()).'.jpg';
-                break;
-            case 'image/jpeg':
-                $file_name = md5($name.time()).'.jpeg';
-                break;
-            case 'image/png':
-                $file_name = md5($name.time()).'.png';
-                break;
-            case 'image/gif':
-                $file_name = md5($name.time()).'.gif';
-                break;
-            case 'video/mp4':
-                $file_name = md5($name.time()).'.mp4';
-                break;
-        }
-
-        $thumb_arr = explode('.',$file_name);
-        $thumb_image_name = $thumb_arr[0].'_thumb.'.$thumb_arr[1];
-
-        file_put_contents($image_dir.$file_name, $data);
-
-        //fileinfo 检测begin
-        $fip = finfo_open(FILEINFO_MIME_TYPE);
-        $min_result = finfo_file($fip , $_FILES['upfile']['tmp_name']);
-        fclose( $fip );
-        $min_type_arr = array();
-        $min_type_arr[] = 'image/jpeg';
-        $min_type_arr[] = 'image/gif';
-        $min_type_arr[] = 'image/jpg';
-        $min_type_arr[] = 'image/png';
-        $min_type_arr[] = 'video/mp4';
-
-        if( !in_array($min_result , $min_type_arr ) )
-        {
-            die();
-        }
-        //fileinfo 检测end
-
-        $image = new \Think\Image();
-        $image->open($image_dir.$file_name);
-        //按照原图的比例生成一个最大为200*200的缩略图并保存为thumb.jpg, 实际会按比例自动缩放
-        $image->thumb(200, 200)->save($image_dir.$thumb_image_name);
-
-        if (!is_uploaded_file($_FILES["upfile"]['tmp_name']))
-        //是否存在文件
-        {
-        	$result['msg'] = "图片不存在!";
-            echo json_encode($result);
-            exit;
-        }
-        $file = $_FILES["upfile"];
-        if ($max_file_size < $file["size"])
-        //检查文件大小
-        {
-            $result['msg'] = "文件太大!";
-            echo json_encode($result);
-            exit;
-        }
-        if (!in_array($file["type"], $min_type_arr))
-        //检查文件类型
-        {
-        	$result['msg'] = "文件类型不符!" . $file["type"];
-            echo json_encode($result);
-            exit;
-        }
-
-
-        $filename = $file["tmp_name"];
-        $pinfo = pathinfo($file["name"]);
-        $ftype = $pinfo['extension'];
-        $destination = $image_dir . $file_name;
-
-        if (!move_uploaded_file($filename, $destination)) {
-            $result['msg'] = "移动文件出错!";
-            echo json_encode($result);
-            exit;
-        }
-        $pinfo = pathinfo($destination);
-        $fname = $pinfo['basename'];
-
-		//6956182894169131.png
-
-        $result = array('filePath' =>$file_path ,'kufile_path' => $kufile_path,'fileName' => $file_name);
-
-        echo json_encode($result);
-        die();
+	
+		$thumb = resize($send_path_re.$file_name,  200,200);	
+		
+		$image_thumb = $thumb ;
+		$image_o = $send_path.$file_name;	
+		
+		$url = D('Home/Front')->get_config_by_name('shop_domain').'/';
+		
+		echo json_encode( array('code' => 0,'image_thumb' =>$url.$image_thumb, 'image_o' => $url.$image_o , 'image_o_full' => $url.tomedia($send_path_re.$file_name) ) );
+		die();
 	}
 
 
