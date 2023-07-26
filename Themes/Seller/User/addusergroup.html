@@ -1,24 +1,25 @@
 <div class="modal-dialog modal-dialog-centered btn-showcase">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title"><?php if(!empty($group['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>客户分组</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        </div>
-        <div class="modal-body">
-            <form action="{:U('user/addusergroup')}" method="post" class="form-horizontal form-validate" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="{$group['id']}" />
-                <div class="form-row">
-                    <label class="col-sm-3 col-form-label must">分组名称</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="groupname" class="form-control" value="{$group['groupname']}" data-rule-required="true" />
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary btn-order" type="submit">提交</button>
-            <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
-        </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"><?php if (!empty($group['id'])) { ?>编辑<?php } else { ?>添加<?php } ?>客户分组</h5>
+      <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+      </button>
     </div>
+    <div class="modal-body">
+      <form action="{:U('user/addusergroup')}" class="form-horizontal form-validate" enctype="multipart/form-data" method="post">
+        <input name="id" type="hidden" value="{$group['id']}"/>
+        <div class="form-row">
+          <label class="col-sm-3 col-form-label must">分组名称</label>
+          <div class="col-sm-9">
+            <input class="form-control" data-rule-required="true" name="groupname" type="text" value="{$group['groupname']}"/>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary btn-order" type="submit">提交</button>
+      <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+    </div>
+  </div>
 </div>
 

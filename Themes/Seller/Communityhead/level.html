@@ -1,64 +1,69 @@
- {template '_header'}
- <div class="page-header">
-     当前位置：<span class="text-primary">分销商等级</span>
+{template '_header'}
+<div class="page-header">
+  当前位置：<span class="text-primary">分销商等级</span>
 </div>
- <div class="page-content">
-     <div class="page-toolbar">
+<div class="page-content">
+  <div class="page-toolbar">
          <span class='pull-right'>
             <a class='btn btn-primary btn-sm' data-toggle='ajaxModal' href="{:U('distribution/addlevel')}"><i class="fa fa-plus"></i> 添加新等级</a>
 		 </span>
-     </div>
-   <div class='alert alert-primary'>
+  </div>
+  <div class='alert alert-primary'>
     提示: 没有设置等级的分销商将按默认设置计算提成。商品指定的佣金金额的优先级仍是最高的，也就是说只要商品指定了佣金金额就按商品的佣金金额来计算，不受等级影响
-</div>
-            <table class="table table-responsive table-hover">
-                <thead>
-                    <tr>
-                        <th>等级名称</th>
-                        <?php if($data['commiss_level']>=1){ ?><th>一级佣金比例</th><?php } ?>
-                        <?php if($data['commiss_level']>=2){ ?><th>二级佣金比例</th><?php } ?>
-                        <?php if($data['commiss_level']>=3){ ?><th>三级佣金比例</th><?php } ?>
-                        <th>升级条件</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach( $list as $row ){ ?>
-                    <tr <?php if($row['id']=='default'){ ?>style='background:#f2f2f2'<?php } ?>>
-                        <td>{$row['levelname']}<?php if($row['id']=='default'){ ?>【默认等级】<?php } ?></td>
-                        <?php if($data['commiss_level']>=1){ ?><td>{php echo number_format((float)$row['commission1'],2)}%</td><?php } ?>
-                         <?php if($data['commiss_level']>=2){ ?><td>{php echo number_format((float)$row['commission2'],2)}%</td><?php } ?>
-                          <?php if($data['commiss_level']>=3){ ?><td>{php echo number_format((float)$row['commission3'],2)}%</td><?php } ?>
-                          <td>	<?php if($row['id']!='default'){ ?>
-								<?php if($row['ordermoney']>0){ ?>分销订单金额满 {$row['ordermoney']} 元 <?php }else{ ?>不自动升级<?php } ?>
-							<?php }else{ ?>
-							默认等级
-							<?php } ?>
-                          </td>
-                        <td>
-                            <a class='btn btn-pill btn-primary btn-sm btn-op btn-operation' data-toggle='ajaxModal'  href="{:U('distribution/editlevel', array('id' => $row['id']))}">
-                                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">
+  </div>
+  <table class="table table-responsive table-hover">
+    <thead>
+    <tr>
+      <th>等级名称</th>
+        <?php if ($data['commiss_level'] >= 1) { ?>
+          <th>一级佣金比例</th>
+        <?php } ?>
+        <?php if ($data['commiss_level'] >= 2) { ?>
+          <th>二级佣金比例</th>
+        <?php } ?>
+        <?php if ($data['commiss_level'] >= 3) { ?>
+          <th>三级佣金比例</th>
+        <?php } ?>
+      <th>升级条件</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($list as $row) { ?>
+      <tr
+          <?php if ($row['id'] == 'default'){ ?>style='background:#f2f2f2'<?php } ?>>
+        <td>{$row['levelname']}<?php if ($row['id'] == 'default') { ?>【默认等级】<?php } ?></td>
+          <?php if ($data['commiss_level'] >= 1) { ?>
+            <td>{php echo number_format((float)$row['commission1'],2)}%</td>
+          <?php } ?>
+          <?php if ($data['commiss_level'] >= 2) { ?>
+            <td>{php echo number_format((float)$row['commission2'],2)}%</td>
+          <?php } ?>
+          <?php if ($data['commiss_level'] >= 3) { ?>
+            <td>{php echo number_format((float)$row['commission3'],2)}%</td>
+          <?php } ?>
+        <td>  <?php if ($row['id'] != 'default') { ?><?php if ($row['ordermoney'] > 0) { ?>分销订单金额满 {$row['ordermoney']} 元 <?php } else { ?>不自动升级<?php } ?><?php } else { ?>
+            默认等级
+            <?php } ?>
+        </td>
+        <td>
+          <a class='btn btn-pill btn-primary btn-sm btn-op btn-operation' data-toggle='ajaxModal' href="{:U('distribution/editlevel', array('id' => $row['id']))}">
+                                <span data-original-title="编辑" data-placement="top" data-toggle="tooltip" title="">
 
                                     <i class='icow icow-bianji2'></i>
 
-                               </span>
-                            </a>
-                            <?php if($row['id']!='default'){ ?>
-								<a class='btn btn-pill btn-primary btn-sm btn-op btn-operation' data-toggle='ajaxRemove'  href="{:U('distribution/deletelevel', array('id' => $row['id']))}" data-confirm="确认删除此等级吗？">
-                                    <span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
+                               </span> </a>
+            <?php if ($row['id'] != 'default'){ ?>
+          <a class='btn btn-pill btn-primary btn-sm btn-op btn-operation' data-confirm="确认删除此等级吗？" data-toggle='ajaxRemove' href="{:U('distribution/deletelevel', array('id' => $row['id']))}">
+                                    <span data-original-title="删除" data-placement="top" data-toggle="tooltip" title="">
                                     <i class='icow icow-shanchu1'></i>
-                               </span>
-                                </a>
-							</td>
-
-						<?php } ?>
-
-                    </tr>
-                    <?php } ?>
-
-                </tbody>
-            </table>
- </div>
- {template '_footer'}
+                               </span> </a>
+        </td>
+      <?php } ?>
+      </tr>
+    <?php } ?>
+    </tbody>
+  </table>
+</div>{template '_footer'}
 
 

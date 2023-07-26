@@ -1,101 +1,99 @@
 <div class="modal-dialog modal-dialog-centered btn-showcase" id="goods-selector-opmodal-{$goods['id']}">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">商品设置选项</h5>
-            <button data-dismiss="modal" class="close hasoption-close" type="button">×</button>
-        </div>
-        <div class="modal-body">
-            <div class="alert alert-danger hide" id="ophtml"></div>
-            <table class="table" style="width:100%;margin-top: 10px">
-                <thead>
-                <tr>
-                    <th><?php if(empty($options)){ ?>商品<?php }else{ ?>规格<?php } ?>名称</th>
-                    <th>原价</th>
-                    <th>库存</th>
-                    <?php foreach($column as $colk => $col){ ?>
-                    <th style="width:100px;">
-                        {$col['title']}
-                    </th>
-                    <?php } ?>
-                    <?php if(!empty($options)){ ?>
-                    <th style="width:100px;">
-                       全选 <input type="checkbox">
-                    </th>
-                    <?php } ?>
-                </tr>
-                </thead>
-                <tbody id="param-items" class="ui-sortable">
-                <!--没有规格-->
-                <?php if(empty($options)){ ?>
-                    <tr class="multi-product-item goods-item">
-                        <td>{$goods['title']}</td>
-                        <td>&yen;{$goods['marketprice']}</td>
-                        <td>{$goods['total']}</td>
-                        <?php foreach( $column as $colk => $col){ ?>
-                        <td>
-                            <input name="{$col['name']}" type="{$col['type']}" class="form-control" value="{$col['default']}" max="{$col['max']}" min="{$col['min']}">
-                        </td>
-                        <?php } ?>
-                    </tr>
-                <?php }else{ ?>
-                <!--有规格-->
-                <?php foreach($options as  $ok => $option){ ?>
-                <tr class="multi-product-item goods-item">
-                    <td>{$option['title']}</td>
-                    <td>&yen;{$option['marketprice']}</td>
-                    <td>{$option['stock']}</td>
-                    <?php foreach($column as $colk =>  $col){ ?>
-                    <td>
-                        <input name="{$col['name']}" type="{$col['type']}" class="form-control" value="{$col['default']}" max="{$col['max']}" min="{$col['min']}">
-                    </td>
-                    <?php } ?>
-                    <td>
-                        <input type="checkbox" class="form-control option-item" value="{$option['id']}" data-price="{$option['marketprice']}">
-                    </td>
-                </tr>
-                <?php } ?>
-                <?php } ?>
-                </tbody>
-            </table>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary goods-selector-op-<?php if(empty($options)){ ?>goods<?php }else{ ?>option<?php } ?>" type="button" id="option_submit" data-id="{$id}" data-dismiss="modal">确认</button>
-            <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
-        </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">商品设置选项</h5>
+      <button class="close hasoption-close" data-dismiss="modal" type="button">×</button>
     </div>
-
+    <div class="modal-body">
+      <div class="alert alert-danger hide" id="ophtml"></div>
+      <table class="table" style="width:100%;margin-top: 10px">
+        <thead>
+        <tr>
+          <th><?php if (empty($options)) { ?>商品<?php } else { ?>规格<?php } ?>名称</th>
+          <th>原价</th>
+          <th>库存</th>
+            <?php foreach ($column as $colk => $col) { ?>
+              <th style="width:100px;">
+                {$col['title']}
+              </th>
+            <?php } ?>
+            <?php if (!empty($options)) { ?>
+              <th style="width:100px;">
+                全选 <input type="checkbox">
+              </th>
+            <?php } ?>
+        </tr>
+        </thead>
+        <tbody class="ui-sortable" id="param-items">
+        <!--没有规格-->
+        <?php if (empty($options)) { ?>
+          <tr class="multi-product-item goods-item">
+            <td>{$goods['title']}</td>
+            <td>&yen;{$goods['marketprice']}</td>
+            <td>{$goods['total']}</td>
+              <?php foreach ($column as $colk => $col) { ?>
+                <td>
+                  <input class="form-control" max="{$col['max']}" min="{$col['min']}" name="{$col['name']}" type="{$col['type']}" value="{$col['default']}">
+                </td>
+              <?php } ?>
+          </tr>
+        <?php } else { ?>
+          <!--有规格-->
+            <?php foreach ($options as $ok => $option) { ?>
+            <tr class="multi-product-item goods-item">
+              <td>{$option['title']}</td>
+              <td>&yen;{$option['marketprice']}</td>
+              <td>{$option['stock']}</td>
+                <?php foreach ($column as $colk => $col) { ?>
+                  <td>
+                    <input class="form-control" max="{$col['max']}" min="{$col['min']}" name="{$col['name']}" type="{$col['type']}" value="{$col['default']}">
+                  </td>
+                <?php } ?>
+              <td>
+                <input class="form-control option-item" data-price="{$option['marketprice']}" type="checkbox" value="{$option['id']}">
+              </td>
+            </tr>
+            <?php } ?><?php } ?>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary goods-selector-op-<?php if (empty($options)) { ?>goods<?php } else { ?>option<?php } ?>" data-dismiss="modal" data-id="{$id}" id="option_submit" type="button">确认
+      </button>
+      <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+    </div>
+  </div>
 </div>
-
 <script>
     //规格选项状态渲染
     $(function () {
         var goodsid = {$goods['id']};
         var goods = model.selectedPool[goodsid];
         var htm = $(model.ele).find('.op-html').html();
-        if (htm){
+        if (htm) {
             $('#ophtml').html(htm);
             $('#ophtml').removeClass('hide');
         }
 
 //        如果有规格
-        if (goods.options != undefined && model.option_switch == 1){
-            $.each(goods.options,function (i, v) {
+        if (goods.options != undefined && model.option_switch == 1) {
+            $.each(goods.options, function (i, v) {
                 var id = v.id;
                 //渲染勾选
-                var p = $('.option-item[value="'+id+'"]').attr('checked',true);
+                var p = $('.option-item[value="' + id + '"]').attr('checked', true);
                 //渲染字段
                 var column = v.column;
                 if (column != undefined)
-                    $.each(column,function (colname,colvalue) {
-                        $('.option-item[value="'+id+'"]').parent().parent().find('input[name="'+colname+'"]').val(colvalue);
+                    $.each(column, function (colname, colvalue) {
+                        $('.option-item[value="' + id + '"]').parent().parent().find('input[name="' + colname + '"]').val(colvalue);
                     });
             });
-        }else{
+        } else {
 //            没有规格
             var column = goods.column;
             if (column != undefined)
-                $.each(column,function (colname,colvalue) {
-                    $('#goods-selector-opmodal-'+goodsid).find('input[name="'+colname+'"]').val(colvalue);
+                $.each(column, function (colname, colvalue) {
+                    $('#goods-selector-opmodal-' + goodsid).find('input[name="' + colname + '"]').val(colvalue);
                 });
         }
 

@@ -1,120 +1,105 @@
 {template '_header'}
 <div class="page-header">
-    当前位置：<span class="text-primary">退货原因管理</span>
+  当前位置：<span class="text-primary">退货原因管理</span>
 </div>
 <div class="page-content">
-
-    <form action="" method="get" class="form-horizontal form-search" role="form">
-        <input type="hidden" name="c" value="order" />
-        <input type="hidden" name="a" value="orderreturngoods" />
-        <div class="page-toolbar">
-             <div class="col-sm-4">
-                <div class="input-group">
-                      <input type="text" class="input-sm form-control" name='keyword' value="{$_GPC['keyword']}" placeholder="请输入关键词">
-                      <div class="input-group-append">
-<button class="btn btn-primary" type="submit"> 搜索</button>
-</div>
-                </div>
-            </div>
+  <form action="" class="form-horizontal form-search" method="get" role="form">
+    <input name="c" type="hidden" value="order"/> <input name="a" type="hidden" value="orderreturngoods"/>
+    <div class="page-toolbar">
+      <div class="col-sm-4">
+        <div class="input-group">
+          <input class="input-sm form-control" name='keyword' placeholder="请输入关键词" type="text" value="{$_GPC['keyword']}">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="submit"> 搜索</button>
+          </div>
         </div>
-    </form>
-    <form action="" method="post" >
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="page-table-header">
-                    <input type='checkbox' />
-					<span class="pull-right">
-						<a data-toggle="ajaxModal" href="{:U('order/addorderreturngoods')}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> 添加原因</a>
+      </div>
+    </div>
+  </form>
+  <form action="" method="post">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-table-header">
+          <input type='checkbox'/> <span class="pull-right">
+						<a class="btn btn-primary btn-xs" data-toggle="ajaxModal" href="{:U('order/addorderreturngoods')}"><i class="fa fa-plus"></i> 添加原因</a>
 					</span>
-                    <div class="btn-group">
-						<button class="btn btn-pill btn-primary btn-sm  btn-operation" type="button" data-toggle='batch' data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>1))}">
-                            <i class='icow icow-shangjia2'></i> 启用
-                        </button>
-                        <button class="btn btn-pill btn-primary btn-sm  btn-operation" type="button" data-toggle='batch'  data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>0))}">
-                            <i class='icow icow-xiajia3'></i> 停用
-                        </button>
-                        <button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除?" data-href="{:U('order/delorderreturngoods')}">
-                            <i class="icow icow-shanchu1"></i>删除
-						</button>
-                    </div>
-                </div>
-                <table class="table table-responsive">
-                    <thead>
-                    <tr>
-                        <th></th>
-                        <th>原因类型</th>
-						<th>排序</th>
-						<th>是否启用</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach( $list as $row ){ ?>
-                    <tr>
-                        <td>
-                            <input type='checkbox' value="{$row['id']}"/>
-                        </td>
-                        <td>{$row['title']}</td>
-						<td>
-							{$row['sortby']}
-						</td>
-						<td>
-							<span class='label a <?php if($row['state']==1){ ?>label-primary<?php }else{ ?>label-default<?php } ?>'
-                          data-toggle='ajaxSwitch'
-                          data-confirm = "确认是<?php if($row['state']==1){ ?>禁用<?php }else{ ?>启用<?php } ?>？"
-                          data-switch-refresh='false'
-                          data-switch-value='{$row['state']}'
-                          data-switch-value0='0|禁用|label label-default|{:U('order/changeorderreturngoods',array('type'=>'state','value'=>1,'id'=>$row['id']))}'
-                          data-switch-value1='1|启用|label label-success|{:U('order/changeorderreturngoods',array('type'=>'state','value'=>0,'id'=>$row['id']))}'
-                          >
-                          <?php if($row['state']==1){ ?>启用<?php }else{ ?>禁用<?php } ?>
-						</span>
-						</td>
-                        <td style="text-align: center;">
-
-                            <a data-toggle="ajaxModal" href="{:U('order/addorderreturngoods', array('id' => $row['id']))}" class="btn btn-pill btn-primary btn-sm btn-operation btn-op">
-                                 <span data-toggle="tooltip" data-placement="top" title="" data-original-title="  修改">
-                                     <i class="icow icow-bianji2"></i>编辑
-                                </span>
-                            </a>
-                            <a data-toggle='ajaxRemove' href="{:U('order/delorderreturngoods', array('id' => $row['id']))}"class="btn btn-pill btn-primary btn-sm btn-operation btn-op" data-confirm='确认要删除此快递吗?'>
-                                    <span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
-                                     <i class="icow icow-shanchu1"></i>删除
-                                </span>
-                            </a>
-
-                        </td>
-                    </tr>
-                    <?php } ?>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <td colspan="2">
-                            <input type="checkbox">
-                            <div class="btn-group">
-                                <button class="btn btn-pill btn-primary btn-sm  btn-operation" type="button" data-toggle='batch' data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>1))}">
-									<i class='icow icow-shangjia2'></i> 启用
-								</button>
-								<button class="btn btn-pill btn-primary btn-sm  btn-operation" type="button" data-toggle='batch'  data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>0))}">
-									<i class='icow icow-xiajia3'></i> 停用
-								</button>
-								<button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除?" data-href="{:U('order/delorderreturngoods')}">
-									<i class="icow icow-shanchu1"></i>删除
-								</button>
-                            </div>
-                        </td>
-                        <td colspan="3" style="text-align: right">
-                            {$pager}
-                        </td>
-                    </tr>
-                    </tfoot>
-                </table>
-            </div>
+          <div class="btn-group">
+            <button class="btn btn-pill btn-primary btn-sm  btn-operation" data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>1))}" data-toggle='batch' type="button">
+              <i class='icow icow-shangjia2'></i> 启用
+            </button>
+            <button class="btn btn-pill btn-primary btn-sm  btn-operation" data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>0))}" data-toggle='batch' type="button">
+              <i class='icow icow-xiajia3'></i> 停用
+            </button>
+            <button class="btn btn-pill btn-primary btn-sm btn-operation" data-confirm="确认要删除?" data-href="{:U('order/delorderreturngoods')}" data-toggle='batch-remove' type="button">
+              <i class="icow icow-shanchu1"></i>删除
+            </button>
+          </div>
         </div>
-
-    </form>
-</div>
-
-{template '_footer'}
+        <table class="table table-responsive">
+          <thead>
+          <tr>
+            <th></th>
+            <th>原因类型</th>
+            <th>排序</th>
+            <th>是否启用</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <?php foreach ($list as $row) { ?>
+            <tr>
+              <td>
+                <input type='checkbox' value="{$row['id']}"/>
+              </td>
+              <td>{$row['title']}</td>
+              <td>
+                {$row['sortby']}
+              </td>
+              <td>
+              <span class='label a <?php if ($row[' state'] == 1) { ?>label-primary<?php } else { ?>label-default<?php } ?>' data-toggle='ajaxSwitch' data-confirm="确认是<?php if ($row['state'] == 1) { ?>禁用<?php } else { ?>启用<?php } ?>？"
+                    data-switch-refresh='false' data-switch-value='{$row['
+                    state']}'
+                data-switch-value0='0|禁用|label label-default|{:U('order/changeorderreturngoods',array('type'=>'state','value'=>1,'id'=>$row['id']))}' data-switch-value1='1|启用|label
+                label-success|{:U('order/changeorderreturngoods',array('type'=>'state','value'=>0,'id'=>$row['id']))}' >
+                  <?php if ($row['state'] == 1) { ?>启用<?php } else { ?>禁用<?php } ?>
+                </span>
+              </td>
+              <td style="text-align: center;">
+                <a class="btn btn-pill btn-primary btn-sm btn-operation btn-op" data-toggle="ajaxModal" href="{:U('order/addorderreturngoods', array('id' => $row['id']))}">
+                                 <span data-original-title="  修改" data-placement="top" data-toggle="tooltip" title="">
+                                     <i class="icow icow-bianji2"></i>编辑
+                                </span> </a> <a class="btn btn-pill btn-primary btn-sm btn-operation btn-op" data-confirm='确认要删除此快递吗?' data-toggle='ajaxRemove' href="{:U('order/delorderreturngoods', array('id' => $row['id']))}">
+                                    <span data-original-title="删除" data-placement="top" data-toggle="tooltip" title="">
+                                     <i class="icow icow-shanchu1"></i>删除
+                                </span> </a>
+              </td>
+            </tr>
+          <?php } ?>
+          </tbody>
+          <tfoot>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox">
+              <div class="btn-group">
+                <button class="btn btn-pill btn-primary btn-sm  btn-operation" data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>1))}" data-toggle='batch' type="button">
+                  <i class='icow icow-shangjia2'></i> 启用
+                </button>
+                <button class="btn btn-pill btn-primary btn-sm  btn-operation" data-href="{:U('order/changeorderreturngoods',array('type'=>'state','value'=>0))}" data-toggle='batch' type="button">
+                  <i class='icow icow-xiajia3'></i> 停用
+                </button>
+                <button class="btn btn-pill btn-primary btn-sm btn-operation" data-confirm="确认要删除?" data-href="{:U('order/delorderreturngoods')}" data-toggle='batch-remove' type="button">
+                  <i class="icow icow-shanchu1"></i>删除
+                </button>
+              </div>
+            </td>
+            <td colspan="3" style="text-align: right">
+              {$pager}
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>{template '_footer'}
 

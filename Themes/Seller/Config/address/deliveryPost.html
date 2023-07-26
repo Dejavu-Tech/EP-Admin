@@ -1,111 +1,93 @@
 {template '_header'}
-<script type="text/javascript" src="/assets/js/dist/area/cascade.js"></script>
-
+<script src="/assets/js/dist/area/cascade.js" type="text/javascript"></script>
 <div class="page-header">
-    当前位置：
-    <span class="text-primary">
-        <?php if(!empty($item['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>收货地址 <small><?php if(!empty($item['id'])){ ?>修改【{$item['title']}】<?php } ?></small>
+  当前位置： <span class="text-primary">
+        <?php if (!empty($item['id'])) { ?>编辑<?php } else { ?>添加<?php } ?>收货地址 <small><?php if (!empty($item['id'])) { ?>修改【{$item['title']}】<?php } ?></small>
     </span>
 </div>
-
 <div class="page-content">
-    <div class="page-sub-toolbar">
+  <div class="page-sub-toolbar">
         <span class='pull-right'>
             <a class="btn btn-primary btn-sm" href="{:U('config.address.addreturn')}">添加收货地址</a>
         </span>
+  </div>
+  <form class="form-horizontal form-validate" enctype="multipart/form-data">
+    <input name="id" type="hidden" value="{$item['id']}"/>
+    <div class="form-group row">
+      <label class="col-form-label must">收货地址名称</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" data-rule-required='true' id='title' name="title" type="text" value="{$item['title']}"/>
+      </div>
     </div>
-    <form class="form-horizontal form-validate" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="{$item['id']}" />
+    <div class="form-group row">
+      <label class="col-form-label must">联系人</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" id='name' name="name" required style="width: 300px;" type="text" value="{$item['name']}"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label must">手机</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" id='mobile' name="mobile" style="width: 300px;" type="text" value="{$item['mobile']}"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 control-label">电话</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" id='tel' name="tel" style="width: 300px;" type="text" value="{$item['tel']}"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 control-label">邮编</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" id='zipcode' name="zipcode" style="width: 300px;" type="text" value="{$item['zipcode']}"/>
+      </div>
+    </div>
+      <?php if (!empty($item['id'])) { ?>
         <div class="form-group row">
-            <label class="col-form-label must">收货地址名称</label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="text" id='title' name="title" class="form-control" value="{$item['title']}" data-rule-required='true' />
-            </div>
+          <label class="col-sm-2 control-label">地址</label>
+          <div class="col-sm-9 col-xs-12">
+            <div class='form-control-static'>{$item['province']} {$item['city']} {$item['area']}</div>
+          </div>
         </div>
-
+      <?php } ?>
+    <div class="form-group row">
+      <label class="col-form-label must"><?php if (!empty($item['id'])) { ?>新<?php } ?>地址</label>
+      <div class="col-sm-9 col-xs-12">
+        <p>
+          <select class="select form-control" id="sel-provance" name="province" onChange="selectCity();" style="width:130px;display:inline;">
+            <option selected="true" value="">省/直辖市</option>
+          </select> <select class="select form-control" id="sel-city" name="city" onChange="selectcounty(0)" style="width:135px;display:inline;">
+            <option selected="true" value="">请选择</option>
+          </select> <select class="select form-control" id="sel-area" name="area" style="width:130px;display:inline;">
+            <option selected="true" value="">请选择</option>
+          </select>
+        </p>
+        <p>
+          <input class="form-control" id="address" name="address" required style="width:300px;margin-top: 10px;" type="text" value="{$item['address']}">
+        </p>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 control-label">是否默认</label>
+      <div class="col-sm-9 col-xs-12">
+        <div class="radio radio-primary">
+          <input id="isdefault1" name='isdefault' type='radio' value='1' <?php if ($item['isdefault'] == 1){ ?>checked<?php } ?> /> 是</label>
+          <div class="radio radio-primary">
+            <input id="isdefault0" name='isdefault' type='radio' value='0' <?php if ($item['isdefault'] == 0){ ?>checked<?php } ?> /> 否</label>
+          </div>
+        </div>
         <div class="form-group row">
-            <label class="col-form-label must">联系人</label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="text" id='name' name="name" class="form-control" value="{$item['name']}"  required style="width: 300px;"/>
-            </div>
+          <label class="col-sm-2 control-label"></label>
+          <div class="col-sm-9 col-xs-12">
+            <input class="btn btn-primary" type="submit" value="提交"/> <input class="btn btn-pill btn-primary" name="back" onclick="window.location.href='{:U('config.address.delivery')}'" type="button" value="返回列表"/>
+          </div>
         </div>
-
-        <div class="form-group row">
-            <label class="col-form-label must">手机</label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="text" id='mobile' name="mobile" class="form-control" value="{$item['mobile']}" style="width: 300px;"/>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 control-label">电话</label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="text" id='tel' name="tel" class="form-control" value="{$item['tel']}" style="width: 300px;"/>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 control-label">邮编</label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="text" id='zipcode' name="zipcode" class="form-control" value="{$item['zipcode']}" style="width: 300px;"/>
-            </div>
-        </div>
-
-        <?php if(!empty($item['id'])){ ?>
-        <div class="form-group row">
-            <label class="col-sm-2 control-label">地址</label>
-            <div class="col-sm-9 col-xs-12">
-                <div class='form-control-static'>{$item['province']} {$item['city']} {$item['area']}</div>
-            </div>
-        </div>
-        <?php } ?>
-
-        <div class="form-group row">
-            <label class="col-form-label must"><?php if(!empty($item['id'])){ ?>新<?php } ?>地址</label>
-            <div class="col-sm-9 col-xs-12">
-	            <p>
-	                <select id="sel-provance" name="province" onChange="selectCity();" class="select form-control" style="width:130px;display:inline;">
-	                    <option value="" selected="true">省/直辖市</option>
-	                </select>
-	                <select id="sel-city" name="city" onChange="selectcounty(0)" class="select form-control" style="width:135px;display:inline;">
-	                    <option value="" selected="true">请选择</option>
-	                </select>
-	                <select id="sel-area" name="area" class="select form-control" style="width:130px;display:inline;">
-	                    <option value="" selected="true">请选择</option>
-	                </select>
-	            </p>
-	            <p>
-	                <input type="text" name="address" id="address" class="form-control" style="width:300px;margin-top: 10px;" required value="{$item['address']}">
-	            </p>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 control-label ">是否默认</label>
-            <div class="col-sm-9 col-xs-12">
-	            <div class="radio radio-primary">
-	                <input type='radio' name='isdefault' id="isdefault1" value='1' <?php if($item['isdefault']==1){ ?>checked<?php } ?> /> 是
-	            </label>
-	            <div class="radio radio-primary">
-	                <input type='radio' name='isdefault' id="isdefault0" value='0' <?php if($item['isdefault']==0){ ?>checked<?php } ?> /> 否
-	            </label>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 control-label "></label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="submit" value="提交" class="btn btn-primary"  />
-                <input type="button" name="back" onclick="javascript:window.location.href='{:U('config.address.delivery')}'" value="返回列表" class="btn btn-pill btn-primary" />
-            </div>
-        </div>
-    </form>
+  </form>
 </div>
-
 <script language='javascript'>
-
-    $(function(){
-        cascdeInit("{php echo $new_area}","0","{$item['province']}","{$item['city']}","{$item['area']}");
+    $(function () {
+        cascdeInit("{php echo $new_area}", "0", "{$item['province']}", "{$item['city']}", "{$item['area']}");
     });
 
     function formcheck() {
@@ -125,7 +107,7 @@
             return false;
         }
 
-        if($('#sel-province').val()=='请选择省份') {
+        if ($('#sel-province').val() == '请选择省份') {
             Tip.focus("sel-province", "请选择省份!", "top");
             return false;
         }
@@ -137,6 +119,4 @@
 
         return true;
     }
-</script>
-
-{template '_footer'}
+</script>{template '_footer'}

@@ -1,73 +1,37 @@
-
-<?php if( $item['order_status_id'] == 3){ ?>
-<!--未付款-->
-<?php
-$is_pay_show = true;
-if( $_W['role'] == 'agenter' )
-{
-	$supper_info = json_decode(base64_decode($_GPC['__eaterplanet_ecommerce_agent']), true);
-	$is_pay_show = false;
-}
-?>
-<?php if($is_pay_show){ ?>
-<a class="btn btn-primary btn-xs" data-toggle="ajaxPost" href="{:U('order/oppay', array('id' => $item['order_id']))}" data-confirm="确认此订单已付款吗？">确认付款</a>
-<?php } ?>
-<?php }elseif( $item['order_status_id'] == 1 ){ ?>
-<!--已付款-->
-
-<?php if( $item['order_status_id'] == 1 && $item['delivery'] == 'express' ){ ?>
-<!--快递 发货-->
-
-<a class="btn btn-primary btn-xs" data-toggle="ajaxModal"  href="{:U('order/opsend', array('id' => $item['order_id']))}">确认发货</a>
-
-<?php }elseif( $item['order_status_id'] == 1 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send' )  ){ ?>
-<a class="btn btn-primary btn-xs" data-toggle='ajaxPost'  href="{:U('order/opsend_tuanz', array('id' => $item['order_id']))}">确认配送</a>
-
-
-<?php  }else{  ?>
-<?php if( $item['isverify']==1){ ?>
-<!--核销 确认核销-->
-
-<a class="btn btn-primary btn-xs" data-toggle='ajaxPost' href="{:U('order/opfetch', array('id' => $item['order_id']))}" data-confirm="确认使用吗？">确认使用</a>
-
-<?php  }else{  ?>
-<!--自提 确认取货-->
-
-<a class="btn btn-primary btn-xs" data-toggle='ajaxPost'  href="{:U('order/opfetch', array('id' => $item['order_id']))}" data-confirm="确认<?php if( !empty($item['ccard'])){ ?>充值<?php  }else{  ?>取货<?php } ?>吗？">确认<?php if( !empty($item['ccard'])){ ?>充值<?php  }else{  ?>取货<?php } ?></a>
-
-<?php } ?>
-
-<?php } ?>
-
-<?php if( $item['sendtype'] > 0){ ?>
-<a class="btn btn-primary btn-xs" data-toggle='ajaxModal'  href="{:U('order/opsendcancel', array('id' => $item['order_id']))}" >取消发货</a>
-
-<?php } ?>
-<?php }elseif( $item['order_status_id'] == 14 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send')  ){ ?>
-<a class="btn btn-primary btn-xs" data-toggle='ajaxPost'  href="{:U('order/opsend_tuanz_over', array('id' => $item['order_id']))}">确认送达团长</a>
-
-<?php }elseif( $item['order_status_id'] == 14 && ($item['delivery'] == 'express')  ){ ?>
-<a class="btn btn-primary btn-xs" data-toggle='ajaxPost'  href="{:U('order/opreceive', array('id' => $item['order_id']))}" data-confirm="确认订单收货吗？">确认收货</a><br />
-
-
-<?php }elseif( $item['order_status_id'] == 4 || $item['order_status_id'] == 6 ){ ?>
-<!--已发货-->
-<?php if( $item['order_status_id'] == 4){ ?>
-<!--快递 取消发货-->
-
-
-<a class="btn btn-primary btn-xs" data-toggle='ajaxPost'  href="{:U('order/opreceive', array('id' => $item['order_id']))}" data-confirm="确认订单收货吗？">确认收货</a><br />
-
-<?php if( $item['delivery'] == 'express'){ ?>
-<a class="btn btn-primary btn-xs" data-toggle="ajaxModal"  href="{:U('order/opchangeexpress', array('id' => $item['order_id']))}">修改物流</a>
-
-<a class="btn btn-primary btn-xs" data-toggle='ajaxModal'  href="{:U('order/opsendcancel', array('id' => $item['order_id']))}" >取消发货</a>
-<?php } ?>
-
-<?php  }else{  ?>
-
-<a class="btn btn-primary btn-xs" data-toggle='ajaxPost'  href="{:U('order/opfinish', array('id' => $item['order_id']))}" data-confirm="确认完成订单吗？">确认完成</a>
-<?php } ?>
-<?php }elseif( $item['order_status_id'] == 3 ){ ?>
-
-<?php } ?>
+<?php if ($item['order_status_id'] == 3) { ?>
+  <!--未付款-->
+    <?php
+    $is_pay_show = true;
+    if ($_W['role'] == 'agenter') {
+        $supper_info = json_decode(base64_decode($_GPC['__eaterplanet_ecommerce_agent']), true);
+        $is_pay_show = false;
+    } ?><?php if ($is_pay_show) { ?>
+    <a class="btn btn-primary btn-xs" data-confirm="确认此订单已付款吗？" data-toggle="ajaxPost" href="{:U('order/oppay', array('id' => $item['order_id']))}">确认付款</a>
+    <?php } ?><?php } elseif ($item['order_status_id'] == 1) { ?>
+  <!--已付款-->
+    <?php if ($item['order_status_id'] == 1 && $item['delivery'] == 'express') { ?>
+    <!--快递 发货--><a class="btn btn-primary btn-xs" data-toggle="ajaxModal" href="{:U('order/opsend', array('id' => $item['order_id']))}">确认发货</a>
+    <?php } elseif ($item['order_status_id'] == 1 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send')) { ?>
+    <a class="btn btn-primary btn-xs" data-toggle='ajaxPost' href="{:U('order/opsend_tuanz', array('id' => $item['order_id']))}">确认配送</a>
+    <?php } else { ?><?php if ($item['isverify'] == 1) { ?>
+    <!--核销 确认核销--><a class="btn btn-primary btn-xs" data-confirm="确认使用吗？" data-toggle='ajaxPost' href="{:U('order/opfetch', array('id' => $item['order_id']))}">确认使用</a>
+    <?php } else { ?>
+    <!--自提 确认取货--><a class="btn btn-primary btn-xs" data-confirm="确认<?php if (!empty($item['ccard'])) { ?>充值<?php } else { ?>取货<?php } ?>吗？" data-toggle='ajaxPost'
+                           href="{:U('order/opfetch', array('id' => $item['order_id']))}">确认<?php if (!empty($item['ccard'])) { ?>充值<?php } else { ?>
+        取货<?php } ?></a>
+    <?php } ?><?php } ?><?php if ($item['sendtype'] > 0) { ?>
+    <a class="btn btn-primary btn-xs" data-toggle='ajaxModal' href="{:U('order/opsendcancel', array('id' => $item['order_id']))}">取消发货</a>
+    <?php } ?><?php } elseif ($item['order_status_id'] == 14 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send')) { ?>
+  <a class="btn btn-primary btn-xs" data-toggle='ajaxPost' href="{:U('order/opsend_tuanz_over', array('id' => $item['order_id']))}">确认送达团长</a>
+<?php } elseif ($item['order_status_id'] == 14 && ($item['delivery'] == 'express')) { ?>
+  <a class="btn btn-primary btn-xs" data-confirm="确认订单收货吗？" data-toggle='ajaxPost' href="{:U('order/opreceive', array('id' => $item['order_id']))}">确认收货</a><br/>
+<?php } elseif ($item['order_status_id'] == 4 || $item['order_status_id'] == 6) { ?>
+  <!--已发货-->
+    <?php if ($item['order_status_id'] == 4) { ?>
+    <!--快递 取消发货--><a class="btn btn-primary btn-xs" data-confirm="确认订单收货吗？" data-toggle='ajaxPost' href="{:U('order/opreceive', array('id' => $item['order_id']))}">确认收货</a><br/>
+        <?php if ($item['delivery'] == 'express') { ?>
+      <a class="btn btn-primary btn-xs" data-toggle="ajaxModal" href="{:U('order/opchangeexpress', array('id' => $item['order_id']))}">修改物流</a>
+      <a class="btn btn-primary btn-xs" data-toggle='ajaxModal' href="{:U('order/opsendcancel', array('id' => $item['order_id']))}">取消发货</a>
+        <?php } ?><?php } else { ?>
+    <a class="btn btn-primary btn-xs" data-confirm="确认完成订单吗？" data-toggle='ajaxPost' href="{:U('order/opfinish', array('id' => $item['order_id']))}">确认完成</a>
+    <?php } ?><?php } elseif ($item['order_status_id'] == 3) { ?><?php } ?>

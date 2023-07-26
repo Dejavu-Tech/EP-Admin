@@ -1,1476 +1,1235 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
-	<title><?php echo $shoname_name; ?></title>
-	<link rel="shortcut icon" href="" />
-
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-	<meta name="author" content="Dejavu Tech.">
-	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
-
-
-	<!-- Font Awesome-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
-	<!-- ico-font-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
-	<!-- Themify icon-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
-	<!-- Flag icon-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
-	<!-- Feather icon-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
-	<!-- Plugins css start-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
-	<!-- Plugins css Ends-->
-	<!-- Bootstrap css-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
-	<!-- App css-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
-	<!-- Responsive css-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
-
-<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
-<!--[if lt IE 9]>
-  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
-
-<script type="text/javascript">
-	window.sysinfo = {
-	<?php if(!empty($_W['uniacid'])){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
-
-	<?php if(!empty($_W['acid'])){ ?>'acid': '{$_W['acid']}',<?php } ?>
-
-	<?php if(!empty($_W['openid'])){ ?>'openid': '{$_W['openid']}',<?php } ?>
-
-	<?php if(!empty($_W['uid'])){ ?>'uid': '{$_W['uid']}',<?php } ?>
-
-	'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
-
-	'siteroot': '{$_W['siteroot']}',
-			'siteurl': '{$_W['siteurl']}',
-			'attachurl': '{$_W['attachurl']}',
-			'attachurl_local': '{$_W['attachurl_local']}',
-			'attachurl_remote': '{$_W['attachurl_remote']}',
-			'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
-	'cookie' : {'pre': ''},
-	'account' : {:json_encode($_W['account'])},
-	};
-</script>
-
-<script type="text/javascript" src="/assets/js/lib/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
-<script type="text/javascript" src="/assets/js/app/util.js?v=201903260001"></script>
-<script type="text/javascript" src="/assets/js/app/common.min.js?v=201903260001"></script>
-<script type="text/javascript" src="/assets/js/require.js?v=201903260001"></script>
-<script type="text/javascript" src="/assets/js/lib/jquery.nice-select.js?v=201903260001"></script>
-
-<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+  <meta charset="utf-8">
+    <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+  <title><?php echo $shoname_name; ?></title>
+  <link href="" rel="shortcut icon"/>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案" name="description">
+  <meta content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案" name="keywords">
+  <meta content="Dejavu Tech." name="author">
+  <link href="/assets/images/favicon.png" rel="icon" type="image/x-icon">
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <!-- Font Awesome-->
+  <link href="/assets/css/fontawesome.css" rel="stylesheet" type="text/css">
+  <!-- ico-font-->
+  <link href="/assets/css/icofont.css" rel="stylesheet" type="text/css">
+  <!-- Themify icon-->
+  <link href="/assets/css/themify.css" rel="stylesheet" type="text/css">
+  <!-- Flag icon-->
+  <link href="/assets/css/flag-icon.css" rel="stylesheet" type="text/css">
+  <!-- Feather icon-->
+  <link href="/assets/css/feather-icon.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/animate.css" rel="stylesheet" type="text/css">
+  <!-- Plugins css start-->
+  <link href="/assets/css/chartist.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/date-picker.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/prism.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/material-design-icon.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/datatables.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/pe7-icon.css" rel="stylesheet" type="text/css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <!-- App css-->
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/color-1.css" id="color" media="screen" rel="stylesheet">
+  <!-- Responsive css-->
+  <link href="/assets/css/responsive.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+  <script src="/assets/js/app.js" type="text/javascript"></script>
+  <script src="/assets/js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/lib/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/assets/js/app/util.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/app/common.min.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/require.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/lib/jquery.nice-select.js?v=201903260001" type="text/javascript"></script>
+  <link href="/assets/css/ep/eaterplanet.css?v=4.0.0" rel="stylesheet" type="text/css">
 </head>
-<body class="custom-scrollbar" >
-
+<body class="custom-scrollbar">
 <table id="demo" lay-filter="test"></table>
-
 <div class="page-wrapper custom-scrollbar">
-	<div class="page-body-wrapper">
-		<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
-			<div class="container-fluid">
-				<div class="page-header">
-					<div class="row">
-						<div class="col-lg-6 main-header">
-							<h6 class="mb-0">当前位置</h6>
-							<h2>订单<span>详情</span></h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xl-3 xl-50 box-col-6">
-						<div class="card">
-							<div class="card-header">
-								<h5>订单跟踪</h5>
-							</div>
-							<div class="card-body">
-								<div class="timeline-small">
-									<?php foreach($history_list as $history){ ?>
-									<div class="media">
-										<div class="timeline-round timeline-line-1 bg-primary"><i class="fa fa-shopping-bag" style="top: 12px;position: absolute;left: 12px;font-size: 14px;"></i></div>
-										<div class="media-body row">
-											<h6><span class="badge <?php if($history['order_status_id'] != 1){ ?>badge-success<?php }else{ ?>badge-danger<?php } ?>"><?php echo $history['order_status_name']; ?></span><span class="pull-right p-t-5 f-12"><?php echo date("Y-m-d H:i:s", $history['date_added']); ?></span></h6>
-											<p><?php echo $history['comment']; ?></p>
-										</div>
-									</div>
-									<?php } ?>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-9 xl-50 box-col-6">
-						<form action="" class="form theme-form layui-form" lay-filter="example" method="post" >
-							<input type="hidden" name="id" value="{$item['order_id']}" />
-							<input type="hidden" name="dispatchid" value="{$express_info['id']}" />
-							<!---订单详情begin--->
-							<div class="card o-hidden">
-								<div class="cal-date-widget card-body p-0">
-									<div class="row">
-										<div class="col-xl-8">
-											<div class="card-header">
-												<h5>订单编号：{$item['order_num_alias']}</h5>
-											</div>
-											<div class="p-40 p-t-20">
-												<div class="avatars">
-													<h5 class="avatar">
-														客户：
-														<?php if (defined('ROLE') && ROLE == 'agenter' ){ ?>
-														{$member['username']}  ID：{$member['member_id']}<img class="b-r-8 height-50 m-l-10" src="{$member['avatar']}"  />
-														<?php }else{ ?>
-														<?php if($s_id == 1){ ?>
-														<a href="{:U('user/detail',array('id'=>$member['member_id']))}" target='_blank' class="text-primary">{$member['username']}</a>
-														<?php }else{ ?>
-														<a id="user" target='_blank' class="text-primary">{$member['username']}</a>
-														<?php } ?>
-														  ID：<a href="{:U('user/detail',array('id'=>$member['member_id']))}" target='_blank' class="text-primary">{$member['member_id']}</a>
-														<img class="b-r-8 height-50 m-l-10" src="{$member['avatar']}"  />
-
-														<?php if( !empty($member['content']) ){ ?>
-														<font class="text-danger">({$member['content']})</font>
-														<?php } ?>
-														<?php } ?>
-													</h5>
-												</div>
-												<hr>
-												<div class="form-group row">
-													<?php if(!empty($coupon)){ ?>
-													<label class="col-sm-3 col-form-label">优惠券：</label>
-													<label class="col-sm-9 col-form-label">{$coupon['voucher_title']}</label>
-													<?php } ?>
-													<label class="col-sm-3 col-form-label">付款方式：</label>
-													<label class="col-sm-9 col-form-label">
-														<?php if($item['payment_code'] == ''){ ?>未付款<?php } ?>
-														<?php if($item['payment_code'] == 'yuer'){ ?>余额支付<?php } ?>
-														<?php if($item['payment_code'] == 'admin'){ ?>后台付款<?php } ?>
-														<?php if($item['payment_code'] == 'weixin'){ ?>微信支付<?php } ?>
-														<?php if( $item['payment_code'] == 'supply_mobile'){ ?>商户手机端付款<?php } ?>
-														<?php if( $item['payment_code'] == 'cashon_delivery'){ ?>货到付款<?php } ?>
-													</label>
-													<?php if($is_order_note_open == 1){ ?>
-													<?php if(!($item['delivery'] == 'express' && ($item['type'] == 'normal' || $item['type'] == 'pintuan'))){ ?>
-													<?php if( !empty($item['note_content'])){ ?>
-													<label class="col-sm-3 col-form-label">{$order_note_name}：</label>
-													<label class="col-sm-9 col-form-label">{$item['note_content']}</label>
-													<?php } ?>
-													<?php } ?>
-													<?php } ?>
-
-													<label class="col-sm-3 col-form-label">配送方式：</label>
-													<label class="col-sm-9 col-form-label">
-														<?php if($item['delivery'] == 'pickup'){ ?>
-														自提
-														<?php }elseif( $item['delivery'] == 'express'  ){ ?>
-														<?php if( $is_virtualcard == 1 ){ ?>
-														礼品卡兑换余额
-														<?php }else{ ?>
-														快递<?php if(!empty($express_info['name'])){ ?>({$express_info['name']} <?php if(!empty($item['shipping_no'])){ ?>快递单号：{$item['shipping_no']}<?php } ?>)<?php } ?>
-														<a class="btn btn-info" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/express', array('order_id' => $item['order_id']))}" >查看物流</a>
-														<?php } ?>
-														<?php }elseif( $item['delivery'] == 'tuanz_send'  ){ ?>
-														团长配送
-														<?php  }elseif( $item['delivery'] == 'hexiao'  ){ ?>
-														到店核销
-														<?php  }else{  ?>
-														同城配送
-														<?php } ?>
-													</label>
-													<?php if( $is_virtualcard == 0 ){ ?>
-													<label class="col-sm-3 col-form-label">收 货 人：</label>
-													<label class="col-sm-9 col-form-label">{$item['shipping_name']} {$item['shipping_tel']}</label>
-													<?php } ?>
-
-													<?php if($is_can_look_headinfo){ ?>
-													<?php if(  $item['type'] != 'integral' && ( $item['type'] != 'pintuan' || $item['head_id'] > 0 ) ){ ?>
-													<label class="col-sm-3 col-form-label">团　　长：</label>
-													<label class="col-sm-9 col-form-label">{$item['ziti_name']} {$item['ziti_mobile']}</label>
-													<?php } ?>
-
-													<?php if($item['delivery'] == 'tuanz_send'){ ?>
-													<label class="col-sm-3 col-form-label">送货地址：</label>
-													<label class="col-sm-9 col-form-label">{$item['tuan_send_address']}</label>
-													<?php } ?>
-													<?php }else{ ?>
-													<label class="col-sm-3 col-form-label">团　　长：</label>
-													<label class="col-sm-9 col-form-label">{$item['ziti_name']}</label>
-													<?php } ?>
-
-													<?php if($item['delivery'] == 'pickup'){ ?>
-													<label class="col-sm-3 col-form-label">取货地址：</label>
-													<label class="col-sm-9 col-form-label">{$item['shipping_address']}</label>
-													<?php } ?>
-
-													<?php if( !empty($item['address_id']) &&  $is_virtualcard == 0 ){ ?>
-													<label class="col-sm-3 col-form-label">详细地址：</label>
-													<label class="col-sm-9 col-form-label">
-														{$province_info['name']}{$city_info['name']}{$area_info['name']}  <?php if( $item['delivery'] == 'tuanz_send'){ ?>{$item['tuan_send_address']}<?php }else{ ?> {$item['shipping_address']}<?php } ?>, {$item['shipping_name']}, {$item['shipping_tel']}
-														<a class='btn btn-info btn-xs op js-clip' data-url="{$province_info['name']}{$city_info['name']}{$area_info['name']}<?php if( $item['delivery'] == 'tuanz_send'){ ?>{$item['tuan_send_address']}<?php }else{ ?> {$item['shipping_address']}<?php } ?>, {$item['shipping_name']}, {$item['shipping_tel']}">复制</a>
-													</label>
-													<?php } ?>
-
-													<?php if(!empty($item['comment'])){ ?>
-													<label class="col-sm-3 col-form-label">客户订单备注：</label>
-													<label class="col-sm-9 col-form-label">{$item['comment']}</label>
-													<?php } ?>
-
-													<?php if( $item['delivery'] == 'localtown_delivery'){ ?>
-													<?php if( !empty($item['expected_delivery_time']) && empty($item['presale_info']) ){ ?>
-													<!--
-                                                    <?php
-                                                        $weekarray=array("日","一","二","三","四","五","六");
-                                                        $week = $weekarray[date('w',$item['date_added'])];
-                                                    ?>
-                                                    <label class="col-sm-3 col-form-label">期望配送时间：</label><label class="col-sm-9 col-form-label"><?php echo date('m-d',$item['date_added'])?>（周<?php echo $week;?>）{$item['expected_delivery_time']}</label>-->
-													<label class="col-sm-3 col-form-label">期望配送时间：</label><label class="col-sm-9 col-form-label">{$item['expected_delivery_time']}</label>
-													<?php } ?>
-													<?php
-								if( $item['order_status_id'] == 4 || $item['order_status_id'] == 6 || $item['order_status_id'] == 11 ){
-									if(!empty($item['orderdistribution_order']['username'])){
-							?>
-													<label class="col-sm-3 col-form-label">配送员：</label><label class="col-sm-9 col-form-label"><a href="javascript:void(0);" style="color:#428bca;"><?php echo $item['orderdistribution_order']['username']; ?></a></label>
-													<?php }} ?>
-													<?php } ?>
-
-													<?php if(!empty($item['transaction_id'])){ ?>
-													<label class="col-sm-3 col-form-label">交易单号：</label><label class="col-sm-9 col-form-label">{$item['transaction_id']}</label>
-													<?php } ?>
-
-
-													<?php if( !empty($item['presale_info'])){ ?>
-
-													<?php if( $item['presale_info']['presale_type'] == 0 ){  ?>
-													<label class="col-sm-3 col-form-label">预售方式：</label><label class="col-sm-9 col-form-label">定金预售</label>
-													<?php }else{ ?>
-													<label class="col-sm-3 col-form-label">预售方式：</label><label class="col-sm-9 col-form-label">全款预售</label>
-													<?php } ?>
-													<label class="col-sm-3 col-form-label">阶段一： </label><label class="col-sm-9 col-form-label">预付定金（定金 ¥{$item['presale_info']['presale_ding_money']} <?php echo !empty($item['presale_info']['presale_deduction_money']) && $item['presale_info']['presale_deduction_money'] > 0 ?  '抵扣 ¥'.$item['presale_info']['presale_deduction_money'] : ''; ?>）</label>
-													<?php if( $item['presale_info']['presale_type'] == 0 ){  ?>
-													<label class="col-sm-3 col-form-label">阶段二：</label><label class="col-sm-9 col-form-label">
-															<?php if( $item['presale_info']['state'] == 1 ){ ?>
-															支付尾款（未支付）
-															<?php }else if( $item['presale_info']['state'] == 2 ){ ?>
-															支付尾款（已支付）
-															<?php }else if( $item['presale_info']['state'] == 0 ){ ?>
-															定金还未支付
-															<?php } ?>
-													</label>
-													<?php } ?>
-
-													<?php if( $item['presale_info']['presale_limit_balancepaytime'] == 0 ){ ?>
-													<label class="col-sm-3 col-form-label">尾款支付时间：</label><label class="col-sm-9 col-form-label">不限制</label>
-													<?php }else if( $item['presale_info']['presale_limit_balancepaytime'] == 1 && $item['presale_info']['presale_type'] == 0 ){ ?>
-													<label class="col-sm-3 col-form-label">尾款支付时间：</label><label class="col-sm-9 col-form-label">{$item['presale_info']['balance_pay_begintime']} - {$item['presale_info']['balance_pay_endtime']}</label>
-													<?php } ?>
-													<?php } ?>
-
-													<?php if(!empty($item['expresssn']) && $item['delivery']=='express' && !empty($item['shipping_method'])){ ?>
-													<label class="col-sm-3 col-form-label">快递公司：</label><label class="col-sm-9 col-form-label"><?php if(empty($express_info['name'])){ ?>其他快递<?php }else{ ?>{$express_info['name']}<?php } ?></label>
-													<label class="col-sm-3 col-form-label">快递单号：</label><label class="col-sm-9 col-form-label">{$item['shipping_no']}</label>
-													<label class="col-sm-3 col-form-label">发货时间：</label><label class="col-sm-9 col-form-label">{:date('Y-m-d H:i:s',$item['express_time'])}</label>
-													<?php } ?>
-
-													<?php if($item['delivery']=='pickup' ){ ?>
-													<?php if(!empty($item['express_time'])){ ?>
-													<label class="col-sm-3 col-form-label">发货时间：</label><label class="col-sm-9 col-form-label">{:date('Y-m-d H:i:s',$item['express_time'])}</label>
-													<?php } ?>
-													<?php if(!empty($item['express_tuanz_time'])){ ?>
-													<label class="col-sm-3 col-form-label">团长接货时间：</label><label class="col-sm-9 col-form-label">{:date('Y-m-d H:i:s',$item['express_tuanz_time'])}</label>
-													<?php } ?>
-													<?php } ?>
-												</div>
-
-												<div class="ops col-xl-12">
-													<?php if(!empty($item['address_id'])){ ?>
-													<a class="btn btn-primary" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/opchangeaddress', array('id' => $item['order_id']))}">修改订单收货信息</a>
-													<?php } ?>
-													<?php if( $item['type'] == 'pintuan' ){ ?>
-													<a class="btn btn-primary" href="{:U('group/pintuan_detail', array('pin_id' => $pin_id))}" target="_blank">查看拼团详情</a>
-													<?php } ?>
-													<?php
-							$is_ops_show = true;
-							if (defined('ROLE') && ROLE == 'agenter' )
-							{
-								$supper_info = json_decode(base64_decode($__eaterplanet_ecommerce_agent), true);
-								if( $supper_info['type'] != 1)
-								{
-									$is_ops_show = false;
-								}
-							}
-							?>
-													<?php if($is_ops_show){ ?>
-													<!---操作开始-->
-													<?php if($item['order_status_id'] == 3){ ?>
-													<!--未付款-->
-													<?php
-							$is_pay_show = true;
-							if (defined('ROLE') && ROLE == 'agenter' )
-							{
-								$supper_info = json_decode(base64_decode($_GPC['__eaterplanet_ecommerce_agent']), true);
-								$is_pay_show = false;
-							}
-							?>
-													<?php if($is_pay_show){ ?>
-													<?php if(!isset($open_admin_payment) || $open_admin_payment == '1'){ ?>
-													<a class="btn btn-primary deldom" data-toggle="ajaxPost" href="javascript:;" data-href="{:U('order/oppay', array('id' => $item['order_id']))}" data-confirm="确认此订单已付款吗？">确认付款</a>
-													<?php } ?>
-													<?php } ?>
-													<?php }elseif( $item['order_status_id'] == 1 ){ ?>
-													<!--已付款-->
-													<?php if($item['order_status_id'] == 1 && $item['delivery'] == 'express' ){ ?>
-													<!--快递 发货-->
-													<a class="btn btn-primary ajaxPost" data-toggle='ajaxModal' href="javascript:;" data-href="{:U('order/opsend', array('id' => $item['order_id']))}" data-confirm="确认此订单发货吗？">确认发货</a>
-													<?php }elseif( $item['order_status_id'] == 1 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send' )  ){ ?>
-													<a class="btn btn-primary deldom" href="javascript:;"   data-confirm="确认此订单发货吗？" data-href="{:U('order/opsend_tuanz', array('id' => $item['order_id']))}">确认配送</a>
-													<?php }else{ ?>
-													<?php } ?>
-													<?php }elseif( $item['order_status_id'] == 14 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send')  ){ ?>
-													<?php if($is_can_confirm_delivery){ ?>
-													<a class="btn btn-primary deldom" href="javascript:;" data-href="{:U('order/opsend_tuanz_over', array('id' => $item['order_id']))}" data-confirm="确认送达团长吗？">确认送达团长</a>
-													<?php }?>
-													<?php }elseif( $item['order_status_id'] == 14 && ($item['delivery'] == 'express')  ){ ?>
-													<a class="btn btn-primary deldom" href="javascript:;" data-href="{:U('order/opreceive', array('id' => $item['order_id']))}" data-confirm="确认订单收货吗？">确认收货</a><br />
-													<?php }elseif( $item['order_status_id'] == 4 || $item['order_status_id'] == 6 ){ ?>
-													<!--已发货-->
-													<?php if( $item['order_status_id'] == 4){ ?>
-													<!--快递 取消发货-->
-													<?php if($is_can_confirm_receipt){ ?>
-													<?php if($item['delivery'] == 'hexiao'){ ?>
-													<a class="btn btn-primary deldom" href="javascript:;"   data-confirm="确认使用该订单吗？<br/><span style='color:#ad0909;font-size:13px;'>确认使用订单以后，订单下面全部商品默认核销成功。</span>" data-href="{:U('order/order_hexiao', array('id' => $item['order_id']))}">确认使用</a>
-													<?php }else{ ?>
-													<a class="btn btn-primary deldom" href="javascript:;" data-href="{:U('order/opreceive', array('id' => $item['order_id']))}" data-confirm="确认订单收货吗？">确认收货</a><br />
-													<?php }?>
-													<?php }?>
-													<?php if( $item['delivery'] == 'express' &&  $is_virtualcard == 0 ){ ?>
-													<a class="btn btn-primary" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/opchangeexpress', array('id' => $item['order_id']))}">修改物流</a>
-													<?php } ?>
-													<?php }else{ ?>
-													<a class="btn btn-primary deldom"  href="javascript:;" data-href="{:U('order/opfinish', array('id' => $item['order_id']))}" data-confirm="确认完成订单吗？">确认完成</a>
-													<?php } ?>
-													<?php }elseif( $item['order_status_id'] == 3 ){ ?>
-													<?php } ?>
-													<!---操作结束--->
-													<?php } ?>
-													<?php
-								if (!defined('ROLE')){
-								if( $item['order_status_id'] == 3 && $item['type'] != 'integral' && $is_presale == 0 ){
-							?>
-													<a class="btn btn-primary" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/change_order', array('id' => $item['order_id']))}" >订单改价</a>
-													<?php }} ?>
-													<a class="btn btn-primary" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/opremarksaler', array('id' => $item['order_id']))}"  ><?php if(!empty($item['remarksaler'])){ ?>查看备注<?php }else{ ?>添加备注<?php } ?></a>
-												</div>
-												<?php if($item['order_status_id'] != 3){ ?>
-												<div class="text col-xl-12" style="border: none;padding: 0">
-													<?php if($item['order_status_id'] == 1){ ?>
-													友情提示：如果无法进行发货，请及时联系买家进行妥善处理;
-													<?php } ?>
-													<?php if($item['order_status_id'] == 4){ ?>
-													<?php if($item['delivery'] == 'hexiao'){ ?>
-													注：确认使用后，订单下面全部商品默认核销成功!
-													<br/>
-													友情提示：如果无法进行发货，请及时联系买家进行妥善处理;
-													<?php }else{?>
-													友情提示：
-													请及时关注物流状态，确保买家及时收到商品;
-													如果买家未收到货物或有退换货请求，请及时联系买家妥善处理
-													<?php }} ?>
-													<?php if($item['order_status_id']==11){ ?>
-													友情提示：
-													交易成功，如买家有售后申请，请与买家进行协商，妥善处理
-													<?php } ?>
-												</div>
-												<?php } ?>
-											</div>
-										</div>
-										<div class="col-xl-4 gradient-primary p-30">
-											<div class="col-sm-12 m-t-10 m-b-30">
-												<span class="f-20 f-w-900">订单状态：</span>
-												<?php if($item['order_status_id'] == 1){ ?>
-												<span class="txt-warning f-24 f-w-900">待发货</span>
-												<?php } ?>
-												<?php if($item['order_status_id'] == 3){ ?>
-												<span class="txt-warning f-24 f-w-900">待付款</span>
-												<?php } ?>
-												<?php if($item['order_status_id'] == 4){ ?>
-												<span class="txt-warning f-24 f-w-900">已发货</span>
-												<?php if($item['delivery'] == 'hexiao'){ ?>
-												<span class="txt-warning f-24 f-w-900">待使用</span>
-												<?php }else{?>
-												<span class="txt-warning f-24 f-w-900">待收货</span>
-												<?php } ?>
-												<?php } ?>
-												<?php if($item['order_status_id'] == 6){ ?>
-												<span class="txt-success f-24 f-w-900">已签收</span>
-												<?php } ?>
-												<?php if($item['order_status_id'] == 7){ ?>
-												<span class="txt-dark f-24 f-w-900">已退款</span>
-												<?php } ?>
-												<?php if($item['order_status_id'] == 14){ ?>
-												<span class="txt-warning f-24 f-w-900">配送中</span>
-												<?php } ?>
-												<?php if($item['order_status_id'] == 11){ ?>
-												<span class="txt-success f-24 f-w-900">交易完成</span>
-												<?php } ?>
-												<?php if($item['order_status_id'] == 5){ ?>
-												<span class="txt-twitter f-24 f-w-900">已关闭</span>
-												<?php } ?>
-												<?php if( $item['order_status_id'] == 15){ ?>
-												<span class="txt-success f-24 f-w-900">定金已支付，等待活动结束买家支付尾款</span>
-												<?php } ?>
-
-												<i>
-													<?php if($item['order_status_id'] == 3){ ?>
-													（等待买家付款）
-													<?php } ?>
-
-													<?php if($item['order_status_id'] == 1 ){ ?>（买家已经付款，请商家尽快发货）<?php } ?>
-													<?php if( $item['order_status_id'] == 4){ ?>
-													<?php if($item['delivery'] == 'hexiao'){ ?>
-													（买家已经付款，等待买家到店核销）
-													<?php }else{ ?>
-													（商家已发货，等待买家收货并交易完成）
-													<?php }?>
-													<?php } ?>
-													<?php if($item['order_status_id'] == 14){ ?>（商家已发货，正在配送给团长途中）<?php } ?>
-
-													<?php if($item['order_status_id'] == 12){ ?>
-													（已售后完成<?php if(!empty($refund['refundtime'])){ ?>售后时间: {:date('Y-m-d H:i:s',$refund['refundtime'])}<?php } ?>）
-
-													<?php } ?>
-												</i>
-											</div>
-											<div class="price">
-												<?php if($item['type'] != 'integral'){ ?>
-												<label class="col-sm-12 col-form-label">订单结算状态：
-														<?php
-									$order_states = '';
-									switch($order_status)
-									{
-										case 0: $order_states='待结算'; break;
-										case 1: $order_states='已结算'; break;
-										case 2: $order_states='已失效'; break;
-									}
-								?><?php echo $order_states; ?>
-														<span onmouseover="overShow1()" onmouseout="outHide1()" ><i class="icon-help-alt"></i></span>
-												</label>
-												<?php } ?>
-												<div id="showDiv" class="alert alert-secondary dark" style="display: none">
-													-待结算：还在订单“售后期”。<br />
-													-已结算：已过订单“售后期”。<br />
-													-已失效：整单退款的订单。<br />
-													<?php if(($item['order_status_id'] ==6 || $item['order_status_id'] ==11) ){ ?>
-													<?php if($order_status == 0 && $open_aftersale == 1){ ?>
-													-订单预计结算时间：<?php echo date("Y-m-d H:i:s",$order_settlement); ?>，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
-													<?php }else{ ?>
-													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
-													<?php } ?>
-													<?php }else{ ?>
-													<?php if($order_status == 2){ ?>
-													-订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
-													<?php }else{ ?>
-
-													<?php if($open_aftersale == 1){ ?>
-													-订单预计结算时间：订单 “确认收货” 后，预计<?php echo $open_aftersale_time; ?>天后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
-													<?php }else{ ?>
-													-订单预计结算时间：订单 “确认收货” 后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
-													<?php } ?>
-													<?php } ?>
-													<?php } ?>
-												</div>
-
-
-												<label class="col-sm-12 col-form-label">商品合计：<?php if( $item['type'] == 'integral' ){ ?><?php }else{ ?>¥<?php } ?>{: round($item['total'],2)}<?php if( $item['type'] == 'integral' ){ ?>积分<?php } ?></label>
-
-												<?php if( $item['delivery'] == 'localtown_delivery'){ ?>
-												<?php if( $item['is_localtown_free_shipping_fare'] == 1 ){ ?>
-												<label class="col-sm-12 col-form-label">同城配送费：¥{$item['localtown_free_shipping_fare']}</label>
-												<label class="col-sm-12 col-form-label">满减配送费：-¥{$item['localtown_free_shipping_fare']}</label>
-												<?php }else{ ?>
-												<label class="col-sm-12 col-form-label">同城配送费：¥{$item['shipping_fare']}</label>
-												<?php  } ?>
-												<?php if( !empty($item['localtown_add_shipping_fare']) && $item['localtown_add_shipping_fare'] > 0 ){ ?>
-												<label class="col-sm-12 col-form-label">加价配送：¥{$item['localtown_add_shipping_fare']}</label>
-												<?php  } ?>
-												<?php }else{ ?>
-												<?php if( $item['is_free_shipping_fare'] == 1 ){ ?>
-												<label class="col-sm-12 col-form-label">运费：¥{$item['fare_shipping_free']} ($item['delivery_text']})</label>
-												<label class="col-sm-12 col-form-label">满{$item['man_e_money']}减运费：-¥{$item['fare_shipping_free']}</label>
-												<?php }else{ ?>
-												<label class="col-sm-12 col-form-label">运费：¥{$item['shipping_fare']} ({$item['delivery_text']})</label>
-												<?php  } ?>
-												<?php  } ?>
-
-												<?php if( $item['packing_fare']>0 ){ ?>
-												<label class="col-sm-12 col-form-label">{$localtown_modifypickingname}：¥{$item['packing_fare']}</label>
-												<?php } ?>
-
-												<?php if($item['voucher_id']>0 ){ ?>
-												<label class="col-sm-12 col-form-label">优惠券优惠：-¥{$item['voucher_credit']}</label>
-												<?php } ?>
-												<?php if($item['fullreduction_money']>0 ){ ?>
-												<label class="col-sm-12 col-form-label">满减优惠：-¥{$item['fullreduction_money']}</label>
-												<?php } ?>
-
-												<?php if($item['score_for_money']>0 ){ ?>
-												<label class="col-sm-12 col-form-label">积分抵扣：-¥{$item['score_for_money']}</label>
-												<?php } ?>
-
-												<?php if($item['is_change_price'] == 1){ ?>
-												<label class="col-sm-12 col-form-label">商家改价：
-														<?php
-											$change_price = $item['total'] - $item['old_price'];
-											if($change_price < 0){
-												echo '-¥'.(0-$change_price);
-											}else{
-												echo '¥'.$change_price;
-											}
-										?>
-												</label>
-												<?php } ?>
-
-												<?php if( ($item['changedtotal'])!=0){ ?>
-												<label class="col-sm-12 col-form-label">卖家改价：<?php if( 0<$item['changedtotal']){ ?>+<?php  }else{  ?>-<?php } ?>¥{php echo number_format(abs($item['changedtotal']),2)}</label>
-												<?php } ?>
-
-												<?php if( ($item['changedshipping_fare'])!=0){ ?>
-												<label class="col-sm-12 col-form-label">卖家改运费：<?php if( 0<$item['changedshipping_fare']){ ?>+<?php  }else{  ?>-<?php } ?>¥{php echo abs($item['changedshipping_fare'])}</label>
-												<?php } ?>
-
-												<?php if($item['shipping_fare'] <= 0 ){ $item['fare_shipping_free'] = 0; } ?>
-												<?php
-									$free_tongji = $item['total'] + $item['packing_fare'] +$item['shipping_fare']-$item['voucher_credit']-$item['fullreduction_money'] - $item['score_for_money'] + $item['localtown_add_shipping_fare']- $item['fare_shipping_free'] - $presale_for_ordermoney;
-									if($free_tongji < 0){
-										$free_tongji = 0;
-									}
-								?>
-												<?php
-									if( $item['is_vipcard_buy'] == 1 &&  $member_youhui >0  )
-												{
-												?>
-												<label class="col-sm-12 col-form-label">会员卡优惠：</span><span class="text-danger">-¥{$member_youhui}</span></label>
-												<?php
-									}
-								?>
-												<?php
-									if( $item['is_level_buy'] == 1 &&  $member_youhui >0  )
-												{
-												?>
-												<label class="col-sm-12 col-form-label">客户等级折扣优惠：</span><span class="text-danger">-¥{$member_youhui}</span></label>
-												<?php
-									}
-								?>
-												<?php if($item['type'] == 'integral'){ ?>
-												<div class="col-sm-12"><span class="f-20 f-w-900">实付款：</span>
-													<span class="txt-warning f-24 f-w-900"><?php if( $item['shipping_fare'] > 0 ){ ?>¥{:round($item['shipping_fare'],2)}+<?php } ?> {:round($item['total'],2)} 积分</span>
-												</div>
-
-												<?php
-									if( $total_refund_money > 0 ){
-												?>
-												<label class="col-sm-12 col-form-label">退款：{$total_refund_money}积分</label>
-												<?php } ?>
-												<?php
-									if( $total_refund_shipping_fare > 0 ){
-												?>
-												<label class="col-sm-12 col-form-label">退运费：¥{$total_refund_shipping_fare}</label>
-												<?php } ?>
-												<?php }else{ ?>
-												<?php
-											if( $presale_for_ordermoney > 0 ){
-												?>
-												<div class="col-sm-12"><span class="txt-warning f-24 f-w-900">定金抵扣：</span><span class="txt-danger f-24 f-w-900">-¥{$presale_for_ordermoney}</span></div>
-												<?php } ?>
-												<div class="col-sm-12"><span class="txt-warning f-24 f-w-900">实付款：</span><span class="txt-danger f-24 f-w-900">¥<?php echo round($free_tongji,2)?></span></div>
-												<?php
-										if( $total_refund_money > 0 ){
-												?>
-												<label class="col-sm-12 col-form-label">退款：¥{$total_refund_money}</label>
-												<?php } ?>
-												<?php
-									if( $total_refund_shipping_fare > 0 ){
-												?>
-												<label class="col-sm-12 col-form-label">退运费：¥{$total_refund_shipping_fare}</label>
-												<?php } ?>
-												<?php } ?>
-											</div>
-											<?php if( in_array($item['order_status_id'], array(1,4,6,10,11,12,14)) && $is_can_nowrfund_order ){ ?>
-											<a class="op btn btn-dark" style="position: absolute;bottom:40px;right: 50px" data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/oprefund_do', array('id' => $item['order_id']))}" >
-												整个订单立即退款
-											</a>
-											<?php } ?>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-xl-12 xl-100 box-col-12">
-						<?php if( $is_virtualcard == 1 ){ ?>
-						<div class="card-header p-b-30">
-							<h5>礼品卡信息</h5>
-						</div>
-						<table class="table table-xs text-center" cellpadding="0" cellspacing="0" border="0" >
-							<thead>
-							<tr>
-								<th>线上兑换码</th>
-								<th>状态</th>
-								<th>有效期</th>
-								<th>可兑换余额</th>
-								<th>使用人</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<td>{$virtualcard_info['code_sn']}</td>
-								<td>
-									<?php
-									switch( $virtualcard_info['state'] )
-									{
-										case 0:
-											echo '未支付';
-										break;
-										case 1:
-											echo '未使用';
-										break;
-										case 2:
-											echo '已使用';
-										break;
-										case 3:
-											echo '已失效';
-										break;
-									}
-								?>
-								</td>
-								<td>
-									<?php if( $virtualcard_info['is_effect'] == 1 ){ ?>
-									<?php if( $virtualcard_info['effect_type'] == 0 ){ ?>
-									无限期
-									<?php }else{ ?>
-									{$virtualcard_info['effect_enddate']}
-									<?php } ?>
-									<?php }else{ ?>
-									已失效
-									<?php } ?>
-								</td>
-								<td>¥{:round($virtualcard_info['code_money'], 2)}</td>
-								<td>{$virtualcard_info['use_member_name']}</td>
-							</tr>
-							</tbody>
-						</table>
-						<?php } ?>
-		<?php
-                if( !empty($order_form_data) && !empty($order_form_data['form_list']) ){
-                    $form_list = $order_form_data['form_list'];
-            ?>
-				<div class="form-title">
-					关联表单信息：
-				</div>
-				<div class="form row">
-					<ul class="form_list">
-						<?php
-                        foreach($form_list as $k => $v){
-						?>
-						<li>
-							<?php if($v['type'] == 'image'){ ?>
-							{$v['item_name']}：
-							<?php if(!empty($v['item_val'])){ ?>
-							<?php foreach($v['item_val'] as $ik=>$iv){ ?>
-							<?php if( empty($iv) ){ ?>
-							暂无
-							<?php }else{ ?>
-							<img src="{$iv}" style="width:52px;height:52px;border:1px solid #efefef; padding:1px;">
-							<?php } ?>
-
-							<?php } ?>
-							<?php } ?>
-							<?php }else{ ?>
-							{$v['item_name']}：{$v['item_val']}
-							<?php } ?>
-						</li>
-						<?php } ?>
-					</ul>
-				</div>
-				<?php } ?>
-					</div>
-					<div class="col-xl-12 xl-100 box-col-12">
-						<form action="" class="form theme-form layui-form" lay-filter="example" method="post" >
-							<input type="hidden" name="id" value="{$item['order_id']}" />
-							<input type="hidden" name="dispatchid" value="{$express_info['id']}" />
-							<div class="card">
-								<div class="card-header p-b-30">
-									<h5>订单商品信息</h5>
-								</div>
-								<table class="table table-xs text-center" cellpadding="0" cellspacing="0" border="0" >
-									<thead>
-									<tr>
-										<th>商品图片</th>
-										<th>商品名称</th>
-										<th>规格/编号</th>
-										<th>基数</th>
-										<?php if(  $item['type'] != 'integral' ){ ?>
-										<th>团长提成</th>
-										<?php } ?>
-										<th>是否退款</th>
-										<?php if($item['delivery'] == 'hexiao'){ ?>
-										<th>到店核销方式</th>
-										<?php }?>
-										<th>商户</th>
-										<th>单价</th>
-										<th>数量</th>
-										<th>价格</th>
-									</tr>
-									</thead>
-									<tbody>
-
-									<?php $i =0; ?>
-									<?php $member_youhui = 0; ?>
-									<?php $total_refund_money = 0; ?>
-									<?php $total_refund_shipping_fare = 0; ?>
-									<?php $integral_total_refund_money = 0; ?>
-									<?php $integral_total_refund_shipping_fare = 0; ?>
-									<?php $order_total = 0; ?>
-									<?php foreach( $order_goods as  $goods  ){ ?>
-									<?php if(!empty($goods['goods_refund_shipping_fare'])){ $total_refund_shipping_fare = $total_refund_shipping_fare + $goods['goods_refund_shipping_fare']; } ?>
-									<?php $member_youhui += ($goods['oldprice'] - $goods['price'])*$goods['quantity']; ?>
-									<?php $total_refund_money += ($goods['has_refund_money']); ?>
-									<tr>
-										<td>
-											<img src="{: tomedia($goods['goods_images'])}" style='width:40px;height:40px;border-radius: 6px' >
-										</td>
-										<td>
-											<a target="_blank" href="{:U('goods/edit', array('id' => $goods['goods_id']))}"title="查看">{$goods['name']}<?php if($goods['is_refund_state'] == 1 ){ ?>(退款)<?php } ?></a>
-										</td>
-										<td>
-											<div>规格：<?php if(!empty($goods['option_sku'])){ ?><span class="badge badge-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="{$goods['option_sku']}">{$goods['option_sku']}</span><?php }else{ ?>无<?php } ?></div>
-											<div>编码：<?php if(!empty($goods['model'])){ ?>{$goods['model']}<?php }else{ ?>无<?php } ?></div>
-										</td>
-										<td>
-											<?php
-									$vip_free_money = 0;
-									$mblevel_free_money =0;
-
-									if( $goods['is_level_buy'] == 1 )
-									{
-										$mblevel_free_money = round(($goods['oldprice'] - $goods['price'])*$goods['quantity'],2);
-									}
-									if( $goods['is_vipcard_buy'] == 1 )
-									{
-										$vip_free_money = round(($goods['oldprice'] - $goods['price'])*$goods['quantity'],2);
-									}
-									$order_total = $order_total + $goods['old_total'];
-									$change_price = 0;
-									if($goods['is_change_price'] == 1){
-										$change_price = $goods['price']*$goods['quantity'] - $goods['total'];
-									}
-								 ?>
-											商品合计：{$goods['old_total']}<br/>
-											-满减：{$goods['fullreduction_money']}<br/>
-											-优惠券：{$goods['voucher_credit']}<br/>
-											<?php if( ($goods['is_change_price'] == 1 && $change_price > 0 ) ){ ?>
-											-商家改价：{$change_price}<br/>
-											<?php } ?>
-											<?php if( ($goods['is_level_buy']>0 && $mblevel_free_money > 0 ) ){ $item['is_level_buy'] = 1; ?>
-											-客户等级优惠：{$mblevel_free_money}<br/>
-											<?php } ?>
-											<?php if( ($goods['is_vipcard_buy']>0 && $vip_free_money > 0 ) ){ $item['is_vipcard_buy'] = 1; ?>
-											-付费会员优惠：{$vip_free_money}<br/>
-											<?php } ?>
-											<?php if($goods['has_refund_money']>0){ ?>
-											-已退款：{$goods['has_refund_money']}<br/>
-											<?php } ?>
-											=基数：<?php echo round($goods['total'] -$goods['fullreduction_money']-$goods['voucher_credit']-$goods['has_refund_money'],2); ?>
-										</td>
-										<?php if($item['type'] != 'integral' && ($item['type'] == 'normal' || $item['head_id'] > 0) ){ ?>
-										<td>
-											<?php foreach($goods['head_commission_order_info'] as $kkk => $vvv) { ?>
-											团长：<?php echo $vvv['head_name']; ?>
-											<?php if($item['delivery']=='tuanz_send'){ ?>
-											佣金：<?php if($vvv['money'] ==0 ){ echo round( $vvv['add_shipping_fare'],2); }else{ echo round($vvv['money'] - $vvv['add_shipping_fare'],2);}  ?> </br>
-											<?php if($vvv['level'] <= 0){ ?>
-											配送收入：<?php echo $vvv['add_shipping_fare']; ?></br>
-											<?php } ?>
-											总佣金： <?php echo $vvv['money']; ?>
-											<?php }else{ ?>
-											¥<?php echo $vvv['money']; ?>
-											<?php } ?>
-											<?php if($vvv['level'] >0){ ?>
-											(<?php echo $vvv['level']; ?>级)
-											<br/>
-											<?php if($vvv['fen_type'] == 0){ ?>
-											提成比例：<?php echo $vvv['bili']; ?>%
-											<?php }else{  ?>
-											固定团长提成金额：<?php echo $vvv['bili']; ?>
-											<?php } ?>
-											<?php }else{ ?>
-											<br/>
-											<?php if($vvv['fen_type'] == 0){ ?>
-											提成比例：<?php echo $vvv['bili']; ?>%
-											<?php }else{  ?>
-											固定团长提成金额：<?php echo $vvv['bili']; ?>
-											<?php } ?>
-											<?php } ?>
-											<?php } ?>
-										</td>
-										<?php } ?>
-										<td>
-											<?php if($item['order_status_id'] == 7){ ?>
-											已退款
-											<?php }else if($goods['is_refund_state'] == 1 && !empty($goods['refund_info']) ){ ?>
-											退款金额：<?php echo $goods['refund_info']['ref_money']; ?>  <?php if($item['type'] == 'integral'){ ?>积分<?php }else{ ?>元<?php } ?>,
-											<?php if($goods['refund_info']['state'] == 0 ){ ?>
-											<span class="badge badge-info">申请中</span>
-											<?php }else if($goods['refund_info']['state'] == 3){ ?>
-											<span class="badge badge-success">退款成功</span>
-											<?php }else if($goods['refund_info']['state'] == 4){ ?>
-											<span class="badge badge-warning">退款失败</span>
-											<?php  } ?>
-											<br/><br/>
-											<a class="btn btn-primary btn-xs" href="{:U('order/oprefund', array('id' => $item['order_id'], 'ref_id' => $goods['refund_info']['ref_id'] ))}">退款详情</a>
-
-											<?php  }else if($goods['is_refund_state'] == 0 && in_array( $item['order_status_id'], array(1,4,6,10,11,12,14)) && $is_can_nowrfund_order   ){ ?>
-											<?php if($item['delivery'] == 'hexiao'){ ?>
-											<?php if(!empty($goods['hx_info']) && $goods['hx_info']['is_can_refund'] == 1){ ?>
-											<a class='btn op btn-primary btn-xs'  data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/oprefund_goods_do', array('id' => $item['order_id'], 'order_goods_id' => $goods['order_goods_id'] ))}" >
-												后台商品退款
-											</a>
-											<?php } ?>
-											<?php }else{ ?>
-											<a class='btn op btn-primary btn-xs'  data-toggle="ajaxModal" href="javascript:;" data-href="{:U('order/oprefund_goods_do', array('id' => $item['order_id'], 'order_goods_id' => $goods['order_goods_id'] ))}" >
-												后台商品退款
-											</a>
-											<?php } ?>
-											<?php if($goods['has_refund_quantity'] > 0){ ?>已退款商品数量{$goods['has_refund_quantity']}个,<br />退款<?php if($item['type'] == 'integral'){ ?>积分<?php }else{ ?>金额<?php } ?>{$goods['has_refund_money']}<?php if($item['type'] == 'integral'){ ?>积分<?php }else{ ?>元<?php } ?><?php } ?>
-											<?php }else{ ?>
-											<?php if($goods['has_refund_quantity'] > 0){ ?>已退款商品数量{$goods['has_refund_quantity']}个,<br />退款<?php if($item['type'] == 'integral'){ ?>积分<?php }else{ ?>金额<?php } ?>{$goods['has_refund_money']}<?php if($item['type'] == 'integral'){ ?>积分<?php }else{ ?>元<?php } ?><?php } ?>
-											<?php } ?>
-										</td>
-										<?php if($item['delivery'] == 'hexiao'){ ?>
-										<td>
-											<?php if(!empty($goods['hx_info'])){ ?>
-											<?php if($goods['hx_info']['hexiao_type'] == 0){ ?>
-											<span>订单核销</span>
-											<?php }else{ ?>
-											<span>按次核销</span>
-											<?php } ?>
-											<br/>
-											<?php if($item['order_status_id'] == 11 && $goods['hx_info']['is_hexiao_over'] == 1){ ?>
-											<a class="btn btn-primary btn-xs hxBtn"  href="javascript:;" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">核销记录</a>
-											<?php }?>
-											<?php
-										if($item['order_status_id'] == 7 || $goods['is_refund_state'] == 1 || (!empty($goods['refund_info'] && $goods['refund_info']['state'] != 4))){
-										}else{
-									?>
-											<?php if($goods['hx_info']['is_hexiao_over'] == 1){ ?>
-											<?php if($item['order_status_id'] == 4){ ?>
-											<a class="btn btn-success btn-xs hxBtn"  href="javascript:;" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">已核销</a>
-											<?php } ?>
-											<?php }else{ ?>
-											<?php if($goods['hx_info']['hexiao_type'] == 0){ ?>
-											<?php if($item['order_status_id'] == 4){ ?>
-											<a class="btn btn-primary btn-xs deldom" href="javascript:;"   data-confirm="确认使用该订单吗？" data-href="{:U('order/order_goods_hexiao', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">确认使用</a>
-											<?php } ?>
-											<?php }else{ ?>
-											<?php if($item['order_status_id'] == 4){ ?>
-											<a class="btn btn-primary hxAction"  href="javascript:;" data-href="{:U('order/hexiao_times', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">确认使用</a>
-											<?php } ?>
-											<?php if($goods['hx_info']['remain_hexiao_count'] > 0 && $goods['hx_info']['remain_hexiao_count'] < $goods['hx_info']['hexiao_count'] && $goods['hx_info']['hexiao_count'] > 0 ){ ?>
-											<a class="btn btn-primary btn-xs hxBtn"  href="javascript:;" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">部分核销</a>
-											<?php } ?>
-											<?php if($goods['hx_info']['hexiao_count'] == 0 && $goods['hx_info']['record_count'] > 0){ ?>
-											<a class="btn btn-primary btn-xs hxBtn"  href="javascript:;" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}">核销记录</a>
-											<?php } ?>
-											<?php } ?>
-											<?php } ?>
-											<?php } ?>
-											<?php } ?>
-										</td>
-										<?php } ?>
-										<td>
-											<span>{$goods['supply_name']}<br/>({$goods['supply_type']})</span>
-											<?php if($item['delivery'] == 'hexiao'){ ?>
-											<?php
-									if(!empty($goods['hx_info']) && $goods['hx_info']['hx_assign_salesroom'] == 1){
-								?>
-											<br/>
-											<a class="btn btn-primary btn-xs hxBtn"  href="javascript:;" data-href="{:U('order/hexiao_goods_assign_salesroom', array('goods_id' => $goods['goods_id'],'order_goods_id'=>$goods['order_goods_id']))}">商品指定核销</a>
-											<?php } } ?>
-										</td>
-										<td>
-											<?php if($item['type'] == 'integral'){ ?> <?php }else{ ?>¥<?php } ?>{:round($goods['oldprice'],2)}<?php if($item['type'] == 'integral'){ ?>积分<?php }else{ ?> <?php } ?>
-											<!--
-                                            <?php if( $goods['member_disc'] < 100 ){ ?>
-                                            <span class="label label-primary">会员折扣：{$goods['member_disc']}%</span>
-                                            <?php } ?>-->
-											<?php if( $goods['is_vipcard_buy'] == 1){ ?>
-											付费会员价格：{:round($goods['price'],2)}
-											<?php }else if($goods['is_level_buy'] == 1){ ?>
-											<?php if( $goods['member_disc'] < 100 ){ ?>
-											客户折扣：{$goods['member_disc']}%
-											<?php } ?>
-											<?php } ?>
-										</td>
-										<td>
-											{$goods['quantity']}个<?php if($goods['has_refund_quantity'] > 0){ ?>(已退{$goods['has_refund_quantity']}个)<?php } ?>
-										</td>
-										<td>
-											<?php if($item['type'] == 'integral'){ ?> <?php }else{ ?>¥<?php } ?>{:round($goods['oldprice']*$goods['quantity'],2)}
-										</td>
-
-									</tr>
-									<?php if($item['is_commission'] == 1 && !empty($goods['member_commission_list']) ){ ?>
-									<tr>
-										<td <?php if($item['delivery'] == 'hexiao'){ ?>colspan="11"<?php }else{ ?>colspan="10"<?php } ?>>
-										分销佣金：<br/>
-										<?php foreach($goods['member_commission_list'] as $mb_val){ ?>
-										<!--分销员：<?php echo $mb_val['username']; ?>（<?php echo $mb_val['level']; ?>级上线）
-                                         佣金比例：
-                                         <?php if($mb_val['type'] == 1){  ?>
-                                         &nbsp;<?php echo $mb_val['bili']; ?>%
-                                        *(&nbsp;基数：{$goods['price']}
-                                        *&nbsp;数量：{$goods['quantity']}
-                                         <?php if($goods['has_refund_money']>0){ ?>
-                                         -&nbsp;已退款：{$goods['has_refund_money']}
-                                         <?php } ?>
-                                         )
-                                        <?php }else{ ?>
-                                            固定佣金<?php echo $mb_val['bili']; ?>
-                                                    &nbsp;*&nbsp;数量：{$goods['quantity']}
+  <div class="page-body-wrapper">
+    <div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+      <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6 main-header">
+              <h6 class="mb-0">当前位置</h6>
+              <h2>订单<span>详情</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 xl-50 box-col-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>订单跟踪</h5>
+              </div>
+              <div class="card-body">
+                <div class="timeline-small">
+                    <?php foreach ($history_list as $history) { ?>
+                      <div class="media">
+                        <div class="timeline-round timeline-line-1 bg-primary"><i class="fa fa-shopping-bag" style="top: 12px;position: absolute;left: 12px;font-size: 14px;"></i>
+                        </div>
+                        <div class="media-body row">
+                          <h6>
+                            <span class="badge <?php if ($history['order_status_id'] != 1) { ?>badge-success<?php } else { ?>badge-danger<?php } ?>"><?php echo $history['order_status_name']; ?></span><span
+                              class="pull-right p-t-5 f-12"><?php echo date("Y-m-d H:i:s", $history['date_added']); ?></span>
+                          </h6>
+                          <p><?php echo $history['comment']; ?></p>
+                        </div>
+                      </div>
+                    <?php } ?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 xl-50 box-col-6">
+            <form action="" class="form theme-form layui-form" lay-filter="example" method="post">
+              <input name="id" type="hidden" value="{$item['order_id']}"/> <input name="dispatchid" type="hidden" value="{$express_info['id']}"/>
+              <!---订单详情begin--->
+              <div class="card o-hidden">
+                <div class="cal-date-widget card-body p-0">
+                  <div class="row">
+                    <div class="col-xl-8">
+                      <div class="card-header">
+                        <h5>订单编号：{$item['order_num_alias']}</h5>
+                      </div>
+                      <div class="p-40 p-t-20">
+                        <div class="avatars">
+                          <h5 class="avatar">
+                            客户：
+                              <?php if (defined('ROLE') && ROLE == 'agenter') { ?>
+                                {$member['username']} ID：{$member['member_id']}<img class="b-r-8 height-50 m-l-10" src="{$member['avatar']}"/>
+                              <?php } else { ?><?php if ($s_id == 1) { ?>
+                                <a class="text-primary" href="{:U('user/detail',array('id'=>$member['member_id']))}" target='_blank'>{$member['username']}</a>
+                              <?php } else { ?>
+                                <a class="text-primary" id="user" target='_blank'>{$member['username']}</a>
+                              <?php } ?>
+                                ID：<a class="text-primary" href="{:U('user/detail',array('id'=>$member['member_id']))}" target='_blank'>{$member['member_id']}</a><img class="b-r-8 height-50 m-l-10" src="{$member['avatar']}"/>
+                                  <?php if (!empty($member['content'])) { ?>
+                                  <font class="text-danger">({$member['content']})</font>
+                                  <?php } ?><?php } ?>
+                          </h5>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <?php if (!empty($coupon)) { ?>
+                              <label class="col-sm-3 col-form-label">优惠券：</label><label class="col-sm-9 col-form-label">{$coupon['voucher_title']}</label>
+                            <?php } ?>
+                          <label class="col-sm-3 col-form-label">付款方式：</label> <label class="col-sm-9 col-form-label">
+                                <?php if ($item['payment_code'] == '') { ?>未付款<?php } ?>
+                                <?php if ($item['payment_code'] == 'yuer') { ?>余额支付<?php } ?>
+                                <?php if ($item['payment_code'] == 'admin') { ?>后台付款<?php } ?>
+                                <?php if ($item['payment_code'] == 'weixin') { ?>微信支付<?php } ?>
+                                <?php if ($item['payment_code'] == 'supply_mobile') { ?>商户手机端付款<?php } ?>
+                                <?php if ($item['payment_code'] == 'cashon_delivery') { ?>货到付款<?php } ?>
+                          </label>
+                            <?php if ($is_order_note_open == 1) { ?><?php if (!($item['delivery'] == 'express' && ($item['type'] == 'normal' || $item['type'] == 'pintuan'))) { ?><?php if (!empty($item['note_content'])) { ?>
+                              <label class="col-sm-3 col-form-label">{$order_note_name}：</label><label class="col-sm-9 col-form-label">{$item['note_content']}</label>
+                            <?php } ?><?php } ?><?php } ?>
+                          <label class="col-sm-3 col-form-label">配送方式：</label> <label class="col-sm-9 col-form-label">
+                                <?php if ($item['delivery'] == 'pickup') { ?>
+                                  自提
+                                <?php } elseif ($item['delivery'] == 'express') { ?><?php if ($is_virtualcard == 1) { ?>
+                                  礼品卡兑换余额
+                                <?php } else { ?>
+                                  快递<?php if (!empty($express_info['name'])) { ?>({$express_info['name']} <?php if (!empty($item['shipping_no'])) { ?>快递单号：{$item['shipping_no']}<?php } ?>)<?php } ?>
+                                  <a class="btn btn-info" data-href="{:U('order/express', array('order_id' => $item['order_id']))}" data-toggle="ajaxModal" href="javascript:">查看物流</a>
+                                <?php } ?><?php } elseif ($item['delivery'] == 'tuanz_send') { ?>
+                                  团长配送
+                                <?php } elseif ($item['delivery'] == 'hexiao') { ?>
+                                  到店核销
+                                <?php } else { ?>
+                                  同城配送
+                                <?php } ?>
+                          </label>
+                            <?php if ($is_virtualcard == 0) { ?>
+                              <label class="col-sm-3 col-form-label">收 货 人：</label><label class="col-sm-9 col-form-label">{$item['shipping_name']} {$item['shipping_tel']}</label>
+                            <?php } ?>
+                            <?php if ($is_can_look_headinfo) { ?><?php if ($item['type'] != 'integral' && ($item['type'] != 'pintuan' || $item['head_id'] > 0)) { ?>
+                              <label class="col-sm-3 col-form-label">团　　长：</label><label class="col-sm-9 col-form-label">{$item['ziti_name']} {$item['ziti_mobile']}</label>
+                            <?php } ?><?php if ($item['delivery'] == 'tuanz_send') { ?>
+                              <label class="col-sm-3 col-form-label">送货地址：</label><label class="col-sm-9 col-form-label">{$item['tuan_send_address']}</label>
+                            <?php } ?><?php } else { ?>
+                              <label class="col-sm-3 col-form-label">团　　长：</label><label class="col-sm-9 col-form-label">{$item['ziti_name']}</label>
+                            <?php } ?>
+                            <?php if ($item['delivery'] == 'pickup') { ?>
+                              <label class="col-sm-3 col-form-label">取货地址：</label><label class="col-sm-9 col-form-label">{$item['shipping_address']}</label>
+                            <?php } ?>
+                            <?php if (!empty($item['address_id']) && $is_virtualcard == 0) { ?>
+                              <label class="col-sm-3 col-form-label">详细地址：</label><label class="col-sm-9 col-form-label">
+                                {$province_info['name']}{$city_info['name']}{$area_info['name']} <?php if ($item['delivery'] == 'tuanz_send') { ?>{$item['tuan_send_address']}<?php } else { ?> {$item['shipping_address']}<?php } ?>
+                                , {$item['shipping_name']}, {$item['shipping_tel']}
+                                <a class='btn btn-info btn-xs op js-clip'
+                                   data-url="{$province_info['name']}{$city_info['name']}{$area_info['name']}<?php if ($item['delivery'] == 'tuanz_send') { ?>{$item['tuan_send_address']}<?php } else { ?> {$item['shipping_address']}<?php } ?>, {$item['shipping_name']}, {$item['shipping_tel']}">复制</a>
+                              </label>
+                            <?php } ?>
+                            <?php if (!empty($item['comment'])) { ?>
+                              <label class="col-sm-3 col-form-label">客户订单备注：</label><label class="col-sm-9 col-form-label">{$item['comment']}</label>
+                            <?php } ?>
+                            <?php if ($item['delivery'] == 'localtown_delivery') { ?><?php if (!empty($item['expected_delivery_time']) && empty($item['presale_info'])) { ?>
+                              <label class="col-sm-3 col-form-label">期望配送时间：</label><label class="col-sm-9 col-form-label">{$item['expected_delivery_time']}</label>
+                            <?php } ?><?php if ($item['order_status_id'] == 4 || $item['order_status_id'] == 6 || $item['order_status_id'] == 11) {
+                                    if (!empty($item['orderdistribution_order']['username'])) { ?>
+                                      <label class="col-sm-3 col-form-label">配送员：</label>
+                                      <label class="col-sm-9 col-form-label"><a href="javascript:void(0);" style="color:#428bca;"><?php echo $item['orderdistribution_order']['username']; ?></a></label>
+                                    <?php }
+                                } ?><?php } ?>
+                            <?php if (!empty($item['transaction_id'])) { ?>
+                              <label class="col-sm-3 col-form-label">交易单号：</label><label class="col-sm-9 col-form-label">{$item['transaction_id']}</label>
+                            <?php } ?>
+                            <?php if (!empty($item['presale_info'])) { ?><?php if ($item['presale_info']['presale_type'] == 0) { ?>
+                              <label class="col-sm-3 col-form-label">预售方式：</label><label class="col-sm-9 col-form-label">定金预售</label>
+                            <?php } else { ?>
+                              <label class="col-sm-3 col-form-label">预售方式：</label><label class="col-sm-9 col-form-label">全款预售</label>
+                            <?php } ?>
+                              <label class="col-sm-3 col-form-label">阶段一： </label><label class="col-sm-9 col-form-label">预付定金（定金
+                                ¥{$item['presale_info']['presale_ding_money']} <?php echo !empty($item['presale_info']['presale_deduction_money']) && $item['presale_info']['presale_deduction_money'] > 0 ? '抵扣 ¥' . $item['presale_info']['presale_deduction_money'] : ''; ?>
+                                ）</label>
+                                <?php if ($item['presale_info']['presale_type'] == 0) { ?>
+                                <label class="col-sm-3 col-form-label">阶段二：</label><label class="col-sm-9 col-form-label">
+                                        <?php if ($item['presale_info']['state'] == 1) { ?>
+                                          支付尾款（未支付）
+                                        <?php } else if ($item['presale_info']['state'] == 2) { ?>
+                                          支付尾款（已支付）
+                                        <?php } else if ($item['presale_info']['state'] == 0) { ?>
+                                          定金还未支付
                                         <?php } ?>
-                                        =&nbsp;具体佣金：<?php echo $mb_val['money']; ?>元 &nbsp;-->
-										分销商：<span><?php echo $mb_val['username']; ?></span>（<?php echo $mb_val['level']; ?>级上线）
-										佣金比例：
-										<?php if($mb_val['type'] == 1){
-									$jishu = $goods['total'] -$goods['fullreduction_money']-$goods['voucher_credit']-$goods['has_refund_money'];
-								?><span><?php echo $mb_val['bili'];?>%</span>有效基数：<span><?php echo $jishu; ?></span>
-										具体佣金：<?php echo round($jishu*$mb_val['bili']/100,2); ?>元
-										<?php }else{ ?>
-										固定佣金<?php echo $mb_val['bili']; ?>
-										数量：{$goods['quantity']}
-										=具体佣金：<?php echo round($mb_val['bili']*$goods['quantity'],2); ?>元
-										<?php } ?>
-										<!--=&nbsp;具体佣金：<?php echo $mb_val['money']; ?>元 &nbsp;-->
-										<?php
-									$str_state = '';
-									switch($mb_val['state'])
-									{
-										case 0: $str_state='待结算'; break;
-										case 1: $str_state='已结算'; $order_status = 1; break;
-										case 2: $str_state='订单退款'; break;
-									}
-								?>(<?php echo $str_state; ?>)<br/>
-										<?php } ?>
-										</td>
-									</tr>
-									<?php } ?>
-									<?php $i++; ?>
-									<?php } ?>
-									</tbody>
-								</table>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer class="footer">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 footer-copyright">
-						<p class="mb-0">Copyright © __YEARS__ Dejavu Tech. All rights reserved.</p>
-					</div>
-					<div class="col-md-6">
-						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+                                </label>
+                                <?php } ?><?php if ($item['presale_info']['presale_limit_balancepaytime'] == 0) { ?>
+                                <label class="col-sm-3 col-form-label">尾款支付时间：</label><label class="col-sm-9 col-form-label">不限制</label>
+                                <?php } else if ($item['presale_info']['presale_limit_balancepaytime'] == 1 && $item['presale_info']['presale_type'] == 0) { ?>
+                                <label class="col-sm-3 col-form-label">尾款支付时间：</label><label class="col-sm-9 col-form-label">{$item['presale_info']['balance_pay_begintime']} - {$item['presale_info']['balance_pay_endtime']}</label>
+                                <?php } ?><?php } ?>
+                            <?php if (!empty($item['expresssn']) && $item['delivery'] == 'express' && !empty($item['shipping_method'])) { ?>
+                              <label class="col-sm-3 col-form-label">快递公司：</label><label class="col-sm-9 col-form-label"><?php if (empty($express_info['name'])) { ?>其他快递<?php } else { ?>{$express_info['name']}<?php } ?></label>
+                              <label class="col-sm-3 col-form-label">快递单号：</label><label class="col-sm-9 col-form-label">{$item['shipping_no']}</label><label class="col-sm-3 col-form-label">发货时间：</label>
+                              <label class="col-sm-9 col-form-label">{:date('Y-m-d H:i:s',$item['express_time'])}</label>
+                            <?php } ?>
+                            <?php if ($item['delivery'] == 'pickup') { ?><?php if (!empty($item['express_time'])) { ?>
+                              <label class="col-sm-3 col-form-label">发货时间：</label><label class="col-sm-9 col-form-label">{:date('Y-m-d H:i:s',$item['express_time'])}</label>
+                            <?php } ?><?php if (!empty($item['express_tuanz_time'])) { ?>
+                              <label class="col-sm-3 col-form-label">团长接货时间：</label><label class="col-sm-9 col-form-label">{:date('Y-m-d H:i:s',$item['express_tuanz_time'])}</label>
+                            <?php } ?><?php } ?>
+                        </div>
+                        <div class="ops col-xl-12">
+                            <?php if (!empty($item['address_id'])) { ?>
+                              <a class="btn btn-primary" data-href="{:U('order/opchangeaddress', array('id' => $item['order_id']))}" data-toggle="ajaxModal" href="javascript:">修改订单收货信息</a>
+                            <?php } ?>
+                            <?php if ($item['type'] == 'pintuan') { ?>
+                              <a class="btn btn-primary" href="{:U('group/pintuan_detail', array('pin_id' => $pin_id))}" target="_blank">查看拼团详情</a>
+                            <?php } ?>
+                            <?php
+                            $is_ops_show = true;
+                            if (defined('ROLE') && ROLE == 'agenter') {
+                                $supper_info = json_decode(base64_decode($__eaterplanet_ecommerce_agent), true);
+                                if ($supper_info['type'] != 1) {
+                                    $is_ops_show = false;
+                                }
+                            } ?>
+                            <?php if ($is_ops_show) { ?>
+                              <!---操作开始-->
+                                <?php if ($item['order_status_id'] == 3) { ?>
+                                <!--未付款-->
+                                    <?php
+                                    $is_pay_show = true;
+                                    if (defined('ROLE') && ROLE == 'agenter') {
+                                        $supper_info = json_decode(base64_decode($_GPC['__eaterplanet_ecommerce_agent']), true);
+                                        $is_pay_show = false;
+                                    } ?><?php if ($is_pay_show) { ?><?php if (!isset($open_admin_payment) || $open_admin_payment == '1') { ?>
+                                  <a class="btn btn-primary deldom" data-confirm="确认此订单已付款吗？" data-href="{:U('order/oppay', array('id' => $item['order_id']))}" data-toggle="ajaxPost" href="javascript:">确认付款</a>
+                                    <?php } ?><?php } ?><?php } elseif ($item['order_status_id'] == 1) { ?>
+                                <!--已付款-->
+                                    <?php if ($item['order_status_id'] == 1 && $item['delivery'] == 'express') { ?>
+                                  <!--快递 发货-->
+                                  <a class="btn btn-primary ajaxPost" data-confirm="确认此订单发货吗？" data-href="{:U('order/opsend', array('id' => $item['order_id']))}" data-toggle='ajaxModal' href="javascript:">确认发货</a>
+                                    <?php } elseif ($item['order_status_id'] == 1 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send')) { ?>
+                                  <a class="btn btn-primary deldom" data-confirm="确认此订单发货吗？" data-href="{:U('order/opsend_tuanz', array('id' => $item['order_id']))}" href="javascript:">确认配送</a>
+                                    <?php } else { ?><?php } ?><?php } elseif ($item['order_status_id'] == 14 && ($item['delivery'] == 'pickup' || $item['delivery'] == 'tuanz_send')) { ?><?php if ($is_can_confirm_delivery) { ?>
+                                <a class="btn btn-primary deldom" data-confirm="确认送达团长吗？" data-href="{:U('order/opsend_tuanz_over', array('id' => $item['order_id']))}" href="javascript:">确认送达团长</a>
+                                <?php } ?><?php } elseif ($item['order_status_id'] == 14 && ($item['delivery'] == 'express')) { ?>
+                                <a class="btn btn-primary deldom" data-confirm="确认订单收货吗？" data-href="{:U('order/opreceive', array('id' => $item['order_id']))}" href="javascript:">确认收货</a><br/>
+                                <?php } elseif ($item['order_status_id'] == 4 || $item['order_status_id'] == 6) { ?>
+                                <!--已发货-->
+                                    <?php if ($item['order_status_id'] == 4) { ?>
+                                  <!--快递 取消发货-->
+                                        <?php if ($is_can_confirm_receipt) { ?><?php if ($item['delivery'] == 'hexiao') { ?>
+                                    <a class="btn btn-primary deldom" data-confirm="确认使用该订单吗？<br/><span style='color:#ad0909;font-size:13px;'>确认使用订单以后，订单下面全部商品默认核销成功。</span>"
+                                       data-href="{:U('order/order_hexiao', array('id' => $item['order_id']))}" href="javascript:">确认使用</a>
+                                        <?php } else { ?>
+                                    <a class="btn btn-primary deldom" data-confirm="确认订单收货吗？" data-href="{:U('order/opreceive', array('id' => $item['order_id']))}" href="javascript:">确认收货</a><br/>
+                                        <?php } ?><?php } ?><?php if ($item['delivery'] == 'express' && $is_virtualcard == 0) { ?>
+                                    <a class="btn btn-primary" data-href="{:U('order/opchangeexpress', array('id' => $item['order_id']))}" data-toggle="ajaxModal" href="javascript:">修改物流</a>
+                                        <?php } ?><?php } else { ?>
+                                  <a class="btn btn-primary deldom" data-confirm="确认完成订单吗？" data-href="{:U('order/opfinish', array('id' => $item['order_id']))}" href="javascript:">确认完成</a>
+                                    <?php } ?><?php } elseif ($item['order_status_id'] == 3) { ?><?php } ?>
+                              <!---操作结束--->
+                            <?php } ?>
+                            <?php if (!defined('ROLE')) {
+                                if ($item['order_status_id'] == 3 && $item['type'] != 'integral' && $is_presale == 0) { ?>
+                                  <a class="btn btn-primary" data-href="{:U('order/change_order', array('id' => $item['order_id']))}" data-toggle="ajaxModal" href="javascript:">订单改价</a>
+                                <?php }
+                            } ?>
+                          <a class="btn btn-primary" data-href="{:U('order/opremarksaler', array('id' => $item['order_id']))}" data-toggle="ajaxModal"
+                             href="javascript:"><?php if (!empty($item['remarksaler'])) { ?>查看备注<?php } else { ?>添加备注<?php } ?></a>
+                        </div>
+                          <?php if ($item['order_status_id'] != 3) { ?>
+                            <div class="text col-xl-12" style="border: none;padding: 0">
+                                <?php if ($item['order_status_id'] == 1) { ?>
+                                  友情提示：如果无法进行发货，请及时联系买家进行妥善处理;
+                                <?php } ?>
+                                <?php if ($item['order_status_id'] == 4) { ?><?php if ($item['delivery'] == 'hexiao') { ?>
+                                  注：确认使用后，订单下面全部商品默认核销成功!<br/>友情提示：如果无法进行发货，请及时联系买家进行妥善处理;
+                                <?php } else { ?>
+                                  友情提示：请及时关注物流状态，确保买家及时收到商品;如果买家未收到货物或有退换货请求，请及时联系买家妥善处理
+                                <?php }
+                                } ?>
+                                <?php if ($item['order_status_id'] == 11) { ?>
+                                  友情提示：交易成功，如买家有售后申请，请与买家进行协商，妥善处理
+                                <?php } ?>
+                            </div>
+                          <?php } ?>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 gradient-primary p-30">
+                      <div class="col-sm-12 m-t-10 m-b-30">
+                        <span class="f-20 f-w-900">订单状态：</span>
+                          <?php if ($item['order_status_id'] == 1) { ?>
+                            <span class="txt-warning f-24 f-w-900">待发货</span>
+                          <?php } ?>
+                          <?php if ($item['order_status_id'] == 3) { ?>
+                            <span class="txt-warning f-24 f-w-900">待付款</span>
+                          <?php } ?>
+                          <?php if ($item['order_status_id'] == 4) { ?>
+                            <span class="txt-warning f-24 f-w-900">已发货</span>
+                              <?php if ($item['delivery'] == 'hexiao') { ?>
+                              <span class="txt-warning f-24 f-w-900">待使用</span>
+                              <?php } else { ?>
+                              <span class="txt-warning f-24 f-w-900">待收货</span>
+                              <?php } ?><?php } ?>
+                          <?php if ($item['order_status_id'] == 6) { ?>
+                            <span class="txt-success f-24 f-w-900">已签收</span>
+                          <?php } ?>
+                          <?php if ($item['order_status_id'] == 7) { ?>
+                            <span class="txt-dark f-24 f-w-900">已退款</span>
+                          <?php } ?>
+                          <?php if ($item['order_status_id'] == 14) { ?>
+                            <span class="txt-warning f-24 f-w-900">配送中</span>
+                          <?php } ?>
+                          <?php if ($item['order_status_id'] == 11) { ?>
+                            <span class="txt-success f-24 f-w-900">交易完成</span>
+                          <?php } ?>
+                          <?php if ($item['order_status_id'] == 5) { ?>
+                            <span class="txt-twitter f-24 f-w-900">已关闭</span>
+                          <?php } ?>
+                          <?php if ($item['order_status_id'] == 15) { ?>
+                            <span class="txt-success f-24 f-w-900">定金已支付，等待活动结束买家支付尾款</span>
+                          <?php } ?>
+                        <i>
+                            <?php if ($item['order_status_id'] == 3) { ?>
+                              （等待买家付款）
+                            <?php } ?>
+                            <?php if ($item['order_status_id'] == 1) { ?>（买家已经付款，请商家尽快发货）<?php } ?>
+                            <?php if ($item['order_status_id'] == 4) { ?><?php if ($item['delivery'] == 'hexiao') { ?>
+                              （买家已经付款，等待买家到店核销）
+                            <?php } else { ?>
+                              （商家已发货，等待买家收货并交易完成）
+                            <?php } ?><?php } ?>
+                            <?php if ($item['order_status_id'] == 14) { ?>（商家已发货，正在配送给团长途中）<?php } ?>
+                            <?php if ($item['order_status_id'] == 12) { ?>
+                              （已售后完成<?php if (!empty($refund['refundtime'])) { ?>售后时间: {:date('Y-m-d H:i:s',$refund['refundtime'])}<?php } ?>）
+                            <?php } ?>
+                        </i>
+                      </div>
+                      <div class="price">
+                          <?php if ($item['type'] != 'integral') { ?>
+                            <label class="col-sm-12 col-form-label">订单结算状态：
+                                <?php
+                                $order_states = '';
+                                switch ($order_status) {
+                                    case 0:
+                                        $order_states = '待结算';
+                                        break;
+                                    case 1:
+                                        $order_states = '已结算';
+                                        break;
+                                    case 2:
+                                        $order_states = '已失效';
+                                        break;
+                                } ?><?php echo $order_states; ?>
+                              <span onmouseout="outHide1()" onmouseover="overShow1()"><i class="icon-help-alt"></i></span> </label>
+                          <?php } ?>
+                        <div class="alert alert-secondary dark" id="showDiv" style="display: none">
+                          -待结算：还在订单“售后期”。<br/> -已结算：已过订单“售后期”。<br/> -已失效：整单退款的订单。<br/>
+                            <?php if (($item['order_status_id'] == 6 || $item['order_status_id'] == 11)) { ?><?php if ($order_status == 0 && $open_aftersale == 1) { ?>
+                              -订单预计结算时间：<?php echo date("Y-m-d H:i:s", $order_settlement); ?>，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
+                            <?php } else { ?>
+                              -订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
+                            <?php } ?><?php } else { ?><?php if ($order_status == 2) { ?>
+                              -订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
+                            <?php } else { ?><?php if ($open_aftersale == 1) { ?>
+                              -订单预计结算时间：订单 “确认收货” 后，预计<?php echo $open_aftersale_time; ?>天后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
+                            <?php } else { ?>
+                              -订单预计结算时间：订单 “确认收货” 后进行结算，订单结算状态为“已结算”的时候，用户在小程序订单中不能在申请商品售后，订单中的客户佣金，团长提成为已结算状态。
+                            <?php } ?><?php } ?><?php } ?>
+                        </div>
+                        <label class="col-sm-12 col-form-label">商品合计：<?php if ($item['type'] == 'integral') { ?><?php } else { ?>¥<?php } ?>
+                          {: round($item['total'],2)}<?php if ($item['type'] == 'integral') { ?>积分<?php } ?></label>
+                          <?php if ($item['delivery'] == 'localtown_delivery') { ?><?php if ($item['is_localtown_free_shipping_fare'] == 1) { ?>
+                            <label class="col-sm-12 col-form-label">同城配送费：¥{$item['localtown_free_shipping_fare']}</label><label class="col-sm-12 col-form-label">满减配送费：-¥{$item['localtown_free_shipping_fare']}</label>
+                          <?php } else { ?>
+                            <label class="col-sm-12 col-form-label">同城配送费：¥{$item['shipping_fare']}</label>
+                          <?php } ?><?php if (!empty($item['localtown_add_shipping_fare']) && $item['localtown_add_shipping_fare'] > 0) { ?>
+                            <label class="col-sm-12 col-form-label">加价配送：¥{$item['localtown_add_shipping_fare']}</label>
+                          <?php } ?><?php } else { ?><?php if ($item['is_free_shipping_fare'] == 1) { ?>
+                            <label class="col-sm-12 col-form-label">运费：¥{$item['fare_shipping_free']} ($item['delivery_text']})</label>
+                            <label class="col-sm-12 col-form-label">满{$item['man_e_money']}减运费：-¥{$item['fare_shipping_free']}</label>
+                          <?php } else { ?>
+                            <label class="col-sm-12 col-form-label">运费：¥{$item['shipping_fare']} ({$item['delivery_text']})</label>
+                          <?php } ?><?php } ?>
+                          <?php if ($item['packing_fare'] > 0) { ?>
+                            <label class="col-sm-12 col-form-label">{$localtown_modifypickingname}：¥{$item['packing_fare']}</label>
+                          <?php } ?>
+                          <?php if ($item['voucher_id'] > 0) { ?>
+                            <label class="col-sm-12 col-form-label">优惠券优惠：-¥{$item['voucher_credit']}</label>
+                          <?php } ?>
+                          <?php if ($item['fullreduction_money'] > 0) { ?>
+                            <label class="col-sm-12 col-form-label">满减优惠：-¥{$item['fullreduction_money']}</label>
+                          <?php } ?>
+                          <?php if ($item['score_for_money'] > 0) { ?>
+                            <label class="col-sm-12 col-form-label">积分抵扣：-¥{$item['score_for_money']}</label>
+                          <?php } ?>
+                          <?php if ($item['is_change_price'] == 1) { ?>
+                            <label class="col-sm-12 col-form-label">商家改价：
+                                <?php
+                                $change_price = $item['total'] - $item['old_price'];
+                                if ($change_price < 0) {
+                                    echo '-¥' . (0 - $change_price);
+                                } else {
+                                    echo '¥' . $change_price;
+                                } ?>
+                            </label>
+                          <?php } ?>
+                          <?php if (($item['changedtotal']) != 0) { ?>
+                            <label class="col-sm-12 col-form-label">卖家改价：<?php if (0 < $item['changedtotal']) { ?>+<?php } else { ?>-<?php } ?>
+                              ¥{php echo number_format(abs($item['changedtotal']),2)}</label>
+                          <?php } ?>
+                          <?php if (($item['changedshipping_fare']) != 0) { ?>
+                            <label class="col-sm-12 col-form-label">卖家改运费：<?php if (0 < $item['changedshipping_fare']) { ?>+<?php } else { ?>-<?php } ?>
+                              ¥{php echo abs($item['changedshipping_fare'])}</label>
+                          <?php } ?>
+                          <?php if ($item['shipping_fare'] <= 0) {
+                              $item['fare_shipping_free'] = 0;
+                          } ?>
+                          <?php
+                          $free_tongji = $item['total'] + $item['packing_fare'] + $item['shipping_fare'] - $item['voucher_credit'] - $item['fullreduction_money'] - $item['score_for_money'] + $item['localtown_add_shipping_fare'] - $item['fare_shipping_free'] - $presale_for_ordermoney;
+                          if ($free_tongji < 0) {
+                              $free_tongji = 0;
+                          } ?>
+                          <?php if ($item['is_vipcard_buy'] == 1 && $member_youhui > 0) { ?>
+                            <label class="col-sm-12 col-form-label">会员卡优惠：</span><span class="text-danger">-¥{$member_youhui}</span></label>
+                              <?php } ?>
+                          <?php if ($item['is_level_buy'] == 1 && $member_youhui > 0) { ?>
+                            <label class="col-sm-12 col-form-label">客户等级折扣优惠：</span><span class="text-danger">-¥{$member_youhui}</span></label>
+                              <?php } ?>
+                          <?php if ($item['type'] == 'integral') { ?>
+                            <div class="col-sm-12"><span class="f-20 f-w-900">实付款：</span> <span class="txt-warning f-24 f-w-900"><?php if ($item['shipping_fare'] > 0) { ?>¥{:round($item['shipping_fare'],2)}+<?php } ?> {:round($item['total'],2)} 积分</span>
+                            </div>
+                              <?php if ($total_refund_money > 0) { ?>
+                                <label class="col-sm-12 col-form-label">退款：{$total_refund_money}积分</label>
+                              <?php } ?><?php if ($total_refund_shipping_fare > 0) { ?>
+                                <label class="col-sm-12 col-form-label">退运费：¥{$total_refund_shipping_fare}</label>
+                              <?php } ?><?php } else { ?><?php if ($presale_for_ordermoney > 0) { ?>
+                                <div class="col-sm-12"><span class="txt-warning f-24 f-w-900">定金抵扣：</span><span class="txt-danger f-24 f-w-900">-¥{$presale_for_ordermoney}</span></div>
+                              <?php } ?>
+                            <div class="col-sm-12"><span class="txt-warning f-24 f-w-900">实付款：</span><span class="txt-danger f-24 f-w-900">¥<?php echo round($free_tongji, 2) ?></span></div>
+                              <?php if ($total_refund_money > 0) { ?>
+                                <label class="col-sm-12 col-form-label">退款：¥{$total_refund_money}</label>
+                              <?php } ?><?php if ($total_refund_shipping_fare > 0) { ?>
+                                <label class="col-sm-12 col-form-label">退运费：¥{$total_refund_shipping_fare}</label>
+                              <?php } ?><?php } ?>
+                      </div>
+                        <?php if (in_array($item['order_status_id'], array(1, 4, 6, 10, 11, 12, 14)) && $is_can_nowrfund_order) { ?>
+                          <a class="op btn btn-dark" data-href="{:U('order/oprefund_do', array('id' => $item['order_id']))}" data-toggle="ajaxModal" href="javascript:" style="position: absolute;bottom:40px;right: 50px">
+                            整个订单立即退款 </a>
+                        <?php } ?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-12 xl-100 box-col-12">
+              <?php if ($is_virtualcard == 1) { ?>
+                <div class="card-header p-b-30">
+                  <h5>礼品卡信息</h5>
+                </div>
+                <table border="0" cellpadding="0" cellspacing="0" class="table table-xs text-center">
+                  <thead>
+                  <tr>
+                    <th>线上兑换码</th>
+                    <th>状态</th>
+                    <th>有效期</th>
+                    <th>可兑换余额</th>
+                    <th>使用人</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>{$virtualcard_info['code_sn']}</td>
+                    <td>
+                        <?php
+                        switch ($virtualcard_info['state']) {
+                            case 0:
+                                echo '未支付';
+                                break;
+                            case 1:
+                                echo '未使用';
+                                break;
+                            case 2:
+                                echo '已使用';
+                                break;
+                            case 3:
+                                echo '已失效';
+                                break;
+                        } ?>
+                    </td>
+                    <td>
+                        <?php if ($virtualcard_info['is_effect'] == 1) { ?><?php if ($virtualcard_info['effect_type'] == 0) { ?>
+                          无限期
+                        <?php } else { ?>
+                          {$virtualcard_info['effect_enddate']}
+                        <?php } ?><?php } else { ?>
+                          已失效
+                        <?php } ?>
+                    </td>
+                    <td>¥{:round($virtualcard_info['code_money'], 2)}</td>
+                    <td>{$virtualcard_info['use_member_name']}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              <?php } ?>
+              <?php if (!empty($order_form_data) && !empty($order_form_data['form_list'])) {
+                  $form_list = $order_form_data['form_list'];
+                  ?>
+                <div class="form-title">
+                  关联表单信息：
+                </div>
+                <div class="form row">
+                  <ul class="form_list">
+                      <?php foreach ($form_list as $k => $v) { ?>
+                        <li>
+                            <?php if ($v['type'] == 'image') { ?>
+                              {$v['item_name']}：
+                                <?php if (!empty($v['item_val'])) { ?><?php foreach ($v['item_val'] as $ik => $iv) { ?><?php if (empty($iv)) { ?>
+                                暂无
+                                <?php } else { ?>
+                                <img src="{$iv}" style="width:52px;height:52px;border:1px solid #efefef; padding:1px;">
+                                <?php } ?><?php } ?><?php } ?><?php } else { ?>
+                              {$v['item_name']}：{$v['item_val']}
+                            <?php } ?>
+                        </li>
+                      <?php } ?>
+                  </ul>
+                </div>
+              <?php } ?>
+          </div>
+          <div class="col-xl-12 xl-100 box-col-12">
+            <form action="" class="form theme-form layui-form" lay-filter="example" method="post">
+              <input name="id" type="hidden" value="{$item['order_id']}"/> <input name="dispatchid" type="hidden" value="{$express_info['id']}"/>
+              <div class="card">
+                <div class="card-header p-b-30">
+                  <h5>订单商品信息</h5>
+                </div>
+                <table border="0" cellpadding="0" cellspacing="0" class="table table-xs text-center">
+                  <thead>
+                  <tr>
+                    <th>商品图片</th>
+                    <th>商品名称</th>
+                    <th>规格/编号</th>
+                    <th>基数</th>
+                      <?php if ($item['type'] != 'integral') { ?>
+                        <th>团长提成</th>
+                      <?php } ?>
+                    <th>是否退款</th>
+                      <?php if ($item['delivery'] == 'hexiao') { ?>
+                        <th>到店核销方式</th>
+                      <?php } ?>
+                    <th>商户</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>价格</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <?php $i = 0; ?>
+                  <?php $member_youhui = 0; ?>
+                  <?php $total_refund_money = 0; ?>
+                  <?php $total_refund_shipping_fare = 0; ?>
+                  <?php $integral_total_refund_money = 0; ?>
+                  <?php $integral_total_refund_shipping_fare = 0; ?>
+                  <?php $order_total = 0; ?>
+                  <?php foreach ($order_goods as $goods) { ?><?php if (!empty($goods['goods_refund_shipping_fare'])) {
+                      $total_refund_shipping_fare = $total_refund_shipping_fare + $goods['goods_refund_shipping_fare'];
+                  } ?><?php $member_youhui += ($goods['oldprice'] - $goods['price']) * $goods['quantity']; ?><?php $total_refund_money += ($goods['has_refund_money']); ?>
+                    <tr>
+                      <td>
+                        <img src="{: tomedia($goods['goods_images'])}" style='width:40px;height:40px;border-radius: 6px'>
+                      </td>
+                      <td>
+                        <a href="{:U('goods/edit', array('id' => $goods['goods_id']))}" target="_blank" title="查看">{$goods['name']}<?php if ($goods['is_refund_state'] == 1) { ?>(退款)<?php } ?></a>
+                      </td>
+                      <td>
+                        <div>规格：<?php if (!empty($goods['option_sku'])) { ?>
+                            <span class="badge badge-primary" data-container="body" data-content="{$goods['option_sku']}" data-placement="right" data-toggle="popover">{$goods['option_sku']}</span><?php } else { ?>无<?php } ?>
+                        </div>
+                        <div>
+                          编码：<?php if (!empty($goods['model'])) { ?>{$goods['model']}<?php } else { ?>无<?php } ?></div>
+                      </td>
+                      <td>
+                          <?php
+                          $vip_free_money = 0;
+                          $mblevel_free_money = 0;
+
+                          if ($goods['is_level_buy'] == 1) {
+                              $mblevel_free_money = round(($goods['oldprice'] - $goods['price']) * $goods['quantity'], 2);
+                          }
+                          if ($goods['is_vipcard_buy'] == 1) {
+                              $vip_free_money = round(($goods['oldprice'] - $goods['price']) * $goods['quantity'], 2);
+                          }
+                          $order_total = $order_total + $goods['old_total'];
+                          $change_price = 0;
+                          if ($goods['is_change_price'] == 1) {
+                              $change_price = $goods['price'] * $goods['quantity'] - $goods['total'];
+                          } ?>
+                        商品合计：{$goods['old_total']}<br/> -满减：{$goods['fullreduction_money']}<br/> -优惠券：{$goods['voucher_credit']}<br/>
+                          <?php if (($goods['is_change_price'] == 1 && $change_price > 0)) { ?>
+                            -商家改价：{$change_price}<br/>
+                          <?php } ?>
+                          <?php if (($goods['is_level_buy'] > 0 && $mblevel_free_money > 0)) {
+                              $item['is_level_buy'] = 1; ?>
+                            -客户等级优惠：{$mblevel_free_money}<br/>
+                          <?php } ?>
+                          <?php if (($goods['is_vipcard_buy'] > 0 && $vip_free_money > 0)) {
+                              $item['is_vipcard_buy'] = 1; ?>
+                            -付费会员优惠：{$vip_free_money}<br/>
+                          <?php } ?>
+                          <?php if ($goods['has_refund_money'] > 0) { ?>
+                            -已退款：{$goods['has_refund_money']}<br/>
+                          <?php } ?>
+                        =基数：<?php echo round($goods['total'] - $goods['fullreduction_money'] - $goods['voucher_credit'] - $goods['has_refund_money'], 2); ?>
+                      </td>
+                        <?php if ($item['type'] != 'integral' && ($item['type'] == 'normal' || $item['head_id'] > 0)) { ?>
+                          <td>
+                              <?php foreach ($goods['head_commission_order_info'] as $kkk => $vvv) { ?>
+                                团长：<?php echo $vvv['head_name']; ?><?php if ($item['delivery'] == 'tuanz_send') { ?>
+                                  佣金：<?php if ($vvv['money'] == 0) {
+                                          echo round($vvv['add_shipping_fare'], 2);
+                                      } else {
+                                          echo round($vvv['money'] - $vvv['add_shipping_fare'], 2);
+                                      } ?> </br>
+                                      <?php if ($vvv['level'] <= 0) { ?>
+                                    配送收入：<?php echo $vvv['add_shipping_fare']; ?></br>
+                                      <?php } ?>
+                                  总佣金： <?php echo $vvv['money']; ?><?php } else { ?>
+                                  ¥<?php echo $vvv['money']; ?><?php } ?><?php if ($vvv['level'] > 0) { ?>
+                                  (<?php echo $vvv['level']; ?>级)<br/>
+                                      <?php if ($vvv['fen_type'] == 0) { ?>
+                                    提成比例：<?php echo $vvv['bili']; ?>%
+                                      <?php } else { ?>
+                                    固定团长提成金额：<?php echo $vvv['bili']; ?><?php } ?><?php } else { ?>
+                                  <br/>
+                                      <?php if ($vvv['fen_type'] == 0) { ?>
+                                    提成比例：<?php echo $vvv['bili']; ?>%
+                                      <?php } else { ?>
+                                    固定团长提成金额：<?php echo $vvv['bili']; ?><?php } ?><?php } ?><?php } ?>
+                          </td>
+                        <?php } ?>
+                      <td>
+                          <?php if ($item['order_status_id'] == 7) { ?>
+                            已退款
+                          <?php } else if ($goods['is_refund_state'] == 1 && !empty($goods['refund_info'])) { ?>
+                            退款金额：<?php echo $goods['refund_info']['ref_money']; ?><?php if ($item['type'] == 'integral') { ?>积分<?php } else { ?>元<?php } ?>,
+                              <?php if ($goods['refund_info']['state'] == 0) { ?>
+                              <span class="badge badge-info">申请中</span>
+                              <?php } else if ($goods['refund_info']['state'] == 3) { ?>
+                              <span class="badge badge-success">退款成功</span>
+                              <?php } else if ($goods['refund_info']['state'] == 4) { ?>
+                              <span class="badge badge-warning">退款失败</span>
+                              <?php } ?>
+                            <br/><br/><a class="btn btn-primary btn-xs" href="{:U('order/oprefund', array('id' => $item['order_id'], 'ref_id' => $goods['refund_info']['ref_id'] ))}">退款详情</a>
+                          <?php } else if ($goods['is_refund_state'] == 0 && in_array($item['order_status_id'], array(1, 4, 6, 10, 11, 12, 14)) && $is_can_nowrfund_order) { ?><?php if ($item['delivery'] == 'hexiao') { ?><?php if (!empty($goods['hx_info']) && $goods['hx_info']['is_can_refund'] == 1) { ?>
+                            <a class='btn op btn-primary btn-xs' data-href="{:U('order/oprefund_goods_do', array('id' => $item['order_id'], 'order_goods_id' => $goods['order_goods_id'] ))}" data-toggle="ajaxModal" href="javascript:">
+                              后台商品退款 </a>
+                          <?php } ?><?php } else { ?>
+                            <a class='btn op btn-primary btn-xs' data-href="{:U('order/oprefund_goods_do', array('id' => $item['order_id'], 'order_goods_id' => $goods['order_goods_id'] ))}" data-toggle="ajaxModal" href="javascript:">
+                              后台商品退款 </a>
+                          <?php } ?><?php if ($goods['has_refund_quantity'] > 0) { ?>已退款商品数量{$goods['has_refund_quantity']}个,
+                            <br/>退款<?php if ($item['type'] == 'integral') { ?>积分<?php } else { ?>金额<?php } ?>{$goods['has_refund_money']}<?php if ($item['type'] == 'integral') { ?>积分<?php } else { ?>元<?php } ?><?php } ?><?php } else { ?><?php if ($goods['has_refund_quantity'] > 0) { ?>已退款商品数量{$goods['has_refund_quantity']}个,
+                            <br/>退款<?php if ($item['type'] == 'integral') { ?>积分<?php } else { ?>金额<?php } ?>{$goods['has_refund_money']}<?php if ($item['type'] == 'integral') { ?>积分<?php } else { ?>元<?php } ?><?php } ?><?php } ?>
+                      </td>
+                        <?php if ($item['delivery'] == 'hexiao') { ?>
+                          <td>
+                              <?php if (!empty($goods['hx_info'])) { ?><?php if ($goods['hx_info']['hexiao_type'] == 0) { ?>
+                                <span>订单核销</span>
+                              <?php } else { ?>
+                                <span>按次核销</span>
+                              <?php } ?>
+                                <br/>
+                                  <?php if ($item['order_status_id'] == 11 && $goods['hx_info']['is_hexiao_over'] == 1) { ?>
+                                  <a class="btn btn-primary btn-xs hxBtn" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}" href="javascript:">核销记录</a>
+                                  <?php } ?><?php if ($item['order_status_id'] == 7 || $goods['is_refund_state'] == 1 || (!empty($goods['refund_info'] && $goods['refund_info']['state'] != 4))) {
+                                  } else { ?><?php if ($goods['hx_info']['is_hexiao_over'] == 1) { ?><?php if ($item['order_status_id'] == 4) { ?>
+                                      <a class="btn btn-success btn-xs hxBtn" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}" href="javascript:">已核销</a>
+                                      <?php } ?><?php } else { ?><?php if ($goods['hx_info']['hexiao_type'] == 0) { ?><?php if ($item['order_status_id'] == 4) { ?>
+                                      <a class="btn btn-primary btn-xs deldom" data-confirm="确认使用该订单吗？" data-href="{:U('order/order_goods_hexiao', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}"
+                                         href="javascript:">确认使用</a>
+                                      <?php } ?><?php } else { ?><?php if ($item['order_status_id'] == 4) { ?>
+                                      <a class="btn btn-primary hxAction" data-href="{:U('order/hexiao_times', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}" href="javascript:">确认使用</a>
+                                      <?php } ?><?php if ($goods['hx_info']['remain_hexiao_count'] > 0 && $goods['hx_info']['remain_hexiao_count'] < $goods['hx_info']['hexiao_count'] && $goods['hx_info']['hexiao_count'] > 0) { ?>
+                                      <a class="btn btn-primary btn-xs hxBtn" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}" href="javascript:">部分核销</a>
+                                      <?php } ?><?php if ($goods['hx_info']['hexiao_count'] == 0 && $goods['hx_info']['record_count'] > 0) { ?>
+                                      <a class="btn btn-primary btn-xs hxBtn" data-href="{:U('order/view_hexiao_history', array('id' => $item['order_id'],'order_goods_id'=>$goods['order_goods_id']))}" href="javascript:">核销记录</a>
+                                      <?php } ?><?php } ?><?php } ?><?php } ?><?php } ?>
+                          </td>
+                        <?php } ?>
+                      <td>
+                        <span>{$goods['supply_name']}<br/>({$goods['supply_type']})</span>
+                          <?php if ($item['delivery'] == 'hexiao') { ?><?php if (!empty($goods['hx_info']) && $goods['hx_info']['hx_assign_salesroom'] == 1) { ?>
+                                <br/><a class="btn btn-primary btn-xs hxBtn" data-href="{:U('order/hexiao_goods_assign_salesroom', array('goods_id' => $goods['goods_id'],'order_goods_id'=>$goods['order_goods_id']))}" href="javascript:">商品指定核销</a>
+                              <?php }
+                          } ?>
+                      </td>
+                      <td>
+                          <?php if ($item['type'] == 'integral') { ?><?php } else { ?>¥<?php } ?>
+                        {:round($goods['oldprice'],2)}<?php if ($item['type'] == 'integral') { ?>积分<?php } else { ?><?php } ?>
+                        <!--
+                                          <?php if ($goods['member_disc'] < 100) { ?>
+                                          <span class="label label-primary">会员折扣：{$goods['member_disc']}%</span>
+                                          <?php } ?>-->
+                          <?php if ($goods['is_vipcard_buy'] == 1) { ?>
+                            付费会员价格：{:round($goods['price'],2)}
+                          <?php } else if ($goods['is_level_buy'] == 1) { ?><?php if ($goods['member_disc'] < 100) { ?>
+                            客户折扣：{$goods['member_disc']}%
+                          <?php } ?><?php } ?>
+                      </td>
+                      <td>
+                        {$goods['quantity']}个<?php if ($goods['has_refund_quantity'] > 0) { ?>(已退{$goods['has_refund_quantity']}个)<?php } ?>
+                      </td>
+                      <td>
+                          <?php if ($item['type'] == 'integral') { ?><?php } else { ?>¥<?php } ?>
+                        {:round($goods['oldprice']*$goods['quantity'],2)}
+                      </td>
+                    </tr>
+                      <?php if ($item['is_commission'] == 1 && !empty($goods['member_commission_list'])) { ?>
+                      <tr>
+                        <td
+                            <?php if ($item['delivery'] == 'hexiao'){ ?>colspan="11" <?php }else{ ?>colspan="10"<?php } ?>>
+                          分销佣金：<br/>
+                            <?php foreach ($goods['member_commission_list'] as $mb_val) { ?>
+                              <!--分销员：<?php echo $mb_val['username']; ?>（<?php echo $mb_val['level']; ?>级上线）
+                               佣金比例：
+                               <?php if ($mb_val['type'] == 1) { ?>
+                               &nbsp;<?php echo $mb_val['bili']; ?>%
+                              *(&nbsp;基数：{$goods['price']}
+                              *&nbsp;数量：{$goods['quantity']}
+                               <?php if ($goods['has_refund_money'] > 0) { ?>
+                               -&nbsp;已退款：{$goods['has_refund_money']}
+                               <?php } ?>
+                               )
+                              <?php } else { ?>
+                                  固定佣金<?php echo $mb_val['bili']; ?>
+                                          &nbsp;*&nbsp;数量：{$goods['quantity']}
+                              <?php } ?>
+                              =&nbsp;具体佣金：<?php echo $mb_val['money']; ?>元 &nbsp;-->分销商：<span><?php echo $mb_val['username']; ?></span>（<?php echo $mb_val['level']; ?>级上线）佣金比例：
+                                <?php if ($mb_val['type'] == 1) {
+                                    $jishu = $goods['total'] - $goods['fullreduction_money'] - $goods['voucher_credit'] - $goods['has_refund_money'];
+                                    ?><span><?php echo $mb_val['bili']; ?>%</span>有效基数：<span><?php echo $jishu; ?></span>具体佣金：<?php echo round($jishu * $mb_val['bili'] / 100, 2); ?>元
+                                <?php } else { ?>
+                                固定佣金<?php echo $mb_val['bili']; ?>
+                                数量：{$goods['quantity']}=具体佣金：<?php echo round($mb_val['bili'] * $goods['quantity'], 2); ?>元
+                                <?php } ?>
+                              <!--=&nbsp;具体佣金：<?php echo $mb_val['money']; ?>元 &nbsp;-->
+                                <?php
+                                $str_state = '';
+                                switch ($mb_val['state']) {
+                                    case 0:
+                                        $str_state = '待结算';
+                                        break;
+                                    case 1:
+                                        $str_state = '已结算';
+                                        $order_status = 1;
+                                        break;
+                                    case 2:
+                                        $str_state = '订单退款';
+                                        break;
+                                } ?>(<?php echo $str_state; ?>)<br/>
+                            <?php } ?>
+                        </td>
+                      </tr>
+                      <?php } ?><?php $i++; ?><?php } ?>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 footer-copyright">
+            <p class="mb-0">Copyright © __YEARS__ Dejavu Tech. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
-
-
-
 <script src="/assets/layuiadmin/layui/layui-common.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+<script src="/assets/js/jquery-migrate-1.1.1.js" type="text/javascript"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
-
 <!-- Bootstrap js-->
-
 <!-- Sidebar jquery-->
 <script src="/assets/js/sidebar-menu.js"></script>
-
 <!-- feather icon js-->
-
 <!-- Plugins JS start-->
-
 <script src="/assets/js/chat-menu.js"></script>
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="/assets/js/script.js"></script>
-
 <!-- Theme js-->
-<script src="/assets/js/theme-customizer/customizer1.js"></script>
-
+<script src="/assets/js/theme-customizer/customizer.js"></script>
 <script>
-	layui.config({
-		base: '/assets/layuiadmin/' //静态资源所在路径
-	}).extend({
-		index: 'lib/index' //主入口模块
-	}).use('index');
-</script>
-
-<script>
-//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
-var layer = layui.layer;
-var $;
-
-layui.use(['jquery', 'layer','form'], function(){
-  $ = layui.$;
-  var form = layui.form;
-
-
-
-	$('.tip_headcommiss').click(function(){
-		var s_str = '团长提成结算状态： 待结算<br/>团长提成结算金额：2.40<br/>佣金预计结算时间：2016-09-14 16:04:05  <br>结算说明：结算前商品退款会改变佣金计算情况，佣金结算后商品进行退款不改变佣金计算情况。';
-
-		layer.tips( s_str ,this, {
-			tips:[1,'#000'],
-			time: 10000
-		});
-	})
-	$('.layui-icon-about').mouseover(function(){
-		var that = this;
-		var _msg = $(this).attr('data-message');
-		layer.tips(_msg, that,{ tips:[1] });
-
-	})
-	$('.deldom').click(function(){
-		var s_url = $(this).attr('data-href');
-		layer.confirm($(this).attr('data-confirm'), function(index){
-					 $.ajax({
-						url:s_url,
-						type:'post',
-						dataType:'json',
-						success:function(info){
-
-							if(info.status == 0)
-							{
-								layer.msg(info.result.message,{icon: 1,time: 2000});
-							}else if(info.status == 1){
-								var go_url = location.href;
-								if( info.result.hasOwnProperty("url") )
-								{
-									go_url = info.result.url;
-								}
-
-								layer.msg('操作成功',{time: 1000,
-									end:function(){
-										location.href = info.result.url;
-									}
-								});
-							}
-						}
-					})
-				});
-	})
-	$('.hxBtn').click(function(){
-		var url = $(this).attr('data-href');
-		$.post(url, {}, function(shtml){
-			layer.open({
-				type: 1,
-				area: '930px',
-				content: shtml //注意，如果str是object，那么需要字符拼接。
-			});
-		});
-		return false;
-	})
-
-	$('.hxAction').click(function(){
-		var url = $(this).attr('data-href');
-		$.post(url, {}, function(shtml){
-			layer.open({
-				type: 1,
-				title: '商品核销',
-				area: '930px',
-				content: shtml
-				,btnAlign : 'c'
-				,btn: ['确认使用', '取消']
-				,yes: function(index, layero){
-					hexiao_goods();
-				},btn2: function(index, layero){
-					layer.closeAll();
-				}
-				,cancel: function(){
-					layer.closeAll();
-				}
-			});
-		});
-		return false;
-	})
-
-	$('.btn-operation').click(function(){
-		var ids_arr = [];
-		var obj = $(this);
-		var s_toggle = $(this).attr('data-toggle');
-		var s_url = $(this).attr('data-href');
-
-
-		$("input[name=item_checkbox]").each(function() {
-
-			if( $(this).prop('checked') )
-			{
-				ids_arr.push( $(this).val() );
-			}
-		})
-		if(ids_arr.length < 1)
-		{
-			layer.msg('请选择要操作的内容');
-		}else{
-			var can_sub = true;
-			if( s_toggle == 'batch-remove' )
-			{
-				can_sub = false;
-
-				layer.confirm($(obj).attr('data-confirm'), function(index){
-					 $.ajax({
-						url:s_url,
-						type:'post',
-						dataType:'json',
-						data:{ids:ids_arr},
-						success:function(info){
-
-							if(info.status == 0)
-							{
-								layer.msg(info.result.message,{icon: 1,time: 2000});
-							}else if(info.status == 1){
-								var go_url = location.href;
-								if( info.result.hasOwnProperty("url") )
-								{
-									go_url = info.result.url;
-								}
-
-								layer.msg('操作成功',{time: 1000,
-									end:function(){
-										location.href = info.result.url;
-									}
-								});
-							}
-						}
-					})
-				});
-			}else{
-				$.ajax({
-					url:s_url,
-					type:'post',
-					dataType:'json',
-					data:{ids:ids_arr},
-					success:function(info){
-
-						if(info.status == 0)
-						{
-							layer.msg(info.result.message,{icon: 1,time: 2000});
-						}else if(info.status == 1){
-							var go_url = location.href;
-							if( info.result.hasOwnProperty("url") )
-							{
-								go_url = info.result.url;
-							}
-
-							layer.msg('操作成功',{time: 1000,
-								end:function(){
-									location.href = info.result.url;
-								}
-							});
-						}
-					}
-				})
-			}
-		}
-	})
-
-	form.on('switch(restwsitch)', function(data){
-
-	  var s_url = $(this).attr('data-href')
-
-	  var rest = 1;
-	  if(data.elem.checked)
-	  {
-		rest = 1;
-	  }else{
-		rest = 0;
-	  }
-
-	  $.ajax({
-			url:s_url,
-			type:'post',
-			dataType:'json',
-			data:{rest:rest},
-			success:function(info){
-
-				if(info.status == 0)
-				{
-					layer.msg(info.result.message,{icon: 1,time: 2000});
-				}else if(info.status == 1){
-					var go_url = location.href;
-					if( info.result.hasOwnProperty("url") )
-					{
-						go_url = info.result.url;
-					}
-
-					layer.msg('操作成功',{time: 1000,
-						end:function(){
-							location.href = info.result.url;
-						}
-					});
-				}
-			}
-		})
-	});
-	form.on('switch(enablewsitch)', function(data){
-
-	  var s_url = $(this).attr('data-href')
-
-	  var enable = 1;
-	  if(data.elem.checked)
-	  {
-		enable = 1;
-	  }else{
-		enable = 0;
-	  }
-
-	  $.ajax({
-			url:s_url,
-			type:'post',
-			dataType:'json',
-			data:{enable:enable},
-			success:function(info){
-
-				if(info.status == 0)
-				{
-					layer.msg(info.result.message,{icon: 1,time: 2000});
-				}else if(info.status == 1){
-					var go_url = location.href;
-					if( info.result.hasOwnProperty("url") )
-					{
-						go_url = info.result.url;
-					}
-
-					layer.msg('操作成功',{time: 1000,
-						end:function(){
-							location.href = info.result.url;
-						}
-					});
-				}
-			}
-		})
-	});
-
-	form.on('switch(statewsitch)', function(data){
-
-	  var s_url = $(this).attr('data-href')
-
-	  var state = 1;
-	  if(data.elem.checked)
-	  {
-		state = 1;
-	  }else{
-		state = 0;
-	  }
-
-	  $.ajax({
-			url:s_url,
-			type:'post',
-			dataType:'json',
-			data:{state:state},
-			success:function(info){
-
-				if(info.status == 0)
-				{
-					layer.msg(info.result.message,{icon: 1,time: 2000});
-				}else if(info.status == 1){
-					var go_url = location.href;
-					if( info.result.hasOwnProperty("url") )
-					{
-						go_url = info.result.url;
-					}
-
-					layer.msg('操作成功',{time: 1000,
-						end:function(){
-							location.href = info.result.url;
-						}
-					});
-				}
-			}
-		})
-	});
-	form.on('checkbox(checkboxall)', function(data){
-
-	  if(data.elem.checked)
-	  {
-		$("input[name=item_checkbox]").each(function() {
-			$(this).prop("checked", true);
-		});
-		$("input[name=checkall]").each(function() {
-			$(this).prop("checked", true);
-		});
-
-	  }else{
-		$("input[name=item_checkbox]").each(function() {
-			$(this).prop("checked", false);
-		});
-		$("input[name=checkall]").each(function() {
-			$(this).prop("checked", false);
-		});
-	  }
-
-	  form.render('checkbox');
-	});
-
-  //监听提交
-  form.on('submit(formDemo)', function(data){
-
-	 $.ajax({
-		url: data.form.action,
-		type: data.form.method,
-		data: data.field,
-		dataType:'json',
-		success: function (info) {
-
-			if(info.status == 0)
-			{
-				layer.msg(info.result.message,{icon: 1,time: 2000});
-			}else if(info.status == 1){
-				var go_url = location.href;
-				if( info.result.hasOwnProperty("url") )
-				{
-					go_url = info.result.url;
-				}
-
-				layer.msg('操作成功',{time: 1000,
-					end:function(){
-						location.href = info.result.url;
-					}
-				});
-			}
-		}
-	});
-
-    return false;
-  });
-})
-
+    layui.config({
+        base: '/assets/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use('index');
 </script>
 <script>
+    //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+    var layer = layui.layer;
+    var $;
 
-$(function(){
-	var ajax_url = "";
-	$("[data-toggle='ajaxModal']").click(function () {
-        var s_url = $(this).attr('data-href');
-		ajax_url = s_url;
-       $.ajax({
-				url:s_url,
-				type:"get",
-				success:function(shtml){
-					$('#ajaxModal').html(shtml);
-					$('#ajaxModal').modal();
-				}
-		})
-    });
-	$(document).delegate(".modal-footer .btn-order","click",function(){
+    layui.use(['jquery', 'layer', 'form'], function () {
+        $ = layui.$;
+        var form = layui.form;
 
-		var s_data = $('#ajaxModal form').serialize();
-		$.ajax({
-			url:ajax_url,
-			type:'post',
-			dataType:'json',
-			data:s_data,
-			success:function(info){
-				console.log(info);
-				if(info.status == 0)
-				{
-					layer.msg(info.result.message,{icon: 1,time: 2000});
-				}else if(info.status == 1){
-					var go_url = location.href;
-					if( info.result.hasOwnProperty("url") )
-					{
-						go_url = info.result.url;
-					}
 
-					layer.msg('操作成功',{time: 1000,
-						end:function(){
-							location.href = info.result.url;
-						}
-					});
-				}
-			}
-		})
-		return false;
-	})
+        $('.tip_headcommiss').click(function () {
+            var s_str = '团长提成结算状态： 待结算<br/>团长提成结算金额：2.40<br/>佣金预计结算时间：2016-09-14 16:04:05  <br>结算说明：结算前商品退款会改变佣金计算情况，佣金结算后商品进行退款不改变佣金计算情况。';
 
-})
+            layer.tips(s_str, this, {
+                tips: [1, '#000'],
+                time: 10000
+            });
+        })
+        $('.layui-icon-about').mouseover(function () {
+            var that = this;
+            var _msg = $(this).attr('data-message');
+            layer.tips(_msg, that, {tips: [1]});
+
+        })
+        $('.deldom').click(function () {
+            var s_url = $(this).attr('data-href');
+            layer.confirm($(this).attr('data-confirm'), function (index) {
+                $.ajax({
+                    url: s_url,
+                    type: 'post',
+                    dataType: 'json',
+                    success: function (info) {
+
+                        if (info.status == 0) {
+                            layer.msg(info.result.message, {icon: 1, time: 2000});
+                        } else if (info.status == 1) {
+                            var go_url = location.href;
+                            if (info.result.hasOwnProperty("url")) {
+                                go_url = info.result.url;
+                            }
+
+                            layer.msg('操作成功', {
+                                time: 1000,
+                                end: function () {
+                                    location.href = info.result.url;
+                                }
+                            });
+                        }
+                    }
+                })
+            });
+        })
+        $('.hxBtn').click(function () {
+            var url = $(this).attr('data-href');
+            $.post(url, {}, function (shtml) {
+                layer.open({
+                    type: 1,
+                    area: '930px',
+                    content: shtml //注意，如果str是object，那么需要字符拼接。
+                });
+            });
+            return false;
+        })
+
+        $('.hxAction').click(function () {
+            var url = $(this).attr('data-href');
+            $.post(url, {}, function (shtml) {
+                layer.open({
+                    type: 1,
+                    title: '商品核销',
+                    area: '930px',
+                    content: shtml
+                    , btnAlign: 'c'
+                    , btn: ['确认使用', '取消']
+                    , yes: function (index, layero) {
+                        hexiao_goods();
+                    }, btn2: function (index, layero) {
+                        layer.closeAll();
+                    }
+                    , cancel: function () {
+                        layer.closeAll();
+                    }
+                });
+            });
+            return false;
+        })
+
+        $('.btn-operation').click(function () {
+            var ids_arr = [];
+            var obj = $(this);
+            var s_toggle = $(this).attr('data-toggle');
+            var s_url = $(this).attr('data-href');
+
+
+            $("input[name=item_checkbox]").each(function () {
+
+                if ($(this).prop('checked')) {
+                    ids_arr.push($(this).val());
+                }
+            })
+            if (ids_arr.length < 1) {
+                layer.msg('请选择要操作的内容');
+            } else {
+                var can_sub = true;
+                if (s_toggle == 'batch-remove') {
+                    can_sub = false;
+
+                    layer.confirm($(obj).attr('data-confirm'), function (index) {
+                        $.ajax({
+                            url: s_url,
+                            type: 'post',
+                            dataType: 'json',
+                            data: {ids: ids_arr},
+                            success: function (info) {
+
+                                if (info.status == 0) {
+                                    layer.msg(info.result.message, {icon: 1, time: 2000});
+                                } else if (info.status == 1) {
+                                    var go_url = location.href;
+                                    if (info.result.hasOwnProperty("url")) {
+                                        go_url = info.result.url;
+                                    }
+
+                                    layer.msg('操作成功', {
+                                        time: 1000,
+                                        end: function () {
+                                            location.href = info.result.url;
+                                        }
+                                    });
+                                }
+                            }
+                        })
+                    });
+                } else {
+                    $.ajax({
+                        url: s_url,
+                        type: 'post',
+                        dataType: 'json',
+                        data: {ids: ids_arr},
+                        success: function (info) {
+
+                            if (info.status == 0) {
+                                layer.msg(info.result.message, {icon: 1, time: 2000});
+                            } else if (info.status == 1) {
+                                var go_url = location.href;
+                                if (info.result.hasOwnProperty("url")) {
+                                    go_url = info.result.url;
+                                }
+
+                                layer.msg('操作成功', {
+                                    time: 1000,
+                                    end: function () {
+                                        location.href = info.result.url;
+                                    }
+                                });
+                            }
+                        }
+                    })
+                }
+            }
+        })
+
+        form.on('switch(restwsitch)', function (data) {
+
+            var s_url = $(this).attr('data-href')
+
+            var rest = 1;
+            if (data.elem.checked) {
+                rest = 1;
+            } else {
+                rest = 0;
+            }
+
+            $.ajax({
+                url: s_url,
+                type: 'post',
+                dataType: 'json',
+                data: {rest: rest},
+                success: function (info) {
+
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
+                        var go_url = location.href;
+                        if (info.result.hasOwnProperty("url")) {
+                            go_url = info.result.url;
+                        }
+
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
+                                location.href = info.result.url;
+                            }
+                        });
+                    }
+                }
+            })
+        });
+        form.on('switch(enablewsitch)', function (data) {
+
+            var s_url = $(this).attr('data-href')
+
+            var enable = 1;
+            if (data.elem.checked) {
+                enable = 1;
+            } else {
+                enable = 0;
+            }
+
+            $.ajax({
+                url: s_url,
+                type: 'post',
+                dataType: 'json',
+                data: {enable: enable},
+                success: function (info) {
+
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
+                        var go_url = location.href;
+                        if (info.result.hasOwnProperty("url")) {
+                            go_url = info.result.url;
+                        }
+
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
+                                location.href = info.result.url;
+                            }
+                        });
+                    }
+                }
+            })
+        });
+
+        form.on('switch(statewsitch)', function (data) {
+
+            var s_url = $(this).attr('data-href')
+
+            var state = 1;
+            if (data.elem.checked) {
+                state = 1;
+            } else {
+                state = 0;
+            }
+
+            $.ajax({
+                url: s_url,
+                type: 'post',
+                dataType: 'json',
+                data: {state: state},
+                success: function (info) {
+
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
+                        var go_url = location.href;
+                        if (info.result.hasOwnProperty("url")) {
+                            go_url = info.result.url;
+                        }
+
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
+                                location.href = info.result.url;
+                            }
+                        });
+                    }
+                }
+            })
+        });
+        form.on('checkbox(checkboxall)', function (data) {
+
+            if (data.elem.checked) {
+                $("input[name=item_checkbox]").each(function () {
+                    $(this).prop("checked", true);
+                });
+                $("input[name=checkall]").each(function () {
+                    $(this).prop("checked", true);
+                });
+
+            } else {
+                $("input[name=item_checkbox]").each(function () {
+                    $(this).prop("checked", false);
+                });
+                $("input[name=checkall]").each(function () {
+                    $(this).prop("checked", false);
+                });
+            }
+
+            form.render('checkbox');
+        });
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+
+            $.ajax({
+                url: data.form.action,
+                type: data.form.method,
+                data: data.field,
+                dataType: 'json',
+                success: function (info) {
+
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
+                        var go_url = location.href;
+                        if (info.result.hasOwnProperty("url")) {
+                            go_url = info.result.url;
+                        }
+
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
+                                location.href = info.result.url;
+                            }
+                        });
+                    }
+                }
+            });
+
+            return false;
+        });
+    })
 </script>
-<div id="ajaxModal" class="modal fade" style="display: none;">
-</div>
+<script>
+    $(function () {
+        var ajax_url = "";
+        $("[data-toggle='ajaxModal']").click(function () {
+            var s_url = $(this).attr('data-href');
+            ajax_url = s_url;
+            $.ajax({
+                url: s_url,
+                type: "get",
+                success: function (shtml) {
+                    $('#ajaxModal').html(shtml);
+                    $('#ajaxModal').modal();
+                }
+            })
+        });
+        $(document).delegate(".modal-footer .btn-order", "click", function () {
+
+            var s_data = $('#ajaxModal form').serialize();
+            $.ajax({
+                url: ajax_url,
+                type: 'post',
+                dataType: 'json',
+                data: s_data,
+                success: function (info) {
+                    console.log(info);
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
+                        var go_url = location.href;
+                        if (info.result.hasOwnProperty("url")) {
+                            go_url = info.result.url;
+                        }
+
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
+                                location.href = info.result.url;
+                            }
+                        });
+                    }
+                }
+            })
+            return false;
+        })
+
+    })
+</script>
+<div class="modal fade" id="ajaxModal" style="display: none;"></div>
 <script>
     //没有选中时间段不能导出
     $(function () {
         $('.btn-submit').click(function () {
             var e = $(this).data('export');
-            if(e==1 ){
-                if($('#keyword').val() !='' ){
+            if (e == 1) {
+                if ($('#keyword').val() != '') {
                     $('#export').val(1);
                     $('#search').submit();
-                }else if($('#searchtime').val()!=''){
+                } else if ($('#searchtime').val() != '') {
                     $('#export').val(1);
                     $('#search').submit();
-                }else{
-                   $('#export').val(1);
+                } else {
+                    $('#export').val(1);
                     $('#search').submit();
-                    return;
+
                 }
-            }else{
+            } else {
                 $('#export').val(0);
                 $('#search').submit();
             }
         });
 
-		$('#user').click(function(){
-			layer.msg('权限不足!',{icon: 2,time: 1200});
-		});
+        $('#user').click(function () {
+            layer.msg('权限不足!', {icon: 2, time: 1200});
+        });
     })
 </script>
 <script>
-	function overShow1() {
-		var showDiv = document.getElementById('showDiv');
-		showDiv.style.display = 'block';
-	}
+    function overShow1() {
+        var showDiv = document.getElementById('showDiv');
+        showDiv.style.display = 'block';
+    }
 
-	function outHide1() {
-		var showDiv = document.getElementById('showDiv');
-		showDiv.style.display = 'none';
+    function outHide1() {
+        var showDiv = document.getElementById('showDiv');
+        showDiv.style.display = 'none';
 
-	}
+    }
 </script>
 </body>
 

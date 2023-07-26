@@ -1,23 +1,32 @@
 <style>
-    .fui-goods-list{width:100%;border-bottom: 1px dashed #e1ecee;padding-top:5px;padding-bottom:5px;}
-    .fui-goods-list span{display: block;padding:0;}
-</style>
-<form class="form-horizontal form-validate" action="{:U('order/opsendcancel')}" method="post" enctype="multipart/form-data">
-	<input type='hidden' name='id' value='{$id}' />
+    .fui-goods-list {
+        width: 100%;
+        border-bottom: 1px dashed #e1ecee;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
-	<div class="modal-dialog modal-dialog-centered btn-showcase">
-           <div class="modal-content">
-            <div class="modal-header">
-		<h5 class="modal-title">取消发货</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            </div>
-               <div class="modal-body">
-                    <textarea style="height:150px;" class="form-control" name="remark"  placeholder="取消发货原因" ></textarea>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary btn-order" type="submit">提交</button>
-                <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
-            </div>
-        </div>
+    .fui-goods-list span {
+        display: block;
+        padding: 0;
+    }
+</style>
+<form action="{:U('order/opsendcancel')}" class="form-horizontal form-validate" enctype="multipart/form-data" method="post">
+  <input name='id' type='hidden' value='{$id}'/>
+  <div class="modal-dialog modal-dialog-centered btn-showcase">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">取消发货</h5>
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" name="remark" placeholder="取消发货原因" style="height:150px;"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-order" type="submit">提交</button>
+        <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+      </div>
+    </div>
 </form>
 

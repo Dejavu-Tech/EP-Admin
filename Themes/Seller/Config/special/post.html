@@ -1,144 +1,131 @@
 {template '_header'}
 <div class="page-header">
-    当前位置：
-    <span class="text-primary">
-        <?php if(!empty($item['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>专题 <small><?php if(!empty($item['id'])){ ?>修改【{$item['name']}】<?php } ?></small>
+  当前位置： <span class="text-primary">
+        <?php if (!empty($item['id'])) { ?>编辑<?php } else { ?>添加<?php } ?>专题 <small><?php if (!empty($item['id'])) { ?>修改【{$item['name']}】<?php } ?></small>
     </span>
 </div>
-
 <div class="page-content">
-    <div class="page-sub-toolbar">
+  <div class="page-sub-toolbar">
         <span class='pull-right'>
             <a class="btn btn-primary btn-sm" href="{:U('config/special.add')}">添加专题</a>
         </span>
+  </div>
+  <form class="form-horizontal form-validate" enctype="multipart/form-data">
+    <input name="id" type="hidden" value="{$item['id']}"/>
+    <div class="form-group row">
+      <label class="col-form-label must">专题名称</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" data-rule-required='true' id='name' name="name" type="text" value="{$item['name']}"/>
+      </div>
     </div>
-    <form class="form-horizontal form-validate" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="{$item['id']}" />
-        <div class="form-group row">
-            <label class="col-form-label must">专题名称</label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="text" id='name' name="name" class="form-control" value="{$item['name']}" data-rule-required='true' />
-            </div>
+    <div class="form-group row">
+      <label class="col-form-label must">专题描述</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" id='description' name="description" required style="width: 300px;" type="text" value="{$item['description']}"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 control-label">封面图</label>
+      <div class="col-sm-9 col-xs-12">
+        {:tpl_form_field_image2('cover', $item['cover'])}
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 control-label">是否启用</label>
+      <div class="col-sm-9 col-xs-12">
+        <div class="radio radio-primary">
+          <input id="isdefault1" name='enabled' type='radio' value='1' <?php if ($item['enabled'] == 1){ ?>checked<?php } ?> /> 是</label>
+          <div class="radio radio-primary">
+            <input id="isdefault0" name='enabled' type='radio' value='0' <?php if ($item['enabled'] == 0){ ?>checked<?php } ?> /> 否</label>
+          </div>
         </div>
-
         <div class="form-group row">
-            <label class="col-form-label must">专题描述</label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="text" id='description' name="description" class="form-control" value="{$item['description']}"  required style="width: 300px;"/>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 control-label">封面图</label>
-            <div class="col-sm-9 col-xs-12">
-            	{:tpl_form_field_image2('cover', $item['cover'])}
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 control-label ">是否启用</label>
-            <div class="col-sm-9 col-xs-12">
-	            <div class="radio radio-primary">
-	                <input type='radio' name='enabled' id="isdefault1" value='1' <?php if($item['enabled']==1){ ?>checked<?php } ?> /> 是
-	            </label>
-	            <div class="radio radio-primary">
-	                <input type='radio' name='enabled' id="isdefault0" value='0' <?php if($item['enabled']==0){ ?>checked<?php } ?> /> 否
-	            </label>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 control-label">专题商品</label>
-            <div class="col-sm-9">
-                <div class="form-group row" style="height: auto; display: block;">
-                    <div class="col-sm-12 col-xs-12">
-                        <div class="input-group">
-                            <input type="text" id="goodsid_text" name="goodsid_text" value="" class="form-control text" readonly="">
-                            <div class="input-group-btn">
-                                <button class="btn btn-primary select_goods" type="button">选择商品</button>
-                            </div>
-                        </div>
-                        <div class="input-group multi-img-details container ui-sortable goods_show">
-                            <?php if(!empty($goods)){ ?>
-                            <?php foreach( $goods as $g ){ ?>
-                            <div class="multi-item" data-id="{$g['id']}" data-name="goodsid" id="{$g['id']}">
-                                <img class="img-responsive img-thumbnail" src="{: tomedia($g['thumb'])}" onerror="this.src='/assets/ep/images/nopic.png'" style="width:100px;height:100px;">
-                                <div class="img-nickname">{$g['goodsname']}</div>
-                                <input type="hidden" value="{$g['id']}" name="goodsids[]">
-                                <em onclick="remove({$g['id']})" class="close">×</em>
-                                <div style="clear:both;"></div>
-                            </div>
-                            <?php } ?>
-                            <?php } ?>
-                        </div>
-
-                        <script>
-                            $(function(){
-                                var title = '';
-                                $('.img-nickname').each(function(){
-                                    title += $(this).html()+';';
-                                });
-                                $('#goodsid_text').val(title);
-                            })
-                            myrequire(['web/goods_selector'],function (Gselector) {
-                                $('.select_goods').click(function () {
-                                    var ids = select_goods_ids();
-                                    Gselector.open('goods_show','',0,true,'',ids);
-                                });
-                            })
-                            function goods_show(data) {
-                                if(data.act == 1){
-                                    var html = '<div class="multi-item" data-id="'+data.id+'" data-name="goodsid" id="'+data.id+'">'
-                                        +'<img class="img-responsive img-thumbnail" src="'+data.thumb+'" onerror="this.src=\'/assets/ep/images/nopic.png\'" style="width:100px;height:100px;">'
-                                        +'<div class="img-nickname">'+data.goodsname+'</div>'
-                                        +'<input type="hidden" value="'+data.id+'" name="goodsids[]">'
-                                        +'<em onclick="removeHtml('+data.id+')" class="close">×</em>'
-                                        +'</div>';
-
-                                    $('.goods_show').append(html);
-                                    var title = '';
-                                    $('.img-nickname').each(function(){
-                                        title += $(this).html()+';';
-                                    });
-                                    $('#goodsid_text').val(title);
-                                }else if(data.act == 0){
-                                    remove(data.id);
-                                }
-                            }
-                            function remove(id){
-                                $("[id='"+id+"']").remove();
-                                var title = '';
-                                $('.img-nickname').each(function(){
-                                    title += $(this).html()+';';
-                                });
-                                $('#goodsid_text').val(title);
-                            }
-                            function select_goods_ids(){
-                                var goodsids = [];
-                                $(".multi-item").each(function(){
-                                    goodsids.push($(this).attr('data-id'));
-                                });
-                                return goodsids;
-                            }
-                        </script>
-                    </div>
+          <label class="col-sm-2 control-label">专题商品</label>
+          <div class="col-sm-9">
+            <div class="form-group row" style="height: auto; display: block;">
+              <div class="col-sm-12 col-xs-12">
+                <div class="input-group">
+                  <input class="form-control text" id="goodsid_text" name="goodsid_text" readonly="" type="text" value="">
+                  <div class="input-group-btn">
+                    <button class="btn btn-primary select_goods" type="button">选择商品</button>
+                  </div>
                 </div>
-            </div>
-        </div>
+                <div class="input-group multi-img-details container ui-sortable goods_show">
+                    <?php if (!empty($goods)) { ?><?php foreach ($goods as $g) { ?>
+                      <div class="multi-item" data-id="{$g['id']}" data-name="goodsid" id="{$g['id']}">
+                        <img class="img-responsive img-thumbnail" onerror="this.src='/assets/ep/images/nopic.png'" src="{: tomedia($g['thumb'])}" style="width:100px;height:100px;">
+                        <div class="img-nickname">{$g['goodsname']}</div>
+                        <input name="goodsids[]" type="hidden" value="{$g['id']}"> <em class="close" onclick="remove({$g['id']})">×</em>
+                        <div style="clear:both;"></div>
+                      </div>
+                    <?php } ?><?php } ?>
+                </div>
+                <script>
+                    $(function () {
+                        var title = '';
+                        $('.img-nickname').each(function () {
+                            title += $(this).html() + ';';
+                        });
+                        $('#goodsid_text').val(title);
+                    })
+                    myrequire(['web/goods_selector'], function (Gselector) {
+                        $('.select_goods').click(function () {
+                            var ids = select_goods_ids();
+                            Gselector.open('goods_show', '', 0, true, '', ids);
+                        });
+                    })
 
+                    function goods_show(data) {
+                        if (data.act == 1) {
+                            var html = '<div class="multi-item" data-id="' + data.id + '" data-name="goodsid" id="' + data.id + '">'
+                                + '<img class="img-responsive img-thumbnail" src="' + data.thumb + '" onerror="this.src=\'/assets/ep/images/nopic.png\'" style="width:100px;height:100px;">'
+                                + '<div class="img-nickname">' + data.goodsname + '</div>'
+                                + '<input type="hidden" value="' + data.id + '" name="goodsids[]">'
+                                + '<em onclick="removeHtml(' + data.id + ')" class="close">×</em>'
+                                + '</div>';
+
+                            $('.goods_show').append(html);
+                            var title = '';
+                            $('.img-nickname').each(function () {
+                                title += $(this).html() + ';';
+                            });
+                            $('#goodsid_text').val(title);
+                        } else if (data.act == 0) {
+                            remove(data.id);
+                        }
+                    }
+
+                    function remove(id) {
+                        $("[id='" + id + "']").remove();
+                        var title = '';
+                        $('.img-nickname').each(function () {
+                            title += $(this).html() + ';';
+                        });
+                        $('#goodsid_text').val(title);
+                    }
+
+                    function select_goods_ids() {
+                        var goodsids = [];
+                        $(".multi-item").each(function () {
+                            goodsids.push($(this).attr('data-id'));
+                        });
+                        return goodsids;
+                    }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="form-group row">
-            <label class="col-sm-2 control-label "></label>
-            <div class="col-sm-9 col-xs-12">
-            	<input type="submit" value="提交" class="btn btn-primary"  />
-                <input type="button" name="back" onclick="javascript:window.location.href='{:U('config/special.index')}'" value="返回列表" class="btn btn-pill btn-primary" />
-            </div>
+          <label class="col-sm-2 control-label"></label>
+          <div class="col-sm-9 col-xs-12">
+            <input class="btn btn-primary" type="submit" value="提交"/> <input class="btn btn-pill btn-primary" name="back" onclick="window.location.href='{:U('config/special.index')}'" type="button" value="返回列表"/>
+          </div>
         </div>
-    </form>
+  </form>
 </div>
-
 <script language='javascript'>
-
-    require(['jquery.ui'],function(){
+    require(['jquery.ui'], function () {
         $('.multi-img-details').sortable();
     })
 
@@ -156,6 +143,4 @@
 
         return true;
     }
-</script>
-
-{template '_footer'}
+</script>{template '_footer'}

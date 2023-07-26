@@ -1,412 +1,314 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
-	<title><?php echo $shoname_name; ?></title>
-	<link rel="shortcut icon" href="" />
+  <meta charset="utf-8">
+    <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+  <title><?php echo $shoname_name; ?></title>
+  <link href="" rel="shortcut icon"/>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案" name="description">
+  <meta content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案" name="keywords">
+  <meta content="Dejavu Tech." name="author">
+  <link href="/assets/images/favicon.png" rel="icon" type="image/x-icon">
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <!-- Font Awesome-->
+  <link href="/assets/css/fontawesome.css" rel="stylesheet" type="text/css">
+  <!-- ico-font-->
+  <link href="/assets/css/icofont.css" rel="stylesheet" type="text/css">
+  <!-- Themify icon-->
+  <link href="/assets/css/themify.css" rel="stylesheet" type="text/css">
+  <!-- Flag icon-->
+  <link href="/assets/css/flag-icon.css" rel="stylesheet" type="text/css">
+  <!-- Feather icon-->
+  <link href="/assets/css/feather-icon.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/animate.css" rel="stylesheet" type="text/css">
+  <!-- Plugins css start-->
+  <link href="/assets/css/chartist.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/date-picker.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/prism.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/material-design-icon.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/datatables.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/pe7-icon.css" rel="stylesheet" type="text/css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <!-- App css-->
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/color-1.css" id="color" media="screen" rel="stylesheet">
+  <!-- Responsive css-->
+  <link href="/assets/css/responsive.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+  <script src="/assets/js/app.js" type="text/javascript"></script>
+  <script src="/assets/js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/lib/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/assets/js/app/util.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/require.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/lib/jquery.nice-select.js?v=201903260001" type="text/javascript"></script>
+  <link href="/assets/css/ep/eaterplanet.css?v=4.0.0" rel="stylesheet" type="text/css">
+  <style>
+      .layui-table > caption + thead > tr:first-child > td, .layui-table > caption + thead > tr:first-child > th, .layui-table > colgroup + thead > tr:first-child > td, .layui-table > colgroup + thead > tr:first-child > th, .layui-table > thead:first-child > tr:first-child > td, .layui-table > thead:first-child > tr:first-child > th {
+          color: #000;
+      }
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-	<meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-	<meta name="author" content="Dejavu Tech.">
-	<link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
-
-
-	<!-- Font Awesome-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
-	<!-- ico-font-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
-	<!-- Themify icon-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
-	<!-- Flag icon-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
-	<!-- Feather icon-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
-	<!-- Plugins css start-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/chartist.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/date-picker.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
-
-	<link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
-	<!-- Plugins css Ends-->
-	<!-- Bootstrap css-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
-	<!-- App css-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-	<link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
-	<!-- Responsive css-->
-	<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
-
-<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
-<!--[if lt IE 9]>
-  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
-
-<script type="text/javascript">
-            window.sysinfo = {
-            <?php if(!empty($_W['uniacid'])){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
-
-            <?php if(!empty($_W['acid'])){ ?>'acid': '{$_W['acid']}',<?php } ?>
-
-            <?php if(!empty($_W['openid'])){ ?>'openid': '{$_W['openid']}',<?php } ?>
-
-            <?php if(!empty($_W['uid'])){ ?>'uid': '{$_W['uid']}',<?php } ?>
-
-            'isfounder': <?php if(!empty($_W['isfounder'])){ ?>1<?php }else{ ?>0<?php } ?>,
-
-            'siteroot': '{$_W['siteroot']}',
-                    'siteurl': '{$_W['siteurl']}',
-                    'attachurl': '{$_W['attachurl']}',
-                    'attachurl_local': '{$_W['attachurl_local']}',
-                    'attachurl_remote': '{$_W['attachurl_remote']}',
-                    'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
-            'cookie' : {'pre': ''},
-            'account' : {:json_encode($_W['account'])},
-            };
-        </script>
-
-<script type="text/javascript" src="/assets/js/lib/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
-<script type="text/javascript" src="/assets/js/app/util.js?v=201903260001"></script>
-
-<script type="text/javascript" src="/assets/js/require.js?v=201903260001"></script>
-<script type="text/javascript" src="/assets/js/lib/jquery.nice-select.js?v=201903260001"></script>
-<link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
-<style>
-.layui-table > caption + thead > tr:first-child > td, .layui-table > caption + thead > tr:first-child > th, .layui-table > colgroup + thead > tr:first-child > td, .layui-table> colgroup + thead > tr:first-child > th, .layui-table > thead:first-child > tr:first-child > td, .layui-table > thead:first-child > tr:first-child > th
-{color:#000;}
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-   color:#000;
-}
-</style>
+      .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+          color: #000;
+      }
+  </style>
 </head>
-<body class="custom-scrollbar" >
-
+<body class="custom-scrollbar">
 <div class="page-wrapper custom-scrollbar">
-	<div class="page-body-wrapper">
-		<div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
-			<div class="container-fluid">
-				<div class="page-header">
-					<div class="row">
-						<div class="col-lg-6 main-header">
-							<h6 class="mb-0">当前位置</h6>
-							<h2>小程序前端<span>路径列表</span> </h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="card">
-							<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
-								<div class="card-body dataTables_wrapper no-footer">
-									<div class="table-responsive ">
-									<table class="table table-striped" lay-even lay-skin="line" lay-size="lg">
-										<thead>
-										<tr>
-											<th>页面</th>
-											<th>路径(*用具体内容替换)</th>
-										</tr>
-										</thead>
-										<tbody>
-										<tr>
-											<td>商城首页</td>
-											<td>eaterplanet_ecommerce/pages/index/index</td>
-
-										</tr>
-										<tr>
-											<td>商城首页带团长</td>
-											<td>eaterplanet_ecommerce/pages/index/index?community_id=*</td>
-
-										</tr>
-										<tr>
-											<td>分类</td>
-											<td>eaterplanet_ecommerce/pages/type/index</td>
-
-										</tr>
-										<tr>
-											<td>购物车</td>
-											<td>eaterplanet_ecommerce/pages/order/shopCart</td>
-
-										</tr>
-
-										<tr>
-											<td>个人中心</td>
-											<td>eaterplanet_ecommerce/pages/user/me</td>
-
-										</tr>
-										<tr>
-											<td>我的订单</td>
-											<td>eaterplanet_ecommerce/pages/order/index</td>
-
-										</tr>
-										<tr>
-											<td>商品详情</td>
-											<td>eaterplanet_ecommerce/pages/goods/goodsDetail?id=*</td>
-
-										</tr>
-										<tr>
-											<td>团长申请页</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/apply</td>
-
-										</tr>
-										<tr>
-											<td>商户申请页</td>
-											<td>eaterplanet_ecommerce/pages/supply/recruit</td>
-
-										</tr>
-										<tr>
-											<td>商户列表页</td>
-											<td>eaterplanet_ecommerce/pages/supply/index</td>
-
-										</tr>
-										<tr>
-											<td>商户中心</td>
-											<td>eaterplanet_ecommerce/moduleB/supply/index
-											</td>
-
-										</tr>
-										<tr>
-											<td>某商户详情页</td>
-											<td>eaterplanet_ecommerce/pages/supply/home?id=*</td>
-
-										</tr>
-
-										<tr>
-											<td>余额充值</td>
-											<td>eaterplanet_ecommerce/pages/user/charge</td>
-
-										</tr>
-										<tr>
-											<td>积分签到/积分兑换/积分商城</td>
-											<td>eaterplanet_ecommerce/moduleA/score/signin</td>
-
-										</tr>
-
-										<tr>
-											<td>我的优惠券</td>
-											<td>eaterplanet_ecommerce/pages/user/coupon</td>
-
-										</tr>
-										<tr>
-											<td>会员卡</td>
-											<td>eaterplanet_ecommerce/moduleA/vip/upgrade</td>
-
-										</tr>
-
-										<tr>
-											<td>拼团首页</td>
-											<td>eaterplanet_ecommerce/moduleA/pin/index</td>
-
-										</tr>
-										<tr>
-											<td>我的拼团</td>
-											<td>eaterplanet_ecommerce/moduleA/pin/me</td>
-
-										</tr>
-										<tr>
-											<td>拼团商品详情</td>
-											<td>eaterplanet_ecommerce/moduleA/pin/goodsDetail?id=*</td>
-
-										</tr>
-
-										<tr>
-											<td>付费会员首页</td>
-											<td>eaterplanet_ecommerce/moduleA/vip/upgrade</td>
-
-										</tr>
-
-										<tr>
-											<td>菜谱</td>
-											<td>eaterplanet_ecommerce/moduleA/menu/index</td>
-
-										</tr>
-										<tr>
-											<td>菜谱详情</td>
-											<td>eaterplanet_ecommerce/moduleA/menu/details?id=*</td>
-
-										</tr>
-
-										<tr>
-											<td>视频商品列表</td>
-											<td>eaterplanet_ecommerce/moduleA/video/index</td>
-
-										</tr>
-										<tr>
-											<td>视频商品详情</td>
-											<td>eaterplanet_ecommerce/moduleA/video/detail?id=*</td>
-
-										</tr>
-
-										<tr>
-											<td>分销申请</td>
-											<td>eaterplanet_ecommerce/distributionCenter/pages/recruit</td>
-
-										</tr>
-
-										<tr>
-											<td>分销中心</td>
-											<td>eaterplanet_ecommerce/distributionCenter/pages/me</td>
-
-										</tr>
-										<tr>
-											<td>分销中心-我的粉丝</td>
-											<td>eaterplanet_ecommerce/distributionCenter/pages/fans</td>
-
-										</tr>
-										<tr>
-											<td>分销中心-推广明细</td>
-											<td>eaterplanet_ecommerce/distributionCenter/pages/goodsDetails</td>
-
-										</tr>
-										<tr>
-											<td>分销中心-分销提现</td>
-											<td>eaterplanet_ecommerce/distributionCenter/pages/excharge</td>
-
-										</tr>
-										<tr>
-											<td>分销中心-我的二维码</td>
-											<td>eaterplanet_ecommerce/distributionCenter/pages/share</td>
-
-										</tr>
-
-
-										<tr>
-											<td>团长中心</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/index</td>
-
-										</tr>
-										<tr>
-											<td>团长中心-我的团单</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/groupList</td>
-
-										</tr>
-										<tr>
-											<td>团长中心-社区用户</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/communityMembers</td>
-
-										</tr>
-										<tr>
-											<td>团长中心-结算记录</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/distributionList</td>
-
-										</tr>
-										<tr>
-											<td>团长中心-我的钱包</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/wallet</td>
-
-										</tr>
-										<tr>
-											<td>团长中心-提现申请</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/editInfo</td>
-
-										</tr>
-										<tr>
-											<td>团长中心-核销管理</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/communityMembers</td>
-
-										</tr>
-										<tr>
-											<td>团长中心-团长分销</td>
-											<td>eaterplanet_ecommerce/moduleA/groupCenter/gruopInfo</td>
-
-										</tr>
-
-										<tr>
-											<td>接龙首页</td>
-											<td>eaterplanet_ecommerce/moduleA/solitaire/index</td>
-
-										</tr>
-										<tr>
-											<td>接龙详情</td>
-											<td>eaterplanet_ecommerce/moduleA/solitaire/details?id=*</td>
-
-										</tr>
-										<tr>
-											<td>个人中心--我的接龙</td>
-											<td>eaterplanet_ecommerce/moduleA/solitaire/me</td>
-
-										</tr>
-
-										<tr>
-											<td>附近社区</td>
-											<td>eaterplanet_ecommerce/pages/position/community</td>
-
-										</tr>
-
-										<tr>
-											<td>常见帮助</td>
-											<td>eaterplanet_ecommerce/pages/user/protocol</td>
-
-										</tr>
-										<tr>
-											<td>关于我们</td>
-											<td>eaterplanet_ecommerce/pages/user/articleProtocol</td>
-
-										</tr>
-										<tr>
-											<td>直播列表</td>
-											<td>eaterplanet_ecommerce/moduleB/live/index</td>
-
-										</tr>
-										<tr>
-											<td>直播间</td>
-											<td>eaterplanet_ecommerce/moduleB/__plugin__/(小程序appID)/pages/live-player-plugin?room_id=*</td>
-
-										</tr>
-										<tr>
-											<td>主题活动详情</td>
-											<td>eaterplanet_ecommerce/moduleA/special/index?id=*</td>
-
-										</tr>
-										<tr>
-											<td>礼品卡兑换中心</td>
-											<td>eaterplanet_ecommerce/moduleB/virtualcard/index</td>
-
-										</tr>
-										</tbody>
-									</table>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer class="footer">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 footer-copyright">
-						<p class="mb-0">Copyright © __YEARS__ Dejavu Tech. All rights reserved.</p>
-					</div>
-					<div class="col-md-6">
-						<p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+  <div class="page-body-wrapper">
+    <div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+      <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6 main-header">
+              <h6 class="mb-0">当前位置</h6>
+              <h2>小程序前端<span>路径列表</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <form action="" class="form theme-form layui-form" enctype="multipart/form-data" lay-filter="component-layui-form-item" method="post">
+                <div class="card-body dataTables_wrapper no-footer">
+                  <div class="table-responsive">
+                    <table class="table table-striped" lay-even lay-size="lg" lay-skin="line">
+                      <thead>
+                      <tr>
+                        <th>页面</th>
+                        <th>路径(*用具体内容替换)</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>商城首页</td>
+                        <td>eaterplanet_ecommerce/pages/index/index</td>
+                      </tr>
+                      <tr>
+                        <td>商城首页带团长</td>
+                        <td>eaterplanet_ecommerce/pages/index/index?community_id=*</td>
+                      </tr>
+                      <tr>
+                        <td>分类</td>
+                        <td>eaterplanet_ecommerce/pages/type/index</td>
+                      </tr>
+                      <tr>
+                        <td>购物车</td>
+                        <td>eaterplanet_ecommerce/pages/order/shopCart</td>
+                      </tr>
+                      <tr>
+                        <td>个人中心</td>
+                        <td>eaterplanet_ecommerce/pages/user/me</td>
+                      </tr>
+                      <tr>
+                        <td>我的订单</td>
+                        <td>eaterplanet_ecommerce/pages/order/index</td>
+                      </tr>
+                      <tr>
+                        <td>商品详情</td>
+                        <td>eaterplanet_ecommerce/pages/goods/goodsDetail?id=*</td>
+                      </tr>
+                      <tr>
+                        <td>团长申请页</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/apply</td>
+                      </tr>
+                      <tr>
+                        <td>商户申请页</td>
+                        <td>eaterplanet_ecommerce/pages/supply/recruit</td>
+                      </tr>
+                      <tr>
+                        <td>商户列表页</td>
+                        <td>eaterplanet_ecommerce/pages/supply/index</td>
+                      </tr>
+                      <tr>
+                        <td>商户中心</td>
+                        <td>eaterplanet_ecommerce/moduleB/supply/index
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>某商户详情页</td>
+                        <td>eaterplanet_ecommerce/pages/supply/home?id=*</td>
+                      </tr>
+                      <tr>
+                        <td>余额充值</td>
+                        <td>eaterplanet_ecommerce/pages/user/charge</td>
+                      </tr>
+                      <tr>
+                        <td>积分签到/积分兑换/积分商城</td>
+                        <td>eaterplanet_ecommerce/moduleA/score/signin</td>
+                      </tr>
+                      <tr>
+                        <td>我的优惠券</td>
+                        <td>eaterplanet_ecommerce/pages/user/coupon</td>
+                      </tr>
+                      <tr>
+                        <td>会员卡</td>
+                        <td>eaterplanet_ecommerce/moduleA/vip/upgrade</td>
+                      </tr>
+                      <tr>
+                        <td>拼团首页</td>
+                        <td>eaterplanet_ecommerce/moduleA/pin/index</td>
+                      </tr>
+                      <tr>
+                        <td>我的拼团</td>
+                        <td>eaterplanet_ecommerce/moduleA/pin/me</td>
+                      </tr>
+                      <tr>
+                        <td>拼团商品详情</td>
+                        <td>eaterplanet_ecommerce/moduleA/pin/goodsDetail?id=*</td>
+                      </tr>
+                      <tr>
+                        <td>付费会员首页</td>
+                        <td>eaterplanet_ecommerce/moduleA/vip/upgrade</td>
+                      </tr>
+                      <tr>
+                        <td>菜谱</td>
+                        <td>eaterplanet_ecommerce/moduleA/menu/index</td>
+                      </tr>
+                      <tr>
+                        <td>菜谱详情</td>
+                        <td>eaterplanet_ecommerce/moduleA/menu/details?id=*</td>
+                      </tr>
+                      <tr>
+                        <td>视频商品列表</td>
+                        <td>eaterplanet_ecommerce/moduleA/video/index</td>
+                      </tr>
+                      <tr>
+                        <td>视频商品详情</td>
+                        <td>eaterplanet_ecommerce/moduleA/video/detail?id=*</td>
+                      </tr>
+                      <tr>
+                        <td>分销申请</td>
+                        <td>eaterplanet_ecommerce/distributionCenter/pages/recruit</td>
+                      </tr>
+                      <tr>
+                        <td>分销中心</td>
+                        <td>eaterplanet_ecommerce/distributionCenter/pages/me</td>
+                      </tr>
+                      <tr>
+                        <td>分销中心-我的粉丝</td>
+                        <td>eaterplanet_ecommerce/distributionCenter/pages/fans</td>
+                      </tr>
+                      <tr>
+                        <td>分销中心-推广明细</td>
+                        <td>eaterplanet_ecommerce/distributionCenter/pages/goodsDetails</td>
+                      </tr>
+                      <tr>
+                        <td>分销中心-分销提现</td>
+                        <td>eaterplanet_ecommerce/distributionCenter/pages/excharge</td>
+                      </tr>
+                      <tr>
+                        <td>分销中心-我的二维码</td>
+                        <td>eaterplanet_ecommerce/distributionCenter/pages/share</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/index</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心-我的团单</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/groupList</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心-社区用户</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/communityMembers</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心-结算记录</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/distributionList</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心-我的钱包</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/wallet</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心-提现申请</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/editInfo</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心-核销管理</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/communityMembers</td>
+                      </tr>
+                      <tr>
+                        <td>团长中心-团长分销</td>
+                        <td>eaterplanet_ecommerce/moduleA/groupCenter/gruopInfo</td>
+                      </tr>
+                      <tr>
+                        <td>接龙首页</td>
+                        <td>eaterplanet_ecommerce/moduleA/solitaire/index</td>
+                      </tr>
+                      <tr>
+                        <td>接龙详情</td>
+                        <td>eaterplanet_ecommerce/moduleA/solitaire/details?id=*</td>
+                      </tr>
+                      <tr>
+                        <td>个人中心--我的接龙</td>
+                        <td>eaterplanet_ecommerce/moduleA/solitaire/me</td>
+                      </tr>
+                      <tr>
+                        <td>附近社区</td>
+                        <td>eaterplanet_ecommerce/pages/position/community</td>
+                      </tr>
+                      <tr>
+                        <td>常见帮助</td>
+                        <td>eaterplanet_ecommerce/pages/user/protocol</td>
+                      </tr>
+                      <tr>
+                        <td>关于我们</td>
+                        <td>eaterplanet_ecommerce/pages/user/articleProtocol</td>
+                      </tr>
+                      <tr>
+                        <td>直播列表</td>
+                        <td>eaterplanet_ecommerce/moduleB/live/index</td>
+                      </tr>
+                      <tr>
+                        <td>直播间</td>
+                        <td>eaterplanet_ecommerce/moduleB/__plugin__/(小程序appID)/pages/live-player-plugin?room_id=*
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>主题活动详情</td>
+                        <td>eaterplanet_ecommerce/moduleA/special/index?id=*</td>
+                      </tr>
+                      <tr>
+                        <td>礼品卡兑换中心</td>
+                        <td>eaterplanet_ecommerce/moduleB/virtualcard/index</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 footer-copyright">
+            <p class="mb-0">Copyright © __YEARS__ Dejavu Tech. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="pull-right mb-0">__VERSION__<i class="fa fa-heart"></i></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
-
 <script src="/assets/layuiadmin/layui/layui-form.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
+<script src="/assets/js/jquery-migrate-1.1.1.js" type="text/javascript"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <!-- latest jquery-->
-
 <!-- Bootstrap js-->
-
 <!-- Sidebar jquery-->
 <script src="/assets/js/sidebar-menu.js"></script>
 <script src="/assets/js/config.js"></script>
@@ -414,88 +316,80 @@
 <script src="/assets/js/form-wizard/form-wizard-two.js"></script>
 <script src="/assets/js/chat-menu.js"></script>
 <script src="/assets/js/form-validation-custom.js"></script>
-
 <script src="/assets/js/datepicker/date-picker/datepicker.js"></script>
 <script src="/assets/js/datepicker/date-picker/datepicker.en.js"></script>
 <script src="/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
-
-
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="/assets/js/script.js"></script>
-<script src="/assets/js/theme-customizer/customizer1.js"></script>
+<script src="/assets/js/theme-customizer/customizer.js"></script>
 <script>
-	layui.config({
-		base: '/assets/layuiadmin/' //静态资源所在路径
-	}).extend({
-		index: 'lib/index' //主入口模块
-	}).use('index');
+    layui.config({
+        base: '/assets/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use('index');
 </script>
-
 <script>
-//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
-var layer = layui.layer;
-var $;
+    //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+    var layer = layui.layer;
+    var $;
 
-layui.use(['jquery', 'layer','form','colorpicker'], function(){
-  $ = layui.$;
-  var form = layui.form;
-  var colorpicker = layui.colorpicker;
-
-
-    //表单赋值
-    var nav_bg_color = '{$data["nav_bg_color"]}';
-    colorpicker.render({
-      elem: '#minicolors'
-      ,color: nav_bg_color ? nav_bg_color : '#F75451'
-      ,done: function(color){
-        $('#test-colorpicker-form-input').val(color);
-      }
-    });
-
-    var index_top_font_color = '{$data["index_top_font_color"]}';
-    colorpicker.render({
-      elem: '#minicolors2'
-      ,color: index_top_font_color ? index_top_font_color : '#FFFFFF'
-      ,done: function(color){
-        $('#test-colorpicker-form-input2').val(color);
-      }
-    });
-
-  //监听提交
-  form.on('submit(formDemo)', function(data){
-
-	 $.ajax({
-		url: data.form.action,
-		type: data.form.method,
-		data: data.field,
-		dataType:'json',
-		success: function (info) {
-
-			if(info.status == 0)
-			{
-				layer.msg(info.result.message,{icon: 1,time: 2000});
-			}else if(info.status == 1){
-				var go_url = location.href;
-				if( info.result.hasOwnProperty("url") )
-				{
-					go_url = info.result.url;
-				}
-
-				layer.msg('操作成功',{time: 1000,
-					end:function(){
-						location.href = info.result.url;
-					}
-				});
-			}
-		}
-	});
-
-    return false;
-  });
-})
+    layui.use(['jquery', 'layer', 'form', 'colorpicker'], function () {
+        $ = layui.$;
+        var form = layui.form;
+        var colorpicker = layui.colorpicker;
 
 
+        //表单赋值
+        var nav_bg_color = '{$data["nav_bg_color"]}';
+        colorpicker.render({
+            elem: '#minicolors'
+            , color: nav_bg_color ? nav_bg_color : '#F75451'
+            , done: function (color) {
+                $('#test-colorpicker-form-input').val(color);
+            }
+        });
 
+        var index_top_font_color = '{$data["index_top_font_color"]}';
+        colorpicker.render({
+            elem: '#minicolors2'
+            , color: index_top_font_color ? index_top_font_color : '#FFFFFF'
+            , done: function (color) {
+                $('#test-colorpicker-form-input2').val(color);
+            }
+        });
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+
+            $.ajax({
+                url: data.form.action,
+                type: data.form.method,
+                data: data.field,
+                dataType: 'json',
+                success: function (info) {
+
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
+                        var go_url = location.href;
+                        if (info.result.hasOwnProperty("url")) {
+                            go_url = info.result.url;
+                        }
+
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
+                                location.href = info.result.url;
+                            }
+                        });
+                    }
+                }
+            });
+
+            return false;
+        });
+    })
 </script>
 </body>

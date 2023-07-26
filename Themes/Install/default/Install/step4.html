@@ -1,53 +1,49 @@
 <extend name="Public/base"/>
-
-<block name="header">
-</block>
-
+<block name="header"></block>
 <block name="body">
-    <div class="col-xl-12 xl-100 box-col-12">
-        <div class="card crypto-revenue">
-            <div class="card-header p-t-40 p-b-0">
-                <h3>安装</h3>
-                <ul class="creative-dots">
-                    <li class="bg-primary big-dot"></li>
-                    <li class="bg-secondary semi-big-dot"></li>
-                    <li class="bg-warning medium-dot"></li>
-                    <li class="bg-info semi-medium-dot"></li>
-                    <li class="bg-secondary semi-small-dot"></li>
-                    <li class="bg-primary small-dot"></li>
-                </ul>
+  <div class="col-xl-12 xl-100 box-col-12">
+    <div class="card crypto-revenue">
+      <div class="card-header p-t-40 p-b-0">
+        <h3>安装</h3>
+        <ul class="creative-dots">
+          <li class="bg-primary big-dot"></li>
+          <li class="bg-secondary semi-big-dot"></li>
+          <li class="bg-warning medium-dot"></li>
+          <li class="bg-info semi-medium-dot"></li>
+          <li class="bg-secondary semi-small-dot"></li>
+          <li class="bg-primary small-dot"></li>
+        </ul>
+      </div>
+      <form action="__SELF__" class="form theme-form" method="post" target="_self">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3" style="z-index: 999999">
+              <div class="loader-box">
+                <div class="loader-19"></div>
+              </div>
             </div>
-            <form class="form theme-form" action="__SELF__" method="post" target="_self">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3" style="z-index: 999999">
-                            <div class="loader-box">
-                                <div class="loader-19"></div>
-                            </div>
-                        </div>
-                        <div class="col" id="show-list">
-                            <script type="text/javascript">
-                                var list   = document.getElementById('show-list');
-                                function showmsg(msg, classname){
-                                    var li = document.createElement('p');
-                                    li.innerHTML = msg;
-                                    classname && li.setAttribute('class', classname);
-                                    list.appendChild(li);
-                                    document.scrollTop += 30;
-                                }
-                            </script>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <div class="pull-right p-b-30">
-                        <a id="submit" class="btn btn-pill btn-primary disabled" style="color:#FFF">正在安装，请稍候...</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</block>
+            <div class="col" id="show-list">
+              <script type="text/javascript">
+                  var list = document.getElementById('show-list');
 
-<block name="footer">
+                  function showmsg(msg, classname) {
+                      var li = document.createElement('p');
+                      li.innerHTML = msg;
+                      classname && li.setAttribute('class', classname);
+                      list.appendChild(li);
+                      document.scrollTop += 30;
+                  }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="pull-right p-b-30">
+            <a class="btn btn-pill btn-primary disabled" id="submit" style="color:#FFF">正在安装，请稍候...</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </block>
+<block name="footer"></block>

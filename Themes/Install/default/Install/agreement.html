@@ -1,29 +1,26 @@
 <extend name="Public/base"/>
-
-<block name="header">
-</block>
-
+<block name="header"></block>
 <block name="body">
-    <div class="col-xl-12 xl-100 box-col-12">
-        <div class="card crypto-revenue">
-            <div class="card-header p-b-0">
-                <h3>__NAME__微信小程序后台安装协议</h3>
-                <ul class="creative-dots">
-                    <li class="bg-primary big-dot"></li>
-                    <li class="bg-secondary semi-big-dot"></li>
-                    <li class="bg-warning medium-dot"></li>
-                    <li class="bg-info semi-medium-dot"></li>
-                    <li class="bg-secondary semi-small-dot"></li>
-                    <li class="bg-primary small-dot"></li>
-                </ul>
-                <section class="abstract">版权所有 (c) __YEARS__，__COMPANY__保留所有权利。</section>
-            </div>
-            <form class="form theme-form">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <textarea id="text-box" name="text-box" rows="15" disabled>
+  <div class="col-xl-12 xl-100 box-col-12">
+    <div class="card crypto-revenue">
+      <div class="card-header p-b-0">
+        <h3>__NAME__微信小程序后台安装协议</h3>
+        <ul class="creative-dots">
+          <li class="bg-primary big-dot"></li>
+          <li class="bg-secondary semi-big-dot"></li>
+          <li class="bg-warning medium-dot"></li>
+          <li class="bg-info semi-medium-dot"></li>
+          <li class="bg-secondary semi-small-dot"></li>
+          <li class="bg-primary small-dot"></li>
+        </ul>
+        <section class="abstract">版权所有 (c) __YEARS__，__COMPANY__保留所有权利。</section>
+      </div>
+      <form class="form theme-form">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                                <textarea disabled id="text-box" name="text-box" rows="15">
       感谢您选择__NAME__，本系统是基于thinkphp开发的多功能商品线上交易平台，本系统遵循Apache2开源协议发布。本后台为吃货星球微信小程序商家后台。
 
       重要须知： 在此特别提醒用户认真阅读本《软件许可协议》--- 用户应认真阅读本《软件许可协议》 （下称《协议》）中各条款， 包括免除或者限制吃货星球责任的免责条款及对用户的权利限制。请您审阅并接受或不接受本《协议》。除非您接受本《协议》条款，否则您无权下载、安装或使用本"系统"及其相关服务。您的安装使用行为将视为对本《协议》的接受，并同意接受本《协议》各项条款的约束。
@@ -73,20 +70,19 @@
       5.2本《协议》的解释、效力及纠纷的解决，适用于中华人民共和国法律。若用户和本公司之间发生任何纠纷或争议，首先应友好协商解决，协商不成的，用户在此完全同意将纠纷或争议提交本公司所在地法院管辖。
       本《协议》的一切解释权与修改权归本公司。官方网站网址为https://__WEBSITE__。
                                 </textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <div class="pull-right p-b-30">
-                    <button class="btn btn-pill btn-light" id="notify">不同意</button>
-                    <a class="btn btn-pill btn-primary" href="{:U('Install/step1')}">同意</a>
-                    </div>
-                </div>
-            </form>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="card-footer">
+          <div class="pull-right p-b-30">
+            <button class="btn btn-pill btn-light" id="notify">不同意</button>
+            <a class="btn btn-pill btn-primary" href="{:U('Install/step1')}">同意</a>
+          </div>
+        </div>
+      </form>
     </div>
-
+  </div>
 </block>
 
 

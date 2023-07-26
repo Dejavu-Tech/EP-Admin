@@ -1,32 +1,32 @@
 <div class="table-responsive custom-scrollbar" style="max-height: calc(100vh - 110px);overflow:auto;overflow-x:hidden;max-width:850px;">
-    <table class="display supplyquery table-xs" style="width: 100%">
-        <div class="input-group m-b-10">
-            <input type="text" placeholder="请输入昵称进行搜索" id="select-url-kw" value="" class="form-control">
-            <div class="input-group-append" data-type="url" id="sarchBtn"><span class="btn btn-primary">搜索</span></div>
-        </div>
-        <tbody>
-        <?php foreach( $ds as  $row  ){ ?>
-        <tr>
-            <td><img src='{php echo $row['avatar']}' class="img-responsive img-thumbnail m-r-20" style='width:40px;height:40px;' /> {$row['nickname']}</td>
-
-            <td>{$row['mobile']}</td>
-            <td style="white-space:nowrap;text-align: right;"><a href="javascript:;" class="choose_dan_link btn-primary btn-sm" data-json='{:json_encode($row);}'>选择</a></td>
-        </tr>
-        <?php } ?>
-        <?php if( count($ds)<=0){ ?>
-        <tr>
-            <td colspan='4' align='center'>未找到团长</td>
-        </tr>
-        <?php } ?>
-        </tbody>
-        <?php if( count($ds) > 0){ ?>
+  <table class="display supplyquery table-xs" style="width: 100%">
+    <div class="input-group m-b-10">
+      <input class="form-control" id="select-url-kw" placeholder="请输入昵称进行搜索" type="text" value="">
+      <div class="input-group-append" data-type="url" id="sarchBtn"><span class="btn btn-primary">搜索</span></div>
+    </div>
+    <tbody>
+    <?php foreach ($ds as $row) { ?>
+      <tr>
+        <td><img avatar src='{php echo $row['']}' class="img-responsive img-thumbnail m-r-20" style='width:40px;height:40px;' /> {$row['nickname']}
+        </td>
+        <td>{$row['mobile']}</td>
+        <td style="white-space:nowrap;text-align: right;"><a class="choose_dan_link btn-primary btn-sm" data-json='{:json_encode($row);}' href="javascript:">选择</a></td>
+      </tr>
+    <?php } ?>
+    <?php if (count($ds) <= 0) { ?>
+      <tr>
+        <td align='center' colspan='4'>未找到团长</td>
+      </tr>
+    <?php } ?>
+    </tbody>
+      <?php if (count($ds) > 0) { ?>
         <tfoot>
         <tr>
-            <td colspan='4' align='center' id="pager_ajax">{$pager}</td>
+          <td align='center' colspan='4' id="pager_ajax">{$pager}</td>
         </tr>
         </tfoot>
-        <?php } ?>
-    </table>
+      <?php } ?>
+  </table>
 </div>
 <script>
     var query_kwd = '{$kwd}';
@@ -34,41 +34,39 @@
     var can_next = true;
 
 
-    $(document).delegate(".choose_dan_link","click",function(){
+    $(document).delegate(".choose_dan_link", "click", function () {
 
         //data-json
         var json_obj = JSON.parse($(this).attr('data-json'));
         var p_html = '';
-        p_html+= '<div class="input-group " style="margin: 0;">';
-        p_html+= '	<div class="layadmin-text-center choose_user">';
-        p_html+= '		<img class="img-responsive img-thumbnail m-r-20" src="'+json_obj.avatar+'">';
-        p_html+= '		<div class="layadmin-maillist-img" style="">'+json_obj.username+'</div>';
-        p_html+= '		<button type="button" class="btn btn-pill btn-primary btn-sm" onclick="cancle_bind(this)">删除</button>';
-        p_html+= '	</div>';
-        p_html+= '</div>';
+        p_html += '<div class="input-group " style="margin: 0;">';
+        p_html += '	<div class="layadmin-text-center choose_user">';
+        p_html += '		<img class="img-responsive img-thumbnail m-r-20" src="' + json_obj.avatar + '">';
+        p_html += '		<div class="layadmin-maillist-img" style="">' + json_obj.username + '</div>';
+        p_html += '		<button type="button" class="btn btn-pill btn-primary btn-sm" onclick="cancle_bind(this)">删除</button>';
+        p_html += '	</div>';
+        p_html += '</div>';
 
         $(cur_open_div).parent().siblings().remove();
         $(cur_open_div).parent().after(p_html);
 
-        $(cur_open_div).val( json_obj.member_id );
+        $(cur_open_div).val(json_obj.member_id);
         layer.close(layer.index);
     });
 
-    $("body").delegate(".pagination a","click",function(){
+    $("body").delegate(".pagination a", "click", function () {
         var s_page = $(this).attr('page');
-        if(!can_next)
-        {
+        if (!can_next) {
             return false;
         }
         can_next = false;
         $.ajax({
-            url:query_url,
-            type:'post',
-            dataType:'json',
-            data:{keyword:query_kwd, page:s_page,is_ajax:1},
-            success:function(ret){
-                if(ret.code == 0)
-                {
+            url: query_url,
+            type: 'post',
+            dataType: 'json',
+            data: {keyword: query_kwd, page: s_page, is_ajax: 1},
+            success: function (ret) {
+                if (ret.code == 0) {
                     $('.supplyquery tbody').html(ret.html);
                     $('#pager_ajax').html(ret.pager);
 
@@ -78,16 +76,15 @@
         })
     })
 
-    $("body").delegate("#sarchBtn","click",function(){
+    $("body").delegate("#sarchBtn", "click", function () {
         var keyword = $('#select-url-kw').val();
         $.ajax({
-            url:query_url,
-            type:'post',
-            dataType:'json',
-            data:{keyword:keyword,page:1,is_ajax:1},
-            success:function(ret){
-                if(ret.code == 0)
-                {
+            url: query_url,
+            type: 'post',
+            dataType: 'json',
+            data: {keyword: keyword, page: 1, is_ajax: 1},
+            success: function (ret) {
+                if (ret.code == 0) {
                     $('.supplyquery tbody').html(ret.html);
                     $('#pager_ajax').html(ret.pager);
 
@@ -95,5 +92,4 @@
             }
         })
     })
-
 </script>

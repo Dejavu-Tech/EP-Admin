@@ -1,26 +1,27 @@
-<div id="batch_time" style="z-index: 8;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.5)" class="form-horizontal form-validate batchtime"  enctype="multipart/form-data">
-    <div class="modal-dialog modal-dialog-centered btn-showcase" style="position: absolute;margin-top: -190px">
-        <div class="modal-content">
-            <div class="modal-header">
-		<h5 class="modal-title">设置活动时间</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+<div class="form-horizontal form-validate batchtime" enctype="multipart/form-data" id="batch_time" style="z-index: 8;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.5)">
+  <div class="modal-dialog modal-dialog-centered btn-showcase" style="position: absolute;margin-top: -190px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">设置活动时间</h5>
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body" style="height:270px">
+        <div class="form-group row">
+          <label class="col-sm-2 control-label">活动时间</label>
+          <div class="col-sm-10">
+            <div class="input-group-append">
+              {:tpl_form_field_daterange('setsametime', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
             </div>
-            <div class="modal-body" style="height:270px">
-                <div class="form-group row">
-                    <label class="col-sm-2 control-label">活动时间</label>
-                    <div class="col-sm-10">
-                        <div class="input-group-append">
-{:tpl_form_field_daterange('setsametime', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
-</div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary modal-time">确认</button>
-                <button class="btn btn-pill btn-primary" >取消</button>
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary modal-time">确认</button>
+        <button class="btn btn-pill btn-primary">取消</button>
+      </div>
     </div>
+  </div>
 </div>
 
 

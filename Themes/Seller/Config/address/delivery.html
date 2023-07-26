@@ -1,112 +1,95 @@
 {template '_header'}
-
 <div class="page-header">
-    当前位置：<span class="text-primary">收货地址管理</span>
+  当前位置：<span class="text-primary">收货地址管理</span>
 </div>
-
 <div class="page-content">
-    <form action="" method="get" class="form-horizontal form-search" role="form">
-        <input type="hidden" name="c" value="site" />
-        <input type="hidden" name="a" value="entry" />
-        <input type="hidden" name="m" value="eaterplanet_ecommerce" />
-        <input type="hidden" name="do" value="admin" />
-        <input type="hidden" name="controller"  value="config.address.delivery" />
-        <div class="page-toolbar">
-             <div class="col-sm-4">
-                <div class="input-group">
-                      <input type="text" class="input-sm form-control" name='keyword' value="{$_GPC['keyword']}" placeholder="请输入关键词">
-                      <div class="input-group-append">
-<button class="btn btn-primary" type="submit"> 搜索</button>
-</div>
-                </div>
-            </div>
+  <form action="" class="form-horizontal form-search" method="get" role="form">
+    <input name="c" type="hidden" value="site"/> <input name="a" type="hidden" value="entry"/> <input name="m" type="hidden" value="eaterplanet_ecommerce"/> <input name="do" type="hidden" value="admin"/>
+    <input name="controller" type="hidden" value="config.address.delivery"/>
+    <div class="page-toolbar">
+      <div class="col-sm-4">
+        <div class="input-group">
+          <input class="input-sm form-control" name='keyword' placeholder="请输入关键词" type="text" value="{$_GPC['keyword']}">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="submit"> 搜索</button>
+          </div>
         </div>
-    </form>
-
-    <form action="" method="post">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="page-table-header">
-                    <input type='checkbox' />
-                    <span class="pull-right">
-                        <a href="{:U('config.address.adddelivery')}" class="btn btn-primary"><i class="fa fa-plus"></i> 添加收货地址</a>
+      </div>
+    </div>
+  </form>
+  <form action="" method="post">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-table-header">
+          <input type='checkbox'/> <span class="pull-right">
+                        <a class="btn btn-primary" href="{:U('config.address.adddelivery')}"><i class="fa fa-plus"></i> 添加收货地址</a>
                     </span>
-                    <div class="btn-group">
-                        <button class="btn btn-pill btn-primary btn-sm btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除?" data-href="{:U('config.address.deldelivery')}">
-                            <i class="icow icow-shanchu1"></i>删除</button>
-                    </div>
-                </div>
-                <?php if(count($list)>0){ ?>
-                <table class="table table-responsive">
-                    <thead class="navbar-inner">
-                        <tr>
-                            <th></th>
-                            <th>名称</th>
-                            <th>联系人</th>
-                            <th>手机</th>
-                            <th>地址</th>
-                            <th>默认</th>
-                            <th>操作</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach( $list as $item ){ ?>
-                        <tr>
-                            <td>
-                                <input type='checkbox' value="{$item['id']}"/>
-                            </td>
-                            <td>{$item['title']}</td>
-                            <td>{$item['name']}</td>
-                            <td>{$item['mobile']}</td>
-                            <td>{$item['address']}</td>
-                            <td>
-                                <span class='label <?php if($item['isdefault']==1){ ?>label-primary<?php }else{ ?>label-default<?php } ?> defaults'
-                                  data-toggle='ajaxSwitch'
-                                  data-switch-value='{$item['isdefault']}'
-                                  data-switch-value0='0|否|label label-default defaults|{:U('config.address.setdeliverydefault',array('isdefault'=>1,'id'=>$item['id']))}'
-                                  data-switch-value1='1|是|label label-primary defaults|{:U('config.address.setdeliverydefault',array('isdefault'=>0,'id'=>$item['id']))}'
-                                  data-switch-css='.defaults'
-                                  data-switch-other = 'true'
-                                  style="cursor: pointer;"
-                                >
-                                <?php if($item['isdefault']==1){ ?>是<?php }else{ ?>否<?php } ?></span>
-                            </td>
-                            <td style="text-align:left;">
-                                <?php if($item['uniacid']!=0){ ?>
-                                    <a href="{:U('config.address.editdelivery', array('id' => $item['id']))}" class="btn btn-pill btn-primary btn-sm btn-operation btn-op">
-                                        <span data-toggle="tooltip" data-placement="top" title="" data-original-title="修改">
-                                            <i class="icow icow-bianji2"></i>
-                                        </span>
-                                    </a>
-                                    <a data-toggle='ajaxRemove' href="{:U('config.address.deldelivery', array('id' => $item['id']))}"class="btn btn-pill btn-primary btn-sm btn-operation btn-op" data-confirm='确认要删除此退货地址吗?'>
-                                        <span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
-                                            <i class="icow icow-shanchu1"></i>
-                                        </span>
-                                    </a>
-                                <?php } ?>
-                            </td>
-                        </tr>
-                        <?php } ?>
-                        <tr>
-                            <td colspan='7'>
-                                <div class='pagers' style='float:right;'>
-                                    {$pager}
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <?php }else{ ?>
-                <div class='panel panel-default'>
-                    <div class='panel-body' style='text-align: center;padding:30px;'>
-                        暂时没有任何收货地址!
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
+          <div class="btn-group">
+            <button class="btn btn-pill btn-primary btn-sm btn-operation" data-confirm="确认要删除?" data-href="{:U('config.address.deldelivery')}" data-toggle='batch-remove' type="button">
+              <i class="icow icow-shanchu1"></i>删除
+            </button>
+          </div>
         </div>
-    </form>
-</div>
-
-{template '_footer'}
+          <?php if (count($list) > 0) { ?>
+            <table class="table table-responsive">
+              <thead class="navbar-inner">
+              <tr>
+                <th></th>
+                <th>名称</th>
+                <th>联系人</th>
+                <th>手机</th>
+                <th>地址</th>
+                <th>默认</th>
+                <th>操作</th>
+              </tr>
+              </thead>
+              <tbody>
+              <?php foreach ($list as $item) { ?>
+                <tr>
+                  <td>
+                    <input type='checkbox' value="{$item['id']}"/>
+                  </td>
+                  <td>{$item['title']}</td>
+                  <td>{$item['name']}</td>
+                  <td>{$item['mobile']}</td>
+                  <td>{$item['address']}</td>
+                  <td>
+                    <span class='label <?php if ($item[' isdefault'] == 1) { ?>label-primary<?php } else { ?>label-default<?php } ?> defaults' data-toggle='ajaxSwitch' data-switch-value='{$item[' isdefault']}' data-switch-value0='0|否|label
+                    label-default defaults|{:U('config.address.setdeliverydefault',array('isdefault'=>1,'id'=>$item['id']))}' data-switch-value1='1|是|label label-primary
+                    defaults|{:U('config.address.setdeliverydefault',array('isdefault'=>0,'id'=>$item['id']))}' data-switch-css='.defaults' data-switch-other = 'true' style="cursor: pointer;" >
+                      <?php if ($item['isdefault'] == 1){ ?>是<?php }else{ ?>否<?php } ?></span>
+                  </td>
+                  <td style="text-align:left;">
+                      <?php if ($item['uniacid'] != 0) { ?>
+                        <a class="btn btn-pill btn-primary btn-sm btn-operation btn-op" href="{:U('config.address.editdelivery', array('id' => $item['id']))}">
+                                        <span data-original-title="修改" data-placement="top" data-toggle="tooltip" title="">
+                                            <i class="icow icow-bianji2"></i>
+                                        </span> </a>
+                        <a class="btn btn-pill btn-primary btn-sm btn-operation btn-op" data-confirm='确认要删除此退货地址吗?' data-toggle='ajaxRemove' href="{:U('config.address.deldelivery', array('id' => $item['id']))}">
+                                        <span data-original-title="删除" data-placement="top" data-toggle="tooltip" title="">
+                                            <i class="icow icow-shanchu1"></i>
+                                        </span> </a>
+                      <?php } ?>
+                  </td>
+                </tr>
+              <?php } ?>
+              <tr>
+                <td colspan='7'>
+                  <div class='pagers' style='float:right;'>
+                    {$pager}
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          <?php } else { ?>
+            <div class='panel panel-default'>
+              <div class='panel-body' style='text-align: center;padding:30px;'>
+                暂时没有任何收货地址!
+              </div>
+            </div>
+          <?php } ?>
+      </div>
+    </div>
+  </form>
+</div>{template '_footer'}

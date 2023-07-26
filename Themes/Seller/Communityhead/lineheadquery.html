@@ -1,57 +1,54 @@
 <div class="table-responsive custom-scrollbar" style="max-height: calc(100vh - 110px);overflow:auto;overflow-x:hidden;max-width:850px;">
-    <table class="display supplyquery table-xs" style="width: 100%">
-        <div class="input-group m-b-10">
-            <input type="text" placeholder="请输入小区名或团长进行搜索" id="select-url-kw" value="" class="form-control">
-            <div class="input-group-append" data-type="url" id="search_kw"><span class="btn btn-primary">搜索</span></div>
-        </div>
-        <tbody>
-        <?php foreach( $need_data as $row ){ ?>
-        <tr>
-            <td>{$row['community_name']}</td>
-            <td>{$row['head_name']}</td>
-            <td>{$row['head_mobile']}</td>
-            <td>{$row['fullAddress']}</td>
-            <td style="white-space:nowrap;text-align: right;"><a href="javascript:;" class="choose_dan_head btn-primary btn-sm" data-json='{:json_encode($row);}'>选择</a></td>
-        </tr>
-        <?php } ?>
-        <?php if(count($need_data)<=0){ ?>
-        <tr>
-            <td colspan='4' align='center'>未找到可分配的小区</td>
-        </tr>
-        <?php } ?>
-        </tbody>
-        <?php if(count($ds) > 0){ ?>
+  <table class="display supplyquery table-xs" style="width: 100%">
+    <div class="input-group m-b-10">
+      <input class="form-control" id="select-url-kw" placeholder="请输入小区名或团长进行搜索" type="text" value="">
+      <div class="input-group-append" data-type="url" id="search_kw"><span class="btn btn-primary">搜索</span></div>
+    </div>
+    <tbody>
+    <?php foreach ($need_data as $row) { ?>
+      <tr>
+        <td>{$row['community_name']}</td>
+        <td>{$row['head_name']}</td>
+        <td>{$row['head_mobile']}</td>
+        <td>{$row['fullAddress']}</td>
+        <td style="white-space:nowrap;text-align: right;"><a class="choose_dan_head btn-primary btn-sm" data-json='{:json_encode($row);}' href="javascript:">选择</a></td>
+      </tr>
+    <?php } ?>
+    <?php if (count($need_data) <= 0) { ?>
+      <tr>
+        <td align='center' colspan='4'>未找到可分配的小区</td>
+      </tr>
+    <?php } ?>
+    </tbody>
+      <?php if (count($ds) > 0) { ?>
         <tfoot>
         <tr>
-            <td colspan='4' align='center' id="pager_ajax">{$pager}</td>
+          <td align='center' colspan='4' id="pager_ajax">{$pager}</td>
         </tr>
         </tfoot>
-        <?php } ?>
-    </table>
+      <?php } ?>
+  </table>
 </div>
-
 <script type="text/javascript">
     var query_kwd = '{$kwd}';
     var query_url = "{:U('communityhead/lineheadquery', array('is_just_line' => $is_just_line))}";
     var can_next = true;
 
-    $("#search_kw").click(function(){
+    $("#search_kw").click(function () {
         var query_kwd = $('#select-url-kw').val();
 
-        if(!can_next)
-        {
+        if (!can_next) {
             return false;
         }
         can_next = false;
 
         $.ajax({
-            url:query_url,
-            type:'post',
-            dataType:'json',
-            data:{keyword:query_kwd,is_ajax:1},
-            success:function(ret){
-                if(ret.code == 0)
-                {
+            url: query_url,
+            type: 'post',
+            dataType: 'json',
+            data: {keyword: query_kwd, is_ajax: 1},
+            success: function (ret) {
+                if (ret.code == 0) {
                     $('.supplyquery tbody').html(ret.html);
                     $('#pager_ajax').html(ret.pager);
                 }
@@ -59,18 +56,18 @@
             }
         })
     })
-    $(document).undelegate(".choose_dan_head","click").delegate(".choose_dan_head","click",function(){
+    $(document).undelegate(".choose_dan_head", "click").delegate(".choose_dan_head", "click", function () {
         var json_obj = JSON.parse($(this).attr('data-json'));
         var p_html = '';
-        p_html+= '<div class="multi-audio-item m-t-10" data-id="'+json_obj.id+'">';
-        p_html+= '    <div class="input-group">';
-        p_html+= '       <input type="text" class="form-control img-textname" readonly="" value="'+json_obj.community_name+'">';
-        p_html+= '       <input type="hidden" value="'+json_obj.id+'" name="head_id[]">';
-        p_html+= '       <div class="input-group-append">';
-        p_html+= '            <button class="btn btn-pill btn-primary" data-id="'+json_obj.id+'" onclick="cancle_head(this, '+json_obj.id+')" type="button">删除</button>';
-        p_html+= '       </div>';
-        p_html+= '    </div>';
-        p_html+= '</div>';
+        p_html += '<div class="multi-audio-item m-t-10" data-id="' + json_obj.id + '">';
+        p_html += '    <div class="input-group">';
+        p_html += '       <input type="text" class="form-control img-textname" readonly="" value="' + json_obj.community_name + '">';
+        p_html += '       <input type="hidden" value="' + json_obj.id + '" name="head_id[]">';
+        p_html += '       <div class="input-group-append">';
+        p_html += '            <button class="btn btn-pill btn-primary" data-id="' + json_obj.id + '" onclick="cancle_head(this, ' + json_obj.id + ')" type="button">删除</button>';
+        p_html += '       </div>';
+        p_html += '    </div>';
+        p_html += '</div>';
 
         //$(cur_open_div).val( json_obj.member_id );
         // $(cur_open_div).parent().siblings().remove();

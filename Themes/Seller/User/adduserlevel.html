@@ -1,87 +1,102 @@
 <div class="modal-dialog modal-dialog-centered btn-showcase">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title"><?php if(!empty($group['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>客户等级</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        </div>
-        <div class="modal-body">
-            <form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="{$group['id']}" />
-                <div class="form-group row">
-                    <label class="col-sm-3 col-form-label must">等级</label>
-                    <div class="col-sm-9">
-                        <select name="level" class="form-control">
-                            <option value="1" <?php if(!empty($group['level']) && $group['level'] == 1){ ?> selected<?php } ?>>1</option>
-                            <option value="2" <?php if(!empty($group['level']) && $group['level'] == 2){ ?> selected<?php } ?>>2</option>
-                            <option value="3" <?php if(!empty($group['level']) && $group['level'] == 3){ ?> selected<?php } ?>>3</option>
-                            <option value="4" <?php if(!empty($group['level']) && $group['level'] == 4){ ?> selected<?php } ?>>4</option>
-                            <option value="5" <?php if(!empty($group['level']) && $group['level'] == 5){ ?> selected<?php } ?>>5</option>
-                            <option value="6" <?php if(!empty($group['level']) && $group['level'] == 6){ ?> selected<?php } ?>>6</option>
-                            <option value="7" <?php if(!empty($group['level']) && $group['level'] == 7){ ?> selected<?php } ?>>7</option>
-                            <option value="8" <?php if(!empty($group['level']) && $group['level'] == 8){ ?> selected<?php } ?>>8</option>
-                            <option value="9" <?php if(!empty($group['level']) && $group['level'] == 9){ ?> selected<?php } ?>>9</option>
-                            <option value="10" <?php if(!empty($group['level']) && $group['level'] == 10){ ?> selected<?php } ?>>10</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-3 col-form-label must">等级名称</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="levelname" class="form-control" value="{$group['levelname']}" data-rule-required="true" />
-                    </div>
-
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-3 col-form-label must">等级折扣</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="discount" class="form-control" value="{$group['discount']}" data-rule-required="true" />
-                        <small>请填写1-99的<span style="color:red">整数</span>，100不打折。例如：80，打八折，该客户对应等级会员价=商品现价*80%</small>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">升级方式</label>
-                    <div class="col-sm-9">
-                        <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
-                            <div class="radio radio-primary">
-                                <input id="radioinline" type='radio' name='is_auto_grade' value='0' <?php if( empty($group) || $group['is_auto_grade'] ==0 ){ ?>checked <?php } ?>  />
-                                <label class="mb-0" for="radioinline">手动</label>
-                            </div>
-                            <div class="radio radio-primary">
-                                <input id="radioinline1"type='radio' name='is_auto_grade' value='1' <?php if( !empty($group) && $group['is_auto_grade'] ==1 ){ ?>checked <?php } ?>  />
-                                <label class="mb-0" for="radioinline1">自动</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group row" id="level_money" <?php if( empty($group) || $group['is_auto_grade'] ==0 ){ ?>style="display:none;" <?php } ?>>
-                <label class="col-sm-3 col-form-label must">等级升级金额</label>
-                <div class="col-sm-9">
-                    <input type="text" name="level_money" class="form-control" value="{$group['level_money']}"  />
-                </div>
-            </form>
-        </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"><?php if (!empty($group['id'])) { ?>编辑<?php } else { ?>添加<?php } ?>客户等级</h5>
+      <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+      </button>
     </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary btn-order" type="submit">提交</button>
-        <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
+    <div class="modal-body">
+      <form action="" class="form-horizontal form-validate" enctype="multipart/form-data" method="post">
+        <input name="id" type="hidden" value="{$group['id']}"/>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label must">等级</label>
+          <div class="col-sm-9">
+            <select class="form-control" name="level">
+              <option value="1"
+                  <?php if (!empty($group['level']) && $group['level'] == 1) { ?> selected<?php } ?>>1
+              </option>
+              <option value="2"
+                  <?php if (!empty($group['level']) && $group['level'] == 2) { ?> selected<?php } ?>>2
+              </option>
+              <option value="3"
+                  <?php if (!empty($group['level']) && $group['level'] == 3) { ?> selected<?php } ?>>3
+              </option>
+              <option value="4"
+                  <?php if (!empty($group['level']) && $group['level'] == 4) { ?> selected<?php } ?>>4
+              </option>
+              <option value="5"
+                  <?php if (!empty($group['level']) && $group['level'] == 5) { ?> selected<?php } ?>>5
+              </option>
+              <option value="6"
+                  <?php if (!empty($group['level']) && $group['level'] == 6) { ?> selected<?php } ?>>6
+              </option>
+              <option value="7"
+                  <?php if (!empty($group['level']) && $group['level'] == 7) { ?> selected<?php } ?>>7
+              </option>
+              <option value="8"
+                  <?php if (!empty($group['level']) && $group['level'] == 8) { ?> selected<?php } ?>>8
+              </option>
+              <option value="9"
+                  <?php if (!empty($group['level']) && $group['level'] == 9) { ?> selected<?php } ?>>9
+              </option>
+              <option value="10"
+                  <?php if (!empty($group['level']) && $group['level'] == 10) { ?> selected<?php } ?>>
+                10
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label must">等级名称</label>
+          <div class="col-sm-9">
+            <input class="form-control" data-rule-required="true" name="levelname" type="text" value="{$group['levelname']}"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label must">等级折扣</label>
+          <div class="col-sm-9">
+            <input class="form-control" data-rule-required="true" name="discount" type="text" value="{$group['discount']}"/>
+            <small>请填写1-99的<span style="color:red">整数</span>，100不打折。例如：80，打八折，该客户对应等级会员价=商品现价*80%</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">升级方式</label>
+          <div class="col-sm-9">
+            <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+              <div class="radio radio-primary">
+                <input id="radioinline" name='is_auto_grade' type='radio' value='0' <?php if (empty($group) || $group['is_auto_grade'] == 0){ ?>checked <?php } ?> /> <label class="mb-0" for="radioinline">手动</label>
+              </div>
+              <div class="radio radio-primary">
+                <input id="radioinline1" name='is_auto_grade' type='radio' value='1' <?php if (!empty($group) && $group['is_auto_grade'] == 1){ ?>checked <?php } ?> /> <label class="mb-0" for="radioinline1">自动</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row" id="level_money"
+             <?php if (empty($group) || $group['is_auto_grade'] == 0){ ?>style="display:none;" <?php } ?>>
+          <label class="col-sm-3 col-form-label must">等级升级金额</label>
+          <div class="col-sm-9">
+            <input class="form-control" name="level_money" type="text" value="{$group['level_money']}"/>
+          </div>
+      </form>
     </div>
-</div>
-</div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary btn-order" type="submit">提交</button>
+    <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+  </div>
+</div></div>
+<script>
+    $(function () {
+        $('input[name=is_auto_grade]').click(function () {
+            var is_auto_grade = $(this).val();
 
- <script>
+            if (is_auto_grade == 1) {
+                $('#level_money').show();
+            } else {
+                $('#level_money').hide();
+            }
 
-     $(function(){
-         $('input[name=is_auto_grade]').click(function(){
-             var is_auto_grade = $(this).val();
-
-             if( is_auto_grade == 1 )
-             {
-                 $('#level_money').show();
-             }else{
-                 $('#level_money').hide();
-             }
-
-         })
-     })
-
- </script>
+        })
+    })
+</script>

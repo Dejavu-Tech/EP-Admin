@@ -2,201 +2,157 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
+    <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
   <title><?php echo $shoname; ?></title>
-  <link rel="shortcut icon" href="" />
-
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-  <link rel="stylesheet" href="/assets/layuiadmin/style/admin.css" media="all">
-
-<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
-<!--[if lt IE 9]>
-  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<link href="./assets/css/bootstrap.min.css?v=201903260001" rel="stylesheet">
-<link href="./assets/css/common.css?v=201903260001" rel="stylesheet">
-<script type="text/javascript">
-            window.sysinfo = {
-            <?php if (!empty($_W['uniacid']) ){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
-
-            <?php if( !empty($_W['acid'])  ){ ?>'acid': '{$_W['acid']}',<?php } ?>
-
-            <?php if (!empty($_W['openid']) ) { ?>'openid': '{$_W['openid']}',<?php } ?>
-
-            <?php if( !empty($_W['uid']) ) {  ?>'uid': '{$_W['uid']}',<?php } ?>
-
-            'isfounder': <?php if (!empty($_W['isfounder']) ) { ?>1<?php  }else{  ?>0<?php } ?>,
-
-            'siteroot': '{$_W['siteroot']}',
-                    'siteurl': '{$_W['siteurl']}',
-                    'attachurl': '{$_W['attachurl']}',
-                    'attachurl_local': '{$_W['attachurl_local']}',
-                    'attachurl_remote': '{$_W['attachurl_remote']}',
-                    'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
-            'cookie' : {'pre': ''},
-            'account' : {:json_encode($_W['account'])},
-            };
-        </script>
-
-<script type="text/javascript" src="./assets/js/lib/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="./assets/js/lib/bootstrap.min.js"></script>
-<script type="text/javascript" src="./assets/js/app/util.js?v=201903260001"></script>
-<script type="text/javascript" src="./assets/js/app/common.min.js?v=201903260001"></script>
-<script type="text/javascript" src="./assets/js/require.js?v=201903260001"></script>
-<script type="text/javascript" src="./assets/js/lib/jquery.nice-select.js?v=201903260001"></script>
-  <link rel="stylesheet" href="/assets/layuiadmin/layui/css/layui.css" media="all">
-   <link href="/assets/css/ep/eaterplanet.css" rel="stylesheet">
+  <link href="" rel="shortcut icon"/>
+  <meta content="webkit" name="renderer">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <link href="/assets/layuiadmin/style/admin.css" media="all" rel="stylesheet">
+  <link href="./assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+  <link href="./assets/css/common.css?v=201903260001" rel="stylesheet">
+  <script src="/assets/js/app.js" type="text/javascript"></script>
+  <script src="./assets/js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="./assets/js/lib/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/app/util.js?v=201903260001" type="text/javascript"></script>
+  <script src="./assets/js/app/common.min.js?v=201903260001" type="text/javascript"></script>
+  <script src="./assets/js/require.js?v=201903260001" type="text/javascript"></script>
+  <script src="./assets/js/lib/jquery.nice-select.js?v=201903260001" type="text/javascript"></script>
+  <link href="/assets/layuiadmin/layui/css/layui.css" media="all" rel="stylesheet">
+  <link href="/assets/css/ep/eaterplanet.css" rel="stylesheet">
 </head>
 <body layadmin-themealias="default">
 <div class="layui-fluid">
-	<div class="layui-card">
-		<div class="layui-card-header layui-elem-quote">当前位置：<span class="line-text">更新日志</span></div>
-		<div class="card-body" style="padding:15px;">
-			<form action="" method="post" class="form theme-form layui-form" lay-filter="component-layui-form-item" enctype="multipart/form-data" >
-
-				<?php if(!empty($data['result']['version'])){ ?>
-
-				<?php }else{ ?>
-				<div class="form-group row">
-				<label class="col-sm-2 col-form-label">当前</label>
-				<div class="col-sm-10">
-					<div class="input-group">
-						<div class="input-group-addon" style="background:#f2f2f2">社区团购&nbsp;{$ver}&nbsp;商业版</div>
-
-						<div class="input-group-btn">
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="form-group row">
-					<label class="col-sm-2 col-form-label">最新</label>
-					<div class="col-sm-10">
-						<div id='count'  class="form-control-static"> &nbsp; <span style="color:#FF0019;">&nbsp;已到期，请联系服务商续费升级，才能查看更新日志；
-					</div>
-				</div>
-					</div>
-				</div>
-				<?php } ?>
-
-
-
-			</form>
-		</div>
-	</div>
+  <div class="layui-card">
+    <div class="layui-card-header layui-elem-quote">当前位置：<span class="line-text">更新日志</span></div>
+    <div class="card-body" style="padding:15px;">
+      <form action="" class="form theme-form layui-form" enctype="multipart/form-data" lay-filter="component-layui-form-item" method="post">
+          <?php if (!empty($data['result']['version'])){ ?><?php }else{ ?>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">当前</label>
+          <div class="col-sm-10">
+            <div class="input-group">
+              <div class="input-group-addon" style="background:#f2f2f2">社区团购&nbsp;{$ver}&nbsp;商业版</div>
+              <div class="input-group-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">最新</label>
+          <div class="col-sm-10">
+            <div class="form-control-static" id='count'> &nbsp; <span style="color:#FF0019;">&nbsp;已到期，请联系服务商续费升级，才能查看更新日志；
+            </div>
+          </div>
+        </div>
+    </div>
+      <?php } ?>
+    </form>
+  </div>
 </div>
-
-
+</div>
 <script src="/assets/layuiadmin/layui/layui.js"></script>
-
 <script>
-	layui.config({
-		base: '/assets/layuiadmin/' //静态资源所在路径
-	}).extend({
-		index: 'lib/index' //主入口模块
-	}).use('index');
+    layui.config({
+        base: '/assets/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use('index');
 </script>
-
 <script>
-//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
-var layer = layui.layer;
-var $;
+    //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+    var layer = layui.layer;
+    var $;
 
-layui.use(['jquery', 'layer','form','colorpicker'], function(){
-  $ = layui.$;
-  var form = layui.form;
-  var colorpicker = layui.colorpicker;
-
-
-	$('#clear_qrcode').click(function(){
-		var s_url = $(this).attr('data-href');
-
-		console.log(s_url);
-
-		layer.confirm('确认更新客户核销二维码吗？', function(index){
-		  //do something
-		  $.ajax({
-			url : s_url,
-			dataType:'json',
-			success:function(ret){
-				layer.msg('操作成功',{time: 1000,
-					end:function(){
-					}
-				});
-			}
-		  })
-		  layer.close(index);
-		});
-
-	});
-   //表单赋值
-    colorpicker.render({
-      elem: '#minicolors'
-      ,color: '{$data['qrcode_rgb']}'
-      ,done: function(color){
-        $('#test-colorpicker-form-input1').val(color);
-      }
-    });
-
-    colorpicker.render({
-      elem: '#avatar_rgb'
-      ,color: '{$data['avatar_rgb']}'
-      ,done: function(color){
-        $('#test-colorpicker-form-input2').val(color);
-      }
-    });
-
-  //监听提交
-  form.on('submit(formDemo)', function(data){
-
-	 $.ajax({
-		url: data.form.action,
-		type: data.form.method,
-		data: data.field,
-		dataType:'json',
-		success: function (info) {
-
-			if(info.status == 0)
-			{
-				layer.msg(info.result.message,{icon: 1,time: 2000});
-			}else if(info.status == 1){
-				var go_url = location.href;
-				if( info.result.hasOwnProperty("url") )
-				{
-					go_url = info.result.url;
-				}
-
-				layer.msg('操作成功',{time: 2000,
-					end:function(){
-						location.href = info.result.url;
-					}
-				});
-			}
-		}
-	});
-
-    return false;
-  });
-})
+    layui.use(['jquery', 'layer', 'form', 'colorpicker'], function () {
+        $ = layui.$;
+        var form = layui.form;
+        var colorpicker = layui.colorpicker;
 
 
+        $('#clear_qrcode').click(function () {
+            var s_url = $(this).attr('data-href');
 
+            console.log(s_url);
+
+            layer.confirm('确认更新客户核销二维码吗？', function (index) {
+                //do something
+                $.ajax({
+                    url: s_url,
+                    dataType: 'json',
+                    success: function (ret) {
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
+                            }
+                        });
+                    }
+                })
+                layer.close(index);
+            });
+
+        });
+        //表单赋值
+        colorpicker.render({
+            elem: '#minicolors'
+            , color: '{$data['qrcode_rgb']}'
+            , done: function (color) {
+                $('#test-colorpicker-form-input1').val(color);
+            }
+        });
+
+        colorpicker.render({
+            elem: '#avatar_rgb'
+            , color: '{$data['avatar_rgb']}'
+            , done: function (color) {
+                $('#test-colorpicker-form-input2').val(color);
+            }
+        });
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+
+            $.ajax({
+                url: data.form.action,
+                type: data.form.method,
+                data: data.field,
+                dataType: 'json',
+                success: function (info) {
+
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
+                        var go_url = location.href;
+                        if (info.result.hasOwnProperty("url")) {
+                            go_url = info.result.url;
+                        }
+
+                        layer.msg('操作成功', {
+                            time: 2000,
+                            end: function () {
+                                location.href = info.result.url;
+                            }
+                        });
+                    }
+                }
+            });
+
+            return false;
+        });
+    })
 </script>
 <script type="text/javascript">
-  $(document).ready(function(){
-  var str = $('div#count').html();
-  var nstr = str.replace(/\n\r/gi,"<br/>");
-  nstr = str.replace(/\r/gi,"<br/>");
-  nstr = str.replace(/\n/gi,"<br/>");
-  $('div#count').html(nstr);
-  });
+    $(document).ready(function () {
+        var str = $('div#count').html();
+        var nstr = str.replace(/\n\r/gi, "<br/>");
+        nstr = str.replace(/\r/gi, "<br/>");
+        nstr = str.replace(/\n/gi, "<br/>");
+        $('div#count').html(nstr);
+    });
 </script>
 <style>
-	input[type=checkbox], input[type=radio]{margin:0px;}
+    input[type=checkbox], input[type=radio] {
+        margin: 0px;
+    }
 </style>
 
 

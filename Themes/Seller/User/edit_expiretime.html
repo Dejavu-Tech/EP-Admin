@@ -1,67 +1,64 @@
-<form action="{:U('user/edit_expiretime')}" method="post" id="expireFrom" class="form-horizontal form-validate" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="<?php echo $member['member_id'];?>" />
-    <input type="hidden" name="is_post" value="1" />
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label">到期时间</label>
-        <div class="col-sm-9">
-            <input type="text" class="form-control" name="expire_time" id="expire_time" placeholder="yyyy-MM-dd HH:mm:ss" value="<?php echo date('Y-m-d H:i:s',$member['card_end_time']); ?>" readonly>
-        </div>
+<form action="{:U('user/edit_expiretime')}" class="form-horizontal form-validate" enctype="multipart/form-data" id="expireFrom" method="post">
+  <input name="id" type="hidden" value="<?php echo $member['member_id']; ?>"/> <input name="is_post" type="hidden" value="1"/>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">到期时间</label>
+    <div class="col-sm-9">
+      <input class="form-control" id="expire_time" name="expire_time" placeholder="yyyy-MM-dd HH:mm:ss" readonly type="text" value="<?php echo date('Y-m-d H:i:s', $member['card_end_time']); ?>">
     </div>
-    <div class="form-group row">
-        <div class="col-sm-12 text-right">
-            <input type="button" value="确定修改" class="btn btn-primary expireBtn"  />
-            <a class="btn btn-secondary cancelBtn" style='margin-left:10px;'>取消</a>
-        </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-12 text-right">
+      <input class="btn btn-primary expireBtn" type="button" value="确定修改"/> <a class="btn btn-secondary cancelBtn" style='margin-left:10px;'>取消</a>
     </div>
+  </div>
 </form>
 <?php $time = date('Y-m-d H:i:s'); ?>
- <script>
-     layui.use('laydate', function(){
-         var laydate = layui.laydate;
+<script>
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
 
-         laydate.render({
-             elem: '#expire_time'
-             ,type: 'datetime'
-             ,min: '<?php echo $time;?>'
-         });
-
-         $('.cancelBtn').click(function(){
-             layer.closeAll();
-         });
-
-         //监听提交
-         $('.expireBtn').click(function(){
-             var expire_time = $('#expire_time').val();
-             if(expire_time == ''){
-                 layer.msg("请选择到期时间",{icon: 1,time: 2000});
-                 return false;
-             }else{
-                 var s_data = $('#expireFrom').serialize();
-                 $.ajax({
-                     url: "{:U('user/edit_expiretime')}",
-                     type:'post',
-                     dataType:'json',
-                     data:s_data,
-                     success:function(info){
-                         if(info.status == 0)
-                         {
-                             layer.msg(info.result.message,{icon: 1,time: 2000});
-                         }else if(info.status == 1){
-                             var go_url = location.href;
-                             if( info.result.hasOwnProperty("url") )
-                             {
-                                 go_url = info.result.url;
-                             }
-
-                             layer.msg('操作成功',{time: 1000,
-                                 end:function(){
-                                     location.href = info.result.url;
-                                 }
-                             });
-                         }
-                     }
-                 })
-             }
+        laydate.render({
+            elem: '#expire_time'
+            , type: 'datetime'
+            , min: '<?php echo $time;?>'
         });
-     });
- </script>
+
+        $('.cancelBtn').click(function () {
+            layer.closeAll();
+        });
+
+        //监听提交
+        $('.expireBtn').click(function () {
+            var expire_time = $('#expire_time').val();
+            if (expire_time == '') {
+                layer.msg("请选择到期时间", {icon: 1, time: 2000});
+                return false;
+            } else {
+                var s_data = $('#expireFrom').serialize();
+                $.ajax({
+                    url: "{:U('user/edit_expiretime')}",
+                    type: 'post',
+                    dataType: 'json',
+                    data: s_data,
+                    success: function (info) {
+                        if (info.status == 0) {
+                            layer.msg(info.result.message, {icon: 1, time: 2000});
+                        } else if (info.status == 1) {
+                            var go_url = location.href;
+                            if (info.result.hasOwnProperty("url")) {
+                                go_url = info.result.url;
+                            }
+
+                            layer.msg('操作成功', {
+                                time: 1000,
+                                end: function () {
+                                    location.href = info.result.url;
+                                }
+                            });
+                        }
+                    }
+                })
+            }
+        });
+    });
+</script>

@@ -1,204 +1,308 @@
 <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
   <ul class="nav nav-tabs nav-material layui-tab-title">
-	  <li class="nav-link active">商城<div class="material-border"></div></li>
-	  <li class="nav-link">商品<div class="material-border"></div></li>
-	  <li class="nav-link">文章<div class="material-border"></div></li>
-	  <li class="nav-link">主题活动<div class="material-border"></div></li>
-	  <li class="nav-link">分类<div class="material-border"></div></li>
-	  <li class="nav-link">群接龙<div class="material-border"></div></li>
-	  <li class="nav-link">拼团商品<div class="material-border"></div></li>
+    <li class="nav-link active">商城
+      <div class="material-border"></div>
+    </li>
+    <li class="nav-link">商品
+      <div class="material-border"></div>
+    </li>
+    <li class="nav-link">文章
+      <div class="material-border"></div>
+    </li>
+    <li class="nav-link">主题活动
+      <div class="material-border"></div>
+    </li>
+    <li class="nav-link">分类
+      <div class="material-border"></div>
+    </li>
+    <li class="nav-link">群接龙
+      <div class="material-border"></div>
+    </li>
+    <li class="nav-link">拼团商品
+      <div class="material-border"></div>
+    </li>
   </ul>
   <div class="layui-tab-content">
-
-	<div class="tab-content " id="selectUrl">
-		<div class="tab-pane active" id="sut_shop">
-			<div class="input-group">
-				<input type="text" placeholder="请输入链接名称进行搜索" id="select-url-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="url">搜索</span></div>
-			</div>
-			<?php if($platform){ ?>
-			<div class="alert alert-primary" style="margin-bottom: 0;">
-				<p>如果底部菜单中已经选择该链接，页面中选择后点击无效</p>
-				<?php if($platform=='wxapp_tabbar'){ ?>
-					<p>底部菜单只可选择部分页面地址</p>
-				<?php } ?>
-			</div>
-			<?php } ?>
-
-			<div id="select-url-list" style="margin-top:20px;">
-			<?php foreach( $allUrls as $item ){ ?>
-				<div class="form-group m-b-0 m-t-10"><h6><i class="fa fa-folder-open-o"></i> {$item['name']}</h6></div>
-				<?php foreach( $item['list'] as $child ){ ?>
-					<nav data-href="<?php echo $platform?$child['url_wxapp']:$child['url'];?>" class="choose_dan_link_url btn btn-pill btn-primary btn-sm" title="">{$child['name']}</nav>
-				<?php } ?>
-			<?php } ?>
-			</div>
-		</div>
-
-		<div class="tab-pane" id="sut_good">
-			<div class="input-group">
-				<input type="text" placeholder="请输入商品名称进行搜索" id="select-good-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="good">搜索</span></div>
-			</div>
-			<div id="select-good-list"></div>
-		</div>
-
-		<div class="tab-pane" id="sut_article">
-			<div class="input-group">
-				<input type="text" placeholder="请输入文章名称进行搜索" id="select-article-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="article">搜索</span></div>
-			</div>
-			<div id="select-article-list"></div>
-		</div>
-
-		<div class="tab-pane" id="sut_cate">
-			<?php foreach( $categorys as $category ){ ?>
-				 <?php if(empty($category['parentid'])){ ?>
-					<div class="line">
-						<div class="icon icon-1"></div>
-						<nav title="选择" class="choose_dan_link_url btn btn-pill btn-primary btn-sm" data-href="/pages/goods/index/index?cate={$category['id']}">选择</nav>
-						<div class="text">{$category['name']}</div>
-					</div>
-					 <?php foreach( $categorys as $category2 ){ ?>
-						<?php if($category2['parentid']==$category['id']){ ?>
-							<div class="line">
-								<div class="icon icon-2"></div>
-								<nav title="选择" class="btn btn-pill btn-primary btn-sm" data-href="/pages/goods/index/index?cate={$category2['id']}">选择</nav>
-								<div class="text">{$category2['name']}</div>
-							</div>
-							<?php foreach( $categorys as $category3 ){ ?>
-								 <?php if($category3['parentid']==$category2['id']){ ?>
-									 <div class="line">
-										<div class="icon icon-3"></div>
-										<nav title="选择" class="btn btn-pill btn-primary btn-sm" data-href="/pages/goods/index/index?cate={$category3['id']}">选择</nav>
-										<div class="text">{$category3['name']}</div>
-									</div>
-								 <?php } ?>
-							<?php } ?>
-						<?php } ?>
-					 <?php } ?>
-				<?php } ?>
-			<?php } ?>
-		</div>
-
-		<div class="tab-pane" id="sut_special">
-			<div class="input-group">
-				<input type="text" placeholder="请输入主题活动名称进行搜索" id="select-special-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="special">搜索</span></div>
-			</div>
-			<div id="select-special-list"></div>
-		</div>
-
-		<!-- 分类页面 -->
-		<div class="tab-pane" id="sut_category">
-			<div class="input-group">
-				<input type="text" placeholder="请输入分类名称进行搜索" id="select-category-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="category">搜索</span></div>
-			</div>
-			<div id="select-category-list"></div>
-		</div>
-		<div class="tab-pane" id="sut_solitaire">
-			<div class="input-group">
-				<input type="text" placeholder="请输入群接龙名称进行搜索" id="select-solitaire-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="solitaire">搜索</span></div>
-			</div>
-			<div id="select-solitaire-list"></div>
-		</div>
-
-		<div class="tab-pane" id="sut_coupon">
-			<div class="input-group">
-				<input type="text" placeholder="请输入优惠券名称进行搜索" id="select-coupon-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="coupon">搜索</span></div>
-			</div>
-			<div id="select-coupon-list"></div>
-		</div>
-		<div class="tab-pane" id="sut_pintuan">
-			<div class="input-group">
-				<input type="text" placeholder="请输入拼团商品名称进行搜索" id="select-pintuan-kw" value="" class="form-control">
-				<div class="input-group-append"><span class="btn btn-primary select-btn" data-type="pintuan">搜索</span></div>
-			</div>
-			<div id="select-pintuan-list"></div>
-		</div>
-
-	</div>
+    <div class="tab-content " id="selectUrl">
+      <div class="tab-pane active" id="sut_shop">
+        <div class="input-group">
+          <input class="form-control" id="select-url-kw" placeholder="请输入链接名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="url">搜索</span></div>
+        </div>
+          <?php if ($platform) { ?>
+            <div class="alert alert-primary" style="margin-bottom: 0;">
+              <p>如果底部菜单中已经选择该链接，页面中选择后点击无效</p>
+                <?php if ($platform == 'wxapp_tabbar') { ?>
+                  <p>底部菜单只可选择部分页面地址</p>
+                <?php } ?>
+            </div>
+          <?php } ?>
+        <div id="select-url-list" style="margin-top:20px;">
+            <?php foreach ($allUrls as $item) { ?>
+              <div class="form-group m-b-0 m-t-10"><h6><i class="fa fa-folder-open-o"></i> {$item['name']}</h6></div>
+                <?php foreach ($item['list'] as $child) { ?>
+                <nav class="choose_dan_link_url btn btn-pill btn-primary btn-sm" data-href="<?php echo $platform ? $child['url_wxapp'] : $child['url']; ?>" title="">{$child['name']}
+                </nav>
+                <?php } ?><?php } ?>
+        </div>
+      </div>
+      <div class="tab-pane" id="sut_good">
+        <div class="input-group">
+          <input class="form-control" id="select-good-kw" placeholder="请输入商品名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="good">搜索</span></div>
+        </div>
+        <div id="select-good-list"></div>
+      </div>
+      <div class="tab-pane" id="sut_article">
+        <div class="input-group">
+          <input class="form-control" id="select-article-kw" placeholder="请输入文章名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="article">搜索</span></div>
+        </div>
+        <div id="select-article-list"></div>
+      </div>
+      <div class="tab-pane" id="sut_cate">
+          <?php foreach ($categorys as $category) { ?><?php if (empty($category['parentid'])) { ?>
+            <div class="line">
+              <div class="icon icon-1"></div>
+              <nav class="choose_dan_link_url btn btn-pill btn-primary btn-sm" data-href="/pages/goods/index/index?cate={$category['id']}" title="选择">选择
+              </nav>
+              <div class="text">{$category['name']}</div>
+            </div>
+              <?php foreach ($categorys as $category2) { ?><?php if ($category2['parentid'] == $category['id']) { ?>
+              <div class="line">
+                <div class="icon icon-2"></div>
+                <nav class="btn btn-pill btn-primary btn-sm" data-href="/pages/goods/index/index?cate={$category2['id']}" title="选择">选择
+                </nav>
+                <div class="text">{$category2['name']}</div>
+              </div>
+                  <?php foreach ($categorys as $category3) { ?><?php if ($category3['parentid'] == $category2['id']) { ?>
+                <div class="line">
+                  <div class="icon icon-3"></div>
+                  <nav class="btn btn-pill btn-primary btn-sm" data-href="/pages/goods/index/index?cate={$category3['id']}" title="选择">选择
+                  </nav>
+                  <div class="text">{$category3['name']}</div>
+                </div>
+                  <?php } ?><?php } ?><?php } ?><?php } ?><?php } ?><?php } ?>
+      </div>
+      <div class="tab-pane" id="sut_special">
+        <div class="input-group">
+          <input class="form-control" id="select-special-kw" placeholder="请输入主题活动名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="special">搜索</span></div>
+        </div>
+        <div id="select-special-list"></div>
+      </div>
+      <!-- 分类页面 -->
+      <div class="tab-pane" id="sut_category">
+        <div class="input-group">
+          <input class="form-control" id="select-category-kw" placeholder="请输入分类名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="category">搜索</span>
+          </div>
+        </div>
+        <div id="select-category-list"></div>
+      </div>
+      <div class="tab-pane" id="sut_solitaire">
+        <div class="input-group">
+          <input class="form-control" id="select-solitaire-kw" placeholder="请输入群接龙名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="solitaire">搜索</span>
+          </div>
+        </div>
+        <div id="select-solitaire-list"></div>
+      </div>
+      <div class="tab-pane" id="sut_coupon">
+        <div class="input-group">
+          <input class="form-control" id="select-coupon-kw" placeholder="请输入优惠券名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="coupon">搜索</span></div>
+        </div>
+        <div id="select-coupon-list"></div>
+      </div>
+      <div class="tab-pane" id="sut_pintuan">
+        <div class="input-group">
+          <input class="form-control" id="select-pintuan-kw" placeholder="请输入拼团商品名称进行搜索" type="text" value="">
+          <div class="input-group-append"><span class="btn btn-primary select-btn" data-type="pintuan">搜索</span></div>
+        </div>
+        <div id="select-pintuan-list"></div>
+      </div>
+    </div>
   </div>
 </div>
-
 <script>
+    layui.use('element', function () {
+        var element = layui.element;
 
-layui.use('element', function(){
-  var element = layui.element;
-
-  //一些事件监听
-  element.on('tab(docDemoTabBrief)', function(data){
-	  if(data.index == 0)
-	  {
-		$('#sut_shop').addClass('active').siblings().removeClass('active');
-	  }else if(data.index == 1){
-		$('#sut_good').addClass('active').siblings().removeClass('active');
-	  }else if(data.index == 2){
-		$('#sut_article').addClass('active').siblings().removeClass('active');
-	  }else if(data.index == 3){
-		$('#sut_special').addClass('active').siblings().removeClass('active');
-	  }else if(data.index == 4){
-		$('#sut_category').addClass('active').siblings().removeClass('active');
-	  }else if(data.index == 5){
-		  $('#sut_solitaire').addClass('active').siblings().removeClass('active');
-	  }else if(data.index == 6){
-		  $('#sut_pintuan').addClass('active').siblings().removeClass('active');
-	  }
-  });
-});
+        //一些事件监听
+        element.on('tab(docDemoTabBrief)', function (data) {
+            if (data.index == 0) {
+                $('#sut_shop').addClass('active').siblings().removeClass('active');
+            } else if (data.index == 1) {
+                $('#sut_good').addClass('active').siblings().removeClass('active');
+            } else if (data.index == 2) {
+                $('#sut_article').addClass('active').siblings().removeClass('active');
+            } else if (data.index == 3) {
+                $('#sut_special').addClass('active').siblings().removeClass('active');
+            } else if (data.index == 4) {
+                $('#sut_category').addClass('active').siblings().removeClass('active');
+            } else if (data.index == 5) {
+                $('#sut_solitaire').addClass('active').siblings().removeClass('active');
+            } else if (data.index == 6) {
+                $('#sut_pintuan').addClass('active').siblings().removeClass('active');
+            }
+        });
+    });
 </script>
 <style>
-	#selectUrl .modal-body {padding: 10px 15px;}
-	#selectUrl .tab-pane {min-height: 400px; max-height: 600px; overflow-y: auto;}
-	#selectUrl .btn {margin-bottom: 3px;}
-	#selectUrl .line {color: #999;}
-	#selectUrl .line .icon {height: 35px; width: 30px; position: relative; float: left;}
-	#selectUrl .line .icon.icon-1:before {content: ""; width: 10px; height: 10px; border: 1px dashed #ccc; position: absolute; top: 12px; left: 10px;}
-	#selectUrl .line .icon.icon-2 {width: 50px;}
-	#selectUrl .line .icon.icon-2:before {content: ""; width: 10px; height: 10px; border-left: 1px dashed #ccc; border-bottom: 1px dashed #ccc; position: absolute; top: 12px; left: 20px;}
-	#selectUrl .line .icon.icon-3 {width: 60px;}
-	#selectUrl .line .icon.icon-3:before {content: ""; width: 10px; height: 10px; border-left: 1px dashed #ccc; border-bottom: 1px dashed #ccc; position: absolute; top: 12px; left: 30px;}
-	#selectUrl .line .btn-sm {float: right; margin-top: 5px; margin-right: 5px; height: 24px; line-height: 24px; padding: 0 10px;}
-	#selectUrl .line .text {display: block;}
-	#selectUrl .line.good .image {width:40px;height:40px; float: left;}
-	#selectUrl .line.good .image img {height: 100%; width: 100%;}
-	#selectUrl .line.good .text {padding-left: 60px; height: 52px;}
-	#selectUrl .line.good .text p {padding: 0; margin: 0;}
-	#selectUrl .line.good .text .name {font-size: 15px; line-height: 32px; height: 28px;}
-	#selectUrl .line.good .text .price {font-size: 12px; line-height: 18px; height: 18px;}
-	#selectUrl .line.good .btn-sm {height: 32px; padding: 5px 10px; line-height: 22px; margin-top: 9px;}
-	#selectUrl .nav-tabs > li > a {padding: 8px 20px;}
-	li {cursor: pointer;}
-	</style>
- <script>
-        	$(function(){
-        		$("#selectUrl").find('#selectUrlTab a').click(function(e) {
-						$('#tab').val($(this).attr('href'));
-						e.preventDefault();
-						$(this).tab('show');
-				});
+    #selectUrl .modal-body {
+        padding: 10px 15px;
+    }
 
-				$(document).delegate(".choose_dan_link_url","click",function(){
-					$(cur_open_div).val( $(this).attr('data-href') );
-					layer.close(layer.index);
-				});
+    #selectUrl .tab-pane {
+        min-height: 400px;
+        max-height: 600px;
+        overflow-y: auto;
+    }
 
-        		$(".select-btn").click(function(){
-        			var type = $(this).data("type");
-        			var kw = $.trim($("#select-"+type+"-kw").val());
-        			if(!kw){ }
-        			$("#select-"+type+"-list").html('<div class="tip text-center m-t-20">正在进行搜索...</div>');
-        			$.ajax("{:U('util/query', array('full'=>$full, 'platform'=>$platform, 'ok' => 1))}", {
-		      			type: "get",
-		      			dataType: "html",
-		      			cache: false,
-		      			data: {kw:kw, type:type}
-		      		}).done(function (html) {
-		      			$("#select-"+type+"-list").html(html);
-		      		});
-        		});
-        	});
-        </script>
+    #selectUrl .btn {
+        margin-bottom: 3px;
+    }
+
+    #selectUrl .line {
+        color: #999;
+    }
+
+    #selectUrl .line .icon {
+        height: 35px;
+        width: 30px;
+        position: relative;
+        float: left;
+    }
+
+    #selectUrl .line .icon.icon-1:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border: 1px dashed #ccc;
+        position: absolute;
+        top: 12px;
+        left: 10px;
+    }
+
+    #selectUrl .line .icon.icon-2 {
+        width: 50px;
+    }
+
+    #selectUrl .line .icon.icon-2:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-left: 1px dashed #ccc;
+        border-bottom: 1px dashed #ccc;
+        position: absolute;
+        top: 12px;
+        left: 20px;
+    }
+
+    #selectUrl .line .icon.icon-3 {
+        width: 60px;
+    }
+
+    #selectUrl .line .icon.icon-3:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-left: 1px dashed #ccc;
+        border-bottom: 1px dashed #ccc;
+        position: absolute;
+        top: 12px;
+        left: 30px;
+    }
+
+    #selectUrl .line .btn-sm {
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 10px;
+    }
+
+    #selectUrl .line .text {
+        display: block;
+    }
+
+    #selectUrl .line.good .image {
+        width: 40px;
+        height: 40px;
+        float: left;
+    }
+
+    #selectUrl .line.good .image img {
+        height: 100%;
+        width: 100%;
+    }
+
+    #selectUrl .line.good .text {
+        padding-left: 60px;
+        height: 52px;
+    }
+
+    #selectUrl .line.good .text p {
+        padding: 0;
+        margin: 0;
+    }
+
+    #selectUrl .line.good .text .name {
+        font-size: 15px;
+        line-height: 32px;
+        height: 28px;
+    }
+
+    #selectUrl .line.good .text .price {
+        font-size: 12px;
+        line-height: 18px;
+        height: 18px;
+    }
+
+    #selectUrl .line.good .btn-sm {
+        height: 32px;
+        padding: 5px 10px;
+        line-height: 22px;
+        margin-top: 9px;
+    }
+
+    #selectUrl .nav-tabs > li > a {
+        padding: 8px 20px;
+    }
+
+    li {
+        cursor: pointer;
+    }
+</style>
+<script>
+    $(function () {
+        $("#selectUrl").find('#selectUrlTab a').click(function (e) {
+            $('#tab').val($(this).attr('href'));
+            e.preventDefault();
+            $(this).tab('show');
+        });
+
+        $(document).delegate(".choose_dan_link_url", "click", function () {
+            $(cur_open_div).val($(this).attr('data-href'));
+            layer.close(layer.index);
+        });
+
+        $(".select-btn").click(function () {
+            var type = $(this).data("type");
+            var kw = $.trim($("#select-" + type + "-kw").val());
+            if (!kw) {
+            }
+            $("#select-" + type + "-list").html('<div class="tip text-center m-t-20">正在进行搜索...</div>');
+            $.ajax("{:U('util/query', array('full'=>$full, 'platform'=>$platform, 'ok' => 1))}", {
+                type: "get",
+                dataType: "html",
+                cache: false,
+                data: {kw: kw, type: type}
+            }).done(function (html) {
+                $("#select-" + type + "-list").html(html);
+            });
+        });
+    });
+</script>

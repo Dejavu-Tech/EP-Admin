@@ -1,122 +1,105 @@
-<?php if($type=='good'){ ?>
-	<?php if(empty($list)){ ?>
-		<div class="tip text-center m-t-20">抱歉！未查询到<?php if(!empty($kw)){ ?>与“{$kw}”<?php } ?>相关的商品，请更换关键字后重试。</div>
-	<?php }else{ ?>
-		<?php foreach( $list as $item ){ ?>
-			<div class="line good">
-				<div class="image"><img class="img-responsive img-thumbnail m-r-20" src="{$item['thumb']}"/></div>
-				<nav title="选择" class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/pages/goods/goodsDetail?id={$item['id']}">选择</nav>
-				<div class="text">
-					<p class="name">{$item['title']}</p>
-					<p class="price">原价: {$item['productprice']}元 <?php if( $item['type'] == 'integral' ){ ?>现价: {$item['marketprice']}积分<?php }else{ ?>现价: {$item['marketprice']}元<?php } ?></p>
-				</div>
-			</div>
-		<?php } ?>
-	<?php } ?>
-<?php } ?>
-<?php if($type=='article'){ ?>
-	<?php if(empty($list)){ ?>
-		<div class="tip text-center m-t-20">抱歉！未查询到<?php if(!empty($kw)){ ?>与“{$kw}”<?php } ?>相关的文章，请更换关键字后重试。</div>
-	<?php }else{ ?>
-		<?php foreach( $list as $item ){ ?>
-			<div class="line good">
-				<nav title="选择" class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/pages/user/articleProtocol?id={$item['id']}">选择</nav>
-				<div class="text">
-					<p class="name">{$item['title']}</p>
-				</div>
-			</div>
-		<?php } ?>
-	<?php } ?>
-<?php } ?>
-
-<?php if($type=='url'){ ?>
-	<?php if($list['no_data']==1){ ?>
-		<div class="tip text-center m-t-20">抱歉！未查询到<?php if(!empty($kw)){ ?>与“{$kw}”<?php } ?>相关的链接，请更换关键字后重试。</div>
-	<?php }else{ ?>
-		<?php foreach( $list['list'] as $item ){ ?>
-			<?php if(!empty($item['list'])){ ?>
-			<div class="page-head"><h4><i class="fa fa-folder-open-o"></i> {$item['name']}</h4></div>
-			<?php } ?>
-			<?php foreach( $item['list'] as $child ){ ?>
-				<nav data-href="<?php echo $platform?$child['url_wxapp']:$child['url']; ?>" class="choose_dan_link_url btn btn-primary btn-sm" title="商城首页">{$child['name']}</nav>
-			<?php } ?>
-		<?php } ?>
-	<?php } ?>
-<?php } ?>
-
-<?php if($type=='special'){ ?>
-	<?php if(empty($list)){ ?>
-		<div class="tip text-center m-t-20">抱歉！未查询到<?php if(!empty($kw)){ ?>与“{$kw}”<?php } ?>相关的链接，请更换关键字后重试。</div>
-	<?php }else{ ?>
-		<?php foreach( $list as $item ){ ?>
-			<div class="line">
-				<div title="选择" class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/special/index?id={$item['id']}">选择</div>
-				<div class="text">
-					<p class="name">{$item['name']}</p>
-				</div>
-			</div>
-		<?php } ?>
-	<?php } ?>
-<?php } ?>
-
-<?php if($type=='category'){ ?>
-	<?php if(empty($list)){ ?>
-		<div class="tip text-center m-t-20">抱歉！未查询到<?php if(!empty($kw)){ ?>与“{$kw}”<?php } ?>相关的链接，请更换关键字后重试。</div>
-	<?php }else{ ?>
-		<?php foreach( $list as $item ){ ?>
-			<div class="line">
-				<div title="选择" class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/pages/type/details?id={$item['id']}">选择</div>
-				<div class="text">
-					<p class="name">{$item['name']}</p>
-				</div>
-			</div>
-		<?php } ?>
-	<?php } ?>
-<?php } ?>
-<?php if($type=='solitaire'){ ?>
-<?php if(empty($list)){ ?>
-<div class="tip text-center m-t-20">抱歉！未查询到<?php if( !empty($kw)){ ?>与“{$kw}”<?php } ?>相关的链接，请更换关键字后重试。</div>
-<?php }else{ ?>
-<?php foreach($list as $item){ ?>
-<div class="line">
-	<div title="选择" class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/solitaire/details?id={$item['id']}">选择</div>
-	<div class="text">
-		<p class="name">{$item['name']}</p>
-	</div>
-</div>
-<?php } ?>
-<?php } ?>
-<?php } ?>
-
-
-<?php if($type=='coupon'){ ?>
-<?php if(empty($list)){ ?>
-<div class="tip text-center m-t-20">抱歉！未查询到<?php if( !empty($kw)){ ?>与“{$kw}”<?php } ?>相关的链接，请更换关键字后重试。</div>
-<?php }else{ ?>
-<?php foreach($list as $item){ ?>
-<div class="line">
-	<div title="选择" class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/solitaire/details?id={$item['id']}">选择</div>
-	<div class="text">
-		<p class="name">{$item['voucher_title']}</p>
-	</div>
-</div>
-<?php } ?>
-<?php } ?>
-<?php } ?>
-
-<?php if( $type=='pintuan'){ ?>
-<?php if( empty($list)){ ?>
-<div class="tip text-center m-t-20">抱歉！未查询到<?php if( !empty($kw)){ ?>与“{$kw}”<?php } ?>相关的商品，请更换关键字后重试。</div>
-<?php  }else{  ?>
-<?php foreach( $list as  $item  ){ ?>
-<div class="line good">
-	<div class="image"><img class="img-responsive img-thumbnail m-r-20" src="{$item['thumb']}"/></div>
-	<nav title="选择" class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/pin/goodsDetail?id={$item['id']}">选择</nav>
-	<div class="text">
-		<p class="name">{$item['title']}</p>
-		<p class="price">原价: {$item['productprice']}元 <?php if( $item['type'] == 'integral' ){ ?>现价: {$item['marketprice']}积分<?php }else{ ?>现价: {$item['marketprice']}元<?php } ?></p>
-	</div>
-</div>
-<?php } ?>
-<?php } ?>
-<?php } ?>
+<?php if ($type == 'good') { ?><?php if (empty($list)) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的商品，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list as $item) { ?>
+  <div class="line good">
+    <div class="image"><img class="img-responsive img-thumbnail m-r-20" src="{$item['thumb']}"/></div>
+    <nav class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/pages/goods/goodsDetail?id={$item['id']}" title="选择">选择
+    </nav>
+    <div class="text">
+      <p class="name">{$item['title']}</p>
+      <p class="price">原价: {$item['productprice']}元 <?php if ($item['type'] == 'integral') { ?>现价: {$item['marketprice']}积分<?php } else { ?>现价: {$item['marketprice']}元<?php } ?></p>
+    </div>
+  </div>
+<?php } ?><?php } ?><?php } ?>
+<?php if ($type == 'article') { ?><?php if (empty($list)) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的文章，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list as $item) { ?>
+  <div class="line good">
+    <nav class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/pages/user/articleProtocol?id={$item['id']}" title="选择">选择
+    </nav>
+    <div class="text">
+      <p class="name">{$item['title']}</p>
+    </div>
+  </div>
+<?php } ?><?php } ?><?php } ?>
+<?php if ($type == 'url') { ?><?php if ($list['no_data'] == 1) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的链接，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list['list'] as $item) { ?><?php if (!empty($item['list'])) { ?>
+  <div class="page-head"><h4><i class="fa fa-folder-open-o"></i> {$item['name']}</h4></div>
+<?php } ?><?php foreach ($item['list'] as $child) { ?>
+  <nav class="choose_dan_link_url btn btn-primary btn-sm" data-href="<?php echo $platform ? $child['url_wxapp'] : $child['url']; ?>" title="商城首页">{$child['name']}
+  </nav>
+<?php } ?><?php } ?><?php } ?><?php } ?>
+<?php if ($type == 'special') { ?><?php if (empty($list)) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的链接，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list as $item) { ?>
+  <div class="line">
+    <div class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/special/index?id={$item['id']}" title="选择">选择
+    </div>
+    <div class="text">
+      <p class="name">{$item['name']}</p>
+    </div>
+  </div>
+<?php } ?><?php } ?><?php } ?>
+<?php if ($type == 'category') { ?><?php if (empty($list)) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的链接，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list as $item) { ?>
+  <div class="line">
+    <div class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/pages/type/details?id={$item['id']}" title="选择">选择
+    </div>
+    <div class="text">
+      <p class="name">{$item['name']}</p>
+    </div>
+  </div>
+<?php } ?><?php } ?><?php } ?>
+<?php if ($type == 'solitaire') { ?><?php if (empty($list)) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的链接，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list as $item) { ?>
+  <div class="line">
+    <div class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/solitaire/details?id={$item['id']}" title="选择">选择
+    </div>
+    <div class="text">
+      <p class="name">{$item['name']}</p>
+    </div>
+  </div>
+<?php } ?><?php } ?><?php } ?>
+<?php if ($type == 'coupon') { ?><?php if (empty($list)) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的链接，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list as $item) { ?>
+  <div class="line">
+    <div class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/solitaire/details?id={$item['id']}" title="选择">选择
+    </div>
+    <div class="text">
+      <p class="name">{$item['voucher_title']}</p>
+    </div>
+  </div>
+<?php } ?><?php } ?><?php } ?>
+<?php if ($type == 'pintuan') { ?><?php if (empty($list)) { ?>
+  <div class="tip text-center m-t-20">抱歉！未查询到<?php if (!empty($kw)) { ?>与“{$kw}”<?php } ?>
+    相关的商品，请更换关键字后重试。
+  </div>
+<?php } else { ?><?php foreach ($list as $item) { ?>
+  <div class="line good">
+    <div class="image"><img class="img-responsive img-thumbnail m-r-20" src="{$item['thumb']}"/></div>
+    <nav class="choose_dan_link_url btn btn-primary btn-sm" data-href="/eaterplanet_ecommerce/moduleA/pin/goodsDetail?id={$item['id']}" title="选择">选择
+    </nav>
+    <div class="text">
+      <p class="name">{$item['title']}</p>
+      <p class="price">原价: {$item['productprice']}元 <?php if ($item['type'] == 'integral') { ?>现价: {$item['marketprice']}积分<?php } else { ?>现价: {$item['marketprice']}元<?php } ?></p>
+    </div>
+  </div>
+<?php } ?><?php } ?><?php } ?>

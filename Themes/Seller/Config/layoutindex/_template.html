@@ -1,363 +1,289 @@
-<script type="text/html" id="tpl_show_notice">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-notice" style="background: <%style.background%>">
-            <div class="image"><img src="<%imgsrc params.iconurl%>" onerror="this.src='/assets/ep/images/hotdot.jpg'"></div>
-            <div class="icon"><i class="icon icon-notification1" style="font-size: 0.7rem; color: <%style.iconcolor%>;"></i></div>
-            <div class="text" style="color: <%style.color%>;">
-                <%if params.noticedata=='0'%>这里将读取商城的公告进行滚动显示<%/if%>
-                <%if params.noticedata=='1'%>
-                    <ul>
-                        <%each data as item%>
-                            <li><%item.title%></li>
-                        <%/each%>
-                    </ul>
-                <%/if%>
-            </div>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_richtext">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="diy-richtext" style="background: <%style.background%>; padding: <%style.padding%>px;">
-            <%if params.content%>
-                <%=(params.content)%>
-            <%else%>
-            <p><span style="font-size: 20px;">哈喽大家好！这里是『富文本』区域</span></p>
-            <p>你可以对文字进行<strong>加粗</strong>、<em>斜体</em>、<span style="text-decoration: underline;">下划线</span>、<span style="text-decoration: line-through;">删除线</span>、文字<span style="color: rgb(0, 176, 240);">颜色</span>、<span style="background-color: rgb(255, 192, 0); color: rgb(255, 255, 255);">背景色</span>、以及字号<span style="font-size: 20px;">大</span><span style="font-size: 14px;">小</span>等简单排版操作。
-            </p>
-            <p>也可在这里插入图片</p>
-            <p><img src="/assets/ep/diypage/images/default/sale-by.png"></p>
-            <p style="text-align: left;"><span style="text-align: left;">还可给文字加上<a href="http://www.baidu.com">超级链接</a>，方便用户点击。</span></p>
-            <%/if%>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_banner">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="diy-banner">
-            <%each data as item%>
-            <img src="<%imgsrc item.imgurl%>" />
-            <%/each%>
-            <div class="dots <%style.dotalign||'left'%> <%style.dotstyle||'rectangle'%>" style="padding: 0 <%style.leftright||'10'%>px; bottom: <%style.bottom||'10'%>px; opacity: <%style.opacity||'0.8'%>;">
-                <%each data as item%>
-                    <span style="background: <%style.background||'#000000'%>;"></span>
-                <%/each%>
-            </div>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_title">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-title" style="background: <%style.background||''%>; color: <%style.color||''%>; font-size: <%style.fontsize||'12'%>px; text-align: <%style.textalign||''%>; padding: <%style.paddingtop||'0'%>px <%style.paddingleft||'5'%>px;">
-            <%if params.icon%>
-                <i class="icon <%params.icon%>"></i>
-            <%/if%>
-            <%if params.link%>
-                <a href="<%params.link%>" style="color: <%style.color||''%>"><%params.title||'请输入标题内容'%></a>
-            <%else%>
-                <%params.title||'请输入标题内容'%>
-            <%/if%>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_search">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="diy-search <%style.searchstyle%>" style="background: <%style.background%>; padding: <%style.paddingtop||'10'%>px <%style.paddingleft||'10'%>px;">
-            <div class="inner left" style="background: <%style.inputbackground||'#fff'%>;">
-                <div class="search-icon" style="color: <%style.iconcolor%>;"><i class="icon icon-search"></i></div>
-                <div class="search-input" style="text-align: <%style.textalign%>; color: <%style.color%>;">
-                    <span><%params.placeholder%></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_line">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-line-diy" style="background: <%style.background%>; padding: <%style.padding%>px 0;">
-            <div class="line" style="border-top: <%style.height||'2'%>px <%style.linestyle||'solid'%> <%style.bordercolor||'#000000'%>"></div>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_blank">
-    <div class="drag" data-itemid="<%itemid%>" style="height: <%style.height%>px; background: <%style.background%>"></div>
-</script>
-
-<script type="text/html" id="tpl_show_menu">
-    <div class="drag" data-itemid="<%itemid%>">
-        <%if data==''%>
-            <div class="nochild">您还没有添加图标</div>
-        <%else%>
-            <div class="fui-icon-group noborder col-<%style.rownum%> <%style.navstyle%> <%if style.showtype>0%>pb10<%/if%>" style="background: <%style.background||'#ffffff'%>">
-                <%each data as item%>
-                    <div class="fui-icon-col">
-                        <div class="icon"><img src="<%imgsrc item.imgurl%>"></div>
-                        <div class="text" style="color: <%item.color%>"><%item.text%></div>
-                    </div>
-                <%/each%>
-                <%if style.showdot>0&&style.showtype==1%>
-                    <div class="fui-icon-group-pagination">
-                        <a class="active"></a>
-                        <a></a>
-                    </div>
-                <%/if%>
-            </div>
+<script id="tpl_show_notice" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-notice" style="background: <%style.background%>">
+      <div class="image"><img src="<%imgsrc params.iconurl%>" onerror="this.src='/assets/ep/images/hotdot.jpg'"></div>
+      <div class="icon"><i class="icon icon-notification1" style="font-size: 0.7rem; color: <%style.iconcolor%>;"></i>
+      </div>
+      <div class="text" style="color: <%style.color%>;">
+        <%if params.noticedata=='0'%>这里将读取商城的公告进行滚动显示<%/if%> <%if params.noticedata=='1'%>
+        <ul>
+          <%each data as item%>
+          <li><%item.title%></li>
+          <%/each%>
+        </ul>
         <%/if%>
+      </div>
     </div>
+  </div>
 </script>
-
-<script type="text/html" id="tpl_show_menu2">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-menu-group" style="margin-top: <%style.margintop%>px; background: <%style.background%>;">
-            <%each data as item%>
-                <%if item.text%>
-                    <a class="fui-menu-item" style="color: <%item.textcolor%>;"><%if item.iconclass%><i class="icon <%item.iconclass%>" style="color: <%item.iconcolor%>;"></i><%/if%> <%item.text%></a>
-                <%/if%>
-            <%/each%>
+<script id="tpl_show_richtext" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="diy-richtext" style="background: <%style.background%>; padding: <%style.padding%>px;">
+      <%if params.content%> <%=(params.content)%> <%else%>
+      <p><span style="font-size: 20px;">哈喽大家好！这里是『富文本』区域</span></p>
+      <p>
+        你可以对文字进行<strong>加粗</strong>、<em>斜体</em>、<span style="text-decoration: underline;">下划线</span>、<span style="text-decoration: line-through;">删除线</span>、文字<span style="color: rgb(0, 176, 240);">颜色</span>、<span
+          style="background-color: rgb(255, 192, 0); color: rgb(255, 255, 255);">背景色</span>、以及字号<span style="font-size: 20px;">大</span><span style="font-size: 14px;">小</span>等简单排版操作。
+      </p>
+      <p>也可在这里插入图片</p>
+      <p><img src="/assets/ep/diypage/images/default/sale-by.png"></p>
+      <p style="text-align: left;"><span style="text-align: left;">还可给文字加上<a href="http://www.baidu.com">超级链接</a>，方便用户点击。</span></p>
+      <%/if%>
+    </div>
+  </div>
+</script>
+<script id="tpl_show_banner" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="diy-banner">
+      <%each data as item%> <img src="<%imgsrc item.imgurl%>"/> <%/each%>
+      <div class="dots <%style.dotalign||'left'%> <%style.dotstyle||'rectangle'%>" style="padding: 0 <%style.leftright||'10'%>px; bottom: <%style.bottom||'10'%>px; opacity: <%style.opacity||'0.8'%>;">
+        <%each data as item%> <span style="background: <%style.background||'#000000'%>;"></span> <%/each%>
+      </div>
+    </div>
+  </div>
+</script>
+<script id="tpl_show_title" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-title" style="background: <%style.background||''%>; color: <%style.color||''%>; font-size: <%style.fontsize||'12'%>px; text-align: <%style.textalign||''%>; padding: <%style.paddingtop||'0'%>px <%style.paddingleft||'5'%>px;">
+      <%if params.icon%> <i class="icon <%params.icon%>"></i> <%/if%> <%if params.link%> <a href="<%params.link%>" style="color: <%style.color||''%>"><%params.title||'请输入标题内容'%></a> <%else%> <%params.title||'请输入标题内容'%> <%/if%>
+    </div>
+  </div>
+</script>
+<script id="tpl_show_search" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="diy-search <%style.searchstyle%>" style="background: <%style.background%>; padding: <%style.paddingtop||'10'%>px <%style.paddingleft||'10'%>px;">
+      <div class="inner left" style="background: <%style.inputbackground||'#fff'%>;">
+        <div class="search-icon" style="color: <%style.iconcolor%>;"><i class="icon icon-search"></i></div>
+        <div class="search-input" style="text-align: <%style.textalign%>; color: <%style.color%>;">
+          <span><%params.placeholder%></span>
         </div>
+      </div>
     </div>
+  </div>
 </script>
-
-<script type="text/html" id="tpl_show_picture">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-picture" style="padding-bottom: <%style.paddingtop%>px; background: <%style.background%>;">
-            <%each data as item%>
-                <div style="display: block; padding: <%style.paddingtop%>px <%style.paddingleft%>px 0;">
-                   <img src="<%imgsrc item.imgurl%>" />
-                </div>
-            <%/each%>
-        </div>
+<script id="tpl_show_line" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-line-diy" style="background: <%style.background%>; padding: <%style.padding%>px 0;">
+      <div class="line" style="border-top: <%style.height||'2'%>px <%style.linestyle||'solid'%> <%style.bordercolor||'#000000'%>"></div>
     </div>
+  </div>
 </script>
-
-<script type="text/html" id="tpl_show_picturew">
-    <div class="drag" data-itemid="<%itemid%>">
-        <%if params.row=='1'%>
-            <div class="fui-cube" style="background: <%style.background%>; <%if count(data)==1%>padding: <%style.paddingtop%>px <%style.paddingleft%>px;<%/if%>">
-                <%if count(data)==1%>
-                    <img src="<%imgsrc(toArray(data)[0].imgurl)%>" />
-                <%/if%>
-                <%if count(data)>1%>
-                    <div class="fui-cube-left" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; padding-right: 0;">
-                        <img src="<%imgsrc(toArray(data)[0].imgurl)%>" />
-                    </div>
-                    <div class="fui-cube-right" <%if count(data)==2%> style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;"<%/if%>>
-                        <%if count(data)==2%>
-                            <img src="<%imgsrc(toArray(data)[1].imgurl)%>" />
-                        <%/if%>
-                        <%if count(data)>2%>
-                            <div class="fui-cube-right1" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; padding-bottom: 0;">
-                                <img src="<%imgsrc(toArray(data)[1].imgurl)%>" />
-                            </div>
-                             <div class="fui-cube-right2" <%if count(data)==3%> style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;"<%/if%>>
-                                <%if count(data)==3%>
-                                    <img src="<%imgsrc(toArray(data)[2].imgurl)%>" />
-                                <%/if%>
-                                <%if count(data)>3%>
-                                    <div class="left" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; padding-right: 0;">
-                                        <img src="<%imgsrc(toArray(data)[2].imgurl)%>" />
-                                    </div>
-                                <%/if%>
-                                <%if count(data)>=4%>
-                                    <div class="right" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;">
-                                        <img src="<%imgsrc(toArray(data)[3].imgurl)%>" />
-                                    </div>
-                                <%/if%>
-                            </div>
-                        <%/if%>
-                     </div>
-                <%/if%>
-            </div>
+<script id="tpl_show_blank" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>" style="height: <%style.height%>px; background: <%style.background%>"></div>
+</script>
+<script id="tpl_show_menu" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <%if data==''%>
+    <div class="nochild">您还没有添加图标</div>
+    <%else%>
+    <div class="fui-icon-group noborder col-<%style.rownum%> <%style.navstyle%> <%if style.showtype>0%>pb10<%/if%>" style="background: <%style.background||'#ffffff'%>">
+      <%each data as item%>
+      <div class="fui-icon-col">
+        <div class="icon"><img src="<%imgsrc item.imgurl%>"></div>
+        <div class="text" style="color: <%item.color%>"><%item.text%></div>
+      </div>
+      <%/each%> <%if style.showdot>0&&style.showtype==1%>
+      <div class="fui-icon-group-pagination">
+        <a class="active"></a> <a></a>
+      </div>
+      <%/if%>
+    </div>
+    <%/if%>
+  </div>
+</script>
+<script id="tpl_show_menu2" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-menu-group" style="margin-top: <%style.margintop%>px; background: <%style.background%>;">
+      <%each data as item%> <%if item.text%> <a class="fui-menu-item" style="color: <%item.textcolor%>;"><%if item.iconclass%><i class="icon <%item.iconclass%>" style="color: <%item.iconcolor%>;"></i><%/if%> <%item.text%></a> <%/if%>
+      <%/each%>
+    </div>
+  </div>
+</script>
+<script id="tpl_show_picture" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-picture" style="padding-bottom: <%style.paddingtop%>px; background: <%style.background%>;">
+      <%each data as item%>
+      <div style="display: block; padding: <%style.paddingtop%>px <%style.paddingleft%>px 0;">
+        <img src="<%imgsrc item.imgurl%>"/>
+      </div>
+      <%/each%>
+    </div>
+  </div>
+</script>
+<script id="tpl_show_picturew" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <%if params.row=='1'%>
+    <div class="fui-cube" style="background: <%style.background%>; <%if count(data)==1%>padding: <%style.paddingtop%>px <%style.paddingleft%>px;<%/if%>">
+      <%if count(data)==1%> <img src="<%imgsrc(toArray(data)[0].imgurl)%>"/> <%/if%> <%if count(data)>1%>
+      <div class="fui-cube-left" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; padding-right: 0;">
+        <img src="<%imgsrc(toArray(data)[0].imgurl)%>"/>
+      </div>
+      <div class="fui-cube-right"
+      <%if count(data)==2%> style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;"<%/if%>> <%if count(data)==2%> <img src="<%imgsrc(toArray(data)[1].imgurl)%>"/> <%/if%> <%if count(data)>2%>
+      <div class="fui-cube-right1" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; padding-bottom: 0;">
+        <img src="<%imgsrc(toArray(data)[1].imgurl)%>"/>
+      </div>
+      <div class="fui-cube-right2"
+      <%if count(data)==3%> style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;"<%/if%>> <%if count(data)==3%> <img src="<%imgsrc(toArray(data)[2].imgurl)%>"/> <%/if%> <%if count(data)>3%>
+      <div class="left" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; padding-right: 0;">
+        <img src="<%imgsrc(toArray(data)[2].imgurl)%>"/>
+      </div>
+      <%/if%> <%if count(data)>=4%>
+      <div class="right" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;">
+        <img src="<%imgsrc(toArray(data)[3].imgurl)%>"/>
+      </div>
+      <%/if%>
+    </div>
+    <%/if%>
+  </div><%/if%></div><%/if%><%if params.row>1%>
+  <div class="fui-picturew row-<%params.row%>" style="padding: <%style.paddingtop%>px; <%style.paddingleft%>px; background: <%style.background%>;">
+    <%each data as item%>
+    <div class="item" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;">
+      <img src="<%imgsrc item.imgurl%>">
+    </div>
+    <%/each%> <%if style.showdot>0&&params.showtype==1%>
+    <div class="fui-picturew-pagination">
+      <a class="active"></a> <a></a>
+    </div>
+    <%/if%>
+  </div><%/if%></div>
+</script>
+<script id="tpl_show_listmenu" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-cell-group fui-cell-click" style="margin-top: <%style.margintop%>px; background-color: <%style.background%>;">
+      <%each data as item%>
+      <div class="fui-cell">
+        <%if item.iconclass%>
+        <div class="fui-cell-icon" style="color: <%style.iconcolor%>;"><i class="icon <%item.iconclass%>"></i></div>
         <%/if%>
-        <%if params.row>1%>
-            <div class="fui-picturew row-<%params.row%>" style="padding: <%style.paddingtop%>px; <%style.paddingleft%>px; background: <%style.background%>;">
-                <%each data as item%>
-                    <div class="item" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;">
-                        <img src="<%imgsrc item.imgurl%>">
-                    </div>
-                <%/each%>
-
-                <%if style.showdot>0&&params.showtype==1%>
-                <div class="fui-picturew-pagination">
-                    <a class="active"></a>
-                    <a></a>
-                </div>
-                <%/if%>
-            </div>
+        <div class="fui-cell-text" style="color: <%style.textcolor%>;"><%item.text%></div>
+        <div class="fui-cell-remark" style="color: <%style.remarkcolor%>;"><%item.remark%></div>
+      </div>
+      <%/each%>
+    </div>
+  </div>
+</script>
+<script id="tpl_show_icongroup" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-icon-group noborder col-<%params.rownum%> selecter"
+         style="background-color: <%style.background%>; <%if params.bordertop=='1'%>border-top: 1px solid <%style.bordercolor%>;<%else%>border-top: none;<%/if%> <%if params.borderbottom=='1'%>border-bottom: 1px solid <%style.bordercolor%>;<%else%>border-bottom: none;<%/if%>">
+      <%define index=0%> <%each data as child itemid %>
+      <div class="fui-icon-col external" style="<%if params.border=='1'&&index>0%>border-left: 1px solid <%style.bordercolor%>;<%else%>border-left: none;<%/if%>">
+        <div class="badge" style="background-color: <%style.dotcolor%>;">9</div>
+        <div class="icon icon-green radius"><i class="icon <%child.iconclass%>" style="color: <%style.iconcolor%>;"></i>
+        </div>
+        <div class="text" style="color: <%style.textcolor%>;"><%child.text%></div>
+      </div>
+      <%define index++%> <%/each%>
+    </div>
+  </div>
+</script>
+<script id="tpl_show_pictures" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-picturew row-<%params.rownum%>" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; background: <%style.background%>;">
+      <%each data as item%>
+      <div class="item" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;">
+        <div class="image">
+          <img src="<%imgsrc item.imgurl%>"> <%if item.title!=''%>
+          <div class="title" style="color: <%style.titlecolor%>; text-align: <%style.titlealign%>;"><%item.title%></div>
+          <%/if%>
+        </div>
+        <div class="text" style="color: <%style.textcolor%>; text-align: <%style.textalign%>;""><%item.text%>
+      </div>
+    </div>
+    <%/each%> <%if style.showdot>0&&params.showtype==1%>
+    <div class="fui-picturew-pagination">
+      <a class="active"></a> <a></a>
+    </div>
+    <%/if%>
+  </div></div>
+</script>
+<script id="tpl_show_audio" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <%if params.playerstyle=='0'||!params.playerstyle%>
+    <div class="fui-audio" style="background: <%style.background%>; border-color: <%style.bordercolor%>; margin: <%style.paddingtop%>px <%style.paddingleft%>px;">
+      <div class="horn"></div>
+      <div class="center">
+        <p style="color: <%style.textcolor%>;"><%params.title||'未定义音频信息'%></p>
+        <%if params.subtitle!=''%>
+        <p style="color: <%style.subtitlecolor%>; font-size: 0.65rem;"><%params.subtitle%></p>
         <%/if%>
-
+      </div>
+      <div class="time" style="color: <%style.timecolor%>;">11'26''</div>
+      <div class="speed"></div>
     </div>
+    <%/if%> <%if params.playerstyle=='1'%>
+    <div class="fui-chat-item <%params.headalign%>" style="margin: <%style.paddingtop%>px <%style.paddingleft%>px;">
+      <%if params.headalign=='left'%>
+      <div class="face">
+        <img src="<%params.headurl&&params.headtype!=1 ? imgsrc(params.headurl) : imgsrc(shoplogo)%>"/>
+      </div>
+      <%/if%>
+      <div class="msg" style="width: <%style.width%>px;">
+        <div class="horn playing"></div>
+      </div>
+      <%if params.headalign=='right'%>
+      <div class="face">
+        <img src="<%params.headurl&&params.headtype!=1 ? imgsrc(params.headurl) : imgsrc(shoplogo)%>"/>
+      </div>
+      <%/if%>
+    </div>
+    <%/if%>
+  </div>
 </script>
-
-<script type="text/html" id="tpl_show_listmenu">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-cell-group fui-cell-click" style="margin-top: <%style.margintop%>px; background-color: <%style.background%>;">
-            <%each data as item%>
-                <div class="fui-cell">
-                    <%if item.iconclass%>
-                        <div class="fui-cell-icon" style="color: <%style.iconcolor%>;"><i class="icon <%item.iconclass%>"></i></div>
-                    <%/if%>
-                    <div class="fui-cell-text" style="color: <%style.textcolor%>;"><%item.text%></div>
-                    <div class="fui-cell-remark" style="color: <%style.remarkcolor%>;"><%item.remark%></div>
-                </div>
-            <%/each%>
+<script id="tpl_show_coupon" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="diy-coupon col-<%params.couponstyle%>" style="margin: <%style.margintop%>px 0; background: <%style.background%>;">
+      <%each data as item%>
+      <div class="diy-coupon-item">
+        <div class="inner" style="border: 0; background: <%item.couponcolor%>; color: #ffffff; margin: <%style.margintop%>px <%style.marginleft%>px;">
+          <div class="name"><%item.price%></div>
+          <div class="receive" style="border: 1px solid <%item.textcolor%>;">立即领取</div>
+          <i style="left: -0.35rem;background:<%style.background%>;"></i> <i style="right: -0.35rem;background: <%style.background%>;"></i>
         </div>
+      </div>
+      <%/each%>
     </div>
+  </div>
 </script>
-
-<script type="text/html" id="tpl_show_icongroup">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-icon-group noborder col-<%params.rownum%> selecter" style="background-color: <%style.background%>; <%if params.bordertop=='1'%>border-top: 1px solid <%style.bordercolor%>;<%else%>border-top: none;<%/if%> <%if params.borderbottom=='1'%>border-bottom: 1px solid <%style.bordercolor%>;<%else%>border-bottom: none;<%/if%>">
-            <%define index=0%>
-            <%each data as child itemid %>
-                <div class="fui-icon-col external" style="<%if params.border=='1'&&index>0%>border-left: 1px solid <%style.bordercolor%>;<%else%>border-left: none;<%/if%>">
-                    <div class="badge" style="background-color: <%style.dotcolor%>;">9</div>
-                    <div class="icon icon-green radius"><i class="icon <%child.iconclass%>" style="color: <%style.iconcolor%>;"></i></div>
-                    <div class="text" style="color: <%style.textcolor%>;"><%child.text%></div>
-                </div>
-            <%define index++%>
-            <%/each%>
+<script id="tpl_show_fixedsearch" type="text/html">
+  <div class="drag fixed" data-itemid="<%itemid%>">
+    <div class="diy-fixedsearch">
+      <div class="background" style="background: <%style.background%>; opacity: <%style.opacity%>;"></div>
+      <div class="inner">
+        <%if (params.leftnav==1&&params.leftnavicon!='') || (params.leftnav==2&&params.leftnavimg!='')%>
+        <div class="leftnav">
+          <%if params.leftnav==1&&params.leftnavicon!=''%> <i class="icon <%params.leftnavicon%>" style="color: <%style.leftnavcolor%>;"></i> <%/if%> <%if params.leftnav==2&&params.leftnavimg&&params.leftnavimg!=''%>
+          <img src="<%imgsrc params.leftnavimg%>" style=""/> <%/if%>
         </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_pictures">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-picturew row-<%params.rownum%>" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px; background: <%style.background%>;">
-            <%each data as item%>
-            <div class="item" style="padding: <%style.paddingtop%>px <%style.paddingleft%>px;">
-                <div class="image">
-                    <img src="<%imgsrc item.imgurl%>">
-                    <%if item.title!=''%>
-                        <div class="title" style="color: <%style.titlecolor%>; text-align: <%style.titlealign%>;"><%item.title%></div>
-                    <%/if%>
-                </div>
-                <div class="text" style="color: <%style.textcolor%>; text-align: <%style.textalign%>;""><%item.text%></div>
-            </div>
-            <%/each%>
-            <%if style.showdot>0&&params.showtype==1%>
-            <div class="fui-picturew-pagination">
-                <a class="active"></a>
-                <a></a>
-            </div>
-            <%/if%>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_audio">
-    <div class="drag" data-itemid="<%itemid%>">
-        <%if params.playerstyle=='0'||!params.playerstyle%>
-            <div class="fui-audio" style="background: <%style.background%>; border-color: <%style.bordercolor%>; margin: <%style.paddingtop%>px <%style.paddingleft%>px;">
-                <div class="horn"></div>
-                <div class="center">
-                    <p style="color: <%style.textcolor%>;"><%params.title||'未定义音频信息'%></p>
-                    <%if params.subtitle!=''%>
-                    <p style="color: <%style.subtitlecolor%>; font-size: 0.65rem;"><%params.subtitle%></p>
-                    <%/if%>
-                </div>
-                <div class="time" style="color: <%style.timecolor%>;">11'26''</div>
-                <div class="speed"></div>
-            </div>
         <%/if%>
-        <%if params.playerstyle=='1'%>
-            <div class="fui-chat-item <%params.headalign%>" style="margin: <%style.paddingtop%>px <%style.paddingleft%>px;">
-                <%if params.headalign=='left'%>
-                <div class="face">
-                    <img src="<%params.headurl&&params.headtype!=1 ? imgsrc(params.headurl) : imgsrc(shoplogo)%>" />
-                </div>
-                <%/if%>
-                <div class="msg" style="width: <%style.width%>px;">
-                    <div class="horn playing"></div>
-                </div>
-                <%if params.headalign=='right'%>
-                <div class="face">
-                    <img src="<%params.headurl&&params.headtype!=1 ? imgsrc(params.headurl) : imgsrc(shoplogo)%>" />
-                </div>
-                <%/if%>
-            </div>
+        <div class="center <%params.searchstyle%>">
+          <input value="<%params.placeholder%>" style="opacity: <%style.opacity%>; background: <%style.searchbackground%>; color: <%style.searchtextcolor%>;"/>
+        </div>
+        <%if (params.rightnav==1&&params.rightnavicon!='') || (params.rightnav==2&&params.rightnavimg!='')%>
+        <div class="rightnav">
+          <%if params.rightnav==1&&params.rightnavicon!=''%> <i class="icon <%params.rightnavicon%>" style="color: <%style.rightnavcolor%>;"></i> <%/if%> <%if params.rightnav==2&&params.rightnavimg&&params.rightnavimg!=''%>
+          <img src="<%imgsrc params.rightnavimg%>"/> <%/if%>
+        </div>
         <%/if%>
+      </div>
     </div>
+  </div>
 </script>
-
-<script type="text/html" id="tpl_show_coupon">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="diy-coupon col-<%params.couponstyle%>" style="margin: <%style.margintop%>px 0; background: <%style.background%>;">
-            <%each data as item%>
-            <div class="diy-coupon-item">
-                <div class="inner" style="border: 0; background: <%item.couponcolor%>; color: #ffffff; margin: <%style.margintop%>px <%style.marginleft%>px;">
-                    <div class="name"><%item.price%></div>
-                    <div class="receive"  style="border: 1px solid <%item.textcolor%>;">立即领取</div>
-                    <i style="left: -0.35rem;background:<%style.background%>;"></i>
-                    <i style="right: -0.35rem;background: <%style.background%>;"></i>
-                </div>
-            </div>
-            <%/each%>
-        </div>
+<script id="tpl_show_tabbar" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-tab fui-tab-danger">
+      <%define index=0%> <%each data as item%> <%if index<3%> <a <%if index==0%>class="active" style="color: <%style.activecolor%>; border-color: <%style.activecolor%>; background: <%style.activebackground%>;"<%else%>style="color:
+      <%style.color%>;"<%/if%>><%item.text||'未设置'%></a><%/if%> <%define index++%> <%/each%>
     </div>
+  </div>
 </script>
-
-<script type="text/html" id="tpl_show_fixedsearch">
-    <div class="drag fixed" data-itemid="<%itemid%>">
-        <div class="diy-fixedsearch">
-            <div class="background" style="background: <%style.background%>; opacity: <%style.opacity%>;"></div>
-            <div class="inner">
-                <%if (params.leftnav==1&&params.leftnavicon!='') || (params.leftnav==2&&params.leftnavimg!='')%>
-                    <div class="leftnav">
-                        <%if params.leftnav==1&&params.leftnavicon!=''%>
-                            <i class="icon <%params.leftnavicon%>" style="color: <%style.leftnavcolor%>;"></i>
-                        <%/if%>
-                        <%if params.leftnav==2&&params.leftnavimg&&params.leftnavimg!=''%>
-                            <img src="<%imgsrc params.leftnavimg%>" style="" />
-                        <%/if%>
-                    </div>
-                <%/if%>
-                <div class="center <%params.searchstyle%>">
-                    <input value="<%params.placeholder%>" style="opacity: <%style.opacity%>; background: <%style.searchbackground%>; color: <%style.searchtextcolor%>;" />
-                </div>
-                <%if (params.rightnav==1&&params.rightnavicon!='') || (params.rightnav==2&&params.rightnavimg!='')%>
-                    <div class="rightnav">
-                        <%if params.rightnav==1&&params.rightnavicon!=''%>
-                            <i class="icon <%params.rightnavicon%>" style="color: <%style.rightnavcolor%>;"></i>
-                        <%/if%>
-                        <%if params.rightnav==2&&params.rightnavimg&&params.rightnavimg!=''%>
-                            <img src="<%imgsrc params.rightnavimg%>" />
-                        <%/if%>
-                    </div>
-                <%/if%>
-            </div>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_tabbar">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-tab fui-tab-danger">
-            <%define index=0%>
-            <%each data as item%>
-                <%if index<3%>
-                    <a <%if index==0%>class="active" style="color: <%style.activecolor%>; border-color: <%style.activecolor%>; background: <%style.activebackground%>;"<%else%>style="color: <%style.color%>;"<%/if%>><%item.text||'未设置'%></a>
-                <%/if%>
-                <%define index++%>
-            <%/each%>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="tpl_show_goods">
-    <div class="drag" data-itemid="<%itemid%>">
-        <div class="fui-goods-group <%style.liststyle%>" style="background: <%style.background%>;">
-            <%if params.goodsdata=='0'%>
-                <%each data as item%>
-                    <div class="fui-goods-item" data-goodsid="<%item.gid%>">
-                        <div class="image <%if params.showicon=='1'%><%style.iconstyle%><%/if%>" style="background-image: url('<%imgsrc item.thumb%>');"
-                        data-text="
+<script id="tpl_show_goods" type="text/html">
+  <div class="drag" data-itemid="<%itemid%>">
+    <div class="fui-goods-group <%style.liststyle%>" style="background: <%style.background%>;">
+      <%if params.goodsdata=='0'%> <%each data as item%>
+      <div class="fui-goods-item" data-goodsid="<%item.gid%>">
+        <div class="image <%if params.showicon=='1'%><%style.iconstyle%><%/if%>" style="background-image: url('<%imgsrc item.thumb%>');" data-text="
                                 <%if params.showicon=='1'%>
                                         <%if style.goodsicon=='recommand'%>推荐<%/if%>
                                         <%if style.goodsicon=='hotsale'%>热销<%/if%>
@@ -365,52 +291,29 @@
                                         <%if style.goodsicon=='sendfree'%>包邮<%/if%>
                                         <%if style.goodsicon=='istime'%>限时卖<%/if%>
                                         <%if style.goodsicon=='bigsale'%>促销<%/if%>
-                                <%/if%>
-                        ">
-                            <%if params.showicon=='2'%>
-                                <div class="goodsicon <%params.iconposition%>"
-                                    <%if params.iconposition=='left top'%> style="top: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%>
-                                    <%if params.iconposition=='right top'%> style="top: <%style.iconpaddingtop%>px; right: <%style.iconpaddingleft%>px; text-align: right;"<%/if%>
-                                    <%if params.iconposition=='left bottom'%> style="bottom: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%>
-                                    <%if params.iconposition=='right bottom'%> style="bottom: <%style.iconpaddingtop%>px; right: <%style.iconpaddingleft%>px; text-align: right;"<%/if%>
-                                >
-                                    <%if params.showicon=='1'%>
-                                        <img src="/assets/ep/diypage/images/default/goodsicon-<%style.goodsicon%>.png" style="width: <%style.iconzoom||'100'%>%;" />
-                                    <%/if%>
-
-                                    <%if params.showicon=='2' && params.goodsiconsrc%>
-                                        <img src="<%imgsrc params.goodsiconsrc%>" onerror="this.src=''" style="width: <%style.iconzoom||'100'%>%;" />
-                                    <%/if%>
-
-                                </div>
-                            <%/if%>
-                        </div>
-                        <div class="detail">
-                            <%if params.showtitle=='1'%>
-                                <div class="name" style="color: <%style.titlecolor%>;">
-                                    <%if item.bargain>0%>
-                                    <label style="background-color: <%style.buybtncolor%>; padding: 0px 2px; color: #fff; font-size: 0.6rem">砍价</label>
-                                    <%/if%>
-                                    <%if params.goodstype==1 && params.showtag>0%>
-                                        <label style="background-color: <%style.tagbackground%>; padding: 0px 2px; color: #fff; font-size: 0.6rem">
-                                            <%if params.showtag==1%>¥69<%/if%>
-                                            <%if params.showtag==2%><%if item.gtype==1%>商品<%/if%><%if item.gtype==2%>优惠券<%/if%><%if item.gtype==3%>红包<%/if%><%if item.gtype==4%>余额<%/if%><%/if%>
-                                            <%if params.showtag==3%><%if item.ctype==1%>抽奖<%else%>兑换<%/if%><%/if%>
-                                        </label>
-                                    <%/if%>
-                                    <%item.title%>
-                                </div>
-                            <%/if%>
-                            <%if params.showprice=='1'%>
-                            <p class="productprice  <%if (params.showproductprice !=1) && (params.showsales !=1)%>noheight<%/if%>" >
-                                <%if params.showproductprice==1 && item.productprice>0%>
-                                <span style="color: <%style.productpricecolor%>;"><%params.productpricetext||'原价'%>:<span <%if params.productpriceline==1%>style="text-decoration: line-through;"<%/if%>>¥<%item.productprice%></span></span>
-                                <%/if%>
-                                <%if params.showsales==1&&item.sales>=0%>
-                                <span style="color: <%style.salescolor%>;"><%params.salestext||'销量'%>:<%item.sales%></span>
-                                <%/if%>
-                            </p>
-                                <div class="price">
+                                <%/if%>">
+          <%if params.showicon=='2'%>
+          <div class="goodsicon <%params.iconposition%>"
+          <%if params.iconposition=='left top'%> style="top: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%> <%if params.iconposition=='right top'%> style="top: <%style.iconpaddingtop%>px; right:
+          <%style.iconpaddingleft%>px; text-align: right;"<%/if%> <%if params.iconposition=='left bottom'%> style="bottom: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%> <%if
+          params.iconposition=='right bottom'%> style="bottom: <%style.iconpaddingtop%>px; right: <%style.iconpaddingleft%>px; text-align: right;"<%/if%> > <%if params.showicon=='1'%>
+          <img src="/assets/ep/diypage/images/default/goodsicon-<%style.goodsicon%>.png" style="width: <%style.iconzoom||'100'%>%;"/> <%/if%> <%if params.showicon=='2' && params.goodsiconsrc%>
+          <img src="<%imgsrc params.goodsiconsrc%>" onerror="this.src=''" style="width: <%style.iconzoom||'100'%>%;"/> <%/if%>
+        </div>
+        <%/if%>
+      </div>
+      <div class="detail">
+        <%if params.showtitle=='1'%>
+        <div class="name" style="color: <%style.titlecolor%>;">
+          <%if item.bargain>0%> <label style="background-color: <%style.buybtncolor%>; padding: 0px 2px; color: #fff; font-size: 0.6rem">砍价</label> <%/if%> <%if params.goodstype==1 && params.showtag>0%>
+          <label style="background-color: <%style.tagbackground%>; padding: 0px 2px; color: #fff; font-size: 0.6rem"> <%if params.showtag==1%>¥69<%/if%> <%if params.showtag==2%><%if item.gtype==1%>商品<%/if%><%if
+            item.gtype==2%>优惠券<%/if%><%if item.gtype==3%>红包<%/if%><%if item.gtype==4%>余额<%/if%><%/if%> <%if params.showtag==3%><%if item.ctype==1%>抽奖<%else%>兑换<%/if%><%/if%> </label> <%/if%> <%item.title%>
+        </div>
+        <%/if%> <%if params.showprice=='1'%>
+        <p class="productprice  <%if (params.showproductprice !=1) && (params.showsales !=1)%>noheight<%/if%>">
+          <%if params.showproductprice==1 && item.productprice>0%> <span style="color: <%style.productpricecolor%>;"><%params.productpricetext||'原价'%>:<span <%if params.productpriceline==1%>style="text-decoration: line-through;"<%/if%>>¥<%item.productprice%></span></span>
+          <%/if%> <%if params.showsales==1&&item.sales>=0%> <span style="color: <%style.salescolor%>;"><%params.salestext||'销量'%>:<%item.sales%></span> <%/if%> </p>
+        <div class="price">
                                     <span class="text" style="color: <%style.pricecolor%>;">
                                         <p class="minprice">
                                             <%if params.goodstype==0||!params.goodstype%>
@@ -422,49 +325,27 @@
                                                 <%if item.price>0&&item.credit>0%><%item.credit%><small>积分</small>+<%item.price%><small>元</small><%/if%>
                                             <%/if%>
                                         </p>
-                                    </span>
-                                    <%if style.buystyle!='' && item.bargain==0 && (params.goodstype==0||!params.goodstype)%>
-                                    <%if style.buystyle=='buybtn-1'%>
-                                    <span class="buy" style="border-color: <%style.buybtncolor%>;color:<%style.buybtncolor%> ">购买</span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-2'%>
-                                    <span class="buy buy buybtn-2" style="border-color: <%style.buybtncolor%>;background-color: <%style.buybtncolor%>;">购买</span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-3'%>
-                                    <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-cartfill"></i></span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-4'%>
-                                    <span class="buy buybtn-4" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-cart" style="color: <%style.buybtncolor%>;"></i></span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-5'%>
-                                    <span class="buy buybtn-5" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-add" style="color: <%style.buybtncolor%>;"></i></span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-6'%>
-                                    <span class="buy buybtn-6" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-add"></i></span>
-                                    <%/if%>
-                                    <%/if%>
-                                    <%if item.bargain>0%>
-                                        <span class="buy" style="background-color: <%style.buybtncolor%>;">砍</span>
-                                    <%/if%>
-                                    <%if params.goodstype==1%>
-                                        <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>;"><%if item.ctype==1%>抽奖<%else%>兑换<%/if%></span>
-                                    <%/if%>
-                                </div>
-                            <%/if%>
-                        </div>
-
-                        <%if params.saleout>-1%>
-                            <%if params.saleout==0%><div class="salez" style="background-image: url('{: tomedia($_W['shopset']['shop']['saleout'])}'); "></div><%/if%>
-                            <%if params.saleout==1%><div class="salez diy" style="background-image: url('/assets/ep/diypage/images/default/saleout-<%style.saleoutstyle%>.png'); "></div><%/if%>
-                        <%/if%>
-                    </div>
-                <%/each%>
-            <%/if%>
-            <%if params.goodsdata>0%>
-                <%each data=["c","d"] as item%>
-                    <div class="fui-goods-item">
-                            <div class="image <%if params.showicon=='1'%><%style.iconstyle%><%/if%>" style="background-image: url('/assets/ep/diypage/images/default/goods-1.jpg');"
-                                 data-text="
+                                    </span> <%if style.buystyle!='' && item.bargain==0 && (params.goodstype==0||!params.goodstype)%> <%if style.buystyle=='buybtn-1'%>
+          <span class="buy" style="border-color: <%style.buybtncolor%>;color:<%style.buybtncolor%>">购买</span> <%/if%> <%if style.buystyle=='buybtn-2'%>
+          <span class="buy buy buybtn-2" style="border-color: <%style.buybtncolor%>;background-color: <%style.buybtncolor%>;">购买</span> <%/if%> <%if style.buystyle=='buybtn-3'%>
+          <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-cartfill"></i></span> <%/if%> <%if style.buystyle=='buybtn-4'%>
+          <span class="buy buybtn-4" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-cart" style="color: <%style.buybtncolor%>;"></i></span> <%/if%> <%if style.buystyle=='buybtn-5'%>
+          <span class="buy buybtn-5" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-add" style="color: <%style.buybtncolor%>;"></i></span> <%/if%> <%if style.buystyle=='buybtn-6'%>
+          <span class="buy buybtn-6" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-add"></i></span> <%/if%> <%/if%> <%if item.bargain>0%>
+          <span class="buy" style="background-color: <%style.buybtncolor%>;">砍</span> <%/if%> <%if params.goodstype==1%>
+          <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>;"><%if item.ctype==1%>抽奖<%else%>兑换<%/if%></span> <%/if%>
+        </div>
+        <%/if%>
+      </div>
+      <%if params.saleout>-1%> <%if params.saleout==0%>
+      <div class="salez" style="background-image: url('{: tomedia($_W['shopset']['shop']['saleout'])}');"></div>
+      <%/if%> <%if params.saleout==1%>
+      <div class="salez diy" style="background-image: url('/assets/ep/diypage/images/default/saleout-<%style.saleoutstyle%>.png');"></div>
+      <%/if%> <%/if%>
+    </div>
+    <%/each%> <%/if%> <%if params.goodsdata>0%> <%each data=["c","d"] as item%>
+    <div class="fui-goods-item">
+      <div class="image <%if params.showicon=='1'%><%style.iconstyle%><%/if%>" style="background-image: url('/assets/ep/diypage/images/default/goods-1.jpg');" data-text="
                                 <%if params.showicon=='1'%>
                                         <%if style.goodsicon=='recommand'%>推荐<%/if%>
                                         <%if style.goodsicon=='hotsale'%>热销<%/if%>
@@ -472,49 +353,30 @@
                                         <%if style.goodsicon=='sendfree'%>包邮<%/if%>
                                         <%if style.goodsicon=='istime'%>限时卖<%/if%>
                                         <%if style.goodsicon=='bigsale'%>促销<%/if%>
-                                <%/if%>
-                        ">
-                                <%if params.showicon=='2'%>
-                                    <div class="goodsicon <%params.iconposition%>"
-                                        <%if params.iconposition=='left top'%> style="top: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%>
-                                        <%if params.iconposition=='right top'%> style="top: <%style.iconpaddingtop%>px; right: <%style.iconpaddingleft%>px; text-align: right;"<%/if%>
-                                        <%if params.iconposition=='left bottom'%> style="bottom: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%>
-                                        <%if params.iconposition=='right bottom'%> style="bottom: <%style.iconpaddingtop%>px; right: <%style.iconpaddingleft%>px; text-align: right;"<%/if%>
-                                    >
-                                    <%if params.showicon=='1'%>
-                                        <img src="/assets/ep/diypage/images/default/goodsicon-<%style.goodsicon%>.png" style="width: <%style.iconzoom||'100'%>%;" />
-                                    <%/if%>
-
-                                    <%if params.showicon=='2' && params.goodsiconsrc%>
-                                        <img src="<%imgsrc params.goodsiconsrc%>" onerror="this.src=''" style="width: <%style.iconzoom||'100'%>%;" />
-                                    <%/if%>
-                                </div>
-                            <%/if%>
-                        </div>
-                        <div class="detail">
-                            <%if params.showtitle=='1'%>
-                                <div class="name">
-                                    <%if params.goodstype==1 && params.showtag>0%>
-                                        <label style="background-color: <%style.tagbackground%>; padding: 0px 2px; color: #fff; font-size: 0.6rem">
-                                            <%if params.showtag==1%>¥69<%/if%>
-                                            <%if params.showtag==2%>优惠券<%/if%>
-                                            <%if params.showtag==3%><%if item.ctype==1%>抽奖<%else%>兑换<%/if%><%/if%>
-                                        </label>
-                                    <%/if%>
-                                    这里是商品标题(商品从设定<%if params.goodsdata=='1'%>分类<%/if%><%if params.goodsdata=='2'%>分组<%/if%><%if params.goodsdata=='3'%>新品商品<%/if%><%if params.goodsdata=='4'%>热卖商品<%/if%><%if params.goodsdata=='5'%>推荐商品<%/if%><%if params.goodsdata=='6'%>促销商品<%/if%><%if params.goodsdata=='7'%>包邮商品<%/if%><%if params.goodsdata=='8'%>限时卖商品<%/if%><%if params.goodsdata=='9'%>积分兑换商品<%/if%><%if params.goodsdata=='10'%>积分抽奖商品<%/if%>读取)</div>
-                            <%/if%>
-                            <%if params.showprice=='1'%>
-                            <p class="productprice <%if (params.showproductprice !=1) && (params.showsales !=1)%>noheight<%/if%>">
-                                <%if (params.showproductprice==1)||(params.showsales==1)%>
-                                    <%if params.showproductprice==1%>
-                                    <span style="color: <%style.productpricecolor%>;"><%params.productpricetext||'原价'%>:<span <%if params.productpriceline=='1'%>style="text-decoration: line-through;"<%/if%>>¥99</span></span>
-                                    <%/if%>
-                                    <%if params.showsales==1%>
-                                    <span style="color: <%style.salescolor%>;"><%params.salestext||'销量'%>:99</span>
-                                    <%/if%>
-                                <%/if%>
-                            </p>
-                                <div class="price">
+                                <%/if%>">
+        <%if params.showicon=='2'%>
+        <div class="goodsicon <%params.iconposition%>"
+        <%if params.iconposition=='left top'%> style="top: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%> <%if params.iconposition=='right top'%> style="top: <%style.iconpaddingtop%>px; right:
+        <%style.iconpaddingleft%>px; text-align: right;"<%/if%> <%if params.iconposition=='left bottom'%> style="bottom: <%style.iconpaddingtop%>px; left: <%style.iconpaddingleft%>px; text-align: left;"<%/if%> <%if
+        params.iconposition=='right bottom'%> style="bottom: <%style.iconpaddingtop%>px; right: <%style.iconpaddingleft%>px; text-align: right;"<%/if%> > <%if params.showicon=='1'%>
+        <img src="/assets/ep/diypage/images/default/goodsicon-<%style.goodsicon%>.png" style="width: <%style.iconzoom||'100'%>%;"/> <%/if%> <%if params.showicon=='2' && params.goodsiconsrc%>
+        <img src="<%imgsrc params.goodsiconsrc%>" onerror="this.src=''" style="width: <%style.iconzoom||'100'%>%;"/> <%/if%>
+      </div>
+      <%/if%>
+    </div>
+    <div class="detail">
+      <%if params.showtitle=='1'%>
+      <div class="name">
+        <%if params.goodstype==1 && params.showtag>0%> <label style="background-color: <%style.tagbackground%>; padding: 0px 2px; color: #fff; font-size: 0.6rem"> <%if params.showtag==1%>¥69<%/if%> <%if params.showtag==2%>优惠券<%/if%> <%if
+          params.showtag==3%><%if item.ctype==1%>抽奖<%else%>兑换<%/if%><%/if%> </label> <%/if%> 这里是商品标题(商品从设定<%if params.goodsdata=='1'%>分类<%/if%><%if params.goodsdata=='2'%>分组<%/if%><%if
+        params.goodsdata=='3'%>新品商品<%/if%><%if params.goodsdata=='4'%>热卖商品<%/if%><%if params.goodsdata=='5'%>推荐商品<%/if%><%if params.goodsdata=='6'%>促销商品<%/if%><%if params.goodsdata=='7'%>包邮商品<%/if%><%if
+        params.goodsdata=='8'%>限时卖商品<%/if%><%if params.goodsdata=='9'%>积分兑换商品<%/if%><%if params.goodsdata=='10'%>积分抽奖商品<%/if%>读取)
+      </div>
+      <%/if%> <%if params.showprice=='1'%>
+      <p class="productprice <%if (params.showproductprice !=1) && (params.showsales !=1)%>noheight<%/if%>">
+        <%if (params.showproductprice==1)||(params.showsales==1)%> <%if params.showproductprice==1%> <span style="color: <%style.productpricecolor%>;"><%params.productpricetext||'原价'%>:<span <%if params.productpriceline=='1'%>style="text-decoration: line-through;"<%/if%>>¥99</span></span>
+        <%/if%> <%if params.showsales==1%> <span style="color: <%style.salescolor%>;"><%params.salestext||'销量'%>:99</span> <%/if%> <%/if%> </p>
+      <div class="price">
                                     <span class="text" style="color: <%style.pricecolor%>;">
                                         <p class="minprice">
                                             <%if params.goodstype==0||!params.goodstype%>
@@ -523,41 +385,20 @@
                                                 10<small>积分</small>+20<small>元</small>
                                             <%/if%>
                                         </p>
-                                    </span>
-                                    <%if style.buystyle!='' && (params.goodstype==0||!params.goodstype)%>
-                                    <%if style.buystyle=='buybtn-1'%>
-                                    <span class="buy" style="border-color: <%style.buybtncolor%>;color:<%style.buybtncolor%> ">购买</span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-2'%>
-                                    <span class="buy buy buybtn-2" style="border-color: <%style.buybtncolor%>;background-color: <%style.buybtncolor%>;">购买</span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-3'%>
-                                    <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-cartfill"></i></span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-4'%>
-                                    <span class="buy buybtn-4" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-cart" style="color: <%style.buybtncolor%>;"></i></span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-5'%>
-                                    <span class="buy buybtn-5" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-add" style="color: <%style.buybtncolor%>;"></i></span>
-                                    <%/if%>
-                                    <%if style.buystyle=='buybtn-6'%>
-                                    <span class="buy buybtn-6" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-add"></i></span>
-                                    <%/if%>
-                                    <%/if%>
-                                    <%if params.goodstype==1%>
-                                        <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>;">兑换</span>
-                                    <%/if%>
-                                </div>
-                            <%/if%>
-                        </div>
-
-                        <%if params.saleout>-1%>
-                        <%if params.saleout==0%><div class="salez" style="background-image: url('{: tomedia($_W['shopset']['shop']['saleout'])}'); "></div><%/if%>
-                        <%if params.saleout==1%><div class="salez diy" style="background-image: url('/assets/ep/diypage/images/default/saleout-<%style.saleoutstyle%>.png'); "></div><%/if%>
-                        <%/if%>
-                    </div>
-                <%/each%>
-            <%/if%>
-        </div>
+                                    </span> <%if style.buystyle!='' && (params.goodstype==0||!params.goodstype)%> <%if style.buystyle=='buybtn-1'%> <span class="buy" style="border-color: <%style.buybtncolor%>;color:<%style.buybtncolor%>">购买</span>
+        <%/if%> <%if style.buystyle=='buybtn-2'%> <span class="buy buy buybtn-2" style="border-color: <%style.buybtncolor%>;background-color: <%style.buybtncolor%>;">购买</span> <%/if%> <%if style.buystyle=='buybtn-3'%>
+        <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-cartfill"></i></span> <%/if%> <%if style.buystyle=='buybtn-4'%>
+        <span class="buy buybtn-4" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-cart" style="color: <%style.buybtncolor%>;"></i></span> <%/if%> <%if style.buystyle=='buybtn-5'%>
+        <span class="buy buybtn-5" style="border-color: <%style.buybtncolor%>;"><i class="icon icon-add" style="color: <%style.buybtncolor%>;"></i></span> <%/if%> <%if style.buystyle=='buybtn-6'%>
+        <span class="buy buybtn-6" style="background-color: <%style.buybtncolor%>; border-color: <%style.buybtncolor%>;"><i class="icon icon-add"></i></span> <%/if%> <%/if%> <%if params.goodstype==1%>
+        <span class="buy buybtn-3" style="background-color: <%style.buybtncolor%>;">兑换</span> <%/if%>
+      </div>
+      <%/if%>
     </div>
+    <%if params.saleout>-1%> <%if params.saleout==0%>
+    <div class="salez" style="background-image: url('{: tomedia($_W['shopset']['shop']['saleout'])}');"></div>
+    <%/if%> <%if params.saleout==1%>
+    <div class="salez diy" style="background-image: url('/assets/ep/diypage/images/default/saleout-<%style.saleoutstyle%>.png');"></div>
+    <%/if%> <%/if%>
+  </div><%/each%><%/if%></div></div>
 </script>

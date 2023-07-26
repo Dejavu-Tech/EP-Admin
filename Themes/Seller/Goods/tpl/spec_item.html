@@ -1,32 +1,26 @@
-
 <div class="spec_item_item col-sm-3" style="float:left; position: relative">
-	<input type="hidden" class="form-control spec_item_show" name="spec_item_show_{$spec['id']}[]" value="{$specitem['show']}" />
-	<input type="hidden" class="form-control spec_item_id" name="spec_item_id_{$spec['id']}[]" value="{$specitem['id']}" />
-	<div class="input-group mb-3">
-		<!--<div class="input-group-prepend">
+  <input class="form-control spec_item_show" name="spec_item_show_{$spec['id']}[]" type="hidden" value="{$specitem['show']}"/>
+  <input class="form-control spec_item_id" name="spec_item_id_{$spec['id']}[]" type="hidden" value="{$specitem['id']}"/>
+  <div class="input-group mb-3">
+    <!--<div class="input-group-prepend">
 			<span class="input-group-text">
-			<input type="checkbox" <?php if($specitem['id']>0){ ?>checked<?php } ?> value="1" onclick='showItem(this)'>
+			<input type="checkbox" <?php if ($specitem['id'] > 0) { ?>checked<?php } ?> value="1" onclick='showItem(this)'>
 		    </span>
 		</div>-->
-		<input type="text" class="form-control spec_item_title" onblur="refreshOptions()" name="spec_item_title_{$spec['id']}[]" VALUE="{$specitem['title']}" />
-		<div class="input-group-append spec_item_thumb <?php if(!empty($specitem['thumb'])){ ?>has_thumb<?php } ?>">
-			<input type='hidden'  name="spec_item_thumb_{$spec['id']}[]" value="{$specitem['thumb']}"/>
-			<img onclick="selectSpecItemImage(this)" onerror="this.src='/assets/ep/images/nopic100.jpg'"
-				 src="<?php if(empty($specitem['thumb'])){ ?>/assets/ep/images/nopic100.jpg<?php  }else{  ?>{:tomedia( resize($specitem['thumb'],100) )}<?php } ?>" style='width:38px;height: 38px;'
-			<?php if(!empty($specitem['thumb'])){ ?>
-			data-toggle='popover'
-			data-html ='true'
-			data-placement='top'
-			data-trigger ='hover'
-			data-content="<img src='{: tomedia($specitem['thumb'])}' style='width:100px;height:100px;' />"
-			<?php } ?>
-			>
-			<i class="fa fa-times-circle" <?php if(empty($specitem['thumb'])){ ?>style="display:none"<?php } ?>></i>
-		</div>
-		<span class="input-group-append">
-			<span class="input-group-text"><a href="javascript:;" onclick="removeSpecItem(this)" title='删除'><i class="fa fa-times"></i></a></span>
+    <input VALUE="{$specitem['title']}" class="form-control spec_item_title" name="spec_item_title_{$spec['id']}[]" onblur="refreshOptions()" type="text"/>
+    <div class="input-group-append spec_item_thumb <?php if (!empty($specitem['thumb'])) { ?>has_thumb<?php } ?>">
+      <input name="spec_item_thumb_{$spec['id']}[]" type='hidden' value="{$specitem['thumb']}"/>
+      <img onclick="selectSpecItemImage(this)" onerror="this.src='/assets/ep/images/nopic100.jpg'" src="<?php if (empty($specitem['thumb'])) { ?>/assets/ep/images/nopic100.jpg<?php } else { ?>{:tomedia( resize($specitem['thumb'],100) )}<?php } ?>"
+           style='width:38px;height: 38px;'
+          <?php if (!empty($specitem['thumb'])) { ?>
+            data-toggle='popover'data-html='true'data-placement='top'data-trigger='hover'data-content="<img src='{: tomedia($specitem[' thumb'])}' style='width:100px;height:100px;' />"
+          <?php } ?>
+      > <i class="fa fa-times-circle" <?php if (empty($specitem['thumb'])){ ?>style="display:none"<?php } ?>></i>
+    </div>
+    <span class="input-group-append">
+			<span class="input-group-text"><a href="javascript:" onclick="removeSpecItem(this)" title='删除'><i class="fa fa-times"></i></a></span>
 		</span>
-	</div>
+  </div>
 </div>
 
 

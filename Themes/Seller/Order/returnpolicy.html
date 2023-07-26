@@ -1,22 +1,18 @@
 {template '_header'}
 <div class="page-header">当前位置：<span class="text-primary">退货说明</span></div>
 <div class="page-content">
-	<form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data" >
-
-		<div class="form-group row">
-			<label class="col-lg control-label">退货说明</label>
-			<div class="col-sm-9 col-xs-12">
-				<textarea name="parameter[order_refund_notice]" class="form-control richtext"rows="5">{$data['order_refund_notice']}</textarea>
-			</div>
-		</div>
-
-		<div class="form-group row">
-			<label class="col-lg control-label"> </label>
-			<div class="col-sm-9 col-xs-12">
-				<input type="submit" value="提交" class="btn btn-primary"  />
-			</div>
-		</div>
-	</form>
-</div>
-
-{template '_footer'}
+  <form action="" class="form-horizontal form-validate" enctype="multipart/form-data" method="post">
+    <div class="form-group row">
+      <label class="col-lg control-label">退货说明</label>
+      <div class="col-sm-9 col-xs-12">
+        <textarea class="form-control richtext" name="parameter[order_refund_notice]" rows="5">{$data['order_refund_notice']}</textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-lg control-label"> </label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="btn btn-primary" type="submit" value="提交"/>
+      </div>
+    </div>
+  </form>
+</div>{template '_footer'}

@@ -1,130 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
-    <title><?php echo $shoname; ?></title>
-    <link rel="shortcut icon" href="" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-    <meta name="keywords" content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案">
-    <meta name="author" content="Dejavu Tech.">
-    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
-
-    <!-- Font Awesome-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
-    <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
-    <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/themify.css">
-    <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/flag-icon.css">
-    <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/feather-icon.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
-    <!-- Plugins css start-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/material-design-icon.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/datatables.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/datatable-extension.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/pe7-icon.css">
-    <!-- Plugins css Ends-->
-    <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
-    <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-    <link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
-    <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
-    <link rel="stylesheet" href="/assets/ep/components/datetimepicker/jquery.datetimepicker.css">
-    <link rel="stylesheet" href="/assets/ep/components/daterangepicker/daterangepicker.css">
-    <link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
-    <!--[if lt IE 9]-->
-    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-    <!--[endif]-->
-
-    <script type="text/javascript">
-        window.sysinfo = {
-        <?php if (!empty($_W['uniacid']) ){ ?>'uniacid': '{$_W['uniacid']}',<?php } ?>
-
-        <?php if( !empty($_W['acid'])  ){ ?>'acid': '{$_W['acid']}',<?php } ?>
-
-        <?php if (!empty($_W['openid']) ) { ?>'openid': '{$_W['openid']}',<?php } ?>
-
-        <?php if( !empty($_W['uid']) ) {  ?>'uid': '{$_W['uid']}',<?php } ?>
-
-        'isfounder': <?php if (!empty($_W['isfounder']) ) { ?>1<?php  }else{  ?>0<?php } ?>,
-
-        'siteroot': '{$_W['siteroot']}',
-            'siteurl': '{$_W['siteurl']}',
-            'attachurl': '{$_W['attachurl']}',
-            'attachurl_local': '{$_W['attachurl_local']}',
-            'attachurl_remote': '{$_W['attachurl_remote']}',
-            'module' : {'url' : '<?php if( defined('MODULE_URL') ) { ?>{MODULE_URL}<?php } ?>', 'name' : '<?php if (defined('IN_MODULE') ) { ?>{IN_MODULE}<?php } ?>'},
-        'cookie' : {'pre': ''},
-        'account' : {:json_encode($_W['account'])},
-        };
-    </script>
-
-    <script type="text/javascript" src="/assets/js/lib/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/assets/js/app/util.js?v=201903260001"></script>
-    <script type="text/javascript" src="/assets/js/app/common.min.js?v=201903260001"></script>
-    <script type="text/javascript" src="/assets/js/select2/select2.full.min.js"></script>
-    <script type="text/javascript" src="/assets/js/select2/select2-custom.js"></script>
-    <script type="text/javascript" src="/assets/js/require.js?v=201903260001"></script>
-    <script type="text/javascript" src="/assets/js/lib/jquery.nice-select.js?v=201903260001"></script>
-    <script type="text/javascript" src="/assets/js/lib/moment.js"></script>
-
-
+  <title><?php echo $shoname; ?></title>
+  <link href="" rel="shortcut icon"/>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案" name="description">
+  <meta content="吃货星球，先进的电商拼团，小程序，APP，集成解决方案" name="keywords">
+  <meta content="Dejavu Tech." name="author">
+  <link href="/assets/images/favicon.png" rel="icon" type="image/x-icon">
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <!-- Font Awesome-->
+  <link href="/assets/css/fontawesome.css" rel="stylesheet" type="text/css">
+  <!-- ico-font-->
+  <link href="/assets/css/icofont.css" rel="stylesheet" type="text/css">
+  <!-- Themify icon-->
+  <link href="/assets/css/themify.css" rel="stylesheet" type="text/css">
+  <!-- Flag icon-->
+  <link href="/assets/css/flag-icon.css" rel="stylesheet" type="text/css">
+  <!-- Feather icon-->
+  <link href="/assets/css/feather-icon.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/animate.css" rel="stylesheet" type="text/css">
+  <!-- Plugins css start-->
+  <link href="/assets/css/material-design-icon.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/datatables.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/datatable-extension.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/pe7-icon.css" rel="stylesheet" type="text/css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <!-- App css-->
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/color-1.css" id="color" media="screen" rel="stylesheet">
+  <!-- Responsive css-->
+  <link href="/assets/css/responsive.css" rel="stylesheet" type="text/css">
+  <link href="/assets/ep/components/datetimepicker/jquery.datetimepicker.css" rel="stylesheet">
+  <link href="/assets/ep/components/daterangepicker/daterangepicker.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap.min1.css?v=201903260001" rel="stylesheet">
+  <link href="/assets/css/ep/eaterplanet.css?v=4.0.0" rel="stylesheet" type="text/css">
+  <script src="/assets/js/app.js" type="text/javascript"></script>
+  <script src="/assets/js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/lib/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/assets/js/app/util.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/app/common.min.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/select2/select2.full.min.js" type="text/javascript"></script>
+  <script src="/assets/js/select2/select2-custom.js" type="text/javascript"></script>
+  <script src="/assets/js/require.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/lib/jquery.nice-select.js?v=201903260001" type="text/javascript"></script>
+  <script src="/assets/js/lib/moment.js" type="text/javascript"></script>
 </head>
-<body class="custom-scrollbar" >
-
+<body class="custom-scrollbar">
 <table id="demo" lay-filter="test"></table>
 <div class="page-wrapper custom-scrollbar">
-    <div class="page-body-wrapper">
-        <div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
-            <div class="container-fluid">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-lg-6 main-header">
-                            <h6 class="mb-0">当前位置</h6>
-                            <block name="header"></block>
-                        </div>
-                        <block name="header-right"></block>
-                    </div>
-                </div>
+  <div class="page-body-wrapper">
+    <div class="page-body" style="margin: 0;min-height: calc(100vh - 55px);">
+      <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6 main-header">
+              <h6 class="mb-0">当前位置</h6>
+              <block name="header"></block>
             </div>
-
-            <block name="body"></block>
+            <block name="header-right"></block>
+          </div>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 footer-copyright">
-                        <p class="mb-0">Copyright © __YEARS__ Dejavu Tech. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <?php
-			            //$version = D('Home/Front')->get_config_by_name('site_version');
-                        $version_info = M('eaterplanet_ecommerce_config')->where( array('name' => 'site_version') )->find();
-                        $version = $version_info['value'];
-                        ?>
-                        <?php if (!defined('ROLE') || ROLE != 'agenter' ) {?>
-                        <p class="pull-right mb-0">吃货星球<?php echo $version; ?><i class="fa fa-heart"></i></p>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </footer>
+      </div>
+      <block name="body"></block>
     </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 footer-copyright">
+            <p class="mb-0">Copyright © __YEARS__ Dejavu Tech. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+              <?php
+              //$version = D('Home/Front')->get_config_by_name('site_version');
+              $version_info = M('eaterplanet_ecommerce_config')->where(array('name' => 'site_version'))->find();
+              $version = $version_info['value'];
+              ?>
+              <?php if (!defined('ROLE') || ROLE != 'agenter') { ?>
+                <p class="pull-right mb-0">吃货星球<?php echo $version; ?><i class="fa fa-heart"></i></p>
+              <?php } ?>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
 <script src="/assets/layuiadmin/layui/layui-common.js"></script>
-
 <script src="/assets/js/jquery-ui.min.js"></script>
 <!-- Bootstrap js-->
 <!-- Sidebar jquery-->
@@ -136,8 +103,7 @@
 <!-- Theme js-->
 <script src="/assets/js/script.js"></script>
 <!-- Theme js-->
-<script src="/assets/js/theme-customizer/customizer1.js"></script>
-
+<script src="/assets/js/theme-customizer/customizer.js"></script>
 <block name="script"></block>
 </body>
 </html>

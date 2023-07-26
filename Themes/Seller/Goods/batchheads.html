@@ -1,78 +1,66 @@
-<div id="batchheads" style="z-index: 999;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.5)" class="form-horizontal form-validate batchcates"  enctype="multipart/form-data">
-    <div class="modal-dialog modal-dialog-centered btn-showcase">
-        <div class="modal-content">
-            <div class="modal-header">
-		<h5 class="modal-title">选取团长1</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            </div>
-            <div class="modal-body" style="height:600px">
-            	<div class="form-group row">
-            	<label class="col-sm-2 control-label">社区位置</label>
-                    <div class="col-sm-10 col-xs-12">
-                        <p>
-			                <select id="sel-provance" name="province_id" onChange="selectCity();" class="select form-control" style="width:130px;display:inline;">
-			                    <option value="" selected="true">省/直辖市</option>
-			                </select>
-			                <select id="sel-city" name="city_id" onChange="selectcounty(0)" class="select form-control" style="width:135px;display:inline;">
-			                    <option value="" selected="true">请选择</option>
-			                </select>
-			                <select id="sel-area" name="area_id" onChange="selectstreet(0)" class="select form-control" style="width:130px;display:inline;">
-			                    <option value="" selected="true">请选择</option>
-			                </select>
-			                 <select id="sel-street" name="country_id" class="select form-control" style="width:130px;display:inline;">
-			                    <option value="" selected="true">请选择</option>
-			                </select>
-			            </p>
-                    </div>
-                </div>
-            	<div class="form-group row">
-                    <label class="col-sm-2 control-label">团长名称</label>
-                    <div class="col-sm-10 col-xs-12">
-                        <div class="input-group">
-	                        <input type="text" class="form-control" name="keyword" id="supply_id_input" placeholder="团长名称/团长手机号/社区地址">
-			            	<div class="input-group-append">
-<button type="button" class="btn btn-pill btn-primary" onclick="search_heads()">搜索</button>
-</div>
-		            	</div>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-1 control-label">
-
-                    </div>
-                    <div class="col-sm-10 col-xs-12">
-                       	<div class="page-table-header">
-		                    <input type="checkbox" class="check_heads_all">
-		                    <div class="btn-group">
-		                    	全选/反选
-		                    </div>
-		                </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                	<label class="col-sm-1 control-label"></label>
-                	<div class="col-sm-11 col-xs-12">
-	                	<div class="content" style="padding-top:5px;" data-name="supply_id">
-	                		<div style="max-height:450px;overflow:auto;" id="batchheads_content">
-
-							</div>
-							<div class="" id="batchheads_page">
-
-							</div>
-						</div>
-					</div>
-                </div>
-
-
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary model_heads">确认</button>
-                <button class="btn btn-pill btn-primary" >取消</button>
-            </div>
+<div class="form-horizontal form-validate batchcates" enctype="multipart/form-data" id="batchheads" style="z-index: 999;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.5)">
+  <div class="modal-dialog modal-dialog-centered btn-showcase">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">选取团长1</h5>
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body" style="height:600px">
+        <div class="form-group row">
+          <label class="col-sm-2 control-label">社区位置</label>
+          <div class="col-sm-10 col-xs-12">
+            <p>
+              <select class="select form-control" id="sel-provance" name="province_id" onChange="selectCity();" style="width:130px;display:inline;">
+                <option selected="true" value="">省/直辖市</option>
+              </select> <select class="select form-control" id="sel-city" name="city_id" onChange="selectcounty(0)" style="width:135px;display:inline;">
+                <option selected="true" value="">请选择</option>
+              </select> <select class="select form-control" id="sel-area" name="area_id" onChange="selectstreet(0)" style="width:130px;display:inline;">
+                <option selected="true" value="">请选择</option>
+              </select> <select class="select form-control" id="sel-street" name="country_id" style="width:130px;display:inline;">
+                <option selected="true" value="">请选择</option>
+              </select>
+            </p>
+          </div>
         </div>
+        <div class="form-group row">
+          <label class="col-sm-2 control-label">团长名称</label>
+          <div class="col-sm-10 col-xs-12">
+            <div class="input-group">
+              <input class="form-control" id="supply_id_input" name="keyword" placeholder="团长名称/团长手机号/社区地址" type="text">
+              <div class="input-group-append">
+                <button class="btn btn-pill btn-primary" onclick="search_heads()" type="button">搜索</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-1 control-label"></div>
+          <div class="col-sm-10 col-xs-12">
+            <div class="page-table-header">
+              <input class="check_heads_all" type="checkbox">
+              <div class="btn-group">
+                全选/反选
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-sm-1 control-label"></label>
+          <div class="col-sm-11 col-xs-12">
+            <div class="content" data-name="supply_id" style="padding-top:5px;">
+              <div id="batchheads_content" style="max-height:450px;overflow:auto;"></div>
+              <div id="batchheads_page"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary model_heads">确认</button>
+        <button class="btn btn-pill btn-primary">取消</button>
+      </div>
     </div>
+  </div>
 </div>
 
 

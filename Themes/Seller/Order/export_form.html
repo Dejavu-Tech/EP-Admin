@@ -1,67 +1,61 @@
-<div class="modal-lg modal-dialog-centered btn-showcase" >
-	<form action="{:U('order/index')}" method="post" id="export_form" class="form-horizontal form-search " role="form">
-		<input type="hidden" name="controller" value="order/order" />
-		<?php
-	foreach($post_data as $key => $val){
-		?>
-		<input type="hidden" name="{$key}" value="{$val}" />
-		<?php } ?>
-		<input type="hidden" name="c" value="order" />
-		<input type="hidden" name="a" value="index" />
-		<div class="form-group row">
-			<div class="col-sm-12">
-				<label class="col-sm-12 col-form-label">拖动排序</label>
-				<div class="multi-img-details">
-					<?php foreach( $columns as $key => $val ){ ?>
-					<label class="move_item">
-						<input type="checkbox" lay-skin="primary" name="order_index" value="{$val['field']}" class="item_input" <?php if($val['is_check'] ==1 ){ ?>checked<?php } ?>  /><?php echo $val['title']; ?>
-					</label>
-					<?php } ?>
-				</div>
-			</div>
-		</div>
-		<div class="modal-footer">
-			<button type="submit" class="btn btn-primary btn-order" id="sub_orderexport" name="cancelsend" value="yes">确认导出</button>
-			<input type="hidden" name="modify_explode_arr" id="modify_explode_arr" value="" />
-		</div>
-	</form>
+<div class="modal-lg modal-dialog-centered btn-showcase">
+  <form action="{:U('order/index')}" class="form-horizontal form-search " id="export_form" method="post" role="form">
+    <input name="controller" type="hidden" value="order/order"/>
+     <?php foreach ($post_data as $key => $val) { ?>
+        <input name="{$key}" type="hidden" value="{$val}"/>
+      <?php } ?>
+    <input name="c" type="hidden" value="order"/> <input name="a" type="hidden" value="index"/>
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <label class="col-sm-12 col-form-label">拖动排序</label>
+        <div class="multi-img-details">
+            <?php foreach ($columns as $key => $val) { ?>
+              <label class="move_item"> <input class="item_input" lay-skin="primary" name="order_index" type="checkbox" value="{$val['field']}" <?php if ($val['is_check'] == 1){ ?>checked<?php } ?> /><?php echo $val['title']; ?>
+              </label>
+            <?php } ?>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary btn-order" id="sub_orderexport" name="cancelsend" type="submit" value="yes">
+        确认导出
+      </button>
+      <input id="modify_explode_arr" name="modify_explode_arr" type="hidden" value=""/>
+    </div>
+  </form>
 </div>
-
-<script type="text/javascript" src="/assets/js/jquery-migrate-1.1.1.js"></script>
-
+<script src="/assets/js/jquery-migrate-1.1.1.js" type="text/javascript"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <script>
+    $(function () {
 
-$(function(){
 
+        $('#sub_orderexport').click(function () {
 
-	$('#sub_orderexport').click(function(){
+            var load_arr = [];
+            $('.item_input').each(function () {
+                console.log($(this).val());
 
-		var load_arr = [];
-		$('.item_input').each(function(){
-			console.log( $(this).val() );
+                if ($(this).is(':checked')) {
+                    // do something
+                    load_arr.push($(this).val());
+                }
+            })
 
-			if( $(this).is(':checked') ) {
-				// do something
-				load_arr.push( $(this).val() );
-			}
-		})
+            if (load_arr.length <= 0) {
+                alert('请选择导出项');
+                return false;
+            }
 
-		if( load_arr.length <= 0 )
-		{
-			alert('请选择导出项');
-			return false;
-		}
+            var load_arr_str = load_arr.join(',');
 
-		var load_arr_str = load_arr.join(',');
+            $('#modify_explode_arr').val(load_arr_str);
+            layer.closeAll();
+            $('#export_form').submit();
 
-		$('#modify_explode_arr').val(load_arr_str);
-		layer.closeAll();
-		$('#export_form').submit();
-
-		return false;
-	})
-})
+            return false;
+        })
+    })
 </script>
 <script>
     $(function () {

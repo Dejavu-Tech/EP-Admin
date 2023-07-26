@@ -1,47 +1,38 @@
 {template '_header'}
 <div class="page-header">当前位置：<span class="text-primary">客服设置</span></div>
 <div class="page-content">
-    <form action="" method="post" class="form-horizontal form-validate">
-    	<div class="form-group row">
-            <label class="col-lg control-label">商城状态</label>
-            <div class="col-sm-9 col-xs-12">
-                <label class="radio-inline" style="display:none;">
-                    <input type="radio" name="parameter[config_service_type]" value='0' <?php if($data['config_service_type']==0){ ?>checked<?php } ?> /> 吃货星球云客服
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="parameter[config_service_type]" value='1' <?php if($data['config_service_type']==1){ ?>checked<?php } ?> /> 微信客服（小程序服务通知）
-                </label>
-            </div>
-        </div>
-        <div class="form-group row" style="display:none;">
-            <label class="col-lg control-label">网页客服接待人数</label>
-            <div class="col-sm-9 col-xs-12">
-                <input type="text" name="parameter[config_service_user_number]" class="form-control" value="{$data['config_service_user_number']}" />
-                <small>单个卖家客服可接待几个用户</small>
-            </div>
-        </div>
-        <div class="form-group row" style="display:none;">
-            <label class="col-lg control-label">自动回复内容</label>
-            <div class="col-sm-9 col-xs-12">
-                <textarea name="parameter[config_service_reply_content]" class="form-control richtext"rows="5">{$data['config_service_reply_content']}</textarea>
-                <small>客服不在线时，自动回复。</small>
-            </div>
-        </div>
-        <div class="form-group row" style="display:none;">
-            <label class="col-lg control-label">当天第一次收到买家消息自动回复</label>
-            <div class="col-sm-9 col-xs-12">
-                <textarea name="parameter[config_service_first_reply_content]" class="form-control richtext"rows="5">{$data['config_service_first_reply_content']}</textarea>
-                <small>客服无论是否在线，客服24小时内发送消息，首次将自动回复，不设置内容不回复。</small>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-lg control-label"></label>
-            <div class="col-sm-9 col-xs-12">
-                <input type="submit" value="提交" class="btn btn-primary"/>
-            </div>
-        </div>
-    </form>
-</div>
-
-{template '_footer'}
+  <form action="" class="form-horizontal form-validate" method="post">
+    <div class="form-group row">
+      <label class="col-lg control-label">商城状态</label>
+      <div class="col-sm-9 col-xs-12">
+        <label class="radio-inline" style="display:none;"> <input name="parameter[config_service_type]" type="radio" value='0' <?php if ($data['config_service_type'] == 0){ ?>checked<?php } ?> /> 吃货星球云客服 </label>
+        <label class="radio-inline"> <input name="parameter[config_service_type]" type="radio" value='1' <?php if ($data['config_service_type'] == 1){ ?>checked<?php } ?> /> 微信客服（小程序服务通知） </label>
+      </div>
+    </div>
+    <div class="form-group row" style="display:none;">
+      <label class="col-lg control-label">网页客服接待人数</label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="form-control" name="parameter[config_service_user_number]" type="text" value="{$data['config_service_user_number']}"/> <small>单个卖家客服可接待几个用户</small>
+      </div>
+    </div>
+    <div class="form-group row" style="display:none;">
+      <label class="col-lg control-label">自动回复内容</label>
+      <div class="col-sm-9 col-xs-12">
+        <textarea class="form-control richtext" name="parameter[config_service_reply_content]" rows="5">{$data['config_service_reply_content']}</textarea> <small>客服不在线时，自动回复。</small>
+      </div>
+    </div>
+    <div class="form-group row" style="display:none;">
+      <label class="col-lg control-label">当天第一次收到买家消息自动回复</label>
+      <div class="col-sm-9 col-xs-12">
+        <textarea class="form-control richtext" name="parameter[config_service_first_reply_content]" rows="5">{$data['config_service_first_reply_content']}</textarea>
+        <small>客服无论是否在线，客服24小时内发送消息，首次将自动回复，不设置内容不回复。</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-lg control-label"></label>
+      <div class="col-sm-9 col-xs-12">
+        <input class="btn btn-primary" type="submit" value="提交"/>
+      </div>
+    </div>
+  </form>
+</div>{template '_footer'}

@@ -1,5 +1,5 @@
 <style>
-    .recharge_info{
+    .recharge_info {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -7,81 +7,83 @@
         justify-content: space-around;
         margin-bottom: 10px;
     }
-    .recharge_info>div{
+
+    .recharge_info > div {
         -webkit-box-flex: 1;
         -webkit-flex: 1;
         -ms-flex: 1;
         flex: 1;
-        border:1px solid #efefef;
+        border: 1px solid #efefef;
         margin: 0 10px;
-        padding:10px 22px;
+        padding: 10px 22px;
         line-height: 25px;
         color: #333;
     }
 </style>
-<form class="form-horizontal form-validate" action="{:U('distribution/changecommission')}" method="post" enctype="multipart/form-data">
-    <input type='hidden' name='order_id' value="{$order_id}" />
-	<input type='hidden' name='order_goods_id' value="{$order_goods_id}" />
-
-    <div class="modal-dialog modal-dialog-centered btn-showcase" style='width:800px;'>
-        <div class="modal-content">
-            <div class="modal-header">
-		<h5 class="modal-title">修改佣金</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="form-group row"  style="margin: 0 10px;">
-                    <table class='table' style='table-layout: fixed;'>
-                        <tr>
-                            <?php if($set['level']>=1 && count($commission_info) >= 1){ ?>
-                            <th style='width:145px;'>
-                                1级</th>
-                            <?php } ?>
-                            <?php if($set['level']>=2  && count($commission_info) >= 2){ ?>
-                            <th style='width:145px;'>
-                                2级</th>
-                            <?php } ?>
-                            <?php if($set['level']>=3  && count($commission_info) >= 3){ ?>
-                            <th style='width:145px;'>
-                                3级</th>
-                            <?php } ?>
-                        </tr>
-                        <tr>
-							<?php foreach($commission_info as $val){  ?>
-                            <td>
-                                <a href="{:U('user/detail',array('id'=>$val['member_id']))}" target='_blank'><img src="{php echo $val['member_info']['avatar']}" style='width:30px;height:30px;padding:1px;border:1px solid #ccc' /> {$val['member_info']['username']}</a>
-                            </td>
-							<?php } ?>
-                        </tr>
-
-                        <tr>
-                             <?php foreach($commission_info as $val){  ?>
-                            <td><input type='text' class='form-control clevel' data-ogid='{$val['id']}'  value="{$val['money']}" <?php if($val['state'] == 0){ ?>data-canchange="1" data-level="{$val['level']}" name="cm1[{$val['id']}]"<?php }else{ ?>readonly<?php } ?>  /></td>
-                            <?php } ?>
-                        </tr>
-
-
-                    </table>
-
-                </div>
-                <div class="form-group row" style="margin: 0 10px;">
-                    <div class="col-sm-9 col-xs-12">
-                        <div class='form-control-static' style='color:red' >注: 不能修改的佣金为已申请或已结算</div>
-                    </div>
-                </div>
-                <a style='float:left;margin-left: 10px' href="javascript:;" class="btn btn-success" onclick='commission_changeall()' >按应得重新设置佣金</a>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary " type="submit">提交</button>
-                <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
-            </div>
+<form action="{:U('distribution/changecommission')}" class="form-horizontal form-validate" enctype="multipart/form-data" method="post">
+  <input name='order_id' type='hidden' value="{$order_id}"/> <input name='order_goods_id' type='hidden' value="{$order_goods_id}"/>
+  <div class="modal-dialog modal-dialog-centered btn-showcase" style='width:800px;'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">修改佣金</h5>
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row" style="margin: 0 10px;">
+          <table class='table' style='table-layout: fixed;'>
+            <tr>
+                <?php if ($set['level'] >= 1 && count($commission_info) >= 1) { ?>
+                  <th style='width:145px;'>
+                    1级
+                  </th>
+                <?php } ?>
+                <?php if ($set['level'] >= 2 && count($commission_info) >= 2) { ?>
+                  <th style='width:145px;'>
+                    2级
+                  </th>
+                <?php } ?>
+                <?php if ($set['level'] >= 3 && count($commission_info) >= 3) { ?>
+                  <th style='width:145px;'>
+                    3级
+                  </th>
+                <?php } ?>
+            </tr>
+            <tr>
+                <?php foreach ($commission_info as $val) { ?>
+                  <td>
+                    <a href="{:U('user/detail',array('id'=>$val['member_id']))}" target='_blank'><img src="{php echo $val['member_info']['avatar']}" style='width:30px;height:30px;padding:1px;border:1px solid #ccc'/>
+                      {$val['member_info']['username']}</a>
+                  </td>
+                <?php } ?>
+            </tr>
+            <tr>
+                <?php foreach ($commission_info as $val) { ?>
+                  <td><input class='form-control clevel' data-ogid='{$val[' id type='text'']}'
+                    value="{$val['money']}" <?php if ($val['state'] == 0) { ?>data-canchange="1" data-level="{$val['level']}" name="cm1[{$val['id']}]"<?php } else { ?>readonly<?php } ?>
+                    />
+                  </td>
+                <?php } ?>
+            </tr>
+          </table>
         </div>
+        <div class="form-group row" style="margin: 0 10px;">
+          <div class="col-sm-9 col-xs-12">
+            <div class='form-control-static' style='color:red'>注: 不能修改的佣金为已申请或已结算</div>
+          </div>
+        </div>
+        <a class="btn btn-success" href="javascript:" onclick='commission_changeall()' style='float:left;margin-left: 10px'>按应得重新设置佣金</a>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary " type="submit">提交</button>
+        <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+      </div>
+    </div>
 </form>
 <script language='javascript'>
     function commission_changeall() {
-        $('.clevel[data-canchange=1]').each(function(){
-            $(this).val( $('#clevel' + $(this).data('level') + '_sys_' + $(this).data('ogid')).html());
+        $('.clevel[data-canchange=1]').each(function () {
+            $(this).val($('#clevel' + $(this).data('level') + '_sys_' + $(this).data('ogid')).html());
         });
         tip.msgbox.suc('设置成功!');
 

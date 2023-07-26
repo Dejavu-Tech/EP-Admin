@@ -1,46 +1,37 @@
- <form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data">
-	 <input type="hidden" name="data[id]" value="{$data['id']}" />
-	 <input type="hidden" name="controller" value="order.addorderreturngoods" />
-
-
-    <div class="modal-dialog modal-dialog-centered btn-showcase">
-            <div class="modal-content">
-                <div class="modal-header">
-    		<h5 class="modal-title"><?php if(!empty($data['id'])){ ?>编辑<?php }else{ ?>添加<?php } ?>规则</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                </div>
-                <div class="modal-body">
-					 <div class="form-group row">
-						<label class="col-lg control-label must">原因</label>
-						<div class="col-sm-9 col-xs-12">
-							<input type="text" name="data[title]" class="form-control" value="{$data['title']}" data-rule-required="true" />
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-lg control-label must">排序</label>
-						<div class="col-sm-9 col-xs-12">
-							<input type="text" name="data[sortby]" class="form-control" value="{$data['sortby']}" data-rule-required="true" />
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-lg control-label must">状态</label>
-						<div class="col-sm-9 col-xs-12">
-							<label class="radio-inline">
-								<input type="radio" name="data[state]" value="1" <?php if(empty($data) || $data['state'] == 1){ ?> checked <?php } ?>> 开启
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="data[state]" value="0" <?php if(!empty($data) && $data['state'] == 0){ ?> checked <?php } ?>> 关闭
-							</label>
-						</div>
-					</div>
-
-
-
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary btn-order" type="submit">提交</button>
-                    <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
-                </div>
-            </div>
+<form action="" class="form-horizontal form-validate" enctype="multipart/form-data" method="post">
+  <input name="data[id]" type="hidden" value="{$data['id']}"/> <input name="controller" type="hidden" value="order.addorderreturngoods"/>
+  <div class="modal-dialog modal-dialog-centered btn-showcase">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><?php if (!empty($data['id'])) { ?>编辑<?php } else { ?>添加<?php } ?>规则</h5>
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+          <label class="col-lg control-label must">原因</label>
+          <div class="col-sm-9 col-xs-12">
+            <input class="form-control" data-rule-required="true" name="data[title]" type="text" value="{$data['title']}"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-lg control-label must">排序</label>
+          <div class="col-sm-9 col-xs-12">
+            <input class="form-control" data-rule-required="true" name="data[sortby]" type="text" value="{$data['sortby']}"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-lg control-label must">状态</label>
+          <div class="col-sm-9 col-xs-12">
+            <label class="radio-inline"> <input name="data[state]" type="radio" value="1" <?php if (empty($data) || $data['state'] == 1) { ?> checked <?php } ?>> 开启 </label> <label class="radio-inline">
+              <input name="data[state]" type="radio" value="0" <?php if (!empty($data) && $data['state'] == 0) { ?> checked <?php } ?>> 关闭 </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-order" type="submit">提交</button>
+        <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+      </div>
     </div>
+  </div>
 </form>

@@ -1,40 +1,21 @@
-
 <div class="iconsidebar-menu">
-	<div class="sidebar">
-		<ul class="iconMenu-bar custom-scrollbar" style="width: 0px">
-
-
-			<li class="open">
-				<ul class="iconbar-mainmenu custom-scrollbar" style="left: 0px;top: 0px;height: calc(100vh - 55px);">
-					<li class="iconbar-header">{$menu['title']}</li>
-					<?php foreach($menu['items'] as $sub_menu){
-	  		?>
-					<?php if( !empty($sub_menu['items']) ){ ?>
-
-					<li><a href="{:U($sub_menu['route'])}">{$sub_menu['title']}</a></li>
-
-					<?php }else{ ?>
-
-
-					<li><a href="{:U($sub_menu['route'])}">{$sub_menu['title']}</a></li>
-
-					<?php } ?>
-					<?php if( !empty($sub_menu['items']) ){ ?>
-
-
-					<li><a href="{:U($sub_menu['route'])}">{$sub_menu['title']}</a></li>
-					<?php foreach($sub_menu['items'] as $third_sub_menu){ ?>
-					<li><a href="{:U($third_sub_menu['route'])}">{$third_sub_menu['title']}</a></li>
-					<?php } ?>
-					<?php } ?>
-
-					<?php } ?>
-				</ul>
-
-
-			</li>
-
-		</ul>
-	</div>
+  <div class="sidebar">
+    <ul class="iconMenu-bar custom-scrollbar" style="width: 0px">
+      <li class="open">
+        <ul class="iconbar-mainmenu custom-scrollbar" style="left: 0px;top: 0px;height: calc(100vh - 55px);">
+          <li class="iconbar-header">{$menu['title']}</li>
+            <?php foreach ($menu['items'] as $sub_menu) { ?><?php if (!empty($sub_menu['items'])) { ?>
+                <li><a href="{:U($sub_menu['route'])}">{$sub_menu['title']}</a></li>
+                <?php } else { ?>
+                <li><a href="{:U($sub_menu['route'])}">{$sub_menu['title']}</a></li>
+                <?php } ?><?php if (!empty($sub_menu['items'])) { ?>
+                <li><a href="{:U($sub_menu['route'])}">{$sub_menu['title']}</a></li>
+                    <?php foreach ($sub_menu['items'] as $third_sub_menu) { ?>
+                  <li><a href="{:U($third_sub_menu['route'])}">{$third_sub_menu['title']}</a></li>
+                    <?php } ?><?php } ?><?php } ?>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
 

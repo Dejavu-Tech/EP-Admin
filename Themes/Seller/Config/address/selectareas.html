@@ -1,169 +1,199 @@
 <style type='text/css'>
-    .province { float:left; position:relative;width:170px; height:35px; line-height:35px;border:1px solid #fff;padding-top: -10px}
-    .province:hover { border:1px solid #a6d2fe;border-bottom:1px solid #a6d2fe; background:#edf6ff;}
-    .province .cityall { margin-top:10px;}
-    .province ul { list-style: outside none none;position:absolute;padding:0;background:#edf6ff;border:1px solid #a6d2fe;display:none;
-    width:auto; width:250px; z-index:999999;left:-1px;top:32px;}
-    .province ul li  { float:left;min-width:60px;margin-left:20px; height:30px;line-height:30px; }
-    .checkbox-inline{
+    .province {
+        float: left;
+        position: relative;
+        width: 170px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #fff;
+        padding-top: -10px
+    }
+
+    .province:hover {
+        border: 1px solid #a6d2fe;
+        border-bottom: 1px solid #a6d2fe;
+        background: #edf6ff;
+    }
+
+    .province .cityall {
+        margin-top: 10px;
+    }
+
+    .province ul {
+        list-style: outside none none;
+        position: absolute;
+        padding: 0;
+        background: #edf6ff;
+        border: 1px solid #a6d2fe;
+        display: none;
+        width: auto;
+        width: 250px;
+        z-index: 999999;
+        left: -1px;
+        top: 32px;
+    }
+
+    .province ul li {
+        float: left;
+        min-width: 60px;
+        margin-left: 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .checkbox-inline {
         margin: 0;
     }
- </style>
- <div id="modal-areas"  class="modal fade" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered btn-showcase" style='width: 900px;'>
-        <div class="modal-content">
-            <div class="modal-header"><button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button><h3>选择区域</h3></div>
-            <div class="modal-body" style='height:300px;' >
-                <?php foreach( $areas['province'] as $value ){ ?>
-				<?php if($value['@attributes']['name']=='请选择省份'){ ?>{php continue;}<?php } ?>
-                <div class='province'>
-                     <label class='checkbox-inline' style='margin-left:20px;padding: 0 0 5px 24px;'>
-                         <input type='checkbox' class='cityall' style="margin-top: -10px" / > {php echo $value['@attributes']['name']}
-                         <span class="citycount" style='color:#ff6600'></span>
-                     </label>
-                    <?php if(count($value['city'])>0){ ?>
-                    <ul style="padding-bottom: 15px;">
-                        <?php foreach( $value['city'] as $c ){ ?>
+</style>
+<div class="modal fade" id="modal-areas" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered btn-showcase" style='width: 900px;'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+        <h3>选择区域</h3></div>
+      <div class="modal-body" style='height:300px;'>
+          <?php foreach ($areas['province'] as $value) { ?><?php if ($value['@attributes']['name'] == '请选择省份') { ?>{php continue;}<?php } ?>
+            <div class='province'>
+              <label class='checkbox-inline' style='margin-left:20px;padding: 0 0 5px 24px;'> <input class='cityall' style="margin-top: -10px" type='checkbox' / > {php echo $value['@attributes']['name']}
+                <span class="citycount" style='color:#ff6600'></span> </label>
+                <?php if (count($value['city']) > 0) { ?>
+                  <ul style="padding-bottom: 15px;">
+                      <?php foreach ($value['city'] as $c) { ?>
                         <li>
-                             <label class='checkbox-inline' >
-                                  <input type='checkbox' class='city' style='margin-top:-3px;' city="{php echo $c['@attributes']['name']}" /> {php echo $c['@attributes']['name']}
-                            </label>
-                     </li>
-                        <?php } ?>
-                    </ul>
-                    <?php } ?>
-                </div>
+                          <label class='checkbox-inline'> <input city="{php echo $c['@attributes']['name']}" class='city' style='margin-top:-3px;' type='checkbox'/> {php echo $c['@attributes']['name']} </label>
+                        </li>
+                      <?php } ?>
+                  </ul>
                 <?php } ?>
             </div>
-            <div class="modal-footer">
-                <a href="javascript:;" id='btnSubmitArea' class="btn btn-primary" data-dismiss="modal" aria-hidden="true">确定</a>
-                <a href="javascript:;" class="btn btn-pill btn-primary" data-dismiss="modal" aria-hidden="true">关闭</a>
-            </div>
-        </div>
-     </div>
+          <?php } ?>
+      </div>
+      <div class="modal-footer">
+        <a aria-hidden="true" class="btn btn-primary" data-dismiss="modal" href="javascript:" id='btnSubmitArea'>确定</a> <a aria-hidden="true" class="btn btn-pill btn-primary" data-dismiss="modal" href="javascript:;">关闭</a>
+      </div>
+    </div>
+  </div>
 </div>
- <script language='javascript'>
-    $(function(){
+<script language='javascript'>
+    $(function () {
 
-        $('.province').mouseenter(function(){
-              $(this).find('ul').show();
-        }).mouseleave(function(){
-              $(this).find('ul').hide();
+        $('.province').mouseenter(function () {
+            $(this).find('ul').show();
+        }).mouseleave(function () {
+            $(this).find('ul').hide();
         });
 
-        $('.cityall').click(function(){
+        $('.cityall').click(function () {
             var checked = $(this).get(0).checked;
             var citys = $(this).parent().parent().find('.city');
-            citys.each(function(){
+            citys.each(function () {
                 $(this).get(0).checked = checked;
             });
             var count = 0;
-            if(checked){
-                count =  $(this).parent().parent().find('.city:checked').length;
+            if (checked) {
+                count = $(this).parent().parent().find('.city:checked').length;
             }
-            if(count>0){
-               $(this).next().html("(" + count + ")")    ;
-            }
-            else{
+            if (count > 0) {
+                $(this).next().html("(" + count + ")");
+            } else {
                 $(this).next().html("");
             }
         });
-        $('.city').click(function(){
+        $('.city').click(function () {
             var checked = $(this).get(0).checked;
             var cityall = $(this).parent().parent().parent().parent().find('.cityall');
 
-            if(checked){
+            if (checked) {
                 cityall.get(0).checked = true;
             }
             var count = cityall.parent().parent().find('.city:checked').length;
-            if(count>0){
-               cityall.next().html("(" + count + ")")    ;
-            }
-            else{
+            if (count > 0) {
+                cityall.next().html("(" + count + ")");
+            } else {
                 cityall.next().html("");
             }
         });
 
     });
 
-     function clearSelects(){
-         $('.city').attr('checked',false).removeAttr('disabled');
-         $('.cityall').attr('checked',false).removeAttr('disabled');
-         $('.citycount').html('');
+    function clearSelects() {
+        $('.city').attr('checked', false).removeAttr('disabled');
+        $('.cityall').attr('checked', false).removeAttr('disabled');
+        $('.citycount').html('');
     }
-      function editArea(btn){
+
+    function editArea(btn) {
         current = $(btn).attr('random');
         clearSelects();
         var old_citys = $(btn).prev().val().split(';');
 
 
-        $('.city').each(function(){
+        $('.city').each(function () {
             var parentcheck = false;
-            for(var i in old_citys){
-                if(old_citys[i]==$(this).attr('city')){
+            for (var i in old_citys) {
+                if (old_citys[i] == $(this).attr('city')) {
                     parentcheck = true;
                     $(this).get(0).checked = true;
                     break;
                 }
             }
-            if(parentcheck){
-                $(this).parent().parent().parent().parent().find('.cityall').get(0).checked=  true;
+            if (parentcheck) {
+                $(this).parent().parent().parent().parent().find('.cityall').get(0).checked = true;
             }
         });
 
         $("#modal-areas").modal();
         var citystrs = '';
-        $('#btnSubmitArea').unbind('click').click(function(){
-                   $('.city:checked').each(function(){
-                     citystrs+= $(this).attr('city') +";";
-                   });
-                   $('.' + current + ' .cityshtml').html(citystrs);
-                   $('.' + current + ' .citys').val(citystrs);
+        $('#btnSubmitArea').unbind('click').click(function () {
+            $('.city:checked').each(function () {
+                citystrs += $(this).attr('city') + ";";
+            });
+            $('.' + current + ' .cityshtml').html(citystrs);
+            $('.' + current + ' .citys').val(citystrs);
         })
-           var currents = getCurrents(current);
-                currents = currents.split(';');
-                var citys = "";
-                $('.city').each(function(){
-                    var parentdisabled =false;
-                    for(var i in currents){
-                        if(currents[i]!='' && currents[i]==$(this).attr('city')){
-                            $(this).attr('disabled',true);
-                            $(this).parent().parent().parent().parent().find('.cityall').attr('disabled',true);
-                        }
-                    }
+        var currents = getCurrents(current);
+        currents = currents.split(';');
+        var citys = "";
+        $('.city').each(function () {
+            var parentdisabled = false;
+            for (var i in currents) {
+                if (currents[i] != '' && currents[i] == $(this).attr('city')) {
+                    $(this).attr('disabled', true);
+                    $(this).parent().parent().parent().parent().find('.cityall').attr('disabled', true);
+                }
+            }
 
-                });
+        });
     }
 
-    function selectAreas(){
+    function selectAreas() {
         clearSelects();
         var old_citys = $('#areas').html().split(';');
 
 
-        $('.city').each(function(){
+        $('.city').each(function () {
             var parentcheck = false;
-            for(var i in old_citys){
-                if(old_citys[i]==$(this).attr('city')){
+            for (var i in old_citys) {
+                if (old_citys[i] == $(this).attr('city')) {
                     parentcheck = true;
                     $(this).get(0).checked = true;
                     break;
                 }
             }
-            if(parentcheck){
-                $(this).parent().parent().parent().parent().find('.cityall').get(0).checked=  true;
+            if (parentcheck) {
+                $(this).parent().parent().parent().parent().find('.cityall').get(0).checked = true;
             }
         });
 
         $("#modal-areas").modal();
         var citystrs = '';
-        $('#btnSubmitArea').unbind('click').click(function(){
-                   $('.city:checked').each(function(){
-                       citystrs+= $(this).attr('city') +";";
-                   });
-                   $('#areas').html(citystrs);
-                   $("#limitarea").val(citystrs);
+        $('#btnSubmitArea').unbind('click').click(function () {
+            $('.city:checked').each(function () {
+                citystrs += $(this).attr('city') + ";";
+            });
+            $('#areas').html(citystrs);
+            $("#limitarea").val(citystrs);
         })
 
     }
-
 </script>

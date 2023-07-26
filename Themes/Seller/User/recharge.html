@@ -1,140 +1,129 @@
 <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">客户充值</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        </div>
-        <div class="modal-body">
-            <form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data">
-                <input type="hidden" name="c" value="user" />
-                <input type="hidden" name="a" value="recharge" />
-                <input type='hidden' name='type' value="{$type}" id="leixing"/>
-                <input type='hidden' name='id' value="{$id}" />
-                <input type="hidden" name="final_type" value="{$type}" id="final_type">
-                <div class="recharge_info col-sm-12 form-row">
-                    <div class="form-group col-sm-5">
-                        <div class="pull-left">
-                            <img class="radius50" src='{$profile['avatar']}' style='width:60px;height:60px;padding:1px;border:1px solid #ccc'/>
-                            {$profile['username']}
-                        </div>
-                    </div>
-                    <div class="form-group col-sm-7">
-                        <div class="pull-left">
-                            ID: {$profile['id']}</br>
-                            姓名: {$profile['realname']}</br>
-                            手机号: {$profile['mobile']}
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs-container">
-                    <div class="tabs">
-                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                            <li class="nav-item <?php if($type=='score'){ ?>active show<?php } ?>"><a class="nav-link " data-toggle="tab" href="#tab-1" data-rechargetype="score" aria-expanded="true"> 充值积分</a></li>
-                            <li class="nav-item <?php if($type=='account_money'){ ?>active show<?php } ?>"><a class="nav-link " data-toggle="tab" href="#tab-2"  data-rechargetype="account_money" aria-expanded="false"> 充值余额</a></li>
-                        </ul>
-                        <div class="tab-content col-sm-12 border-top m-t-10">
-                            <div id="tab-1" class="tab-pane <?php if($type=='score'){ ?>active<?php } ?>">
-                                <div class="form-group row"></div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 control-label">当前积分</label>
-                                    <div class="col-sm-9">
-                                        <div class="form-control-static">{$profile['score']}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tab-2" class="tab-pane <?php if($type=='account_money'){ ?>active<?php } ?>">
-                                <div class="form-group row"></div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 control-label">当前余额</label>
-                                    <div class="col-sm-9">
-                                        <div class="form-control-static">{$profile['account_money']}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 control-label">变化</label>
-                                <div class="col-sm-9">
-                                    <div class="form-group m-checkbox-inline custom-radio-ml m-l-5 mb-0">
-                                        <div class="radio radio-primary">
-                                            <input id="radioinline" type='radio' name='changetype' value='0' checked title=" "/>
-                                            <label class="mb-0" for="radioinline">增加</label>
-                                        </div>
-                                        <div class="radio radio-primary">
-                                            <input id="radioinline1" type='radio' name='changetype' value='1' title=" "/>
-                                            <label class="mb-0" for="radioinline1">减少</label>
-                                        </div>
-                                        <div class="radio radio-primary">
-                                            <input id="radioinline2" type='radio' name='changetype' value='2' />
-                                            <label class="mb-0" for="radioinline2">最终<span class='name'><?php if($type=='score'){ ?>积分<?php }else{ ?>余额<?php } ?></span></label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 control-label mustl">充值金额</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="num" class="form-control" value="" data-rule-number='true' data-rule-required='true' data-rule-min='0.01' />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 control-label">备注</label>
-                                <div class="col-sm-9">
-                                    <textarea name="remark" class="form-control richtext" cols="70"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary btn-submit" type="submit" id="recharge">确认充值<?php if($type=='score'){ ?>积分<?php }else{ ?>余额<?php } ?></button>
-            <button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
-        </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">客户充值</h5>
+      <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+      </button>
     </div>
+    <div class="modal-body">
+      <form action="" class="form-horizontal form-validate" enctype="multipart/form-data" method="post">
+        <input name="c" type="hidden" value="user"/> <input name="a" type="hidden" value="recharge"/> <input id="leixing" name='type' type='hidden' value="{$type}"/> <input name='id' type='hidden' value="{$id}"/>
+        <input id="final_type" name="final_type" type="hidden" value="{$type}">
+        <div class="recharge_info col-sm-12 form-row">
+          <div class="form-group col-sm-5">
+            <div class="pull-left">
+              <img avatar class="radius50" src='{$profile['']}' style='width:60px;height:60px;padding:1px;border:1px solid #ccc'/> {$profile['username']}
+            </div>
+          </div>
+          <div class="form-group col-sm-7">
+            <div class="pull-left">
+              ID: {$profile['id']}</br>姓名: {$profile['realname']}</br>手机号: {$profile['mobile']}
+            </div>
+          </div>
+        </div>
+        <div class="tabs-container">
+          <div class="tabs">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item <?php if ($type == 'score') { ?>active show<?php } ?>"><a aria-expanded="true" class="nav-link " data-rechargetype="score" data-toggle="tab" href="#tab-1"> 充值积分</a></li>
+              <li class="nav-item <?php if ($type == 'account_money') { ?>active show<?php } ?>"><a aria-expanded="false" class="nav-link " data-rechargetype="account_money" data-toggle="tab" href="#tab-2"> 充值余额</a></li>
+            </ul>
+            <div class="tab-content col-sm-12 border-top m-t-10">
+              <div class="tab-pane <?php if ($type == 'score') { ?>active<?php } ?>" id="tab-1">
+                <div class="form-group row"></div>
+                <div class="form-group row">
+                  <label class="col-sm-3 control-label">当前积分</label>
+                  <div class="col-sm-9">
+                    <div class="form-control-static">{$profile['score']}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane <?php if ($type == 'account_money') { ?>active<?php } ?>" id="tab-2">
+                <div class="form-group row"></div>
+                <div class="form-group row">
+                  <label class="col-sm-3 control-label">当前余额</label>
+                  <div class="col-sm-9">
+                    <div class="form-control-static">{$profile['account_money']}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-3 control-label">变化</label>
+                <div class="col-sm-9">
+                  <div class="form-group m-checkbox-inline custom-radio-ml m-l-5 mb-0">
+                    <div class="radio radio-primary">
+                      <input checked id="radioinline" name='changetype' title=" " type='radio' value='0'/> <label class="mb-0" for="radioinline">增加</label>
+                    </div>
+                    <div class="radio radio-primary">
+                      <input id="radioinline1" name='changetype' title=" " type='radio' value='1'/> <label class="mb-0" for="radioinline1">减少</label>
+                    </div>
+                    <div class="radio radio-primary">
+                      <input id="radioinline2" name='changetype' type='radio' value='2'/> <label class="mb-0" for="radioinline2">最终<span class='name'><?php if ($type == 'score') { ?>积分<?php } else { ?>余额<?php } ?></span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-3 control-label mustl">充值金额</label>
+                <div class="col-sm-9">
+                  <input class="form-control" data-rule-min='0.01' data-rule-number='true' data-rule-required='true' name="num" type="text" value=""/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control richtext" cols="70" name="remark"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary btn-submit" id="recharge" type="submit">
+        确认充值<?php if ($type == 'score') { ?>积分<?php } else { ?>余额<?php } ?></button>
+      <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+    </div>
+  </div>
 </div>
-
-
-
 <script language='javascript'>
-    $(function(){
-        $('[data-toggle="tab"]').click(function(){
-            var type =$(this).data('rechargetype');
+    $(function () {
+        $('[data-toggle="tab"]').click(function () {
+            var type = $(this).data('rechargetype');
             console.log(type);
-            if(type=='score') {
+            if (type == 'score') {
                 $('.name').html('积分');
                 $(".btn-submit").text('确认充值积分');
-            }else{
+            } else {
                 $('.name').html('余额');
                 $(".btn-submit").text('确认充值余额');
             }
-            $("#leixing").val( type) ;
+            $("#leixing").val(type);
         });
 
 
-        $("#recharge").click(function(){
+        $("#recharge").click(function () {
             var myurl = $(this).attr('data-href');
 
             var s_data = $('#ajaxModal form').serialize();
             $.ajax({
 
-                url:myurl,
-                type:'post',
-                dataType:'json',
-                data:s_data,
-                success:function(info){
-                    if(info.status == 0)
-                    {
-                        layer.msg(info.result.message,{icon: 1,time: 2000});
-                    }else if(info.status == 1){
+                url: myurl,
+                type: 'post',
+                dataType: 'json',
+                data: s_data,
+                success: function (info) {
+                    if (info.status == 0) {
+                        layer.msg(info.result.message, {icon: 1, time: 2000});
+                    } else if (info.status == 1) {
                         var go_url = location.href;
-                        if( info.result.hasOwnProperty("url") )
-                        {
+                        if (info.result.hasOwnProperty("url")) {
                             go_url = info.result.url;
                         }
 
-                        layer.msg('操作成功',{time: 1000,
-                            end:function(){
+                        layer.msg('操作成功', {
+                            time: 1000,
+                            end: function () {
                                 location.href = info.result.url;
                             }
                         });
@@ -145,7 +134,6 @@
         })
 
     })
-
 
 
     // $('.btn-submit').click(function() {

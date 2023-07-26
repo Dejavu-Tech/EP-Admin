@@ -4,324 +4,273 @@
   <meta charset="utf-8">
   <?php $shoname_name = D('Home/Front')->get_config_by_name('shoname'); ?>
   <title><?php echo $shoname_name; ?></title>
-  <link rel="shortcut icon" href="" />
-
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <link rel="stylesheet" href="/assets/layuiadmin/layui/css/layui.css" media="all">
-  <link rel="stylesheet" href="/assets/layuiadmin/style/admin.css" media="all">
-  <link rel="stylesheet" type="text/css" href="/assets/css/ep/eaterplanet.css?v=4.0.0">
+  <link href="" rel="shortcut icon"/>
+  <meta content="webkit" name="renderer">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <link href="/assets/layuiadmin/layui/css/layui.css" media="all" rel="stylesheet">
+  <link href="/assets/layuiadmin/style/admin.css" media="all" rel="stylesheet">
+  <link href="/assets/css/ep/eaterplanet.css?v=4.0.0" rel="stylesheet" type="text/css">
   <style>
-	.wb-nav .eaterplaneticon{
-		 position: absolute;
-		 left: 20px;
-		top: 50%;
-		margin-top: -10px;
-	}
+      .wb-nav .eaterplaneticon {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          margin-top: -10px;
+      }
   </style>
 </head>
 <body class="layui-layout-body">
-
 <div id="LAY_app">
-    <div class="layui-layout layui-layout-admin">
-        <div class="layui-header">
-            <!-- 头部区域 -->
-            <ul class="layui-nav layui-layout-left">
-                <li class="layui-nav-item layadmin-flexible" lay-unselect>
-                    <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
-                        <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
-                    </a>
-                </li>
-                <li class="layui-nav-item" lay-unselect>
-                    <a href="javascript:;" layadmin-event="refresh" title="刷新">
-                        <i class="layui-icon layui-icon-refresh-3"></i>
-                    </a>
-                </li>
-            </ul>
-            <?php
-			//$version = D('Home/Front')->get_config_by_name('site_version');
-
-            $version_info = M('eaterplanet_ecommerce_config')->where( array('name' => 'site_version') )->find();
-
-            $version = $version_info['value'];
-            ?>
-
-            <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
-
-                <li id="neworder" style="display:none;" class="layui-nav-item layui-hide-xs" lay-unselect >
-                    <a lay-href="{:U('order/index')}" >
-                        <span  style="margin: -4px -15px 0;"></span>
-                        新订单<span id="notice">{$order_count}</span>条
-                    </a>
-                </li>
-                <li id="orderdistribution" style="display:none;" class="layui-nav-item layui-hide-xs" lay-unselect>
-                    <a href="javascript:void(0)">
-                        <span  style="margin: -4px -15px 0;"></span>
-                        发配送员消息<span id="distributionnotice" style="color:red;"></span>条
-                    </a>
-                </li>
-
-                <li class="layui-nav-item layui-hide-xs" lay-unselect >
-                    <a href="{:U('index/index', array('is_new' => 1) )}" >
-                        <span class="layui-badge-dot" style="margin: -4px -15px 0;"></span>
-                        切换新版后台
-                    </a>
-                </li>
-                <?php if (!defined('ROLE') || ROLE != 'agenter' ) {?>
-                <?php if($is_can_update == 1){ ?>
-
-                <?php } ?>
-                <?php } ?>
-
-                <li class="layui-nav-item layui-hide-xs" lay-unselect style="display:none;">
-                    <a href="javascript:;" layadmin-event="theme">
-                        <i class="layui-icon layui-icon-theme"></i>
-                    </a>
-                </li>
-                <?php if (!defined('ROLE') || ROLE != 'agenter' ) {?>
-                <li class="layui-nav-item layui-hide-xs" lay-unselect >
-                    <font  class="txt-primary">
-                        当前社区团购版本<?php echo $version; ?>
-                    </font>
-                </li>
-                </li>
-                <?php } ?>
-
-                <li class="layui-nav-item" lay-unselect>
-                    <a href="javascript:;">
-                        <cite><?php
-					 if (defined('ROLE') && ROLE == 'agenter' )
-					{
-						$agent_auth = session('agent_auth');
-						echo $agent_auth['shopname'];
-					}else{
-						echo D('Home/Front')->get_config_by_name('shoname');
-                            }
-                            ?></cite>
-                    </a>
-                    <dl class="layui-nav-child" >
-                        <dd ><a href="{:U('Public/logout')}">退出</a></dd>
-                    </dl>
-                </li>
-
-                <li class="layui-nav-item layui-hide-xs" lay-unselect style="display:none;">
-                    <a href="javascript:;" layadmin-event="about"><i class="layui-icon layui-icon-more-vertical"></i></a>
-                </li>
-            </ul>
-        </div>
-
-
-        <?php $sysmenus = D('Seller/menu')->getMenu(true);
-
-        ?>
-        <!-- 侧边菜单 -->
-        <div class="layui-side layui-side-menu">
-            <div class="layui-side-scroll">
-                <div class="layui-logo" lay-href="{:U('index/analys')}">
-                    <?php $shoplogo = D('Home/Front')->get_config_by_name('shoplogo'); ?>
-                    <?php if( empty($shoplogo) ){ ?>
-                    <img class="layui-circle" src="/assets/ep/images/default-pic.jpg" height="46px" width="46px">
-                    <?php }else{ ?>
-                    <img class="layui-circle" src="<?php echo tomedia($shoplogo);?>" height="46px" width="46px">
-                    <?php } ?>
-                </div>
-                <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
-                    <?php $i =0;
-				foreach($sysmenus['menu'] as $key => $menu){
-                    ?>
-                    <li data-name="<?php echo $key; ?>" class="wb-nav layui-nav-item <?php if($i ==0){ ?>layui-nav-itemed<?php } ?>">
-                        <a href="javascript:;" <?php if( !empty($menu['route']) ){ ?>lay-href="{:U($menu['route'])}"<?php } ?> d-r="{$menu['route']}" lay-tips="{$menu['text']}" lay-direction="2">
-                        <i class=" eaterplaneticon eaterplaneticon-{$menu['icon']}"></i>
-                        <cite style="font-size:15px" >{$menu['text']}</cite>
-                        </a>
-
-                        <?php if(!empty($menu['items'])){ ?>
-
-
-                        <?php foreach($menu['items'] as $sub_menu){ ?>
-                        <dl class="layui-nav-child">
-                            <dd data-name="{$sub_menu['title']}" >
-                                <a href="javascript:;" <?php if( !empty($sub_menu['route']) ){ ?>lay-href="{:U($sub_menu['route'])}"<?php } ?>><cite style="font-weight:bold;">{$sub_menu['title']}</cite></a>
-                                <?php if( !empty($sub_menu['items']) ){ ?>
-                                <dl class="layui-nav-child">
-                                    <?php foreach($sub_menu['items'] as $third_sub_menu){ ?>
-                                    <dd data-name="list"><a lay-href="{:U($third_sub_menu['route'])}"><cite style="font-size:13px" >{$third_sub_menu['title']}</cite></a></dd>
-                                    <?php } ?>
-                                </dl>
-                                <?php } ?>
-                            </dd>
-                        </dl>
-                        <?php } ?>
-                        <?php } ?>
-                    </li>
-                    <?php $i++; } ?>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 页面标签 -->
-        <div class="layadmin-pagetabs" id="LAY_app_tabs">
-            <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
-            <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
-            <div class="layui-icon layadmin-tabs-control layui-icon-down">
-                <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
-                    <li class="layui-nav-item" lay-unselect>
-                        <a href="javascript:;"></a>
-                        <dl class="layui-nav-child layui-anim-fadein">
-                            <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
-                            <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
-                            <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-            <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
-                <ul class="layui-tab-title" id="LAY_app_tabsheader">
-                    <li lay-id="<?php echo U('index/index'); ?>" lay-attr="<?php echo U('index/index'); ?>" class="layui-this"><i class="layui-icon layui-icon-home"></i></li>
-                </ul>
-            </div>
-        </div>
-
-
-        <!-- 主体内容 -->
-        <div class="layui-body" id="LAY_app_body">
-            <div class="layadmin-tabsbody-item layui-show">
-                <?php if( empty($perm_url) || $perm_url == '/'){ ?>
-                <iframe src="<?php echo U('index/analys', array('ok' => 1)); ?>" frameborder="0" class="layadmin-iframe"></iframe>
-                <?php }else{ ?>
-                <iframe src="<?php echo U( $perm_url, array('ok' => 1)); ?>" frameborder="0" class="layadmin-iframe"></iframe>
-                <?php } ?>
-            </div>
-        </div>
-
-        <!-- 辅助元素，一般用于移动设备下遮罩 -->
-        <div class="layadmin-body-shade" layadmin-event="shade"></div>
+  <div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+      <!-- 头部区域 -->
+      <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item layadmin-flexible" lay-unselect>
+          <a href="javascript:" layadmin-event="flexible" title="侧边伸缩"> <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i> </a>
+        </li>
+        <li class="layui-nav-item" lay-unselect>
+          <a href="javascript:" layadmin-event="refresh" title="刷新"> <i class="layui-icon layui-icon-refresh-3"></i> </a>
+        </li>
+      </ul>
+      <?php
+        //$version = D('Home/Front')->get_config_by_name('site_version');
+      $version_info = M('eaterplanet_ecommerce_config')->where(array('name' => 'site_version'))->find();
+      $version = $version_info['value'];
+      ?>
+      <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+        <li class="layui-nav-item layui-hide-xs" id="neworder" lay-unselect style="display:none;">
+          <a lay-href="{:U('order/index')}"> <span style="margin: -4px -15px 0;"></span> 新订单<span id="notice">{$order_count}</span>条 </a>
+        </li>
+        <li class="layui-nav-item layui-hide-xs" id="orderdistribution" lay-unselect style="display:none;">
+          <a href="javascript:void(0)"> <span style="margin: -4px -15px 0;"></span> 发配送员消息<span id="distributionnotice" style="color:red;"></span>条 </a>
+        </li>
+        <li class="layui-nav-item layui-hide-xs" lay-unselect>
+          <a href="{:U('index/index', array('is_new' => 1) )}"> <span class="layui-badge-dot" style="margin: -4px -15px 0;"></span> 切换新版后台 </a>
+        </li>
+        <?php if (!defined('ROLE') || ROLE != 'agenter') { ?><?php if ($is_can_update == 1) { ?><?php } ?><?php } ?>
+        <li class="layui-nav-item layui-hide-xs" lay-unselect style="display:none;">
+          <a href="javascript:" layadmin-event="theme"> <i class="layui-icon layui-icon-theme"></i> </a>
+        </li>
+        <?php if (!defined('ROLE') || ROLE != 'agenter') { ?>
+        <li class="layui-nav-item layui-hide-xs" lay-unselect>
+          <font class="txt-primary"> 当前社区团购版本<?php echo $version; ?>
+          </font>
+        </li>
+        </li>
+        <?php } ?>
+        <li class="layui-nav-item" lay-unselect>
+          <a href="javascript:"> <cite><?php if (defined('ROLE') && ROLE == 'agenter') {
+                      $agent_auth = session('agent_auth');
+                      echo $agent_auth['shopname'];
+                  } else {
+                      echo D('Home/Front')->get_config_by_name('shoname');
+            } ?></cite> </a>
+          <dl class="layui-nav-child">
+            <dd><a href="{:U('Public/logout')}">退出</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item layui-hide-xs" lay-unselect style="display:none;">
+          <a href="javascript:" layadmin-event="about"><i class="layui-icon layui-icon-more-vertical"></i></a>
+        </li>
+      </ul>
     </div>
+    <?php $sysmenus = D('Seller/menu')->getMenu(true);
+    ?>
+    <!-- 侧边菜单 -->
+    <div class="layui-side layui-side-menu">
+      <div class="layui-side-scroll">
+        <div class="layui-logo" lay-href="{:U('index/analys')}">
+          <?php $shoplogo = D('Home/Front')->get_config_by_name('shoplogo'); ?>
+          <?php if (empty($shoplogo)) { ?>
+          <img class="layui-circle" height="46px" src="/assets/ep/images/default-pic.jpg" width="46px">
+          <?php } else { ?>
+          <img class="layui-circle" height="46px" src="<?php echo tomedia($shoplogo); ?>" width="46px">
+          <?php } ?>
+        </div>
+        <ul class="layui-nav layui-nav-tree" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu" lay-shrink="all">
+          <?php $i = 0;
+            foreach ($sysmenus['menu'] as $key => $menu) { ?>
+          <li class="wb-nav layui-nav-item <?php if ($i == 0) { ?>layui-nav-itemed<?php } ?>" data-name="<?php echo $key; ?>">
+            <a href="javascript:" <?php if (!empty($menu['route'])){ ?>lay-href="{:U($menu['route'])}"<?php } ?>
+            d-r="{$menu['route']}" lay-tips="{$menu['text']}" lay-direction="2"> <i class=" eaterplaneticon eaterplaneticon-{$menu['icon']}"></i> <cite style="font-size:15px">{$menu['text']}</cite> </a>
+            <?php if (!empty($menu['items'])) { ?><?php foreach ($menu['items'] as $sub_menu) { ?>
+            <dl class="layui-nav-child">
+              <dd data-name="{$sub_menu['title']}">
+                <a href="javascript:" <?php if (!empty($sub_menu['route'])){ ?>lay-href="{:U($sub_menu['route'])}"<?php } ?>><cite style="font-weight:bold;">{$sub_menu['title']}</cite></a>
+                <?php if (!empty($sub_menu['items'])) { ?>
+                <dl class="layui-nav-child">
+                  <?php foreach ($sub_menu['items'] as $third_sub_menu) { ?>
+                  <dd data-name="list"><a lay-href="{:U($third_sub_menu['route'])}"><cite style="font-size:13px">{$third_sub_menu['title']}</cite></a></dd>
+                  <?php } ?>
+                </dl>
+                <?php } ?>
+              </dd>
+            </dl>
+            <?php } ?><?php } ?>
+          </li>
+          <?php $i++;
+            } ?>
+        </ul>
+      </div>
+    </div>
+    <!-- 页面标签 -->
+    <div class="layadmin-pagetabs" id="LAY_app_tabs">
+      <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+      <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+      <div class="layui-icon layadmin-tabs-control layui-icon-down">
+        <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+          <li class="layui-nav-item" lay-unselect>
+            <a href="javascript:"></a>
+            <dl class="layui-nav-child layui-anim-fadein">
+              <dd layadmin-event="closeThisTabs"><a href="javascript:">关闭当前标签页</a></dd>
+              <dd layadmin-event="closeOtherTabs"><a href="javascript:">关闭其它标签页</a></dd>
+              <dd layadmin-event="closeAllTabs"><a href="javascript:">关闭全部标签页</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <div class="layui-tab" lay-allowClose="true" lay-filter="layadmin-layout-tabs" lay-unauto>
+        <ul class="layui-tab-title" id="LAY_app_tabsheader">
+          <li class="layui-this" lay-attr="<?php echo U('index/index'); ?>" lay-id="<?php echo U('index/index'); ?>"><i class="layui-icon layui-icon-home"></i></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="layui-body" id="LAY_app_body">
+      <div class="layadmin-tabsbody-item layui-show">
+        <?php if (empty($perm_url) || $perm_url == '/') { ?>
+        <iframe class="layadmin-iframe" frameborder="0" src="<?php echo U('index/analys', array('ok' => 1)); ?>"></iframe>
+        <?php } else { ?>
+        <iframe class="layadmin-iframe" frameborder="0" src="<?php echo U($perm_url, array('ok' => 1)); ?>"></iframe>
+        <?php } ?>
+      </div>
+    </div>
+    <!-- 辅助元素，一般用于移动设备下遮罩 -->
+    <div class="layadmin-body-shade" layadmin-event="shade"></div>
+  </div>
 </div>
-
 <script src="/assets/layuiadmin/layui/layui.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <script>
-	layui.config({
-	base: '/assets/layuiadmin/' //静态资源所在路径
-	}).extend({
-	index: 'lib/index' //主入口模块
-	}).use('index');
-
-
+    layui.config({
+        base: '/assets/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use('index');
 </script>
-<audio id="musicClick" src="/assets/ep/mp3/click.mp3" preload="auto"></audio>
+<audio id="musicClick" preload="auto" src="/assets/ep/mp3/click.mp3"></audio>
 <script>
-//由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
-var layer = layui.layer;
-var $;
+    //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+    var layer = layui.layer;
+    var $;
 
-var cur_open_div;
-var form;
+    var cur_open_div;
+    var form;
 
-layui.use(['jquery', 'layer','form'], function(){
-  $ = layui.$;
+    layui.use(['jquery', 'layer', 'form'], function () {
+        $ = layui.$;
 
-    setInterval( function() {
-      order_distribution();
-    },3000);
-    function order_distribution() {
-      $.ajax({
-        url:"{:U('index/order_distribution')}",
-        type:'get',
-        data:{},
-        dataType:'json',
-        success:function(ret){
-          if(ret.no_send > 0)
-          {
-            $('#orderdistribution').show();
-            $("#distributionnotice").html(ret.no_send);
-          }else{
-            $("#orderdistribution").hide();
-            $("#distributionnotice").html(0);
-          }
+        setInterval(function () {
+            order_distribution();
+        }, 3000);
+
+        function order_distribution() {
+            $.ajax({
+                url: "{:U('index/order_distribution')}",
+                type: 'get',
+                data: {},
+                dataType: 'json',
+                success: function (ret) {
+                    if (ret.no_send > 0) {
+                        $('#orderdistribution').show();
+                        $("#distributionnotice").html(ret.no_send);
+                    } else {
+                        $("#orderdistribution").hide();
+                        $("#distributionnotice").html(0);
+                    }
+                }
+            })
         }
-      })
-    }
 
-	setInterval( function() {
-		$.getJSON("<?php echo 'index.php?s=/Cron/index'; ?>");
-	},10000);
-	var i = 0;
-	var y = 0
-	setInterval(notice,10000);
-	function notice() {
-		$.ajax({
-			 url:"{:U('index/order_count')}",
-			 type:'get',
-			 data:{},
-			 dataType:'json',
-			 success:function(ret){
+        setInterval(function () {
+            $.getJSON("<?php echo 'index.php?s=/Cron/index'; ?>");
+        }, 10000);
+        var i = 0;
+        var y = 0
+        setInterval(notice, 10000);
 
-			  if(ret.resultCode == 200 && ret.data > 0 && ret.voice_notice == 1)
-			  {
-				  if(i<3){
-					$('#neworder').show();
-					$("#notice").html(ret.data);
-					$("#musicClick")[0].play();
-					i++;
-					y = ret.data ;
-				  }else{
-					$('#neworder').show();
-					$("#notice").html(ret.data);
+        function notice() {
+            $.ajax({
+                url: "{:U('index/order_count')}",
+                type: 'get',
+                data: {},
+                dataType: 'json',
+                success: function (ret) {
 
-					if( y < ret.data ){
-					    i = 0;
-					}
+                    if (ret.resultCode == 200 && ret.data > 0 && ret.voice_notice == 1) {
+                        if (i < 3) {
+                            $('#neworder').show();
+                            $("#notice").html(ret.data);
+                            $("#musicClick")[0].play();
+                            i++;
+                            y = ret.data;
+                        } else {
+                            $('#neworder').show();
+                            $("#notice").html(ret.data);
 
-				  }
-                  var url = "";
-                  if(ret.order_type == 'pintuan'){
-                    url = "<?php echo U('group/orderlist'); ?>";
-                    $('#neworder').find('a').attr('lay-href',url);
-                  }else if(ret.order_type == 'integral'){
-                    url = "<?php echo U('points/order'); ?>";
-                    $('#neworder').find('a').attr('lay-href',url);
-                  }
+                            if (y < ret.data) {
+                                i = 0;
+                            }
 
-			  }else{
-				$("#neworder").hide();
-				$("#notice").html(0);
-				i = 0;
+                        }
+                        var url = "";
+                        if (ret.order_type == 'pintuan') {
+                            url = "<?php echo U('group/orderlist'); ?>";
+                            $('#neworder').find('a').attr('lay-href', url);
+                        } else if (ret.order_type == 'integral') {
+                            url = "<?php echo U('points/order'); ?>";
+                            $('#neworder').find('a').attr('lay-href', url);
+                        }
 
-			  }
-			 }
-		})
-	}
+                    } else {
+                        $("#neworder").hide();
+                        $("#notice").html(0);
+                        i = 0;
 
-	<?php if( !isset($is_show_notice001) ){ ?>
-		layer.msg('更新涉及团长提成方式设置，请到“团长”——”团长设置“，查看并设置是否启用“团长等级”提成比例',{time: 10000,
-		});
-	<?php } ?>
+                    }
+                }
+            })
+        }
 
-	<?php if(is_seller_login() == 1){ ?>
+        <?php if (!isset($is_show_notice001)) { ?>
+            layer.msg('更新涉及团长提成方式设置，请到“团长”——”团长设置“，查看并设置是否启用“团长等级”提成比例', {
+                time: 10000,
+            });
+            <?php }?>
 
-		setInterval( function() {
-			//check_eaterplanet_ecommerce_upgrade();
-		},10000);
-	function check_eaterplanet_ecommerce_upgrade() {
-		$.post('{:U("system/upgrade_check")}', function (ret) {
-			if (ret && ret.status == '1') {
+    <?php if (is_seller_login() == 1) { ?>
 
-				var result = ret.result;
-				if (result.filecount > 0 || result.database || result.upgrades) {
-					$('#new_msg').show();
-					$('#new_msg_tip').html('点击升级新版本：'+ result.version);
-				}
-			}
-		}, 'json');
+            setInterval(function () {
+                //check_eaterplanet_ecommerce_upgrade();
+            }, 10000);
 
-	}
-	<?php } ?>
-})
+            function check_eaterplanet_ecommerce_upgrade() {
+                $.post('{:U("system/upgrade_check")}', function (ret) {
+                    if (ret && ret.status == '1') {
+
+                        var result = ret.result;
+                        if (result.filecount > 0 || result.database || result.upgrades) {
+                            $('#new_msg').show();
+                            $('#new_msg_tip').html('点击升级新版本：' + result.version);
+                        }
+                    }
+                }, 'json');
+
+            }
+
+            <?php }?>
+    })
 </script>
-
-
 </body>
 </html>

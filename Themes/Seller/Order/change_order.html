@@ -1,290 +1,299 @@
 <div class="modal-dialog modal-lg modal-dialog-centered btn-showcase">
-	<div class="modal-content" style="width:1000px;">
-		<form class="form-horizontal form-validate" id="form1" action="{:U('order/change_order')}" method="post" enctype="multipart/form-data">
-			<input type='hidden' name='id' value="<?php echo $item['order_id']?>" />
-			<div class="modal-header">
-				<h5 class="modal-title">订单改价</h5>
-				<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-			</div>
-			<div class="modal-body">
-				<div>
-					<div class="goods_refund_form">
-						<table class="display supplyquery table-xs" style="width:100%;">
-							<tr>
-								<th colspan="2">商品</th>
-								<th>单价</th>
-								<th>数量</th>
-								<th>价格</th>
-								<th>改价最多可减</th>
-								<th>涨价或减价</th>
-							</tr>
-							<?php $order_goods_total = 0;?>
-							<?php $member_youhui = 0; ?>
-							<?php foreach($order_goods as $goods){?>
-							<tr>
-								<?php $member_youhui += round(($goods['oldprice'] - $goods['price'])*$goods['quantity'],2); ?>
-								<input type="hidden" name="order_goods_id[]" value="<?php echo $goods['order_goods_id']?>"/>
-								<td>
-									<img src="<?php echo $goods['goods_img_url'];?>" style='width:40px;height:40px;border-radius: 5px;' >
-								</td>
-								<td><?php echo $goods['name'];?></td>
-								<td>
-									¥<?php echo $goods['oldprice'];?>
-								</td>
-								<td>
-									<?php echo $goods['quantity'];?>
-								</td>
-								<td>
-									¥<span id="goods_total_<?php echo $goods['order_goods_id']?>"><?php echo round($goods['old_total'],2);?></span>
-								</td>
-								<td>
-									¥<span id="goods_max_total_<?php echo $goods['order_goods_id']?>"><?php echo round($goods['total']-$goods['fullreduction_money']-$goods['voucher_credit']-$goods['score_for_money'],2);?></span>
-								</td>
-								<td>
-									<div class="input-group pill-input-group col-sm-12" style="float: left;">
-										<input style="width: 34px; height: 34px; border: 2px white; float: left;" type="button" value="-" onclick="reduction(this)" order_goods_id="<?php echo $goods['order_goods_id']?>"/>
-										<input type="text" name="change_price[]" class="layui-input change_price" id="change_price_<?php echo $goods['order_goods_id']?>" value="" maxlength="10" style="width: 50px;float: left;" order_goods_id="<?php echo $goods['order_goods_id']?>" onchange="validationNumber(this, 2)"/>
-										<input style="width: 34px; height: 34px; border: 2px white;float: left;" type="button" value="+" onclick="add(this)" order_goods_id="<?php echo $goods['order_goods_id']?>"/>
-									</div>
-
-								</td>
-							</tr>
-							<?php
-								$order_goods_total = round($order_goods_total + $goods['old_total'],2);
-							?>
-							<?php } ?>
-							<tr>
-								<td colspan="7" style="text-align:left;">
-									<?php
-										$change_price = 0;
-										if($item['is_change_price'] == 1){
-											$change_price = round($item['total'] - $item['old_price'],2);
-										}
-										$youhui_total = round($item['voucher_credit']+$item['fullreduction_money']+$item['score_for_money']+$member_youhui,2);
-										$free_tongji = round($order_goods_total + $item['shipping_fare']-$item['voucher_credit']-$item['fullreduction_money'] - $item['score_for_money'] - $member_youhui + $change_price,2);
-									?>
-									<input type="hidden" id="order_total" name="order_total" value="<?php echo $order_goods_total;?>"/>
-									<input type="hidden" id="youhui_total" name="youhui_total" value="<?php echo $youhui_total;?>"/>
-									<input type="hidden" id="shipping_fare" name="shipping_fare" value="<?php echo $item['shipping_fare'];?>"/>
-									<input type="hidden" id="free_tongji" name="free_tongji" value="<?php echo $free_tongji;?>"/>
-									<input type="hidden" id="member_youhui" name="member_youhui" value="<?php echo -$member_youhui;?>"/>
-									<input type="hidden" id="order_change_price" name="order_change_price" value="<?php echo $change_price;?>"/>
-									<p>只有在订单未付款时才支持改价，商品改价后价格不能小于 0 元，订单修改的价格不包含优惠信息，运费价格是 0 的时候商品免运费</p>
-									<p>( 买家实付=原价+运费+涨价或减价-优惠 )</p>
-									<p>买家实付：<?php echo round($order_goods_total,2);?>+<?php echo round($item['shipping_fare'],2);?><span id="change_price"><?php if($change_price >= 0){echo '+'.$change_price;}else{echo '-'.(0-$change_price);}?></span>
-										<?php if($youhui_total >= 0){echo '-'.$youhui_total;}else{echo '+'.(0-$youhui_total);}?>=<span id="free_total"><?php echo $free_tongji;?></span></p>
-								</td>
-							</tr>
-						</table>
-
-					</div>
-					<div style="clear:both;"></div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<input type="hidden" id="real_refund_quantity" name="real_refund_quantity" value="0" />
-				<button class="btn btn-primary btn-order" type="submit" id="ck_opgoodsrefund">确认改价</button>
-				<button data-dismiss="modal" class="btn btn-secondary" type="button">取消</button>
-			</div>
-		</form>
-	</div>
+  <div class="modal-content" style="width:1000px;">
+    <form action="{:U('order/change_order')}" class="form-horizontal form-validate" enctype="multipart/form-data" id="form1" method="post">
+      <input name='id' type='hidden' value="<?php echo $item['order_id'] ?>"/>
+      <div class="modal-header">
+        <h5 class="modal-title">订单改价</h5>
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="goods_refund_form">
+            <table class="display supplyquery table-xs" style="width:100%;">
+              <tr>
+                <th colspan="2">商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>价格</th>
+                <th>改价最多可减</th>
+                <th>涨价或减价</th>
+              </tr>
+                <?php $order_goods_total = 0; ?>
+                <?php $member_youhui = 0; ?>
+                <?php foreach ($order_goods as $goods) { ?>
+                  <tr>
+                      <?php $member_youhui += round(($goods['oldprice'] - $goods['price']) * $goods['quantity'], 2); ?>
+                    <input name="order_goods_id[]" type="hidden" value="<?php echo $goods['order_goods_id'] ?>"/>
+                    <td>
+                      <img src="<?php echo $goods['goods_img_url']; ?>" style='width:40px;height:40px;border-radius: 5px;'>
+                    </td>
+                    <td><?php echo $goods['name']; ?></td>
+                    <td>
+                      ¥<?php echo $goods['oldprice']; ?>
+                    </td>
+                    <td>
+                        <?php echo $goods['quantity']; ?>
+                    </td>
+                    <td>
+                      ¥<span id="goods_total_<?php echo $goods['order_goods_id'] ?>"><?php echo round($goods['old_total'], 2); ?></span>
+                    </td>
+                    <td>
+                      ¥<span id="goods_max_total_<?php echo $goods['order_goods_id'] ?>"><?php echo round($goods['total'] - $goods['fullreduction_money'] - $goods['voucher_credit'] - $goods['score_for_money'], 2); ?></span>
+                    </td>
+                    <td>
+                      <div class="input-group pill-input-group col-sm-12" style="float: left;">
+                        <input onclick="reduction(this)" order_goods_id="<?php echo $goods['order_goods_id'] ?>" style="width: 34px; height: 34px; border: 2px white; float: left;" type="button" value="-"/>
+                        <input class="layui-input change_price" id="change_price_<?php echo $goods['order_goods_id'] ?>" maxlength="10" name="change_price[]" onchange="validationNumber(this, 2)" order_goods_id="<?php echo $goods['order_goods_id'] ?>"
+                               style="width: 50px;float: left;" type="text"
+                               value=""/>
+                        <input onclick="add(this)" order_goods_id="<?php echo $goods['order_goods_id'] ?>" style="width: 34px; height: 34px; border: 2px white;float: left;" type="button" value="+"/>
+                      </div>
+                    </td>
+                  </tr>
+                    <?php
+                    $order_goods_total = round($order_goods_total + $goods['old_total'], 2);
+                    ?><?php } ?>
+              <tr>
+                <td colspan="7" style="text-align:left;">
+                    <?php
+                    $change_price = 0;
+                    if ($item['is_change_price'] == 1) {
+                        $change_price = round($item['total'] - $item['old_price'], 2);
+                    }
+                    $youhui_total = round($item['voucher_credit'] + $item['fullreduction_money'] + $item['score_for_money'] + $member_youhui, 2);
+                    $free_tongji = round($order_goods_total + $item['shipping_fare'] - $item['voucher_credit'] - $item['fullreduction_money'] - $item['score_for_money'] - $member_youhui + $change_price, 2);
+                    ?>
+                  <input id="order_total" name="order_total" type="hidden" value="<?php echo $order_goods_total; ?>"/> <input id="youhui_total" name="youhui_total" type="hidden" value="<?php echo $youhui_total; ?>"/>
+                  <input id="shipping_fare" name="shipping_fare" type="hidden" value="<?php echo $item['shipping_fare']; ?>"/> <input id="free_tongji" name="free_tongji" type="hidden" value="<?php echo $free_tongji; ?>"/>
+                  <input id="member_youhui" name="member_youhui" type="hidden" value="<?php echo -$member_youhui; ?>"/> <input id="order_change_price" name="order_change_price" type="hidden" value="<?php echo $change_price; ?>"/>
+                  <p>只有在订单未付款时才支持改价，商品改价后价格不能小于 0 元，订单修改的价格不包含优惠信息，运费价格是 0 的时候商品免运费</p>
+                  <p>( 买家实付=原价+运费+涨价或减价-优惠 )</p>
+                  <p>买家实付：<?php echo round($order_goods_total, 2); ?>
+                    +<?php echo round($item['shipping_fare'], 2); ?><span id="change_price"><?php if ($change_price >= 0) {
+                              echo '+' . $change_price;
+                          } else {
+                              echo '-' . (0 - $change_price);
+                          } ?></span>
+                      <?php if ($youhui_total >= 0) {
+                          echo '-' . $youhui_total;
+                      } else {
+                          echo '+' . (0 - $youhui_total);
+                      } ?>=<span id="free_total"><?php echo $free_tongji; ?></span></p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input id="real_refund_quantity" name="real_refund_quantity" type="hidden" value="0"/>
+        <button class="btn btn-primary btn-order" id="ck_opgoodsrefund" type="submit">确认改价</button>
+        <button class="btn btn-secondary" data-dismiss="modal" type="button">取消</button>
+      </div>
+    </form>
+  </div>
 </div>
-
 <script>
-function validationNumber(e, num) {
-	var regu = /^[\-0-9]+\.?[0-9]*$/;
-	var order_goods_id = $(e).attr("order_goods_id");
-	var goods_total = parseFloat($('#goods_max_total_'+order_goods_id).html());
-	if (e.value != "") {
-		if (!regu.test(e.value)) {
-			e.value = 0;
-			e.focus();
-		} else {
-			if (num == 0) {
-				if (e.value.indexOf('.') > -1) {
-					e.value = e.value.substring(0, e.value.length - e.value.split('.')[1].length + 2);
-					e.focus();
-				}
-			}
-			if (e.value.indexOf('.') > -1) {
-				if (e.value.split('.')[1].length > num) {
-					e.value = e.value.substring(0, e.value.length - e.value.split('.')[1].length + 2);
-					e.focus();
-				}
-			}
-			var price = operation(parseFloat(goods_total),parseFloat(e.value),2,'add');
-			if(price < 0.1){
-				layer.msg("改价后的商品实付价格不能低于0.1元",{icon: 1,time: 2000});
-				e.value = 0;
-				e.focus();
-			}
-		}
-	}
-	cal_total(order_goods_id);
-}
-function validationNumber_reduce(e, num) {
-	var regu = /^[\-0-9]+\.?[0-9]*$/;
-	var order_goods_id = $(e).attr("order_goods_id");
-	var goods_total = parseFloat($('#goods_max_total_'+order_goods_id).html());
-	if (e.val() != "") {
-		if (!regu.test(e.val())) {
-			e.val(0);
-			e.focus();
-		} else {
-			if (num == 0) {
-				if (e.val().indexOf('.') > -1) {
-					e.val(e.val().substring(0, e.val().length - e.val().split('.')[1].length + 2));
-					e.focus();
-				}
-			}
-			if (e.val().indexOf('.') > -1) {
-				if (e.val().split('.')[1].length > num) {
-					e.val(e.val().substring(0, e.val().length - e.val().split('.')[1].length + 2));
-					e.focus();
-				}
-			}
-			var price = operation(parseFloat(goods_total),parseFloat(e.val()),2,'add');
-			if(price < 0.1){
-				layer.msg("改价后的商品实付价格不能低于0.1元",{icon: 1,time: 2000});
-				e.val(0);
-				e.focus();
-			}
-		}
-	}
-	cal_total(order_goods_id);
-}
+    function validationNumber(e, num) {
+        var regu = /^[\-0-9]+\.?[0-9]*$/;
+        var order_goods_id = $(e).attr("order_goods_id");
+        var goods_total = parseFloat($('#goods_max_total_' + order_goods_id).html());
+        if (e.value != "") {
+            if (!regu.test(e.value)) {
+                e.value = 0;
+                e.focus();
+            } else {
+                if (num == 0) {
+                    if (e.value.indexOf('.') > -1) {
+                        e.value = e.value.substring(0, e.value.length - e.value.split('.')[1].length + 2);
+                        e.focus();
+                    }
+                }
+                if (e.value.indexOf('.') > -1) {
+                    if (e.value.split('.')[1].length > num) {
+                        e.value = e.value.substring(0, e.value.length - e.value.split('.')[1].length + 2);
+                        e.focus();
+                    }
+                }
+                var price = operation(parseFloat(goods_total), parseFloat(e.value), 2, 'add');
+                if (price < 0.1) {
+                    layer.msg("改价后的商品实付价格不能低于0.1元", {icon: 1, time: 2000});
+                    e.value = 0;
+                    e.focus();
+                }
+            }
+        }
+        cal_total(order_goods_id);
+    }
 
-function reduction(obj){
-	var change_price = $.trim($(obj).parent().find('.change_price').val());
-	var order_goods_id = $(obj).attr("order_goods_id");
-	if(change_price == ''){
-		$(obj).parent().find('.change_price').val(-1);
-	}else{
-		var price = parseFloat(change_price)-1;
-		$(obj).parent().find('.change_price').val(price.toFixed(2));
-	}
-	validationNumber_reduce($('#change_price_'+order_goods_id), 2);
-}
+    function validationNumber_reduce(e, num) {
+        var regu = /^[\-0-9]+\.?[0-9]*$/;
+        var order_goods_id = $(e).attr("order_goods_id");
+        var goods_total = parseFloat($('#goods_max_total_' + order_goods_id).html());
+        if (e.val() != "") {
+            if (!regu.test(e.val())) {
+                e.val(0);
+                e.focus();
+            } else {
+                if (num == 0) {
+                    if (e.val().indexOf('.') > -1) {
+                        e.val(e.val().substring(0, e.val().length - e.val().split('.')[1].length + 2));
+                        e.focus();
+                    }
+                }
+                if (e.val().indexOf('.') > -1) {
+                    if (e.val().split('.')[1].length > num) {
+                        e.val(e.val().substring(0, e.val().length - e.val().split('.')[1].length + 2));
+                        e.focus();
+                    }
+                }
+                var price = operation(parseFloat(goods_total), parseFloat(e.val()), 2, 'add');
+                if (price < 0.1) {
+                    layer.msg("改价后的商品实付价格不能低于0.1元", {icon: 1, time: 2000});
+                    e.val(0);
+                    e.focus();
+                }
+            }
+        }
+        cal_total(order_goods_id);
+    }
 
-function add(obj){
-	var change_price = $.trim($(obj).parent().find('.change_price').val());
-	var order_goods_id = $(obj).attr("order_goods_id");
-	if(change_price == ''){
-		$(obj).parent().find('.change_price').val(1);
-	}else{
-		var price = parseFloat(change_price)+1;
-		$(obj).parent().find('.change_price').val(price.toFixed(2));
-	}
-	cal_total(order_goods_id);
-}
-//计算商品合计
-function cal_total(order_goods_id){
-	var order_total = $('#order_total').val();
-	var change_price = 0;
-	$('.change_price').each(function(){
-		var price = $.trim($(this).val());
-		if(price != ''){
-			change_price = parseFloat(change_price) + parseFloat(price);
-		}
-	})
-	var order_change_price = $('#order_change_price').val();
-	var free_tongji = parseFloat($('#free_tongji').val());
-	var free_total = parseFloat(free_tongji) + parseFloat(change_price);
-	var goods_total_price = parseFloat(free_tongji) + parseFloat(change_price);
-	$('#goods_total_price').html(goods_total_price.toFixed(2));
-	if(free_total <= 0){
-		layer.msg("买家实付金额不能小于0",{icon: 1,time: 2000});
-		$('#change_price_'+order_goods_id).val(0);
-		cal_total(order_goods_id);
-		return false;
-	}else{
-		change_price = change_price + parseFloat(order_change_price);
-		change_price = change_price.toFixed(2);
-		if(change_price > 0){
-			$('#change_price').html('+ '+change_price);
-		}else{
-			$('#change_price').html('- '+(0-change_price));
-		}
-		$('#free_total').html(free_total.toFixed(2));
-	}
+    function reduction(obj) {
+        var change_price = $.trim($(obj).parent().find('.change_price').val());
+        var order_goods_id = $(obj).attr("order_goods_id");
+        if (change_price == '') {
+            $(obj).parent().find('.change_price').val(-1);
+        } else {
+            var price = parseFloat(change_price) - 1;
+            $(obj).parent().find('.change_price').val(price.toFixed(2));
+        }
+        validationNumber_reduce($('#change_price_' + order_goods_id), 2);
+    }
 
-}
-/*
-     * 判断obj是否为一个整数
-     */
-function isInteger(obj) {
-	return Math.floor(obj) === obj;
-}
-/*
-     * 将一个浮点数转成整数，返回整数和倍数。如 3.14 >> 314，倍数是 100
-     * @param floatNum {number} 小数
-     * @return {object}
-     *   {times:100, num: 314}
-     */
-function toInteger(floatNum) {
-	var ret = {times: 1, num: 0}
-	var isNegative = floatNum < 0
-	if (isInteger(floatNum)) {
-		ret.num = floatNum
-		return ret
-	}
-	var strfi  = floatNum + ''
-	var dotPos = strfi.indexOf('.')
-	var len    = strfi.substr(dotPos+1).length
-	var times  = Math.pow(10, len)
-	var intNum = parseInt(Math.abs(floatNum) * times + 0.5, 10)
-	ret.times  = times
-	if (isNegative) {
-		intNum = -intNum
-	}
-	ret.num = intNum
-	return ret
-}
-/*
-     * 核心方法，实现加减乘除运算，确保不丢失精度
-     * 思路：把小数放大为整数（乘），进行算术运算，再缩小为小数（除）
-     *
-     * @param a {number} 运算数1
-     * @param b {number} 运算数2
-     * @param digits {number} 精度，保留的小数点数，比如 2, 即保留为两位小数
-     * @param op {string} 运算类型，有加减乘除（add/subtract/multiply/divide）
-     *
-     */
-function operation(a, b, digits, op) {
-	var o1 = toInteger(a)
-	var o2 = toInteger(b)
-	var n1 = o1.num
-	var n2 = o2.num
-	var t1 = o1.times
-	var t2 = o2.times
-	var max = t1 > t2 ? t1 : t2
-	var result = null
-	switch (op) {
-		case 'add':
-			if (t1 === t2) { // 两个小数位数相同
-				result = n1 + n2
-			} else if (t1 > t2) { // o1 小数位 大于 o2
-				result = n1 + n2 * (t1 / t2)
-			} else { // o1 小数位 小于 o2
-				result = n1 * (t2 / t1) + n2
-			}
-			return result / max
-		case 'subtract':
-			if (t1 === t2) {
-				result = n1 - n2
-			} else if (t1 > t2) {
-				result = n1 - n2 * (t1 / t2)
-			} else {
-				result = n1 * (t2 / t1) - n2
-			}
-			return result / max
-		case 'multiply':
-			result = (n1 * n2) / (t1 * t2)
-			return result
-		case 'divide':
-			result = (n1 / n2) * (t2 / t1)
-			return result
-	}
-}
+    function add(obj) {
+        var change_price = $.trim($(obj).parent().find('.change_price').val());
+        var order_goods_id = $(obj).attr("order_goods_id");
+        if (change_price == '') {
+            $(obj).parent().find('.change_price').val(1);
+        } else {
+            var price = parseFloat(change_price) + 1;
+            $(obj).parent().find('.change_price').val(price.toFixed(2));
+        }
+        cal_total(order_goods_id);
+    }
 
+    //计算商品合计
+    function cal_total(order_goods_id) {
+        var order_total = $('#order_total').val();
+        var change_price = 0;
+        $('.change_price').each(function () {
+            var price = $.trim($(this).val());
+            if (price != '') {
+                change_price = parseFloat(change_price) + parseFloat(price);
+            }
+        })
+        var order_change_price = $('#order_change_price').val();
+        var free_tongji = parseFloat($('#free_tongji').val());
+        var free_total = parseFloat(free_tongji) + parseFloat(change_price);
+        var goods_total_price = parseFloat(free_tongji) + parseFloat(change_price);
+        $('#goods_total_price').html(goods_total_price.toFixed(2));
+        if (free_total <= 0) {
+            layer.msg("买家实付金额不能小于0", {icon: 1, time: 2000});
+            $('#change_price_' + order_goods_id).val(0);
+            cal_total(order_goods_id);
+            return false;
+        } else {
+            change_price = change_price + parseFloat(order_change_price);
+            change_price = change_price.toFixed(2);
+            if (change_price > 0) {
+                $('#change_price').html('+ ' + change_price);
+            } else {
+                $('#change_price').html('- ' + (0 - change_price));
+            }
+            $('#free_total').html(free_total.toFixed(2));
+        }
+
+    }
+
+    /*
+         * 判断obj是否为一个整数
+         */
+    function isInteger(obj) {
+        return Math.floor(obj) === obj;
+    }
+
+    /*
+         * 将一个浮点数转成整数，返回整数和倍数。如 3.14 >> 314，倍数是 100
+         * @param floatNum {number} 小数
+         * @return {object}
+         *   {times:100, num: 314}
+         */
+    function toInteger(floatNum) {
+        var ret = {times: 1, num: 0}
+        var isNegative = floatNum < 0
+        if (isInteger(floatNum)) {
+            ret.num = floatNum
+            return ret
+        }
+        var strfi = floatNum + ''
+        var dotPos = strfi.indexOf('.')
+        var len = strfi.substr(dotPos + 1).length
+        var times = Math.pow(10, len)
+        var intNum = parseInt(Math.abs(floatNum) * times + 0.5, 10)
+        ret.times = times
+        if (isNegative) {
+            intNum = -intNum
+        }
+        ret.num = intNum
+        return ret
+    }
+
+    /*
+         * 核心方法，实现加减乘除运算，确保不丢失精度
+         * 思路：把小数放大为整数（乘），进行算术运算，再缩小为小数（除）
+         *
+         * @param a {number} 运算数1
+         * @param b {number} 运算数2
+         * @param digits {number} 精度，保留的小数点数，比如 2, 即保留为两位小数
+         * @param op {string} 运算类型，有加减乘除（add/subtract/multiply/divide）
+         *
+         */
+    function operation(a, b, digits, op) {
+        var o1 = toInteger(a)
+        var o2 = toInteger(b)
+        var n1 = o1.num
+        var n2 = o2.num
+        var t1 = o1.times
+        var t2 = o2.times
+        var max = t1 > t2 ? t1 : t2
+        var result = null
+        switch (op) {
+            case 'add':
+                if (t1 === t2) { // 两个小数位数相同
+                    result = n1 + n2
+                } else if (t1 > t2) { // o1 小数位 大于 o2
+                    result = n1 + n2 * (t1 / t2)
+                } else { // o1 小数位 小于 o2
+                    result = n1 * (t2 / t1) + n2
+                }
+                return result / max
+            case 'subtract':
+                if (t1 === t2) {
+                    result = n1 - n2
+                } else if (t1 > t2) {
+                    result = n1 - n2 * (t1 / t2)
+                } else {
+                    result = n1 * (t2 / t1) - n2
+                }
+                return result / max
+            case 'multiply':
+                result = (n1 * n2) / (t1 * t2)
+                return result
+            case 'divide':
+                result = (n1 / n2) * (t2 / t1)
+                return result
+        }
+    }
 </script>
