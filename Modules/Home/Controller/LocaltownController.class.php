@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2019-2023 Dejavu Tech.
  * @license   https://e-p.io/license
  * ==========================================================================
- * 拼团模块
+ * 配送模块
  * @author    Albert.Z
  *
  */
@@ -123,9 +123,6 @@ class LocaltownController extends CommonController {
         }
 
     }
-    // ASC 根据圆心位置，从近到远的返回元素
-    // DESC 根据圆心位置，从远到近的返回元素
-    //var_dump($redis->rawCommand('georadius', 'citys', '114', '30', '100', 'km', 'ASC'));
 
 	/**
 		获取配送员信息

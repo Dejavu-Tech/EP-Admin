@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2019-2023 Dejavu Tech.
  * @license   https://e-p.io/license
  * ==========================================================================
- *拼团模块
+ *签到模块
  * @author    Albert.Z
  *
  */
