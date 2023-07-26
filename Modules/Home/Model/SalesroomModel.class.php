@@ -284,7 +284,7 @@ class SalesroomModel{
 				$saleshexiao_record_list[$k]['option_sku'] = D('Seller/Order')->get_order_option_sku($order_id, $order_goods_id);
 
 				$order_goods_saleshexiao_info = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_goods_id'=>$order_goods_id))->find();
-				$saleshexiao_record_list[$k]['hexiao_type'] =$order_goods_saleshexiao_info['hexiao_type'];				
+				$saleshexiao_record_list[$k]['hexiao_type'] =$order_goods_saleshexiao_info['hexiao_type'];
 			}
 		}
 		return $saleshexiao_record_list;
@@ -304,7 +304,7 @@ class SalesroomModel{
 		$order_goods_saleshexiao_list = array();
 		$order_result['is_exist'] = 1;
 		if(empty($order_info)){
-			
+
 			$order_goods_saleshexiao_info = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('hexiao_volume_code'=>$hexiao_volume_code))->find();
 			if(!empty($order_goods_saleshexiao_info)){
 				$state = 1;
@@ -327,7 +327,7 @@ class SalesroomModel{
 				$order_list2 = array_column($order_list, 'order_id');
 				$order_id = implode(",",$order_list2);
 				$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(' order_id in('.$order_id.') ')->order('is_hexiao_over asc,addtime asc')->select();
-				
+
 				if(empty($order_goods_saleshexiao_list)){
 					if(strlen($hexiao_volume_code) == 11){
 						$order_result['is_exist'] = 4;
@@ -343,7 +343,7 @@ class SalesroomModel{
 		}else{
 			//核销码
 			$state = 2;
-			$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id']))->select();	
+			$order_goods_saleshexiao_list = M('eaterplanet_ecommerce_order_goods_saleshexiao')->where(array('order_id'=>$order_info['order_id']))->select();
 		}
 		$hexiao_goods_list = array();
 		$hx_i = 0;
@@ -359,7 +359,7 @@ class SalesroomModel{
 					$order_goods_saleshexiao_list[$k]['goods_name'] = htmlspecialchars_decode(stripslashes($order_goods_info['goods_name']));
 					$order_goods_saleshexiao_list[$k]['goods_images'] = tomedia($order_goods_info['goods_images']);
 					$order_goods_saleshexiao_list[$k]['quantity'] = $order_goods_info['quantity'];
-					
+
 					$order_goods_saleshexiao_list[$k]['order_num_alias'] = $order_num_alias['order_num_alias'];
 
 					$order_goods_saleshexiao_list[$k]['option_sku'] = D('Seller/Order')->get_order_option_sku($v['order_id'], $v['order_goods_id']);
@@ -373,7 +373,7 @@ class SalesroomModel{
 					}else{
 						$order_goods_saleshexiao_list[$k]['is_hexiao_over'] = 1;
 					}
-					
+
 
 					//核销日期
 					$order_goods_saleshexiao_list[$k]['effect_begin_time'] = date('Y-m-d',$v['effect_begin_time']);
@@ -405,7 +405,7 @@ class SalesroomModel{
 				}
 			}
 		}
-		
+
 		//提取列数组；
 		foreach($hexiao_goods_list as $val){
 		$key_arrays[]=$val['is_hexiao_over'];
@@ -427,7 +427,7 @@ class SalesroomModel{
 			}else{
 				$order_result['is_exist'] = 2;//无权限操作核销商品
 			}
-			
+
 		}
 		return $order_result;
 	}
