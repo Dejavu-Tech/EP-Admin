@@ -1,20 +1,4 @@
 
-.ep-div-wrap{
-    position: relative;
-    display: inline-block;
-    background: #f7f8fa;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-right: 2%;
-    margin-bottom: 25px;
-}
-
-.ep-item-block {
-    padding: 15px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
 .ep-item-pic {
     width: 40px;
     height: 40px;
@@ -26,54 +10,12 @@
     max-height: 100%;
 }
 
-.ep-item-con {
-    overflow: hidden;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.ep-item-content-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-.ep-line-hiding {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-    white-space: normal;
-    word-break: break-all;
-}
-
-.ep-item-content-desc {
-    line-height: 20px;
-    font-size: 12px;
-    color: #999;
-}
-
  .layui-side-menu .layui-nav .layui-nav-item > a{
      padding-top: 4px;
      padding-bottom: 4px;
  }
 .layui-layout-admin .layui-side{width: 120px;}
 .layui-side-menu .layui-side-scroll {width: 120px;}
-.index-inner-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: -17px;
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
 .layui-layout-admin .layui-logo {
     position: fixed;
     left: 0;
@@ -99,23 +41,8 @@
     left: 20px;
     font-size: 16px;
 }
-.layadmin-pagetabs, .layui-layout-admin .layui-body, .layui-layout-admin .layui-footer, .layui-layout-admin .layui-layout-left {
+.layadmin-pagetabs, .layui-layout-admin .layui-body, .layui-layout-admin .layui-layout-left {
     left: 120px;
-}
-.new-iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-.sub-nav-show{
-    height:100%;
-}
-.sub-nav-show .new-iframe {
-    left: 126px;
 }
 .sub-nav {
     width: 115px;
@@ -128,31 +55,6 @@
     overflow-y: auto;
     display: none;
     box-shadow: 2px 0 2px rgba(0,0,0,.05);
-}
-.sub-nav-show .sub-nav {
-    display: block;
-}
-.nav-new {
-    display: none;
-}
-.sub-nav-show .sub-nav .nav-new.layui-this {
-    display: block;
-}
-.one-nav {
-    border-bottom: 1px solid #e3e2e5;
-    padding: 12px 0;
-}
-.one-nav:last-child {
-    border-bottom: 0;
-}
-.one-nav .dt {
-    font-weight: 700;
-}
-.one-nav a {
-    color: #595959;
-    line-height: 32px;
-    display: block;
-    cursor: pointer;
 }
 .dd p {
     margin: 0 -10px 5px;
@@ -172,20 +74,6 @@
 .layui-layout-admin .layui-body {
     top: 50px;
 }
-
-.wb-subnav .subnav-scene {
-    overflow: hidden;
-    height: 78px;
-    line-height: 78px;
-    padding-left: 20px;
-}
-.menu-header {
-    line-height: 50px;
-    height: 50px;
-    /* border-top: 1px solid #f4f4f4; */
-    cursor: pointer;
-    padding-left: 5px;
-}
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -194,59 +82,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.menu-icon {
-    width: 20px;
-    height: 50px;
-    float: left;
-    text-align: center;
-    font-size: 8px;
-    color: #666;
-    line-height: 50px;
-}
-.fa-caret-down:before {
-    content: "\f0d7";
-}
 
 :after, :before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.wb-subnav ul {
-    display: none;
-    overflow: hidden;
-}
-.wb-subnav ul li {
-    height: 50px;
-    line-height: 50px;
-    font-size: 12px;
-    cursor:pointer;
-}
-.wb-subnav ul li.active, .wb-subnav ul li:hover {
-    background: #edf6ff;
-}
-.wb-subnav ul a {
-    padding-left: 25px;
-    height: 100%;
-    width: 100%;
-}
-.wb-subnav ul li a {
-    color: #7c838a;
-}
-.wb-subnav ul li.active a {
-    color: #009688;
-}
-.layadmin-side-shrink .layui-side {
-    left: 0;
-    width: 60px;
-}
 
 .div-iframe{
     margin-left:180px;
-}
-
-.fa-caret-right:before {
-    content: "";
 }
 .layui-fluid{
  padding:1px;

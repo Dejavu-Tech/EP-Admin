@@ -1,23 +1,9 @@
 /* VARIABLES */
 /* Applies a stroke to the icons. Can use percentage for responsive */
-.climacon_component-stroke {
-  fill: #dcdada;
-  stroke-width: 1px;
-  stroke: #717171; }
-
-.climacon_component-fill {
-  fill: #71717140;
-  stroke-width: 0;
-  stroke: #ddd; }
 
 /* SVG GLOBAL */
-svg.climacon {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  shape-rendering: geometricPrecision; }
 
-g, path, circle, rect {
+g, path, circle {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   transform-origin: 50% 50%;
@@ -25,281 +11,33 @@ g, path, circle, rect {
   animation-direction: normal; }
 
 /* SUN */
-.climacon_componentWrap-sun {
-  animation-name: rotate; }
-
-.climacon_componentWrap_sunSpoke .climacon_component-stroke_sunSpoke {
-  animation-name: scale;
-  animation-direction: alternate;
-  animation-duration: 4.5s; }
-
-.climacon_componentWrap_sunSpoke .climacon_component-stroke_sunSpoke:nth-child(even) {
-  animation-delay: 4.5s; }
 
 /* MOON */
-.climacon_componentWrap-moon {
-  animation-name: partialRotate;
-  animation-duration: 18s;
-  animation-direction: alternate; }
 
 /* WIND */
-.climacon_componentWrap-wind {
-  animation-name: translateWind;
-  animation-duration: 6s;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out; }
 
 /* SNOWFLAKE */
-.climacon_componentWrap-snowflake {
-  animation-name: rotate;
-  animation-duration: 54s;
-  animation-direction: normal; }
 
 /* CLOUD SUN */
-.climacon_componentWrap-sun_cloud {
-  animation-name: behindCloudMove, rotate;
-  animation-iteration-count: 1, infinite;
-  animation-timing-function: ease-out, linear;
-  animation-delay: 0, 4.5s;
-  animation-duration: 4.5s, 18s; }
-
-.climacon_componentWrap-sun_cloud .climacon_componentWrap_sunSpoke .climacon_component-stroke_sunSpoke {
-  fill-opacity: 0;
-  animation-name: fillOpacity, scale;
-  animation-iteration-count: 1, infinite;
-  animation-delay: 4.5s, 0;
-  animation-fill-mode: both; }
-
-.climacon_componentWrap-sun_cloud .climacon_componentWrap_sunSpoke .climacon_component-stroke_sunSpoke:nth-child(even) {
-  animation-delay: 4.5s; }
 
 /* CLOUD MOON */
-.climacon_componentWrap-moon_cloud {
-  animation-name: behindCloudMove, partialRotate;
-  animation-iteration-count: 1, infinite;
-  animation-timing-function: ease-out, linear;
-  animation-delay: 0, 4.5s;
-  animation-duration: 4.5s, 18s; }
 
 /* DRIZZLE */
-.climacon_component-stroke_drizzle {
-  fill-opacity: 0;
-  animation-name: drizzleFall, fillOpacity2;
-  animation-timing-function: ease-in;
-  animation-duration: 1.5s; }
-
-.climacon_component-stroke_drizzle:nth-child(1) {
-  animation-delay: 0s; }
-
-.climacon_component-stroke_drizzle:nth-child(2) {
-  animation-delay: 0.9s; }
-
-.climacon_component-stroke_drizzle:nth-child(3) {
-  animation-delay: 1.8s; }
 
 /* RAIN */
-.climacon_component-stroke_rain {
-  fill-opacity: 0;
-  animation-name: rainFall, fillOpacity2;
-  animation-timing-function: ease-in;
-  animation-duration: 3s; }
-
-.climacon_component-stroke_rain:nth-child(n+4) {
-  animation-delay: 1.5s; }
-
-.climacon_component-stroke_rain_alt:nth-child(2) {
-  animation-delay: 1.5s; }
 
 /* HAIL */
 /* HAIL ALT */
-.climacon_component-stroke_hailAlt {
-  fill-opacity: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s; }
-
-.climacon_component-stroke_hailAlt-left {
-  animation-name: hailLeft, fillOpacity2; }
-
-.climacon_component-stroke_hailAlt-middle {
-  animation-name: hailMiddle, fillOpacity2; }
-
-.climacon_component-stroke_hailAlt-middle:nth-child(2) {
-  animation-name: hailMiddle2, fillOpacity2; }
-
-.climacon_component-stroke_hailAlt-right {
-  animation-name: hailRight, fillOpacity2; }
-
-.climacon_component-stroke_hailAlt:nth-child(1) {
-  animation-delay: 0s; }
-
-.climacon_component-stroke_hailAlt:nth-child(2) {
-  animation-delay: 0.1666666667s; }
-
-.climacon_component-stroke_hailAlt:nth-child(3) {
-  animation-delay: 0.3333333333s; }
-
-.climacon_component-stroke_hailAlt:nth-child(4) {
-  animation-delay: 0.5s; }
-
-.climacon_component-stroke_hailAlt:nth-child(5) {
-  animation-delay: 0.6666666667s; }
-
-.climacon_component-stroke_hailAlt:nth-child(6) {
-  animation-delay: 0.8333333333s; }
 
 /* SNOW */
-.climacon_component-stroke_snow {
-  fill-opacity: 0;
-  animation-name: snowFall, fillOpacity2;
-  animation-timing-function: ease-in-out;
-  animation-duration: 9s; }
-
-.climacon_component-stroke_snow:nth-child(3) {
-  animation-name: snowFall2, fillOpacity2; }
-
-.climacon_component-stroke_snow:nth-child(1) {
-  animation-delay: 0s; }
-
-.climacon_component-stroke_snow:nth-child(2) {
-  animation-delay: 3s; }
-
-.climacon_component-stroke_snow:nth-child(3) {
-  animation-delay: 6s; }
 
 /* SNOW ALT */
-.climacon_wrapperComponent-snowAlt {
-  fill-opacity: 0;
-  animation-name: snowFall, fillOpacity2;
-  animation-timing-function: ease-in-out;
-  animation-duration: 9s; }
 
 /* FOG */
-.climacon_component-stroke_fogLine {
-  fill-opacity: 0.5;
-  animation-name: translateFog, fillOpacityFog;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: ease-in;
-  animation-duration: 18s; }
-
-.climacon_component-stroke_fogLine:nth-child(even) {
-  animation-delay: 9s; }
 
 /* LIGHTNING */
-.climacon_component-stroke_lightning {
-  fill-opacity: 0;
-  animation-name: fillOpacityLightning;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: ease-out;
-  animation-duration: 18s; }
 
 /* TORNADO */
-.climacon_component-stroke_tornadoLine {
-  animation-name: translateTornado1;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-  animation-duration: 18s; }
-
-.climacon_component-stroke_tornadoLine:nth-child(1) {
-  animation-name: translateTornado1; }
-
-.climacon_component-stroke_tornadoLine:nth-child(2) {
-  animation-name: translateTornado2; }
-
-.climacon_component-stroke_tornadoLine:nth-child(3) {
-  animation-name: translateTornado3; }
-
-.climacon_component-stroke_tornadoLine:nth-child(4) {
-  animation-name: translateTornado4; }
-
-.climacon_component-stroke_tornadoLine:nth-child(5) {
-  animation-name: translateTornado5; }
-
-.climacon_component-stroke_tornadoLine:nth-child(6) {
-  animation-name: translateTornado6; }
-
-.climacon_componentWrap-sunsetAlt {
-  animation-name: translateSunset;
-  animation-duration: 4.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out; }
-
-.climacon_componentWrap-sunsetAlt {
-  animation-name: translateSunset;
-  animation-iteration-count: 1; }
-
-.climacon_iconWrap-sun .climacon_component-stroke_sunSpoke, .climacon_iconWrap-sunFill .climacon_component-stroke_sunSpoke {
-  fill-opacity: 1;
-  animation-name: scale;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  animation-direction: alternate; }
-
-.climacon_iconWrap-sun .climacon_component-stroke_sunSpoke:nth-child(even), .climacon_iconWrap-sunFill .climacon_component-stroke_sunSpoke:nth-child(even) {
-  animation-delay: 4.5s; }
-
-.climacon-iconWrap_sunFill .climacon_component-stroke_sunSpoke {
-  fill-opacity: 1;
-  animation-name: scale;
-  animation-iteration-count: infinite;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  animation-direction: alternate; }
-
-.climacon-iconWrap_sunFill .climacon_component-stroke_sunSpoke:nth-child(even) {
-  animation-delay: 4.5s; }
-
-.climacon_component-stroke_arrow-up {
-  fill-opacity: 0;
-  animation-name: fillOpacity2, translateArrowUp;
-  animation-duration: 4.5s; }
-
-.climacon_component-stroke_arrow-down {
-  fill-opacity: 0;
-  animation-name: fillOpacity2, translateArrowDown;
-  animation-duration: 4.5s; }
-
-.climacon_componentWrap-sunrise .climacon_component-stroke_sunSpoke, .climacon_componentWrap-sunset .climacon_component-stroke_sunSpoke {
-  animation-name: scale;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-duration: 4.5s;
-  animation-delay: 0s;
-  animation-fill-mode: both; }
-
-.climacon_componentWrap-sunrise .climacon_component-stroke_sunSpoke:nth-child(even), .climacon_componentWrap-sunset .climacon_component-stroke_sunSpoke:nth-child(even) {
-  animation-delay: 4.5s; }
-
-.climacon_componentWrap-sunriseAlt {
-  animation-name: translateSunrise, fillOpacity;
-  animation-duration: 18s, 9s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards; }
-
-.climacon_componentWrap-sunriseAlt .climacon_component-stroke_sunSpoke {
-  fill-opacity: 0;
-  animation-name: fillOpacity, scale;
-  animation-direction: normal, alternate;
-  animation-iteration-count: 1, infinite;
-  animation-duration: 4.5s;
-  animation-delay: 4.5s, 0;
-  animation-fill-mode: both; }
-
-.climacon_componentWrap-sunriseAlt .climacon_component-stroke_sunSpoke:nth-child(even) {
-  animation-delay: 4.5s, 4.5s; }
-
-.climacon_componentWrap-sunsetAlt {
-  animation-name: translateSunset;
-  animation-delay: 0s;
-  animation-duration: 18s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards; }
 
 /* ANIMATIONS */
 @keyframes rotate {
@@ -934,5 +672,3 @@ g, path, circle, rect {
     transform: translateX(-4.998px); }
   100% {
     transform: translateX(0); } }
-
-/*# sourceMappingURL=whether-icon.css.map */

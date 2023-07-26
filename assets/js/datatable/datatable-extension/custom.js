@@ -122,14 +122,12 @@ $(document).ready(function(){
         keys: true
     } );
     $('#basic-scroller').DataTable( {
-        ajax:           "../assets/json/datatable-extension/data.txt",
         deferRender:    true,
         scrollY:        200,
         scrollCollapse: true,
         scroller:       true
     } );
     $('#state-saving').DataTable( {
-        ajax:           "../assets/json/datatable-extension/data.txt",
         deferRender:    true,
         scrollY:        200,
         scrollCollapse: true,
@@ -137,7 +135,6 @@ $(document).ready(function(){
         stateSave:      true
     } );
     $('#api').DataTable( {
-        ajax:           "../assets/json/datatable-extension/data.txt",
         deferRender:    true,
         scrollY:        200,
         scrollCollapse: true,

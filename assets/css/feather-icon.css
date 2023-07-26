@@ -4,7 +4,7 @@ button, hr, input {
 audio, canvas, progress, video {
   display: inline-block; }
 
-progress, sub, sup {
+progress, sub {
   vertical-align: baseline; }
 
 html {
@@ -16,14 +16,14 @@ html {
 body {
   margin: 0; }
 
-menu, article, aside, details, footer, header, nav, section {
+menu, article, details, footer, header, nav, section {
   display: block; }
 
 h1 {
   font-size: 2em;
   margin: .67em 0; }
 
-figcaption, figure, main {
+ figure, main {
   display: block; }
 
 figure {
@@ -33,7 +33,7 @@ hr {
   box-sizing: content-box;
   height: 0; }
 
-code, kbd, pre, samp {
+code, pre {
   font-family: monospace,monospace;
   font-size: 1em; }
 
@@ -44,16 +44,8 @@ a {
 a:active, a:hover {
   outline-width: 0; }
 
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted; }
-
 b, strong {
   font-weight: bolder; }
-
-dfn {
-  font-style: italic; }
 
 mark {
   background-color: #ff0;
@@ -62,16 +54,13 @@ mark {
 small {
   font-size: 80%; }
 
-sub, sup {
+sub {
   font-size: 75%;
   line-height: 0;
   position: relative; }
 
 sub {
   bottom: -.25em; }
-
-sup {
-  top: -.5em; }
 
 audio:not([controls]) {
   display: none;
@@ -83,7 +72,7 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-button, input, optgroup, select, textarea {
+button, input, select, textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -136,10 +125,5 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
-summary {
-  display: list-item; }
-
 [hidden], template {
   display: none; }
-
-/*# sourceMappingURL=feather-icon.css.map */

@@ -9,7 +9,6 @@
     url('#{$fa-font-path}/font-awesome/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
     url('#{$fa-font-path}/font-awesome/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
     url('#{$fa-font-path}/font-awesome/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
-//  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
   font-weight: normal;
   font-style: normal;
 }

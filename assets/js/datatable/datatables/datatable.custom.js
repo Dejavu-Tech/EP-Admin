@@ -116,11 +116,6 @@ $(document).ready(function() {
             { "data": "salary" }
         ]
     });
-    $('#advance-8').DataTable({
-        "language": {
-            "url": "../assets/json/German.json"
-        }
-    });
     $('#advance-9').DataTable({
         "searching": false,
         "ordering": false
@@ -266,7 +261,6 @@ $(document).ready(function() {
     $('#data-source-4').DataTable({
         "processing": true,
         "serverSide": true,
-        "ajax": "../assets/json/server-side.json"
     } );
 
 

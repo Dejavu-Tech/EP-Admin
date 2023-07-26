@@ -5,73 +5,10 @@
     -moz-opacity: 0.5; /*Firefox私有，透明度50%*/
     opacity: 0.5; /*其他，透明度50%*/
 }
-.label_title{font-size: 14px;font-weight: bold;line-height: 20px;}
-.diyphone{min-width: 375px;background: #fff;height: calc(100vh - 56px);margin-right: 20px;overflow-y: auto;}
-.page_content{margin-top: 20px;}
-.page-title{font-size: 16px;font-weight: bold;line-height: 22px;padding-bottom: 20px;text-align: center;background: #fff;}
 .phone-body{width: 375px;height: auto;min-height: 100%;transform: scale(0.8);-webkit-transform-origin: top;}
-.phone-top{height: 64px;background: #fff;background-size: 100% auto;text-align: center;cursor: pointer;
-    display: block;text-overflow: ellipsis;position: relative;border: 1px solid #f7f7f7;}
 .phone-title{position: absolute;z-index: 100;font-style: normal;
     font-weight: 600;font-size: 18px;line-height: 25px;display: -webkit-box;display: -ms-flexbox;
     display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;text-align: center;
     color: #212121;left: 50%;-webkit-transform: translate(-50%, 0);transform: translate(-50%, 0);bottom: 8px;}
 .phone-main{min-height: 610px;background-color:#f7f7f7;}
-.phone-main-content-box{padding: 12px;}
-.phone-main-content{background-color: #ffffff;border-radius: 6px;padding-bottom: 16px;}
-
-.form-config{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;height: calc(100vh - 56px);overflow-y: auto;background-color: #ffffff;
-    padding: 20px 20px 0 0;min-width: 1000px;;}
-.form-item-adder{display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;margin-right: -10px;}
-.form-item-adder .btn {padding: 0 10px 10px 0;}
-.form-item-adder .btn .ivu-btn {
-    width: 82px;height: 82px;-webkit-box-sizing: border-box;box-sizing: border-box;padding: 0;
-    background: #f4f6f8;border-radius: 2px;border: none;position: relative;}
-.form-item-adder .btn .ivu-btn span {
-    font-style: normal;font-weight: bold;font-size: 14px;
-    line-height: 20px;color: #636669;display: -webkit-box;display: -ms-flexbox;display: flex;
-    -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
-}
-.form-item-adder .btn .ivu-btn .btn-shade {
-    position: absolute;top: 0;bottom: 0;left: 0;
-    right: 0;background: rgba(0,0,0,0.7);border-radius: 2px;
-    color: #FFFFFF;display: none;-webkit-box-align: center;-ms-flex-align: center;
-    align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
-    font-size: 14px;font-weight: bold;line-height: 20px;}
-.form-item-adder .btn .ivu-btn:hover .btn-shade {display: -webkit-box;display: -ms-flexbox;display: flex;}
-.form-item-adder .btn i.layui-icon{color: #2d8cf0;}
-.form-item-adder .btn img{width: 24px;height: 24px;font-size: 24px;text-align: center;
-    line-height: 24px;margin: 11px auto;color: #2d8cf0;}
 .form-items li{border: 1px solid #f3f3f3;padding: 20px;margin: 5px 0px;}
-.form-items .action-items{display: -webkit-box;display: -ms-flexbox;display: flex;}
-.form-items .action-title{width: 80px;vertical-align: middle;margin: auto;}
-.form-items .action-title .title{line-height: 35px;font-size: 14px;font-weight: bold;}
-.form-items .input-title{width: 200px;vertical-align: middle;margin: auto;}
-.form-items .input-remark{width: 300px;}
-.form-items .input-max{width: 300px;}
-.form-items .input-required{width: 80px;text-align: center;vertical-align: middle;margin: auto;}
-.form-items .input-delete{margin-top: 3px;vertical-align: middle;margin: auto;}
-.form-items .middle-content{width: 620px;}
-.form-items .input-middle-item{margin-bottom: 10px;}
-.form-items .input-middle-item a{color: #2d8cf0;}
-.form-items .action-title,.form-items .input-title,.form-items .input-remark,.form-items .input-max,.form-items .input-required,.form-items .input-delete{margin-right: 10px;}
-
-.phone-item{padding: 10px 12px 0 12px;}
-.phone-item .template_item{min-width: 80px;font-size: 14px;line-height: 20px;word-break: break-all;}
-.phone-item .template_item .item_title{}
-.phone-item .template_item .item_required{color:red;margin-left: 5px;}
-.phone-item .template_tip{font-size: 12px;line-height: 17px;padding-top: 4px;color: #969696;word-break: break-all;}
-.phone-item .tempalte_content{padding: 10px 0;}
-.phone-item .tempalte_content .image-add{
-    display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;
-    -ms-flex-direction: column;flex-direction: column;-webkit-box-align: center;-ms-flex-align: center;
-    align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
-    width: 70px;height: 70px;border: 1px dashed #E6E7EB;border-radius: 2px;color: #969696;cursor: pointer;
-}
-.phone-item .tempalte_content .image-add .add{font-size: 20px;}
-.phone-item .tempalte_content .item-input{border: 1px solid #E6E7EB;font-size: 14px;line-height: 20px;width: 100%;resize: none;padding: 10px 12px;}
-.phone-item .tempalte_content .item-input-textarea{height: 80px;}
-.phone-item .tempalte_content .radio-item{padding: 5px 0 5px 12px;border-bottom: 1px solid #E6E7EB;}
-.phone-item .tempalte_content .m-radio-box{border: 1px solid #E6E7EB;border-radius: 2px;margin-top: 8px;}
-.phone-item .tempalte_content .date_item{position: relative;}
-.phone-item .tempalte_content .date_icon{position: absolute;top: 10px; right: 10px;}
