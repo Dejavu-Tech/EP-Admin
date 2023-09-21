@@ -404,13 +404,13 @@ class UserModel{
 
 		$jssdk = new \Lib\Weixin\Jssdk( $weixin_config['appid'], $weixin_config['appscert']);
 
-		$re_access_token = $jssdk->getweAccessToken($uniacid);
+		$re_access_token = $jssdk->getweAccessToken();
 
 
 		//判断用户的小程序类目中，是否有咱们需要的小程序类目，如果没有，给他提示出来缺什么类目。
 		$category_url = "https://api.weixin.qq.com/wxaapi/newtmpl/getcategory?access_token={$re_access_token}";
 
-	    $result_category =array();
+	    $result_category = array();
 		$result_category_json = $this->curl_category($category_url);
 
 		$result_category = json_decode($result_category_json, true);
@@ -420,18 +420,22 @@ class UserModel{
 		$found_supermarket = in_array("百货/超市/便利店", $name);
 		$found_clothing = in_array("服饰内衣", $name);
 
-		if( empty($found_supermarket) && empty($found_clothing) ){
-			if(empty($found_supermarket)){
-				show_json(0, array('message' => '请在微信公众平台添加商家自营--->服饰内衣 、 生活服务--->百货/超市/便利店') );
-				die();
+		if (empty($weixin_config['appid']) || empty($weixin_config['appscert'])) {
+			// 显示错误消息
+			show_json(0, array('message' => '微信小程序配置错误，请检查设置--->支付设置中是否填入正确的小程序 APPID 和 APPSECRET'));
+			die();
+		}
+		if (!$found_supermarket || !$found_clothing) {
+			if (!$found_supermarket) {
+				show_json(0, array('message' => '请在微信公众平台添加商家自营--->生活服务--->百货/超市/便利店'));
 			}
-			if(empty($found_clothing)){
-				show_json(0, array('message' => '请在微信公众平台添加商家自营--->服饰内衣 、 生活服务--->百货/超市/便利店' ) );
-				die();
+
+			if (!$found_clothing) {
+				show_json(0, array('message' => '请在微信公众平台添加商家自营--->服饰内衣'));
 			}
+
+			die();
 		}else{
-
-
 			//删除
 			$del_url = "https://api.weixin.qq.com/wxaapi/newtmpl/deltemplate?access_token={$re_access_token}";
 
@@ -602,8 +606,8 @@ class UserModel{
 			//------------------拼团成功通知---------------------------------
 			$data = array();
 
-			$data['tid'] = '980';
-			$data['kidList'] = array(1,3,7);
+			$data['tid'] = '3098';
+			$data['kidList'] = array(7,10,18);
 			$data['sceneDesc'] ='拼团成功';
 			//先删除再添加
 			$arr = array();
