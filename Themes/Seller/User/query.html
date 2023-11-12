@@ -7,7 +7,7 @@
     <tbody>
     <?php foreach ($ds as $row) { ?>
     <tr>
-      <td><img avatar src='{$row['']}' class="img-responsive img-thumbnail m-r-20" style='width:40px;height:40px;' /> {$row['nickname']}
+      <td><img src='{$row['avatar']}' class="img-responsive img-thumbnail m-r-20" style='width:40px;height:40px;' /> {$row['nickname']}
       </td>
       <td>{$row['mobile']}</td>
       <?php if ($row['exist'] == 0) { ?>
