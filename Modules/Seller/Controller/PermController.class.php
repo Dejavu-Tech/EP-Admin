@@ -490,7 +490,7 @@ class PermController extends CommonController{
 			'invitegift' => array(
                 'config'   => '邀新有礼',
 				'record'   => '邀新记录',
-				'poster_background'   => '邀新海报',
+				'poster_qrcode'   => '邀新海报',
             ),
 			'virtualcard' => array(
                 'index'   => '礼品卡管理',
