@@ -175,9 +175,17 @@
                               <label class="col-sm-3 col-form-label">客户订单备注：</label><label class="col-sm-9 col-form-label">{$item['comment']}</label>
                             <?php } ?>
                             <?php if ($item['delivery'] == 'localtown_delivery') { ?><?php if (!empty($item['expected_delivery_time']) && empty($item['presale_info'])) { ?>
+                              <!--
+                                                <?php
+                              $weekarray = array("日", "一", "二", "三", "四", "五", "六");
+                              $week = $weekarray[date('w', $item['date_added'])];
+                              ?>
+                                                <label class="col-sm-3 col-form-label">期望配送时间：</label><label class="col-sm-9 col-form-label"><?php echo date('m-d', $item['date_added']) ?>（周<?php echo $week; ?>）{$item['expected_delivery_time']}</label>-->
                               <label class="col-sm-3 col-form-label">期望配送时间：</label><label class="col-sm-9 col-form-label">{$item['expected_delivery_time']}</label>
-                            <?php } ?><?php if ($item['order_status_id'] == 4 || $item['order_status_id'] == 6 || $item['order_status_id'] == 11) {
-                                    if (!empty($item['orderdistribution_order']['username'])) { ?>
+                            <?php } ?><?php
+                                if ($item['order_status_id'] == 4 || $item['order_status_id'] == 6 || $item['order_status_id'] == 11) {
+                                    if (!empty($item['orderdistribution_order']['username'])) {
+                                        ?>
                                       <label class="col-sm-3 col-form-label">配送员：</label>
                                       <label class="col-sm-9 col-form-label"><a href="javascript:void(0);" style="color:#428bca;"><?php echo $item['orderdistribution_order']['username']; ?></a></label>
                                     <?php }
@@ -233,7 +241,8 @@
                                 if ($supper_info['type'] != 1) {
                                     $is_ops_show = false;
                                 }
-                            } ?>
+                            }
+                            ?>
                             <?php if ($is_ops_show) { ?>
                               <!---操作开始-->
                                 <?php if ($item['order_status_id'] == 3) { ?>
@@ -243,7 +252,8 @@
                                     if (defined('ROLE') && ROLE == 'agenter') {
                                         $supper_info = json_decode(base64_decode($_GPC['__eaterplanet_ecommerce_agent']), true);
                                         $is_pay_show = false;
-                                    } ?><?php if ($is_pay_show) { ?><?php if (!isset($open_admin_payment) || $open_admin_payment == '1') { ?>
+                                    }
+                                    ?><?php if ($is_pay_show) { ?><?php if (!isset($open_admin_payment) || $open_admin_payment == '1') { ?>
                                   <a class="btn btn-primary deldom" data-confirm="确认此订单已付款吗？" data-href="{:U('order/oppay', array('id' => $item['order_id']))}" data-toggle="ajaxPost" href="javascript:">确认付款</a>
                                     <?php } ?><?php } ?><?php } elseif ($item['order_status_id'] == 1) { ?>
                                 <!--已付款-->
@@ -363,7 +373,8 @@
                                     case 2:
                                         $order_states = '已失效';
                                         break;
-                                } ?><?php echo $order_states; ?>
+                                }
+                                ?><?php echo $order_states; ?>
                               <span onmouseout="outHide1()" onmouseover="overShow1()"><i class="icon-help-alt"></i></span> </label>
                           <?php } ?>
                         <div class="alert alert-secondary dark" id="showDiv" style="display: none">
@@ -414,7 +425,8 @@
                                     echo '-¥' . (0 - $change_price);
                                 } else {
                                     echo '¥' . $change_price;
-                                } ?>
+                                }
+                                ?>
                             </label>
                           <?php } ?>
                           <?php if (($item['changedtotal']) != 0) { ?>
@@ -432,7 +444,8 @@
                           $free_tongji = $item['total'] + $item['packing_fare'] + $item['shipping_fare'] - $item['voucher_credit'] - $item['fullreduction_money'] - $item['score_for_money'] + $item['localtown_add_shipping_fare'] - $item['fare_shipping_free'] - $presale_for_ordermoney;
                           if ($free_tongji < 0) {
                               $free_tongji = 0;
-                          } ?>
+                          }
+                          ?>
                           <?php if ($item['is_vipcard_buy'] == 1 && $member_youhui > 0) { ?>
                             <label class="col-sm-12 col-form-label">会员卡优惠：</span><span class="text-danger">-¥{$member_youhui}</span></label>
                               <?php } ?>
@@ -499,7 +512,8 @@
                             case 3:
                                 echo '已失效';
                                 break;
-                        } ?>
+                        }
+                        ?>
                     </td>
                     <td>
                         <?php if ($virtualcard_info['is_effect'] == 1) { ?><?php if ($virtualcard_info['effect_type'] == 0) { ?>
@@ -608,7 +622,8 @@
                           $change_price = 0;
                           if ($goods['is_change_price'] == 1) {
                               $change_price = $goods['price'] * $goods['quantity'] - $goods['total'];
-                          } ?>
+                          }
+                          ?>
                         商品合计：{$goods['old_total']}<br/> -满减：{$goods['fullreduction_money']}<br/> -优惠券：{$goods['voucher_credit']}<br/>
                           <?php if (($goods['is_change_price'] == 1 && $change_price > 0)) { ?>
                             -商家改价：{$change_price}<br/>
@@ -634,7 +649,8 @@
                                           echo round($vvv['add_shipping_fare'], 2);
                                       } else {
                                           echo round($vvv['money'] - $vvv['add_shipping_fare'], 2);
-                                      } ?> </br>
+                                      }
+                                      ?> </br>
                                       <?php if ($vvv['level'] <= 0) { ?>
                                     配送收入：<?php echo $vvv['add_shipping_fare']; ?></br>
                                       <?php } ?>
@@ -770,7 +786,8 @@
                                     case 2:
                                         $str_state = '订单退款';
                                         break;
-                                } ?>(<?php echo $str_state; ?>)<br/>
+                                }
+                                ?>(<?php echo $str_state; ?>)<br/>
                             <?php } ?>
                         </td>
                       </tr>
