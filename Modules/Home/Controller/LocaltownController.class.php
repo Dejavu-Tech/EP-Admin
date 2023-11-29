@@ -640,30 +640,19 @@ class LocaltownController extends CommonController {
         foreach($list as $key => $val)
 
         {
-
             $val['addtime'] = date('Y-m-d H:i', $val['addtime']);
-
             $list[$key] = $val;
-
         }
 
 
 
         if( !empty($list) )
-
         {
-
             echo json_encode( array('code' =>0, 'data'=>$list) );
-
-            die();
-
         }else{
-
             echo json_encode( array('code' => 1) );
-
-            die();
-
         }
+        die();
 
     }
 
@@ -712,7 +701,7 @@ class LocaltownController extends CommonController {
             //$distince = D('Seller/Communityhead')->GetDistance($ps_lon,$ps_lat, $distribution_order['member_lon'], $distribution_order['member_lat']);
             $distince = D('Seller/Communityhead')->GetDistance($ps_lat,$ps_lon, $distribution_order['shop_lon'], $distribution_order['shop_lat']);
             if($distince > $localtown_grabbing_distance){
-                $msg = "距离店铺地址还有".$distince."米,不能确认抢单,".$localtown_grabbing_distance."米内,可以确认抢单";
+                $msg = "距离店铺地址还有".$distince."米,不能确认抢单,应小于".$localtown_grabbing_distance."米内方可确认抢单";
                 echo json_encode( array('code' => 3, 'msg' => $msg ) );
                 die();
             }
@@ -812,7 +801,7 @@ class LocaltownController extends CommonController {
 				//$distince = D('Seller/Communityhead')->GetDistance($ps_lon,$ps_lat, $distribution_order['member_lon'], $distribution_order['member_lat']);
 				$distince = D('Seller/Communityhead')->GetDistance($ps_lat,$ps_lon, $distribution_order['member_lon'], $distribution_order['member_lat']);
 				if($distince > $localtown_confirm_delivery_distance){
-					$msg = "距离用户收货地址还有".$distince."米,不能完成订单,".$localtown_confirm_delivery_distance."米内,可以完成订单";
+					$msg = "距离用户收货地址还有".$distince."米,不能点击“确认送达”,应小于".$localtown_confirm_delivery_distance."米内方可点击“确认送达”";
 					echo json_encode( array('code' => 3, 'msg' => $msg ) );
 					die();
 				}
@@ -828,7 +817,7 @@ class LocaltownController extends CommonController {
 				//$distince = D('Seller/Communityhead')->GetDistance($ps_lon,$ps_lat, $distribution_order['member_lon'], $distribution_order['member_lat']);
 				$distince = D('Seller/Communityhead')->GetDistance($ps_lat,$ps_lon, $distribution_order['member_lon'], $distribution_order['member_lat']);
 				if($distince > $localtown_confirm_delivery_distance){
-					$msg = "距离用户收货地址还有".$distince."米,不能完成订单,".$localtown_confirm_delivery_distance."米内,可以完成订单";
+					$msg = "距离客户收货地址还有".$distince."米,不能点击“确认送达”,应小于".$localtown_confirm_delivery_distance."米内方可点击“确认送达”";
 					echo json_encode( array('code' => 3, 'msg' => $msg ) );
 					die();
 				}
