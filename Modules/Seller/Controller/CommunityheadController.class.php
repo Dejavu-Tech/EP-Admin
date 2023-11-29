@@ -2204,28 +2204,10 @@ class CommunityheadController extends CommonController {
 		$this->starttime = $starttime;
 		$this->endtime = $endtime;
 
-		/*
-		$order_status = isset($_GPC['order_status']) ? $_GPC['order_status'] : -1;
-
-
-		if($order_status == 1)
-		{
-			$where .= " and co.state = 1 ";
-		} else if($order_status == 2){
-			$where .= " and co.state = 2 ";
-		} else if($order_status == 0){
-			$where .= " and co.state = 0 ";
-		}
-		*/
 		if ($_GPC['order_status'] != '') {
 			$where .= ' and co.state=' . intval($_GPC['order_status']);
 		}
 
-		/*$sql = "select co.order_id,co.state,co.money,co.type,co.addtime ,og.total,og.name,og.total,og.is_refund_state
-				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,
-                ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og
-	                    where  co.order_goods_id = og.order_goods_id {$where}
-	                      order by co.id desc ".' limit ' . (($pindex - 1) * $psize) . ',' . $psize;*/
 		$sql = "select co.order_id,co.state,co.money,co.type,co.addtime ,og.total,og.name,og.total,og.is_refund_state
 				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co left join
                 ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og on co.order_goods_id = og.order_goods_id
@@ -2251,10 +2233,6 @@ class CommunityheadController extends CommonController {
 			}
 		}
 
-		/*$sql_count = "select count(1) as count
-				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co ,
-                ".C('DB_PREFIX')."eaterplanet_ecommerce_order_goods as og
-	                    where   co.order_goods_id = og.order_goods_id {$where}  ";*/
 
 		$sql_count = "select count(1) as count
 				from ".C('DB_PREFIX')."eaterplanet_community_head_commiss_order as co left join
