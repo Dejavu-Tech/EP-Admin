@@ -494,15 +494,13 @@
                                         <?php } ?>
                                     </div>
                                   </div>
-                                    <?php $i++;
-                                } ?>
+                                    <?php $i++; } ?>
                             </td>
                             <td>
                                 <?php $i = 1;
                                 foreach ($item['goods'] as $k => $g) { ?>
                                   <div>¥<?php echo round($g['total'] / $g['quantity'], 2); ?> x {$g['quantity']} <?php if ($g['has_refund_quantity'] > 0) { ?>(已退{$g['has_refund_quantity']}个)<?php } ?></div>
-                                    <?php $i++;
-                                } ?>
+                                    <?php $i++; } ?>
                             </td>
                             <td>
                               <div>{$item['shipping_name']}</div>
@@ -621,11 +619,13 @@
                               <div>
                                   <?php if ($item['shipping_fare'] <= 0) {
                                       $item['fare_shipping_free'] = 0;
-                                  } ?>
+                                  }
+                                  ?>
                                   <?php $free_tongji = $item['total'] + $item['packing_fare'] + $item['shipping_fare'] - $item['voucher_credit'] - $item['fullreduction_money'] - $item['score_for_money'] + $item['localtown_add_shipping_fare'] - $item['fare_shipping_free'];
                                   if ($free_tongji < 0) {
                                       $free_tongji = 0;
-                                  } ?>
+                                  }
+                                  ?>
                                 实付款：{:round($free_tongji ,2)}
                               </div>
                             </td>
@@ -639,7 +639,8 @@
                                       if ($supper_info['type'] != 1) {
                                           $is_ops_show = false;
                                       }
-                                  } ?>
+                                  }
+                                  ?>
                                   <?php if ($is_ops_show) { ?>
                                     <!---操作开始-->
                                       <?php if ($item['order_status_id'] == 3) { ?>
@@ -649,7 +650,8 @@
                                           if (defined('ROLE') && ROLE == 'agenter') {
                                               $supper_info = get_agent_logininfo();
                                               $is_pay_show = false;
-                                          } ?><?php if ($is_pay_show) {
+                                          }
+                                          ?><?php if ($is_pay_show) {
                                               if (!isset($data['open_admin_payment']) || $data['open_admin_payment'] == '1') { ?>
                                                 <a class="btn btn-primary btn-xs deldom" data-confirm="确认此订单已付款吗？" data-href="{:U('order/oppay', array('id' => $item['order_id']))}" data-toggle="ajaxPost" href="javascript:">确认付款</a>
                                                   <?php }
@@ -728,7 +730,8 @@
                                           $third_name = '点我达';
                                       } else if ($item['third_distribution_type'] == 'ele') {
                                           $third_name = '蜂鸟即配';
-                                      } ?><?php if ($item['delivery'] == 'localtown_delivery' && $item['order_status_id'] == 4 && !empty($item['third_distribution_type']) && $item['orderdistribution_order']['delivery_type'] != 1 && $item['orderdistribution_order']['state'] != 5) { ?>
+                                      }
+                                      ?><?php if ($item['delivery'] == 'localtown_delivery' && $item['order_status_id'] == 4 && !empty($item['third_distribution_type']) && $item['orderdistribution_order']['delivery_type'] != 1 && $item['orderdistribution_order']['state'] != 5) { ?>
                                       <br/><a class="btn btn-primary btn-xs third_log" data-orderid="<?php echo $item['order_id']; ?>" href="javascript:void(0)"><?php echo $third_name; ?>
                                         配送中</a>
                                       <?php } ?><?php if ($item['delivery'] == 'localtown_delivery' && $item['order_status_id'] == 4 && !empty($item['third_distribution_type']) && $item['orderdistribution_order']['delivery_type'] != 1 && $item['orderdistribution_order']['state'] == 5) { ?>

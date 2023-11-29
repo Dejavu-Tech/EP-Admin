@@ -5,7 +5,8 @@
     if ($_W['role'] == 'agenter') {
         $supper_info = json_decode(base64_decode($_GPC['__eaterplanet_ecommerce_agent']), true);
         $is_pay_show = false;
-    } ?><?php if ($is_pay_show) { ?>
+    }
+    ?><?php if ($is_pay_show) { ?>
     <a class="btn btn-primary btn-xs" data-confirm="确认此订单已付款吗？" data-toggle="ajaxPost" href="{:U('order/oppay', array('id' => $item['order_id']))}">确认付款</a>
     <?php } ?><?php } elseif ($item['order_status_id'] == 1) { ?>
   <!--已付款-->

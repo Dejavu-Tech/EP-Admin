@@ -145,14 +145,16 @@
                                     echo '自动';
                                 } else {
                                     echo '手动';
-                                } ?>
+                                }
+                                ?>
                             </td>
                             <td>
                                 <?php if ($row['is_auto_grade'] == 1) {
                                     echo "客户消费金额满" . floatval($row['level_money']) . "元";
                                 } else {
                                     echo '无';
-                                } ?>
+                                }
+                                ?>
                             </td>
                             <td>{$row['membercount']}</td>
                             <td>

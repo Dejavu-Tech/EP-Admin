@@ -22,7 +22,8 @@
           $free_tongji = round($free_tongji - $hx_used_total, 2);
           if ($free_tongji < 0) {
               $free_tongji = 0;
-          } ?>
+          }
+          ?>
         <p style="line-height:26px;font-size:13px;">最多退积分：{$free_tongji}</p>
         <div style="height:8px;"></div>
         <input class="form-control" id="refund_money" name="refund_money" placeholder="退款金额" type="text" value="{:round($free_tongji ,2)}"/>

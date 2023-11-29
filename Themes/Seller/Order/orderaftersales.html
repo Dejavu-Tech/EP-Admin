@@ -228,8 +228,7 @@
                                     <div>{$g['name']}</div>
                                     <div><?php if (!empty($g['option_sku'])) { ?>{$g['option_sku']}<?php } ?></div>
                                   </div>
-                                    <?php $i++;
-                                } ?>
+                                    <?php $i++; } ?>
                             </td>
                             <td class="td-price" style="vertical-align: top;">
                                 <?php $i = 1;
@@ -238,8 +237,7 @@
                                     ¥<?php echo round($g['total'] / $g['quantity'], 2); ?>
                                     x {$g['quantity']}
                                   </div>
-                                    <?php $i++;
-                                } ?>
+                                    <?php $i++; } ?>
                             </td>
                             <td>
                               <div>{$item['shipping_name']}</div>
@@ -312,7 +310,8 @@
                                 <?php $free_tongji = $item['total'] + $item['shipping_fare'] - $item['voucher_credit'] - $item['fullreduction_money'];
                                 if ($free_tongji < 0) {
                                     $free_tongji = 0;
-                                } ?>
+                                }
+                                ?>
                                 <?php if ($item['type'] == 'integral') { ?>
                                   <div>应收总款：{:round($item['total'] ,2)}积分</div>
                                     <?php if (!empty($item['shipping_fare'])) { ?>
