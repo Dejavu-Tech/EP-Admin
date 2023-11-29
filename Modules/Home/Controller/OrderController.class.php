@@ -340,7 +340,7 @@ class OrderController extends CommonController {
 		$pick_up_weekday = '';
 		$today_time = $order_info['pay_time'];
 
-		$arr = array('天','一','二','三','四','五','六');
+		$arr = array('日','一','二','三','四','五','六');
 
 		$url = D('Home/Front')->get_config_by_name('shop_domain').'/';
 
@@ -2134,7 +2134,7 @@ class OrderController extends CommonController {
 		$pick_up_type = -1;
 		$pick_up_weekday = '';
 		$today_time = $order_info['pay_time'];
-		$arr = array('天','一','二','三','四','五','六');
+		$arr = array('日','一','二','三','四','五','六');
 
 	    foreach($order_goods_list as $key => $order_goods)
 	    {
@@ -2573,7 +2573,7 @@ class OrderController extends CommonController {
 		$pick_up_weekday = '';
 		$today_time = $order_info['pay_time'];
 
-		$arr = array('天','一','二','三','四','五','六');
+		$arr = array('日','一','二','三','四','五','六');
 
 	    foreach($order_goods_list as $key => $order_goods)
 	    {

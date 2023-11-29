@@ -2474,7 +2474,7 @@ class CarController extends CommonController {
 	$level_save_money = 0;
 
 	$today_time = time();
-	$arr = array('天','一','二','三','四','五','六');
+	$arr = array('日','一','二','三','四','五','六');
 	//计算优惠券
 	foreach($seller_goodss as $store_id => $val)
 	{
@@ -2994,7 +2994,7 @@ class CarController extends CommonController {
 	$pick_up_weekday = '';
 	$today_time = time();
 
-	$arr = array('天','一','二','三','四','五','六');
+	$arr = array('日','一','二','三','四','五','六');
 
 	$pick_up_arr = array();
 	foreach($goods as $key => $good)

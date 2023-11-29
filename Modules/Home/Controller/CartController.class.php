@@ -857,7 +857,7 @@ class CartController extends CommonController {
 	$pick_up_weekday = '';
 	$today_time = time();
 
-	$arr = array('天','一','二','三','四','五','六');
+	$arr = array('日','一','二','三','四','五','六');
 
 	$pick_up_arr = array();
 	foreach($goods as $key => $good)
