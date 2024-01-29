@@ -203,13 +203,17 @@
                                   <text class='text-danger'>已打款</text>
                                 <?php } else { ?>
                                   <label class="switch" style="margin-bottom: 0">
-                                    <input data-href="{:U('communityhead/agent_check_apply',array('id'=>$row['id']))}" lay-filter="statewsitch" name="" type="checkbox" <?php if ($row['state'] == 1){ ?>checked<?php } else { ?><?php } ?>
-                                           lay-skin="switch" lay-text="已审核|未审核"> </label><label class="switch" style="margin-bottom: 0">
-                                    <input data-href="{:U('communityhead/agent_check_apply',array('id'=>$row['id']))}" lay-filter="statewsitchunable" name="" type="checkbox" <?php if ($row['state'] == 1){ ?>checked<?php } ?> lay-skin="switch"
-                                           lay-text="已拒绝|点击拒绝审核">
+                                    <input data-href="{:U('communityhead/agent_check_apply',array('id'=>$row['id']))}" tx_type="<?php echo $row['type'];?>" lay-filter="statewsitch" name="" type="checkbox" <?php if ($row['state'] == 1){ ?>checked<?php } else { ?><?php } ?> lay-skin="switch">
                                   </label>
+                                  <br/>
+                                  点击审核
+                                  <br/>
+                                  <label class="switch" style="margin-bottom: 0">
+                                    <input data-href="{:U('communityhead/agent_check_apply',array('id'=>$row['id']))}" lay-filter="statewsitchunable" name="" type="checkbox" <?php if ($row['state'] == 1){ ?>checked<?php } ?> lay-skin="switch">
+                                  </label>
+                                  <br/>
+                                  点击拒绝
                                 <?php } ?>
-                              <br/>
                             </td>
                             <td style="overflow:visible;text-align: center;">
                               <a class="btn btn-pill btn-primary" href="{:U('order/index',array('headid' => $row['head_id']));}"> 推广订单 </a>
@@ -567,9 +571,11 @@
         form.on('switch(statewsitch)', function (data) {
             var loadingIndex = layer.load();
             var s_url = $(this).attr('data-href');
-            var x = data.elem.checked;
             var tx_type = $(this).attr('tx_type');
-            var lock = false;
+            var state = 0;
+            if (data.elem.checked) {
+                state = 1;
+            }
             var tip_msg = '确认审核通过，已经打款？';
             if (tx_type == 1) {
                 //系统余额
@@ -587,47 +593,39 @@
             layer.confirm(tip_msg, {
                 btn: ['确定', '取消'],
             }, function () {
-                var state = 1;
-                if (data.elem.checked) {
-                    state = 1;
-                } else {
-                    state = 0;
-                }
-                if (!lock) {
-                    lock = true;
-                    $.ajax({
-                        url: s_url,
-                        type: 'post',
-                        dataType: 'json',
-                        data: {state: state},
-                        success: function (info) {
 
-                            if (info.status == 0) {
-                                layer.msg(info.result.msg, {
-                                    icon: 1, time: 2000,
-                                    end: function () {
-                                        location.href = location.href;
-                                    }
-                                });
-                                layer.close(loadingIndex);
-                            } else if (info.status == 1) {
-                                var go_url = location.href;
-                                if (info.result.hasOwnProperty("url")) {
-                                    go_url = info.result.url;
-                                }
 
-                                layer.msg('操作成功', {
-                                    time: 1000,
-                                    end: function () {
-                                        location.href = info.result.url;
-                                    }
-                                });
+                console.log(state);
+                $.ajax({
+                    url: s_url,
+                    type: 'post',
+                    dataType: 'json',
+                    data: {state: state},
+                    success: function (info) {
+                        if (info.status == 0) {
+                            layer.msg(info.result.msg, {
+                                icon: 1, time: 2000,
+
+                            });
+                            layer.close(loadingIndex);
+                        } else if (info.status == 1) {
+                            var go_url = location.href;
+                            if (info.result.hasOwnProperty("url")) {
+                                go_url = info.result.url;
                             }
+
+                            layer.msg('操作成功', {
+                                time: 1000,
+                                end: function () {
+                                    location.href = info.result.url;
+                                }
+                            });
                         }
-                    })
-                }
+                        // 更新开关状态
+                    }
+                })
+
             }, function () {
-                data.elem.checked = !x;
                 layer.close(loadingIndex);
                 form.render();
             })
