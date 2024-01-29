@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://e-p.io/
- * @copyright Copyright (c) 2019-2023 Dejavu Tech.
- * @license   https://e-p.io/license
+ * @link      https://e-p.cloud/
+ * @copyright Copyright (c) 2019-2024 Dejavu Tech.
+ * @license   https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -1573,7 +1573,7 @@ public function sub_order()
 						$oh['uniacid'] = $_W['uniacid'];
 						$oh['order_id']=$order['order_id'];
 						$oh['order_status_id']= $order['is_pin'] == 1 ? 2:1;
-						$oh['comment']='买家已付款';
+						$oh['comment']='买家已付款 sub_order Cart';
 						$oh['date_added']=time();
 						$oh['notify']=1;
 
