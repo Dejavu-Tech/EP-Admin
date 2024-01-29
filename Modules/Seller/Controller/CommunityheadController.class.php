@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://e-p.io/
- * @copyright Copyright (c) 2019-2023 Dejavu Tech.
- * @license   https://e-p.io/license
+ * @link      https://e-p.cloud/
+ * @copyright Copyright (c) 2019-2024 Dejavu Tech.
+ * @license   https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -615,7 +615,7 @@ class CommunityheadController extends CommonController {
 
 	public function distributionorder()
 	{
-
+		$time = I('request.time');
 		$gpc = I('request.');
 
 		$starttime = isset($gpc['time']['start']) ? strtotime($gpc['time']['start']) : strtotime(date('Y-m-d'.' 00:00:00'));
@@ -623,16 +623,16 @@ class CommunityheadController extends CommonController {
 
 		$this->starttime = $starttime;
 		$this->endtime = $endtime;
-
-		$this->time = $gpc['time'];
-
+		$this->searchfield = I('request.searchfield','');
+		$this->keyword = I('request.keyword','');
+		$this->searchtime = I('request.searchtime','');
+		$this->delivery = I('request.delivery','');
+		$this->time = $time;
 
 		$order_status_arr = D('Seller/Order')->get_order_status_name();
 		$_GET['is_community'] = 1;//分销订单
 
 		$this->is_community = 1;
-
-		//$_GPC['type'] = 'community';
 
 		$cur_controller = 'communityhead/distributionorder';
 
@@ -675,6 +675,7 @@ class CommunityheadController extends CommonController {
 
 		$this->display('Order/index');
 	}
+
 
 	//---begin
 	public function deletecommunitymember()
