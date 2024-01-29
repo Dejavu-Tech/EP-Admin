@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://e-p.io/
- * @copyright Copyright (c) 2019-2023 Dejavu Tech.
- * @license   https://e-p.io/license
+ * @link      https://e-p.cloud/
+ * @copyright Copyright (c) 2019-2024 Dejavu Tech.
+ * @license   https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -2322,9 +2322,8 @@ class OrderModel{
 				D('Home/Weixinnotify')->orderBuy($order['order_id'],true);
 
 				//发送购买通知
-				//TODO 先屏蔽，等待调试这个消息
-				//$weixin_nofity = D('Home/Weixinnotify');
-				//$weixin_nofity->orderBuy($order['order_id']);
+				$weixin_nofity = D('Home/Weixinnotify');
+				$weixin_nofity->orderBuy($order['order_id']);
 
 				if($order['type'] == 'pintuan'){
 					$pin_order = M('eaterplanet_ecommerce_pin_order')->where( array('order_id' => $order['order_id']) )->find();
