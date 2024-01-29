@@ -72,11 +72,13 @@ class WeixinnotifyModel {
 			$order_goods_name = "";
 
 			$i_count = count($order_goods_list);
-			$shipping_money = 0;
+
 			if($order['delivery'] == 'tuanz_send')
 			{
 				$shipping_money = $order['shipping_fare'];
-			}
+			} else {
+                $shipping_money = 0;
+            }
 
 			$i =1;
 
