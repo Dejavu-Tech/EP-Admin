@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://e-p.io/
- * @copyright Copyright (c) 2019-2023 Dejavu Tech.
- * @license   https://e-p.io/license
+ * @link      https://e-p.cloud/
+ * @copyright Copyright (c) 2019-2024 Dejavu Tech.
+ * @license   https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE
  * ==========================================================================
  * 第三方配送回调地址
  * @author    Albert.Z  2020.08.06
