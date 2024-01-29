@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://e-p.io/
- * @copyright Copyright (c) 2019-2023 Dejavu Tech.
- * @license   https://e-p.io/license
+ * @link      https://e-p.cloud/
+ * @copyright Copyright (c) 2019-2024 Dejavu Tech.
+ * @license   https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -484,11 +484,11 @@ class GoodsController extends CommonController {
         	$max_file_size = 10000000; //上传文件大小限制, 单位BYTE
 		$send_path = "Uploads/image/goods/".date('Y-m-d')."/";
 		$send_path_re = "goods/".date('Y-m-d')."/";
-        	$destination_folder = ROOT_PATH.$send_path; //上传文件路径 
+        	$destination_folder = ROOT_PATH.$send_path; //上传文件路径
 
         	$result = array();
         	$result['code'] = 1;
-		
+
 		RecursiveMkdir($destination_folder);
 
 	        //fileinfo 检测begin
@@ -531,15 +531,15 @@ class GoodsController extends CommonController {
 	            echo json_encode($result);
 	            exit;
 	        }
-		
-        
+
+
 	        $filename = $file["tmp_name"];
 	        $pinfo = pathinfo($file["name"]);
 	        $ftype = $pinfo['extension'];
-		
+
 		$file_name = str_shuffle(time() . rand(111111, 999999)) . "." . $ftype;
 	        $destination = $destination_folder . $file_name;
-        
+
 	        if (!move_uploaded_file($filename, $destination)) {
 	            $result['msg'] = "移动文件出错!";
 	            echo json_encode($result);
@@ -548,14 +548,14 @@ class GoodsController extends CommonController {
 	        $pinfo = pathinfo($destination);
 	        $fname = $pinfo['basename'];
 
-	
-		$thumb = resize($send_path_re.$file_name,  200,200);	
-		
+
+		$thumb = resize($send_path_re.$file_name,  200,200);
+
 		$image_thumb = $thumb ;
-		$image_o = $send_path.$file_name;	
-		
+		$image_o = $send_path.$file_name;
+
 		$url = D('Home/Front')->get_config_by_name('shop_domain').'/';
-		
+
 		echo json_encode( array('code' => 0,'image_thumb' =>$url.$image_thumb, 'image_o' => $url.$image_o , 'image_o_full' => $url.tomedia($send_path_re.$file_name) ) );
 		die();
 	}
@@ -1124,19 +1124,6 @@ class GoodsController extends CommonController {
 		$need_data['commiss_mb_money'] = $commiss_mb_money;// 客户分销佣金 是多少
 		$need_data['is_goods_head_mb'] = $is_goods_head_mb;// 是否团长 提成， 1 是，0否
 		$need_data['goods_head_money'] = $goods_head_money;// 团长提成 金额
-
-		/**
-		if(!empty($member_id) && $member_id > 0 && $goods[0]['type'] == 'integral')
-		{
-			$member_info =  M('member')->field('score')->where( array('member_id' => $member_id) )->find();
-			if($member_info['score'] < $goods[0]['score'])
-			{
-				$goods[0]['score_enough'] = 0;
-			}else{
-				$goods[0]['score_enough'] = 1;
-			}
-		}
-		**/
 
 		$need_data['member_level_info'] = $member_level_info;
 		$need_data['member_level_list'] = $member_level_list;
