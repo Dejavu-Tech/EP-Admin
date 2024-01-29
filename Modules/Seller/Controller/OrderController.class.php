@@ -3,9 +3,9 @@
  * eaterplanet 商城系统
  *
  * ==========================================================================
- * @link      https://e-p.io/
- * @copyright Copyright (c) 2019-2023 Dejavu Tech.
- * @license   https://e-p.io/license
+ * @link      https://e-p.cloud/
+ * @copyright Copyright (c) 2019-2024 Dejavu Tech.
+ * @license   https://github.com/Dejavu-Tech/EP-Admin/blob/main/LICENSE
  * ==========================================================================
  *
  * @author    Albert.Z
@@ -1672,7 +1672,7 @@ class OrderController extends CommonController{
 			case 'hexiao':$item['delivery_text'] = '到店核销';break;
         }
 
-        //预收订单信息begin
+        //预售订单信息begin
         $presale_result = D('Home/PresaleGoods')->getOrderPresaleInfo( $id );
 		if( $presale_result['code'] == 0 )
         {
@@ -1680,7 +1680,7 @@ class OrderController extends CommonController{
         }else{
 		    $item['presale_info'] = [];
         }
-        //预收订单信息end
+        //预售订单信息end
 
 		if($item['type'] == 'pintuan'){
 
