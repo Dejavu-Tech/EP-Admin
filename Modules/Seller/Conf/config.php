@@ -17,9 +17,9 @@ $app_config = array(
         '__JS__'=> './Themes/'.BIND_MODULE.'/Public/js',
         '__NAME__'=>'吃货星球S2B2C商城系统',
         '__COMPANY__'=>'蒂佳芙科技（云南）有限公司',
-        '__YEARS__'=>'2019-2023',
-        '__VERSION__'=>'吃货星球v5.5.1',
-        '__WEBSITE__'=>'e-p.io',
+        '__YEARS__'=>'2019-2024',
+        '__VERSION__'=>'吃货星球v5.5.4',
+        '__WEBSITE__'=>'e-p.cloud',
         '__COMPANY_WEBSITE__'=>'www.rexotech.cn'
     ),
 
