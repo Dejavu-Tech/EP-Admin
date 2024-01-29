@@ -9,7 +9,7 @@
 <p align="center">
   <a href="http://wpa.qq.com/msgrd?v=3&uin=142997&site=qq&menu=yes"><img alt="Albert.Z" src="https://img.shields.io/badge/Author-Albert.Z-blue.svg"></a>
   <a href="https://github.com/Dejavu-Tech/EP-Admin/License"><img alt="GPL-v3协议" src="https://img.shields.io/badge/GPL-v3-red"></a>
-  <a href="https://github.com/Dejavu-Tech/EP-Admin/releases"><img alt="最新版本" src="https://img.shields.io/badge/version-5.5.1-brightgreen"></a>
+  <a href="https://github.com/Dejavu-Tech/EP-Admin/releases"><img alt="最新版本" src="https://img.shields.io/badge/version-5.5.4-brightgreen"></a>
   <a href="https://img.shields.io/github/stars/Dejavu-Tech/EP-Admin.svg?style=social&label=Stars"><img alt="笔芯" src="https://img.shields.io/github/stars/Dejavu-Tech/EP-Admin.svg?style=social&label=Stars"></a>
 
   <br/>
@@ -126,4 +126,4 @@ git@github.com:Dejavu-Tech/EP-Admin.git
 
 ## 🌎️软件著作权及其他版权所有
 <img src="https://image.ch871.com/rexotech.png" width="25px" align="left"/> 
-&nbsp;&nbsp;Copyright © 2019-2023 Dejavu Tech. (YN) Co., Ltd. <a href="https://www.rexotech.cn">官网</a>
+&nbsp;&nbsp;Copyright © 2019-2024 Dejavu Tech. (YN) Co., Ltd. <a href="https://www.rexotech.cn">官网</a>
