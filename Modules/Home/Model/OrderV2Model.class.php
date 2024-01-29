@@ -282,7 +282,7 @@ class OrderV2Model {
      * @param $order_goods_id
      * @param $goods_id
      */
-    public  function modifyOrderGoodsHexiaoTime( $order_id ,$goods_id , $begin_time )
+    public function modifyOrderGoodsHexiaoTime( $order_id ,$goods_id , $begin_time )
     {
         $goods_salesroombase = M('eaterplanet_ecommerce_goods_salesroombase')->where(array('goods_id'=>$goods_id))->find();
 
