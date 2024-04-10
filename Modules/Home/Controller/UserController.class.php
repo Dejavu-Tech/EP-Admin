@@ -3072,7 +3072,7 @@ class UserController extends CommonController {
 			**/
 		}
 
-		//如果开启当团长模式，那么就固定去这个团长
+		//如果开启单团长模式，则自动选择默认团长
 		$open_danhead_model = D('Home/Front')->get_config_by_name('open_danhead_model');
 
 		if( empty($open_danhead_model) )
