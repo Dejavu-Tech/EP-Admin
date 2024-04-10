@@ -11735,7 +11735,6 @@ CREATE TABLE `dejavutech_member_charge_flow`
   DEFAULT CHARSET = utf8 COMMENT ='吃货星球商城客户充值记录表';
 
 
-
 DROP TABLE IF EXISTS `dejavutech_member_commiss_apply`;
 CREATE TABLE `dejavutech_member_commiss_apply`
 (
@@ -11799,7 +11798,23 @@ CREATE TABLE `dejavutech_member_level`
     `logo`        varchar(255)            DEFAULT NULL COMMENT '客户等级logo',
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8 COMMENT ='客户等级表'
+  DEFAULT CHARSET = utf8 COMMENT ='客户等级表';
+
+DROP TABLE IF EXISTS `dejavutech_member_sharing`;
+CREATE TABLE `dejavutech_member_sharing`
+(
+    `id`           int(10) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+    `member_id`    int(10) NOT NULL COMMENT '客户ID',
+    `money`        float(10, 2) DEFAULT '0.00' COMMENT '可提现金额',
+    `dongmoney`    float(10, 2) DEFAULT '0.00' COMMENT '提现中金额',
+    `getmoney`     float(10, 2) DEFAULT '0.00' COMMENT '已提现金额',
+    `bankname`     varchar(200) DEFAULT NULL COMMENT '银行名称',
+    `bankaccount`  varchar(200) DEFAULT NULL COMMENT '卡号',
+    `bankusername` varchar(200) DEFAULT NULL COMMENT '持卡人姓名',
+    PRIMARY KEY (`id`),
+    KEY `member_id` (`member_id`) USING BTREE
+) ENGINE = MyISAM
+  DEFAULT CHARSET = utf8;
 
 DROP TABLE IF EXISTS `dejavutech_member_sharing_order`;
 CREATE TABLE `dejavutech_member_sharing_order`
