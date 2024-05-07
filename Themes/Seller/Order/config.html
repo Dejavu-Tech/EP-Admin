@@ -280,11 +280,12 @@
                     <div class="col-sm-10">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
                         <div class='radio radio-primary'>
-                          <input id="radioinline27" name='data[is_open_order_voice_notice]' type='radio' value='0' <?php if (empty($data['is_open_order_voice_notice']) || $data['is_open_order_voice_notice'] == 0){ ?>checked<?php } ?>
-                                 title="关闭"/> <label class="mb-0" for="radioinline27">关闭</label>
+                          <input id="radioinline27" name='data[is_open_order_voice_notice]' type='radio' value='0' <?php if (empty($data['is_open_order_voice_notice']) || $data['is_open_order_voice_notice'] == 0){ ?>checked<?php } ?> title="关闭"/>
+                          <label class="mb-0" for="radioinline27">关闭</label>
                         </div>
-                        <div class='radio radio-primary'><input id="radioinline28" name='data[is_open_order_voice_notice]' type='radio' value='1' <?php if ($data['is_open_order_voice_notice'] == '1'){ ?>checked<?php } ?>
-                                                                title="开启"/> <label class="mb-0" for="radioinline28">开启</label>
+                        <div class='radio radio-primary'>
+                          <input id="radioinline28" name='data[is_open_order_voice_notice]' type='radio' value='1' <?php if ($data['is_open_order_voice_notice'] == '1'){ ?>checked<?php } ?> title="开启"/>
+                          <label class="mb-0" for="radioinline28">开启</label>
                         </div>
                       </div>
                     </div>
@@ -345,10 +346,11 @@
                     <div class="col-sm-10">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
                         <div class='radio radio-primary'>
-                          <input id="radioinline23" name='data[is_printhide_membermobile]' type='radio' value='0' <?php if (empty($data['is_printhide_membermobile']) || $data['is_printhide_membermobile'] == 0){ ?>checked<?php } ?>
-                                 title="否"/> <label class="mb-0" for="radioinline23">否</label></div>
-                        <div class='radio radio-primary'><input id="radioinline24" name='data[is_printhide_membermobile]' type='radio' value='1' <?php if ($data['is_printhide_membermobile'] == '1'){ ?>checked<?php } ?>
-                                                                title="是"/> <label class="mb-0" for="radioinline24">是</label></div>
+                          <input id="radioinline23" name='data[is_printhide_membermobile]' type='radio' value='0' <?php if (empty($data['is_printhide_membermobile']) || $data['is_printhide_membermobile'] == 0){ ?>checked<?php } ?> title="否"/>
+                          <label class="mb-0" for="radioinline23">否</label></div>
+                        <div class='radio radio-primary'>
+                          <input id="radioinline24" name='data[is_printhide_membermobile]' type='radio' value='1' <?php if ($data['is_printhide_membermobile'] == '1'){ ?>checked<?php } ?> title="是"/>
+                          <label class="mb-0" for="radioinline24">是</label></div>
                       </div>
                       <small>小票打印时，隐藏客户手机号，默认不隐藏</small>
                     </div>
@@ -394,10 +396,12 @@
                     <div class="col-sm-10">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
                         <div class="radio radio-primary">
-                          <input id="radioinline25" name='data[is_open_order_message]' type='radio' value='0' <?php if (empty($data['is_open_order_message']) || $data['is_open_order_message'] == 0){ ?>checked<?php } ?>
-                                 title=""/><label class="mb-0" for="radioinline25">关闭</label></div>
-                        <div class="radio radio-primary"><input id="radioinline26" name='data[is_open_order_message]' type='radio' value='1' <?php if ($data['is_open_order_message'] == '1'){ ?>checked<?php } ?>
-                                                                title="开启"/><label class="mb-0" for="radioinline26">开启</label>
+                          <input id="radioinline25" name='data[is_open_order_message]' type='radio' value='0' <?php if (empty($data['is_open_order_message']) || $data['is_open_order_message'] == 0){ ?>checked<?php } ?> title="关闭"/>
+                          <label class="mb-0" for="radioinline25">关闭</label>
+                        </div>
+                        <div class="radio radio-primary">
+                          <input id="radioinline26" name='data[is_open_order_message]' type='radio' value='1' <?php if ($data['is_open_order_message'] == '1'){ ?>checked<?php } ?> title="开启"/>
+                          <label class="mb-0" for="radioinline26">开启</label>
                         </div>
                       </div>
                     </div>
@@ -406,11 +410,11 @@
                     <label class="col-sm-2 col-form-label">开启余额支付</label>
                     <div class="col-sm-10">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
-                        <div class="radio radio-primary"><input id="radioinline29" name='data[is_open_yue_pay]' type='radio' value='0' <?php if (empty($data['is_open_yue_pay']) || $data['is_open_yue_pay'] == 0){ ?>checked<?php } ?>
-                                                                title="关闭"/><label class="mb-0" for="radioinline29">关闭</label>
+                        <div class="radio radio-primary"><input id="radioinline29" name='data[is_open_yue_pay]' type='radio' value='0' <?php if (empty($data['is_open_yue_pay']) || $data['is_open_yue_pay'] == 0){ ?>checked<?php } ?> title="关闭"/>
+                          <label class="mb-0" for="radioinline29">关闭</label>
                         </div>
-                        <div class="radio radio-primary"><input id="radioinline30" name='data[is_open_yue_pay]' type='radio' value='1' <?php if ($data['is_open_yue_pay'] == '1'){ ?>checked<?php } ?>
-                                                                title="开启"/><label class="mb-0" for="radioinline30">开启</label>
+                        <div class="radio radio-primary"><input id="radioinline30" name='data[is_open_yue_pay]' type='radio' value='1' <?php if ($data['is_open_yue_pay'] == '1'){ ?>checked<?php } ?> title="开启"/>
+                          <label class="mb-0" for="radioinline30">开启</label>
                         </div>
                       </div>
                       <small>开启后小程序端个人中心页默认开启余额充值</small>
@@ -431,11 +435,11 @@
                     <label class="col-sm-2 col-form-label">开启售后期</label>
                     <div class="col-sm-10" id="open_aftersale">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
-                        <div class="radio radio-primary"><input id="radioinline31" name="data[open_aftersale]" type="radio" <?php if (!isset($data['open_aftersale']) || $data['open_aftersale'] == 0) { ?> checked <?php } ?>
-                                                                value="0" title="关闭"/><label class="mb-0" for="radioinline31">关闭</label>
+                        <div class="radio radio-primary"><input id="radioinline31" name="data[open_aftersale]" type="radio" <?php if (!isset($data['open_aftersale']) || $data['open_aftersale'] == 0) { ?> checked <?php } ?> value="0" title="关闭"/>
+                          <label class="mb-0" for="radioinline31">关闭</label>
                         </div>
-                        <div class="radio radio-primary"><input id="radioinline32" name="data[open_aftersale]" type="radio" <?php if (isset($data['open_aftersale']) && $data['open_aftersale'] == 1) { ?> checked <?php } ?>
-                                                                value="1" title="开启"/><label class="mb-0" for="radioinline32">开启</label>
+                        <div class="radio radio-primary"><input id="radioinline32" name="data[open_aftersale]" type="radio" <?php if (isset($data['open_aftersale']) && $data['open_aftersale'] == 1) { ?> checked <?php } ?> value="1" title="开启"/>
+                          <label class="mb-0" for="radioinline32">开启</label>
                         </div>
                       </div>
                       <small>售后期开启以后”确认收货“商品订单不马上结算订单金额给团长或商户，需要等售后期结束，商品订单佣金也需要等售后期结束才进行结算。（售后期包含商品售后期，以及商品订单的佣金结算期）</small>
@@ -451,16 +455,16 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">开启系统自动签收</label>
+                    <label class="col-sm-2 col-form-label">系统自动收货</label>
                     <div class="col-sm-10 col-xs-12" id="open_autosale">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
                         <div class="radio radio-primary">
-                          <input id="radioinline33" id="radioinline39" name="data[open_auto_recive_order]" type="radio"<?php if (!isset($data['open_auto_recive_order']) || $data['open_auto_recive_order'] == 0) { ?> checked <?php } ?>
-                                 value="0" title="关闭"/><label class="mb-0" for="radioinline33">关闭</label>
+                          <input id="radioinline33" id="radioinline39" name="data[open_auto_recive_order]" type="radio"<?php if (!isset($data['open_auto_recive_order']) || $data['open_auto_recive_order'] == 0) { ?> checked <?php } ?> value="0" title="关闭"/>
+                          <label class="mb-0" for="radioinline33">关闭</label>
                         </div>
                         <div class="radio radio-primary">
-                          <input id="radioinline34" id="radioinline40" name="data[open_auto_recive_order]" type="radio"<?php if (isset($data['open_auto_recive_order']) && $data['open_auto_recive_order'] == 1) { ?> checked <?php } ?>
-                                 value="1" title="开启"/><label class="mb-0" for="radioinline34">开启</label>
+                          <input id="radioinline34" id="radioinline40" name="data[open_auto_recive_order]" type="radio"<?php if (isset($data['open_auto_recive_order']) && $data['open_auto_recive_order'] == 1) { ?> checked <?php } ?> value="1" title="开启"/>
+                          <label class="mb-0" for="radioinline34">开启</label>
                         </div>
                       </div>
                       <small>订单自动签收默认关闭状态，如果需要勾选进行设置，建议默认为7天。（当订单待收货或待核销时间超过所设置时间）</small>
@@ -470,7 +474,7 @@
                     <label class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">
                       <div class="input-group pill-input-group">
-                        <input class="form-control" name="data[auto_recive_order_time]" placeholder="填写自动签收天数" type="text" value="{$data['auto_recive_order_time']}">
+                        <input class="form-control" name="data[auto_recive_order_time]" placeholder="填写自动收货天数" type="text" value="{$data['auto_recive_order_time']}">
                         <div class="input-group-append"><span class="input-group-text">天</span></div>
                       </div>
                     </div>
@@ -480,11 +484,11 @@
                     <div class="col-sm-10">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
                         <div class="radio radio-primary">
-                          <input id="radioinline35" name='data[is_hidden_orderlist_phone]' type='radio' value='0' <?php if (empty($data['is_hidden_orderlist_phone']) || $data['is_hidden_orderlist_phone'] == 0){ ?>checked<?php } ?>
-                                 title="显示"/><label class="mb-0" for="radioinline35">显示</label>
+                          <input id="radioinline35" name='data[is_hidden_orderlist_phone]' type='radio' value='0' <?php if (empty($data['is_hidden_orderlist_phone']) || $data['is_hidden_orderlist_phone'] == 0){ ?>checked<?php } ?> title="显示"/>
+                          <label class="mb-0" for="radioinline35">显示</label>
                         </div>
-                        <div class="radio radio-primary"><input id="radioinline36" name='data[is_hidden_orderlist_phone]' type='radio' value='1' <?php if ($data['is_hidden_orderlist_phone'] == '1'){ ?>checked <?php } ?>
-                                                                title="关闭"/><label class="mb-0" for="radioinline36">关闭</label>
+                        <div class="radio radio-primary"><input id="radioinline36" name='data[is_hidden_orderlist_phone]' type='radio' value='1' <?php if ($data['is_hidden_orderlist_phone'] == '1'){ ?>checked <?php } ?> title="关闭"/>
+                          <label class="mb-0" for="radioinline36">关闭</label>
                         </div>
                       </div>
                       <small>订单详情是否显示团长电话</small>
@@ -495,11 +499,12 @@
                     <div class="col-sm-10">
                       <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
                         <div class="radio radio-primary">
-                          <input id="radioinline37" name='data[is_show_order_guess_like]' type='radio' value='0' <?php if (empty($data['is_show_order_guess_like']) || $data['is_show_order_guess_like'] == 0){ ?>checked<?php } ?>
-                                 title="关闭"/><label class="mb-0" for="radioinline37">关闭</label>
+                          <input id="radioinline37" name='data[is_show_order_guess_like]' type='radio' value='0' <?php if (empty($data['is_show_order_guess_like']) || $data['is_show_order_guess_like'] == 0){ ?>checked<?php } ?> title="关闭"/>
+                          <label class="mb-0" for="radioinline37">关闭</label>
                         </div>
-                        <div class="radio radio-primary"><input id="radioinline38" name='data[is_show_order_guess_like]' type='radio' value='1' <?php if ($data['is_show_order_guess_like'] == '1'){ ?>checked<?php } ?>
-                                                                title="开启"/><label class="mb-0" for="radioinline38">开启</label>
+                        <div class="radio radio-primary">
+                          <input id="radioinline38" name='data[is_show_order_guess_like]' type='radio' value='1' <?php if ($data['is_show_order_guess_like'] == '1'){ ?>checked<?php } ?> title="开启"/>
+                          <label class="mb-0" for="radioinline38">开启</label>
                         </div>
                       </div>
                       <small>订单详情是否显示猜你喜欢商品列表</small>
@@ -516,7 +521,7 @@
                                value="1" title="" style="display: none"/>
                         <h7>自动确认配送</h7>
                       </div>
-                      <small>勾选自动确认配送以后，前后台订单状态在用户下单以后自动变更为“已发货，待收货”状态，不需要后台进行配送操作，配送员可以直接进行抢单配送。</small>
+                      <small>勾选自动发货以后，前后台订单状态在用户下单以后自动变更为“已发货，待收货”状态，不需要后台进行发货操作，配送员可以直接进行抢单配送。未勾选此项之前的订单需手动或批量发货</small>
                     </div>
                   </div>
                   <div class="form-group row">
