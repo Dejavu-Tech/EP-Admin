@@ -2,12 +2,13 @@
 table
   {
   border-collapse:collapse;
+  text-align: center;
+  color: black;
   }
 td,th{
-    font-family:"宋体";
     font-size:12px;
     height: 30px;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 10px;
 }
 th{
   font-size:18px;
