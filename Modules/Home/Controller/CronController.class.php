@@ -20,109 +20,86 @@ class CronController extends CommonController {
 
     }
 
-	public function index()
-	{
-		ignore_user_abort();
-		set_time_limit(0);
+    public function index()
+    {
+        ignore_user_abort();
+        set_time_limit(0);
 
-		//------------------系统未支付订单超时关闭
-		$lasttime = S('closeorder_lasttime');
+        $current = time();
 
-		$lasttime = strtotime($lasttime);
+        $this->executeTask('closeorder_lasttime', 3, '/Cron/close', $current);
+        $this->executeTask('statementorder', 1, '/Cron/statement', $current);
+        $this->executeTask('autoreciveorder', 1, '/Cron/receive', $current);
 
-		$interval = 3;//1分钟
+        //begin
+        $today_zero_time = strtotime( date('Y-m-d').' 00:00:00' );
 
+        $clear_goodsdaysales = D('Home/Front')->get_config_by_name('clear_goodsdaysales');
+        if( !isset($today_zero_time) || $clear_goodsdaysales != $today_zero_time )
+        {
+            D('Seller/Commonorder')->clear_goods_daysales();
 
-		$interval *= 60;
-		$current = time();
+            $config_data = array();
+            $config_data['clear_goodsdaysales'] = $today_zero_time;
+            D('Seller/Config')->update($config_data);
+        }
+        //end
 
-		//shop_domain get_config_by_name($name)
+        echo 3;
+    }
 
-		$url = D('Home/Front')->get_config_by_name('shop_domain');
+    private function executeTask($lastTimeKey, $intervalInMinutes, $urlPath, $current)
+    {
+        $lastTime = strtotime(S($lastTimeKey));
+        $interval = $intervalInMinutes * 60;
 
-		$url = $url."/index.php?s=/Cron/close";
+        if (($lastTime + $interval) <= $current) {
+            S($lastTimeKey, date('Y-m-d H:i:s', $current));
 
+            $url = D('Home/Front')->get_config_by_name('shop_domain') . "/index.php?s=" . $urlPath;
+            $this->sendHttpRequest($url);
+        }
+    }
 
+    private function sendHttpRequest($url)
+    {
+        // 错误处理
+        ihttp_request($url, NULL, NULL, 1);
+    }
 
+    /**
+     * 定时自动发货
+     */
+    public function send()
+    {
+        ignore_user_abort();
+        set_time_limit(0);
 
-		if (($lasttime + $interval) <= $current) {
+        $shop_list = M('eaterplanet_ecommerce_config')->field('value')->where( array('name' => 'is_open_auto_send' ) )->select();
 
-			S('closeorder_lasttime',  date('Y-m-d H:i:s', $current));
-			$url = $url."/index.php?s=/Cron/close";
+        foreach($shop_list  as $shop)
+        {
+            $is_open_auto_send = $shop['value'];
 
-			ihttp_request($url, NULL, NULL, 1);
+            if($is_open_auto_send == 1)
+            {
+                $send_day = D('Home/Front')->get_config_by_name('auto_send_order_time');
 
-			//ihttp_request($url, $post = '', $extra = array(), $timeout = 60)
-		}
+                $send_hour_time = time() - 86400 * $send_day;
 
-		$url = D('Home/Front')->get_config_by_name('shop_domain');
+                $order_list = M('eaterplanet_ecommerce_order')->field('order_id')->where( "send_time <={$send_hour_time} and order_status_id =2" )->select();
 
-		$url = $url."/index.php?s=/Cron/statement";
-
-		//begin
-		$today_zero_time = strtotime( date('Y-m-d').' 00:00:00' );
-
-		$clear_goodsdaysales = D('Home/Front')->get_config_by_name('clear_goodsdaysales');
-		//$clear_goodsdaysales  = S('clear_goodsdaysales');
-		if( !isset($today_zero_time) || $clear_goodsdaysales != $today_zero_time )
-		{
-		    D('Seller/Commonorder')->clear_goods_daysales();
-		    //S('clear_goodsdaysales', $today_zero_time );
-
-			$config_data = array();
-			$config_data['clear_goodsdaysales'] = $today_zero_time;
-			D('Seller/Config')->update($config_data);
-		}
-		//end
-
-
-		$lasttimestatement  = S('statementorder');
-
-		if( empty($lasttimestatement) )
-		{
-			$lasttimestatement = 0;
-		}
-
-		$intervalstatement = 1;//1分钟
-
-
-		$intervalstatement *= 60;
-		$currentstatement = time();
-
-
-		if (($lasttimestatement + $intervalstatement) <= $currentstatement) {
-
-			S('statementorder', $currentstatement);
-
-		    ihttp_request($url, NULL, NULL, 1);
-		}
-
-		//---
-		$lasttimeautoreciveorder = $resultstatement = S('autoreciveorder');
-
-		$intervalstatement = 1;//1分钟
-
-		$intervalstatement *= 60;
-		$currentstatement = time();
-
-		$url = D('Home/Front')->get_config_by_name('shop_domain');
-		$url = $url."/index.php?s=/Cron/receive";
-
-		if (($lasttimeautoreciveorder + $intervalstatement) <= $currentstatement) {
-
-			S('autoreciveorder', $currentstatement);
-
-			ihttp_request($url, NULL, NULL, 1);
-		}
-
-
-
-		echo 3;
-	}
+                foreach($order_list as $order )
+                {
+                    D('Home/Frontorder')->send_order($order['order_id'], true);
+                }
+            }
+        }
+    }
 
 	/**
-
-	**/
+     * 定时自动确认收货
+	 */
 	public function receive()
 	{
 		ignore_user_abort();
