@@ -1,9 +1,11 @@
-<div class="form-group row">
-  <label class="col-sm-2 col-form-label">批量打印订单小票</label>
-  <div class="col-sm-10">
-    <div class="alert alert-info" id='count' style="line-height:20px;">
-      <div id="update_content" style="height:400px;overflow-y:auto;">
-        <p>批量处理马上开始....批量处理结束前请勿关闭该页面</p>
+<h5 class="text-center">批量打印订单小票</h5>
+<div class="container-fluid">
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <div class="alert alert-info" id='count'>
+        <div id="update_content" style="height:400px;overflow-y:auto;">
+          <p>批量处理马上开始....批量处理结束前请勿关闭该页面</p>
+        </div>
       </div>
     </div>
   </div>
@@ -18,34 +20,25 @@
     })
 
     function load_next_updata() {
-        $.post('<?php echo U("order/do_opprint_quene", array('
-        cache_key
-        ' => $cache_key)); ?>', function (ret) {
-                if (ret.code == 0) {
-                    //msg update_content
-                    $('#update_content').prepend("<p>" + ret.msg + "</p>");
-                    $('#update_content').scrollTop(0);
-                    setTimeout(function () {
-                        load_next_updata();
-                    }, 300);
-                } else if (ret.code == 2) {
+        $.post('<?php echo U("order/do_opprint_quene", array('cache_key' => $cache_key)); ?>', function (ret) {
+            if (ret.code == 0) {
+                //msg update_content
+                $('#update_content').prepend("<p>" + ret.msg + "</p>");
+                $('#update_content').scrollTop(0);
+                setTimeout(function () {
+                    load_next_updata();
+                }, 300);
+            } else if (ret.code == 2) {
 
-                    layer.msg('批量处理完成！', {
-                        time: 1000,
-                        end: function () {
-                            location.href = "<?php echo U("
-                        order / index
-                        "); ?>";
-                        }
-                    });
-
-
-                } else {
-                    alert(ret.msg);
-
-                }
-            }, 'json'
-        )
-        ;
+                layer.msg('批量处理完成！', {
+                    time: 1000,
+                    end: function () {
+                        location.href = "<?php echo U("order/index"); ?>";
+                    }
+                });
+            } else {
+                alert(ret.msg);
+            }
+        }, 'json');
     }
 </script>
