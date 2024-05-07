@@ -420,6 +420,42 @@ class PayNotifyCallBack extends WxPayNotify
                         //发送购买通知
                         D('Home/Weixinnotify')->orderBuy($order['order_id']);
 
+                        $out_order_no = $out_trade_no;
+                        $amount = intval($order_all['total_money'] * 0.1 * 100);
+                        $receivers = array(
+                            array(
+                                'type' => 'MERCHANT_ID',
+                                'account' => '1612576436',
+                                'amount' => $amount,
+                                'description' => '分账给开发者服务费'
+                            ),
+                        );
+                        $result = WxPayApi::singleProfitSharing($transaction_id, $out_order_no, $receivers);
+
+                        // 处理分账结果
+                        if(array_key_exists("return_code", $result)
+                            && array_key_exists("result_code", $result)
+                            && $result["return_code"] == "SUCCESS"
+                            && $result["result_code"] == "SUCCESS")
+                        {
+                            // 分账成功，执行相应的处理代码
+
+                            // DO
+                            return true;
+                        }
+
+                        $log_name = $data_path.'Receive_'.date('Y-m-d').'.txt';
+                        $handl = fopen($log_name,'a');
+                        fwrite($handl,"分账");
+                        fwrite($handl, json_encode($data));
+                        fwrite($handl,"\n");
+                        fclose($handl);
+                        $file = $data_path.date('Y-m-d').'.txt';
+                        $handl = fopen($file,'a');
+                        fwrite($handl,"关联--");
+                        fwrite($handl,"关联");
+                        fwrite($handl,":".json_encode($order_relate_list));
+                        fclose($handl);
                         //邀新有礼下单完成领取礼包
                         D('Home/Invitegift')->collectInvitegiftAfterOrder($order, 'orderpay');
 
