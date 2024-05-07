@@ -85,7 +85,7 @@
                   <div id="member_detail" style="<?php if ($is_showform == 1) { ?>display:block<?php } ?>">
                     <!--- begin -->
                     <div class="form-group row">
-                      <label class="col-sm-2 col-form-label">用户</label>
+                      <label class="col-sm-2 col-form-label">客户名称</label>
                       <div class="col-sm-10">
                         <img class="radius50" src="{$member['avatar']}" style='width:50px;height:50px;padding:1px;border:1px solid #ccc'/> {$member['username']}
                       </div>
@@ -241,6 +241,20 @@
                           </div>
                         </div>
                       <?php } ?>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">货到付款权限</label>
+                      <div class="col-sm-10">
+                        <div class="form-group m-checkbox-inline custom-radio-ml m-t-10 m-l-5 mb-0">
+                          <div class="radio radio-primary"><input name="data[is_cashon_delivery]" type="radio" value="0" <?php if ($member['is_cashon_delivery'] == 0){ ?>checked<?php } ?>
+                            title="禁用">
+                          </div>
+                          <div class="radio radio-primary"><input name="data[is_cashon_delivery]" type="radio" value="1" <?php if ($member['is_cashon_delivery'] == 1){ ?>checked<?php } ?>
+                            title="启用">
+                          </div>
+                        </div>
+                        <small>设置禁用后，此客户将无法在订单结算时使用货到付款功能</small>
+                      </div>
+                    </div>
                       <?php if ($is_get_formdata == 1) { ?>
                         <div class="form-group row">
                           <label class="col-sm-2 col-form-label">客户表单</label>
