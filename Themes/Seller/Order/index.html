@@ -429,7 +429,7 @@
                                       <?php } ?>
                                   </a>
                                     <?php if ($item['order_status_id'] != 3) { ?>
-                                      <a class="btn btn-info btn-xs" href="{:U('order/order_print_dan', array('id' => $item['order_id']))}" target="_blank">打印</a>
+                                      <a class="btn btn-info btn-xs" href="{:U('order/order_print_dan', array('id' => $item['order_id']))}" target="_blank">打印配送单</a>
                                     <?php } ?>
                                     <?php $is_printer_list = D('Home/Front')->get_config_by_name('is_printer_list'); ?>
                                     <?php if ((empty($open_feier_print) && !empty($is_printer_list)) || $open_feier_print >= 1 && !in_array($item['order_status_id'], array(3))) { ?>
