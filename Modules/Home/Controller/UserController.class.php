@@ -2881,6 +2881,7 @@ class UserController extends CommonController {
 		}
 
 		$isblack = 0;
+                $is_cashon_delivery = 1;
 		//是否可以领取礼包： 1、可以，0、不可以，2、老用户, 3、老用户且有邀请人
 		$is_can_collect_gift = 0;
 
@@ -2939,6 +2940,9 @@ class UserController extends CommonController {
 			M('eaterplanet_ecommerce_weprogram_token')->add($weprogram_token_data);
 
 			$isblack = $member_info['isblack'];
+
+                       // 客户货到付款权限
+                       $is_cashon_delivery = $member_info['is_cashon_delivery'];
 
 		}else {
 			$data = array();
@@ -3107,7 +3111,7 @@ class UserController extends CommonController {
             }
         }
 
-        echo json_encode(array('code' =>1,'member_id' => $member_id ,'isblack' => $isblack , 'isparse_formdata' => $isparse_formdata, 'is_can_collect_gift'=>$is_can_collect_gift ));
+        echo json_encode(array('code' =>1,'member_id' => $member_id ,'isblack' => $isblack , 'is_cashon_delivery' => $is_cashon_delivery ,'isparse_formdata' => $isparse_formdata, 'is_can_collect_gift'=>$is_can_collect_gift ));
         die();
 
 

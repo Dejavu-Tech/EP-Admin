@@ -1207,6 +1207,8 @@ class UserController extends CommonController{
 		$ordercount = M('eaterplanet_ecommerce_order')->where( 'order_status_id in(1,2,4,6,11,14,12,13) and member_id='.$id )->count();
 		$ordermoney = M('eaterplanet_ecommerce_order')->where( ' type != "integral" and order_status_id in(1,2,4,6,11,14,12,13) and member_id='.$id )->sum('total');
 
+		$is_cashon_delivery = $member['is_cashon_delivery'];
+
 
 		$member['self_ordercount'] = $ordercount;
 		$member['self_ordermoney'] = $ordermoney;
@@ -1257,7 +1259,6 @@ class UserController extends CommonController{
 			{
 				M('eaterplanet_ecommerce_weprogram_token')->where( array('member_id' => $id ) )->delete();
 			}
-
 
 			M('eaterplanet_ecommerce_member')->where( array('member_id' => $id) )->save($data);
 
