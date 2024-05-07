@@ -12,9 +12,9 @@ class PrintactionModel
 	private function _info()
     {
 
-		$user = '353399459@qq.com';	//*必填*：飞鹅云后台注册账号
-		$ukey = '5S64haPkEgxUWEMa';	//*必填*: 飞鹅云注册账号后生成的UKEY
-		$sn = 'xxxxxxxxx';	//*必填*：打印机编号，必须要在管理后台里添加打印机或调用API接口添加之后，才能调用API
+		$user = 'zhrrobert@hotmail.com';	//*必填*：飞鹅云后台注册账号
+		$ukey = 'EX3x6QyxvdaNnZpH';	//*必填*: 飞鹅云注册账号后生成的UKEY
+		$sn = '932597917';	//*必填*：打印机编号，必须要在管理后台里添加打印机或调用API接口添加之后，才能调用API
 
 		//以下参数不需要修改
 		$ip = 'api.feieyun.cn';//接口IP或域名
